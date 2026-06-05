@@ -1,0 +1,2679 @@
+WEBVTT
+
+00:00:00.360 --> 00:00:02.010
+KEIJI KANAZAWA: Welcome
+to the Microsoft
+
+00:00:02.010 --> 00:00:06.240
+and Anthropic webinar on
+how to build smarter agents
+
+00:00:06.240 --> 00:00:10.350
+and how you can unlock
+Claude in Microsoft Foundry
+
+00:00:10.350 --> 00:00:13.590
+to build agents that match
+your business needs.
+
+00:00:13.590 --> 00:00:15.240
+I'm Keiji Kanazawa.
+
+00:00:15.240 --> 00:00:19.050
+I'm a Principal Product
+Manager at Microsoft working
+
+00:00:19.050 --> 00:00:20.940
+on the Microsoft Foundry.
+
+00:00:20.940 --> 00:00:24.990
+And I'm going to introduce
+Caroline from Anthropic next.
+
+00:00:24.990 --> 00:00:26.070
+CAROLINE MATTHEWS:
+Thank you, Keiji.
+
+00:00:26.070 --> 00:00:27.450
+I am Caroline Matthews.
+
+00:00:27.450 --> 00:00:31.170
+I'm an Applied AI
+Architect with Anthropic.
+
+00:00:31.170 --> 00:00:32.640
+So I help engineering teams
+
+00:00:32.640 --> 00:00:35.910
+that are putting Claude
+into production.
+
+00:00:35.910 --> 00:00:38.280
+KEIJI KANAZAWA:
+Today, unlocking AI
+
+00:00:38.280 --> 00:00:40.770
+for your business needs
+means asking a few
+
+00:00:40.770 --> 00:00:42.090
+important questions.
+
+00:00:42.090 --> 00:00:43.740
+How can it help you grow?
+
+00:00:43.740 --> 00:00:47.520
+How can it help increase
+customer satisfaction?
+
+00:00:47.520 --> 00:00:51.660
+How can AI accelerate and
+optimize your workflows?
+
+00:00:51.660 --> 00:00:55.260
+The answer increasingly
+comes from applications
+
+00:00:55.260 --> 00:01:01.620
+and agents built on top of an AI
+platform like Microsoft Foundry.
+
+00:01:01.620 --> 00:01:05.430
+That's because enterprises,
+startups need the right models,
+
+00:01:05.430 --> 00:01:09.360
+agents, and tools to build
+enterprise-ready AI agents
+
+00:01:09.360 --> 00:01:10.410
+and apps.
+
+00:01:10.410 --> 00:01:11.280
+You need to be able
+
+00:01:11.280 --> 00:01:15.000
+to orchestrate multiple
+agents together with support
+
+00:01:15.000 --> 00:01:18.600
+for interoperability
+and open frameworks.
+
+00:01:18.600 --> 00:01:21.000
+You need access to
+the best models
+
+00:01:21.000 --> 00:01:23.430
+like Claude for your use case.
+
+00:01:23.430 --> 00:01:26.490
+And then you need to
+connect the agents
+
+00:01:26.490 --> 00:01:29.010
+to different knowledge
+sources and tools
+
+00:01:29.010 --> 00:01:34.680
+like your enterprise data, like
+Microsoft 365 or your databases.
+
+00:01:34.680 --> 00:01:36.240
+Once you've built those agents,
+
+00:01:36.240 --> 00:01:39.570
+you need to continuously
+monitor, observe,
+
+00:01:39.570 --> 00:01:42.840
+and evaluate your solutions
+through every stage
+
+00:01:42.840 --> 00:01:46.710
+of the AI development lifecycle
+with proper content safety,
+
+00:01:46.710 --> 00:01:51.300
+observability, and evaluation
+tools in every layer
+
+00:01:51.300 --> 00:01:54.690
+of your AI apps and agents.
+
+00:01:54.690 --> 00:01:59.310
+And AI agents should be
+able to tune, customize,
+
+00:01:59.310 --> 00:02:03.120
+and improve over time
+continuously using things
+
+00:02:03.120 --> 00:02:06.390
+like optimizing your
+skills and prompts,
+
+00:02:06.390 --> 00:02:11.310
+as well as fine-tuning models
+when that's available.
+
+00:02:11.310 --> 00:02:15.060
+And last but not least, you need
+to deploy your apps to the local
+
+00:02:15.060 --> 00:02:19.980
+and to the edge in order for you
+or your customers to be able
+
+00:02:19.980 --> 00:02:23.410
+to take advantage of the agents.
+
+00:02:26.280 --> 00:02:29.340
+Now, agentic applications
+are not just
+
+00:02:29.340 --> 00:02:33.420
+about calling a model once
+and getting a response back.
+
+00:02:33.420 --> 00:02:35.910
+Agentic applications
+increasingly involve
+
+00:02:35.910 --> 00:02:39.270
+long-running systems
+that reason and act
+
+00:02:39.270 --> 00:02:44.190
+and then continuously learn
+from context and execution.
+
+00:02:44.190 --> 00:02:46.860
+These are goal-driven processes
+
+00:02:46.860 --> 00:02:50.610
+where agents automatically
+execute tasks
+
+00:02:50.610 --> 00:02:54.810
+and optimize the outcomes
+towards general goal rubrics
+
+00:02:54.810 --> 00:02:57.540
+that describe the
+desired outcomes.
+
+00:02:57.540 --> 00:03:02.190
+For example, let's say I'm
+observing a spike in traffic
+
+00:03:02.190 --> 00:03:04.860
+or a dip in success rates.
+
+00:03:04.860 --> 00:03:08.430
+Before agents, you might go
+look at dashboards yourself,
+
+00:03:08.430 --> 00:03:10.560
+write and run
+queries, use Excel,
+
+00:03:10.560 --> 00:03:12.750
+come up with some hypotheses.
+
+00:03:12.750 --> 00:03:16.740
+With agents, once I set it
+up with the right models,
+
+00:03:16.740 --> 00:03:20.070
+the right contacts, things
+like lifecycle metrics,
+
+00:03:20.070 --> 00:03:25.260
+support tickets, CRM
+databases, and email messages,
+
+00:03:25.260 --> 00:03:27.390
+they can take a question.
+
+00:03:27.390 --> 00:03:29.070
+What's causing the spike?
+
+00:03:29.070 --> 00:03:32.010
+And the agent will create
+a plan, execute it,
+
+00:03:32.010 --> 00:03:35.400
+and loop until it has some
+answers and generate,
+
+00:03:35.400 --> 00:03:38.370
+for example, a nice HTML
+report for you instead
+
+00:03:38.370 --> 00:03:39.900
+of you having to do it.
+
+00:03:39.900 --> 00:03:44.100
+So that involves coordinating
+models and tools,
+
+00:03:44.100 --> 00:03:48.120
+being able to reason through
+complex, long-running processes,
+
+00:03:48.120 --> 00:03:52.410
+coordinating multiple models
+with different capabilities,
+
+00:03:52.410 --> 00:03:55.650
+like maybe there's a good
+model that's really skilled
+
+00:03:55.650 --> 00:03:57.840
+at parsing PDFs.
+
+00:03:57.840 --> 00:04:00.570
+We all work with PDFs daily.
+
+00:04:00.570 --> 00:04:04.290
+Turns out PDF is still
+not a small problem.
+
+00:04:04.290 --> 00:04:07.470
+So you might need to do
+special handling depending
+
+00:04:07.470 --> 00:04:10.890
+on your domain for how you
+process those documents.
+
+00:04:10.890 --> 00:04:14.700
+And so the power really comes
+from giving the agent access
+
+00:04:14.700 --> 00:04:21.030
+to your deep business context,
+things like Microsoft 365 Graph,
+
+00:04:21.030 --> 00:04:23.280
+enterprise data in
+Azure, and other systems
+
+00:04:23.280 --> 00:04:24.840
+across your organization.
+
+00:04:24.840 --> 00:04:28.860
+Increasingly, agentic
+applications also use concepts
+
+00:04:28.860 --> 00:04:32.700
+like memory and
+involve self-learning
+
+00:04:32.700 --> 00:04:37.590
+and self-improving loops, where
+based on observing the outcomes
+
+00:04:37.590 --> 00:04:40.680
+of the agents, you can
+improve the skills,
+
+00:04:40.680 --> 00:04:42.420
+you can improve the workflows,
+
+00:04:42.420 --> 00:04:46.090
+so that they stay
+relevant over time.
+
+00:04:47.190 --> 00:04:51.330
+And so that comes with
+the agent AI lifecycle,
+
+00:04:51.330 --> 00:04:55.740
+which involves building
+the agent, deploying it,
+
+00:04:55.740 --> 00:05:00.270
+operating it, all in a
+secure governed framework,
+
+00:05:00.270 --> 00:05:04.580
+suited for enterprises,
+and requires evaluating
+
+00:05:04.580 --> 00:05:07.730
+and monitoring your
+agents over time.
+
+00:05:07.730 --> 00:05:12.360
+As you observe the agent's
+operation, you need to be able
+
+00:05:12.360 --> 00:05:14.970
+to mitigate if there
+are any issues,
+
+00:05:14.970 --> 00:05:18.510
+and then optimize
+the agent over time.
+
+00:05:18.510 --> 00:05:20.010
+So it's not a one-shot thing
+
+00:05:20.010 --> 00:05:22.530
+where you just deploy
+the agent once.
+
+00:05:22.530 --> 00:05:24.690
+You need to continually iterate.
+
+00:05:24.690 --> 00:05:28.080
+You need to continually
+evolve with your customers,
+
+00:05:28.080 --> 00:05:31.380
+with the data, and with
+the marketplace in order
+
+00:05:31.380 --> 00:05:36.340
+to get the most effective use of
+the AI agents for your domain.
+
+00:05:37.770 --> 00:05:41.460
+And this is why Microsoft
+is excited to partner
+
+00:05:41.460 --> 00:05:46.290
+with Anthropic, the leading
+company in agentic AI.
+
+00:05:46.290 --> 00:05:51.750
+Anthropic created things
+like MCP, agent skills,
+
+00:05:51.750 --> 00:05:55.590
+and has the leading agent
+harness in Claude Code.
+
+00:05:55.590 --> 00:06:00.450
+These are all innovations
+really tied to building agents,
+
+00:06:00.450 --> 00:06:04.230
+which produce business
+outcomes and business value.
+
+00:06:04.230 --> 00:06:07.080
+So we're really excited to
+partner with Anthropic.
+
+00:06:07.080 --> 00:06:09.240
+In just the last several
+months, frontier models
+
+00:06:09.240 --> 00:06:13.080
+like Claude Opus have
+unlocked a new level
+
+00:06:13.080 --> 00:06:15.720
+of autonomous
+agentic capability.
+
+00:06:15.720 --> 00:06:20.400
+You've probably heard that
+since last November of 2025,
+
+00:06:20.400 --> 00:06:25.230
+agentic capabilities have
+gotten to a new level
+
+00:06:25.230 --> 00:06:29.340
+to taking rich context,
+reason over data, call tools,
+
+00:06:29.340 --> 00:06:31.710
+and then act on your behalf.
+
+00:06:31.710 --> 00:06:36.270
+For our customers, Microsoft
+and Anthropic are thrilled
+
+00:06:36.270 --> 00:06:38.790
+to be able to combine
+the power of Claude
+
+00:06:38.790 --> 00:06:42.390
+with Microsoft's trusted
+enterprise foundations.
+
+00:06:42.390 --> 00:06:46.290
+Customers can create
+enterprise-grade agents built
+
+00:06:46.290 --> 00:06:50.560
+for real-world
+deployment from day one.
+
+00:06:52.290 --> 00:06:54.900
+And that brings us to
+Microsoft Foundry.
+
+00:06:54.900 --> 00:06:57.960
+Microsoft Foundry is
+the control plane
+
+00:06:57.960 --> 00:07:02.070
+for running agent workflows
+and AI-based applications
+
+00:07:02.070 --> 00:07:05.700
+in a secure, compliant platform.
+
+00:07:05.700 --> 00:07:09.480
+It starts with best-in-class
+tools for creating agents
+
+00:07:09.480 --> 00:07:12.570
+like GitHub Copilot
+CLI and VS Code.
+
+00:07:12.570 --> 00:07:18.000
+You can also use other coding
+agents to build your agents.
+
+00:07:18.000 --> 00:07:21.390
+And the agents that you build
+start with the best models
+
+00:07:21.390 --> 00:07:25.620
+like Claude Opus, like Claude
+Sonnet, and Claude Haiku,
+
+00:07:25.620 --> 00:07:30.240
+built to run in the agent
+service, accessing data
+
+00:07:30.240 --> 00:07:33.210
+from Foundry IQ
+and other forces,
+
+00:07:33.210 --> 00:07:37.170
+and tools from a wide
+variety of partners.
+
+00:07:37.170 --> 00:07:40.350
+Foundry helps you combine
+the models, data,
+
+00:07:40.350 --> 00:07:45.810
+and tools that you need to
+build useful agents securely.
+
+00:07:45.810 --> 00:07:49.860
+Your agents are managed
+with Microsoft Entra,
+
+00:07:49.860 --> 00:07:53.250
+Microsoft Purview
+for governance,
+
+00:07:53.250 --> 00:07:56.250
+and Microsoft Defender
+for security.
+
+00:07:56.250 --> 00:07:59.370
+You can manage all of your
+agents, whether they're built
+
+00:07:59.370 --> 00:08:02.100
+in Foundry or not, from
+the management layer
+
+00:08:02.100 --> 00:08:04.140
+of Microsoft Foundry.
+
+00:08:04.140 --> 00:08:06.630
+This means that
+organizations can build
+
+00:08:06.630 --> 00:08:11.700
+with powerful frontier models
+while maintaining the security
+
+00:08:11.700 --> 00:08:17.460
+compliance and governance that
+they expect from Microsoft.
+
+00:08:17.460 --> 00:08:21.750
+So at this point, I'm going
+to hand it over to Caroline,
+
+00:08:21.750 --> 00:08:26.910
+who's going to go deeper
+into what Claude unlocks
+
+00:08:26.910 --> 00:08:32.130
+for the power of agents
+running in Microsoft Foundry.
+
+00:08:32.130 --> 00:08:33.750
+CAROLINE MATTHEWS:
+Thank you, Keiji.
+
+00:08:33.750 --> 00:08:36.330
+So Microsoft gives us
+the platform, the scale,
+
+00:08:36.330 --> 00:08:38.910
+and the enterprise reach that
+developers already trust.
+
+00:08:38.910 --> 00:08:40.440
+But the next question
+is what you're going
+
+00:08:40.440 --> 00:08:41.970
+to build on top of it.
+
+00:08:41.970 --> 00:08:44.040
+And today, I'm going
+to walk through what
+
+00:08:44.040 --> 00:08:46.950
+that looks like with Claude.
+
+00:08:46.950 --> 00:08:49.830
+So four reasons
+why this matters.
+
+00:08:49.830 --> 00:08:52.140
+First, frontier intelligence
+
+00:08:52.140 --> 00:08:54.720
+that performs on
+truly hard work.
+
+00:08:54.720 --> 00:08:57.960
+So reasoning, coding, analysis.
+
+00:08:57.960 --> 00:09:01.170
+It's not autocomplete or
+surface-level summarization.
+
+00:09:01.170 --> 00:09:02.610
+This is the model being able
+
+00:09:02.610 --> 00:09:04.410
+to carry the work
+you'd normally hand
+
+00:09:04.410 --> 00:09:07.370
+to your most experienced
+engineers or analysts.
+
+00:09:07.370 --> 00:09:10.400
+So when the model is
+strong on the hard 20%,
+
+00:09:10.400 --> 00:09:13.340
+everything downstream
+gets simpler.
+
+00:09:13.340 --> 00:09:16.620
+The next thing is
+safety and governance.
+
+00:09:16.620 --> 00:09:18.060
+This is built in.
+
+00:09:18.060 --> 00:09:19.680
+It's not bolted on.
+
+00:09:19.680 --> 00:09:22.320
+And what we mean by
+that is safety is part
+
+00:09:22.320 --> 00:09:23.940
+of how Claude is actually built.
+
+00:09:23.940 --> 00:09:26.010
+The models are trained with it.
+
+00:09:26.010 --> 00:09:28.320
+You've heard of our
+constitutional AI.
+
+00:09:28.320 --> 00:09:31.170
+That is critical to the way
+that the models are trained
+
+00:09:31.170 --> 00:09:32.730
+and how they will behave.
+
+00:09:32.730 --> 00:09:36.120
+It's not just a layer
+that's added at the end.
+
+00:09:36.120 --> 00:09:37.980
+So the model is
+trained to be helpful
+
+00:09:37.980 --> 00:09:39.750
+and to decline appropriately.
+
+00:09:39.750 --> 00:09:42.450
+And on Azure, it also
+sits inside governance
+
+00:09:42.450 --> 00:09:43.710
+that you already trust.
+
+00:09:43.710 --> 00:09:45.870
+So there's data handling,
+access controls,
+
+00:09:45.870 --> 00:09:48.360
+content filtering,
+audit, compliance.
+
+00:09:48.360 --> 00:09:51.360
+So you're not trading
+capability for control.
+
+00:09:51.360 --> 00:09:54.510
+You get the frontier model
+and the enterprise guardrails
+
+00:09:54.510 --> 00:09:56.970
+in the same deployment,
+governed the same way
+
+00:09:56.970 --> 00:10:00.150
+as everything else that you run.
+
+00:10:00.150 --> 00:10:03.330
+Three, native integration
+with the Microsoft stack
+
+00:10:03.330 --> 00:10:04.920
+that you're already using.
+
+00:10:04.920 --> 00:10:07.410
+This runs where your
+teams already work.
+
+00:10:07.410 --> 00:10:10.080
+So Claude is available
+in Azure AI Foundry.
+
+00:10:10.080 --> 00:10:11.220
+It works with the identity
+
+00:10:11.220 --> 00:10:14.190
+and data you're already
+managing in M365.
+
+00:10:14.190 --> 00:10:16.830
+And it's available
+through GitHub Copilot.
+
+00:10:16.830 --> 00:10:19.050
+Your developers don't
+change their environment.
+
+00:10:19.050 --> 00:10:21.120
+And your security and
+platform teams don't take
+
+00:10:21.120 --> 00:10:23.400
+on a new vendor surface
+they have to review.
+
+00:10:23.400 --> 00:10:26.550
+Claude meets you where you are.
+
+00:10:26.550 --> 00:10:31.080
+And last, it's a short path
+from pilot to production.
+
+00:10:31.080 --> 00:10:33.570
+The path is short
+because evaluation
+
+00:10:33.570 --> 00:10:37.290
+and observability live in the
+same place as everything else.
+
+00:10:37.290 --> 00:10:39.360
+So you can test a prompt,
+you can measure it
+
+00:10:39.360 --> 00:10:41.820
+against your own evals, you
+can watch it in production
+
+00:10:41.820 --> 00:10:44.100
+and catch regressions,
+all without having
+
+00:10:44.100 --> 00:10:46.590
+to stitch five separate
+tools together.
+
+00:10:46.590 --> 00:10:49.200
+And that's the real difference
+between a demo that lands
+
+00:10:49.200 --> 00:10:50.310
+in a meeting and something
+
+00:10:50.310 --> 00:10:53.310
+that you can actually
+ship and stand behind.
+
+00:10:53.310 --> 00:10:55.950
+And that's the through line
+for these next few slides.
+
+00:10:55.950 --> 00:10:58.500
+You focus on your product,
+and the platform is going
+
+00:10:58.500 --> 00:11:00.420
+to handle the scaffolding.
+
+00:11:00.420 --> 00:11:02.820
+The model, the governance,
+the integration, evals,
+
+00:11:02.820 --> 00:11:04.800
+observability, all
+of it is there.
+
+00:11:04.800 --> 00:11:06.270
+So your team will spend time
+
+00:11:06.270 --> 00:11:09.670
+on what's differentiated,
+not on the plumbing.
+
+00:11:11.640 --> 00:11:13.380
+So here's the lineup.
+
+00:11:13.380 --> 00:11:15.720
+This is what's
+available in Foundry.
+
+00:11:15.720 --> 00:11:18.660
+Some of our best models for
+coding and agentic workflows,
+
+00:11:18.660 --> 00:11:23.130
+including Claude Opus, Claude
+Summit, and Claude Haiku.
+
+00:11:23.130 --> 00:11:26.340
+I'm going to get a
+little more detail now
+
+00:11:26.340 --> 00:11:28.920
+about this entire Claude
+model family that's available
+
+00:11:28.920 --> 00:11:30.270
+in Foundry.
+
+00:11:30.270 --> 00:11:32.640
+So the nice thing about this,
+when I talk about a family
+
+00:11:32.640 --> 00:11:35.490
+of models, the nice thing is
+you get all of those things
+
+00:11:35.490 --> 00:11:37.950
+that I just spoke about
+natively within all of them,
+
+00:11:37.950 --> 00:11:41.550
+including safety, the same
+sorts of prompting strategies,
+
+00:11:41.550 --> 00:11:44.160
+and overall, the same
+environment and API calls
+
+00:11:44.160 --> 00:11:47.010
+that you would use for any
+of these three models,
+
+00:11:47.010 --> 00:11:49.770
+which allows you to be able to
+work amongst them depending
+
+00:11:49.770 --> 00:11:52.080
+on what the use cases are.
+
+00:11:52.080 --> 00:11:55.590
+So Claude Opus, this is our
+most intelligent model.
+
+00:11:55.590 --> 00:11:57.990
+This is where you go for
+genuinely hard problems.
+
+00:11:57.990 --> 00:12:01.200
+So this is complex reasoning,
+really deep coding
+
+00:12:01.200 --> 00:12:03.720
+across a very large or
+unfamiliar code base
+
+00:12:03.720 --> 00:12:07.500
+or very long-horizon
+agentic tasks.
+
+00:12:07.500 --> 00:12:10.410
+And what sets it apart isn't
+just its raw intelligence
+
+00:12:10.410 --> 00:12:11.640
+for a single prompt.
+
+00:12:11.640 --> 00:12:15.630
+It is that ability to stay
+coherent over an extended run.
+
+00:12:15.630 --> 00:12:18.600
+So it can hold a goal
+across many steps.
+
+00:12:18.600 --> 00:12:21.510
+It can recover when something
+goes wrong partway through.
+
+00:12:21.510 --> 00:12:24.900
+And it keeps its reasoning
+consistent instead of drifting.
+
+00:12:24.900 --> 00:12:26.880
+And that's what makes it
+a great choice for work
+
+00:12:26.880 --> 00:12:30.000
+that you can't cleanly
+break into small pieces.
+
+00:12:30.000 --> 00:12:32.790
+In fact, that's what Opus
+can do is help you break
+
+00:12:32.790 --> 00:12:34.560
+into those smaller pieces
+
+00:12:34.560 --> 00:12:37.290
+that you could then
+deliver to other models.
+
+00:12:37.290 --> 00:12:39.270
+For example, Sonnet.
+
+00:12:39.270 --> 00:12:41.490
+So Sonnet is a really
+strong default.
+
+00:12:41.490 --> 00:12:42.420
+And note what I said there.
+
+00:12:42.420 --> 00:12:46.380
+That is actually a great spot
+to start that we do recommend.
+
+00:12:46.380 --> 00:12:47.460
+It's a great starting point
+
+00:12:47.460 --> 00:12:49.620
+for most enterprise
+work and most coding.
+
+00:12:49.620 --> 00:12:50.550
+It's fast.
+
+00:12:50.550 --> 00:12:51.900
+It's highly capable.
+
+00:12:51.900 --> 00:12:55.050
+And the gap to Opus is small
+enough that the large majority
+
+00:12:55.050 --> 00:12:57.420
+of tasks never really
+need to leave it.
+
+00:12:57.420 --> 00:12:59.130
+So most teams are
+really surprised
+
+00:12:59.130 --> 00:13:01.560
+by how far Sonnet
+alone takes them.
+
+00:13:01.560 --> 00:13:04.170
+So treat them as your baseline
+and reach for something else
+
+00:13:04.170 --> 00:13:07.200
+when the task truly needs it.
+
+00:13:07.200 --> 00:13:09.360
+Then we have Claude Haiku.
+
+00:13:09.360 --> 00:13:12.240
+This is your
+high-throughput option.
+
+00:13:12.240 --> 00:13:15.090
+Haiku is built for low
+latency and high volume.
+
+00:13:15.090 --> 00:13:18.030
+It's for the work where
+speed and cost matter most.
+
+00:13:18.030 --> 00:13:22.290
+So things like classification,
+extraction, routing, tagging.
+
+00:13:22.290 --> 00:13:24.330
+Anywhere there's a
+well-defined task
+
+00:13:24.330 --> 00:13:26.820
+that sits underneath
+a larger system.
+
+00:13:26.820 --> 00:13:29.580
+So when you pin down exactly
+what a task needs to do
+
+00:13:29.580 --> 00:13:32.700
+and you're running it at a very
+high volume, Haiku gives you
+
+00:13:32.700 --> 00:13:35.310
+that throughput without
+giving up the quality
+
+00:13:35.310 --> 00:13:37.590
+that the job requires.
+
+00:13:37.590 --> 00:13:40.980
+So the rule of thumb,
+prototype on Sonnet.
+
+00:13:40.980 --> 00:13:43.740
+It's capable enough to tell you
+quickly whether the idea works
+
+00:13:43.740 --> 00:13:44.430
+at all.
+
+00:13:44.430 --> 00:13:48.180
+Then move up to Opus when
+Sonnet starts to strain,
+
+00:13:48.180 --> 00:13:49.740
+when the reasoning
+gets really hard
+
+00:13:49.740 --> 00:13:51.450
+or the agent runs
+get really long
+
+00:13:51.450 --> 00:13:53.700
+and it can't hold
+together as well.
+
+00:13:53.700 --> 00:13:56.850
+And you would move down to Haiku
+once the task is well-defined
+
+00:13:56.850 --> 00:13:59.880
+and the priority shifts
+more to speed and cost.
+
+00:13:59.880 --> 00:14:03.990
+So the goal here is to match the
+model to the job, not just reach
+
+00:14:03.990 --> 00:14:07.500
+for the biggest one by default.
+
+00:14:07.500 --> 00:14:10.290
+And now to show some of these
+Claude models in action,
+
+00:14:10.290 --> 00:14:14.970
+we're going to take a look
+at a cupcake factory demo.
+
+00:14:14.970 --> 00:14:17.340
+Here I am just at
+the opening screen
+
+00:14:17.340 --> 00:14:20.070
+where you can see my
+project is already set up.
+
+00:14:20.070 --> 00:14:23.820
+I'm going to click into the
+build area and then you'll see
+
+00:14:23.820 --> 00:14:27.360
+under deployments where we
+have our models available.
+
+00:14:27.360 --> 00:14:29.880
+And I've deployed a few of
+the different Claude models.
+
+00:14:29.880 --> 00:14:34.020
+Today we're going to take a
+look at Claude Sonnet 4.6.
+
+00:14:34.020 --> 00:14:36.180
+This is a great
+model in particular
+
+00:14:36.180 --> 00:14:38.760
+for coding tasks and
+things like that.
+
+00:14:38.760 --> 00:14:40.260
+A very good balance in terms
+
+00:14:40.260 --> 00:14:42.990
+of the capabilities
+and frontier model.
+
+00:14:42.990 --> 00:14:47.730
+But it has a good price
+point as well as latency
+
+00:14:47.730 --> 00:14:49.770
+that will make it a
+great option for you
+
+00:14:49.770 --> 00:14:51.600
+as you're building things
+like this agent I'm
+
+00:14:51.600 --> 00:14:54.120
+about to demonstrate to you.
+
+00:14:54.120 --> 00:14:56.430
+So first, let's just make sure
+the model's up and running
+
+00:14:56.430 --> 00:14:58.050
+and everything is going well.
+
+00:14:58.050 --> 00:15:01.470
+So I've opened it into the
+playground within Foundry
+
+00:15:01.470 --> 00:15:03.840
+and I'll just say hello.
+
+00:15:03.840 --> 00:15:05.520
+We'll get just a
+generic response back
+
+00:15:05.520 --> 00:15:08.520
+because at the moment, the
+instructions it has are just
+
+00:15:08.520 --> 00:15:10.140
+to help people find information.
+
+00:15:10.140 --> 00:15:11.730
+Pretty generic.
+
+00:15:11.730 --> 00:15:13.350
+I'm going to adjust it slightly
+
+00:15:13.350 --> 00:15:15.510
+for what we're
+going to do today.
+
+00:15:15.510 --> 00:15:18.240
+So now I'm going to tell
+it that it is going
+
+00:15:18.240 --> 00:15:21.450
+to help people order cupcakes.
+
+00:15:21.450 --> 00:15:23.160
+And it will need to
+answer everything
+
+00:15:23.160 --> 00:15:25.950
+with cupcake puns and emojis.
+
+00:15:25.950 --> 00:15:27.180
+So let's start a new chat.
+
+00:15:27.180 --> 00:15:31.080
+We'll see how this
+affects the results.
+
+00:15:31.080 --> 00:15:32.400
+I'll tell it I'm hungry.
+
+00:15:32.400 --> 00:15:35.770
+A little bit of a hint there.
+
+00:15:37.260 --> 00:15:40.140
+Great. And we get some
+fairly ridiculous responses,
+
+00:15:40.140 --> 00:15:42.090
+but it is following
+our instructions,
+
+00:15:42.090 --> 00:15:44.880
+which was to use cupcake
+puns and emojis.
+
+00:15:44.880 --> 00:15:47.220
+So we see that the
+model is up and running
+
+00:15:47.220 --> 00:15:49.680
+and we're able to work with it.
+
+00:15:49.680 --> 00:15:52.410
+Now you'll see here, you do
+have an option right directly
+
+00:15:52.410 --> 00:15:53.100
+within Foundry.
+
+00:15:53.100 --> 00:15:54.900
+You could save it as
+an agent and be able
+
+00:15:54.900 --> 00:15:58.560
+to run it using those
+services, which is great.
+
+00:15:58.560 --> 00:15:59.910
+But today we're
+going to take a look
+
+00:15:59.910 --> 00:16:02.070
+at how we would do
+this within code.
+
+00:16:02.070 --> 00:16:06.750
+So I'm going to switch
+over to VS Code.
+
+00:16:06.750 --> 00:16:08.430
+And you'll see on my screen,
+
+00:16:08.430 --> 00:16:11.880
+I have set up Sparkles the
+cupcake ordering agent.
+
+00:16:11.880 --> 00:16:13.980
+And so a few things
+we'll walk through.
+
+00:16:13.980 --> 00:16:16.500
+First, so the way we connect
+to this, you'll see here,
+
+00:16:16.500 --> 00:16:19.410
+is with this Anthropic
+Foundry client that is part
+
+00:16:19.410 --> 00:16:22.800
+of the agent framework
+Foundry SDK.
+
+00:16:22.800 --> 00:16:24.030
+So that's available to us.
+
+00:16:24.030 --> 00:16:25.860
+We have a couple
+of configurations.
+
+00:16:25.860 --> 00:16:28.740
+So the model, API
+key, and base URL.
+
+00:16:28.740 --> 00:16:31.650
+These can all be found in
+the Details tab over there
+
+00:16:31.650 --> 00:16:33.540
+in Foundry, where we just were.
+
+00:16:33.540 --> 00:16:35.310
+So you can load those up.
+
+00:16:35.310 --> 00:16:37.290
+You also do have
+the option as well
+
+00:16:37.290 --> 00:16:40.560
+that you could use
+keyless deployment.
+
+00:16:40.560 --> 00:16:42.720
+So the next step is we're
+going to take a look at,
+
+00:16:42.720 --> 00:16:45.360
+we have created a
+Cupcake Store MCP.
+
+00:16:45.360 --> 00:16:48.870
+So this is a publicly
+available MCP,
+
+00:16:48.870 --> 00:16:52.350
+and what the MCP encapsulates
+is essentially the instructions
+
+00:16:52.350 --> 00:16:54.930
+that we're going to give to our
+agent, as well as sets of tools
+
+00:16:54.930 --> 00:16:58.080
+that it's going to use to be
+able to process cupcake orders,
+
+00:16:58.080 --> 00:17:01.680
+answer questions, all of the
+things that we're about to see.
+
+00:17:01.680 --> 00:17:05.250
+And so as I mentioned, this MCP
+server is set up as a public one
+
+00:17:05.250 --> 00:17:07.620
+for us to use for this
+type of demonstration.
+
+00:17:07.620 --> 00:17:09.600
+But you also can
+have private MCPs
+
+00:17:09.600 --> 00:17:11.910
+where you would pass
+authorization headers.
+
+00:17:11.910 --> 00:17:14.010
+So certainly a great way
+to be able to connect
+
+00:17:14.010 --> 00:17:16.770
+to internal and
+external systems.
+
+00:17:16.770 --> 00:17:20.040
+So the first thing we're
+going to do is, from the MCP,
+
+00:17:20.040 --> 00:17:23.640
+we are going to get the
+instructions and welcome banner.
+
+00:17:23.640 --> 00:17:26.040
+This is literally just
+instructions, the system prompt,
+
+00:17:26.040 --> 00:17:28.110
+and explaining to the agent
+how it should behave.
+
+00:17:28.110 --> 00:17:29.520
+And then we just have
+a cute welcome banner
+
+00:17:29.520 --> 00:17:32.040
+that you'll see
+in just a moment.
+
+00:17:32.040 --> 00:17:34.500
+So then we create the agent,
+
+00:17:34.500 --> 00:17:36.870
+passing in those
+instructions, the tools.
+
+00:17:36.870 --> 00:17:40.290
+And at this point, this is where
+I've named a cupcake agent.
+
+00:17:40.290 --> 00:17:42.270
+And you'll see then that
+the way we're going
+
+00:17:42.270 --> 00:17:45.000
+to demonstrate it today is to go
+ahead and kick off the session.
+
+00:17:45.000 --> 00:17:48.120
+So this is just going to run
+in a loop, awaiting responses
+
+00:17:48.120 --> 00:17:52.350
+and interactions from us as a
+user, and being able to interact
+
+00:17:52.350 --> 00:17:54.150
+with both that MCP tool, as well
+
+00:17:54.150 --> 00:17:56.100
+as the instructions
+that we give it.
+
+00:17:56.100 --> 00:17:59.470
+So let's give it a whirl.
+
+00:18:04.560 --> 00:18:06.390
+And there's our cute
+banner that I mentioned
+
+00:18:06.390 --> 00:18:07.290
+that we were going to get.
+
+00:18:07.290 --> 00:18:10.020
+I'll scoop this up so we
+can see a little bit more.
+
+00:18:10.020 --> 00:18:11.880
+So you see here,
+the first thing is,
+
+00:18:11.880 --> 00:18:13.260
+do I already have a customer ID?
+
+00:18:13.260 --> 00:18:14.130
+And I don't.
+
+00:18:14.130 --> 00:18:17.280
+I'm going to say that
+I need a new one.
+
+00:18:17.280 --> 00:18:20.940
+And first, it's going to ask me
+all the information it needs
+
+00:18:20.940 --> 00:18:23.040
+in order to set me up for this.
+
+00:18:23.040 --> 00:18:26.370
+So I'm going to go ahead
+and give it my name.
+
+00:18:26.370 --> 00:18:27.750
+And it will go back.
+
+00:18:27.750 --> 00:18:29.370
+It still needs a little
+bit more information.
+
+00:18:29.370 --> 00:18:31.320
+So again, pretty interactive.
+
+00:18:31.320 --> 00:18:34.680
+And at that point,
+we also need to go
+
+00:18:34.680 --> 00:18:36.780
+through our actual
+order process.
+
+00:18:36.780 --> 00:18:39.330
+So I've got everything
+set up for my customer.
+
+00:18:39.330 --> 00:18:42.960
+And the way we do the ordering
+is we have a little dashboard
+
+00:18:42.960 --> 00:18:46.410
+that is running off of that
+same MCP server that is going
+
+00:18:46.410 --> 00:18:48.000
+to have vouchers for us.
+
+00:18:48.000 --> 00:18:50.310
+And this is what lets
+us actually be able
+
+00:18:50.310 --> 00:18:50.970
+to do the order.
+
+00:18:50.970 --> 00:18:53.730
+So we'll show this to
+you in just a second.
+
+00:18:53.730 --> 00:18:59.020
+So I have decided I would
+like a lemon sponge today.
+
+00:19:00.540 --> 00:19:02.400
+So I'm going to go ahead
+and catch that one.
+
+00:19:02.400 --> 00:19:05.970
+And what we're going to see is
+there is a six-character voucher
+
+00:19:05.970 --> 00:19:06.900
+code that we need.
+
+00:19:06.900 --> 00:19:08.550
+I'm just going to go
+ahead and type that in
+
+00:19:08.550 --> 00:19:11.020
+because I've got mine already.
+
+00:19:14.010 --> 00:19:16.860
+Looks like we've
+already got ours ready.
+
+00:19:16.860 --> 00:19:20.460
+I am going to actually
+do this as a real order.
+
+00:19:20.460 --> 00:19:22.680
+We'll see.
+
+00:19:22.680 --> 00:19:26.940
+And then once I do that,
+we will pop back over.
+
+00:19:26.940 --> 00:19:28.050
+And there it is.
+
+00:19:28.050 --> 00:19:32.520
+There's my order for the
+lemon sponge cupcake.
+
+00:19:32.520 --> 00:19:34.380
+So I hope you've enjoyed this.
+
+00:19:34.380 --> 00:19:37.620
+This is just a fun way to show
+how you get all the amazing
+
+00:19:37.620 --> 00:19:39.300
+things with Azure in terms
+
+00:19:39.300 --> 00:19:42.570
+of enterprise
+capabilities and scale.
+
+00:19:42.570 --> 00:19:44.430
+And you also get the ability
+
+00:19:44.430 --> 00:19:48.540
+to now build your applications
+using Anthropic Claude models
+
+00:19:48.540 --> 00:19:50.840
+as well.
+
+00:19:50.840 --> 00:19:52.340
+KEIJI KANAZAWA:
+Thanks, Caroline.
+
+00:19:52.340 --> 00:19:55.340
+Now let's get into
+a little bit deeper
+
+00:19:55.340 --> 00:19:57.950
+into what an agent
+actually does.
+
+00:19:57.950 --> 00:20:01.370
+An agent is built
+using frontier models
+
+00:20:01.370 --> 00:20:06.240
+like the Claude series inside
+what you may have heard called
+
+00:20:06.240 --> 00:20:07.290
+a harness.
+
+00:20:07.290 --> 00:20:08.940
+We'll come back to
+that a little bit.
+
+00:20:08.940 --> 00:20:12.900
+A harness drives model
+inference and allows the model
+
+00:20:12.900 --> 00:20:18.300
+to write code, invoke tools,
+receive inputs, process them,
+
+00:20:18.300 --> 00:20:20.220
+and iterate in a loop.
+
+00:20:20.220 --> 00:20:23.100
+This is often called
+the agentic loop.
+
+00:20:23.100 --> 00:20:26.070
+The agent takes the input,
+reasons about what needs
+
+00:20:26.070 --> 00:20:30.120
+to happen, calls tools or
+retrieves information,
+
+00:20:30.120 --> 00:20:34.380
+and then continues until it can
+produce what it considers the
+
+00:20:34.380 --> 00:20:36.070
+right output.
+
+00:20:37.080 --> 00:20:39.960
+Foundry Agent
+Service is the part
+
+00:20:39.960 --> 00:20:43.530
+of Microsoft Foundry that's
+designed to be the best place
+
+00:20:43.530 --> 00:20:49.080
+to build and run AI apps
+and agents that scale.
+
+00:20:49.080 --> 00:20:50.880
+It's open by design.
+
+00:20:50.880 --> 00:20:53.850
+You can work with different
+frameworks and protocols,
+
+00:20:53.850 --> 00:20:57.780
+including the agent-to-agent
+protocol, MCP,
+
+00:20:57.780 --> 00:20:59.880
+and other emerging standards.
+
+00:20:59.880 --> 00:21:02.760
+It's built for
+multi-agent workflows
+
+00:21:02.760 --> 00:21:06.840
+and supports the agent
+framework of your choice.
+
+00:21:06.840 --> 00:21:10.650
+With Foundry agent service, you
+can access models in Foundry,
+
+00:21:10.650 --> 00:21:15.510
+connect to Foundry IQ, and other
+data sources, leverage tools,
+
+00:21:15.510 --> 00:21:18.300
+and deploy them in production
+
+00:21:18.300 --> 00:21:22.710
+in a secure enterprise-grade
+platform that you can observe,
+
+00:21:22.710 --> 00:21:26.970
+monitor, and optimize
+and improve over time.
+
+00:21:26.970 --> 00:21:30.390
+You can deploy your agents,
+not just within Foundry,
+
+00:21:30.390 --> 00:21:36.610
+but also to Microsoft
+365 and Agent 365.
+
+00:21:37.800 --> 00:21:40.650
+And you get that
+end-to-end observability
+
+00:21:40.650 --> 00:21:45.450
+and simplified governance
+that's underpinning everything
+
+00:21:45.450 --> 00:21:47.710
+in Microsoft Foundry.
+
+00:21:49.740 --> 00:21:53.250
+Now, that's enough of our
+slides, let's show another demo
+
+00:21:53.250 --> 00:22:00.720
+to show you agents using Claude
+in action in Microsoft Foundry.
+
+00:22:00.720 --> 00:22:04.710
+So let me show you again
+what running an agent looks
+
+00:22:04.710 --> 00:22:09.990
+like in practice with Claude
+on Microsoft Foundry.
+
+00:22:09.990 --> 00:22:13.590
+Here's an example of an
+agent I built with Claude
+
+00:22:13.590 --> 00:22:15.630
+in the Foundry Agent Service.
+
+00:22:15.630 --> 00:22:18.960
+It's running in what's
+called a hosted agent,
+
+00:22:18.960 --> 00:22:20.940
+which we'll come back
+to in a little bit.
+
+00:22:20.940 --> 00:22:23.280
+It's a customer support
+
+00:22:23.280 --> 00:22:28.950
+and live-side triage system
+using the Claude agent SDK
+
+00:22:28.950 --> 00:22:32.460
+running in Microsoft
+Foundry inside a hosted
+
+00:22:32.460 --> 00:22:34.170
+container sandbox.
+
+00:22:34.170 --> 00:22:37.380
+This agent can access my data
+
+00:22:37.380 --> 00:22:39.420
+and execute an
+operational workflow.
+
+00:22:39.420 --> 00:22:48.160
+So I can give it a command
+like, run the weekly ops flow.
+
+00:22:50.430 --> 00:22:56.190
+And it's going to kick off the
+workflow that it has for looking
+
+00:22:56.190 --> 00:23:02.250
+at live-side incidents, customer
+support calls, any messages
+
+00:23:02.250 --> 00:23:05.100
+or emails that people
+have been sending
+
+00:23:05.100 --> 00:23:09.030
+about the live-side status,
+looking at the data,
+
+00:23:09.030 --> 00:23:11.890
+and putting it all together.
+
+00:23:13.050 --> 00:23:20.880
+And so, let me switch over while
+this is running back to talking
+
+00:23:20.880 --> 00:23:28.260
+about what hosted agents are and
+what the Claude agent SDK is.
+
+00:23:28.260 --> 00:23:32.190
+So that agent, the support agent
+is running as a hosted agent
+
+00:23:32.190 --> 00:23:34.380
+within Microsoft Foundry.
+
+00:23:34.380 --> 00:23:39.120
+These are agents that you build
+with custom code that you build
+
+00:23:39.120 --> 00:23:44.730
+in any framework that you want,
+including GitHub Copilot SDK,
+
+00:23:44.730 --> 00:23:50.130
+LangChain, LangGraph, or
+the Claude agent SDK.
+
+00:23:50.130 --> 00:23:54.330
+You build your agent, starting
+on your local machine,
+
+00:23:54.330 --> 00:23:59.220
+make sure it's working
+correctly, and then you can move
+
+00:23:59.220 --> 00:24:02.610
+that application up
+into the cloud sandbox,
+
+00:24:02.610 --> 00:24:05.850
+hosted in Foundry Agent Service.
+
+00:24:05.850 --> 00:24:09.090
+What's great about
+running your agents
+
+00:24:09.090 --> 00:24:13.860
+in the Foundry Agent
+Service hosted agent,
+
+00:24:13.860 --> 00:24:19.470
+is that that sandbox is
+automatically secured and set
+
+00:24:19.470 --> 00:24:21.900
+up with the authentication
+that you need
+
+00:24:21.900 --> 00:24:27.720
+to access Foundry resources,
+like calling Claude models
+
+00:24:27.720 --> 00:24:32.010
+in Microsoft Foundry
+for the agent to use
+
+00:24:32.010 --> 00:24:35.250
+in doing its reasoning
+and operation.
+
+00:24:35.250 --> 00:24:39.960
+And also, the hosted agent
+service facilitates the
+
+00:24:39.960 --> 00:24:45.660
+authentication that you need to
+connect to the tools and MCPs
+
+00:24:45.660 --> 00:24:52.470
+that host your enterprise data
+and to use those securely.
+
+00:24:52.470 --> 00:24:56.820
+Now, let's switch
+over to Caroline,
+
+00:24:56.820 --> 00:24:59.190
+who's going to share
+a little bit more
+
+00:24:59.190 --> 00:25:05.760
+about the Claude agent SDK
+that I'm using in that demo.
+
+00:25:05.760 --> 00:25:06.150
+CAROLINE MATTHEWS: Great.
+
+00:25:06.150 --> 00:25:07.620
+Thanks, Keiji.
+
+00:25:07.620 --> 00:25:10.560
+This is one of my favorite
+things to talk about.
+
+00:25:10.560 --> 00:25:13.470
+So let's chat about
+the Claude agent SDK.
+
+00:25:13.470 --> 00:25:15.180
+First, what is it?
+
+00:25:15.180 --> 00:25:17.910
+This is the harness
+behind Claude code.
+
+00:25:17.910 --> 00:25:20.490
+So it's the same agent
+loop, it's the same tools,
+
+00:25:20.490 --> 00:25:22.980
+context management that
+powers the product millions
+
+00:25:22.980 --> 00:25:26.040
+of developers are using every
+day, and it's programmable
+
+00:25:26.040 --> 00:25:28.410
+in both Python and TypeScript.
+
+00:25:28.410 --> 00:25:29.970
+So it is the production harness.
+
+00:25:29.970 --> 00:25:32.340
+We've talked about harnesses
+already in this webinar,
+
+00:25:32.340 --> 00:25:36.000
+and you are building on the
+exact thing we use ourselves.
+
+00:25:36.000 --> 00:25:38.430
+So first, the loop
+is fairly simple,
+
+00:25:38.430 --> 00:25:40.260
+but it is the whole model.
+
+00:25:40.260 --> 00:25:44.130
+You will gather context, take
+action, verify the work,
+
+00:25:44.130 --> 00:25:46.800
+and repeat until
+the task is done.
+
+00:25:46.800 --> 00:25:47.820
+That's it.
+
+00:25:47.820 --> 00:25:52.080
+So every capable agent comes
+back to those four steps.
+
+00:25:52.080 --> 00:25:54.840
+What makes an agent good
+is not a clever prompt.
+
+00:25:54.840 --> 00:25:58.560
+It's doing each of those steps
+well, and the SDK is built
+
+00:25:58.560 --> 00:26:00.750
+to do them well by default.
+
+00:26:00.750 --> 00:26:03.060
+So out of the box,
+here's what you get.
+
+00:26:03.060 --> 00:26:07.290
+You have code execution, a
+file system, web search,
+
+00:26:07.290 --> 00:26:11.430
+a to-do list, and MCP, plus
+your own custom tools.
+
+00:26:11.430 --> 00:26:14.310
+So the agent can run code,
+it can read and write files,
+
+00:26:14.310 --> 00:26:17.190
+look things up, keep track
+of a multi-step plan,
+
+00:26:17.190 --> 00:26:19.800
+and reach into your
+systems through MCP.
+
+00:26:19.800 --> 00:26:22.710
+So if you have an internal API
+or a proprietary data source,
+
+00:26:22.710 --> 00:26:24.600
+you can expose that as a tool,
+
+00:26:24.600 --> 00:26:27.510
+and the agent uses
+it like any other.
+
+00:26:27.510 --> 00:26:30.270
+And then there's the layer that
+a lot of people underestimate,
+
+00:26:30.270 --> 00:26:32.610
+the infrastructure
+around the loop.
+
+00:26:32.610 --> 00:26:35.070
+So context management,
+so the agent doesn't run
+
+00:26:35.070 --> 00:26:37.080
+out of room on long tasks.
+
+00:26:37.080 --> 00:26:40.440
+Sessions in memory, so it
+can pick work back up.
+
+00:26:40.440 --> 00:26:43.770
+Permissions, so it only
+does what you've allowed.
+
+00:26:43.770 --> 00:26:46.860
+Lifecycle hooks, so you
+can insert your own logic
+
+00:26:46.860 --> 00:26:50.010
+at each step that
+will always run.
+
+00:26:50.010 --> 00:26:53.820
+And sub-agents that let you
+fan work out and parallelize.
+
+00:26:53.820 --> 00:26:55.890
+Plus, you have error
+handling and observability,
+
+00:26:55.890 --> 00:26:58.440
+so you can see what
+it did and why.
+
+00:26:58.440 --> 00:27:01.440
+And this is the part that teams
+always think they'll knock
+
+00:27:01.440 --> 00:27:04.710
+out in a week, but it
+really takes a long time.
+
+00:27:04.710 --> 00:27:07.530
+So the takeaway is the
+last line on the slide.
+
+00:27:07.530 --> 00:27:09.600
+You don't need to worry
+about the plumbing.
+
+00:27:09.600 --> 00:27:11.610
+You ship the agent.
+
+00:27:11.610 --> 00:27:12.840
+Most teams build a version
+
+00:27:12.840 --> 00:27:15.540
+of this harness themselves
+before they find the SDK.
+
+00:27:15.540 --> 00:27:16.260
+They write the loop.
+
+00:27:16.260 --> 00:27:18.630
+They do the tool, the wiring,
+the context handling.
+
+00:27:18.630 --> 00:27:21.210
+They might hit a permissions
+and observability issue,
+
+00:27:21.210 --> 00:27:23.160
+and they realize that they're
+really maintaining a whole
+
+00:27:23.160 --> 00:27:25.740
+separate platform instead
+of building their product.
+
+00:27:25.740 --> 00:27:30.180
+That is the work you can now
+skip with the Claude Agent SDK.
+
+00:27:30.180 --> 00:27:32.250
+And now, we're going to
+go back and take a look
+
+00:27:32.250 --> 00:27:34.530
+at what Keiji built with it.
+
+00:27:34.530 --> 00:27:40.350
+KEIJI KANAZAWA: So the agent
+has come back with its report.
+
+00:27:40.350 --> 00:27:43.350
+It's done the weekly ops review.
+
+00:27:43.350 --> 00:27:45.480
+Turns out, situation is red.
+
+00:27:45.480 --> 00:27:52.530
+We've had a lot of errors and
+support cases this week, 40% up.
+
+00:27:52.530 --> 00:27:56.790
+And so, what the agent has done
+is looked at all of the data
+
+00:27:56.790 --> 00:28:00.960
+in terms of the life sites,
+the support tickets,
+
+00:28:00.960 --> 00:28:03.570
+any communication
+that's happened.
+
+00:28:03.570 --> 00:28:08.070
+And it's done these
+multiple steps,
+
+00:28:08.070 --> 00:28:11.250
+like also generating
+a trend forecast.
+
+00:28:11.250 --> 00:28:12.750
+So it gives you that report.
+
+00:28:12.750 --> 00:28:16.260
+And again, it ran
+that agentic loop
+
+00:28:16.260 --> 00:28:20.610
+where you basically gave it
+an idea of what we want,
+
+00:28:20.610 --> 00:28:23.460
+running the weekly ops review.
+
+00:28:23.460 --> 00:28:26.790
+And it has a prompt that
+underlines what that means.
+
+00:28:26.790 --> 00:28:30.480
+But after that, it goes and
+executes the workflow itself
+
+00:28:30.480 --> 00:28:34.980
+until it knows it's met what
+this workflow is supposed to do,
+
+00:28:34.980 --> 00:28:39.420
+which includes things like what
+are the top impacting things,
+
+00:28:39.420 --> 00:28:44.790
+forecasting what it's going to
+look like this coming week.
+
+00:28:44.790 --> 00:28:49.020
+And then, some artifacts to
+capture the whole analysis
+
+00:28:49.020 --> 00:28:53.070
+that you can go back and look
+at it later, not just locked
+
+00:28:53.070 --> 00:28:56.070
+into this chat window.
+
+00:28:56.070 --> 00:28:58.500
+And where do you
+get all of that?
+
+00:28:58.500 --> 00:29:02.070
+So that's where Microsoft
+Foundry comes in.
+
+00:29:02.070 --> 00:29:07.770
+And so, this is where you find
+that agent in Microsoft Foundry.
+
+00:29:07.770 --> 00:29:11.820
+I'm already on a page that
+shows the particular agent
+
+00:29:11.820 --> 00:29:15.630
+that I'm running in the project,
+the Claude Agent SDK running
+
+00:29:15.630 --> 00:29:19.650
+for the support intelligence
+case in the hosted agent.
+
+00:29:19.650 --> 00:29:21.900
+So you can see all
+of the sessions
+
+00:29:21.900 --> 00:29:24.660
+that have been running
+for this agent.
+
+00:29:24.660 --> 00:29:28.950
+When I click on it, you can see
+all of the steps that it took.
+
+00:29:28.950 --> 00:29:31.560
+I can open this session,
+
+00:29:31.560 --> 00:29:35.190
+and what you can see
+here is those articles
+
+00:29:35.190 --> 00:29:40.500
+that I pointed to, the summary
+and forecast that it produced,
+
+00:29:40.500 --> 00:29:43.560
+it's available right
+here in the Foundry.
+
+00:29:43.560 --> 00:29:46.410
+And you can programmatically
+access these as well.
+
+00:29:46.410 --> 00:29:51.330
+So for example, it has
+a weekly forecast.
+
+00:29:51.330 --> 00:29:54.360
+It puts that in a nice chart.
+
+00:29:54.360 --> 00:29:58.800
+It also has the executive
+summary as a markdown
+
+00:29:58.800 --> 00:30:00.150
+that you can refer back to.
+
+00:30:00.150 --> 00:30:03.240
+This is basically what
+the agent printed
+
+00:30:03.240 --> 00:30:07.290
+out in the user experience.
+
+00:30:07.290 --> 00:30:12.780
+And I can also go and
+look at the trace
+
+00:30:12.780 --> 00:30:16.770
+of what the agent was doing.
+
+00:30:16.770 --> 00:30:23.790
+So I'll click on this, which
+is the latest agent session.
+
+00:30:23.790 --> 00:30:27.630
+And what you can see is
+all of the different turns
+
+00:30:27.630 --> 00:30:33.750
+and all the tool calls that the
+Claude Agent SDK made in running
+
+00:30:33.750 --> 00:30:37.410
+that weekly ops workflow.
+
+00:30:37.410 --> 00:30:41.460
+And this is something
+that I actually wired up.
+
+00:30:41.460 --> 00:30:47.160
+I used Claude Code to
+basically tell it, hey,
+
+00:30:47.160 --> 00:30:50.160
+I want to record
+all of the events
+
+00:30:50.160 --> 00:30:54.780
+that the Claude Agent is
+doing while it's running
+
+00:30:54.780 --> 00:30:56.220
+that ops workflow.
+
+00:30:56.220 --> 00:31:00.810
+And I said, please go look up
+the documentation on how to wire
+
+00:31:00.810 --> 00:31:04.440
+up traces for the
+Foundry hosted agents
+
+00:31:04.440 --> 00:31:07.050
+so that I can see it
+in Microsoft Foundry.
+
+00:31:07.050 --> 00:31:08.670
+And it just took a few minutes,
+
+00:31:08.670 --> 00:31:12.060
+wired it all up, one
+shot as they say.
+
+00:31:12.060 --> 00:31:15.030
+And now I can see
+all of the activity
+
+00:31:15.030 --> 00:31:17.880
+of that agent in the Foundry.
+
+00:31:17.880 --> 00:31:22.890
+And then you can look at all
+of the, you know, steps,
+
+00:31:22.890 --> 00:31:25.650
+kind of metadata,
+each of the steps.
+
+00:31:25.650 --> 00:31:28.770
+And in the Foundry, we
+also have this nice view
+
+00:31:28.770 --> 00:31:32.790
+where you can kind of play back
+in time all of the actions
+
+00:31:32.790 --> 00:31:37.630
+that that agent took for
+that particular session.
+
+00:31:39.840 --> 00:31:44.430
+Now, we also have a monitoring
+view, the observability piece
+
+00:31:44.430 --> 00:31:48.960
+that we talked about,
+where we are recording all
+
+00:31:48.960 --> 00:31:52.350
+of the different runs that this
+agent has made and to be able
+
+00:31:52.350 --> 00:31:56.040
+to do things like
+evaluations as well.
+
+00:31:56.040 --> 00:32:01.650
+So that's the power of combining
+Claude SDK, Claude Agent SDK,
+
+00:32:01.650 --> 00:32:05.490
+running in an agent
+in a workflow,
+
+00:32:05.490 --> 00:32:08.880
+running on Microsoft Foundry.
+
+00:32:08.880 --> 00:32:11.400
+CAROLINE MATTHEWS: And on
+that note, evaluations.
+
+00:32:11.400 --> 00:32:13.770
+This is one of the
+most critical things.
+
+00:32:13.770 --> 00:32:16.620
+We talk about this all the
+time with all of our customers
+
+00:32:16.620 --> 00:32:20.070
+and partners about how
+critical it is to set
+
+00:32:20.070 --> 00:32:23.040
+up evaluations very
+early and very well
+
+00:32:23.040 --> 00:32:25.800
+when you're building these
+sorts of applications.
+
+00:32:25.800 --> 00:32:28.560
+And what we mean by that is
+the evaluations are the way
+
+00:32:28.560 --> 00:32:32.040
+that you can add a little bit
+more determinism to what is,
+
+00:32:32.040 --> 00:32:35.940
+as we all know, a very
+probabilistic use case.
+
+00:32:35.940 --> 00:32:38.100
+And so the types of
+things that we talk
+
+00:32:38.100 --> 00:32:39.660
+about with evaluations range
+
+00:32:39.660 --> 00:32:41.250
+across these three
+different pillars,
+
+00:32:41.250 --> 00:32:42.390
+four different
+pillars, actually.
+
+00:32:42.390 --> 00:32:46.530
+But we have quality, which
+is really about the types
+
+00:32:46.530 --> 00:32:48.180
+of output you're getting.
+
+00:32:48.180 --> 00:32:50.130
+And there's some great
+evaluation scores
+
+00:32:50.130 --> 00:32:52.170
+that are available
+kind of intrinsically
+
+00:32:52.170 --> 00:32:55.380
+or are intrinsically on
+Azure, such as groundedness,
+
+00:32:55.380 --> 00:32:59.670
+which is how close is it to
+the expectation, coherence
+
+00:32:59.670 --> 00:33:03.450
+and fluency about how the models
+are responding and the types
+
+00:33:03.450 --> 00:33:07.050
+of answers that you're getting,
+relevance to the answers,
+
+00:33:07.050 --> 00:33:09.720
+being able to see how
+similar something is
+
+00:33:09.720 --> 00:33:12.030
+to a very expected output.
+
+00:33:12.030 --> 00:33:16.020
+So quality is around the
+outputs coming from the agents,
+
+00:33:16.020 --> 00:33:18.600
+but we have to be very careful
+about risk and safety.
+
+00:33:18.600 --> 00:33:20.850
+We have this kind of broken
+into two areas, but risk
+
+00:33:20.850 --> 00:33:23.250
+and safety is all of
+the things that we hear
+
+00:33:23.250 --> 00:33:24.990
+about in the news, frankly.
+
+00:33:24.990 --> 00:33:30.240
+Anything around unsafe or
+less protected types of ways
+
+00:33:30.240 --> 00:33:33.480
+that you would interact with
+the models that you're using.
+
+00:33:33.480 --> 00:33:35.700
+And we also have to be
+careful just about things
+
+00:33:35.700 --> 00:33:37.410
+that might be ungrounded.
+
+00:33:37.410 --> 00:33:39.420
+This is where we can get
+some really bad information
+
+00:33:39.420 --> 00:33:42.240
+that can get out there because
+it wasn't properly grounded.
+
+00:33:42.240 --> 00:33:45.990
+So we kind of classify that in
+terms of risk and safety as well
+
+00:33:45.990 --> 00:33:49.860
+as quality along those same
+lines with code vulnerability.
+
+00:33:49.860 --> 00:33:52.710
+And overall with agents, we kind
+of introduce a whole new set
+
+00:33:52.710 --> 00:33:54.510
+of types of evaluations
+where we want
+
+00:33:54.510 --> 00:33:56.970
+to understand did the
+overall agentic process,
+
+00:33:56.970 --> 00:33:59.490
+especially as we get
+into multi-agent,
+
+00:33:59.490 --> 00:34:01.740
+did it understand
+the intent properly?
+
+00:34:01.740 --> 00:34:04.320
+How accurately did it
+make those tool calls
+
+00:34:04.320 --> 00:34:07.650
+and how well were the
+responses handled by those?
+
+00:34:07.650 --> 00:34:10.560
+Task adherence, is it able
+to complete the full task?
+
+00:34:10.560 --> 00:34:12.780
+Again, as we talk about
+very long-running agents,
+
+00:34:12.780 --> 00:34:16.410
+we need to evaluate how
+well it can work over time.
+
+00:34:16.410 --> 00:34:19.680
+And in addition to these that
+come sort of out of the box,
+
+00:34:19.680 --> 00:34:22.590
+we also have custom evaluators,
+which is an excellent way
+
+00:34:22.590 --> 00:34:23.970
+to then extend this into things
+
+00:34:23.970 --> 00:34:27.750
+that are very specific
+for your use cases.
+
+00:34:27.750 --> 00:34:29.670
+And the great thing
+is, as I mentioned,
+
+00:34:29.670 --> 00:34:32.070
+is a lot of these evaluators
+are available for you
+
+00:34:32.070 --> 00:34:35.340
+within Azure automatically, or
+you can build your custom ones.
+
+00:34:35.340 --> 00:34:38.850
+And all of them can be
+measured and evaluated
+
+00:34:38.850 --> 00:34:41.340
+within the Azure
+Foundry interfaces
+
+00:34:41.340 --> 00:34:43.230
+as well as programmatically.
+
+00:34:43.230 --> 00:34:45.540
+So you have all those
+evaluation metrics available
+
+00:34:45.540 --> 00:34:46.890
+for your agents to use.
+
+00:34:46.890 --> 00:34:50.010
+This allows you to automate
+and be able to review things
+
+00:34:50.010 --> 00:34:53.400
+in real time, as well as being
+able to look over a period
+
+00:34:53.400 --> 00:34:55.350
+of time, which will really
+help as you're looking
+
+00:34:55.350 --> 00:34:56.880
+at drift and as things change.
+
+00:34:56.880 --> 00:34:59.970
+Or if you need to make a
+change, switch to the latest,
+
+00:34:59.970 --> 00:35:02.460
+a new model that's come out,
+a new version of a model,
+
+00:35:02.460 --> 00:35:04.440
+or make a change
+within your code.
+
+00:35:04.440 --> 00:35:08.700
+These evaluations are what let
+you see how well it will perform
+
+00:35:08.700 --> 00:35:12.810
+your full agentic system, even
+if you're making changes.
+
+00:35:12.810 --> 00:35:15.150
+And so, again, this is why
+we think evaluations are
+
+00:35:15.150 --> 00:35:17.100
+so important, and we really need
+
+00:35:17.100 --> 00:35:19.110
+to see those early
+on in the process.
+
+00:35:19.110 --> 00:35:20.250
+Don't wait till the end.
+
+00:35:20.250 --> 00:35:22.800
+This is something that
+should be built all the way
+
+00:35:22.800 --> 00:35:27.090
+through as you're building
+out your agentic solutions.
+
+00:35:27.090 --> 00:35:29.940
+So we've shown a lot
+today, and we opened
+
+00:35:29.940 --> 00:35:31.770
+with some customer
+quotes, but we also want
+
+00:35:31.770 --> 00:35:33.870
+to close with a few more.
+
+00:35:33.870 --> 00:35:35.850
+I'm not going to read all
+of these, but just looking
+
+00:35:35.850 --> 00:35:38.070
+at a pattern across
+all of the customers
+
+00:35:38.070 --> 00:35:39.480
+that we've been working with.
+
+00:35:39.480 --> 00:35:43.530
+Adobe values being able to
+evaluate frontier models
+
+00:35:43.530 --> 00:35:45.330
+with the governance intact.
+
+00:35:45.330 --> 00:35:47.730
+You saw Denton sees better
+reasoning translate
+
+00:35:47.730 --> 00:35:49.770
+into less rework for lawyers.
+
+00:35:49.770 --> 00:35:51.420
+Macroscope catches the bugs
+
+00:35:51.420 --> 00:35:53.820
+that matter before
+they reach production.
+
+00:35:53.820 --> 00:35:56.220
+So all these different
+industries, including the ones
+
+00:35:56.220 --> 00:35:59.690
+from Momentic and Everstar,
+have the same conclusion.
+
+00:35:59.690 --> 00:36:06.120
+Reasoning quality is doing real
+production work, not demo work.
+
+00:36:06.120 --> 00:36:07.590
+KEIJI KANAZAWA: Today,
+
+00:36:07.590 --> 00:36:12.450
+you learn how you can take the
+advanced reasoning agentic
+
+00:36:12.450 --> 00:36:16.290
+capabilities of the
+Claude models combined
+
+00:36:16.290 --> 00:36:21.750
+with Microsoft Foundry to
+build agentic workflows
+
+00:36:21.750 --> 00:36:25.360
+that can accelerate
+your business.
+
+00:36:26.520 --> 00:36:30.390
+Here are some resources that you
+can use to continue to learn
+
+00:36:30.390 --> 00:36:36.370
+about how to build agents with
+Claude and Microsoft Foundry.

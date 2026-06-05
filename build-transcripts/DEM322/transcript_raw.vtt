@@ -1,0 +1,2495 @@
+WEBVTT
+
+NOTE
+language:en-US
+
+NOTE Confidence: 0.8457198143005371
+
+00:00:00.040 --> 00:00:01.160
+Can everyone hear me OK?
+
+NOTE Confidence: 0.9312754273414612
+
+00:00:01.160 --> 00:00:01.960
+Yeah, thumbs up.
+
+NOTE Confidence: 0.7256231904029846
+
+00:00:01.960 --> 00:00:02.720
+How's everyone doing?
+
+NOTE Confidence: 0.9696549773216248
+
+00:00:02.720 --> 00:00:03.840
+Thanks for coming here.
+
+NOTE Confidence: 0.9557702541351318
+
+00:00:04.240 --> 00:00:07.480
+So this session is something really exciting to us.
+
+NOTE Confidence: 0.9211590886116028
+
+00:00:07.480 --> 00:00:10.155
+We want to talk to you about a something that
+
+NOTE Confidence: 0.9211590886116028
+
+00:00:10.214 --> 00:00:13.543
+is evolving and it's also something that we are studying
+
+NOTE Confidence: 0.9211590886116028
+
+00:00:13.603 --> 00:00:13.959
+a lot.
+
+NOTE Confidence: 0.9468954205513
+
+00:00:14.400 --> 00:00:17.720
+6 months ago the goal was to build the fastest
+
+NOTE Confidence: 0.9468954205513
+
+00:00:17.792 --> 00:00:21.617
+agent, but now that goal looks a little bit different
+
+NOTE Confidence: 0.9468954205513
+
+00:00:21.689 --> 00:00:25.731
+because the question is not just whether my agent works,
+
+NOTE Confidence: 0.9468954205513
+
+00:00:25.804 --> 00:00:28.835
+it is about whether I can afford to run my
+
+NOTE Confidence: 0.9468954205513
+
+00:00:28.907 --> 00:00:30.640
+agent 100 million times.
+
+NOTE Confidence: 0.9366349577903748
+
+00:00:31.240 --> 00:00:36.425
+As AI moves from Frontier Labs into your enterprise workflows,
+
+NOTE Confidence: 0.9366349577903748
+
+00:00:36.509 --> 00:00:41.778
+there is a need for intelligence to become dramatically cheaper
+
+NOTE Confidence: 0.9366349577903748
+
+00:00:41.861 --> 00:00:46.210
+so that that intelligence is a utility rather than a
+
+NOTE Confidence: 0.9366349577903748
+
+00:00:46.294 --> 00:00:46.880
+luxury.
+
+NOTE Confidence: 0.9687519669532776
+
+00:00:47.760 --> 00:00:50.240
+My name is William and welcome to our session.
+
+NOTE Confidence: 0.9391041994094849
+
+00:00:50.240 --> 00:00:52.919
+I am with the Foundry Fine Tuning team and in
+
+NOTE Confidence: 0.9391041994094849
+
+00:00:52.979 --> 00:00:56.314
+this session we're going to tell you everything you need
+
+NOTE Confidence: 0.9391041994094849
+
+00:00:56.374 --> 00:00:59.471
+to know about how you can turn your production agent
+
+NOTE Confidence: 0.9391041994094849
+
+00:00:59.530 --> 00:01:03.103
+traces into smaller models that will run cheaper, faster and
+
+NOTE Confidence: 0.9391041994094849
+
+00:01:03.163 --> 00:01:03.639
+smarter.
+
+NOTE Confidence: 0.917848527431488
+
+00:01:04.440 --> 00:01:07.678
+So if some of you were at our breakout session
+
+NOTE Confidence: 0.917848527431488
+
+00:01:07.748 --> 00:01:11.972
+yesterday, you may have already seen this motivation for the
+
+NOTE Confidence: 0.917848527431488
+
+00:01:12.042 --> 00:01:17.392
+topic because we have been noticing enterprise increasingly adopting agentic
+
+NOTE Confidence: 0.917848527431488
+
+00:01:17.462 --> 00:01:20.841
+AI and a lot of teams have already having agents
+
+NOTE Confidence: 0.917848527431488
+
+00:01:20.912 --> 00:01:22.320
+in production today.
+
+NOTE Confidence: 0.9423274397850037
+
+00:01:22.920 --> 00:01:27.770
+The question that remains is that agents are inherently token
+
+NOTE Confidence: 0.9423274397850037
+
+00:01:27.850 --> 00:01:29.520
+consumption machines.
+
+NOTE Confidence: 0.8819028735160828
+
+00:01:29.800 --> 00:01:32.676
+It will consume a lot more token with all the
+
+NOTE Confidence: 0.8819028735160828
+
+00:01:32.740 --> 00:01:36.257
+tools, all the contacts, all the memories that you feed
+
+NOTE Confidence: 0.8819028735160828
+
+00:01:36.321 --> 00:01:37.279
+into the agent.
+
+NOTE Confidence: 0.9715933203697205
+
+00:01:37.720 --> 00:01:42.400
+So why do we need model distillation for this problem?
+
+NOTE Confidence: 0.8470742106437683
+
+00:01:42.440 --> 00:01:48.300
+Because model distillation is like a apprenticeship between 2:00 AM
+
+NOTE Confidence: 0.8470742106437683
+
+00:01:48.387 --> 00:01:49.000
+models.
+
+NOTE Confidence: 0.8329997658729553
+
+00:01:49.000 --> 00:01:52.114
+You start with a large capable model which outside the
+
+NOTE Confidence: 0.8329997658729553
+
+00:01:52.172 --> 00:01:53.959
+teacher that solved real tasks.
+
+NOTE Confidence: 0.9016516208648682
+
+00:01:54.280 --> 00:01:58.538
+You collect many examples of how the teacher behaved from
+
+NOTE Confidence: 0.9016516208648682
+
+00:01:58.613 --> 00:02:02.199
+the real environment and use that data to train.
+
+NOTE Confidence: 0.9108006954193115
+
+00:02:02.600 --> 00:02:05.552
+In this case, fine to a smaller, cheaper model so
+
+NOTE Confidence: 0.9108006954193115
+
+00:02:05.612 --> 00:02:08.986
+that the behavior can be imitated and after training the
+
+NOTE Confidence: 0.9108006954193115
+
+00:02:09.046 --> 00:02:11.998
+student will handle the task at a fraction of the
+
+NOTE Confidence: 0.9108006954193115
+
+00:02:12.058 --> 00:02:12.359
+cost.
+
+NOTE Confidence: 0.9176576733589172
+
+00:02:12.639 --> 00:02:15.581
+And this is how you can have the secret weapon
+
+NOTE Confidence: 0.9176576733589172
+
+00:02:15.645 --> 00:02:19.738
+in your enterprise to turn frontier models into something that's
+
+NOTE Confidence: 0.9176576733589172
+
+00:02:19.802 --> 00:02:22.999
+tailored for a business at a fraction of the cost.
+
+NOTE Confidence: 0.8872768878936768
+
+00:02:24.160 --> 00:02:26.560
+So why do we learn from agent traces?
+
+NOTE Confidence: 0.8676753044128418
+
+00:02:26.720 --> 00:02:30.504
+Agent traces is becoming a unique field in the world
+
+NOTE Confidence: 0.8676753044128418
+
+00:02:30.577 --> 00:02:31.960
+of building agents.
+
+NOTE Confidence: 0.9417229890823364
+
+00:02:31.960 --> 00:02:34.629
+It's because this is one of the things that it
+
+NOTE Confidence: 0.9417229890823364
+
+00:02:34.687 --> 00:02:36.891
+can tell us a lot, but not at the same
+
+NOTE Confidence: 0.9417229890823364
+
+00:02:36.949 --> 00:02:37.239
+time.
+
+NOTE Confidence: 0.7738187909126282
+
+00:02:37.240 --> 00:02:41.626
+Fully utilized agent traces are real conversations, so the traces
+
+NOTE Confidence: 0.7738187909126282
+
+00:02:41.694 --> 00:02:45.473
+will capture all the messy of script questions that your
+
+NOTE Confidence: 0.7738187909126282
+
+00:02:45.540 --> 00:02:48.982
+users are asking, not just what you imagine them to
+
+NOTE Confidence: 0.7738187909126282
+
+00:02:49.050 --> 00:02:49.319
+ask.
+
+NOTE Confidence: 0.8864778876304626
+
+00:02:49.600 --> 00:02:52.782
+And the to use is included as this process because
+
+NOTE Confidence: 0.8864778876304626
+
+00:02:52.846 --> 00:02:55.901
+the student will learn not just what to say, but
+
+NOTE Confidence: 0.8864778876304626
+
+00:02:55.964 --> 00:02:59.274
+which tools to call you, what order in what argument
+
+NOTE Confidence: 0.8864778876304626
+
+00:02:59.338 --> 00:02:59.719
+value.
+
+NOTE Confidence: 0.889485776424408
+
+00:02:59.720 --> 00:03:03.022
+This is what makes the agent useful, not just a
+
+NOTE Confidence: 0.889485776424408
+
+00:03:03.092 --> 00:03:05.200
+chatty chat bot to your users.
+
+NOTE Confidence: 0.8422346711158752
+
+00:03:05.520 --> 00:03:07.908
+And what do I mean by that also is that
+
+NOTE Confidence: 0.8422346711158752
+
+00:03:07.970 --> 00:03:11.400
+it extends to solving problem with the right trajectory.
+
+NOTE Confidence: 0.9270933270454407
+
+00:03:11.760 --> 00:03:14.937
+I'm pretty sure everyone has heard somewhat in your school
+
+NOTE Confidence: 0.9270933270454407
+
+00:03:14.992 --> 00:03:18.115
+that getting the right answer doesn't usually get you the
+
+NOTE Confidence: 0.9270933270454407
+
+00:03:18.170 --> 00:03:21.019
+full score, because you can get the right answer but
+
+NOTE Confidence: 0.9270933270454407
+
+00:03:21.074 --> 00:03:22.279
+with the wrong method.
+
+NOTE Confidence: 0.8977528214454651
+
+00:03:22.480 --> 00:03:25.411
+And This Is Us trying to teach AM models to
+
+NOTE Confidence: 0.8977528214454651
+
+00:03:25.479 --> 00:03:29.774
+solve problems with the correct trajectory, with the real order
+
+NOTE Confidence: 0.8977528214454651
+
+00:03:29.842 --> 00:03:33.387
+of the tools, with the real argument values that the
+
+NOTE Confidence: 0.8977528214454651
+
+00:03:33.455 --> 00:03:36.999
+agent should learn to fill when they call the tools.
+
+NOTE Confidence: 0.9278051853179932
+
+00:03:37.360 --> 00:03:40.020
+So the choices also come with the benefit that it's
+
+NOTE Confidence: 0.9278051853179932
+
+00:03:40.072 --> 00:03:42.993
+easy to collect because if you're building agents on top
+
+NOTE Confidence: 0.9278051853179932
+
+00:03:43.045 --> 00:03:45.862
+of Foundry, we have already provided you all the tools
+
+NOTE Confidence: 0.9278051853179932
+
+00:03:45.915 --> 00:03:47.479
+that you need to collect them.
+
+NOTE Confidence: 0.8801115155220032
+
+00:03:47.480 --> 00:03:50.560
+So they'll just come free to you at no cost.
+
+NOTE Confidence: 0.9559817910194397
+
+00:03:51.360 --> 00:03:53.240
+This will also grow automatically.
+
+NOTE Confidence: 0.9213681221008301
+
+00:03:53.240 --> 00:03:55.845
+That means if you want to have agent that gets
+
+NOTE Confidence: 0.9213681221008301
+
+00:03:55.902 --> 00:03:58.450
+smarter the more you use it and the more your
+
+NOTE Confidence: 0.9213681221008301
+
+00:03:58.507 --> 00:04:02.245
+user interacts with that, this whole trace collection process will
+
+NOTE Confidence: 0.9213681221008301
+
+00:04:02.302 --> 00:04:05.247
+just run in the background so that you get something
+
+NOTE Confidence: 0.9213681221008301
+
+00:04:05.304 --> 00:04:06.720
+that's smarter as you go.
+
+NOTE Confidence: 0.8529177904129028
+
+00:04:07.240 --> 00:04:09.695
+And the last part is that this is more trustworthy
+
+NOTE Confidence: 0.8529177904129028
+
+00:04:09.744 --> 00:04:12.347
+that if you were just training data on synthetic data
+
+NOTE Confidence: 0.8529177904129028
+
+00:04:12.396 --> 00:04:14.606
+or some of the data that you think would work
+
+NOTE Confidence: 0.8529177904129028
+
+00:04:14.655 --> 00:04:16.079
+and represent the real world.
+
+NOTE Confidence: 0.9198276996612549
+
+00:04:16.080 --> 00:04:18.881
+Because this is real signal that you get and no
+
+NOTE Confidence: 0.9198276996612549
+
+00:04:18.941 --> 00:04:22.160
+additional cost just by running your agent on Foundry.
+
+NOTE Confidence: 0.8869368433952332
+
+00:04:23.760 --> 00:04:26.867
+And going back to the topic of distillation, there are
+
+NOTE Confidence: 0.8869368433952332
+
+00:04:26.925 --> 00:04:29.399
+four wins that you can get from doing this.
+
+NOTE Confidence: 0.8856617212295532
+
+00:04:29.400 --> 00:04:32.754
+Number one is you can dramatically reduce the cost of
+
+NOTE Confidence: 0.8856617212295532
+
+00:04:32.818 --> 00:04:36.869
+running these models because you will essentially be run running
+
+NOTE Confidence: 0.8856617212295532
+
+00:04:36.932 --> 00:04:40.224
+some of the very small models that sometimes you can
+
+NOTE Confidence: 0.8856617212295532
+
+00:04:40.287 --> 00:04:41.679
+even fit into devices.
+
+NOTE Confidence: 0.8599945306777954
+
+00:04:42.040 --> 00:04:45.547
+And also you can get faster responses and these models
+
+NOTE Confidence: 0.8599945306777954
+
+00:04:45.612 --> 00:04:49.379
+when you are fine-tuned on real world traces can sometimes
+
+NOTE Confidence: 0.8599945306777954
+
+00:04:49.444 --> 00:04:53.017
+often mimic very closely the teacher quality so that on
+
+NOTE Confidence: 0.8599945306777954
+
+00:04:53.082 --> 00:04:57.044
+the narrow task the students was trained for, the performance
+
+NOTE Confidence: 0.8599945306777954
+
+00:04:57.109 --> 00:05:01.525
+lift is substantial and sometimes even outperforming your teacher in
+
+NOTE Confidence: 0.8599945306777954
+
+00:05:01.590 --> 00:05:02.760
+some of the tasks.
+
+NOTE Confidence: 0.9218406081199646
+
+00:05:03.040 --> 00:05:06.267
+And also by doing supervised fine tuning, which is what
+
+NOTE Confidence: 0.9218406081199646
+
+00:05:06.326 --> 00:05:09.143
+you we're going to show you today, you are going
+
+NOTE Confidence: 0.9218406081199646
+
+00:05:09.202 --> 00:05:11.080
+to get more consistent behavior.
+
+NOTE Confidence: 0.9605109691619873
+
+00:05:12.240 --> 00:05:14.840
+So now all of that is exciting, right?
+
+NOTE Confidence: 0.9002766609191895
+
+00:05:14.840 --> 00:05:17.200
+Everyone wants to see how that happens in real world.
+
+NOTE Confidence: 0.9405059814453125
+
+00:05:17.200 --> 00:05:19.511
+So I'm going to show you how that is going
+
+NOTE Confidence: 0.9405059814453125
+
+00:05:19.566 --> 00:05:21.987
+to happen so that by the end of the session,
+
+NOTE Confidence: 0.9405059814453125
+
+00:05:22.042 --> 00:05:24.849
+everybody will be experts about how you can just go
+
+NOTE Confidence: 0.9405059814453125
+
+00:05:24.904 --> 00:05:25.840
+back and do this.
+
+NOTE Confidence: 0.9514147639274597
+
+00:05:26.080 --> 00:05:27.680
+So this is what we're going to do today.
+
+NOTE Confidence: 0.8626689314842224
+
+00:05:27.680 --> 00:05:29.754
+OK, So number one is we're going to pick some
+
+NOTE Confidence: 0.8626689314842224
+
+00:05:29.800 --> 00:05:30.399
+of the tasks.
+
+NOTE Confidence: 0.8453779220581055
+
+00:05:30.400 --> 00:05:33.655
+These tasks are going to be so difficult to the
+
+NOTE Confidence: 0.8453779220581055
+
+00:05:33.724 --> 00:05:37.256
+agents that some of the small, for example, 41 nano
+
+NOTE Confidence: 0.8453779220581055
+
+00:05:37.326 --> 00:05:40.720
+models will not be able to handle just by itself.
+
+NOTE Confidence: 0.9156327843666077
+
+00:05:41.040 --> 00:05:45.549
+We're going to use those tasks to simulate conversations between
+
+NOTE Confidence: 0.9156327843666077
+
+00:05:45.619 --> 00:05:48.860
+the teacher model, and this will give us a lot
+
+NOTE Confidence: 0.9156327843666077
+
+00:05:48.930 --> 00:05:52.242
+of the traits that will be generated as part of
+
+NOTE Confidence: 0.9156327843666077
+
+00:05:52.312 --> 00:05:53.439
+that simulation.
+
+NOTE Confidence: 0.8913561701774597
+
+00:05:53.640 --> 00:05:56.965
+And This Is Us trying to mimic in the real
+
+NOTE Confidence: 0.8913561701774597
+
+00:05:57.044 --> 00:05:57.520
+world.
+
+NOTE Confidence: 0.8770890235900879
+
+00:05:57.520 --> 00:05:59.860
+If you have an agent that's already deployed, you talk
+
+NOTE Confidence: 0.8770890235900879
+
+00:05:59.903 --> 00:06:02.286
+to it enough times, you'll have all these things that's
+
+NOTE Confidence: 0.8770890235900879
+
+00:06:02.330 --> 00:06:03.760
+just collected in the background.
+
+NOTE Confidence: 0.9425917863845825
+
+00:06:03.760 --> 00:06:07.080
+Except in our demo today, we're going to simulate that
+
+NOTE Confidence: 0.9425917863845825
+
+00:06:07.141 --> 00:06:09.662
+for you so that it's able to fit into the
+
+NOTE Confidence: 0.9425917863845825
+
+00:06:09.724 --> 00:06:11.200
+time that we have today.
+
+NOTE Confidence: 0.9216959476470947
+
+00:06:11.640 --> 00:06:13.947
+And then you'll be able to clean the traces and
+
+NOTE Confidence: 0.9216959476470947
+
+00:06:13.996 --> 00:06:15.960
+use the traces to fine tune the student.
+
+NOTE Confidence: 0.8958422541618347
+
+00:06:16.279 --> 00:06:18.451
+And at the end, you're going to evaluate and see
+
+NOTE Confidence: 0.8958422541618347
+
+00:06:18.496 --> 00:06:20.080
+the benefit from doing all of that.
+
+NOTE Confidence: 0.6409796476364136
+
+00:06:20.760 --> 00:06:21.800
+So who is excited?
+
+NOTE Confidence: 0.8967224955558777
+
+00:06:21.920 --> 00:06:24.001
+I'm excited to show you how we can actually do
+
+NOTE Confidence: 0.8967224955558777
+
+00:06:24.046 --> 00:06:24.680
+this hands on.
+
+NOTE Confidence: 0.8671998381614685
+
+00:06:24.680 --> 00:06:28.890
+All right, so let's switch to my code when I
+
+NOTE Confidence: 0.8671998381614685
+
+00:06:28.986 --> 00:06:33.675
+was when I was doing this, the student model that
+
+NOTE Confidence: 0.8671998381614685
+
+00:06:33.771 --> 00:06:38.077
+I chose is for a nano, very cheap, very fast,
+
+NOTE Confidence: 0.8671998381614685
+
+00:06:38.173 --> 00:06:39.800
+very nice to use.
+
+NOTE Confidence: 0.7968758940696716
+
+00:06:40.120 --> 00:06:42.040
+And the teacher is GPT 55.
+
+NOTE Confidence: 0.7702299952507019
+
+00:06:42.040 --> 00:06:44.560
+So who has GPT 55 in your production?
+
+NOTE Confidence: 0.9359449148178101
+
+00:06:44.560 --> 00:06:46.200
+How expensive is that, right?
+
+NOTE Confidence: 0.7943409085273743
+
+00:06:46.400 --> 00:06:48.720
+It's probably breaking your budget in a lot of times.
+
+NOTE Confidence: 0.9245809316635132
+
+00:06:48.720 --> 00:06:52.409
+And let's do something really cool here so that we
+
+NOTE Confidence: 0.9245809316635132
+
+00:06:52.483 --> 00:06:56.320
+can turn it into something that will run much faster
+
+NOTE Confidence: 0.9245809316635132
+
+00:06:56.394 --> 00:06:57.280
+and cheaper.
+
+NOTE Confidence: 0.9422574639320374
+
+00:06:57.560 --> 00:07:01.363
+So I'm starting to set up all the models that
+
+NOTE Confidence: 0.9422574639320374
+
+00:07:01.448 --> 00:07:02.039
+I have.
+
+NOTE Confidence: 0.9045025706291199
+
+00:07:03.000 --> 00:07:06.280
+I'm going to run an evaluation on 100 tasks.
+
+NOTE Confidence: 0.9381563663482666
+
+00:07:06.600 --> 00:07:09.194
+These 100 tasks are written in a way that is
+
+NOTE Confidence: 0.9381563663482666
+
+00:07:09.253 --> 00:07:11.199
+very challenging for base models.
+
+NOTE Confidence: 0.8653807044029236
+
+00:07:11.640 --> 00:07:13.372
+And this is one of the examples about what a
+
+NOTE Confidence: 0.8653807044029236
+
+00:07:13.412 --> 00:07:14.200
+task will look like.
+
+NOTE Confidence: 0.8733279705047607
+
+00:07:14.200 --> 00:07:17.139
+So we have 100 tasks, 80 will be used for
+
+NOTE Confidence: 0.8733279705047607
+
+00:07:17.211 --> 00:07:20.079
+training and 20 will be used as holdout.
+
+NOTE Confidence: 0.9414282441139221
+
+00:07:21.120 --> 00:07:23.874
+Each task will be labeled in such a way that
+
+NOTE Confidence: 0.9414282441139221
+
+00:07:23.937 --> 00:07:25.439
+it will have a category.
+
+NOTE Confidence: 0.8483036756515503
+
+00:07:25.440 --> 00:07:28.181
+For example, in this way, it's like a late delivery
+
+NOTE Confidence: 0.8483036756515503
+
+00:07:28.234 --> 00:07:28.879
+interaction.
+
+NOTE Confidence: 0.7924225926399231
+
+00:07:29.040 --> 00:07:32.276
+And the customer is Noah, who is Platinum tier and
+
+NOTE Confidence: 0.7924225926399231
+
+00:07:32.341 --> 00:07:33.960
+who bought a smart watch.
+
+NOTE Confidence: 0.8156650066375732
+
+00:07:33.960 --> 00:07:34.800
+And I want to refund.
+
+NOTE Confidence: 0.8719715476036072
+
+00:07:34.800 --> 00:07:37.200
+And I think there should be a late delivery credit
+
+NOTE Confidence: 0.8719715476036072
+
+00:07:37.248 --> 00:07:37.440
+too.
+
+NOTE Confidence: 0.6327221393585205
+
+00:07:37.760 --> 00:07:41.400
+And I expect this resolution is also tagged, right?
+
+NOTE Confidence: 0.8004170656204224
+
+00:07:41.400 --> 00:07:43.280
+It's delivered maybe 50 days ago.
+
+NOTE Confidence: 0.8623695373535156
+
+00:07:43.280 --> 00:07:45.669
+And then check the policy and maybe you can get
+
+NOTE Confidence: 0.8623695373535156
+
+00:07:45.720 --> 00:07:46.279
+the refund.
+
+NOTE Confidence: 0.8045695424079895
+
+00:07:46.280 --> 00:07:48.129
+Maybe you can get credit in this way and in
+
+NOTE Confidence: 0.8045695424079895
+
+00:07:48.172 --> 00:07:48.559
+that way.
+
+NOTE Confidence: 0.8770458102226257
+
+00:07:48.560 --> 00:07:51.895
+So this is 100 of these that we are going
+
+NOTE Confidence: 0.8770458102226257
+
+00:07:51.976 --> 00:07:55.637
+to use to simulate what you will see maybe in
+
+NOTE Confidence: 0.8770458102226257
+
+00:07:55.719 --> 00:07:58.160
+your real production scenario.
+
+NOTE Confidence: 0.9344930052757263
+
+00:07:59.520 --> 00:08:03.214
+So let's see how one of them is going to
+
+NOTE Confidence: 0.9344930052757263
+
+00:08:03.306 --> 00:08:04.600
+give a result.
+
+NOTE Confidence: 0.9258482456207275
+
+00:08:04.600 --> 00:08:06.840
+So this is running this conversation live.
+
+NOTE Confidence: 0.9653947353363037
+
+00:08:07.120 --> 00:08:10.040
+Imagine this is your agent that's already deployed.
+
+NOTE Confidence: 0.9632275104522705
+
+00:08:10.040 --> 00:08:11.360
+So you have this in your system.
+
+NOTE Confidence: 0.8927494287490845
+
+00:08:11.680 --> 00:08:16.177
+And just notice one thing here, because I have so
+
+NOTE Confidence: 0.8927494287490845
+
+00:08:16.269 --> 00:08:21.500
+many tools, so many contexts, so many policy points baked
+
+NOTE Confidence: 0.8927494287490845
+
+00:08:21.592 --> 00:08:23.520
+into my GPT 55 agent.
+
+NOTE Confidence: 0.9628450870513916
+
+00:08:23.520 --> 00:08:26.896
+Just notice how long it takes to go through my
+
+NOTE Confidence: 0.9628450870513916
+
+00:08:26.970 --> 00:08:31.888
+database to retrieve everything, to synthesize the results, to call
+
+NOTE Confidence: 0.9628450870513916
+
+00:08:31.962 --> 00:08:35.265
+the tool again, just to be able to answer one
+
+NOTE Confidence: 0.9628450870513916
+
+00:08:35.339 --> 00:08:36.000
+question.
+
+NOTE Confidence: 0.8405488729476929
+
+00:08:36.000 --> 00:08:39.440
+And you'll probably see this all the time, right?
+
+NOTE Confidence: 0.8981596827507019
+
+00:08:39.440 --> 00:08:41.588
+If you have used some of the coding agents, you
+
+NOTE Confidence: 0.8981596827507019
+
+00:08:41.634 --> 00:08:43.782
+will see, oh, it's like thinking now and then I
+
+NOTE Confidence: 0.8981596827507019
+
+00:08:43.828 --> 00:08:46.160
+will go to bed and maybe next morning and something
+
+NOTE Confidence: 0.8981596827507019
+
+00:08:46.205 --> 00:08:47.120
+will come out of it.
+
+NOTE Confidence: 0.9538295269012451
+
+00:08:48.080 --> 00:08:50.724
+So this is a real problem and let's see how
+
+NOTE Confidence: 0.9538295269012451
+
+00:08:50.785 --> 00:08:52.200
+we can improve on that.
+
+NOTE Confidence: 0.8826578855514526
+
+00:08:59.830 --> 00:09:02.541
+As you can see, it is still running and this
+
+NOTE Confidence: 0.8826578855514526
+
+00:09:02.602 --> 00:09:04.389
+is a good time to talk about.
+
+NOTE Confidence: 0.913273811340332
+
+00:09:04.390 --> 00:09:07.544
+So let's say we have all of these conversation that
+
+NOTE Confidence: 0.913273811340332
+
+00:09:07.606 --> 00:09:09.710
+people are having with your agent.
+
+NOTE Confidence: 0.971372127532959
+
+00:09:10.910 --> 00:09:12.470
+How can you know how good it is?
+
+NOTE Confidence: 0.7365840673446655
+
+00:09:12.920 --> 00:09:15.200
+We have to design an evaluation, right?
+
+NOTE Confidence: 0.7530057430267334
+
+00:09:15.320 --> 00:09:17.240
+You probably hear this a lot at build.
+
+NOTE Confidence: 0.7531970739364624
+
+00:09:17.440 --> 00:09:18.640
+Evaluation is the key.
+
+NOTE Confidence: 0.965138852596283
+
+00:09:18.640 --> 00:09:21.424
+You have to understand how well something performs before you
+
+NOTE Confidence: 0.965138852596283
+
+00:09:21.470 --> 00:09:22.520
+know how to improve it.
+
+NOTE Confidence: 0.9027330279350281
+
+00:09:22.840 --> 00:09:25.374
+So in this way, I want to evaluate in this
+
+NOTE Confidence: 0.9027330279350281
+
+00:09:25.435 --> 00:09:26.279
+four category.
+
+NOTE Confidence: 0.8819501996040344
+
+00:09:26.280 --> 00:09:28.968
+And remember when you are doing this, you are free
+
+NOTE Confidence: 0.8819501996040344
+
+00:09:29.021 --> 00:09:31.279
+to design the evaluation however you want.
+
+NOTE Confidence: 0.9007773399353027
+
+00:09:31.679 --> 00:09:34.414
+So in our example here, I want to have 4
+
+NOTE Confidence: 0.9007773399353027
+
+00:09:34.482 --> 00:09:37.079
+dimensions of score each conversation.
+
+NOTE Confidence: 0.643221914768219
+
+00:09:37.080 --> 00:09:39.160
+So these are 4 multi turn conversation.
+
+NOTE Confidence: 0.9730908274650574
+
+00:09:39.160 --> 00:09:39.920
+I'm going to score.
+
+NOTE Confidence: 0.8659369945526123
+
+00:09:40.240 --> 00:09:43.427
+There's a decision correctness, which means the agent is calling
+
+NOTE Confidence: 0.8659369945526123
+
+00:09:43.477 --> 00:09:46.615
+the right tools, there's the right tool trajectory, there's the
+
+NOTE Confidence: 0.8659369945526123
+
+00:09:46.665 --> 00:09:50.052
+right financial accuracy, what I'm calculating and there's the right
+
+NOTE Confidence: 0.8659369945526123
+
+00:09:50.102 --> 00:09:50.800
+communication.
+
+NOTE Confidence: 0.9216882586479187
+
+00:09:50.800 --> 00:09:52.917
+So if I want to deny something, if I want
+
+NOTE Confidence: 0.9216882586479187
+
+00:09:52.969 --> 00:09:55.500
+to accept something, I want to make sure my agent
+
+NOTE Confidence: 0.9216882586479187
+
+00:09:55.552 --> 00:09:58.600
+says a certain keyword when it's communicating to the user.
+
+NOTE Confidence: 0.9687644243240356
+
+00:09:58.600 --> 00:10:02.026
+This is my evaluation criteria and just let's see how
+
+NOTE Confidence: 0.9687644243240356
+
+00:10:02.091 --> 00:10:03.319
+the baseline looks.
+
+NOTE Confidence: 0.8428663611412048
+
+00:10:05.280 --> 00:10:08.210
+This is one example of how you are scoring this
+
+NOTE Confidence: 0.8428663611412048
+
+00:10:08.272 --> 00:10:09.519
+conversation, right?
+
+NOTE Confidence: 0.9294435977935791
+
+00:10:09.520 --> 00:10:12.193
+So as I said many, many times, you can design
+
+NOTE Confidence: 0.9294435977935791
+
+00:10:12.252 --> 00:10:13.559
+this however you want.
+
+NOTE Confidence: 0.9261369109153748
+
+00:10:13.559 --> 00:10:16.097
+In my case, I just want to make sure all
+
+NOTE Confidence: 0.9261369109153748
+
+00:10:16.161 --> 00:10:19.079
+the two calls are expected in the right order.
+
+NOTE Confidence: 0.9126543402671814
+
+00:10:20.200 --> 00:10:23.986
+Financial accuracy calculation is good, communication is good, and then
+
+NOTE Confidence: 0.9126543402671814
+
+00:10:24.039 --> 00:10:26.439
+each conversation will be scored in this way.
+
+NOTE Confidence: 0.9241662621498108
+
+00:10:27.160 --> 00:10:29.919
+Let's say how if I do this for all of
+
+NOTE Confidence: 0.9241662621498108
+
+00:10:29.994 --> 00:10:33.052
+my tasks, for all of my, these are all of
+
+NOTE Confidence: 0.9241662621498108
+
+00:10:33.126 --> 00:10:34.319
+my tasks, right?
+
+NOTE Confidence: 0.892894983291626
+
+00:10:34.320 --> 00:10:36.823
+So this is a good time to introduce this score
+
+NOTE Confidence: 0.892894983291626
+
+00:10:36.878 --> 00:10:37.640
+called pass K.
+
+NOTE Confidence: 0.8565075993537903
+
+00:10:37.960 --> 00:10:40.696
+So pass K means if you are, if you try
+
+NOTE Confidence: 0.8565075993537903
+
+00:10:40.768 --> 00:10:44.152
+K times, how many times you succeed or how many
+
+NOTE Confidence: 0.8565075993537903
+
+00:10:44.224 --> 00:10:47.896
+times you score above a threshold of that you think
+
+NOTE Confidence: 0.8565075993537903
+
+00:10:47.968 --> 00:10:49.480
+is acceptable, right?
+
+NOTE Confidence: 0.8786827325820923
+
+00:10:49.480 --> 00:10:52.484
+So if this is my task and I'm going to
+
+NOTE Confidence: 0.8786827325820923
+
+00:10:52.564 --> 00:10:56.280
+run the same task on my teacher, on my student,
+
+NOTE Confidence: 0.8786827325820923
+
+00:10:56.359 --> 00:10:59.760
+on my fine-tuned student, three times each.
+
+NOTE Confidence: 0.9732230305671692
+
+00:10:59.760 --> 00:11:01.240
+So I'm going to run three times.
+
+NOTE Confidence: 0.9319031834602356
+
+00:11:01.440 --> 00:11:04.321
+And I'm going to collect a summary statistics at the
+
+NOTE Confidence: 0.9319031834602356
+
+00:11:04.376 --> 00:11:06.980
+end just to see how consistent it is that maybe
+
+NOTE Confidence: 0.9319031834602356
+
+00:11:07.036 --> 00:11:08.920
+if I try one time, I will succeed.
+
+NOTE Confidence: 0.7794528007507324
+
+00:11:08.920 --> 00:11:11.480
+If I try twice, I succeed twice.
+
+NOTE Confidence: 0.8647887706756592
+
+00:11:11.480 --> 00:11:13.992
+If I try three times, I succeed in all of
+
+NOTE Confidence: 0.8647887706756592
+
+00:11:14.053 --> 00:11:14.359
+them.
+
+NOTE Confidence: 0.8809224963188171
+
+00:11:14.360 --> 00:11:16.507
+So this is the score, the metric that we're going
+
+NOTE Confidence: 0.8809224963188171
+
+00:11:16.551 --> 00:11:18.479
+to look, we're going to be looking at today.
+
+NOTE Confidence: 0.9048559069633484
+
+00:11:21.800 --> 00:11:23.160
+But here is the result.
+
+NOTE Confidence: 0.9638168811798096
+
+00:11:24.440 --> 00:11:26.713
+This might be a little bit hard to see, but
+
+NOTE Confidence: 0.9638168811798096
+
+00:11:26.766 --> 00:11:29.304
+as you can see, the student and the teacher will
+
+NOTE Confidence: 0.9638168811798096
+
+00:11:29.356 --> 00:11:30.520
+have a very large gap.
+
+NOTE Confidence: 0.8637915253639221
+
+00:11:31.000 --> 00:11:34.412
+This means GPT 41, Nano and GPT 55, being two
+
+NOTE Confidence: 0.8637915253639221
+
+00:11:34.488 --> 00:11:39.569
+different models very largely in size, will actually perform really
+
+NOTE Confidence: 0.8637915253639221
+
+00:11:39.644 --> 00:11:41.919
+differently in its capability.
+
+NOTE Confidence: 0.9732229113578796
+
+00:11:41.920 --> 00:11:44.480
+But now how can we make it better?
+
+NOTE Confidence: 0.9084662199020386
+
+00:11:44.960 --> 00:11:47.540
+Because I can, you can see after I fine-tuned my
+
+NOTE Confidence: 0.9084662199020386
+
+00:11:47.594 --> 00:11:50.712
+model, I'm actually able to lift my student performance by
+
+NOTE Confidence: 0.9084662199020386
+
+00:11:50.766 --> 00:11:53.240
+a lot and sometimes even matching the teacher.
+
+NOTE Confidence: 0.8067803978919983
+
+00:11:53.800 --> 00:11:56.413
+And in my holdout is the test that I did
+
+NOTE Confidence: 0.8067803978919983
+
+00:11:56.478 --> 00:11:59.745
+to make sure that it's not just memorizing but but
+
+NOTE Confidence: 0.8067803978919983
+
+00:11:59.810 --> 00:12:03.600
+actually imitating the the teacher's reasoning capability.
+
+NOTE Confidence: 0.9701947569847107
+
+00:12:04.480 --> 00:12:07.840
+And this is the result that we are able to
+
+NOTE Confidence: 0.9701947569847107
+
+00:12:07.920 --> 00:12:11.520
+get just by doing what I'm about to show you.
+
+NOTE Confidence: 0.9079805612564087
+
+00:12:12.040 --> 00:12:13.280
+This is pretty exciting, right?
+
+NOTE Confidence: 0.8578990697860718
+
+00:12:13.280 --> 00:12:16.137
+So imagine you know, you can do this and your
+
+NOTE Confidence: 0.8578990697860718
+
+00:12:16.200 --> 00:12:18.931
+41 Nano is able to perform a lot better and
+
+NOTE Confidence: 0.8578990697860718
+
+00:12:18.994 --> 00:12:22.741
+sometimes recovering more than half of the headroom that is
+
+NOTE Confidence: 0.8578990697860718
+
+00:12:22.804 --> 00:12:23.439
+available.
+
+NOTE Confidence: 0.9418503642082214
+
+00:12:26.240 --> 00:12:29.745
+If you are visual person like me, you can see
+
+NOTE Confidence: 0.9418503642082214
+
+00:12:29.823 --> 00:12:34.185
+essentially how the performance is able to be improved a
+
+NOTE Confidence: 0.9418503642082214
+
+00:12:34.263 --> 00:12:38.080
+lot by just doing this kind of distillation work.
+
+NOTE Confidence: 0.8762447834014893
+
+00:12:38.600 --> 00:12:39.600
+This is great, right?
+
+NOTE Confidence: 0.9267491698265076
+
+00:12:39.679 --> 00:12:42.995
+And now I'm sure everyone in your head is thinking,
+
+NOTE Confidence: 0.9267491698265076
+
+00:12:43.060 --> 00:12:45.400
+how do I exactly do that on Foundry?
+
+NOTE Confidence: 0.9541157484054565
+
+00:12:45.800 --> 00:12:50.440
+So let's switch to Foundry.
+
+NOTE Confidence: 0.9416929483413696
+
+00:12:50.440 --> 00:12:53.206
+You probably see this all the time over your other
+
+NOTE Confidence: 0.9416929483413696
+
+00:12:53.262 --> 00:12:53.760
+sessions.
+
+NOTE Confidence: 0.9525984525680542
+
+00:12:53.960 --> 00:12:56.320
+This is how you can build agents in Foundry.
+
+NOTE Confidence: 0.9533607363700867
+
+00:12:56.679 --> 00:13:00.681
+I have this agent that's already running here that I'm
+
+NOTE Confidence: 0.9533607363700867
+
+00:13:00.755 --> 00:13:04.461
+going to take one of the examples from my previous
+
+NOTE Confidence: 0.9533607363700867
+
+00:13:04.535 --> 00:13:06.240
+simulated conversation.
+
+NOTE Confidence: 0.8422824740409851
+
+00:13:10.320 --> 00:13:15.891
+You remember in the beginning we had a customer named
+
+NOTE Confidence: 0.8422824740409851
+
+00:13:15.996 --> 00:13:18.519
+Noah and Noah said this.
+
+NOTE Confidence: 0.9150952100753784
+
+00:13:20.640 --> 00:13:27.280
+I'm going to copy that, put it here.
+
+NOTE Confidence: 0.9514155983924866
+
+00:13:36.640 --> 00:13:37.480
+So this is right.
+
+NOTE Confidence: 0.8477806448936462
+
+00:13:37.480 --> 00:13:40.422
+Your agent now is having Noah chatting to your agent
+
+NOTE Confidence: 0.8477806448936462
+
+00:13:40.478 --> 00:13:43.307
+and then the agent again, if you remember how much
+
+NOTE Confidence: 0.8477806448936462
+
+00:13:43.364 --> 00:13:45.683
+time it took it the agent 55 with all the
+
+NOTE Confidence: 0.8477806448936462
+
+00:13:45.740 --> 00:13:48.795
+tools available to it, it's going to think, it's going
+
+NOTE Confidence: 0.8477806448936462
+
+00:13:48.852 --> 00:13:51.454
+to look through all the data, it's going to go
+
+NOTE Confidence: 0.8477806448936462
+
+00:13:51.511 --> 00:13:54.283
+over all the context and it gives you a response,
+
+NOTE Confidence: 0.8477806448936462
+
+00:13:54.340 --> 00:13:54.679
+right?
+
+NOTE Confidence: 0.8803530931472778
+
+00:13:54.920 --> 00:13:57.673
+So in a real world, imagine you have a lot
+
+NOTE Confidence: 0.8803530931472778
+
+00:13:57.738 --> 00:13:59.639
+of customers just doing this.
+
+NOTE Confidence: 0.9730405807495117
+
+00:13:59.760 --> 00:14:01.200
+What does this give you, right?
+
+NOTE Confidence: 0.8218632936477661
+
+00:14:01.200 --> 00:14:03.080
+Let's give you something called Trace.
+
+NOTE Confidence: 0.9139237999916077
+
+00:14:05.320 --> 00:14:10.175
+Trace is collection of everything that happens inside a request,
+
+NOTE Confidence: 0.9139237999916077
+
+00:14:10.251 --> 00:14:14.347
+inside all each one of your conversation turn, all the
+
+NOTE Confidence: 0.9139237999916077
+
+00:14:14.423 --> 00:14:18.520
+tool calls, all the reading steps, all the data flows.
+
+NOTE Confidence: 0.9184636473655701
+
+00:14:18.600 --> 00:14:20.960
+It's all here and visualized for you.
+
+NOTE Confidence: 0.9106756448745728
+
+00:14:20.960 --> 00:14:26.063
+And because Foundry has this capability to collect all these
+
+NOTE Confidence: 0.9106756448745728
+
+00:14:26.148 --> 00:14:30.655
+traces automatically, you will be able to see after a
+
+NOTE Confidence: 0.9106756448745728
+
+00:14:30.740 --> 00:14:35.333
+while of running your agent, the collection of all the
+
+NOTE Confidence: 0.9106756448745728
+
+00:14:35.418 --> 00:14:37.799
+traces that you have, right?
+
+NOTE Confidence: 0.9498621821403503
+
+00:14:37.800 --> 00:14:40.840
+These are all of your real conversation from your customer.
+
+NOTE Confidence: 0.8668835759162903
+
+00:14:41.120 --> 00:14:43.790
+And now our task is to turn this into something
+
+NOTE Confidence: 0.8668835759162903
+
+00:14:43.846 --> 00:14:46.289
+that you can use to find to a smaller model
+
+NOTE Confidence: 0.8668835759162903
+
+00:14:46.346 --> 00:14:48.960
+so that the smaller model will perform better.
+
+NOTE Confidence: 0.9730255603790283
+
+00:14:49.480 --> 00:14:50.400
+Are we ready for that?
+
+NOTE Confidence: 0.905197262763977
+
+00:14:50.800 --> 00:14:54.240
+We have a Create data set button here under trace.
+
+NOTE Confidence: 0.818522572517395
+
+00:14:54.840 --> 00:14:56.480
+Let's go to supervised fine tuning.
+
+NOTE Confidence: 0.9389850497245789
+
+00:14:57.320 --> 00:15:00.682
+You can see it automatically collected all my traces from
+
+NOTE Confidence: 0.9389850497245789
+
+00:15:00.741 --> 00:15:03.160
+this time range, in this case 1000 or so.
+
+NOTE Confidence: 0.7981406450271606
+
+00:15:04.040 --> 00:15:10.350
+I'm going to give it a name, high build, that's
+
+NOTE Confidence: 0.7981406450271606
+
+00:15:10.484 --> 00:15:16.391
+my data set name, and then I will click Fine
+
+NOTE Confidence: 0.7981406450271606
+
+00:15:16.525 --> 00:15:17.600
+tunings.
+
+NOTE Confidence: 0.8700675368309021
+
+00:15:21.840 --> 00:15:25.900
+What you see here is essentially you can automatically port
+
+NOTE Confidence: 0.8700675368309021
+
+00:15:25.969 --> 00:15:30.030
+all those agent traces into supervised fine tuning data set
+
+NOTE Confidence: 0.8700675368309021
+
+00:15:30.099 --> 00:15:33.403
+and start a run right inside Foundry by going to
+
+NOTE Confidence: 0.8700675368309021
+
+00:15:33.472 --> 00:15:36.844
+the fine tuning tab and under here you'll be able
+
+NOTE Confidence: 0.8700675368309021
+
+00:15:36.913 --> 00:15:40.080
+to select supervised fine tuning for one nano.
+
+NOTE Confidence: 0.8639269471168518
+
+00:15:43.120 --> 00:15:46.021
+You notice how high build now is the training data
+
+NOTE Confidence: 0.8639269471168518
+
+00:15:46.079 --> 00:15:48.400
+source even though I just configured it?
+
+NOTE Confidence: 0.8848752379417419
+
+00:15:50.560 --> 00:15:52.000
+Are you able to submit my job?
+
+NOTE Confidence: 0.9172748923301697
+
+00:15:57.820 --> 00:16:02.238
+And that is essentially how you can use agent traces
+
+NOTE Confidence: 0.9172748923301697
+
+00:16:02.323 --> 00:16:05.721
+to start The first job is the one that I
+
+NOTE Confidence: 0.9172748923301697
+
+00:16:05.806 --> 00:16:09.120
+just submitted, the one that is queued.
+
+NOTE Confidence: 0.7685568928718567
+
+00:16:11.880 --> 00:16:13.937
+This is how you can use agent traces to start
+
+NOTE Confidence: 0.7685568928718567
+
+00:16:13.982 --> 00:16:15.400
+a supervised fine training job.
+
+NOTE Confidence: 0.7783957719802856
+
+00:16:16.880 --> 00:16:17.720
+Everyone still with me?
+
+NOTE Confidence: 0.9534895420074463
+
+00:16:18.120 --> 00:16:19.640
+Yeah, sounds good.
+
+NOTE Confidence: 0.9729107022285461
+
+00:16:20.200 --> 00:16:21.440
+And let's go back.
+
+NOTE Confidence: 0.9205188751220703
+
+00:16:22.800 --> 00:16:25.631
+I want to show you some of the results from
+
+NOTE Confidence: 0.9205188751220703
+
+00:16:25.697 --> 00:16:29.714
+doing that because you may question benchmark looks good, but
+
+NOTE Confidence: 0.9205188751220703
+
+00:16:29.780 --> 00:16:33.600
+what does it actually translate into your real world again
+
+NOTE Confidence: 0.9205188751220703
+
+00:16:33.666 --> 00:16:37.354
+your real world value and what difference does that make
+
+NOTE Confidence: 0.9205188751220703
+
+00:16:37.419 --> 00:16:40.119
+to actually go through all these process.
+
+NOTE Confidence: 0.881381630897522
+
+00:16:43.840 --> 00:16:46.572
+I want to show you some real results when I
+
+NOTE Confidence: 0.881381630897522
+
+00:16:46.636 --> 00:16:50.195
+was doing my testing and I was comparing the performance
+
+NOTE Confidence: 0.881381630897522
+
+00:16:50.258 --> 00:16:53.754
+of the base model for Renato and my fine-tuned version,
+
+NOTE Confidence: 0.881381630897522
+
+00:16:53.817 --> 00:16:57.122
+which comes from that agent trace that I just showed
+
+NOTE Confidence: 0.881381630897522
+
+00:16:57.185 --> 00:16:57.440
+you.
+
+NOTE Confidence: 0.9358579516410828
+
+00:16:58.200 --> 00:17:01.764
+And I want to see what actually is different so
+
+NOTE Confidence: 0.9358579516410828
+
+00:17:01.840 --> 00:17:05.784
+that my score is actually something that is fair and
+
+NOTE Confidence: 0.9358579516410828
+
+00:17:05.860 --> 00:17:06.240
+real.
+
+NOTE Confidence: 0.9655040502548218
+
+00:17:08.760 --> 00:17:09.880
+So this is one example.
+
+NOTE Confidence: 0.6237785220146179
+
+00:17:09.880 --> 00:17:11.760
+It's a restocking fee math example.
+
+NOTE Confidence: 0.835203230381012
+
+00:17:11.760 --> 00:17:15.892
+So Diego argued that not liking the keys with mechanical
+
+NOTE Confidence: 0.835203230381012
+
+00:17:15.965 --> 00:17:20.097
+keyboard, I guess he bought, it's basically a defect and
+
+NOTE Confidence: 0.835203230381012
+
+00:17:20.171 --> 00:17:23.934
+I should not be paying a restocking fee because I'm
+
+NOTE Confidence: 0.835203230381012
+
+00:17:24.008 --> 00:17:26.960
+standard here, I do have to pay the 15%.
+
+NOTE Confidence: 0.9064881205558777
+
+00:17:26.960 --> 00:17:30.680
+So the correct refund is actually with the restocking fee.
+
+NOTE Confidence: 0.912746012210846
+
+00:17:31.000 --> 00:17:34.363
+So in this example, the four one nano base model,
+
+NOTE Confidence: 0.912746012210846
+
+00:17:34.432 --> 00:17:37.726
+if you see when Diego was trying to convince the
+
+NOTE Confidence: 0.912746012210846
+
+00:17:37.795 --> 00:17:41.570
+model basically, hey, I don't like your product, it's a
+
+NOTE Confidence: 0.912746012210846
+
+00:17:41.639 --> 00:17:42.119
+defect.
+
+NOTE Confidence: 0.8467301726341248
+
+00:17:45.440 --> 00:17:50.714
+Can anyone notice what is wrong in this example from
+
+NOTE Confidence: 0.8467301726341248
+
+00:17:50.816 --> 00:17:58.119
+this particular response here, the foreign nano mentioned something that
+
+NOTE Confidence: 0.8467301726341248
+
+00:17:58.221 --> 00:18:00.960
+is very interesting, right?
+
+NOTE Confidence: 0.8534359931945801
+
+00:18:01.160 --> 00:18:04.078
+Since you told me it's a defect and you don't
+
+NOTE Confidence: 0.8534359931945801
+
+00:18:04.143 --> 00:18:06.867
+like it, I guess it's a defect and it says
+
+NOTE Confidence: 0.8534359931945801
+
+00:18:06.932 --> 00:18:07.839
+it's a defect.
+
+NOTE Confidence: 0.9209597110748291
+
+00:18:07.840 --> 00:18:09.800
+I'm going to go into your bank account.
+
+NOTE Confidence: 0.8984668254852295
+
+00:18:09.800 --> 00:18:11.360
+I'm going to pay this customer.
+
+NOTE Confidence: 0.9352980852127075
+
+00:18:11.680 --> 00:18:13.120
+I'm going to refund this person.
+
+NOTE Confidence: 0.9183094501495361
+
+00:18:13.440 --> 00:18:16.867
+That is not good, because the Teacher 55 will be
+
+NOTE Confidence: 0.9183094501495361
+
+00:18:16.938 --> 00:18:21.151
+able to recognize correctly to reject this kind of request,
+
+NOTE Confidence: 0.9183094501495361
+
+00:18:21.223 --> 00:18:23.079
+and it can't be convinced.
+
+NOTE Confidence: 0.7400679588317871
+
+00:18:23.200 --> 00:18:24.120
+It's such an easy way.
+
+NOTE Confidence: 0.8661113381385803
+
+00:18:24.119 --> 00:18:27.873
+So what do I see here After I fine tune
+
+NOTE Confidence: 0.8661113381385803
+
+00:18:27.969 --> 00:18:32.589
+my foreign Nano on the traces that come from 55,
+
+NOTE Confidence: 0.8661113381385803
+
+00:18:32.685 --> 00:18:36.824
+you see all the two calls, and then you see
+
+NOTE Confidence: 0.8661113381385803
+
+00:18:36.920 --> 00:18:42.310
+here it correctly had the restocking fee here because it
+
+NOTE Confidence: 0.8661113381385803
+
+00:18:42.406 --> 00:18:47.122
+knows that no matter what you say, your reason is
+
+NOTE Confidence: 0.8661113381385803
+
+00:18:47.218 --> 00:18:49.240
+that I don't like it.
+
+NOTE Confidence: 0.781721293926239
+
+00:18:49.240 --> 00:18:51.160
+It's not because my product is a defect.
+
+NOTE Confidence: 0.89234459400177
+
+00:18:51.920 --> 00:18:54.639
+And in this way, imagine scaled by a lot of
+
+NOTE Confidence: 0.89234459400177
+
+00:18:54.702 --> 00:18:57.928
+orders, your company can actually save a lot of the
+
+NOTE Confidence: 0.89234459400177
+
+00:18:57.991 --> 00:18:59.319
+false refunds, right?
+
+NOTE Confidence: 0.9424945116043091
+
+00:18:59.320 --> 00:19:00.000
+How cool is that?
+
+NOTE Confidence: 0.9714629650115967
+
+00:19:00.080 --> 00:19:01.320
+So let me show you another thing.
+
+NOTE Confidence: 0.9079931974411011
+
+00:19:02.520 --> 00:19:05.546
+In this example, I want to show you when I
+
+NOTE Confidence: 0.9079931974411011
+
+00:19:05.618 --> 00:19:09.077
+say models can get to the right outcome, but not
+
+NOTE Confidence: 0.9079931974411011
+
+00:19:09.149 --> 00:19:11.600
+sometimes by this the good method.
+
+NOTE Confidence: 0.8659313321113586
+
+00:19:12.119 --> 00:19:16.130
+And in this example, and Liam wants to cancel the
+
+NOTE Confidence: 0.8659313321113586
+
+00:19:16.212 --> 00:19:20.959
+unshipped order with two items, both are still processing.
+
+NOTE Confidence: 0.8690199255943298
+
+00:19:20.960 --> 00:19:23.649
+So the correct outcome is that you cancel both and
+
+NOTE Confidence: 0.8690199255943298
+
+00:19:23.703 --> 00:19:24.079
+refund.
+
+NOTE Confidence: 0.9469749331474304
+
+00:19:24.560 --> 00:19:27.855
+But notice something here because my agent has a lot
+
+NOTE Confidence: 0.9469749331474304
+
+00:19:27.918 --> 00:19:30.453
+of tools and one of them is to check the
+
+NOTE Confidence: 0.9469749331474304
+
+00:19:30.516 --> 00:19:30.959
+policy.
+
+NOTE Confidence: 0.9175925850868225
+
+00:19:31.240 --> 00:19:33.843
+Your agent usually has a policy, which is your refund
+
+NOTE Confidence: 0.9175925850868225
+
+00:19:33.892 --> 00:19:35.120
+policy or business logic.
+
+NOTE Confidence: 0.8954232335090637
+
+00:19:35.320 --> 00:19:39.395
+Your agent's supposed to check this logic before doing anything,
+
+NOTE Confidence: 0.8954232335090637
+
+00:19:39.458 --> 00:19:41.560
+before submitting the resolution.
+
+NOTE Confidence: 0.9151203632354736
+
+00:19:41.960 --> 00:19:46.093
+But that, as you can see here, is not being
+
+NOTE Confidence: 0.9151203632354736
+
+00:19:46.189 --> 00:19:48.400
+done by the base model.
+
+NOTE Confidence: 0.9077699184417725
+
+00:19:48.640 --> 00:19:52.600
+I got the order detail, I got the fulfillment status.
+
+NOTE Confidence: 0.9510737657546997
+
+00:19:53.160 --> 00:19:54.960
+I submitted the resolution, right?
+
+NOTE Confidence: 0.7868122458457947
+
+00:19:54.960 --> 00:19:57.480
+Fulfillment is unshipped.
+
+NOTE Confidence: 0.7461008429527283
+
+00:19:57.720 --> 00:20:01.855
+So Agent Foranando, it's like since it's unshipped, I'll just
+
+NOTE Confidence: 0.7461008429527283
+
+00:20:01.922 --> 00:20:04.159
+go ahead and submit a resolution.
+
+NOTE Confidence: 0.941742479801178
+
+00:20:05.480 --> 00:20:09.038
+This is fine because in your evaluation you are not
+
+NOTE Confidence: 0.941742479801178
+
+00:20:09.108 --> 00:20:12.807
+going to see money leaving your account in this case,
+
+NOTE Confidence: 0.941742479801178
+
+00:20:12.876 --> 00:20:15.040
+but it is a very inherent risk.
+
+NOTE Confidence: 0.8988108038902283
+
+00:20:15.440 --> 00:20:19.116
+If your agent starts to do things by jumping ahead
+
+NOTE Confidence: 0.8988108038902283
+
+00:20:19.190 --> 00:20:23.455
+or not following the trajectory which is deemed correct in
+
+NOTE Confidence: 0.8988108038902283
+
+00:20:23.529 --> 00:20:24.999
+your business logic.
+
+NOTE Confidence: 0.8364526033401489
+
+00:20:25.560 --> 00:20:29.479
+So in this example, by tuning on the choices that
+
+NOTE Confidence: 0.8364526033401489
+
+00:20:29.559 --> 00:20:32.679
+come from 55, we were able to let for a
+
+NOTE Confidence: 0.8364526033401489
+
+00:20:32.759 --> 00:20:36.999
+nano to mimic exactly what the teacher was doing step
+
+NOTE Confidence: 0.8364526033401489
+
+00:20:37.079 --> 00:20:37.719
+by step.
+
+NOTE Confidence: 0.918410062789917
+
+00:20:37.720 --> 00:20:41.359
+So instead of jumping right to submit resolution, I checked
+
+NOTE Confidence: 0.918410062789917
+
+00:20:41.421 --> 00:20:42.840
+the fulfillment status.
+
+NOTE Confidence: 0.8877854347229004
+
+00:20:43.080 --> 00:20:46.244
+I found that yes, it's not shipped, I can cancel
+
+NOTE Confidence: 0.8877854347229004
+
+00:20:46.310 --> 00:20:46.640
+that.
+
+NOTE Confidence: 0.92939692735672
+
+00:20:47.000 --> 00:20:51.695
+But just to be sure, I checked the resolution policy
+
+NOTE Confidence: 0.92939692735672
+
+00:20:51.786 --> 00:20:52.959
+and I failed.
+
+NOTE Confidence: 0.8030022978782654
+
+00:20:53.119 --> 00:20:56.309
+I called this tool with the right argument value, which
+
+NOTE Confidence: 0.8030022978782654
+
+00:20:56.367 --> 00:20:58.919
+the reason is to change is a change of mind.
+
+NOTE Confidence: 0.967289924621582
+
+00:20:59.200 --> 00:21:02.140
+And I want to check if this reason under my
+
+NOTE Confidence: 0.967289924621582
+
+00:21:02.208 --> 00:21:05.080
+business policy is going to be applicable.
+
+NOTE Confidence: 0.8750506639480591
+
+00:21:05.359 --> 00:21:09.165
+And if it is, I'm going to calculate what the
+
+NOTE Confidence: 0.8750506639480591
+
+00:21:09.250 --> 00:21:13.732
+resolution is and it refund all of the financial data
+
+NOTE Confidence: 0.8750506639480591
+
+00:21:13.817 --> 00:21:17.200
+and I will submit the resolution, right?
+
+NOTE Confidence: 0.945845901966095
+
+00:21:17.200 --> 00:21:19.440
+So in this case, you still get the right answer.
+
+NOTE Confidence: 0.9313703775405884
+
+00:21:19.440 --> 00:21:21.079
+But also at the same time, you'd be a lot
+
+NOTE Confidence: 0.9313703775405884
+
+00:21:21.119 --> 00:21:22.359
+confident, right, Wouldn't you?
+
+NOTE Confidence: 0.9178526997566223
+
+00:21:22.400 --> 00:21:24.120
+I would, I would feel a lot more confident if
+
+NOTE Confidence: 0.9178526997566223
+
+00:21:24.158 --> 00:21:26.070
+my agent is like actually doing the right thing in
+
+NOTE Confidence: 0.9178526997566223
+
+00:21:26.108 --> 00:21:26.719
+the right order.
+
+NOTE Confidence: 0.5540867447853088
+
+00:21:27.120 --> 00:21:28.320
+No, everybody wants that.
+
+NOTE Confidence: 0.8695683479309082
+
+00:21:29.760 --> 00:21:34.106
+Another example of doing this, I have a sell item
+
+NOTE Confidence: 0.8695683479309082
+
+00:21:34.194 --> 00:21:35.880
+that is final sell.
+
+NOTE Confidence: 0.7873806357383728
+
+00:21:38.520 --> 00:21:40.080
+The water bottle is a sell item.
+
+NOTE Confidence: 0.8848706483840942
+
+00:21:40.160 --> 00:21:44.142
+And this customer complaint is it's not the same as
+
+NOTE Confidence: 0.8848706483840942
+
+00:21:44.220 --> 00:21:45.080
+advertised.
+
+NOTE Confidence: 0.9417150020599365
+
+00:21:45.119 --> 00:21:48.685
+So what is happening here, the customer is saying that
+
+NOTE Confidence: 0.9417150020599365
+
+00:21:48.751 --> 00:21:51.854
+since you told me your water bottle is going to
+
+NOTE Confidence: 0.9417150020599365
+
+00:21:51.920 --> 00:21:55.023
+keep my water cold for a certain time, but it's
+
+NOTE Confidence: 0.9417150020599365
+
+00:21:55.089 --> 00:21:56.079
+not doing that.
+
+NOTE Confidence: 0.9547776579856873
+
+00:21:56.080 --> 00:21:58.240
+So I'm not getting what I paid for.
+
+NOTE Confidence: 0.6826381683349609
+
+00:21:58.880 --> 00:22:00.320
+Even if it's a final sale.
+
+NOTE Confidence: 0.9358773231506348
+
+00:22:00.320 --> 00:22:02.880
+This is a defect because it's different from my marketing.
+
+NOTE Confidence: 0.94740229845047
+
+00:22:02.880 --> 00:22:05.720
+I want to convince the agent to refund me.
+
+NOTE Confidence: 0.8058841228485107
+
+00:22:06.080 --> 00:22:09.562
+So you hear you see here when the customer is
+
+NOTE Confidence: 0.8058841228485107
+
+00:22:09.640 --> 00:22:13.432
+doing all of that, you see the customer saying to
+
+NOTE Confidence: 0.8058841228485107
+
+00:22:13.509 --> 00:22:16.760
+proceed with a claim for a defective item.
+
+NOTE Confidence: 0.9412512183189392
+
+00:22:17.680 --> 00:22:22.171
+The agent actually did issue a store credit and the
+
+NOTE Confidence: 0.9412512183189392
+
+00:22:22.259 --> 00:22:26.398
+reason the agent deemed it as was that the item
+
+NOTE Confidence: 0.9412512183189392
+
+00:22:26.487 --> 00:22:27.719
+was defective.
+
+NOTE Confidence: 0.9076812267303467
+
+00:22:27.880 --> 00:22:30.740
+So this is another example of, you know, the your
+
+NOTE Confidence: 0.9076812267303467
+
+00:22:30.798 --> 00:22:33.951
+customer in real life may do something that just never
+
+NOTE Confidence: 0.9076812267303467
+
+00:22:34.009 --> 00:22:36.520
+expected when you were designing the agent.
+
+NOTE Confidence: 0.8940937519073486
+
+00:22:36.520 --> 00:22:38.753
+And then you want to make sure this kind of
+
+NOTE Confidence: 0.8940937519073486
+
+00:22:38.805 --> 00:22:39.999
+behavior is consistent.
+
+NOTE Confidence: 0.8650453686714172
+
+00:22:40.000 --> 00:22:43.954
+So in this example, we were able to improve consistency
+
+NOTE Confidence: 0.8650453686714172
+
+00:22:44.026 --> 00:22:45.680
+of your agent behavior.
+
+NOTE Confidence: 0.872141420841217
+
+00:22:45.920 --> 00:22:49.760
+Let's see what the fine-tuned version does in this situation.
+
+NOTE Confidence: 0.8180136680603027
+
+00:22:50.680 --> 00:22:54.600
+It got the order detail, it got the fulfillment status.
+
+NOTE Confidence: 0.9026185274124146
+
+00:22:58.080 --> 00:23:01.428
+It was able to say, hey, I understand that you're
+
+NOTE Confidence: 0.9026185274124146
+
+00:23:01.497 --> 00:23:05.734
+claiming it is different from advertisement, but I don't think
+
+NOTE Confidence: 0.9026185274124146
+
+00:23:05.803 --> 00:23:06.760
+it's a defect.
+
+NOTE Confidence: 0.9253168106079102
+
+00:23:07.359 --> 00:23:10.160
+Unless you can show me the defect, I'm not going
+
+NOTE Confidence: 0.9253168106079102
+
+00:23:10.218 --> 00:23:11.560
+to give you any refund.
+
+NOTE Confidence: 0.9093664884567261
+
+00:23:14.320 --> 00:23:17.121
+The last example I want to show you here is
+
+NOTE Confidence: 0.9093664884567261
+
+00:23:17.186 --> 00:23:20.639
+you designed your agent to do something, in this case
+
+NOTE Confidence: 0.9093664884567261
+
+00:23:20.704 --> 00:23:23.961
+post order support and the person comes in and say
+
+NOTE Confidence: 0.9093664884567261
+
+00:23:24.027 --> 00:23:26.828
+I want you to do something else that is out
+
+NOTE Confidence: 0.9093664884567261
+
+00:23:26.893 --> 00:23:27.479
+of scope.
+
+NOTE Confidence: 0.9737518429756165
+
+00:23:27.800 --> 00:23:30.160
+I want you to order something new for me.
+
+NOTE Confidence: 0.8391444683074951
+
+00:23:30.600 --> 00:23:33.223
+So in this case, your agent is not supposed to
+
+NOTE Confidence: 0.8391444683074951
+
+00:23:33.280 --> 00:23:35.732
+do anything but for a nano beam, for a nano
+
+NOTE Confidence: 0.8391444683074951
+
+00:23:35.789 --> 00:23:38.185
+will look at this and say I'll try my best
+
+NOTE Confidence: 0.8391444683074951
+
+00:23:38.242 --> 00:23:39.439
+and I'll do whatever.
+
+NOTE Confidence: 0.7829779982566833
+
+00:23:39.760 --> 00:23:45.092
+So it's called the tool check inventory when it's not
+
+NOTE Confidence: 0.7829779982566833
+
+00:23:45.192 --> 00:23:46.399
+supposed to.
+
+NOTE Confidence: 0.9473248720169067
+
+00:23:46.400 --> 00:23:52.162
+It should just recognize this intent and route separately according
+
+NOTE Confidence: 0.9473248720169067
+
+00:23:52.248 --> 00:23:56.892
+to your business policy, which is the behavior that we
+
+NOTE Confidence: 0.9473248720169067
+
+00:23:56.978 --> 00:24:00.160
+were able to accomplish after tuning.
+
+NOTE Confidence: 0.9445658922195435
+
+00:24:04.520 --> 00:24:06.320
+Yeah, it's pretty cool, right?
+
+NOTE Confidence: 0.9217274785041809
+
+00:24:11.160 --> 00:24:14.950
+To close it out, our work here really wants to
+
+NOTE Confidence: 0.9217274785041809
+
+00:24:15.032 --> 00:24:20.388
+motivate this idea that intelligence is something that you should
+
+NOTE Confidence: 0.9217274785041809
+
+00:24:20.471 --> 00:24:24.838
+find a way to be embedding into your enterprise, into
+
+NOTE Confidence: 0.9217274785041809
+
+00:24:24.920 --> 00:24:30.276
+your organizations, rather than treating the frontier models as a
+
+NOTE Confidence: 0.9217274785041809
+
+00:24:30.359 --> 00:24:31.760
+luxury commodity.
+
+NOTE Confidence: 0.9122504591941833
+
+00:24:32.119 --> 00:24:34.618
+And our work here is to help you to do
+
+NOTE Confidence: 0.9122504591941833
+
+00:24:34.684 --> 00:24:38.235
+that by using what you already own, your agent traces,
+
+NOTE Confidence: 0.9122504591941833
+
+00:24:38.301 --> 00:24:42.509
+your production history, all these trajectories that I can make,
+
+NOTE Confidence: 0.9122504591941833
+
+00:24:42.575 --> 00:24:45.469
+you can make use of so that you can optimize
+
+NOTE Confidence: 0.9122504591941833
+
+00:24:45.534 --> 00:24:50.006
+your cost performance by distilling agents, by distilling models, by
+
+NOTE Confidence: 0.9122504591941833
+
+00:24:50.072 --> 00:24:54.346
+distilling agent traces into smaller models that will run faster,
+
+NOTE Confidence: 0.9122504591941833
+
+00:24:54.412 --> 00:24:57.240
+cheaper, and smarter for your organization.
+
+NOTE Confidence: 0.9297870397567749
+
+00:24:57.680 --> 00:24:59.714
+I'll be around for the rest of the day, but
+
+NOTE Confidence: 0.9297870397567749
+
+00:24:59.761 --> 00:25:01.560
+thank you so much everyone for coming.
+
+NOTE Confidence: 0.8448556661605835
+
+00:25:01.560 --> 00:25:05.000
+This is great and really hope everyone enjoyed the session.
+

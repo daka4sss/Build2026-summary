@@ -1,0 +1,1840 @@
+WEBVTT
+
+NOTE
+language:en-US
+
+NOTE Confidence: 0.9033446907997131
+
+00:00:02.480 --> 00:00:03.080
+Hey everyone.
+
+NOTE Confidence: 0.887355387210846
+
+00:00:04.000 --> 00:00:05.480
+We're going to get this session started.
+
+NOTE Confidence: 0.8965508341789246
+
+00:00:07.520 --> 00:00:08.920
+So my name is Dave Citron.
+
+NOTE Confidence: 0.8064814805984497
+
+00:00:08.920 --> 00:00:11.760
+I'm CVP of products at Microsoft AI.
+
+NOTE Confidence: 0.8863946199417114
+
+00:00:11.760 --> 00:00:14.803
+And this is the under the hood session, a 25
+
+NOTE Confidence: 0.8863946199417114
+
+00:00:14.872 --> 00:00:19.229
+minute deep dive in what's actually happening inside the models
+
+NOTE Confidence: 0.8863946199417114
+
+00:00:19.298 --> 00:00:22.479
+that Mustafa announced on stage earlier today.
+
+NOTE Confidence: 0.9181909561157227
+
+00:00:23.360 --> 00:00:26.122
+And if you were watching the keynote and thinking cool
+
+NOTE Confidence: 0.9181909561157227
+
+00:00:26.173 --> 00:00:28.885
+numbers, but how did they actually do that, then this
+
+NOTE Confidence: 0.9181909561157227
+
+00:00:28.936 --> 00:00:29.959
+is the talk for you.
+
+NOTE Confidence: 0.869844913482666
+
+00:00:31.240 --> 00:00:32.080
+So here's the structure.
+
+NOTE Confidence: 0.9074670672416687
+
+00:00:32.080 --> 00:00:35.484
+We're going to start with the philosophy behind the model
+
+NOTE Confidence: 0.9074670672416687
+
+00:00:35.544 --> 00:00:36.560
+and how we build.
+
+NOTE Confidence: 0.8794748783111572
+
+00:00:36.880 --> 00:00:39.354
+And then we'll talk through all 7 models that we're
+
+NOTE Confidence: 0.8794748783111572
+
+00:00:39.403 --> 00:00:39.840
+shipping.
+
+NOTE Confidence: 0.9281919002532959
+
+00:00:40.479 --> 00:00:43.510
+Then we'll go deep on Mai thinking one, our first
+
+NOTE Confidence: 0.9281919002532959
+
+00:00:43.572 --> 00:00:47.962
+frontier reasoning model, the architecture, the training recipe and the
+
+NOTE Confidence: 0.9281919002532959
+
+00:00:48.024 --> 00:00:49.880
+reinforcement learning system.
+
+NOTE Confidence: 0.9488969445228577
+
+00:00:50.640 --> 00:00:52.930
+And then we'll close with frontier tuning, which you heard
+
+NOTE Confidence: 0.9488969445228577
+
+00:00:52.969 --> 00:00:53.720
+about this morning.
+
+NOTE Confidence: 0.9540144801139832
+
+00:00:54.880 --> 00:00:57.155
+So you can take what we've built and then run
+
+NOTE Confidence: 0.9540144801139832
+
+00:00:57.206 --> 00:00:59.280
+your own hill climbing loop on top of it.
+
+NOTE Confidence: 0.9474088549613953
+
+00:01:00.680 --> 00:01:01.720
+So with that, let's jump in.
+
+NOTE Confidence: 0.9516217708587646
+
+00:01:04.560 --> 00:01:07.719
+OK, so this is what we announced this morning, 7
+
+NOTE Confidence: 0.9516217708587646
+
+00:01:07.785 --> 00:01:11.800
+models across image transcription, voice coding and thinking.
+
+NOTE Confidence: 0.9217783808708191
+
+00:01:12.720 --> 00:01:14.613
+And let me give you a quick map, but we'll
+
+NOTE Confidence: 0.9217783808708191
+
+00:01:14.658 --> 00:01:15.559
+go deep on each one.
+
+NOTE Confidence: 0.8430172204971313
+
+00:01:16.240 --> 00:01:20.758
+So Image 2.5 is our image generation and editing model
+
+NOTE Confidence: 0.8430172204971313
+
+00:01:20.841 --> 00:01:24.774
+now #2 on Ella Marina leader board for image to
+
+NOTE Confidence: 0.8430172204971313
+
+00:01:24.857 --> 00:01:25.360
+image.
+
+NOTE Confidence: 0.9192030429840088
+
+00:01:26.120 --> 00:01:29.413
+And the flash variant of Image 25 brings the quality
+
+NOTE Confidence: 0.9192030429840088
+
+00:01:29.476 --> 00:01:32.199
+to production scale at a third of the cost.
+
+NOTE Confidence: 0.9329901337623596
+
+00:01:32.200 --> 00:01:33.760
+We're really excited about that model.
+
+NOTE Confidence: 0.8920608162879944
+
+00:01:34.760 --> 00:01:39.925
+Transcribe 1.5 is the world's most accurate transcription model across
+
+NOTE Confidence: 0.8920608162879944
+
+00:01:39.999 --> 00:01:44.279
+43 languages and is five times faster than Arrival models.
+
+NOTE Confidence: 0.9197594523429871
+
+00:01:45.000 --> 00:01:48.721
+Voice 2 is our most natural sounding speech model yet
+
+NOTE Confidence: 0.9197594523429871
+
+00:01:48.791 --> 00:01:52.723
+preferred on 72% of blind listening tests, and the Flash
+
+NOTE Confidence: 0.9197594523429871
+
+00:01:52.793 --> 00:01:57.217
+variant brings it under 150 milliseconds, so it's fantastic for
+
+NOTE Confidence: 0.9197594523429871
+
+00:01:57.287 --> 00:01:58.200
+voice agents.
+
+NOTE Confidence: 0.8516234755516052
+
+00:01:59.040 --> 00:02:03.180
+Code 1 Flash is our efficient coding model, already shipping
+
+NOTE Confidence: 0.8516234755516052
+
+00:02:03.249 --> 00:02:06.906
+as default in GitHub inside of VS Code, so definitely
+
+NOTE Confidence: 0.8516234755516052
+
+00:02:06.975 --> 00:02:08.080
+give that a try.
+
+NOTE Confidence: 0.854665994644165
+
+00:02:09.120 --> 00:02:12.234
+And it just, it's amazing coding performance at just a
+
+NOTE Confidence: 0.854665994644165
+
+00:02:12.292 --> 00:02:14.599
+5 billion active parameter coding model.
+
+NOTE Confidence: 0.8619279265403748
+
+00:02:15.560 --> 00:02:20.520
+And then finally thinking 1 is our first reasoning model,
+
+NOTE Confidence: 0.8619279265403748
+
+00:02:20.607 --> 00:02:23.480
+97% on Amy 2653 on Sweebench Pro.
+
+NOTE Confidence: 0.9351398944854736
+
+00:02:24.040 --> 00:02:26.333
+So we'll go super deep on how we built that
+
+NOTE Confidence: 0.9351398944854736
+
+00:02:26.386 --> 00:02:28.040
+and again, how you can tune it.
+
+NOTE Confidence: 0.9047639966011047
+
+00:02:29.800 --> 00:02:32.251
+Before we go model by model, I I want to
+
+NOTE Confidence: 0.9047639966011047
+
+00:02:32.312 --> 00:02:36.051
+spend a moment on philosophy because it drives real technical
+
+NOTE Confidence: 0.9047639966011047
+
+00:02:36.112 --> 00:02:37.400
+decisions At our lab.
+
+NOTE Confidence: 0.9281598925590515
+
+00:02:38.040 --> 00:02:44.079
+We call our approach humanist Super intelligence, State-of-the-art AI explicitly
+
+NOTE Confidence: 0.9281598925590515
+
+00:02:44.154 --> 00:02:48.760
+designed to serve people and organizations, not replace them.
+
+NOTE Confidence: 0.9468891620635986
+
+00:02:49.400 --> 00:02:51.640
+And the word humanist is doing real work here.
+
+NOTE Confidence: 0.9589928388595581
+
+00:02:51.640 --> 00:02:52.920
+It's not decorative.
+
+NOTE Confidence: 0.964897871017456
+
+00:02:53.200 --> 00:02:55.160
+It means three concrete things.
+
+NOTE Confidence: 0.9404128789901733
+
+00:02:55.600 --> 00:02:56.520
+Human first.
+
+NOTE Confidence: 0.9281581044197083
+
+00:02:56.760 --> 00:02:59.320
+The model always prioritizes human well-being.
+
+NOTE Confidence: 0.9233213067054749
+
+00:03:00.600 --> 00:03:02.080
+Serve, not replace.
+
+NOTE Confidence: 0.9185411930084229
+
+00:03:02.400 --> 00:03:05.544
+We build AI that augments what people can do and
+
+NOTE Confidence: 0.9185411930084229
+
+00:03:05.609 --> 00:03:06.920
+platform commitment.
+
+NOTE Confidence: 0.9365199208259583
+
+00:03:07.120 --> 00:03:11.368
+We keep developers at the frontier, and that philosophy has
+
+NOTE Confidence: 0.9365199208259583
+
+00:03:11.440 --> 00:03:14.680
+three concrete implications for how we build.
+
+NOTE Confidence: 0.9278080463409424
+
+00:03:15.040 --> 00:03:17.560
+The most important we don't distill.
+
+NOTE Confidence: 0.8767447471618652
+
+00:03:18.200 --> 00:03:22.696
+Distillation can produce fast gains, transferring a stronger models behavior
+
+NOTE Confidence: 0.8767447471618652
+
+00:03:22.755 --> 00:03:23.880
+into a smaller one.
+
+NOTE Confidence: 0.8844462037086487
+
+00:03:24.440 --> 00:03:27.433
+Lots of labs do it, but it makes the teachers
+
+NOTE Confidence: 0.8844462037086487
+
+00:03:27.500 --> 00:03:30.760
+capability the practical ceiling for the student.
+
+NOTE Confidence: 0.9344465136528015
+
+00:03:31.280 --> 00:03:34.896
+And it wouldn't test whether our own training pipeline can
+
+NOTE Confidence: 0.9344465136528015
+
+00:03:34.959 --> 00:03:38.950
+actually climb from weak initial performance or make progress in
+
+NOTE Confidence: 0.9344465136528015
+
+00:03:39.012 --> 00:03:41.319
+domains where no good teacher exists.
+
+NOTE Confidence: 0.7870327830314636
+
+00:03:42.320 --> 00:03:44.000
+So we hill climb from scratch.
+
+NOTE Confidence: 0.9386476278305054
+
+00:03:44.240 --> 00:03:47.699
+Every capability in these models was earned through our own
+
+NOTE Confidence: 0.9386476278305054
+
+00:03:47.758 --> 00:03:49.400
+training loop, not borrowed.
+
+NOTE Confidence: 0.9642122983932495
+
+00:03:50.200 --> 00:03:52.440
+And that choice also gives us something else.
+
+NOTE Confidence: 0.9307151436805725
+
+00:03:52.640 --> 00:03:54.440
+Full transparency and control.
+
+NOTE Confidence: 0.9561755061149597
+
+00:03:55.200 --> 00:03:57.280
+We know exactly what went into these models.
+
+NOTE Confidence: 0.8588423728942871
+
+00:03:57.600 --> 00:04:00.120
+Clean, commercially licensed data.
+
+NOTE Confidence: 0.8756119608879089
+
+00:04:00.760 --> 00:04:02.120
+No third party weights.
+
+NOTE Confidence: 0.9240129590034485
+
+00:04:02.520 --> 00:04:04.400
+No black box inheritance.
+
+NOTE Confidence: 0.9332839250564575
+
+00:04:05.000 --> 00:04:09.280
+Every component is something we can debug, audit, and improve.
+
+NOTE Confidence: 0.9671801924705505
+
+00:04:09.880 --> 00:04:10.960
+And that's the foundation.
+
+NOTE Confidence: 0.9354079365730286
+
+00:04:11.600 --> 00:04:13.720
+So let's walk through what we actually built.
+
+NOTE Confidence: 0.837541401386261
+
+00:04:15.200 --> 00:04:18.189
+All right, first up, image 25, number 2 on the
+
+NOTE Confidence: 0.837541401386261
+
+00:04:18.254 --> 00:04:21.439
+image editing leaderboard surpassing Nano Banana.
+
+NOTE Confidence: 0.9407331943511963
+
+00:04:22.400 --> 00:04:25.280
+That's a real step change from even our previous iterations.
+
+NOTE Confidence: 0.8893285393714905
+
+00:04:25.279 --> 00:04:27.688
+And if you've been following along, we've been iterating here
+
+NOTE Confidence: 0.8893285393714905
+
+00:04:27.727 --> 00:04:28.319
+pretty quickly.
+
+NOTE Confidence: 0.8035837411880493
+
+00:04:29.160 --> 00:04:31.120
+What makes it special is its precision.
+
+NOTE Confidence: 0.9446513652801514
+
+00:04:31.560 --> 00:04:34.665
+When you give it an edit instruction, it executes with
+
+NOTE Confidence: 0.9446513652801514
+
+00:04:34.722 --> 00:04:38.000
+fidelity and consistency that other models struggle with.
+
+NOTE Confidence: 0.9169910550117493
+
+00:04:38.640 --> 00:04:43.438
+Complex compositional edits, changing lighting, adding objects that match the
+
+NOTE Confidence: 0.9169910550117493
+
+00:04:43.500 --> 00:04:47.800
+environment, editing one region while leaving everything else intact.
+
+NOTE Confidence: 0.90487140417099
+
+00:04:48.240 --> 00:04:51.351
+It handles those super cleanly, and I definitely encourage you
+
+NOTE Confidence: 0.90487140417099
+
+00:04:51.401 --> 00:04:53.760
+to give us a try on our Mai Playground website.
+
+NOTE Confidence: 0.9320555925369263
+
+00:04:54.080 --> 00:04:55.440
+In fact, you can even do it on your phone.
+
+NOTE Confidence: 0.8502388000488281
+
+00:04:56.480 --> 00:05:00.563
+The flagship 25 model is also optimized for maximum quality,
+
+NOTE Confidence: 0.8502388000488281
+
+00:05:00.631 --> 00:05:05.123
+so it's professional grade output for creative and enterprise work
+
+NOTE Confidence: 0.8502388000488281
+
+00:05:05.191 --> 00:05:05.599
+flows.
+
+NOTE Confidence: 0.80568528175354
+
+00:05:06.560 --> 00:05:09.863
+It's already live in PowerPoint and rolling out to OneDrive
+
+NOTE Confidence: 0.80568528175354
+
+00:05:09.919 --> 00:05:12.159
+and also available on Foundry right now.
+
+NOTE Confidence: 0.9126744270324707
+
+00:05:13.160 --> 00:05:16.709
+And the Flash variant brings the same architecture optimized for
+
+NOTE Confidence: 0.9126744270324707
+
+00:05:16.764 --> 00:05:18.040
+high volume production.
+
+NOTE Confidence: 0.8542003631591797
+
+00:05:18.720 --> 00:05:22.497
+So you get more throughput, minimal quality trade off, significantly
+
+NOTE Confidence: 0.8542003631591797
+
+00:05:22.553 --> 00:05:23.719
+lower cost per token.
+
+NOTE Confidence: 0.8739486932754517
+
+00:05:25.040 --> 00:05:26.960
+Next, let's talk about Voice 2.
+
+NOTE Confidence: 0.8380537629127502
+
+00:05:28.360 --> 00:05:31.409
+It's our latest speech generation model, and what sets it
+
+NOTE Confidence: 0.8380537629127502
+
+00:05:31.462 --> 00:05:32.800
+apart is its naturalness.
+
+NOTE Confidence: 0.9025045037269592
+
+00:05:33.320 --> 00:05:37.646
+We went deep on prosody, the rhythm, stress and intonation
+
+NOTE Confidence: 0.9025045037269592
+
+00:05:37.721 --> 00:05:41.377
+that makes speech sound like a person, not a text
+
+NOTE Confidence: 0.9025045037269592
+
+00:05:41.451 --> 00:05:42.719
+to speech engine.
+
+NOTE Confidence: 0.811665952205658
+
+00:05:43.920 --> 00:05:47.000
+The headline new capability is fine grained emotional control.
+
+NOTE Confidence: 0.9341754913330078
+
+00:05:47.320 --> 00:05:50.080
+You can tune not just what the voice says, but
+
+NOTE Confidence: 0.9341754913330078
+
+00:05:50.140 --> 00:05:50.920
+how it feels.
+
+NOTE Confidence: 0.9605814218521118
+
+00:05:51.360 --> 00:05:55.160
+Warm, urgent, conversational, joyful.
+
+NOTE Confidence: 0.9499025940895081
+
+00:05:56.080 --> 00:05:58.800
+Available today in 15 languages and many more coming soon.
+
+NOTE Confidence: 0.9617871642112732
+
+00:05:59.000 --> 00:06:02.560
+So let's give a listen to what joy sounds like.
+
+NOTE Confidence: 0.9568058252334595
+
+00:06:08.320 --> 00:06:10.360
+And I'm not getting any audio.
+
+NOTE Confidence: 0.975316047668457
+
+00:06:10.920 --> 00:06:11.560
+Can you hear that?
+
+NOTE Confidence: 0.9631125926971436
+
+00:06:11.640 --> 00:06:12.360
+I don't think so.
+
+NOTE Confidence: 0.8374280333518982
+
+00:06:14.320 --> 00:06:15.600
+There's supposed to be some sound.
+
+NOTE Confidence: 0.9777787327766418
+
+00:06:15.600 --> 00:06:15.960
+Now.
+
+NOTE Confidence: 0.9475090503692627
+
+00:06:18.160 --> 00:06:19.000
+Let me try that again.
+
+NOTE Confidence: 0.8120574951171875
+
+00:06:20.200 --> 00:06:21.440
+I just got the best.
+
+NOTE Confidence: 0.6917599439620972
+
+00:06:22.280 --> 00:06:23.200
+Perfect, perfect, perfect.
+
+NOTE Confidence: 0.7984747290611267
+
+00:06:23.200 --> 00:06:24.280
+OK, let's try it.
+
+NOTE Confidence: 0.9734340906143188
+
+00:06:24.640 --> 00:06:27.240
+I just got the best news ever.
+
+NOTE Confidence: 0.9750581979751587
+
+00:06:27.240 --> 00:06:27.480
+I.
+
+NOTE Confidence: 0.9180096983909607
+
+00:06:27.480 --> 00:06:28.880
+Cannot stop smiling.
+
+NOTE Confidence: 0.9214320182800293
+
+00:06:29.240 --> 00:06:32.284
+Everything I've been working towards has finally paid off and
+
+NOTE Confidence: 0.9214320182800293
+
+00:06:32.334 --> 00:06:34.180
+I I feel like I'm on top of the world
+
+NOTE Confidence: 0.9214320182800293
+
+00:06:34.230 --> 00:06:34.679
+honestly.
+
+NOTE Confidence: 0.9693379998207092
+
+00:06:35.000 --> 00:06:36.640
+This is the happiest I have.
+
+NOTE Confidence: 0.9688337445259094
+
+00:06:36.680 --> 00:06:37.480
+Ever been?
+
+NOTE Confidence: 0.9681334495544434
+
+00:06:37.760 --> 00:06:39.920
+I can't believe how amazing this feels.
+
+NOTE Confidence: 0.8980344533920288
+
+00:06:39.920 --> 00:06:42.360
+I'm so incredibly happy right now all.
+
+NOTE Confidence: 0.6318632960319519
+
+00:06:44.080 --> 00:06:44.240
+Right.
+
+NOTE Confidence: 0.9395356774330139
+
+00:06:44.240 --> 00:06:46.400
+So a little hard to hear, but that's our model.
+
+NOTE Confidence: 0.9423119425773621
+
+00:06:46.400 --> 00:06:47.840
+Yeah, thank you, Thank you.
+
+NOTE Confidence: 0.9615725874900818
+
+00:06:48.000 --> 00:06:51.023
+And I definitely recommend checking it out both on our
+
+NOTE Confidence: 0.9615725874900818
+
+00:06:51.079 --> 00:06:54.103
+website, which has some great examples of the range of
+
+NOTE Confidence: 0.9615725874900818
+
+00:06:54.159 --> 00:06:55.279
+emotions and voices.
+
+NOTE Confidence: 0.8653659820556641
+
+00:06:55.279 --> 00:06:59.466
+And then obviously, whatever you want directly on Mai Playground
+
+NOTE Confidence: 0.8653659820556641
+
+00:06:59.531 --> 00:07:00.839
+or inside a foundry.
+
+NOTE Confidence: 0.9194850325584412
+
+00:07:01.600 --> 00:07:04.000
+And, and one more quick nod to this model.
+
+NOTE Confidence: 0.8925574421882629
+
+00:07:04.480 --> 00:07:06.400
+It does a great job at voice cloning.
+
+NOTE Confidence: 0.9512782096862793
+
+00:07:07.040 --> 00:07:08.953
+So if you just give it a tiny amount of
+
+NOTE Confidence: 0.9512782096862793
+
+00:07:09.003 --> 00:07:11.604
+audio from a real person, it can replicate that voice
+
+NOTE Confidence: 0.9512782096862793
+
+00:07:11.653 --> 00:07:12.880
+with super high fidelity.
+
+NOTE Confidence: 0.7535771727561951
+
+00:07:13.640 --> 00:07:15.806
+And, and all it needs is a, a couple seconds
+
+NOTE Confidence: 0.7535771727561951
+
+00:07:15.855 --> 00:07:16.839
+of the source audio.
+
+NOTE Confidence: 0.9453600645065308
+
+00:07:18.600 --> 00:07:20.661
+And then again, we'll have a flash variant of this
+
+NOTE Confidence: 0.9453600645065308
+
+00:07:20.702 --> 00:07:21.279
+model as well.
+
+NOTE Confidence: 0.9523613452911377
+
+00:07:21.440 --> 00:07:24.771
+And that's particularly designed with voice agents in mind with
+
+NOTE Confidence: 0.9523613452911377
+
+00:07:24.823 --> 00:07:26.039
+incredibly low latency.
+
+NOTE Confidence: 0.9249384999275208
+
+00:07:26.760 --> 00:07:28.300
+And we can't wait to see what you build with
+
+NOTE Confidence: 0.9249384999275208
+
+00:07:28.335 --> 00:07:28.440
+it.
+
+NOTE Confidence: 0.8209877610206604
+
+00:07:29.200 --> 00:07:32.640
+All right, Next up, transcription with Transcribe 1.5.
+
+NOTE Confidence: 0.9379343390464783
+
+00:07:33.800 --> 00:07:36.916
+Transcribe 1.5 is simply the best transcription model in the
+
+NOTE Confidence: 0.9379343390464783
+
+00:07:36.968 --> 00:07:37.280
+world.
+
+NOTE Confidence: 0.9690826535224915
+
+00:07:37.760 --> 00:07:38.640
+Not close.
+
+NOTE Confidence: 0.803916335105896
+
+00:07:38.960 --> 00:07:42.929
+The best soda accuracy across 43 languages beating Gemini and
+
+NOTE Confidence: 0.803916335105896
+
+00:07:42.994 --> 00:07:46.833
+Open the Eyes flagship transcription models on head to head
+
+NOTE Confidence: 0.803916335105896
+
+00:07:46.898 --> 00:07:48.199
+accuracy benchmarks.
+
+NOTE Confidence: 0.9335981011390686
+
+00:07:48.800 --> 00:07:51.400
+But we haven't just optimized for benchmark accuracy.
+
+NOTE Confidence: 0.9213743805885315
+
+00:07:51.600 --> 00:07:55.682
+This model optimizes for real world use, your actual audio,
+
+NOTE Confidence: 0.9213743805885315
+
+00:07:55.752 --> 00:08:01.288
+noisy environments like this one, accents, domain specific terminology, multiple
+
+NOTE Confidence: 0.9213743805885315
+
+00:08:01.357 --> 00:08:02.879
+speakers, you name it.
+
+NOTE Confidence: 0.8149492144584656
+
+00:08:03.360 --> 00:08:05.920
+And on artificial analysis speed benchmarks.
+
+NOTE Confidence: 0.910202145576477
+
+00:08:06.160 --> 00:08:08.824
+Our model is in a league of its own, up
+
+NOTE Confidence: 0.910202145576477
+
+00:08:08.892 --> 00:08:12.240
+to 5X faster than rival models and more accurate.
+
+NOTE Confidence: 0.8780475854873657
+
+00:08:12.760 --> 00:08:16.407
+No one else comes close in both dimensions at once
+
+NOTE Confidence: 0.8780475854873657
+
+00:08:16.480 --> 00:08:21.222
+and it's already being integrated across the Microsoft stack from
+
+NOTE Confidence: 0.8780475854873657
+
+00:08:21.295 --> 00:08:25.600
+copilot teams, GitHub Dynamics 365 and it's on foundry now.
+
+NOTE Confidence: 0.9519444704055786
+
+00:08:26.080 --> 00:08:29.380
+It's the fastest, most accurate and most cost effective transcription
+
+NOTE Confidence: 0.9519444704055786
+
+00:08:29.427 --> 00:08:30.480
+model available today.
+
+NOTE Confidence: 0.9553893208503723
+
+00:08:31.920 --> 00:08:34.827
+If you're building anything involving speech to text, this is
+
+NOTE Confidence: 0.9553893208503723
+
+00:08:34.875 --> 00:08:35.400
+your model.
+
+NOTE Confidence: 0.8773178458213806
+
+00:08:36.520 --> 00:08:39.296
+All right, Next up coding code 1 Flash is our
+
+NOTE Confidence: 0.8773178458213806
+
+00:08:39.358 --> 00:08:42.628
+dedicated coding model built from the ground up for a
+
+NOTE Confidence: 0.8773178458213806
+
+00:08:42.690 --> 00:08:44.480
+gentic coding tasks at speed.
+
+NOTE Confidence: 0.7590398192405701
+
+00:08:45.240 --> 00:08:49.377
+The the benchmarks 71.6 on Suebench verified 52 dot or
+
+NOTE Confidence: 0.7590398192405701
+
+00:08:49.454 --> 00:08:51.600
+sorry, 51.2 on Suebench Pro.
+
+NOTE Confidence: 0.9023533463478088
+
+00:08:52.360 --> 00:08:54.579
+And as you know, Suebench Pro is one of the
+
+NOTE Confidence: 0.9023533463478088
+
+00:08:54.631 --> 00:08:57.780
+hardest real world coding benchmarks out there right now, and
+
+NOTE Confidence: 0.9023533463478088
+
+00:08:57.832 --> 00:09:01.239
+it's optimized to be cost effective for high throughput workloads.
+
+NOTE Confidence: 0.9118143320083618
+
+00:09:01.840 --> 00:09:03.962
+And we can't wait to see what you build with
+
+NOTE Confidence: 0.9118143320083618
+
+00:09:04.010 --> 00:09:06.567
+it and to hear your feedback, definitely check it out
+
+NOTE Confidence: 0.9118143320083618
+
+00:09:06.615 --> 00:09:08.399
+in VS Code with GitHub Copilot today.
+
+NOTE Confidence: 0.8974752426147461
+
+00:09:09.720 --> 00:09:11.618
+All right, last but not least, and this is the
+
+NOTE Confidence: 0.8974752426147461
+
+00:09:11.659 --> 00:09:13.639
+model that we're going to go deep on Thinking 1.
+
+NOTE Confidence: 0.8970298171043396
+
+00:09:14.679 --> 00:09:18.124
+Thinking 1 is Microsoft's first reasoning model and the one
+
+NOTE Confidence: 0.8970298171043396
+
+00:09:18.183 --> 00:09:20.985
+we're we're really excited to to give you a peek
+
+NOTE Confidence: 0.8970298171043396
+
+00:09:21.044 --> 00:09:21.919
+under the hood.
+
+NOTE Confidence: 0.8470861911773682
+
+00:09:22.720 --> 00:09:27.113
+So the architecture is mixture of experts, 35 billion active
+
+NOTE Confidence: 0.8470861911773682
+
+00:09:27.186 --> 00:09:31.214
+parameters, about 1 trillion total with a 256 K context
+
+NOTE Confidence: 0.8470861911773682
+
+00:09:31.287 --> 00:09:31.800
+window.
+
+NOTE Confidence: 0.9235352277755737
+
+00:09:32.320 --> 00:09:34.556
+And it punches well above its weight class as you'll
+
+NOTE Confidence: 0.9235352277755737
+
+00:09:34.599 --> 00:09:36.535
+see in some of the benchmark numbers in a few
+
+NOTE Confidence: 0.9235352277755737
+
+00:09:36.578 --> 00:09:36.879
+slides.
+
+NOTE Confidence: 0.9241018891334534
+
+00:09:37.560 --> 00:09:40.200
+And it was hill climbed entirely from scratch.
+
+NOTE Confidence: 0.8551346659660339
+
+00:09:40.400 --> 00:09:45.074
+No distillation, no teacher model, clean, commercially licensed data lineage,
+
+NOTE Confidence: 0.8551346659660339
+
+00:09:45.135 --> 00:09:48.959
+the kind you need when you're shipping to enterprise customers.
+
+NOTE Confidence: 0.933121919631958
+
+00:09:49.560 --> 00:09:51.320
+So let's jump into how it was built.
+
+NOTE Confidence: 0.920245349407196
+
+00:09:53.000 --> 00:09:53.160
+Now.
+
+NOTE Confidence: 0.931422233581543
+
+00:09:53.160 --> 00:09:55.624
+Again, there's a lot of really complex diagrams in the
+
+NOTE Confidence: 0.931422233581543
+
+00:09:55.669 --> 00:09:56.400
+next few slides.
+
+NOTE Confidence: 0.9547853469848633
+
+00:09:56.920 --> 00:09:58.974
+I just want to give a quick nod to our
+
+NOTE Confidence: 0.9547853469848633
+
+00:09:59.028 --> 00:10:01.840
+tech report we launched on our website this morning.
+
+NOTE Confidence: 0.892423689365387
+
+00:10:02.320 --> 00:10:05.820
+Over 100 pages, giving you detailed understanding of exactly how
+
+NOTE Confidence: 0.892423689365387
+
+00:10:05.875 --> 00:10:07.679
+we built this thing from scratch.
+
+NOTE Confidence: 0.9659057855606079
+
+00:10:08.000 --> 00:10:09.040
+So definitely check it out.
+
+NOTE Confidence: 0.9658604860305786
+
+00:10:09.640 --> 00:10:12.120
+But a quick high level of that report.
+
+NOTE Confidence: 0.8027951121330261
+
+00:10:13.120 --> 00:10:15.374
+So there were three principles that govern every decision we
+
+NOTE Confidence: 0.8027951121330261
+
+00:10:15.412 --> 00:10:15.599
+made.
+
+NOTE Confidence: 0.9292966723442078
+
+00:10:16.120 --> 00:10:18.480
+Capabilities should be learned, not inherited.
+
+NOTE Confidence: 0.8574190139770508
+
+00:10:19.040 --> 00:10:23.960
+Simplicity is sustainable and scientific rigor over shortcuts.
+
+NOTE Confidence: 0.922099769115448
+
+00:10:25.440 --> 00:10:27.703
+So let me make the data story concrete, starting with
+
+NOTE Confidence: 0.922099769115448
+
+00:10:27.746 --> 00:10:30.266
+what we didn't use, because that's really the harder choice
+
+NOTE Confidence: 0.922099769115448
+
+00:10:30.309 --> 00:10:32.360
+when you're designing a frontier language model.
+
+NOTE Confidence: 0.9435510635375977
+
+00:10:33.080 --> 00:10:36.400
+No open source training sets, no synthetic data.
+
+NOTE Confidence: 0.9514917135238647
+
+00:10:37.120 --> 00:10:40.325
+We actively haunted down AI generated content on the web
+
+NOTE Confidence: 0.9514917135238647
+
+00:10:40.382 --> 00:10:43.531
+and removed it from our training set, which gets harder
+
+NOTE Confidence: 0.9514917135238647
+
+00:10:43.588 --> 00:10:47.079
+and harder every month and the benchmarks are decontaminated.
+
+NOTE Confidence: 0.9102582335472107
+
+00:10:47.280 --> 00:10:49.440
+The numbers I'm going to show you are real.
+
+NOTE Confidence: 0.849420428276062
+
+00:10:50.440 --> 00:10:54.710
+What we did use 30 trillion tokens sourced and processed
+
+NOTE Confidence: 0.849420428276062
+
+00:10:54.787 --> 00:10:59.972
+entirely in house web code, books, papers, multilingual text, domain
+
+NOTE Confidence: 0.849420428276062
+
+00:11:00.049 --> 00:11:04.320
+specific materials and every pipeline we own end to end.
+
+NOTE Confidence: 0.8104240894317627
+
+00:11:05.280 --> 00:11:09.284
+And then in mid training, another 3.55 trillion tokens of
+
+NOTE Confidence: 0.8104240894317627
+
+00:11:09.355 --> 00:11:13.711
+curated STEM mass coding data, verifiable answers and and code
+
+NOTE Confidence: 0.8104240894317627
+
+00:11:13.781 --> 00:11:15.959
+that either runs or it doesn't.
+
+NOTE Confidence: 0.8282461166381836
+
+00:11:16.720 --> 00:11:19.546
+And this phase extends context to 256 K and sets
+
+NOTE Confidence: 0.8282461166381836
+
+00:11:19.605 --> 00:11:20.959
+us up for the RL climb.
+
+NOTE Confidence: 0.904038667678833
+
+00:11:22.000 --> 00:11:23.520
+So let's talk about the RL climb.
+
+NOTE Confidence: 0.9364442825317383
+
+00:11:24.760 --> 00:11:27.640
+Reinforcement learning is where the model actually learns to think.
+
+NOTE Confidence: 0.9663024544715881
+
+00:11:27.920 --> 00:11:30.799
+And this is the part I find the most interesting
+
+NOTE Confidence: 0.9663024544715881
+
+00:11:30.859 --> 00:11:31.639
+mechanically.
+
+NOTE Confidence: 0.8845312595367432
+
+00:11:32.480 --> 00:11:34.520
+So the base algorithm is GRPO.
+
+NOTE Confidence: 0.8229566812515259
+
+00:11:35.320 --> 00:11:38.614
+Generate a group of rollouts for a problem, score them
+
+NOTE Confidence: 0.8229566812515259
+
+00:11:38.675 --> 00:11:42.640
+against a verifiable ground truth, and reinforce the better ones.
+
+NOTE Confidence: 0.9130885601043701
+
+00:11:43.160 --> 00:11:45.240
+And for math and code, the reward is binary.
+
+NOTE Confidence: 0.97492516040802
+
+00:11:45.320 --> 00:11:46.480
+Did you get the right answer?
+
+NOTE Confidence: 0.9093784093856812
+
+00:11:47.520 --> 00:11:50.038
+But running RL for thousands of steps on a model
+
+NOTE Confidence: 0.9093784093856812
+
+00:11:50.090 --> 00:11:51.559
+this size doesn't just work.
+
+NOTE Confidence: 0.9539554715156555
+
+00:11:51.840 --> 00:11:56.022
+And so we built 5 innovations that combined keep the
+
+NOTE Confidence: 0.9539554715156555
+
+00:11:56.103 --> 00:11:59.239
+climb stable across thousands of steps.
+
+NOTE Confidence: 0.8787658214569092
+
+00:12:00.240 --> 00:12:03.363
+The Amy score going from near 0 to 97% in
+
+NOTE Confidence: 0.8787658214569092
+
+00:12:03.440 --> 00:12:06.868
+a steady log linear line is an example of how
+
+NOTE Confidence: 0.8787658214569092
+
+00:12:06.944 --> 00:12:09.840
+all of these techniques come together.
+
+NOTE Confidence: 0.9048513174057007
+
+00:12:10.440 --> 00:12:12.436
+And again, if if you want to read about these
+
+NOTE Confidence: 0.9048513174057007
+
+00:12:12.480 --> 00:12:15.320
+techniques in detail, definitely check out our technical report.
+
+NOTE Confidence: 0.8758604526519775
+
+00:12:16.600 --> 00:12:20.207
+And we also trained 3 specialist models across STEM, agentic
+
+NOTE Confidence: 0.8758604526519775
+
+00:12:20.267 --> 00:12:23.754
+and helpfulness and safety and then merge them together so
+
+NOTE Confidence: 0.8758604526519775
+
+00:12:23.814 --> 00:12:26.519
+we get one model with three areas of mastery.
+
+NOTE Confidence: 0.8821459412574768
+
+00:12:28.600 --> 00:12:30.960
+So let's talk a moment about that safety climb.
+
+NOTE Confidence: 0.9415151476860046
+
+00:12:31.320 --> 00:12:33.921
+Safety isn't a filter bolted on at the end for
+
+NOTE Confidence: 0.9415151476860046
+
+00:12:33.977 --> 00:12:34.599
+this model.
+
+NOTE Confidence: 0.8909665942192078
+
+00:12:34.920 --> 00:12:38.160
+It's an entire dedicated RL climb with a reward model
+
+NOTE Confidence: 0.8909665942192078
+
+00:12:38.222 --> 00:12:40.239
+trained on human preference data.
+
+NOTE Confidence: 0.8905266523361206
+
+00:12:41.280 --> 00:12:43.440
+You cannot trade safety for helpfulness.
+
+NOTE Confidence: 0.91676926612854
+
+00:12:43.440 --> 00:12:45.400
+It's baked into the math with this design.
+
+NOTE Confidence: 0.8994166851043701
+
+00:12:46.520 --> 00:12:49.986
+Then 15 rounds of red teaming across early, mid, and
+
+NOTE Confidence: 0.8994166851043701
+
+00:12:50.053 --> 00:12:55.120
+late training Microsoft's AI red teaming, plus independent external vendors.
+
+NOTE Confidence: 0.8688549995422363
+
+00:12:55.400 --> 00:12:58.040
+Over 2100 adversarial scenarios.
+
+NOTE Confidence: 0.8235692977905273
+
+00:12:59.320 --> 00:13:02.309
+The result on the safety help on this scatter plot,
+
+NOTE Confidence: 0.8235692977905273
+
+00:13:02.368 --> 00:13:04.830
+which is maybe a little bit hard to see on
+
+NOTE Confidence: 0.8235692977905273
+
+00:13:04.889 --> 00:13:07.585
+this slide, Mai sits above and to the right of
+
+NOTE Confidence: 0.8235692977905273
+
+00:13:07.644 --> 00:13:10.986
+Claude Sonnet 46-ON about five of eight of the categories
+
+NOTE Confidence: 0.8235692977905273
+
+00:13:11.044 --> 00:13:13.800
+and so more helpful and safer at the same time.
+
+NOTE Confidence: 0.9421566128730774
+
+00:13:16.559 --> 00:13:19.552
+OK, so bringing that all together, let's look at what
+
+NOTE Confidence: 0.9421566128730774
+
+00:13:19.609 --> 00:13:20.399
+that produced.
+
+NOTE Confidence: 0.7839016318321228
+
+00:13:21.040 --> 00:13:25.640
+Amy 25 at 97 and Amy 26 at 94.5 S.
+
+NOTE Confidence: 0.9168543815612793
+
+00:13:25.640 --> 00:13:28.483
+These are brand new problems released after our training cut
+
+NOTE Confidence: 0.9168543815612793
+
+00:13:28.530 --> 00:13:28.720
+off.
+
+NOTE Confidence: 0.9027582406997681
+
+00:13:28.960 --> 00:13:32.325
+The model has never seen them live code bench as
+
+NOTE Confidence: 0.9027582406997681
+
+00:13:32.396 --> 00:13:36.813
+87.7 and again this benchmark continuously adds new problems to
+
+NOTE Confidence: 0.9027582406997681
+
+00:13:36.883 --> 00:13:40.320
+prevent contamination, so it's a genuine measure.
+
+NOTE Confidence: 0.7636023759841919
+
+00:13:41.200 --> 00:13:43.040
+Sui bench pro at 52.8.
+
+NOTE Confidence: 0.9013329744338989
+
+00:13:43.320 --> 00:13:46.360
+Again, real GitHub issues on real code bases.
+
+NOTE Confidence: 0.8028892278671265
+
+00:13:46.560 --> 00:13:52.240
+Competitive with Opus 46 and GPQA Diamond 84.2.
+
+NOTE Confidence: 0.9534056782722473
+
+00:13:52.560 --> 00:13:54.480
+So this is graduate level science questions.
+
+NOTE Confidence: 0.957284152507782
+
+00:13:54.480 --> 00:13:58.200
+Biology, chemistry and physics without using any search tools.
+
+NOTE Confidence: 0.9254642724990845
+
+00:13:58.480 --> 00:14:02.389
+So this model really understands complex domains and this is
+
+NOTE Confidence: 0.9254642724990845
+
+00:14:02.454 --> 00:14:04.800
+a 35 billion active parameter model.
+
+NOTE Confidence: 0.9408014416694641
+
+00:14:04.800 --> 00:14:08.256
+So it's not the largest, but fully competitive because the
+
+NOTE Confidence: 0.9408014416694641
+
+00:14:08.316 --> 00:14:10.760
+capabilities were learned, not inherited.
+
+NOTE Confidence: 0.8422336578369141
+
+00:14:12.000 --> 00:14:16.392
+And that's Mai thinking one a clean foundation, well designed
+
+NOTE Confidence: 0.8422336578369141
+
+00:14:16.464 --> 00:14:18.120
+climb scientific rigor.
+
+NOTE Confidence: 0.9624303579330444
+
+00:14:19.320 --> 00:14:21.537
+Next, let's talk about how you can tune this model
+
+NOTE Confidence: 0.9624303579330444
+
+00:14:21.581 --> 00:14:23.621
+and make it your own with what you heard about
+
+NOTE Confidence: 0.9624303579330444
+
+00:14:23.666 --> 00:14:25.440
+this morning, Microsoft Frontier Tuning.
+
+NOTE Confidence: 0.9390808939933777
+
+00:14:27.640 --> 00:14:30.219
+So most AI products today ask you to rent a
+
+NOTE Confidence: 0.9390808939933777
+
+00:14:30.279 --> 00:14:33.279
+generic model and hope it works for your business.
+
+NOTE Confidence: 0.9695344567298889
+
+00:14:33.640 --> 00:14:35.000
+And we don't think that's good enough.
+
+NOTE Confidence: 0.9218745827674866
+
+00:14:35.880 --> 00:14:39.838
+Frontier Tuning is how we let every developer and org
+
+NOTE Confidence: 0.9218745827674866
+
+00:14:39.912 --> 00:14:44.020
+build its own hill climbing machine, a model that knows
+
+NOTE Confidence: 0.9218745827674866
+
+00:14:44.094 --> 00:14:48.949
+your work, your language, your data, trained entirely inside your
+
+NOTE Confidence: 0.9218745827674866
+
+00:14:49.023 --> 00:14:49.919
+environment.
+
+NOTE Confidence: 0.8965490460395813
+
+00:14:51.040 --> 00:14:53.680
+And there's really four things that matter for Microsoft Tuning.
+
+NOTE Confidence: 0.8682092428207397
+
+00:14:55.120 --> 00:14:57.760
+It's private, so your data never moves.
+
+NOTE Confidence: 0.945184588432312
+
+00:14:57.960 --> 00:15:01.326
+It's cost efficient so you're not burning dollars on tokens
+
+NOTE Confidence: 0.945184588432312
+
+00:15:01.383 --> 00:15:02.239
+you don't need.
+
+NOTE Confidence: 0.9506286978721619
+
+00:15:02.920 --> 00:15:05.520
+And it gets smarter on your actual context.
+
+NOTE Confidence: 0.93850177526474
+
+00:15:05.920 --> 00:15:07.200
+And you control the model.
+
+NOTE Confidence: 0.9157722592353821
+
+00:15:07.600 --> 00:15:10.630
+No big model lock in, no dependency on anyone's road
+
+NOTE Confidence: 0.9157722592353821
+
+00:15:10.689 --> 00:15:11.680
+map but your own.
+
+NOTE Confidence: 0.9292073845863342
+
+00:15:13.480 --> 00:15:15.503
+And the process for building on top of this is
+
+NOTE Confidence: 0.9292073845863342
+
+00:15:15.547 --> 00:15:16.559
+pretty straightforward.
+
+NOTE Confidence: 0.9125005006790161
+
+00:15:17.120 --> 00:15:20.091
+You define your task and what looks like, what good
+
+NOTE Confidence: 0.9125005006790161
+
+00:15:20.150 --> 00:15:21.839
+looks like for your business.
+
+NOTE Confidence: 0.8725224733352661
+
+00:15:22.640 --> 00:15:26.405
+You bring in your data, your M365 context, your Azure
+
+NOTE Confidence: 0.8725224733352661
+
+00:15:26.477 --> 00:15:31.024
+Fabric context, your work flows, your domain expertise, and then
+
+NOTE Confidence: 0.8725224733352661
+
+00:15:31.095 --> 00:15:34.079
+we run training inside your secure tenant.
+
+NOTE Confidence: 0.8641276955604553
+
+00:15:34.920 --> 00:15:38.280
+You deploy once you're done through either Foundry or Copilot.
+
+NOTE Confidence: 0.7531198859214783
+
+00:15:38.800 --> 00:15:39.760
+It's simple as that.
+
+NOTE Confidence: 0.9638410806655884
+
+00:15:40.560 --> 00:15:41.640
+And then it doesn't stop.
+
+NOTE Confidence: 0.9515154957771301
+
+00:15:42.080 --> 00:15:45.680
+Real usage feeds back into the next training cycle.
+
+NOTE Confidence: 0.9346215128898621
+
+00:15:46.080 --> 00:15:48.720
+The model gets better the more your org uses it.
+
+NOTE Confidence: 0.9023814797401428
+
+00:15:49.640 --> 00:15:51.840
+That's what a hill climbing machine actually means.
+
+NOTE Confidence: 0.937917172908783
+
+00:15:52.040 --> 00:15:56.340
+It compounds over time against your objectives, not some generic
+
+NOTE Confidence: 0.937917172908783
+
+00:15:56.407 --> 00:15:57.079
+benchmark.
+
+NOTE Confidence: 0.9074836373329163
+
+00:15:59.560 --> 00:16:03.418
+OK, so here's a real world example that's really exciting
+
+NOTE Confidence: 0.9074836373329163
+
+00:16:03.486 --> 00:16:03.959
+for us.
+
+NOTE Confidence: 0.8783690929412842
+
+00:16:04.320 --> 00:16:08.363
+Land of Lakes needed it to generate product quality reports
+
+NOTE Confidence: 0.8783690929412842
+
+00:16:08.432 --> 00:16:12.887
+from tasting panel discussions, so we Frontier tuned Mai thinking
+
+NOTE Confidence: 0.8783690929412842
+
+00:16:12.955 --> 00:16:16.039
+1 flash on that specific task and the result?
+
+NOTE Confidence: 0.942823588848114
+
+00:16:16.320 --> 00:16:21.443
+89.3% quality score, which is higher than all Frontier models
+
+NOTE Confidence: 0.942823588848114
+
+00:16:21.527 --> 00:16:23.879
+and 10X more cost efficient.
+
+NOTE Confidence: 0.9321472644805908
+
+00:16:24.120 --> 00:16:26.720
+So higher quality, 10X more efficient.
+
+NOTE Confidence: 0.9675601720809937
+
+00:16:26.800 --> 00:16:27.920
+What could be better than that?
+
+NOTE Confidence: 0.9659817218780518
+
+00:16:29.200 --> 00:16:31.526
+And that's not a small model being a big one
+
+NOTE Confidence: 0.9659817218780518
+
+00:16:31.579 --> 00:16:32.319
+on a toy task.
+
+NOTE Confidence: 0.8474830985069275
+
+00:16:32.480 --> 00:16:35.906
+That's a tuned model beating the best generalists on a
+
+NOTE Confidence: 0.8474830985069275
+
+00:16:35.970 --> 00:16:39.079
+real business workflow at a fraction of the cost.
+
+NOTE Confidence: 0.9560415148735046
+
+00:16:39.840 --> 00:16:41.739
+This is just a taste of what you can achieve
+
+NOTE Confidence: 0.9560415148735046
+
+00:16:41.782 --> 00:16:44.545
+with Microsoft Frontier Tuning, and we're really excited for you
+
+NOTE Confidence: 0.9560415148735046
+
+00:16:44.588 --> 00:16:45.840
+guys to get your hands on it.
+
+NOTE Confidence: 0.9129917621612549
+
+00:16:48.560 --> 00:16:51.154
+All right, so across all of our new models and
+
+NOTE Confidence: 0.9129917621612549
+
+00:16:51.210 --> 00:16:54.200
+Frontier tuning, we can't wait to see what you built.
+
+NOTE Confidence: 0.8634233474731445
+
+00:16:54.560 --> 00:16:57.747
+Image 25, Voice 2, Transcribe 1.5 are all live in
+
+NOTE Confidence: 0.8634233474731445
+
+00:16:57.813 --> 00:17:01.196
+Foundry today and also available to play with on our
+
+NOTE Confidence: 0.8634233474731445
+
+00:17:01.261 --> 00:17:05.359
+Mai Playground website, which again works on your mobile phone.
+
+NOTE Confidence: 0.9237609505653381
+
+00:17:05.600 --> 00:17:08.259
+If you're bored a little bit later tonight, Thinking 1
+
+NOTE Confidence: 0.9237609505653381
+
+00:17:08.308 --> 00:17:10.377
+is live on Foundry as well for a couple of
+
+NOTE Confidence: 0.9237609505653381
+
+00:17:10.426 --> 00:17:13.480
+private preview customers and we'll be expanding it very soon.
+
+NOTE Confidence: 0.9420230984687805
+
+00:17:13.760 --> 00:17:16.842
+And if you're interested in testing it, please sign up
+
+NOTE Confidence: 0.9420230984687805
+
+00:17:16.899 --> 00:17:19.867
+on the Foundry website and code 1 Flash is available
+
+NOTE Confidence: 0.9420230984687805
+
+00:17:19.924 --> 00:17:22.778
+right now in VS Code, so definitely check that out
+
+NOTE Confidence: 0.9420230984687805
+
+00:17:22.835 --> 00:17:24.320
+and send us your feedback.
+
+NOTE Confidence: 0.8794882893562317
+
+00:17:25.520 --> 00:17:28.995
+All of the models will be available also across base
+
+NOTE Confidence: 0.8794882893562317
+
+00:17:29.061 --> 00:17:30.999
+10 open router and fireworks.
+
+NOTE Confidence: 0.9649240374565125
+
+00:17:31.200 --> 00:17:33.000
+So if you use any of those, you're in luck.
+
+NOTE Confidence: 0.9340670704841614
+
+00:17:34.240 --> 00:17:37.260
+You can learn about all this stuff either on the
+
+NOTE Confidence: 0.9340670704841614
+
+00:17:37.323 --> 00:17:41.161
+Foundry website or Microsoft dot AI, which has everything you
+
+NOTE Confidence: 0.9340670704841614
+
+00:17:41.224 --> 00:17:44.999
+need from model cards to API documentation and also pricing.
+
+NOTE Confidence: 0.9339269399642944
+
+00:17:47.880 --> 00:17:49.400
+So that's it, short and sweet.
+
+NOTE Confidence: 0.9747546911239624
+
+00:17:49.880 --> 00:17:51.360
+Thank you so much for coming.
+
+NOTE Confidence: 0.9533168077468872
+
+00:17:51.359 --> 00:17:53.551
+And the team is here all week and you can
+
+NOTE Confidence: 0.9533168077468872
+
+00:17:53.604 --> 00:17:56.224
+see we have still a couple of sessions left later
+
+NOTE Confidence: 0.9533168077468872
+
+00:17:56.277 --> 00:17:57.399
+tonight and tomorrow.
+
+NOTE Confidence: 0.9173892736434937
+
+00:17:58.080 --> 00:17:59.720
+Definitely swing by the demo booth.
+
+NOTE Confidence: 0.9385239481925964
+
+00:18:00.000 --> 00:18:03.282
+And please send us your feedback either through any of
+
+NOTE Confidence: 0.9385239481925964
+
+00:18:03.342 --> 00:18:04.680
+these social channels.
+
+NOTE Confidence: 0.8378046751022339
+
+00:18:05.600 --> 00:18:08.400
+And please follow us on these as well.
+
+NOTE Confidence: 0.9416598081588745
+
+00:18:08.440 --> 00:18:10.661
+We're just getting started as a lab and we have
+
+NOTE Confidence: 0.9416598081588745
+
+00:18:10.709 --> 00:18:11.559
+much more to come.
+
+NOTE Confidence: 0.8713682889938354
+
+00:18:11.920 --> 00:18:13.040
+So thank you so much.
+

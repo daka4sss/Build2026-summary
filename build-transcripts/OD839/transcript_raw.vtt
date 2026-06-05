@@ -1,0 +1,1804 @@
+WEBVTT
+
+00:00:01.650 --> 00:00:02.640
+INBAL SAGIV: Hi, everyone.
+
+00:00:02.640 --> 00:00:06.240
+My name is Inbal Sagiv, and
+I'm Principal Product Manager
+
+00:00:06.240 --> 00:00:11.760
+at Microsoft, working mainly
+on AI that runs locally.
+
+00:00:11.760 --> 00:00:15.630
+The session today is going to
+focus on extending Foundry Local
+
+00:00:15.630 --> 00:00:18.720
+for enterprise and
+disconnected environments.
+
+00:00:18.720 --> 00:00:21.840
+I'm going to walk you through
+some context from the market,
+
+00:00:21.840 --> 00:00:25.230
+then I'll speak through the AI
+offering, the model offering,
+
+00:00:25.230 --> 00:00:30.100
+the agent framework, and we'll
+close with some video agents.
+
+00:00:31.680 --> 00:00:33.810
+Let me start with
+the big picture.
+
+00:00:33.810 --> 00:00:38.670
+We're in a once-in-a-generation
+platform shift from applications
+
+00:00:38.670 --> 00:00:43.050
+to agentic AI as the
+operating layer.
+
+00:00:43.050 --> 00:00:45.420
+The data, as you see in
+that slide, is clear.
+
+00:00:45.420 --> 00:00:51.030
+We have 1.3 billion
+AI agents by 2028,
+
+00:00:51.030 --> 00:00:54.330
+which are automating
+end-to-end business processes.
+
+00:00:54.330 --> 00:00:59.250
+We see 82 percentages of
+organizations adopting agents
+
+00:00:59.250 --> 00:01:05.790
+in the next three years, moving
+from pilots to core workforce.
+
+00:01:05.790 --> 00:01:09.600
+And we see additional numbers
+that coming from our analysts.
+
+00:01:09.600 --> 00:01:12.090
+Bottom line, the takeaway
+is pretty simple.
+
+00:01:12.090 --> 00:01:15.300
+The organizations
+that operation --
+
+00:01:15.300 --> 00:01:19.950
+working today with some
+AI agent now need to move
+
+00:01:19.950 --> 00:01:22.530
+and define how the next decade
+
+00:01:22.530 --> 00:01:25.560
+of software is going
+to build and run.
+
+00:01:25.560 --> 00:01:32.490
+And everything is about agents
+and agentic capabilities.
+
+00:01:32.490 --> 00:01:36.900
+Now, let's see some of the
+scenarios that we hear
+
+00:01:36.900 --> 00:01:40.080
+from our customers because
+we want to ground everything
+
+00:01:40.080 --> 00:01:43.560
+that we ship with
+customer use cases.
+
+00:01:43.560 --> 00:01:46.860
+These are not optional
+design choices.
+
+00:01:46.860 --> 00:01:51.540
+These are hard constraints
+geopolitical risks,
+
+00:01:51.540 --> 00:01:55.920
+regulatory control, the need
+to operate through outages,
+
+00:01:55.920 --> 00:01:58.140
+the growing pressure to adopt AI
+
+00:01:58.140 --> 00:02:00.660
+without giving up
+on sovereignty.
+
+00:02:00.660 --> 00:02:04.140
+The bottom line here
+is that customer says
+
+00:02:04.140 --> 00:02:09.390
+that AI strategy has to work
+when actually things are break.
+
+00:02:09.390 --> 00:02:13.620
+This is not just when everything
+is running smoothly on cloud.
+
+00:02:13.620 --> 00:02:16.980
+Now you see here multiple type
+of use cases and scenario,
+
+00:02:16.980 --> 00:02:22.070
+but let me just pick
+two items here.
+
+00:02:22.070 --> 00:02:26.760
+One of these are actually
+the public safety.
+
+00:02:26.760 --> 00:02:30.210
+When you are running a
+command center or responding
+
+00:02:30.210 --> 00:02:33.180
+to a crisis, there is no
+tolerance for latency,
+
+00:02:33.180 --> 00:02:35.850
+for dependency, or for outages.
+
+00:02:35.850 --> 00:02:40.020
+AI needs to be operated fully
+disconnected while still
+
+00:02:40.020 --> 00:02:43.680
+delivering real-time situational
+awareness and decision support.
+
+00:02:43.680 --> 00:02:48.090
+No external calls, no data which
+has been sent to the cloud.
+
+00:02:48.090 --> 00:02:52.890
+If the network goes down,
+the system cannot goes down.
+
+00:02:52.890 --> 00:02:55.740
+We see it also from
+critical infrastructures
+
+00:02:55.740 --> 00:02:57.330
+like energy and utilities.
+
+00:02:57.330 --> 00:03:00.840
+These environments are
+distributed, often remote,
+
+00:03:00.840 --> 00:03:05.790
+and in these scenarios,
+connectivity is not guaranteed.
+
+00:03:05.790 --> 00:03:09.360
+Yet, they rely on AI for
+real-time monitoring,
+
+00:03:09.360 --> 00:03:13.020
+for diagnostics, and
+incident responses.
+
+00:03:13.020 --> 00:03:17.580
+If a substation or a rail
+system loses connectivity,
+
+00:03:17.580 --> 00:03:19.680
+operation does not.
+
+00:03:19.680 --> 00:03:22.650
+The AI must continue
+running locally safety
+
+00:03:22.650 --> 00:03:24.540
+and with compliance.
+
+00:03:24.540 --> 00:03:26.790
+So when you step back,
+this is the shift.
+
+00:03:26.790 --> 00:03:30.360
+AI is no longer just about
+performance or scale,
+
+00:03:30.360 --> 00:03:32.910
+but it's actually about
+resilience and control,
+
+00:03:32.910 --> 00:03:37.140
+and the ability to operate
+under these constraints.
+
+00:03:37.140 --> 00:03:41.730
+The organizations solving
+for these now are those ones
+
+00:03:41.730 --> 00:03:43.200
+that will actually be able
+
+00:03:43.200 --> 00:03:47.560
+to deploy the AI
+everywhere it matters.
+
+00:03:50.160 --> 00:03:55.170
+If we look at the portfolio that
+Microsoft offers, when it comes
+
+00:03:55.170 --> 00:03:58.800
+to sovereign cloud, this allow
+the customers the freedom
+
+00:03:58.800 --> 00:04:00.720
+to choose the right
+balance of control,
+
+00:04:00.720 --> 00:04:04.050
+capability, and autonomy.
+
+00:04:04.050 --> 00:04:05.760
+Sovereign AI is about control,
+
+00:04:05.760 --> 00:04:07.590
+not just about the
+location itself.
+
+00:04:07.590 --> 00:04:10.800
+So, in the middle, you see
+"sovereign private cloud,"
+
+00:04:10.800 --> 00:04:15.300
+which is a cloud environment,
+operated under full customer
+
+00:04:15.300 --> 00:04:17.850
+or national control,
+where data and the models
+
+00:04:17.850 --> 00:04:22.320
+and the operations remain
+within a defined regulatory
+
+00:04:22.320 --> 00:04:24.240
+or geographic boundaries.
+
+00:04:24.240 --> 00:04:28.260
+It combines the cloud
+capabilities with an isolated
+
+00:04:28.260 --> 00:04:31.590
+and compliant
+infrastructure, Azure Local,
+
+00:04:31.590 --> 00:04:35.880
+that can operate independently,
+ensuring the continuity,
+
+00:04:35.880 --> 00:04:38.070
+the control, and
+the resilience even
+
+00:04:38.070 --> 00:04:42.930
+without external cloud
+connectivity, as I mentioned.
+
+00:04:42.930 --> 00:04:47.130
+Now, we're focusing on this
+context, before I'll dive
+
+00:04:47.130 --> 00:04:51.630
+into the entire AI offering,
+it's very important
+
+00:04:51.630 --> 00:04:57.510
+to understand what is Azure
+Local and why we actually run
+
+00:04:57.510 --> 00:05:01.140
+on that Azure Local
+infrastructure.
+
+00:05:01.140 --> 00:05:04.470
+So Azure Local is not new.
+
+00:05:04.470 --> 00:05:07.950
+We're actually GA on both
+offering that is running
+
+00:05:07.950 --> 00:05:10.500
+on a connected and disconnected,
+
+00:05:10.500 --> 00:05:14.010
+fully disconnected
+sovereign use cases.
+
+00:05:14.010 --> 00:05:15.810
+And this is actually
+the foundation
+
+00:05:15.810 --> 00:05:17.040
+that makes the sovereign
+
+00:05:17.040 --> 00:05:19.740
+and enterprise AI
+possible on premises.
+
+00:05:19.740 --> 00:05:21.420
+It's not just a server.
+
+00:05:21.420 --> 00:05:27.210
+It's a proposed built-in
+AI-optimized infrastructure
+
+00:05:27.210 --> 00:05:30.930
+platform that designed to run
+the full Foundry Local stack.
+
+00:05:30.930 --> 00:05:33.210
+I'll speak through
+this in a minute.
+
+00:05:33.210 --> 00:05:36.450
+And when I refer to Foundry
+Local, I really refer
+
+00:05:36.450 --> 00:05:41.850
+from models to inferencing to
+agentic workflows entirely,
+
+00:05:41.850 --> 00:05:45.720
+where within the
+customer-own environment.
+
+00:05:45.720 --> 00:05:47.040
+Look at the hardware layer.
+
+00:05:47.040 --> 00:05:51.570
+So Azure Local delivers AI
+optimized hardware configuration
+
+00:05:51.570 --> 00:05:54.750
+that spanning across
+CPU, NPU, and GPU.
+
+00:05:54.750 --> 00:05:59.190
+It's validated and
+certified to run a set
+
+00:05:59.190 --> 00:06:02.610
+of Foundry workloads
+out of the box.
+
+00:06:02.610 --> 00:06:04.560
+When you need a
+single-node inferencing
+
+00:06:04.560 --> 00:06:07.680
+or a lightweight model or
+a multi-node GPU cluster
+
+00:06:07.680 --> 00:06:09.420
+for high-performance
+generative AI,
+
+00:06:09.420 --> 00:06:11.430
+then the hardware
+is pre-validated
+
+00:06:11.430 --> 00:06:14.430
+so customers can deploy
+with a confidence
+
+00:06:14.430 --> 00:06:19.830
+and without lengthy
+qualification cycles.
+
+00:06:19.830 --> 00:06:22.980
+Now, actually, everything
+when we talk in the context
+
+00:06:22.980 --> 00:06:26.160
+of AI runs on Kubernetes
+native operation.
+
+00:06:26.160 --> 00:06:28.740
+The platform runs
+Arc-enabled Kubernetes,
+
+00:06:28.740 --> 00:06:31.380
+which means AI workloads
+are deployed and scaled
+
+00:06:31.380 --> 00:06:36.300
+and managed using the same
+declarative operator-based
+
+00:06:36.300 --> 00:06:40.560
+approach that IT
+teams already know
+
+00:06:40.560 --> 00:06:44.310
+for their containerized
+application.
+
+00:06:44.310 --> 00:06:47.730
+And Foundry Local has been
+installed as an Arc extension.
+
+00:06:47.730 --> 00:06:51.690
+No custom orchestration
+or a proprietary tooling.
+
+00:06:51.690 --> 00:06:53.340
+If your team knows Kubernetes,
+
+00:06:53.340 --> 00:06:56.400
+they already know how
+to operate this one.
+
+00:06:56.400 --> 00:06:58.680
+I called out the connected
+and disconnected.
+
+00:06:58.680 --> 00:06:59.610
+It's very important.
+
+00:06:59.610 --> 00:07:04.980
+Azure Local is designed for the
+full spectrum of connectivity.
+
+00:07:04.980 --> 00:07:07.440
+In connected mode, it
+syncs model catalog
+
+00:07:07.440 --> 00:07:11.100
+and management policies from
+the cloud through Azure Arc.
+
+00:07:11.100 --> 00:07:14.040
+And in fully disconnected
+or air-gapped environment,
+
+00:07:14.040 --> 00:07:16.020
+the same infrastructure
+continues
+
+00:07:16.020 --> 00:07:17.280
+to operate autonomously.
+
+00:07:17.280 --> 00:07:20.550
+It means that models are cached
+locally and inference runs
+
+00:07:20.550 --> 00:07:23.310
+without any cloud dependency.
+
+00:07:23.310 --> 00:07:28.590
+And the operation teams actually
+retain the full control.
+
+00:07:28.590 --> 00:07:31.140
+Of course, it comes with a
+security and governance.
+
+00:07:31.140 --> 00:07:33.990
+So identity is handled
+through Microsoft Entra ID
+
+00:07:33.990 --> 00:07:39.720
+with the JWT validation and
+inference endpoints are secured
+
+00:07:39.720 --> 00:07:43.680
+with a TLS and API key or
+token-based authentication.
+
+00:07:43.680 --> 00:07:46.290
+This is the same identity
+and governance layer
+
+00:07:46.290 --> 00:07:50.640
+that customers use across
+their cloud estate.
+
+00:07:50.640 --> 00:07:53.760
+But we're just extended
+it to on-premises AI
+
+00:07:53.760 --> 00:07:56.100
+without any compromises.
+
+00:07:56.100 --> 00:07:58.950
+So Azure Local is not
+just about the hardware,
+
+00:07:58.950 --> 00:08:00.600
+not just about the
+infrastructure.
+
+00:08:00.600 --> 00:08:05.160
+It's the AI ready platform that
+brings the Foundry capabilities
+
+00:08:05.160 --> 00:08:07.590
+from the cloud to
+the enterprise edge
+
+00:08:07.590 --> 00:08:09.300
+with a pre-validated hardware,
+
+00:08:09.300 --> 00:08:11.610
+with a Kubernetes
+native operation,
+
+00:08:11.610 --> 00:08:16.680
+as well as the security
+that I was calling out.
+
+00:08:16.680 --> 00:08:18.270
+Now, I mentioned Foundry.
+
+00:08:18.270 --> 00:08:19.710
+So everybody knows
+
+00:08:19.710 --> 00:08:24.210
+that Microsoft has the
+out-of-the-box offering
+
+00:08:24.210 --> 00:08:27.570
+to build agent on cloud,
+on our public cloud.
+
+00:08:27.570 --> 00:08:29.670
+That's the Microsoft Foundry.
+
+00:08:29.670 --> 00:08:32.760
+And on the right
+side of the screen,
+
+00:08:32.760 --> 00:08:37.110
+we have our on-device
+inferencing offering.
+
+00:08:37.110 --> 00:08:42.120
+It's an SDK that optimized for
+Windows and Mac OS and Android.
+
+00:08:42.120 --> 00:08:45.000
+Now, what we're introducing
+today and announcing
+
+00:08:45.000 --> 00:08:48.540
+in a public preview is
+Foundry Local that runs
+
+00:08:48.540 --> 00:08:51.330
+on the infrastructure
+that I mentioned before,
+
+00:08:51.330 --> 00:08:53.700
+on Foundry Local
+for both connected
+
+00:08:53.700 --> 00:08:57.480
+and disconnected scenarios for
+single-node and multi-node
+
+00:08:57.480 --> 00:09:01.950
+across the different form
+factors of Azure Local.
+
+00:09:01.950 --> 00:09:06.660
+Now, today, we're happy to
+announce three capabilities
+
+00:09:06.660 --> 00:09:09.210
+when we say Foundry Local.
+
+00:09:09.210 --> 00:09:11.550
+On February this year,
+
+00:09:11.550 --> 00:09:14.340
+we've already announced
+the availability
+
+00:09:14.340 --> 00:09:18.480
+of Foundry Local model catalog
+on a single-node deployment.
+
+00:09:18.480 --> 00:09:21.420
+That was good for
+those customers
+
+00:09:21.420 --> 00:09:24.630
+that has ONNX inferencing needs
+
+00:09:24.630 --> 00:09:26.790
+and single node is
+sufficient for them.
+
+00:09:26.790 --> 00:09:29.490
+But those that really
+needs to scale and run
+
+00:09:29.490 --> 00:09:32.340
+across multi-node
+now can benefit
+
+00:09:32.340 --> 00:09:35.580
+from Foundry Local
+model catalog,
+
+00:09:35.580 --> 00:09:38.190
+as well as inferencing
+capabilities.
+
+00:09:38.190 --> 00:09:40.260
+So that is one of
+our announcements.
+
+00:09:40.260 --> 00:09:42.660
+The second one is
+around knowledge.
+
+00:09:42.660 --> 00:09:46.680
+We're happy to refresh
+our RAG offering.
+
+00:09:46.680 --> 00:09:49.920
+That's a local RAG
+offering that helps you
+
+00:09:49.920 --> 00:09:52.980
+to manage your knowledge
+in the organization,
+
+00:09:52.980 --> 00:09:56.340
+and we will show you how it's
+going to look like in a minute.
+
+00:09:56.340 --> 00:09:57.720
+As well as some tools.
+
+00:09:57.720 --> 00:09:59.640
+Now what tools means.
+
+00:09:59.640 --> 00:10:05.490
+It means that if you have a
+custom MCP, that you would
+
+00:10:05.490 --> 00:10:10.470
+like to connect it to your local
+sources, then now it's possible
+
+00:10:10.470 --> 00:10:16.260
+to do the mixture of choosing
+the right model using RAG
+
+00:10:16.260 --> 00:10:20.430
+capabilities and connect
+it through custom MCPs,
+
+00:10:20.430 --> 00:10:23.520
+and also other local tools
+that you might have.
+
+00:10:23.520 --> 00:10:25.770
+So the combination
+can come together,
+
+00:10:25.770 --> 00:10:29.250
+run on an Arc-enabled
+Kubernetes environment
+
+00:10:29.250 --> 00:10:33.480
+across the different form
+factors of Azure Local,
+
+00:10:33.480 --> 00:10:36.870
+from single-node to
+multi-node deployment.
+
+00:10:36.870 --> 00:10:39.330
+Which scenarios do
+we enable by that?
+
+00:10:39.330 --> 00:10:41.610
+So let's start to
+look at the models.
+
+00:10:41.610 --> 00:10:44.370
+From left to right, you see
+that there is now option
+
+00:10:44.370 --> 00:10:47.130
+to discover and deploy models.
+
+00:10:47.130 --> 00:10:48.570
+There is a catalog of models
+
+00:10:48.570 --> 00:10:50.490
+which are curated
+for those scenarios.
+
+00:10:50.490 --> 00:10:52.980
+And there is also an option
+to bring your own model.
+
+00:10:52.980 --> 00:10:58.680
+So if you have a container
+with models that you choose
+
+00:10:58.680 --> 00:11:01.050
+from Hugging Face, let
+me pick an example.
+
+00:11:01.050 --> 00:11:04.440
+Let's say YOLO 10 or any
+predictive or generative AI,
+
+00:11:04.440 --> 00:11:08.370
+you can package this together
+and mix it, and merge it
+
+00:11:08.370 --> 00:11:12.210
+with your own OCI registry.
+
+00:11:12.210 --> 00:11:16.260
+And we provide you the option to
+serve these models, whether it's
+
+00:11:16.260 --> 00:11:19.770
+with a vLLM or with
+an ONNX Runtime.
+
+00:11:19.770 --> 00:11:23.340
+On the agent and tool size, we
+have now the option to connect
+
+00:11:23.340 --> 00:11:27.240
+to your local data with
+those MCPs that I mentioned.
+
+00:11:27.240 --> 00:11:30.630
+We bring you a
+reference application
+
+00:11:30.630 --> 00:11:34.860
+so you can build your local
+chat experience, and of course,
+
+00:11:34.860 --> 00:11:39.330
+it comes with an option
+also to build agents
+
+00:11:39.330 --> 00:11:41.550
+that can run locally and connect
+
+00:11:41.550 --> 00:11:44.790
+with that entire
+platform offering.
+
+00:11:44.790 --> 00:11:50.100
+So today, we are announcing
+Foundry Local model offering.
+
+00:11:50.100 --> 00:11:53.430
+It means that we are
+expanding Foundry Local
+
+00:11:53.430 --> 00:11:58.290
+to include more community as
+well as proprietary models.
+
+00:11:58.290 --> 00:12:03.750
+And all these are validated
+and run on Azure Local
+
+00:12:03.750 --> 00:12:06.420
+for both connected and
+disconnected scenarios.
+
+00:12:06.420 --> 00:12:09.330
+Now, on the model
+platform offering,
+
+00:12:09.330 --> 00:12:12.030
+this is where the entire
+stack is being managed
+
+00:12:12.030 --> 00:12:13.560
+by the customers.
+
+00:12:13.560 --> 00:12:17.370
+This is where we bring the
+complete Foundry Local community
+
+00:12:17.370 --> 00:12:20.730
+models, the open source
+models, and making sure
+
+00:12:20.730 --> 00:12:22.260
+that these models can run
+
+00:12:22.260 --> 00:12:26.430
+through the different form
+factors or sizes of Azure Local
+
+00:12:26.430 --> 00:12:29.940
+from a single-node deployment
+to multi-node deployment.
+
+00:12:29.940 --> 00:12:34.200
+And it comes with a pre-built
+inferencing capabilities,
+
+00:12:34.200 --> 00:12:38.370
+like ONNX Runtime for single
+node deployment and vLLM
+
+00:12:38.370 --> 00:12:40.740
+for multi-node deployment.
+
+00:12:40.740 --> 00:12:43.650
+And this one works
+for both connected
+
+00:12:43.650 --> 00:12:46.350
+and fully disconnected
+scenarios.
+
+00:12:46.350 --> 00:12:54.180
+The other option where we bring
+the customers the different
+
+00:12:54.180 --> 00:12:59.070
+Foundry Local model called
+model as a service.
+
+00:12:59.070 --> 00:13:02.010
+This is Microsoft-managed
+offering,
+
+00:13:02.010 --> 00:13:04.800
+but that's the approach
+for the customers really
+
+00:13:04.800 --> 00:13:08.010
+to get an access to
+their frontier models.
+
+00:13:08.010 --> 00:13:10.950
+We are working with
+Microsoft partners
+
+00:13:10.950 --> 00:13:13.530
+to bring the
+proprietary IP models,
+
+00:13:13.530 --> 00:13:18.630
+so think about the Mistral and
+OpenAI and others, to customers
+
+00:13:18.630 --> 00:13:20.610
+with the most
+sensitive workloads
+
+00:13:20.610 --> 00:13:24.480
+where they cannot
+access the cloud.
+
+00:13:24.480 --> 00:13:27.660
+We're still partnering with
+some of these vendors,
+
+00:13:27.660 --> 00:13:31.110
+and there are specific
+eligibility criteria,
+
+00:13:31.110 --> 00:13:33.510
+so it's not available
+for everybody.
+
+00:13:33.510 --> 00:13:36.750
+Our customers are having
+some geopolitical
+
+00:13:36.750 --> 00:13:39.510
+and sovereign-driven
+model restrictions.
+
+00:13:39.510 --> 00:13:43.350
+So, for that purpose, we're
+shipping also the option
+
+00:13:43.350 --> 00:13:47.790
+of model as a service offering.
+
+00:13:47.790 --> 00:13:53.760
+This is driven, for example,
+by requesting EU only LLMs
+
+00:13:53.760 --> 00:13:58.380
+or geopolitical tension
+or regulatory pressure.
+
+00:13:58.380 --> 00:14:02.430
+Some customers has concern
+around foreign jurisdiction
+
+00:14:02.430 --> 00:14:08.880
+and external access and they
+prefer a long-term strategic
+
+00:14:08.880 --> 00:14:11.070
+autonomy, fully disconnected.
+
+00:14:11.070 --> 00:14:13.830
+So this is the purpose
+of having a model
+
+00:14:13.830 --> 00:14:18.730
+as a service option
+for those customers.
+
+00:14:19.830 --> 00:14:22.440
+And both are valid.
+
+00:14:22.440 --> 00:14:24.780
+It means that -- at the
+end, there is a link
+
+00:14:24.780 --> 00:14:28.650
+if you're interested either in
+model as a platform or model
+
+00:14:28.650 --> 00:14:33.030
+as a service, just fill in the
+form, and you can get access
+
+00:14:33.030 --> 00:14:36.960
+and support from
+our product groups.
+
+00:14:36.960 --> 00:14:41.040
+Now, you see here how things
+are being structured together.
+
+00:14:41.040 --> 00:14:43.530
+So on the infra layer,
+we have Azure Local.
+
+00:14:43.530 --> 00:14:46.260
+On top of it, we have
+the Kubernetes clusters.
+
+00:14:46.260 --> 00:14:50.190
+Then there is the inference
+model, which could be ONNX
+
+00:14:50.190 --> 00:14:53.160
+for single node, vLLM, what
+we are announcing today,
+
+00:14:53.160 --> 00:14:54.600
+for multi-node deployment.
+
+00:14:54.600 --> 00:14:56.790
+And on top of it, we have
+some community model.
+
+00:14:56.790 --> 00:14:58.560
+You see here, just
+a partial list.
+
+00:14:58.560 --> 00:15:03.780
+We have 71 different
+models in the catalog.
+
+00:15:03.780 --> 00:15:06.600
+But a customer would need
+to choose if the approach
+
+00:15:06.600 --> 00:15:10.530
+to manage these models is
+through the platform itself
+
+00:15:10.530 --> 00:15:13.620
+or through the model as a
+service that allows also
+
+00:15:13.620 --> 00:15:16.710
+to get access to
+those frontier models
+
+00:15:16.710 --> 00:15:19.170
+that meets the
+eligibility criteria
+
+00:15:19.170 --> 00:15:21.030
+that I mentioned before.
+
+00:15:21.030 --> 00:15:25.410
+So, in order to do that,
+you see here, a screenshot
+
+00:15:25.410 --> 00:15:32.190
+from Azure Local with the option
+now to get Foundry Local,
+
+00:15:32.190 --> 00:15:34.350
+everything that I've
+described so far,
+
+00:15:34.350 --> 00:15:37.140
+so that the IT can now
+decide to deploy this
+
+00:15:37.140 --> 00:15:43.440
+and make it available
+for the developers.
+
+00:15:43.440 --> 00:15:48.390
+With that model offering that we
+are proposing today in preview,
+
+00:15:48.390 --> 00:15:53.070
+I'm explicitly calling out
+the inference layer support,
+
+00:15:53.070 --> 00:15:56.460
+which is generative
+AI via ONNX Runtime
+
+00:15:56.460 --> 00:15:58.500
+for single-node deployment,
+
+00:15:58.500 --> 00:16:02.880
+plus vLLM for multi-node
+high-performance serving,
+
+00:16:02.880 --> 00:16:06.300
+plus predictive AI workloads
+through ONNX Runtime.
+
+00:16:06.300 --> 00:16:09.660
+So all models, whether it's
+from the Foundry catalog,
+
+00:16:09.660 --> 00:16:11.250
+from the partner providers,
+
+00:16:11.250 --> 00:16:14.130
+or from the customer own
+bring your own model,
+
+00:16:14.130 --> 00:16:17.100
+can run through one
+consistent runtime
+
+00:16:17.100 --> 00:16:21.640
+with an OpenAI-compatible
+REST endpoints.
+
+00:16:22.920 --> 00:16:27.480
+Key part of what we're actually
+enabling today is the breadth
+
+00:16:27.480 --> 00:16:29.220
+of model catalog.
+
+00:16:29.220 --> 00:16:34.140
+Customers are not locked into
+a single model strategy.
+
+00:16:34.140 --> 00:16:37.320
+They can choose across
+proprietary, open weight,
+
+00:16:37.320 --> 00:16:40.950
+and specialized models
+depending on the use case
+
+00:16:40.950 --> 00:16:44.820
+and the performance need and
+the regulation constraints.
+
+00:16:44.820 --> 00:16:49.720
+It means that using frontier
+models for reasoning
+
+00:16:51.510 --> 00:16:54.600
+or smaller efficient
+models for edge
+
+00:16:54.600 --> 00:16:57.990
+and disconnected environments
+is now possible.
+
+00:16:57.990 --> 00:17:00.510
+Customer can benefit from
+a domain-tuned model
+
+00:17:00.510 --> 00:17:04.560
+for specific workloads and
+all within the same platform.
+
+00:17:04.560 --> 00:17:08.370
+It results with flexibility
+without compromises
+
+00:17:08.370 --> 00:17:11.220
+on the right model,
+on the right place
+
+00:17:11.220 --> 00:17:15.300
+under full customer control.
+
+00:17:15.300 --> 00:17:22.380
+Now, let me walk you through
+some technical demo,
+
+00:17:22.380 --> 00:17:25.140
+so you can see how the things
+are coming up together.
+
+00:17:25.140 --> 00:17:30.630
+So that's just a screenshot
+from Microsoft Azure.
+
+00:17:30.630 --> 00:17:34.890
+And if we'll go here to
+"Settings," to "Extension,"
+
+00:17:34.890 --> 00:17:37.770
+and I'll click on the plus,
+there is a new option:
+
+00:17:37.770 --> 00:17:40.020
+Foundry Local on Azure Local.
+
+00:17:40.020 --> 00:17:42.900
+So I'll click on creation
+of that extension.
+
+00:17:42.900 --> 00:17:46.830
+I will fill in the right
+configuration parameters,
+
+00:17:46.830 --> 00:17:49.530
+review, and create this.
+
+00:17:49.530 --> 00:17:52.560
+That's all I need to
+do as an IT in order
+
+00:17:52.560 --> 00:17:56.100
+to get it available
+on Azure Local.
+
+00:17:56.100 --> 00:18:00.180
+Now, let's see how things
+are coming up together.
+
+00:18:00.180 --> 00:18:01.650
+I'm not making assumption
+
+00:18:01.650 --> 00:18:06.440
+that developers works
+with interfaces.
+
+00:18:06.440 --> 00:18:10.400
+Sometimes they prefer to work
+with either SDK, CLI, or API.
+
+00:18:10.400 --> 00:18:13.070
+So everything that we're
+shipping is available
+
+00:18:13.070 --> 00:18:15.290
+through these different options.
+
+00:18:15.290 --> 00:18:17.430
+Now, here is an example
+
+00:18:17.430 --> 00:18:21.450
+of how we're doing
+the model deployment.
+
+00:18:21.450 --> 00:18:23.100
+It's from PowerShell.
+
+00:18:23.100 --> 00:18:26.040
+So you see here that we're
+fetching the access token
+
+00:18:26.040 --> 00:18:31.920
+to be able to run those models.
+
+00:18:31.920 --> 00:18:35.250
+Here, what I see as part of
+the responses is the list
+
+00:18:35.250 --> 00:18:38.310
+of all the models
+which are available.
+
+00:18:38.310 --> 00:18:42.630
+Now I'm running another
+command in order to deploy one
+
+00:18:42.630 --> 00:18:43.950
+of the selected models.
+
+00:18:43.950 --> 00:18:46.320
+Let me just pause
+here and show you.
+
+00:18:46.320 --> 00:18:48.780
+I want to call it
+like gpt-oss-vllm.
+
+00:18:48.780 --> 00:18:51.720
+That's just a name that I
+want to put for the model.
+
+00:18:51.720 --> 00:18:55.620
+And in the body, I put here the
+model that I would like to run.
+
+00:18:55.620 --> 00:18:59.130
+In this case, it's
+gpt-opensource-20b.
+
+00:18:59.130 --> 00:19:03.330
+And I can also mention which
+inferencing I would like to use.
+
+00:19:03.330 --> 00:19:05.730
+And as a response, what
+actually happened here,
+
+00:19:05.730 --> 00:19:07.920
+you see here a POST
+request that says, "Oh,
+
+00:19:07.920 --> 00:19:09.390
+this one has been deployed."
+
+00:19:09.390 --> 00:19:12.840
+Now I want to do the same thing
+but with a Mistral model.
+
+00:19:12.840 --> 00:19:16.380
+So I'll just switch the
+body to Mistral 3b.
+
+00:19:16.380 --> 00:19:18.270
+And I'm running
+again a POST one.
+
+00:19:18.270 --> 00:19:20.370
+And as part of the response,
+
+00:19:20.370 --> 00:19:22.530
+this is actually
+the real deployment
+
+00:19:22.530 --> 00:19:27.600
+of these two selected
+models via a command line.
+
+00:19:27.600 --> 00:19:28.950
+Remember this, later on,
+
+00:19:28.950 --> 00:19:33.090
+I'm going to use it
+in my next demos.
+
+00:19:33.090 --> 00:19:36.060
+So, so far, we spoke
+about the model offering
+
+00:19:36.060 --> 00:19:38.550
+with the two options, and I
+showed you how it's going to --
+
+00:19:38.550 --> 00:19:42.050
+how things are being
+available for the IP --
+
+00:19:42.050 --> 00:19:45.170
+for the IT persona, as
+well as for the developer.
+
+00:19:45.170 --> 00:19:48.950
+Now look at the agent and
+tools with Foundry Local.
+
+00:19:48.950 --> 00:19:52.010
+So what you see here
+is the second part
+
+00:19:52.010 --> 00:19:55.140
+where we are enabling
+the developer also
+
+00:19:55.140 --> 00:19:59.040
+to build his own AI application
+with the deployed models.
+
+00:19:59.040 --> 00:20:01.290
+So in order to be
+able to do that,
+
+00:20:01.290 --> 00:20:04.700
+we provide a solution templates.
+
+00:20:04.700 --> 00:20:08.120
+Think about it as a code
+samples which are available now
+
+00:20:08.120 --> 00:20:10.790
+in Microsoft Foundry
+solution templates.
+
+00:20:10.790 --> 00:20:12.950
+So we have two offerings there.
+
+00:20:12.950 --> 00:20:14.910
+One is a chat UI.
+
+00:20:14.910 --> 00:20:19.350
+It's really a standard chat
+experience end-to-end,
+
+00:20:19.350 --> 00:20:24.420
+that is -- can be
+connected to an agent.
+
+00:20:24.420 --> 00:20:27.150
+And this agent can be
+created by the developer.
+
+00:20:27.150 --> 00:20:28.800
+And as part of this agent,
+
+00:20:28.800 --> 00:20:31.980
+you can use the deployed
+model on that cluster.
+
+00:20:31.980 --> 00:20:35.250
+There is also video agent
+just to show another example
+
+00:20:35.250 --> 00:20:37.640
+of use cases where, for example,
+
+00:20:37.640 --> 00:20:41.060
+content from CCTV
+cameras can be analyzed
+
+00:20:41.060 --> 00:20:43.670
+through a product
+named Video Indexer
+
+00:20:43.670 --> 00:20:47.750
+that again runs on Azure Local.
+
+00:20:47.750 --> 00:20:52.700
+We also, on the knowledge
+side, we also enable the --
+
+00:20:52.700 --> 00:20:56.960
+in the extension to use the
+agentic RAG capability.
+
+00:20:56.960 --> 00:21:02.090
+It means that you can really
+manage your local knowledge
+
+00:21:02.090 --> 00:21:04.820
+with a local chat UI,
+which has been connected
+
+00:21:04.820 --> 00:21:09.050
+to a local RAG logic behind
+the scenes that now also,
+
+00:21:09.050 --> 00:21:11.090
+for the first time,
+can take action.
+
+00:21:11.090 --> 00:21:12.920
+This is one of the
+preview announcements
+
+00:21:12.920 --> 00:21:14.840
+that we are making today.
+
+00:21:14.840 --> 00:21:19.820
+And there is an option either
+to build your own custom MCP
+
+00:21:19.820 --> 00:21:25.340
+or simply to use one of
+the out-of-the-box MCPs
+
+00:21:25.340 --> 00:21:26.750
+that we have in the catalog.
+
+00:21:26.750 --> 00:21:30.440
+With time, one of the things
+that we are looking at you
+
+00:21:30.440 --> 00:21:35.130
+to come back to us is
+which MCPs do you need?
+
+00:21:35.130 --> 00:21:37.860
+Which local sources you
+are interested to connect
+
+00:21:37.860 --> 00:21:41.820
+to your local environment?
+
+00:21:41.820 --> 00:21:44.070
+And then we can expand
+the catalog based
+
+00:21:44.070 --> 00:21:48.210
+on the customer requirements
+and need as we go.
+
+00:21:48.210 --> 00:21:51.330
+So it's just a matter
+of allowing you
+
+00:21:51.330 --> 00:21:55.830
+to manage your knowledge
+through agentic RAG, reasoning,
+
+00:21:55.830 --> 00:21:58.830
+and grounding capabilities,
+as well as to be able
+
+00:21:58.830 --> 00:22:06.810
+to invoke some tooling and
+making some agentic flows
+
+00:22:06.810 --> 00:22:08.970
+that can run automatically.
+
+00:22:08.970 --> 00:22:12.000
+Now, here is just an example
+how things are being
+
+00:22:12.000 --> 00:22:12.990
+modeled together.
+
+00:22:12.990 --> 00:22:19.410
+So, at the top, you see
+the knowledge pipeline.
+
+00:22:19.410 --> 00:22:21.150
+When a user asks a question
+
+00:22:21.150 --> 00:22:24.930
+and then the agent
+first plans the query.
+
+00:22:24.930 --> 00:22:27.480
+It decides what to search for.
+
+00:22:27.480 --> 00:22:30.630
+Then it selects which
+knowledge sources to hit.
+
+00:22:30.630 --> 00:22:34.710
+And finally, it merge the
+result into a grounded answer.
+
+00:22:34.710 --> 00:22:37.200
+And here's the key part.
+
+00:22:37.200 --> 00:22:40.320
+This is iterative.
+
+00:22:40.320 --> 00:22:43.230
+I mean, you can run it in
+a couple of iterations.
+
+00:22:43.230 --> 00:22:45.090
+If the agent look at the results
+
+00:22:45.090 --> 00:22:48.660
+and decide doesn't have
+enough, then it loops back.
+
+00:22:48.660 --> 00:22:50.250
+It rewrites the queries.
+
+00:22:50.250 --> 00:22:51.480
+It expands the scope.
+
+00:22:51.480 --> 00:22:52.710
+It retrieves again.
+
+00:22:52.710 --> 00:22:54.930
+That's what makes
+it an agentic RAG.
+
+00:22:54.930 --> 00:22:59.370
+And it keeps going until it has
+a high confidence evidence,
+
+00:22:59.370 --> 00:23:02.280
+or it hits the
+configured effort limit.
+
+00:23:02.280 --> 00:23:03.750
+All of this runs locally.
+
+00:23:03.750 --> 00:23:05.430
+No cloud calls.
+
+00:23:05.430 --> 00:23:10.720
+Every response is traceable
+back to the source document.
+
+00:23:11.850 --> 00:23:14.580
+What you see in the bottom
+is that we have two options
+
+00:23:14.580 --> 00:23:18.660
+of sources of tools
+that we are allowing.
+
+00:23:18.660 --> 00:23:22.470
+Either it's indexed
+or it's a remote.
+
+00:23:22.470 --> 00:23:24.660
+There is an explicit
+call out here
+
+00:23:24.660 --> 00:23:31.170
+for SharePoint Exchange Server
+as well as Exchange Server.
+
+00:23:31.170 --> 00:23:36.210
+Both are part of
+Microsoft 365 Local
+
+00:23:36.210 --> 00:23:38.640
+that can run on Azure Local.
+
+00:23:38.640 --> 00:23:44.070
+So now we are partnering
+and testing our POC.
+
+00:23:44.070 --> 00:23:46.680
+So if you are interested
+in these scenarios,
+
+00:23:46.680 --> 00:23:51.270
+we are welcoming you to
+register and try out the POC
+
+00:23:51.270 --> 00:23:57.450
+that we've built specifically,
+with these two capabilities,
+
+00:23:57.450 --> 00:24:00.940
+where we can read
+the local data.
+
+00:24:02.580 --> 00:24:07.620
+Now, how things are
+actually working together.
+
+00:24:07.620 --> 00:24:13.200
+In the middle, you see here the
+chat, the local chat experience,
+
+00:24:13.200 --> 00:24:17.580
+and the developer actually
+needs to build a local agent
+
+00:24:17.580 --> 00:24:20.100
+that can work with
+the deployed model,
+
+00:24:20.100 --> 00:24:23.100
+with the agentic RAG,
+and with those tools.
+
+00:24:23.100 --> 00:24:25.620
+So, in this case, I'm
+working with Mistral,
+
+00:24:25.620 --> 00:24:28.920
+and I just hit here a question.
+
+00:24:28.920 --> 00:24:31.830
+You see that there is an
+agent which has been --
+
+00:24:31.830 --> 00:24:36.660
+which has been connected to
+that particular implementation.
+
+00:24:36.660 --> 00:24:38.190
+And it show here the sources.
+
+00:24:38.190 --> 00:24:40.950
+So it says SharePoint
+and Exchange are toggled
+
+00:24:40.950 --> 00:24:45.900
+on because it comes with a
+pre-configured capability
+
+00:24:45.900 --> 00:24:48.270
+to connect to a local data.
+
+00:24:48.270 --> 00:24:51.690
+And every response here
+show me also the source.
+
+00:24:51.690 --> 00:24:55.350
+Where did I fetch the
+information from?
+
+00:24:55.350 --> 00:25:02.760
+So that really enables customers
+to run local chat capabilities
+
+00:25:02.760 --> 00:25:04.410
+with the deployed model.
+
+00:25:04.410 --> 00:25:06.930
+You see it says here Ministral.
+
+00:25:06.930 --> 00:25:11.010
+We don't need that strong model
+in that particular scenarios.
+
+00:25:11.010 --> 00:25:15.840
+But the good thing is that
+you can really now work
+
+00:25:15.840 --> 00:25:18.840
+with a drop-down menu and
+just to switch this as you do
+
+00:25:18.840 --> 00:25:22.440
+in other local chat experiences.
+
+00:25:22.440 --> 00:25:25.350
+Last but not least, I just
+mention another offering
+
+00:25:25.350 --> 00:25:29.070
+that we have for video analysis.
+
+00:25:29.070 --> 00:25:31.500
+So you can go to Foundry
+solution template
+
+00:25:31.500 --> 00:25:35.580
+and for the first time
+download the code sample,
+
+00:25:35.580 --> 00:25:41.970
+also for video analysis,
+and try it out yourself.
+
+00:25:41.970 --> 00:25:45.360
+Just like we -- I showed you
+with the local chat experience,
+
+00:25:45.360 --> 00:25:49.230
+you can do it also
+with a video agent.
+
+00:25:49.230 --> 00:25:52.410
+That can serve multiple
+type of scenarios,
+
+00:25:52.410 --> 00:25:55.690
+mainly for live video analysis.
+
+00:25:56.700 --> 00:25:59.280
+If you want to learn more,
+there is a link here
+
+00:25:59.280 --> 00:26:04.620
+where you can register to our
+preview that covers everything
+
+00:26:04.620 --> 00:26:07.200
+that I showed you so far.
+
+00:26:07.200 --> 00:26:09.600
+And then you can decide
+if you want to try
+
+00:26:09.600 --> 00:26:13.110
+out only the model offering
+or you want to expand it
+
+00:26:13.110 --> 00:26:16.830
+and also try the RAG and
+the local chat experience.
+
+00:26:16.830 --> 00:26:19.740
+That's available for
+customers that runs
+
+00:26:19.740 --> 00:26:23.100
+on Kubernetes on Azure Local.
+
+00:26:23.100 --> 00:26:25.500
+There is a great blog post
+
+00:26:25.500 --> 00:26:29.130
+that explains both
+technicalities and code samples.
+
+00:26:29.130 --> 00:26:34.200
+So feel free to just
+click here and learn more
+
+00:26:34.200 --> 00:26:37.620
+and download the code
+sample, and try it yourself.
+
+00:26:37.620 --> 00:26:43.500
+And, of course, documentation is
+also available for you to learn
+
+00:26:43.500 --> 00:26:46.680
+about the different models
+that we offer and in
+
+00:26:46.680 --> 00:26:50.730
+which scenarios to use what.
+
+00:26:50.730 --> 00:26:53.520
+In any chance that you would
+like to stay in touch,
+
+00:26:53.520 --> 00:26:55.170
+then feel free to reach out.
+
+00:26:55.170 --> 00:26:57.870
+We're looking at
+customers and developers
+
+00:26:57.870 --> 00:27:01.440
+that will give us feedback
+about the preview
+
+00:27:01.440 --> 00:27:03.690
+that we just announced today.
+
+00:27:03.690 --> 00:27:06.670
+And thank you so
+much for listening.

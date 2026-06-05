@@ -1,0 +1,4353 @@
+﻿WEBVTT
+
+00:00:00.030 --> 00:00:01.770
+Yina Arenas:
+Hello.
+
+00:00:01.770 --> 00:00:04.211
+Welcome to Building Smart AI
+
+00:00:04.223 --> 00:00:07.290
+Systems in Foundry,
+as everything
+
+00:00:07.290 --> 00:00:10.260
+in the world evolves around us.
+
+00:00:10.260 --> 00:00:12.780
+I'm Yina. I lead Product
+for Microsoft Foundry.
+
+00:00:12.780 --> 00:00:16.110
+And I'm joined today with
+Naomi, who does all the work
+
+00:00:16.110 --> 00:00:19.920
+for shipping all of the
+models in Microsoft Foundry.
+
+00:00:19.920 --> 00:00:22.830
+And in the next 45 minutes,
+we're going to talk
+
+00:00:22.830 --> 00:00:26.910
+about something that every
+team building with AI faces.
+
+00:00:26.910 --> 00:00:30.840
+You build the systems,
+and the landscape
+
+00:00:30.840 --> 00:00:32.280
+around you keeps evolving.
+
+00:00:32.280 --> 00:00:37.230
+The models, the tools, the set
+of capabilities around them,
+
+00:00:37.230 --> 00:00:40.190
+it's all shifting around you.
+
+00:00:40.190 --> 00:00:42.380
+And let's be honest, a year ago,
+
+00:00:42.380 --> 00:00:44.930
+building an AI app felt
+a lot more simple.
+
+00:00:44.930 --> 00:00:47.930
+You pick the model, you wire
+it up, and you ship it.
+
+00:00:47.930 --> 00:00:50.880
+But now you're no longer
+building just chat apps.
+
+00:00:50.880 --> 00:00:55.170
+You're full-on building agentic
+systems, long-running systems
+
+00:00:55.170 --> 00:00:58.290
+that have to
+continuously improve.
+
+00:00:58.290 --> 00:01:01.890
+And that is a little
+bit more challenging.
+
+00:01:01.890 --> 00:01:06.210
+And here's what I see every
+single developer face, run into.
+
+00:01:06.210 --> 00:01:09.690
+They have a hard time picking
+the right model for the task.
+
+00:01:09.690 --> 00:01:11.490
+There's a lot of
+models in the market.
+
+00:01:11.490 --> 00:01:13.590
+More keep coming
+every single day.
+
+00:01:13.590 --> 00:01:16.170
+The benchmarks look great on
+paper, but they don't tell you
+
+00:01:16.170 --> 00:01:19.020
+if their model is good
+for your scenario.
+
+00:01:19.020 --> 00:01:21.680
+And then the costs are really,
+really hard to predict.
+
+00:01:21.680 --> 00:01:25.160
+And then you can
+do some analysis
+
+00:01:25.160 --> 00:01:27.500
+when you're building it, but
+when you put it into production
+
+00:01:27.500 --> 00:01:29.510
+and see the bill, it's painful.
+
+00:01:29.510 --> 00:01:34.490
+Right? So, the moment
+that you have something
+
+00:01:34.490 --> 00:01:37.200
+that is fully built
+and out there,
+
+00:01:37.200 --> 00:01:39.330
+then the next model is
+in, the next tool is out,
+
+00:01:39.330 --> 00:01:41.340
+and all of these different
+things need to keep changing.
+
+00:01:41.340 --> 00:01:44.550
+And you have to continuously
+be building this system,
+
+00:01:44.550 --> 00:01:48.060
+and the landscape keeps
+moving around you.
+
+00:01:48.060 --> 00:01:52.560
+Now, what you want is a system
+that is simpler, that is better,
+
+00:01:52.560 --> 00:01:55.950
+that is more cost-effective, and
+that is scalable as you bring it
+
+00:01:55.950 --> 00:01:58.350
+into production, and that
+gives you the best outcome
+
+00:01:58.350 --> 00:01:59.790
+for your scenario.
+
+00:01:59.790 --> 00:02:01.860
+And today we're going to show
+you how you can actually get
+
+00:02:01.860 --> 00:02:06.330
+there using Microsoft Foundry
+as the underlying platform.
+
+00:02:06.330 --> 00:02:07.260
+What you need in order
+
+00:02:07.260 --> 00:02:10.230
+to get there is not just
+a better prompt system,
+
+00:02:10.230 --> 00:02:14.970
+or a newer model, or
+the latest MCP tool.
+
+00:02:14.970 --> 00:02:18.060
+What you need is a system that
+continuously improves over time
+
+00:02:18.060 --> 00:02:21.450
+and a platform that enables
+you all the way from building
+
+00:02:21.450 --> 00:02:23.930
+to governing and
+managing at scale.
+
+00:02:23.930 --> 00:02:27.650
+For that, we start with building
+with GitHub Copilot CLI,
+
+00:02:27.650 --> 00:02:29.276
+grounding with
+all of the sets of
+
+00:02:29.288 --> 00:02:30.830
+information that you might have
+
+00:02:30.830 --> 00:02:32.000
+within your organization,
+
+00:02:32.000 --> 00:02:35.940
+whether it is your
+productivity data in Work IQ,
+
+00:02:35.940 --> 00:02:40.080
+your structured data in
+Fabric IQ, all of the context
+
+00:02:40.080 --> 00:02:41.580
+and knowledge that you
+might want to bring
+
+00:02:41.580 --> 00:02:43.200
+to your agents using Foundry IQ,
+
+00:02:43.200 --> 00:02:45.810
+and all of the world's
+knowledge using Web IQ.
+
+00:02:45.810 --> 00:02:49.560
+Then running that in Foundry
+using Foundry-hosted agents,
+
+00:02:49.560 --> 00:02:52.980
+governing with A365, and then
+improving over time with a set
+
+00:02:52.980 --> 00:02:55.830
+of platform capabilities
+that Foundry offers.
+
+00:02:55.830 --> 00:02:57.540
+And that's where
+Foundry comes in.
+
+00:02:57.540 --> 00:03:02.040
+It's the platform that
+enables you to take models,
+
+00:03:02.040 --> 00:03:05.370
+agent service, all of the
+grounding information,
+
+00:03:05.370 --> 00:03:09.840
+the tools, the post-training
+capabilities, and bring that all
+
+00:03:09.840 --> 00:03:13.230
+to bear for you to
+leverage in your scenario.
+
+00:03:13.230 --> 00:03:14.610
+And the platform
+is fully governed
+
+00:03:14.610 --> 00:03:16.500
+for the entire
+agentic lifecycle,
+
+00:03:16.500 --> 00:03:18.420
+not just for running inferencing
+
+00:03:18.420 --> 00:03:21.570
+or for building a specific
+point-on solution.
+
+00:03:21.570 --> 00:03:23.940
+It's for you to be
+able to build, deploy,
+
+00:03:23.940 --> 00:03:25.230
+and operate at scale,
+
+00:03:25.230 --> 00:03:29.010
+and continuously improve
+your entire system.
+
+00:03:29.010 --> 00:03:32.520
+And this is an
+important mental shift.
+
+00:03:32.520 --> 00:03:35.220
+And if there's, I will say,
+one thing that you take
+
+00:03:35.220 --> 00:03:38.250
+out of this session
+today, it's how we need
+
+00:03:38.250 --> 00:03:43.230
+to evolve how we think about
+what was QA-ing our solutions.
+
+00:03:43.230 --> 00:03:45.540
+So as a developer, you used
+to think about I'll build it,
+
+00:03:45.540 --> 00:03:48.480
+and then I'll think
+about QA at the end.
+
+00:03:48.480 --> 00:03:51.480
+Actually, that needs to
+be entirely shifted left,
+
+00:03:51.480 --> 00:03:54.390
+and now you have to think
+about your success criteria
+
+00:03:54.390 --> 00:03:57.540
+and evaluation first, so
+that then you can think
+
+00:03:57.540 --> 00:04:00.270
+about how you're going to
+continuously improve over time
+
+00:04:00.270 --> 00:04:03.180
+and build a resilient
+solution that decouples
+
+00:04:03.180 --> 00:04:07.020
+from the model evolving,
+from tools changing,
+
+00:04:07.020 --> 00:04:09.420
+and from the context
+evolving itself.
+
+00:04:09.420 --> 00:04:11.880
+That way, you can
+actually build a solution
+
+00:04:11.880 --> 00:04:16.890
+that is more ready
+for the test of time.
+
+00:04:16.890 --> 00:04:20.430
+And there's a set of
+optimization categories,
+
+00:04:20.430 --> 00:04:21.660
+I'll just go back for a second,
+
+00:04:21.660 --> 00:04:23.103
+that then, once you have your
+
+00:04:23.115 --> 00:04:24.870
+evaluations
+defined, are actually
+
+00:04:24.870 --> 00:04:28.110
+going to tell you, what are the
+set of levers that you can pull
+
+00:04:28.110 --> 00:04:29.400
+to optimize the system.
+
+00:04:29.400 --> 00:04:30.180
+And this is how we're going
+
+00:04:30.180 --> 00:04:31.890
+to structure the rest
+of the talk today.
+
+00:04:31.890 --> 00:04:34.560
+We're going to go through
+selection, evaluation,
+
+00:04:34.560 --> 00:04:37.640
+optimization, and scaling.
+
+00:04:37.640 --> 00:04:39.830
+Okay. We're going to start,
+and then we're going to do it
+
+00:04:39.830 --> 00:04:41.510
+around the model ecosystem.
+
+00:04:41.510 --> 00:04:45.230
+So, we're going to have other
+sessions throughout the
+
+00:04:45.230 --> 00:04:47.780
+conference in which we're
+going to go deeper into more
+
+00:04:47.780 --> 00:04:51.080
+of the agentic side and
+then also, more of deeper
+
+00:04:51.080 --> 00:04:52.460
+into the post-training
+capabilities
+
+00:04:52.460 --> 00:04:55.080
+that we have around models.
+
+00:04:55.080 --> 00:04:56.820
+Okay. Let's start with Select.
+
+00:04:56.820 --> 00:04:57.480
+Naomi Moneypenny:
+All right.
+
+00:04:57.480 --> 00:04:59.340
+Awesome. So, lots and lots
+
+00:04:59.340 --> 00:05:01.800
+of model available
+for you in Foundry.
+
+00:05:01.800 --> 00:05:03.120
+Hopefully, that's
+really good news,
+
+00:05:03.120 --> 00:05:04.500
+because you saw a great set
+
+00:05:04.500 --> 00:05:06.420
+of announcements this
+morning at the keynote.
+
+00:05:06.420 --> 00:05:08.490
+And we're going to build on that
+and tell you a little bit more
+
+00:05:08.490 --> 00:05:09.720
+about what's going on.
+
+00:05:09.720 --> 00:05:12.030
+Because every AI
+system really belongs
+
+00:05:12.030 --> 00:05:13.740
+with selecting models, right?
+
+00:05:13.740 --> 00:05:15.300
+We want to think about
+not just looking
+
+00:05:15.300 --> 00:05:18.330
+at the specific model you need
+for all of your use cases,
+
+00:05:18.330 --> 00:05:21.060
+but instead, actually, looking
+at model choice is something
+
+00:05:21.060 --> 00:05:22.920
+that you need to define by task.
+
+00:05:22.920 --> 00:05:24.390
+And so you think
+about this as kind
+
+00:05:24.390 --> 00:05:26.310
+of an ongoing systems decision.
+
+00:05:26.310 --> 00:05:27.390
+Yina talked about it.
+
+00:05:27.390 --> 00:05:29.730
+That model lifecycle is
+continuously accelerating.
+
+00:05:29.730 --> 00:05:31.890
+We're always bringing the
+best and latest to you.
+
+00:05:31.890 --> 00:05:34.680
+But we want to make sure that
+we're able to bring and optimize
+
+00:05:34.680 --> 00:05:36.240
+across these different areas.
+
+00:05:36.240 --> 00:05:38.580
+So let's think about how we
+approach model selection
+
+00:05:38.580 --> 00:05:40.140
+as part of this.
+
+00:05:40.140 --> 00:05:43.320
+So, of course, in any AI
+application, models are kind
+
+00:05:43.320 --> 00:05:46.050
+of your raw materials
+to get started with.
+
+00:05:46.050 --> 00:05:49.080
+And you build so many big
+things on top of this as part
+
+00:05:49.080 --> 00:05:50.760
+of your AI applications.
+
+00:05:50.760 --> 00:05:52.980
+But what matters is not
+just the model itself,
+
+00:05:52.980 --> 00:05:55.980
+but is it the right model
+for the job that you have?
+
+00:05:55.980 --> 00:05:58.740
+And, of course, with Foundry
+models, developers can access,
+
+00:05:58.740 --> 00:06:00.810
+explore, compare,
+and do many things
+
+00:06:00.810 --> 00:06:04.410
+across the Foundry model catalog
+with a consistent API and,
+
+00:06:04.410 --> 00:06:06.210
+of course, an enterprise
+curation that's built
+
+00:06:06.210 --> 00:06:07.500
+in as part of this.
+
+00:06:07.500 --> 00:06:10.470
+And so, of course, this means
+less thinking about more the,
+
+00:06:10.470 --> 00:06:13.050
+sorry, this means more around
+faster experimentation,
+
+00:06:13.050 --> 00:06:15.360
+being able to get to production
+faster, and then being able
+
+00:06:15.360 --> 00:06:18.720
+to deploy this quickly as
+your requirements change.
+
+00:06:18.720 --> 00:06:20.280
+Now, a couple things
+that I want to mention
+
+00:06:20.280 --> 00:06:21.540
+on this slide in particular.
+
+00:06:21.540 --> 00:06:23.340
+We have, of course, our
+flagship models there.
+
+00:06:23.340 --> 00:06:26.340
+You see OpenAI and Anthropic,
+as we talk about all the time.
+
+00:06:26.340 --> 00:06:27.840
+I do want to have
+a special callout
+
+00:06:27.840 --> 00:06:29.580
+with our amazing
+partnership that we have
+
+00:06:29.580 --> 00:06:31.440
+with Hugging Face
+because, of course,
+
+00:06:31.440 --> 00:06:32.460
+Jeff is sitting right there.
+
+00:06:32.460 --> 00:06:33.720
+Woo. Go Hugging Face!
+
+00:06:33.720 --> 00:06:35.010
+Love Hugging Face, folks.
+
+00:06:35.010 --> 00:06:36.960
+Yes, yes, thank you.
+
+00:06:36.960 --> 00:06:38.760
+So, we love our OSS models.
+
+00:06:38.760 --> 00:06:40.290
+We have a great
+partnership with them,
+
+00:06:40.290 --> 00:06:42.960
+populate so many things
+inside of the Foundry catalog,
+
+00:06:42.960 --> 00:06:44.850
+and talk a little bit
+later on about one
+
+00:06:44.850 --> 00:06:46.950
+of the announcements
+we have there as well.
+
+00:06:46.950 --> 00:06:48.060
+And so really, we can think
+
+00:06:48.060 --> 00:06:49.530
+about these new
+models coming in.
+
+00:06:49.530 --> 00:06:52.200
+You heard about NVIDIA this
+morning as well, and being able
+
+00:06:52.200 --> 00:06:55.080
+to access both the flagship
+capabilities and the best
+
+00:06:55.080 --> 00:06:57.870
+of the OSS models
+across the board.
+
+00:06:57.870 --> 00:06:59.490
+So let's talk about Claude.
+
+00:06:59.490 --> 00:07:00.930
+Claude is also out there.
+
+00:07:00.930 --> 00:07:04.560
+We launched Opus 4.8 last week
+as our newest model that's
+
+00:07:04.560 --> 00:07:05.790
+in our Foundry catalog.
+
+00:07:05.790 --> 00:07:07.710
+Please do check it
+out as part of this.
+
+00:07:07.710 --> 00:07:09.690
+And I'm excited that
+today, we can announce
+
+00:07:09.690 --> 00:07:11.700
+that Claude is finally
+running on Azure.
+
+00:07:11.700 --> 00:07:14.970
+It is actually running on
+GB300, our highest-end hardware
+
+00:07:14.970 --> 00:07:16.110
+that we have available.
+
+00:07:16.110 --> 00:07:18.510
+And it really gives us a
+great way to be able to bring
+
+00:07:18.510 --> 00:07:21.030
+that anthropic lifecycle,
+all of the development tools
+
+00:07:21.030 --> 00:07:23.340
+and bringing them directly
+to you from Azure.
+
+00:07:23.340 --> 00:07:25.350
+So really exciting stuff
+as part of this, too.
+
+00:07:25.350 --> 00:07:27.240
+Cool. Somebody is excited.
+
+00:07:27.240 --> 00:07:29.130
+One person at least was
+excited about Claude.
+
+00:07:29.130 --> 00:07:30.450
+People excited about Claude?
+
+00:07:30.450 --> 00:07:32.130
+Yes. Thank you.
+
+00:07:32.130 --> 00:07:33.180
+All right.
+
+00:07:33.180 --> 00:07:34.860
+So, all good.
+
+00:07:34.860 --> 00:07:35.190
+All right.
+
+00:07:35.190 --> 00:07:37.590
+Let's talk about
+Microsoft AI models.
+
+00:07:37.590 --> 00:07:40.230
+So, we brought a lot of energy
+this morning in the keynote.
+
+00:07:40.230 --> 00:07:43.320
+If you saw with Mustafa there,
+we've announced different models
+
+00:07:43.320 --> 00:07:44.700
+that are coming onto Foundry.
+
+00:07:44.700 --> 00:07:45.840
+They are live this morning.
+
+00:07:45.840 --> 00:07:47.010
+My team just pushed them.
+
+00:07:47.010 --> 00:07:48.870
+So woo, go all those folks.
+
+00:07:48.870 --> 00:07:51.300
+Amazing. So it's incredible
+to see that go live
+
+00:07:51.300 --> 00:07:52.920
+as Mustafa was talking.
+
+00:07:52.920 --> 00:07:54.540
+And so, really, you
+can think about this
+
+00:07:54.540 --> 00:07:57.000
+as being exciting for
+Microsoft itself.
+
+00:07:57.000 --> 00:07:59.520
+It's not that we're building
+the amazing platform
+
+00:07:59.520 --> 00:08:01.860
+that we have inside of
+Foundry, but it's also
+
+00:08:01.860 --> 00:08:04.260
+that we're bringing these
+first-party models to you,
+
+00:08:04.260 --> 00:08:06.300
+really bringing the
+best to what we can do,
+
+00:08:06.300 --> 00:08:09.540
+running those efficiently and
+cost-optimization scenarios
+
+00:08:09.540 --> 00:08:11.880
+that are really well handled,
+especially, I would say,
+
+00:08:11.880 --> 00:08:13.890
+for example, Image 2.5.
+
+00:08:13.890 --> 00:08:15.960
+This is one of the
+latest models out there.
+
+00:08:15.960 --> 00:08:17.070
+Please go try it out.
+
+00:08:17.070 --> 00:08:18.450
+It's a great one as well.
+
+00:08:18.450 --> 00:08:20.940
+And we can really see across
+thinking, across image,
+
+00:08:20.940 --> 00:08:23.010
+across code, and audio models.
+
+00:08:23.010 --> 00:08:26.370
+We really have a full multimodal
+application stack that's really
+
+00:08:26.370 --> 00:08:28.590
+coming out with those
+first-party models, too.
+
+00:08:28.590 --> 00:08:30.480
+So, lots and lots of
+goodness that's happening
+
+00:08:30.480 --> 00:08:33.320
+across the board
+with Foundry models.
+
+00:08:33.320 --> 00:08:34.880
+So, what was our strategy?
+
+00:08:34.880 --> 00:08:36.890
+So, we've got lots of
+goodness in the catalog.
+
+00:08:36.890 --> 00:08:39.710
+We've got 11,000 plus
+models to look for,
+
+00:08:39.710 --> 00:08:42.110
+but there's even more
+that's part of this, too.
+
+00:08:42.110 --> 00:08:45.140
+So with Foundry models, our
+strategy really is to innovate
+
+00:08:45.140 --> 00:08:47.330
+across that full AI spectrum.
+
+00:08:47.330 --> 00:08:49.010
+And so you see here,
+on the one side,
+
+00:08:49.010 --> 00:08:50.570
+you've really got
+the production-grade
+
+00:08:50.570 --> 00:08:51.650
+frontier models.
+
+00:08:51.650 --> 00:08:54.350
+You can use those quickly
+inside of your applications,
+
+00:08:54.350 --> 00:08:57.170
+and they have those strict
+operational requirements there.
+
+00:08:57.170 --> 00:09:00.080
+On the other side, we also want
+to bring you that cutting edge,
+
+00:09:00.080 --> 00:09:03.530
+that experimentation that really
+helps you unleash the research
+
+00:09:03.530 --> 00:09:06.200
+and develop that as part
+of your applications, too.
+
+00:09:06.200 --> 00:09:08.450
+And so you can check out
+things Foundry Labs.
+
+00:09:08.450 --> 00:09:10.940
+We've got a new set of
+capabilities that are out there,
+
+00:09:10.940 --> 00:09:12.800
+primarily from
+Microsoft Research.
+
+00:09:12.800 --> 00:09:14.720
+The latest and greatest
+pieces are there.
+
+00:09:14.720 --> 00:09:16.460
+And then we basically
+have a great place
+
+00:09:16.460 --> 00:09:17.510
+to build your models.
+
+00:09:17.510 --> 00:09:19.040
+You can build them
+with confidence
+
+00:09:19.040 --> 00:09:21.200
+and then explore the frontiers
+
+00:09:21.200 --> 00:09:24.630
+of what could be really
+essential for the future.
+
+00:09:24.630 --> 00:09:27.780
+So, next piece of this is
+understanding the shifts
+
+00:09:27.780 --> 00:09:28.620
+that we are seeing.
+
+00:09:28.620 --> 00:09:31.230
+So, it's not just about
+one reasoning model
+
+00:09:31.230 --> 00:09:33.510
+or one frontier model
+happening across all
+
+00:09:33.510 --> 00:09:35.130
+of your different use cases.
+
+00:09:35.130 --> 00:09:36.990
+Instead, we really want
+to think about the shifts
+
+00:09:36.990 --> 00:09:39.390
+that are happening within
+those different segments.
+
+00:09:39.390 --> 00:09:41.790
+And so you can see now, this
+increasingly is coming
+
+00:09:41.790 --> 00:09:43.680
+from these purpose-built models.
+
+00:09:43.680 --> 00:09:47.010
+And so, purpose-built models
+that are for specific domains.
+
+00:09:47.010 --> 00:09:49.830
+And so, not every problem
+warrants having the same general
+
+00:09:49.830 --> 00:09:51.360
+purpose model, of course.
+
+00:09:51.360 --> 00:09:55.110
+So, geospatial, robotics,
+biomedical, material science,
+
+00:09:55.110 --> 00:09:57.270
+code search, media,
+lots and lots
+
+00:09:57.270 --> 00:09:59.130
+of different categories
+of models in here.
+
+00:09:59.130 --> 00:10:01.200
+And you need specific
+ones for that.
+
+00:10:01.200 --> 00:10:02.610
+So, as developers,
+you really think
+
+00:10:02.610 --> 00:10:04.680
+about the best system
+design, that's being able
+
+00:10:04.680 --> 00:10:08.130
+to apply the models that you
+can within those domain areas.
+
+00:10:08.130 --> 00:10:09.390
+And so, one of the
+ones that I'll call
+
+00:10:09.390 --> 00:10:12.540
+out here specifically that's
+newest is Aurora 1.5.
+
+00:10:12.540 --> 00:10:14.760
+You can see it here on
+our geospatial pieces.
+
+00:10:14.760 --> 00:10:16.890
+It's really an amazing
+weather modeling system.
+
+00:10:16.890 --> 00:10:18.840
+So, if you have a great
+application for this,
+
+00:10:18.840 --> 00:10:20.610
+we really think this
+is the cutting edge,
+
+00:10:20.610 --> 00:10:23.340
+has that satellite imagery
+in there, atmospheric data,
+
+00:10:23.340 --> 00:10:26.850
+and can really scale out where
+traditional models can't.
+
+00:10:26.850 --> 00:10:29.010
+So, lots and lots of goodness
+happening across here, too.
+
+00:10:29.010 --> 00:10:29.580
+Yina Arenas:
+NVIDIA.
+
+00:10:29.580 --> 00:10:31.650
+Naomi Moneypenny: Yeah, we're
+also expanding our partnership
+
+00:10:31.650 --> 00:10:35.760
+with NVIDIA, bringing in vision
+and models from NVIDIA Nemotron,
+
+00:10:35.760 --> 00:10:38.940
+reasoning models, models for
+physical AI like Cosmos,
+
+00:10:38.940 --> 00:10:41.700
+and the new NVIDIA
+AI weather models
+
+00:10:41.700 --> 00:10:43.500
+like Earth-2 technologies.
+
+00:10:43.500 --> 00:10:46.680
+These models enable developers
+and enterprises to build systems
+
+00:10:46.680 --> 00:10:50.670
+that reason, act, and respond
+to real-world conditions
+
+00:10:50.670 --> 00:10:54.150
+and just going beyond software
+workloads into physical AI.
+
+00:10:54.150 --> 00:10:56.940
+We actually have a pre-recorded
+session with a very,
+
+00:10:56.940 --> 00:10:58.290
+very cool demo on physical AI
+
+00:10:58.290 --> 00:11:00.480
+that I recommend
+that you catch on.
+
+00:11:00.480 --> 00:11:03.390
+Together with NVIDIA, we are
+enabling a unified platform
+
+00:11:03.390 --> 00:11:06.870
+where developers can build,
+run, and scale AI systems
+
+00:11:06.870 --> 00:11:10.050
+that span into physical.
+
+00:11:10.050 --> 00:11:14.580
+Okay. So, let's see our
+Foundry models in action.
+
+00:11:14.580 --> 00:11:17.970
+I'm just going to give you
+a quick pointer as you land
+
+00:11:17.970 --> 00:11:19.080
+in the Foundry portal.
+
+00:11:19.080 --> 00:11:21.060
+So, this is the Foundry
+portal, where you can see all
+
+00:11:21.060 --> 00:11:23.310
+of the different models
+that we have available,
+
+00:11:23.310 --> 00:11:26.160
+all of the different
+set of providers.
+
+00:11:26.160 --> 00:11:28.800
+We have a leaderboard
+where we benchmark models
+
+00:11:28.800 --> 00:11:30.990
+across different sets of
+dimensions: quality,
+
+00:11:30.990 --> 00:11:33.900
+safety, throughput, cost.
+
+00:11:33.900 --> 00:11:36.570
+And we bring all of the
+models and also have a set
+
+00:11:36.570 --> 00:11:40.020
+of trade-off charts you
+can use to select models based
+
+00:11:40.020 --> 00:11:41.970
+on your particular
+set of trade-offs.
+
+00:11:41.970 --> 00:11:44.160
+We also have the ability
+to compare models
+
+00:11:44.160 --> 00:11:47.160
+across different providers,
+whether it is open-source models
+
+00:11:47.160 --> 00:11:50.280
+or closed models, and see
+how are they comparing
+
+00:11:50.280 --> 00:11:52.560
+across the different
+benchmarks that we have,
+
+00:11:52.560 --> 00:11:54.750
+and running side-by-side models.
+
+00:11:54.750 --> 00:11:57.300
+If you want to see how
+they behave on a given set
+
+00:11:57.300 --> 00:12:00.870
+of prompts, how much time do
+they take, what is the responses
+
+00:12:00.870 --> 00:12:03.630
+that they have, you can do
+these comparisons side-by-side.
+
+00:12:03.630 --> 00:12:05.880
+This is really good when
+you're doing prototyping.
+
+00:12:05.880 --> 00:12:07.740
+You can also save as an agent.
+
+00:12:07.740 --> 00:12:09.390
+And when you save as
+an agent, of course,
+
+00:12:09.390 --> 00:12:12.150
+then new capabilities show up,
+like you can add a specific set
+
+00:12:12.150 --> 00:12:15.450
+of tools, knowledge,
+memory, and guardrails.
+
+00:12:15.450 --> 00:12:18.600
+And you can also set a
+specific set of metrics.
+
+00:12:18.600 --> 00:12:20.850
+In this particular case,
+I've set up task adherence,
+
+00:12:20.850 --> 00:12:23.040
+intent resolution,
+and relevance as part
+
+00:12:23.040 --> 00:12:24.780
+of the out-of-the-box metrics
+
+00:12:24.780 --> 00:12:27.300
+that, then, Foundry will do
+evaluations every time
+
+00:12:27.300 --> 00:12:28.710
+that the agent is invoked.
+
+00:12:28.710 --> 00:12:31.560
+So, in this, when I go
+and run a request,
+
+00:12:31.560 --> 00:12:35.070
+it's going to do a trace that
+I can then go and watch.
+
+00:12:35.070 --> 00:12:38.670
+And it's going to give me the
+specific spans around duration,
+
+00:12:38.670 --> 00:12:40.650
+what each of the
+turns are going in.
+
+00:12:40.650 --> 00:12:43.230
+And then it's going to
+also give me the outputs
+
+00:12:43.230 --> 00:12:45.810
+of that evaluation.
+
+00:12:45.810 --> 00:12:48.450
+In this case, it's
+doing LLMs as a judge.
+
+00:12:48.450 --> 00:12:50.520
+And it's going to tell
+whether or not it's passing.
+
+00:12:50.520 --> 00:12:53.580
+And it's going to give me
+a specific set of verbatim
+
+00:12:53.580 --> 00:12:56.190
+on what happened
+during that call.
+
+00:12:56.190 --> 00:12:58.770
+So, this is a great way into
+which you can take the models
+
+00:12:58.770 --> 00:13:02.460
+that are available in the
+catalog, run a set of queries
+
+00:13:02.460 --> 00:13:06.870
+against them, and start getting
+ready for prototyping with them.
+
+00:13:06.870 --> 00:13:08.880
+Naomi Moneypenny:
+Awesome.
+
+00:13:08.880 --> 00:13:11.250
+All right.
+
+00:13:11.250 --> 00:13:11.370
+Oops.
+
+00:13:11.370 --> 00:13:12.540
+There we go.
+
+00:13:12.540 --> 00:13:14.730
+Yina Arenas: And then,
+throughout the session,
+
+00:13:14.730 --> 00:13:17.040
+what we're going to do is,
+we're going to use a scenario
+
+00:13:17.040 --> 00:13:19.320
+where we're going to be
+building a trip planning app.
+
+00:13:19.320 --> 00:13:22.440
+And this one is basically a
+typical scenario that you have
+
+00:13:22.440 --> 00:13:24.900
+in the enterprise where there's
+a specific goal that you have
+
+00:13:24.900 --> 00:13:29.220
+to understand the intent,
+you have to then make sure
+
+00:13:29.220 --> 00:13:32.310
+that you're making a set of
+decisions based on the prompts
+
+00:13:32.310 --> 00:13:35.970
+that you're getting, and then
+giving an output to the user.
+
+00:13:35.970 --> 00:13:38.400
+As I mentioned at the beginning,
+the key part of that,
+
+00:13:38.400 --> 00:13:41.070
+and that we want you to take
+away, is that you need to start
+
+00:13:41.070 --> 00:13:42.900
+with what success looks like.
+
+00:13:42.900 --> 00:13:45.450
+What is your success criteria
+when it comes to correctness,
+
+00:13:45.450 --> 00:13:48.540
+when it comes to compliance,
+when it comes to user behavior,
+
+00:13:48.540 --> 00:13:51.210
+and when it comes to what
+are you going to use
+
+00:13:51.210 --> 00:13:53.910
+in the application to
+take it to production.
+
+00:13:53.910 --> 00:13:57.870
+And in that concept comes in
+the notion of hill climbing.
+
+00:13:57.870 --> 00:13:59.610
+And you saw this in the keynote,
+
+00:13:59.610 --> 00:14:02.820
+where because you have a
+very clear understanding
+
+00:14:02.820 --> 00:14:05.790
+of what is your success
+criteria, then you can go
+
+00:14:05.790 --> 00:14:08.100
+and continuously improve on it.
+
+00:14:08.100 --> 00:14:09.510
+And this is what we're
+going to do in the session.
+
+00:14:09.510 --> 00:14:11.280
+We're going to create that
+benchmark, and we're going
+
+00:14:11.280 --> 00:14:14.700
+to continuously improve on that.
+
+00:14:14.700 --> 00:14:16.980
+Typically, the developer
+workflow starts
+
+00:14:16.980 --> 00:14:19.260
+where you have a scenario.
+
+00:14:19.260 --> 00:14:22.320
+You have an understanding
+of what success looks like.
+
+00:14:22.320 --> 00:14:23.700
+And then you're going
+to prototype it
+
+00:14:23.700 --> 00:14:26.160
+with what is the latest
+and greatest model
+
+00:14:26.160 --> 00:14:29.340
+that has been
+recently announced.
+
+00:14:29.340 --> 00:14:32.280
+With that, you can get a
+really good understanding
+
+00:14:32.280 --> 00:14:35.850
+of how the scenario behaves
+
+00:14:35.850 --> 00:14:39.180
+and whether your particular
+application can --
+
+00:14:39.180 --> 00:14:41.460
+what would be the
+baseline for that.
+
+00:14:41.460 --> 00:14:43.830
+This is what we're going
+to do at the first step.
+
+00:14:43.830 --> 00:14:47.820
+And just shoutout, everything
+that we're going to show,
+
+00:14:47.820 --> 00:14:49.560
+of course, we build
+it with agents.
+
+00:14:49.560 --> 00:14:50.850
+And you can try it yourself.
+
+00:14:50.850 --> 00:14:54.300
+So this is the aka.ms link for
+all of the code that we're going
+
+00:14:54.300 --> 00:14:55.920
+to show during the session.
+
+00:14:55.920 --> 00:14:59.010
+And we're not going to go
+with deeply super into code.
+
+00:14:59.010 --> 00:15:00.330
+We're just going
+to show outputs.
+
+00:15:00.330 --> 00:15:01.620
+But everything is right now
+
+00:15:01.620 --> 00:15:03.870
+in the GitHub repo
+for you to try along.
+
+00:15:03.870 --> 00:15:07.050
+And, of course, I just want to,
+just a shoutout of gratitude
+
+00:15:07.050 --> 00:15:09.450
+for Nithya, who was the
+mastermind behind all
+
+00:15:09.450 --> 00:15:11.460
+of the demos.
+
+00:15:11.460 --> 00:15:12.480
+She did a great job to it.
+
+00:15:12.480 --> 00:15:14.760
+So, with that, let's
+jump into it.
+
+00:15:14.760 --> 00:15:15.990
+Naomi Moneypenny:
+All right.
+
+00:15:15.990 --> 00:15:17.280
+Sorry, number 101.
+
+00:15:17.280 --> 00:15:18.210
+Yina Arenas:
+Thank you.
+
+00:15:18.210 --> 00:15:18.600
+Naomi Moneypenny:
+All right.
+
+00:15:18.600 --> 00:15:21.990
+Awesome. As Yina mentioned, so
+we have an incredible repo here.
+
+00:15:21.990 --> 00:15:24.990
+I do, guys, encourage you
+all to go check it out.
+
+00:15:24.990 --> 00:15:27.390
+You can see, definitely, all
+the code that's being generated.
+
+00:15:27.390 --> 00:15:30.120
+You can go through and follow
+these demos at the same time.
+
+00:15:30.120 --> 00:15:32.340
+But in the spirit of
+being able to make sure
+
+00:15:32.340 --> 00:15:34.410
+that we're using agentic
+workflows as part
+
+00:15:34.410 --> 00:15:36.510
+of what we're doing, I want
+to show you a little bit
+
+00:15:36.510 --> 00:15:39.240
+about the outcome and how
+we're generating these things.
+
+00:15:39.240 --> 00:15:40.650
+So, we go through our scenario.
+
+00:15:40.650 --> 00:15:42.810
+So, Yina mentioned we
+are doing a travel app.
+
+00:15:42.810 --> 00:15:44.310
+We need to build it
+for a robust set
+
+00:15:44.310 --> 00:15:46.320
+of employee queries
+as part of this.
+
+00:15:46.320 --> 00:15:48.540
+And so, first off is just
+establishing what is
+
+00:15:48.540 --> 00:15:49.290
+our baseline.
+
+00:15:49.290 --> 00:15:51.810
+We can't improve unless
+we know what's going on.
+
+00:15:51.810 --> 00:15:54.360
+And so, we've taken a model
+straight off the bat.
+
+00:15:54.360 --> 00:15:57.990
+So, GPT 4.1, we're going to
+apply it basically to every task
+
+00:15:57.990 --> 00:16:00.270
+in here and just
+establish our baseline.
+
+00:16:00.270 --> 00:16:02.280
+So, you can see we're going
+to work through here,
+
+00:16:02.280 --> 00:16:03.720
+being able to
+understand a little bit
+
+00:16:03.720 --> 00:16:05.580
+about the evaluations run.
+
+00:16:05.580 --> 00:16:07.530
+We just have a very
+simple data set.
+
+00:16:07.530 --> 00:16:08.520
+We're just starting this off.
+
+00:16:08.520 --> 00:16:10.020
+We're prototyping
+our application.
+
+00:16:10.020 --> 00:16:13.560
+So, we're starting off with
+20 or so seed rows of data.
+
+00:16:13.560 --> 00:16:15.600
+And you can check out
+the different pieces.
+
+00:16:15.600 --> 00:16:17.190
+So, here's our scorecard.
+
+00:16:17.190 --> 00:16:18.660
+Okay. It's not great.
+
+00:16:18.660 --> 00:16:19.500
+Right? It's not great.
+
+00:16:19.500 --> 00:16:21.840
+We just have to accept it's
+the beginning of our journey.
+
+00:16:21.840 --> 00:16:24.750
+We're just starting our hill
+climb, and so, it's not great.
+
+00:16:24.750 --> 00:16:27.630
+So, quality, you can see in
+this case, is a lot lower
+
+00:16:27.630 --> 00:16:29.310
+than we wanted as our target.
+
+00:16:29.310 --> 00:16:32.730
+You can see that cost per task
+is actually pretty expensive.
+
+00:16:32.730 --> 00:16:34.080
+And we've got latency here.
+
+00:16:34.080 --> 00:16:35.250
+So, latency is not bad, right?
+
+00:16:35.250 --> 00:16:36.330
+Latency is not bad.
+
+00:16:36.330 --> 00:16:38.400
+But we know where we need to
+improve as part of this here.
+
+00:16:38.400 --> 00:16:40.140
+Yina Arenas: It's worth
+mentioning that here in quality,
+
+00:16:40.140 --> 00:16:44.400
+we're just using out-of-the-box
+evaluators like task adherence
+
+00:16:44.400 --> 00:16:46.920
+and task completion in order
+to understand the quality.
+
+00:16:46.920 --> 00:16:48.600
+And then we'll unpack
+a little bit more
+
+00:16:48.600 --> 00:16:50.670
+on how you can bring
+your own domain data.
+
+00:16:50.670 --> 00:16:50.910
+Naomi Moneypenny:
+Yeah.
+
+00:16:50.910 --> 00:16:53.970
+So, the big problem here
+is that we used one model,
+
+00:16:53.970 --> 00:16:56.760
+one Frontiers model, in
+this case, for every job,
+
+00:16:56.760 --> 00:16:58.980
+including, basically, what
+are the cheap ones in here.
+
+00:16:58.980 --> 00:17:01.980
+So, essentially, we used a
+Ferrari for a grocery run.
+
+00:17:01.980 --> 00:17:03.450
+So, we need to not do that.
+
+00:17:03.450 --> 00:17:06.930
+So, we can think about the eval
+data here helps us to understand
+
+00:17:06.930 --> 00:17:09.180
+where we need to go
+improve really quickly.
+
+00:17:09.180 --> 00:17:12.000
+So, in this case, we can
+understand, how do we think
+
+00:17:12.000 --> 00:17:13.950
+about the model itself,
+what are we going to do
+
+00:17:13.950 --> 00:17:16.020
+for the next pieces of it,
+and how are we going to route
+
+00:17:16.020 --> 00:17:18.150
+that content going forward.
+
+00:17:18.150 --> 00:17:19.380
+So, a reality check.
+
+00:17:19.380 --> 00:17:21.330
+This is where we're
+starting on our hill climb.
+
+00:17:21.330 --> 00:17:23.160
+So, we're at 0.8.
+
+00:17:23.160 --> 00:17:24.630
+Sorry, we need to get to 0.8.
+
+00:17:24.630 --> 00:17:27.240
+And our baseline is
+sitting at 0.59.
+
+00:17:27.240 --> 00:17:29.070
+So, that gap is really helpful.
+
+00:17:29.070 --> 00:17:30.990
+It helps to understand
+where we need to go.
+
+00:17:30.990 --> 00:17:33.480
+And so, our job is
+basically not to guess.
+
+00:17:33.480 --> 00:17:35.820
+We need to go through and
+look at this methodically.
+
+00:17:35.820 --> 00:17:38.130
+So, this is where we use that
+whole loop that we talked
+
+00:17:38.130 --> 00:17:39.150
+about at the beginning.
+
+00:17:39.150 --> 00:17:40.680
+We're going to think
+about that baseline,
+
+00:17:40.680 --> 00:17:42.450
+we're going to measure it
+honestly, and then we're going
+
+00:17:42.450 --> 00:17:45.090
+to decide where that
+next game comes from.
+
+00:17:45.090 --> 00:17:46.710
+And so, this is really
+the piece, here,
+
+00:17:46.710 --> 00:17:48.870
+where we're decomposing
+that workflow.
+
+00:17:48.870 --> 00:17:50.430
+So, that employee's
+travel request,
+
+00:17:50.430 --> 00:17:51.660
+it may look a simple thing.
+
+00:17:51.660 --> 00:17:53.040
+We're all very
+familiar with this.
+
+00:17:53.040 --> 00:17:55.620
+But we want to decompose it
+into the different tasks.
+
+00:17:55.620 --> 00:17:57.180
+Essentially, we have
+a job to be done.
+
+00:17:57.180 --> 00:17:59.730
+And for each of these jobs to
+be done, we need to make sure
+
+00:17:59.730 --> 00:18:01.230
+that we have the right
+model and be able
+
+00:18:01.230 --> 00:18:02.790
+to use that directly here.
+
+00:18:02.790 --> 00:18:04.530
+So we don't want to
+overbuild for each step.
+
+00:18:04.530 --> 00:18:06.900
+We want to make sure that we're
+decomposing it correctly,
+
+00:18:06.900 --> 00:18:08.850
+choose the right prompt,
+choose the right model,
+
+00:18:08.850 --> 00:18:11.070
+choose the right tool as
+part of this, and then,
+
+00:18:11.070 --> 00:18:12.630
+of course, the right context.
+
+00:18:12.630 --> 00:18:15.390
+Decomposition, in this case, is
+really the way that we think
+
+00:18:15.390 --> 00:18:17.760
+about that first optimization
+move as part of this.
+
+00:18:17.760 --> 00:18:19.170
+Yina Arenas:
+Yeah, think about it as like,
+
+00:18:19.170 --> 00:18:20.850
+when you're building an
+enterprise solution,
+
+00:18:20.850 --> 00:18:22.770
+you want to think about
+microservices architecture
+
+00:18:22.770 --> 00:18:26.130
+and not using a single model for
+everything in your solution.
+
+00:18:26.130 --> 00:18:26.940
+Break it apart.
+
+00:18:26.940 --> 00:18:28.320
+What are the jobs to be done?
+
+00:18:28.320 --> 00:18:29.790
+And for each of the
+jobs to be done,
+
+00:18:29.790 --> 00:18:32.310
+you can optimize a specific
+model that you use for that.
+
+00:18:32.310 --> 00:18:34.440
+And the smaller the model,
+the faster you can do it,
+
+00:18:34.440 --> 00:18:37.260
+and the more cost you can
+have on optimization.
+
+00:18:37.260 --> 00:18:40.650
+Then, one of the best ways,
+and the simplest ways
+
+00:18:40.650 --> 00:18:42.930
+that you can use
+when you decompose
+
+00:18:42.930 --> 00:18:45.360
+into multiple models is
+to use a model router.
+
+00:18:45.360 --> 00:18:47.010
+The model router
+takes, automatically,
+
+00:18:47.010 --> 00:18:50.010
+the prompts that you have,
+and then will analyze,
+
+00:18:50.010 --> 00:18:52.080
+based on the prompt,
+which is the best model
+
+00:18:52.080 --> 00:18:54.090
+to send the request to.
+
+00:18:54.090 --> 00:18:56.340
+We have in Foundry
+a model router.
+
+00:18:56.340 --> 00:18:59.760
+And, actually, it supports
+28 different models,
+
+00:18:59.760 --> 00:19:05.280
+including GPT-5.4, GPT-5.5
+family, Claude Opus models.
+
+00:19:05.280 --> 00:19:08.070
+And then it has, also, automatic
+failover to improve all
+
+00:19:08.070 --> 00:19:09.450
+of the customer experience.
+
+00:19:09.450 --> 00:19:11.040
+It has agentic support.
+
+00:19:11.040 --> 00:19:14.160
+And also, starting today,
+we're now being able
+
+00:19:14.160 --> 00:19:17.400
+to govern the policies of
+which models are being used
+
+00:19:17.400 --> 00:19:21.300
+by model router so that from
+a governance perspective,
+
+00:19:21.300 --> 00:19:22.860
+you can auto-select
+just the models
+
+00:19:22.860 --> 00:19:25.200
+that you want your solution to,
+
+00:19:25.200 --> 00:19:27.990
+or that you might want
+your solution just to use.
+
+00:19:27.990 --> 00:19:31.020
+We're also investing more on
+model routers so that further
+
+00:19:31.020 --> 00:19:33.540
+down the line, we're going to
+open the ability to customize,
+
+00:19:33.540 --> 00:19:35.400
+to fine-tune the router itself,
+
+00:19:35.400 --> 00:19:38.850
+and to bring in
+fine-tuned models.
+
+00:19:38.850 --> 00:19:41.610
+The second way that you can do,
+instead of using a model router,
+
+00:19:41.610 --> 00:19:43.650
+is, where you build
+a router yourself.
+
+00:19:43.650 --> 00:19:47.910
+And you have a small model
+that routes the intent.
+
+00:19:47.910 --> 00:19:50.520
+And, for example, you
+can use a 4.1 Nano model
+
+00:19:50.520 --> 00:19:53.820
+or a Mistral Small model to
+just basically give it a set
+
+00:19:53.820 --> 00:19:54.540
+of rules.
+
+00:19:54.540 --> 00:19:57.120
+And you say, this is all of the
+different set of scenarios,
+
+00:19:57.120 --> 00:19:59.370
+this is all of the different
+jobs, and then route
+
+00:19:59.370 --> 00:20:03.330
+to the models that are
+specifically treating the jobs
+
+00:20:03.330 --> 00:20:04.860
+on the solution.
+
+00:20:04.860 --> 00:20:08.280
+Let's take a look
+at that in action.
+
+00:20:08.280 --> 00:20:09.630
+Naomi Moneypenny:
+Thank you.
+
+00:20:09.630 --> 00:20:11.460
+Awesome. So, let's
+take a look here.
+
+00:20:11.460 --> 00:20:13.620
+So, you can see our simple
+router is coming here,
+
+00:20:13.620 --> 00:20:16.170
+where we're helping to decompose
+those different tasks.
+
+00:20:16.170 --> 00:20:18.300
+So, we look at the different
+intent as part of this,
+
+00:20:18.300 --> 00:20:20.490
+and then be able to run this,
+to be able to understand how
+
+00:20:20.490 --> 00:20:22.650
+to best use the model itself.
+
+00:20:22.650 --> 00:20:24.120
+So, once we've looked
+at those areas,
+
+00:20:24.120 --> 00:20:26.430
+I won't spend your time looking
+at code, but in this case,
+
+00:20:26.430 --> 00:20:29.280
+we'll understand and decompose
+these different pieces.
+
+00:20:29.280 --> 00:20:31.200
+So, once we have run this,
+we can actually see
+
+00:20:31.200 --> 00:20:32.700
+that the agent has gone through.
+
+00:20:32.700 --> 00:20:34.350
+It's looked at the
+different intents.
+
+00:20:34.350 --> 00:20:37.140
+It has broken down where we need
+to have this, and then be able
+
+00:20:37.140 --> 00:20:39.780
+to understand, as well, for
+things like for each task,
+
+00:20:39.780 --> 00:20:41.610
+which model is
+being recommended.
+
+00:20:41.610 --> 00:20:42.420
+So, here we go.
+
+00:20:42.420 --> 00:20:44.190
+We can say that the
+quality results here,
+
+00:20:44.190 --> 00:20:45.720
+you can see we're
+actually optimizing
+
+00:20:45.720 --> 00:20:47.460
+for quality in this case.
+
+00:20:47.460 --> 00:20:49.260
+So, we've got the
+recommendations coming
+
+00:20:49.260 --> 00:20:50.880
+through from this
+different skill.
+
+00:20:50.880 --> 00:20:53.610
+We've configured and deployed
+it as part of all of this.
+
+00:20:53.610 --> 00:20:55.140
+And then we can see out of here,
+
+00:20:55.140 --> 00:20:57.570
+our synthetic data has
+now become much bigger.
+
+00:20:57.570 --> 00:21:00.180
+So, we took on our 20
+original seed rows.
+
+00:21:00.180 --> 00:21:03.330
+We've created more synthetic
+data directly from Foundry.
+
+00:21:03.330 --> 00:21:05.940
+So, this is a great way of being
+able to just quickly use this
+
+00:21:05.940 --> 00:21:08.700
+to generate the data that you
+need to test your application.
+
+00:21:08.700 --> 00:21:11.520
+So, you can see I've got a
+target of 170 rows here.
+
+00:21:11.520 --> 00:21:13.950
+And then out of that 170,
+we're going to pick 50
+
+00:21:13.950 --> 00:21:15.330
+and use those correctly.
+
+00:21:15.330 --> 00:21:16.560
+So, here's that 50.
+
+00:21:16.560 --> 00:21:18.510
+I'm going to check out
+my different task types.
+
+00:21:18.510 --> 00:21:20.630
+And now, I'm going to
+go ahead and run this.
+
+00:21:20.630 --> 00:21:23.450
+So, once I've done these
+eval results, here we go.
+
+00:21:23.450 --> 00:21:24.710
+So, we can actually check out.
+
+00:21:24.710 --> 00:21:26.000
+So, where were we before?
+
+00:21:26.000 --> 00:21:27.770
+We were looking at our
+single frontier model,
+
+00:21:27.770 --> 00:21:29.600
+where we were just running 4.1.
+
+00:21:29.600 --> 00:21:31.760
+And now, we've run that
+multi-model router,
+
+00:21:31.760 --> 00:21:33.830
+and you can see the results
+have improved here.
+
+00:21:33.830 --> 00:21:35.780
+So, cost and task,
+we've really gotten
+
+00:21:35.780 --> 00:21:37.130
+down to where we need to be.
+
+00:21:37.130 --> 00:21:39.560
+Cost has significantly
+improved as a part of this.
+
+00:21:39.560 --> 00:21:40.970
+And then, we can
+still work on some
+
+00:21:40.970 --> 00:21:43.590
+of these other
+areas, like latency.
+
+00:21:45.470 --> 00:21:47.070
+Let's keep going.
+
+00:21:47.070 --> 00:21:49.830
+So, when you think about model
+selection, it's really coming
+
+00:21:49.830 --> 00:21:51.870
+down to these three
+different questions.
+
+00:21:51.870 --> 00:21:54.450
+So, oftentimes we think about,
+whether you're choosing
+
+00:21:54.450 --> 00:21:55.890
+that model, it's
+whether you think
+
+00:21:55.890 --> 00:21:57.480
+about that capability
+piece of it.
+
+00:21:57.480 --> 00:22:00.000
+Can it even do the job
+at all a part of this?
+
+00:22:00.000 --> 00:22:02.820
+We also want to think about,
+what's the bar for production.
+
+00:22:02.820 --> 00:22:04.620
+When we're looking at
+latency, when we're looking
+
+00:22:04.620 --> 00:22:06.450
+at cost optimization,
+can it do the job
+
+00:22:06.450 --> 00:22:08.130
+that you need inside
+of production?
+
+00:22:08.130 --> 00:22:10.980
+And then, of course, can you
+afford to run it at that scale?
+
+00:22:10.980 --> 00:22:13.530
+This is the other piece
+of when people often look
+
+00:22:13.530 --> 00:22:15.810
+at these different
+areas, it's like, costs
+
+00:22:15.810 --> 00:22:18.480
+and those pieces really
+play a big factor
+
+00:22:18.480 --> 00:22:20.070
+into how you scale up.
+
+00:22:20.070 --> 00:22:22.920
+So benchmarks, of course,
+can help you in this case.
+
+00:22:22.920 --> 00:22:25.470
+They can understand a little bit
+more about where you're going.
+
+00:22:25.470 --> 00:22:27.450
+But they shouldn't make
+the decision for you.
+
+00:22:27.450 --> 00:22:29.550
+And it's a really important
+piece of looking at this.
+
+00:22:29.550 --> 00:22:33.330
+The answer comes from your
+workload, what model to use,
+
+00:22:33.330 --> 00:22:36.240
+evaluate on your workload,
+not the beautiful benchmarks
+
+00:22:36.240 --> 00:22:38.160
+that are out there
+as part of this.
+
+00:22:38.160 --> 00:22:41.790
+So, let's go into evaluating and
+understanding a little bit more.
+
+00:22:41.790 --> 00:22:42.240
+Yina Arenas:
+Yeah.
+
+00:22:42.240 --> 00:22:45.090
+This is a great segue, because
+that's what we're saying, is,
+
+00:22:45.090 --> 00:22:47.220
+benchmarks is not
+necessarily what is going
+
+00:22:47.220 --> 00:22:49.680
+to lead your decision making
+in selecting a model.
+
+00:22:49.680 --> 00:22:52.260
+It's how do you
+evaluate on your data,
+
+00:22:52.260 --> 00:22:54.840
+and that should drive
+your model selection.
+
+00:22:54.840 --> 00:22:59.010
+As part of Foundry, we
+have an extensive model
+
+00:22:59.010 --> 00:23:00.600
+and evaluation catalog.
+
+00:23:00.600 --> 00:23:04.140
+But the key, again, key
+point of the session,
+
+00:23:04.140 --> 00:23:05.670
+start with evaluations.
+
+00:23:05.670 --> 00:23:06.720
+And in the improvement loop,
+
+00:23:06.720 --> 00:23:08.970
+the evaluation becomes
+your product spec.
+
+00:23:08.970 --> 00:23:12.150
+And as you're hill climbing,
+the evaluations become your IP.
+
+00:23:12.150 --> 00:23:15.570
+This is where you're going
+to have your data come in,
+
+00:23:15.570 --> 00:23:18.210
+your success criteria,
+and the definition
+
+00:23:18.210 --> 00:23:21.330
+of what good looks like for you.
+
+00:23:21.330 --> 00:23:24.090
+It defines which trade-offs
+are going to matter for you,
+
+00:23:24.090 --> 00:23:26.730
+and it's the measuring stick
+for every single change
+
+00:23:26.730 --> 00:23:28.500
+that you're going to
+make to the system,
+
+00:23:28.500 --> 00:23:32.040
+whether that change is something
+that you're making, or something
+
+00:23:32.040 --> 00:23:34.680
+that you have to react to, like,
+for example, model lifecycle.
+
+00:23:34.680 --> 00:23:36.870
+The model is no longer
+available in the catalog.
+
+00:23:36.870 --> 00:23:38.130
+Now what are you going to do?
+
+00:23:38.130 --> 00:23:41.940
+You have to continuously
+run this set of evaluations
+
+00:23:41.940 --> 00:23:45.420
+to make sure that as you bring
+in a new set of components
+
+00:23:45.420 --> 00:23:47.220
+to your solution,
+you can continue
+
+00:23:47.220 --> 00:23:49.740
+to run as you're expecting.
+
+00:23:49.740 --> 00:23:52.110
+So, for this specific
+scenario that we're using
+
+00:23:52.110 --> 00:23:54.030
+on the planner trip evaluation,
+
+00:23:54.030 --> 00:23:56.760
+things like correctness,
+policy compliance.
+
+00:23:56.760 --> 00:23:58.890
+And when I say "policy,"
+it's the companies,
+
+00:23:58.890 --> 00:24:00.360
+they always have
+a travel policy.
+
+00:24:00.360 --> 00:24:03.450
+You must only spend this amount
+of dollars per diem, per day.
+
+00:24:03.450 --> 00:24:06.360
+You only can have this --
+
+00:24:06.360 --> 00:24:08.190
+if there's more than
+a seven-hour trip,
+
+00:24:08.190 --> 00:24:10.200
+you can go do business or not.
+
+00:24:10.200 --> 00:24:12.720
+Right? All of these
+different sets of policies
+
+00:24:12.720 --> 00:24:14.970
+that are specific
+for the scenario.
+
+00:24:14.970 --> 00:24:17.520
+The tool call validity,
+the escalation accuracy,
+
+00:24:17.520 --> 00:24:20.850
+when does it need to go to a
+human, when not, and, of course,
+
+00:24:20.850 --> 00:24:23.160
+safety and privacy as well.
+
+00:24:23.160 --> 00:24:27.120
+Now, in Foundry, we have a set
+of evaluators that you can use.
+
+00:24:27.120 --> 00:24:31.680
+We have built-in evaluators that
+help measure around quality,
+
+00:24:31.680 --> 00:24:35.130
+things like, is the intent
+being adhered or not.
+
+00:24:35.130 --> 00:24:38.010
+It can help also measure
+built-in evaluators around risk
+
+00:24:38.010 --> 00:24:41.010
+and safety, and also
+agentic evaluators
+
+00:24:41.010 --> 00:24:42.390
+that will help you understand
+
+00:24:42.390 --> 00:24:47.010
+if the solution is actually
+following across multiple terms.
+
+00:24:47.010 --> 00:24:49.530
+We also have the ability to
+create custom evaluators,
+
+00:24:49.530 --> 00:24:52.260
+prompt code, and, as we
+are announcing today
+
+00:24:52.260 --> 00:24:55.360
+at the conference,
+rubric-based evaluators.
+
+00:24:57.780 --> 00:25:00.510
+Oh, we're announcing today,
+rubric-based evaluators.
+
+00:25:00.510 --> 00:25:02.200
+Let me show you that.
+
+00:25:04.440 --> 00:25:07.260
+Okay. This is the evaluation
+catalog in Foundry.
+
+00:25:07.260 --> 00:25:09.570
+These are all of the
+out-of-the-box evaluators
+
+00:25:09.570 --> 00:25:11.970
+and the different set of
+categories that I have here.
+
+00:25:11.970 --> 00:25:14.040
+If you come in and create an
+evaluator, you're going to see
+
+00:25:14.040 --> 00:25:17.280
+that you can have a rubric,
+prompt, or code-based evaluator.
+
+00:25:17.280 --> 00:25:19.800
+When I go with "Prompts,"
+it gives you the ability
+
+00:25:19.800 --> 00:25:22.050
+to select the prompt,
+get the code.
+
+00:25:22.050 --> 00:25:25.680
+When I go with "Rubric," I
+can select a specific agent.
+
+00:25:25.680 --> 00:25:27.630
+It's going to take the
+definition of that agent.
+
+00:25:27.630 --> 00:25:28.830
+And then it's going to generate.
+
+00:25:28.830 --> 00:25:30.930
+It's going to take a little bit,
+because it analyzes the agent.
+
+00:25:30.930 --> 00:25:34.860
+So, it's going to generate
+a specific set of rubrics
+
+00:25:34.860 --> 00:25:36.510
+and across different dimensions.
+
+00:25:36.510 --> 00:25:39.660
+So in this case, what I
+did is I took an agent,
+
+00:25:39.660 --> 00:25:42.000
+this is the concierge starter
+agent, the travel agent
+
+00:25:42.000 --> 00:25:43.140
+that we're working on.
+
+00:25:43.140 --> 00:25:46.320
+And then based on the definition
+and some of this seeding set
+
+00:25:46.320 --> 00:25:48.750
+of trajectories
+that the agent had,
+
+00:25:48.750 --> 00:25:51.480
+it generated seven different
+dimensions on this rubric.
+
+00:25:51.480 --> 00:25:53.940
+And I can come in further
+and do edits on it.
+
+00:25:53.940 --> 00:25:57.420
+So, for example, if I say, the
+policy compliance is actually
+
+00:25:57.420 --> 00:26:00.780
+more important, I'm not going
+to give it a weight of five;
+
+00:26:00.780 --> 00:26:02.430
+I'm going to give it
+a weight of eight,
+
+00:26:02.430 --> 00:26:04.410
+and then update this and run it.
+
+00:26:04.410 --> 00:26:06.630
+When I run it, I'm going to
+see all of the different sets
+
+00:26:06.630 --> 00:26:08.460
+of results on all of the
+different dimensions
+
+00:26:08.460 --> 00:26:12.240
+that I have, including both
+successes and not successes.
+
+00:26:12.240 --> 00:26:14.460
+And I can do further
+analysis of these results.
+
+00:26:14.460 --> 00:26:17.820
+And Foundry will show me a
+cluster analysis across all
+
+00:26:17.820 --> 00:26:19.650
+of the different sets of
+evaluators that run,
+
+00:26:19.650 --> 00:26:22.170
+where I can see, where did
+the agent hallucinate it,
+
+00:26:22.170 --> 00:26:27.690
+where it didn't produce
+an adequate final answer.
+
+00:26:27.690 --> 00:26:28.740
+And I can go deeper
+
+00:26:28.740 --> 00:26:32.490
+and understand what is
+happening across the system.
+
+00:26:32.490 --> 00:26:34.620
+Everything that
+you see on the UI,
+
+00:26:34.620 --> 00:26:37.320
+we can also do in
+code, of course.
+
+00:26:37.320 --> 00:26:38.970
+So, let's take a look at code.
+
+00:26:38.970 --> 00:26:39.840
+Naomi Moneypenny:
+Awesome.
+
+00:26:39.840 --> 00:26:42.420
+So, just to show you a little
+bit about our travel policy.
+
+00:26:42.420 --> 00:26:45.510
+Obviously, this is just for
+the example for our demo here.
+
+00:26:45.510 --> 00:26:47.940
+But you can see in this
+case, we've got a scale file
+
+00:26:47.940 --> 00:26:50.760
+that outlines clearly where
+the travel policy is.
+
+00:26:50.760 --> 00:26:52.740
+And that's basically what
+we're grounding against.
+
+00:26:52.740 --> 00:26:54.720
+And so, making sure that
+we have access to that
+
+00:26:54.720 --> 00:26:56.430
+to generate our rubric.
+
+00:26:56.430 --> 00:26:58.470
+So, in this case
+we've got a judge.
+
+00:26:58.470 --> 00:27:01.170
+We've got a generic judge
+that's operating here.
+
+00:27:01.170 --> 00:27:03.570
+So, we can see that that
+LLM is actually looking
+
+00:27:03.570 --> 00:27:06.240
+at answer quality, but we need
+to make sure that we have
+
+00:27:06.240 --> 00:27:09.240
+that five axes of the
+rubric to evaluate against.
+
+00:27:09.240 --> 00:27:11.010
+And so you can see
+it outlines here.
+
+00:27:11.010 --> 00:27:13.320
+We can check it out and make
+sure that it's part of here.
+
+00:27:13.320 --> 00:27:16.530
+So, right now, the score is the
+mean as part of this, too.
+
+00:27:16.530 --> 00:27:19.890
+And so, it doesn't really
+qualify everything that we need.
+
+00:27:19.890 --> 00:27:22.740
+So, in this case, we're going to
+rerun with both of those agents
+
+00:27:22.740 --> 00:27:25.770
+with all of those three
+evaluators as part of this, too.
+
+00:27:25.770 --> 00:27:27.570
+You can see here, it's
+grinding through,
+
+00:27:27.570 --> 00:27:28.950
+crunching through all the data,
+
+00:27:28.950 --> 00:27:31.110
+making sure we have
+that eval piece done.
+
+00:27:31.110 --> 00:27:34.380
+And then, here's our scorecard
+that gets resulted at the end.
+
+00:27:34.380 --> 00:27:37.260
+So, again, comparing to
+where we were, versus now;
+
+00:27:37.260 --> 00:27:39.450
+where we're going to
+be in the future, here.
+
+00:27:39.450 --> 00:27:41.940
+So, you can see in this case,
+we've got policy adherence.
+
+00:27:41.940 --> 00:27:43.680
+And before, we were
+striking it red.
+
+00:27:43.680 --> 00:27:44.790
+Still pretty red on this,
+
+00:27:44.790 --> 00:27:47.610
+but you can see now our
+multi-model router has actually
+
+00:27:47.610 --> 00:27:50.340
+made that even better from
+a quality perspective.
+
+00:27:50.340 --> 00:27:52.320
+But our target has
+been missed still.
+
+00:27:52.320 --> 00:27:54.270
+So, we still got a bit
+of hill climbing to do,
+
+00:27:54.270 --> 00:27:56.340
+but we're definitely
+making an improvement.
+
+00:27:56.340 --> 00:27:58.830
+But we can see that that
+LLM judge has not been able
+
+00:27:58.830 --> 00:28:01.290
+to take it on from a
+generic perspective.
+
+00:28:01.290 --> 00:28:03.260
+So, policy, that's the one
+that really matters here.
+
+00:28:03.260 --> 00:28:04.290
+Yina Arenas: There's an
+important call-out there,
+
+00:28:04.290 --> 00:28:06.360
+which is, like, at the
+beginning, we did an assessment
+
+00:28:06.360 --> 00:28:08.580
+on quality, on just
+baseline evaluators.
+
+00:28:08.580 --> 00:28:11.220
+It gave us like, okay,
+you're about halfway there.
+
+00:28:11.220 --> 00:28:13.470
+And then we looked at, is
+it really following the
+
+00:28:13.470 --> 00:28:15.060
+travel policy?
+
+00:28:15.060 --> 00:28:15.930
+And it wasn't.
+
+00:28:15.930 --> 00:28:18.390
+We needed to create a
+custom evaluator specific
+
+00:28:18.390 --> 00:28:20.370
+for that travel policy to see
+
+00:28:20.370 --> 00:28:23.790
+if it is following the
+policy continuously or not.
+
+00:28:23.790 --> 00:28:26.970
+And this is where it says,
+okay, now that particular angle
+
+00:28:26.970 --> 00:28:29.100
+of the scenario is not being
+met, and you need to figure
+
+00:28:29.100 --> 00:28:31.410
+out, how do you optimize
+for that outcome.
+
+00:28:31.410 --> 00:28:34.590
+Right? That's where the quality
+definition that you have is
+
+00:28:34.590 --> 00:28:37.530
+so important and might
+also shift over time
+
+00:28:37.530 --> 00:28:40.260
+as you get more details
+on your scenario.
+
+00:28:40.260 --> 00:28:41.250
+Naomi Moneypenny:
+Awesome.
+
+00:28:41.250 --> 00:28:42.570
+So, let's keep going.
+
+00:28:42.570 --> 00:28:44.430
+I think that's
+part of this, too.
+
+00:28:44.430 --> 00:28:47.010
+So, we've got our custom
+evaluator essentially here.
+
+00:28:47.010 --> 00:28:50.110
+And now our hill climb
+has to continue.
+
+00:28:53.040 --> 00:28:53.580
+All right.
+
+00:28:53.580 --> 00:28:55.200
+So, let's talk about
+optimization.
+
+00:28:55.200 --> 00:28:58.770
+So, this is really that section
+where we find the biggest wins.
+
+00:28:58.770 --> 00:29:00.450
+This is across your
+whole application.
+
+00:29:00.450 --> 00:29:02.310
+We've gone through these
+different segments.
+
+00:29:02.310 --> 00:29:04.350
+And so, we want to make
+sure that cost reduction
+
+00:29:04.350 --> 00:29:07.890
+in AI rarely comes from just
+choosing a cheaper model.
+
+00:29:07.890 --> 00:29:09.540
+I see customers doing
+this all the time.
+
+00:29:09.540 --> 00:29:11.520
+I'm sure you all have
+tried this as well.
+
+00:29:11.520 --> 00:29:13.320
+Don't think about it as
+being a cheaper model.
+
+00:29:13.320 --> 00:29:15.510
+It is about the
+architectural decisions
+
+00:29:15.510 --> 00:29:18.630
+that you are making inside
+of your application.
+
+00:29:18.630 --> 00:29:21.000
+So, optimization is
+that hill climb.
+
+00:29:21.000 --> 00:29:23.550
+You can see that we've got the
+categories on the side, here,
+
+00:29:23.550 --> 00:29:26.640
+that helps us to understand
+these multiple dimensions.
+
+00:29:26.640 --> 00:29:29.070
+So, we're not just pushing
+on cost in this case.
+
+00:29:29.070 --> 00:29:30.570
+We're actually
+pushing on quality
+
+00:29:30.570 --> 00:29:32.100
+or just pushing on latency.
+
+00:29:32.100 --> 00:29:35.100
+We need to find a way to
+improve the system meaningfully
+
+00:29:35.100 --> 00:29:36.990
+across all of these dimensions.
+
+00:29:36.990 --> 00:29:39.240
+And so, that's why we want
+to think about optimization
+
+00:29:39.240 --> 00:29:41.610
+as a really iterative
+process through this.
+
+00:29:41.610 --> 00:29:43.890
+You start off with things
+like prompt improvements.
+
+00:29:43.890 --> 00:29:46.380
+You're going to carry on with
+better context, and then,
+
+00:29:46.380 --> 00:29:49.680
+essentially, have decomposition
+routing as we showed and then,
+
+00:29:49.680 --> 00:29:53.280
+of course, deeper architectural
+latency here, levers here.
+
+00:29:53.280 --> 00:29:55.770
+So, you want to think about
+maybe the goal is not having a
+
+00:29:55.770 --> 00:29:57.210
+perfect endpoint.
+
+00:29:57.210 --> 00:30:00.090
+It's really about how do we
+make that system really operate
+
+00:30:00.090 --> 00:30:04.500
+and measurable faster and better
+with every single choice.
+
+00:30:04.500 --> 00:30:07.470
+So, when teams talk about AI
+cost, and I'm sure you all think
+
+00:30:07.470 --> 00:30:10.200
+about cost, can I show of
+hands folks who are thinking
+
+00:30:10.200 --> 00:30:11.430
+about costs in
+their applications?
+
+00:30:11.430 --> 00:30:14.010
+Almost, I would say, at least
+three-quarters of the room.
+
+00:30:14.010 --> 00:30:15.450
+The rest of you are
+obviously ballers
+
+00:30:15.450 --> 00:30:17.070
+for all of your AI token use.
+
+00:30:17.070 --> 00:30:18.330
+So, it's all good.
+
+00:30:18.330 --> 00:30:21.900
+So, when teams talk about
+this AI cost piece of this,
+
+00:30:21.900 --> 00:30:24.330
+the instinct is to ask
+for that cheaper model.
+
+00:30:24.330 --> 00:30:26.970
+But in practice, it's actually
+the biggest wins are coming
+
+00:30:26.970 --> 00:30:28.470
+from those system designs.
+
+00:30:28.470 --> 00:30:31.680
+We have a full stack of
+levers inside of Foundry.
+
+00:30:31.680 --> 00:30:33.690
+And so, I often think
+about, here, hey,
+
+00:30:33.690 --> 00:30:35.430
+can I do routing by workload?
+
+00:30:35.430 --> 00:30:37.410
+Can I make sure I'm
+using batch inference?
+
+00:30:37.410 --> 00:30:38.820
+Right? That can save
+you lots of money
+
+00:30:38.820 --> 00:30:40.020
+as part of what we're doing.
+
+00:30:40.020 --> 00:30:41.460
+You can think about
+that async jobs.
+
+00:30:41.460 --> 00:30:44.160
+We've got structured outputs
+here for wasted tokens,
+
+00:30:44.160 --> 00:30:46.860
+caching here to help you
+avoid those repeated work,
+
+00:30:46.860 --> 00:30:49.980
+and distillation that brings
+down some of the cost as well.
+
+00:30:49.980 --> 00:30:52.290
+The important point is,
+for every single one
+
+00:30:52.290 --> 00:30:54.870
+of these levers,
+those gains compound.
+
+00:30:54.870 --> 00:30:56.730
+So, think about it
+across that spectrum.
+
+00:30:56.730 --> 00:30:59.280
+You're basically not just
+doing one magical fix,
+
+00:30:59.280 --> 00:31:01.080
+as much as we would all
+love that to happen.
+
+00:31:01.080 --> 00:31:03.330
+You basically need an
+architecture that helps you
+
+00:31:03.330 --> 00:31:05.850
+to take advantage of that
+and lets you stack all
+
+00:31:05.850 --> 00:31:08.310
+of those optimizations together.
+
+00:31:08.310 --> 00:31:10.110
+So, that brings me into caching.
+
+00:31:10.110 --> 00:31:12.030
+Caching is a big
+area for all of us.
+
+00:31:12.030 --> 00:31:14.520
+We've been on this journey
+for implicit caching.
+
+00:31:14.520 --> 00:31:16.890
+We've been into this
+expanding out, as we think
+
+00:31:16.890 --> 00:31:18.510
+about different areas of caching
+
+00:31:18.510 --> 00:31:20.520
+and how they've been
+improved over time.
+
+00:31:20.520 --> 00:31:22.290
+And so today, we're
+really excited
+
+00:31:22.290 --> 00:31:24.030
+to have an optimization
+that's coming
+
+00:31:24.030 --> 00:31:26.130
+to caching that's
+new and different.
+
+00:31:26.130 --> 00:31:27.510
+So, caching has really evolved
+
+00:31:27.510 --> 00:31:29.310
+from that low-level
+optimization.
+
+00:31:29.310 --> 00:31:30.900
+And we want to make
+sure as part of this,
+
+00:31:30.900 --> 00:31:33.180
+we have explicit prompt caching.
+
+00:31:33.180 --> 00:31:35.340
+Explicit prompt caching
+is our newest service
+
+00:31:35.340 --> 00:31:38.190
+where we're really looking
+at core system capabilities
+
+00:31:38.190 --> 00:31:39.870
+into that AI platform.
+
+00:31:39.870 --> 00:31:42.780
+And so, it's not just about
+here's one lever we can pull,
+
+00:31:42.780 --> 00:31:44.850
+but instead about
+understanding not just
+
+00:31:44.850 --> 00:31:47.370
+where the request lands, but
+delivering, where we can,
+
+00:31:47.370 --> 00:31:49.620
+a consistent and
+guaranteed performance,
+
+00:31:49.620 --> 00:31:52.260
+make sure that you have
+the savings that you need.
+
+00:31:52.260 --> 00:31:55.560
+Now, the cool thing here, is you
+have that Azure context cache.
+
+00:31:55.560 --> 00:31:58.200
+And so, this is not owned by
+us, the inference provider.
+
+00:31:58.200 --> 00:32:00.030
+This is owned by you.
+
+00:32:00.030 --> 00:32:02.760
+Exciting, right, that you
+have this context cache.
+
+00:32:02.760 --> 00:32:03.900
+It is your data.
+
+00:32:03.900 --> 00:32:05.460
+You get to look at
+your deployments
+
+00:32:05.460 --> 00:32:07.260
+and your savings
+as part of this.
+
+00:32:07.260 --> 00:32:08.520
+And so, you can think about this
+
+00:32:08.520 --> 00:32:10.710
+as really having better
+privacy controls.
+
+00:32:10.710 --> 00:32:12.570
+It has better
+operational availability
+
+00:32:12.570 --> 00:32:14.250
+across long-running tasks.
+
+00:32:14.250 --> 00:32:16.680
+And it is available for
+private preview today.
+
+00:32:16.680 --> 00:32:18.210
+Exciting? Yes?
+
+00:32:18.210 --> 00:32:19.830
+Yes. Cool.
+[APPLAUSE]
+
+00:32:19.830 --> 00:32:22.140
+Awesome. I love it.
+
+00:32:22.140 --> 00:32:23.490
+So, I'm excited about this one.
+
+00:32:23.490 --> 00:32:24.660
+It's a big piece of this.
+
+00:32:24.660 --> 00:32:25.080
+All right.
+
+00:32:25.080 --> 00:32:26.790
+Let's carry on on our journey.
+
+00:32:26.790 --> 00:32:28.680
+Latency. So, we
+think about that.
+
+00:32:28.680 --> 00:32:31.470
+It's not just about, again,
+picking that faster model.
+
+00:32:31.470 --> 00:32:34.050
+It's actually about how
+we design a faster system
+
+00:32:34.050 --> 00:32:35.460
+as part of all of this.
+
+00:32:35.460 --> 00:32:37.560
+And so, you can improve
+the responsiveness here
+
+00:32:37.560 --> 00:32:38.850
+at multiple stages.
+
+00:32:38.850 --> 00:32:41.190
+And so, we want to make sure
+that you can route each task,
+
+00:32:41.190 --> 00:32:42.570
+essentially, to a faster model.
+
+00:32:42.570 --> 00:32:44.220
+You saw us demo
+some of that, too.
+
+00:32:44.220 --> 00:32:47.070
+You can think about reserve
+capacity with things like PTU
+
+00:32:47.070 --> 00:32:49.830
+as part of this, consistency,
+having that consistency
+
+00:32:49.830 --> 00:32:51.150
+under a large workload.
+
+00:32:51.150 --> 00:32:53.070
+And then, of course,
+use priority processing
+
+00:32:53.070 --> 00:32:55.020
+where you need that
+toll road, basically,
+
+00:32:55.020 --> 00:32:57.090
+that helps you quickly
+with low latency.
+
+00:32:57.090 --> 00:32:58.110
+And so, we want to make sure
+
+00:32:58.110 --> 00:33:01.140
+that you can remove wasted
+work with prompt caching.
+
+00:33:01.140 --> 00:33:03.000
+We talked about predicted
+outputs, as well
+
+00:33:03.000 --> 00:33:05.760
+as structured outputs, and
+tighter token budgets.
+
+00:33:05.760 --> 00:33:08.160
+So, again, for all of those
+of you on that token budget,
+
+00:33:08.160 --> 00:33:09.330
+the important part here.
+
+00:33:09.330 --> 00:33:11.640
+Streaming, of course, helps
+us here with making sure
+
+00:33:11.640 --> 00:33:12.960
+that we have perceived speed.
+
+00:33:12.960 --> 00:33:15.420
+And then, API gateways, as
+part of this, can help you
+
+00:33:15.420 --> 00:33:18.630
+to optimize that traffic
+across all of these regions.
+
+00:33:18.630 --> 00:33:21.660
+So, the whole idea here, that
+whole premise in all of this is
+
+00:33:21.660 --> 00:33:25.260
+to make sure production
+latency is engineered for.
+
+00:33:25.260 --> 00:33:28.080
+It is not something you
+just hope and wish for.
+
+00:33:28.080 --> 00:33:30.570
+Really important
+piece of all of this.
+
+00:33:30.570 --> 00:33:31.110
+All right.
+
+00:33:31.110 --> 00:33:33.330
+Last one. Let's
+talk about quality.
+
+00:33:33.330 --> 00:33:34.680
+So, quality levers.
+
+00:33:34.680 --> 00:33:35.760
+You've got an idea now.
+
+00:33:35.760 --> 00:33:36.720
+You've got lots of levers.
+
+00:33:36.720 --> 00:33:37.860
+You can pull all these levers,
+
+00:33:37.860 --> 00:33:40.200
+do amazing things inside
+of your applications.
+
+00:33:40.200 --> 00:33:42.990
+And so, in this case, where
+quality is our constraint,
+
+00:33:42.990 --> 00:33:45.630
+there's really a progression
+of levers that you can use.
+
+00:33:45.630 --> 00:33:48.000
+You can think about how we go
+from lightweight, essentially,
+
+00:33:48.000 --> 00:33:50.430
+to heavyweight on the
+other side of the slide.
+
+00:33:50.430 --> 00:33:51.780
+So, in this case, prompt design.
+
+00:33:51.780 --> 00:33:53.610
+Number one thing I would
+share is, always start
+
+00:33:53.610 --> 00:33:54.570
+with prompt design.
+
+00:33:54.570 --> 00:33:57.030
+Make sure that you basically are
+doing something that's faster
+
+00:33:57.030 --> 00:33:58.560
+and cheapest as you can do.
+
+00:33:58.560 --> 00:34:00.540
+And then you can basically
+ground that system
+
+00:34:00.540 --> 00:34:02.700
+with the retrieval or
+tool use other pieces
+
+00:34:02.700 --> 00:34:04.200
+that you need as part of this.
+
+00:34:04.200 --> 00:34:06.540
+If you need to go stronger,
+then you can go into things
+
+00:34:06.540 --> 00:34:07.980
+like fine-tuning
+and distillation.
+
+00:34:07.980 --> 00:34:09.810
+We'll talk about those
+in just a second.
+
+00:34:09.810 --> 00:34:12.480
+And for really highly
+specialized phases, you could go
+
+00:34:12.480 --> 00:34:15.060
+into your domain and have
+a custom model training
+
+00:34:15.060 --> 00:34:16.140
+in this case.
+
+00:34:16.140 --> 00:34:19.050
+The key is not to jump to
+the heaviest solution first.
+
+00:34:19.050 --> 00:34:20.040
+I know it's tempting.
+
+00:34:20.040 --> 00:34:20.850
+Don't do it.
+
+00:34:20.850 --> 00:34:22.620
+Start with the
+prompt pieces first.
+
+00:34:22.620 --> 00:34:24.630
+Go all the way to the
+other end of the spectrum.
+
+00:34:24.630 --> 00:34:25.620
+Use as you need.
+
+00:34:25.620 --> 00:34:28.560
+And, again, incrementally
+stack all of those benefits.
+
+00:34:28.560 --> 00:34:30.480
+Yina Arenas: And we're going
+to start with the heaviest.
+
+00:34:30.480 --> 00:34:31.410
+We're going to do the model one.
+
+00:34:31.410 --> 00:34:32.880
+Naomi Moneypenny:
+Of course.
+
+00:34:32.880 --> 00:34:35.370
+Yina Arenas:
+But there's a full session
+
+00:34:35.370 --> 00:34:36.990
+on agent optimization
+
+00:34:36.990 --> 00:34:38.670
+that I totally recommend
+that you go to.
+
+00:34:38.670 --> 00:34:43.890
+We're going to show how you can
+automatically analyze what is
+
+00:34:43.890 --> 00:34:45.540
+happening with your agent,
+
+00:34:45.540 --> 00:34:47.670
+look at how you can
+optimize your prompts
+
+00:34:47.670 --> 00:34:49.860
+and how you can
+optimize your tools.
+
+00:34:49.860 --> 00:34:53.250
+Please also go to
+that session as well.
+
+00:34:53.250 --> 00:34:57.150
+Okay. So, for the policy
+itself, what we're going
+
+00:34:57.150 --> 00:35:00.840
+to do is, we're going to use
+distillation and fine-tuning
+
+00:35:00.840 --> 00:35:04.710
+to improve on that travel
+policy adherence issue
+
+00:35:04.710 --> 00:35:06.000
+that we saw before.
+
+00:35:06.000 --> 00:35:07.110
+Why we're doing this?
+
+00:35:07.110 --> 00:35:09.780
+Well, because we're going
+to take this knowledge
+
+00:35:09.780 --> 00:35:11.220
+of the travel policy
+and we're going
+
+00:35:11.220 --> 00:35:12.660
+to embed it into the model.
+
+00:35:12.660 --> 00:35:15.960
+We're going to use a bigger
+teacher model and then teach
+
+00:35:15.960 --> 00:35:17.760
+that into a smaller
+model to make sure
+
+00:35:17.760 --> 00:35:20.070
+that we can maintain
+the cost optimization
+
+00:35:20.070 --> 00:35:22.350
+that we want to achieve.
+
+00:35:22.350 --> 00:35:26.760
+Let's see that in code.
+
+00:35:26.760 --> 00:35:30.210
+So, first of all, fine-tuning
+is super simple.
+
+00:35:30.210 --> 00:35:33.870
+For the set of models that we
+have as part of supervised --
+
+00:35:33.870 --> 00:35:35.130
+we actually have
+multiple techniques.
+
+00:35:35.130 --> 00:35:36.390
+We have supervised fine-tuning
+
+00:35:36.390 --> 00:35:37.710
+that are preference
+optimization.
+
+00:35:37.710 --> 00:35:38.670
+We have RL.
+
+00:35:38.670 --> 00:35:39.960
+We have all of these as part
+
+00:35:39.960 --> 00:35:42.180
+of a managed service
+within Foundry.
+
+00:35:42.180 --> 00:35:44.670
+It's a few clicks in
+the UI or a few lines
+
+00:35:44.670 --> 00:35:47.130
+of code in your Python code.
+
+00:35:47.130 --> 00:35:49.890
+Let me just quickly share
+how that looks like.
+
+00:35:49.890 --> 00:35:51.990
+First, you're selecting
+your endpoint.
+
+00:35:51.990 --> 00:35:54.780
+Then, you're selecting
+your data set.
+
+00:35:54.780 --> 00:35:57.480
+Then, you're also looking at
+what is the set of models,
+
+00:35:57.480 --> 00:35:59.730
+what is your base model,
+what is your training model.
+
+00:35:59.730 --> 00:36:02.730
+And then, within less
+than 100 lines of code,
+
+00:36:02.730 --> 00:36:08.190
+you have the job ready to
+submit for a training run.
+
+00:36:08.190 --> 00:36:10.342
+Once you do that, so what we did
+
+00:36:10.354 --> 00:36:12.720
+here is, we did
+the training run,
+
+00:36:12.720 --> 00:36:18.200
+and then we went in and did
+full deployment of that
+
+00:36:18.200 --> 00:36:19.430
+into a developer tier.
+
+00:36:19.430 --> 00:36:20.570
+Developer tier is a way
+
+00:36:20.570 --> 00:36:22.910
+into which you can
+try multiple models
+
+00:36:22.910 --> 00:36:25.610
+that you are fine-tuning,
+deploy them in.
+
+00:36:25.610 --> 00:36:26.900
+It's super cheap to run.
+
+00:36:26.900 --> 00:36:31.710
+And then, you can test them
+against your particular data.
+
+00:36:31.710 --> 00:36:32.730
+In this particular case,
+
+00:36:32.730 --> 00:36:36.180
+we see these are the two
+prior runs that we've done.
+
+00:36:36.180 --> 00:36:41.790
+And then, with the fine-tuned
+model in a 1.2 GPT-4.1 Nano,
+
+00:36:41.790 --> 00:36:45.380
+we got all the way up into
+the quality that we wanted
+
+00:36:45.380 --> 00:36:46.880
+for that particular scenario.
+
+00:36:46.880 --> 00:36:51.950
+So, in a very simple fine-tuning
+run, we got to the quality
+
+00:36:51.950 --> 00:36:54.090
+that we wanted, and the
+output that we wanted,
+
+00:36:54.090 --> 00:36:56.400
+on that particular set.
+
+00:36:56.400 --> 00:36:59.160
+We can also see this is the
+fine-tuning experience, here
+
+00:36:59.160 --> 00:37:01.650
+in Foundry, where we
+can see the loss curve
+
+00:37:01.650 --> 00:37:04.970
+and the token accuracy that we
+got from that particular run.
+
+00:37:04.970 --> 00:37:08.030
+And then, we can continuously
+fine-tune, basically,
+
+00:37:08.030 --> 00:37:11.000
+as we get new sets of
+trajectories coming in,
+
+00:37:11.000 --> 00:37:12.770
+the model will
+continuously tune.
+
+00:37:12.770 --> 00:37:15.260
+And then, we can see all of the
+different checkpoints, and look
+
+00:37:15.260 --> 00:37:19.320
+at the checkpoints, and bring
+in checkpoints as well.
+
+00:37:19.320 --> 00:37:28.290
+Okay. Let's go back to
+the specific set of --
+
+00:37:28.290 --> 00:37:29.820
+this is where we are in terms
+
+00:37:29.820 --> 00:37:32.040
+of the optimization
+of the scenario.
+
+00:37:32.040 --> 00:37:35.220
+But in terms of Foundry, I
+mentioned, we have multiple ways
+
+00:37:35.220 --> 00:37:37.710
+into which you can
+post-train models.
+
+00:37:37.710 --> 00:37:41.850
+There's managed fine-tuning,
+which is what I showed just now,
+
+00:37:41.850 --> 00:37:43.290
+which is the simplest
+way to do it.
+
+00:37:43.290 --> 00:37:45.840
+You bring your data, and
+Foundry handles everything
+
+00:37:45.840 --> 00:37:47.760
+that there is, the data
+preparation, the training,
+
+00:37:47.760 --> 00:37:49.410
+the monitoring, the deployment.
+
+00:37:49.410 --> 00:37:52.890
+It has the highest
+likelihood of success
+
+00:37:52.890 --> 00:37:54.750
+if you are not a machine-
+learning professional
+
+00:37:54.750 --> 00:37:57.720
+or a data scientist that
+has done ML in the past.
+
+00:37:57.720 --> 00:37:59.520
+And it's very low-effort.
+
+00:37:59.520 --> 00:38:02.040
+You can pick whether you want
+to do supervised fine-tuning,
+
+00:38:02.040 --> 00:38:05.420
+direct reference optimization,
+or reinforced fine-tuning.
+
+00:38:05.420 --> 00:38:07.760
+We also have serverless API.
+
+00:38:07.760 --> 00:38:12.510
+Oh. Oops. We also
+have a serverless API
+
+00:38:12.510 --> 00:38:15.480
+that we're launching
+here as part of Build,
+
+00:38:15.480 --> 00:38:18.540
+where you can have
+control of your rewards,
+
+00:38:18.540 --> 00:38:20.130
+and the hyper parameters,
+
+00:38:20.130 --> 00:38:22.410
+and Foundry handles
+the infrastructure.
+
+00:38:22.410 --> 00:38:25.320
+It produces a set of lower
+weights, where, then,
+
+00:38:25.320 --> 00:38:28.530
+we overlay on top of the set
+of deployments that we have.
+
+00:38:28.530 --> 00:38:30.750
+There's no cluster management
+that you have to do.
+
+00:38:30.750 --> 00:38:33.840
+And finally, we also
+offer full-control RL,
+
+00:38:33.840 --> 00:38:37.110
+where you can have full
+ownership of the code,
+
+00:38:37.110 --> 00:38:40.380
+the distributed strategies that
+you're using, the algorithms
+
+00:38:40.380 --> 00:38:44.190
+that you're bringing, what type
+of GPU clusters you're using.
+
+00:38:44.190 --> 00:38:46.710
+And then, Foundry manages
+for you the compute
+
+00:38:46.710 --> 00:38:47.520
+and the orchestration.
+
+00:38:47.520 --> 00:38:49.950
+And you can use frameworks
+like Slime or VERL
+
+00:38:49.950 --> 00:38:51.570
+in order to do the training.
+
+00:38:51.570 --> 00:38:53.460
+Of course, my recommendation
+is that you start
+
+00:38:53.460 --> 00:38:55.860
+at the simplest one, see what
+you get, because, again,
+
+00:38:55.860 --> 00:38:58.320
+you have the evaluations.
+
+00:38:58.320 --> 00:39:01.230
+This is the importance of
+defining your success criteria.
+
+00:39:01.230 --> 00:39:05.650
+And then, move towards the right
+as your scenario demands.
+
+00:39:07.470 --> 00:39:11.850
+Once you have your customized
+model, then you can bring it
+
+00:39:11.850 --> 00:39:13.350
+in Foundry and run it.
+
+00:39:13.350 --> 00:39:16.680
+If it is an open-source model,
+we have Foundry-managed compute
+
+00:39:16.680 --> 00:39:18.930
+and the partnership
+that we announced
+
+00:39:18.930 --> 00:39:22.110
+in GA today with Fireworks.
+
+00:39:22.110 --> 00:39:26.370
+Or you can deploy it on
+your own compute clusters.
+
+00:39:26.370 --> 00:39:29.220
+Speaking of Fireworks,
+
+00:39:29.220 --> 00:39:31.050
+we are announcing the
+general availability,
+
+00:39:31.050 --> 00:39:34.440
+and that what it brings to
+customers is zero-day access
+
+00:39:34.440 --> 00:39:36.870
+to optimize frontier models,
+
+00:39:36.870 --> 00:39:40.020
+the best-in-class inferencing
+performance, and making sure
+
+00:39:40.020 --> 00:39:42.630
+that it has that native
+integration into Azure
+
+00:39:42.630 --> 00:39:44.040
+for that enterprise foundation.
+
+00:39:44.040 --> 00:39:46.170
+So, that's the key
+differentiation when it comes
+
+00:39:46.170 --> 00:39:48.494
+to leveraging
+Fireworks directly,
+
+00:39:48.506 --> 00:39:50.430
+versus leveraging Fireworks
+
+00:39:50.430 --> 00:39:54.240
+on Foundry, which means that it
+deeply integrates across all
+
+00:39:54.240 --> 00:39:57.970
+of the enterprise
+stack that we offer.
+
+00:39:58.980 --> 00:40:01.470
+We also have Managed Compute
+in Microsoft Foundry,
+
+00:40:01.470 --> 00:40:04.170
+which basically is for teams
+that are standardizing
+
+00:40:04.170 --> 00:40:06.210
+on open models and making
+sure that they want
+
+00:40:06.210 --> 00:40:08.070
+to have a broad model selection.
+
+00:40:08.070 --> 00:40:11.400
+This is where our partnership
+with Hugging Face shines in,
+
+00:40:11.400 --> 00:40:14.310
+all of the different sets of
+models that we are coming
+
+00:40:14.310 --> 00:40:16.320
+in from, thousands of
+models that are coming
+
+00:40:16.320 --> 00:40:20.010
+in from Hugging Face, from
+NVIDIA, from Microsoft Research.
+
+00:40:20.010 --> 00:40:23.430
+Then you can use optimized
+runtimes like vLLM, SGLang,
+
+00:40:23.430 --> 00:40:26.700
+then NVIDIA NIM's runtime as
+well for efficient execution,
+
+00:40:26.700 --> 00:40:29.580
+and then, have all of the
+flexibility on compute,
+
+00:40:29.580 --> 00:40:31.380
+where Foundry manages
+the accelerators.
+
+00:40:31.380 --> 00:40:33.630
+And you can bring
+your own capacity
+
+00:40:33.630 --> 00:40:38.310
+to have this seamlessly
+integrated across the stack.
+
+00:40:38.310 --> 00:40:39.420
+It uses the same auth.
+
+00:40:39.420 --> 00:40:41.040
+It uses the same API endpoints.
+
+00:40:41.040 --> 00:40:42.660
+It uses the same SDK.
+
+00:40:42.660 --> 00:40:46.930
+And then, you don't have to
+manage all of that separately.
+
+00:40:48.350 --> 00:40:48.800
+Naomi Moneypenny:
+All right.
+
+00:40:48.800 --> 00:40:51.020
+We can talk about operations
+a little bit more.
+
+00:40:51.020 --> 00:40:53.540
+So, this is where our AI
+systems are really looking
+
+00:40:53.540 --> 00:40:55.140
+like production systems.
+
+00:40:55.140 --> 00:40:57.210
+And so, once you have
+selection, evaluation,
+
+00:40:57.210 --> 00:41:00.330
+and optimization done, the next
+challenge is really making sure
+
+00:41:00.330 --> 00:41:02.790
+that we are operating that
+system with discipline.
+
+00:41:02.790 --> 00:41:04.590
+So, that really means
+observability.
+
+00:41:04.590 --> 00:41:06.930
+And so, I won't show too
+much of a demo here.
+
+00:41:06.930 --> 00:41:07.500
+It's in there.
+
+00:41:07.500 --> 00:41:09.450
+It's available for you
+in the Foundry portal
+
+00:41:09.450 --> 00:41:10.530
+with lots of goodness.
+
+00:41:10.530 --> 00:41:13.140
+But really, when you're taking
+something from prototype
+
+00:41:13.140 --> 00:41:14.700
+into production, really,
+
+00:41:14.700 --> 00:41:17.880
+that observability piece is
+critical to what you're doing.
+
+00:41:17.880 --> 00:41:20.520
+And so, we want to make sure we
+understand not just what our AI
+
+00:41:20.520 --> 00:41:23.400
+system is actually outputting
+here, but ensuring, essentially,
+
+00:41:23.400 --> 00:41:24.960
+as part of this, we are tracing,
+
+00:41:24.960 --> 00:41:26.790
+we're evaluating,
+and monitoring.
+
+00:41:26.790 --> 00:41:27.990
+And so tracing lets you see
+
+00:41:27.990 --> 00:41:30.270
+that end-to-end visibility
+across prompts.
+
+00:41:30.270 --> 00:41:33.120
+We also make sure that tracing
+is giving you that information
+
+00:41:33.120 --> 00:41:34.320
+that you need for tools.
+
+00:41:34.320 --> 00:41:36.900
+Evaluation, of course,
+lets us understand quality
+
+00:41:36.900 --> 00:41:38.520
+and safety and agent behavior.
+
+00:41:38.520 --> 00:41:40.980
+And then monitoring, of
+course, is with Azure Monitor.
+
+00:41:40.980 --> 00:41:44.100
+You can see that brings in the
+real-time signals that you need
+
+00:41:44.100 --> 00:41:46.560
+for cost and latency and
+all of those pieces.
+
+00:41:46.560 --> 00:41:50.310
+So, if you want to make sure
+your AI system is really great,
+
+00:41:50.310 --> 00:41:52.920
+we want to think about this
+from a confidence perspective,
+
+00:41:52.920 --> 00:41:55.050
+really think about
+building observability
+
+00:41:55.050 --> 00:41:57.110
+into your loop straight away.
+
+00:41:57.110 --> 00:41:59.030
+Now, we have a great demo
+that's part of this, too.
+
+00:41:59.030 --> 00:42:00.290
+We won't go through
+this too much.
+
+00:42:00.290 --> 00:42:02.330
+But just to show you what
+this looks like very quickly
+
+00:42:02.330 --> 00:42:03.470
+on the Foundry portal.
+
+00:42:03.470 --> 00:42:05.270
+You can see these
+directly in here.
+
+00:42:05.270 --> 00:42:06.980
+You can see the different areas.
+
+00:42:06.980 --> 00:42:09.830
+And in this case, I'm picking
+on the time to the last byte.
+
+00:42:09.830 --> 00:42:12.020
+And I'm actually going to ask
+Copilot directly in here,
+
+00:42:12.020 --> 00:42:13.370
+how do I improve this?
+
+00:42:13.370 --> 00:42:15.350
+And it actually shows it
+to me directly in here.
+
+00:42:15.350 --> 00:42:17.720
+So, just a really great way of
+being able to check out all
+
+00:42:17.720 --> 00:42:19.100
+of these different capabilities
+
+00:42:19.100 --> 00:42:22.650
+and having Copilot assistance
+directly in here, too.
+
+00:42:22.650 --> 00:42:23.760
+All right.
+
+00:42:23.760 --> 00:42:24.780
+Take us home.
+
+00:42:24.780 --> 00:42:25.290
+Yina Arenas:
+Yeah.
+
+00:42:25.290 --> 00:42:29.340
+So, multiple steps,
+multiple levers.
+
+00:42:29.340 --> 00:42:31.830
+Throughout the session, we
+showed an end-to-end scenario
+
+00:42:31.830 --> 00:42:33.210
+and what are the set of
+things that you can do
+
+00:42:33.210 --> 00:42:34.860
+to improve in quality.
+
+00:42:34.860 --> 00:42:38.070
+So, at every step, this is
+the notion of hill climbing
+
+00:42:38.070 --> 00:42:40.680
+that you saw us talk about
+in the keynote today,
+
+00:42:40.680 --> 00:42:43.170
+the quality improving over time.
+
+00:42:43.170 --> 00:42:44.847
+But the key sort of thing and,
+
+00:42:44.859 --> 00:42:46.830
+again, the key
+takeaway is, start
+
+00:42:46.830 --> 00:42:49.350
+with your evals, the
+definition of success.
+
+00:42:49.350 --> 00:42:52.200
+How do you define that
+success criteria?
+
+00:42:52.200 --> 00:42:55.860
+Foundry helps you along the
+way with the new capabilities
+
+00:42:55.860 --> 00:42:58.020
+that we have, where you
+can bring in your code,
+
+00:42:58.020 --> 00:43:02.490
+bring in your prompt, or have
+Foundry help you build
+
+00:43:02.490 --> 00:43:05.310
+up those rubrics
+using, now, the new set
+
+00:43:05.310 --> 00:43:08.790
+of rubric-based
+evals capabilities.
+
+00:43:08.790 --> 00:43:10.050
+So, at the end of the day,
+
+00:43:10.050 --> 00:43:13.170
+make sure that you're building
+the system, not just the prompt.
+
+00:43:13.170 --> 00:43:17.640
+Long gone are the days of
+just prompt engineering.
+
+00:43:17.640 --> 00:43:18.990
+You need to make sure
+that you're picking
+
+00:43:18.990 --> 00:43:21.480
+up the best model
+for the workload.
+
+00:43:21.480 --> 00:43:23.760
+Decompose the set of
+scenarios that you have.
+
+00:43:23.760 --> 00:43:27.030
+Think about old-school
+microservices architecture
+
+00:43:27.030 --> 00:43:29.550
+when you're building
+your solutions.
+
+00:43:29.550 --> 00:43:32.340
+Evaluate on your
+particular scenario.
+
+00:43:32.340 --> 00:43:33.718
+Think about all of the different
+
+00:43:33.730 --> 00:43:35.250
+sets of optimization
+capabilities
+
+00:43:35.250 --> 00:43:40.170
+that you have across
+quality, latency, and cost.
+
+00:43:40.170 --> 00:43:43.470
+And then, understanding that
+understanding of your scenario,
+
+00:43:43.470 --> 00:43:45.720
+as I mentioned before,
+becomes your IP that, then,
+
+00:43:45.720 --> 00:43:48.870
+you can further optimize on.
+
+00:43:48.870 --> 00:43:50.190
+You need to operate
+with control.
+
+00:43:50.190 --> 00:43:54.030
+Make sure that monitoring,
+versioning, governing,
+
+00:43:54.030 --> 00:43:56.010
+being able to roll
+back, fully integrate
+
+00:43:56.010 --> 00:43:58.200
+into your CI/CD pipeline.
+
+00:43:58.200 --> 00:44:01.290
+All of those different pieces,
+we enable and support as part
+
+00:44:01.290 --> 00:44:03.900
+of Foundry, with the integration
+that we have with GitHub.
+
+00:44:03.900 --> 00:44:06.000
+And then, as we showed
+during the session,
+
+00:44:06.000 --> 00:44:11.040
+continuously improve, so that
+you can actually build not only
+
+00:44:11.040 --> 00:44:14.010
+solutions that meet the goal,
+but that continuously meet
+
+00:44:14.010 --> 00:44:15.540
+that goal over time
+
+00:44:15.540 --> 00:44:19.740
+as everything else
+changes around you.
+
+00:44:19.740 --> 00:44:20.070
+Naomi Moneypenny:
+All right.
+
+00:44:20.070 --> 00:44:21.875
+So, if we step
+back, this is your
+
+00:44:21.887 --> 00:44:23.490
+value proposition on Foundry.
+
+00:44:23.490 --> 00:44:24.930
+Of course, we think about this.
+
+00:44:24.930 --> 00:44:26.550
+We're basically
+having a great way
+
+00:44:26.550 --> 00:44:28.380
+to select the model
+to start off with.
+
+00:44:28.380 --> 00:44:29.760
+You can think about
+how you scale
+
+00:44:29.760 --> 00:44:30.930
+that model as part of this.
+
+00:44:30.930 --> 00:44:33.420
+You can then optimize it,
+take it out globally,
+
+00:44:33.420 --> 00:44:36.450
+think about how you think about
+changes and demand over time.
+
+00:44:36.450 --> 00:44:38.730
+How do I iterate across
+this entire process?
+
+00:44:38.730 --> 00:44:41.550
+And then, of course, keep
+control, security, compliance,
+
+00:44:41.550 --> 00:44:43.950
+operations all the way through.
+
+00:44:43.950 --> 00:44:45.480
+It's not about model choice.
+
+00:44:45.480 --> 00:44:47.490
+This is about the
+entire platform value
+
+00:44:47.490 --> 00:44:50.130
+that we're delivering as part
+of Foundry, and really having
+
+00:44:50.130 --> 00:44:52.650
+that way to build smarter
+systems as models
+
+00:44:52.650 --> 00:44:55.020
+and costs keep evolving.
+
+00:44:55.020 --> 00:44:56.340
+So, what else should we learn?
+
+00:44:56.340 --> 00:44:58.290
+Yina Arenas: Well,
+there's a lot of other sessions
+
+00:44:58.290 --> 00:45:01.050
+that we have at the conference
+for you to take a look.
+
+00:45:01.050 --> 00:45:03.660
+Please join or watch
+the recordings.
+
+00:45:03.660 --> 00:45:05.940
+This is part of
+the end-to-end set
+
+00:45:05.940 --> 00:45:08.010
+of solutions that
+Foundry offers.
+
+00:45:08.010 --> 00:45:10.740
+We talked about, in this
+session, more about models,
+
+00:45:10.740 --> 00:45:13.140
+but there's other sessions
+that are going to go deeper
+
+00:45:13.140 --> 00:45:16.080
+into post training, deeper
+into agentic solutions,
+
+00:45:16.080 --> 00:45:21.030
+deeper into safety and
+responsible AI as well.
+
+00:45:21.030 --> 00:45:23.190
+And we're here to help
+you along the way.
+
+00:45:23.190 --> 00:45:24.510
+Please connect with us.
+
+00:45:24.510 --> 00:45:27.630
+Start building with Foundry;
+ai.azure.com is the one thing
+
+00:45:27.630 --> 00:45:28.920
+that you need to remember.
+
+00:45:28.920 --> 00:45:31.290
+The session code where
+you can find the link,
+
+00:45:31.290 --> 00:45:34.350
+where you can find all of the
+codes that we shared as well.
+
+00:45:34.350 --> 00:45:37.020
+And then, we have a very
+active Discord community.
+
+00:45:37.020 --> 00:45:38.400
+Please join us there.
+
+00:45:38.400 --> 00:45:41.340
+And thank you for
+joining us today.
+
+00:45:41.340 --> 00:45:42.810
+We appreciate that
+you're all here.
+
+00:45:42.810 --> 00:45:46.650
+And I hope that you had a great
+time learning with us how
+
+00:45:46.650 --> 00:45:49.680
+to continue to improve
+your AI systems.
+
+00:45:49.680 --> 00:45:50.520
+Naomi Moneypenny:
+Thank you, folks.
+
+00:45:50.520 --> 00:45:55.280
+[ Applause ]

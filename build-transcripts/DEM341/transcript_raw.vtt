@@ -1,0 +1,2275 @@
+WEBVTT
+
+NOTE
+language:en-US
+
+NOTE Confidence: 0.7471513748168945
+
+00:00:19.460 --> 00:00:20.020
+Hello everyone.
+
+NOTE Confidence: 0.9321858882904053
+
+00:00:20.340 --> 00:00:21.100
+Can everyone hear me?
+
+NOTE Confidence: 0.9175699353218079
+
+00:00:21.100 --> 00:00:21.420
+OK?
+
+NOTE Confidence: 0.7818727493286133
+
+00:00:22.220 --> 00:00:22.780
+OK, cool.
+
+NOTE Confidence: 0.7818037271499634
+
+00:00:23.180 --> 00:00:23.460
+Yeah.
+
+NOTE Confidence: 0.9230481386184692
+
+00:00:23.500 --> 00:00:25.860
+Welcome to Day 2 of Build, I guess.
+
+NOTE Confidence: 0.8995836973190308
+
+00:00:26.220 --> 00:00:28.900
+How has day 2 been going for everyone so far?
+
+NOTE Confidence: 0.8269413113594055
+
+00:00:29.380 --> 00:00:30.020
+Good, good.
+
+NOTE Confidence: 0.8619070053100586
+
+00:00:30.220 --> 00:00:30.460
+Cool.
+
+NOTE Confidence: 0.8003283739089966
+
+00:00:30.540 --> 00:00:32.180
+Yeah, yeah.
+
+NOTE Confidence: 0.8133745789527893
+
+00:00:32.180 --> 00:00:36.544
+Like I was introduced, I'm a software engineering manager on
+
+NOTE Confidence: 0.8133745789527893
+
+00:00:36.617 --> 00:00:40.327
+the Foundry of the Ability team, and I'm excited to
+
+NOTE Confidence: 0.8133745789527893
+
+00:00:40.400 --> 00:00:44.255
+share with you today how you can run consistent, high
+
+NOTE Confidence: 0.8133745789527893
+
+00:00:44.328 --> 00:00:49.275
+quality and actionable agent observability in Foundry no matter what
+
+NOTE Confidence: 0.8133745789527893
+
+00:00:49.347 --> 00:00:53.639
+agent framework you use or whether your agents are running.
+
+NOTE Confidence: 0.7574005722999573
+
+00:00:54.480 --> 00:00:56.920
+OK, quick show of hands.
+
+NOTE Confidence: 0.8927602767944336
+
+00:00:57.080 --> 00:01:00.280
+How many of you build or operate agents in production?
+
+NOTE Confidence: 0.9433786869049072
+
+00:01:01.800 --> 00:01:03.840
+OK, cool, some of you.
+
+NOTE Confidence: 0.8865282535552979
+
+00:01:04.319 --> 00:01:07.312
+And so keep your hands up if all of the
+
+NOTE Confidence: 0.8865282535552979
+
+00:01:07.389 --> 00:01:11.610
+agents, like either your agents or your team agents are
+
+NOTE Confidence: 0.8865282535552979
+
+00:01:11.686 --> 00:01:16.367
+running on the same cloud provider using the same programming
+
+NOTE Confidence: 0.8865282535552979
+
+00:01:16.444 --> 00:01:20.665
+language and same agent framework, anyone OK, I guess 1
+
+NOTE Confidence: 0.8865282535552979
+
+00:01:20.741 --> 00:01:22.199
+lucky person there.
+
+NOTE Confidence: 0.849739670753479
+
+00:01:22.480 --> 00:01:26.510
+OK, So what we hear from customers again and again
+
+NOTE Confidence: 0.849739670753479
+
+00:01:26.591 --> 00:01:31.186
+is that the production reality is that big companies like
+
+NOTE Confidence: 0.849739670753479
+
+00:01:31.266 --> 00:01:36.909
+enterprise companies, they really have this heterogeneous agent set up
+
+NOTE Confidence: 0.849739670753479
+
+00:01:36.990 --> 00:01:38.280
+right like that.
+
+NOTE Confidence: 0.7652631402015686
+
+00:01:38.680 --> 00:01:43.258
+You mean, you know, like maybe a sorry, so maybe
+
+NOTE Confidence: 0.7652631402015686
+
+00:01:43.353 --> 00:01:49.076
+a product team, you know, like they picked foundries, prompt
+
+NOTE Confidence: 0.7652631402015686
+
+00:01:49.172 --> 00:01:54.800
+agents because it's easier to iterate on the portal, right?
+
+NOTE Confidence: 0.7412375211715698
+
+00:01:55.040 --> 00:01:58.562
+And then a back end team might picked up land
+
+NOTE Confidence: 0.7412375211715698
+
+00:01:58.641 --> 00:02:02.163
+Graph and run it on AWS because land graph is
+
+NOTE Confidence: 0.7412375211715698
+
+00:02:02.242 --> 00:02:05.999
+the agent framework they are most familiar with.
+
+NOTE Confidence: 0.7829945087432861
+
+00:02:06.400 --> 00:02:10.220
+And the third team might have adopted ADK from Google
+
+NOTE Confidence: 0.7829945087432861
+
+00:02:10.293 --> 00:02:12.599
+because they are already on GCP.
+
+NOTE Confidence: 0.538325309753418
+
+00:02:13.640 --> 00:02:14.920
+We're on Gemini, right?
+
+NOTE Confidence: 0.8282222151756287
+
+00:02:15.200 --> 00:02:17.786
+And then all of a sudden maybe someone asks for
+
+NOTE Confidence: 0.8282222151756287
+
+00:02:17.841 --> 00:02:20.428
+Copilot SDK as a catch all because that's a new
+
+NOTE Confidence: 0.8282222151756287
+
+00:02:20.483 --> 00:02:22.520
+thing they have recently heard about.
+
+NOTE Confidence: 0.814210832118988
+
+00:02:23.360 --> 00:02:26.861
+And very quickly you run into this mess that, you
+
+NOTE Confidence: 0.814210832118988
+
+00:02:26.933 --> 00:02:32.579
+know, different agent framework, different hosting stack, different metrics and
+
+NOTE Confidence: 0.814210832118988
+
+00:02:32.650 --> 00:02:34.080
+different dashboard.
+
+NOTE Confidence: 0.8246890306472778
+
+00:02:35.560 --> 00:02:38.242
+And then like all of a sudden maybe like a
+
+NOTE Confidence: 0.8246890306472778
+
+00:02:38.306 --> 00:02:42.074
+bad response came up from your agentic system in production
+
+NOTE Confidence: 0.8246890306472778
+
+00:02:42.138 --> 00:02:45.396
+and you are waiting to start to ask scary questions
+
+NOTE Confidence: 0.8246890306472778
+
+00:02:45.459 --> 00:02:47.439
+like, oh, which agent did that?
+
+NOTE Confidence: 0.8837774395942688
+
+00:02:47.720 --> 00:02:50.320
+Why did the agent return this bad answer?
+
+NOTE Confidence: 0.9373607039451599
+
+00:02:50.560 --> 00:02:53.828
+And how do we prevent bad behaviors from happening in
+
+NOTE Confidence: 0.9373607039451599
+
+00:02:53.890 --> 00:02:55.000
+the future, right?
+
+NOTE Confidence: 0.9667964577674866
+
+00:02:55.400 --> 00:02:58.683
+Today I'm going to show you how to answer those
+
+NOTE Confidence: 0.9667964577674866
+
+00:02:58.753 --> 00:03:00.360
+questions in one place.
+
+NOTE Confidence: 0.7714114189147949
+
+00:03:00.680 --> 00:03:02.200
+Foundry observability.
+
+NOTE Confidence: 0.8924046158790588
+
+00:03:02.919 --> 00:03:08.072
+Not by rewriting your agents into one agent framework, but
+
+NOTE Confidence: 0.8924046158790588
+
+00:03:08.161 --> 00:03:13.936
+by adopting open AI, sorry, open telemetry instrumentation with a
+
+NOTE Confidence: 0.8924046158790588
+
+00:03:14.025 --> 00:03:19.178
+few lines of code and without changing your existing agent
+
+NOTE Confidence: 0.8924046158790588
+
+00:03:19.266 --> 00:03:19.799
+logic.
+
+NOTE Confidence: 0.9245117902755737
+
+00:03:21.000 --> 00:03:24.812
+And everything we show in this demo are live and
+
+NOTE Confidence: 0.9245117902755737
+
+00:03:24.891 --> 00:03:26.559
+available on Foundry.
+
+NOTE Confidence: 0.9300532341003418
+
+00:03:26.760 --> 00:03:30.120
+You can check out the code and reproduce everything we
+
+NOTE Confidence: 0.9300532341003418
+
+00:03:30.182 --> 00:03:33.231
+show with the repository we will share at the end
+
+NOTE Confidence: 0.9300532341003418
+
+00:03:33.293 --> 00:03:34.040
+of the talk.
+
+NOTE Confidence: 0.8048833608627319
+
+00:03:36.240 --> 00:03:41.951
+Let's start with a simple agent before bringing multi agent,
+
+NOTE Confidence: 0.8048833608627319
+
+00:03:42.046 --> 00:03:43.760
+multi cloud setup.
+
+NOTE Confidence: 0.8432844877243042
+
+00:03:44.640 --> 00:03:47.560
+OK, you guys can see this right?
+
+NOTE Confidence: 0.8575578331947327
+
+00:03:47.640 --> 00:03:50.787
+OK, so if this is the first time you are
+
+NOTE Confidence: 0.8575578331947327
+
+00:03:50.865 --> 00:03:55.350
+saying this, this is Microsoft Foundry portal and this is
+
+NOTE Confidence: 0.8575578331947327
+
+00:03:55.429 --> 00:03:59.835
+a playground view that allow me to quickly configure and
+
+NOTE Confidence: 0.8575578331947327
+
+00:03:59.914 --> 00:04:01.959
+test out my agents, right?
+
+NOTE Confidence: 0.89156174659729
+
+00:04:02.440 --> 00:04:05.835
+And the story here is that, you know, I grew
+
+NOTE Confidence: 0.89156174659729
+
+00:04:05.912 --> 00:04:10.156
+up in Xi'an, a famous tourist destination in China, and
+
+NOTE Confidence: 0.89156174659729
+
+00:04:10.233 --> 00:04:14.399
+often get asked by friends for travel recommendations.
+
+NOTE Confidence: 0.8119561076164246
+
+00:04:14.840 --> 00:04:18.705
+So I went ahead and built a travel expert agent
+
+NOTE Confidence: 0.8119561076164246
+
+00:04:18.787 --> 00:04:23.640
+with Foundry's no code offering called Prompt agent, right?
+
+NOTE Confidence: 0.9233718514442444
+
+00:04:24.000 --> 00:04:27.708
+And what I did is that I picked a model
+
+NOTE Confidence: 0.9233718514442444
+
+00:04:27.803 --> 00:04:29.039
+for my agent.
+
+NOTE Confidence: 0.8267219662666321
+
+00:04:29.600 --> 00:04:33.400
+I gave it some judge prompt, sorry, system prompt.
+
+NOTE Confidence: 0.9001709222793579
+
+00:04:33.680 --> 00:04:36.009
+And you know, it can be even like multi language
+
+NOTE Confidence: 0.9001709222793579
+
+00:04:36.057 --> 00:04:36.640
+if you want.
+
+NOTE Confidence: 0.8153877258300781
+
+00:04:37.080 --> 00:04:41.935
+And the secret sauce here is that I have this
+
+NOTE Confidence: 0.8153877258300781
+
+00:04:42.043 --> 00:04:46.359
+kind of travel notes in PDF file, right?
+
+NOTE Confidence: 0.8487757444381714
+
+00:04:46.360 --> 00:04:49.200
+With even pictures and different links and everything.
+
+NOTE Confidence: 0.8748424649238586
+
+00:04:49.920 --> 00:04:53.800
+I uploaded it to the Foundry here as an index
+
+NOTE Confidence: 0.8748424649238586
+
+00:04:53.886 --> 00:04:58.198
+so that my agent can access that travel notes when
+
+NOTE Confidence: 0.8748424649238586
+
+00:04:58.285 --> 00:04:59.319
+it needs to.
+
+NOTE Confidence: 0.9205795526504517
+
+00:05:00.440 --> 00:05:03.440
+OK, and I can send a question here.
+
+NOTE Confidence: 0.8512991070747375
+
+00:05:03.640 --> 00:05:06.812
+For example, plan a three day trip in Xian for
+
+NOTE Confidence: 0.8512991070747375
+
+00:05:06.881 --> 00:05:07.640
+two people.
+
+NOTE Confidence: 0.8215169310569763
+
+00:05:07.920 --> 00:05:11.208
+Focus on history and the food you can see the
+
+NOTE Confidence: 0.8215169310569763
+
+00:05:11.281 --> 00:05:15.959
+agent started to return detailed itinerary, which shouldn't be a
+
+NOTE Confidence: 0.8215169310569763
+
+00:05:16.032 --> 00:05:17.639
+surprise today, right?
+
+NOTE Confidence: 0.8162646293640137
+
+00:05:18.720 --> 00:05:24.417
+It calls out, you know, famous places to visit again
+
+NOTE Confidence: 0.8162646293640137
+
+00:05:24.526 --> 00:05:31.320
+in multi languages and also restaurant recommendations, right.
+
+NOTE Confidence: 0.8930928111076355
+
+00:05:31.320 --> 00:05:33.838
+We can take a closer look here again, like, you
+
+NOTE Confidence: 0.8930928111076355
+
+00:05:33.892 --> 00:05:36.356
+know, three day, like day by day plan and like
+
+NOTE Confidence: 0.8930928111076355
+
+00:05:36.410 --> 00:05:39.840
+with all the details calling out like interesting places, right?
+
+NOTE Confidence: 0.8402916789054871
+
+00:05:40.080 --> 00:05:42.647
+But again, like we're in 2026, this shouldn't be a
+
+NOTE Confidence: 0.8402916789054871
+
+00:05:42.698 --> 00:05:43.519
+surprise, right?
+
+NOTE Confidence: 0.9030643105506897
+
+00:05:44.000 --> 00:05:48.457
+What's more interesting is that I can go to the
+
+NOTE Confidence: 0.9030643105506897
+
+00:05:48.552 --> 00:05:52.914
+traces view to see like how the agent was able
+
+NOTE Confidence: 0.9030643105506897
+
+00:05:53.009 --> 00:05:55.760
+to get to that answer, right?
+
+NOTE Confidence: 0.9029189944267273
+
+00:05:56.040 --> 00:05:59.592
+Here is a list of all the previous conversations I've
+
+NOTE Confidence: 0.9029189944267273
+
+00:05:59.659 --> 00:06:01.000
+had with this agent.
+
+NOTE Confidence: 0.8910660147666931
+
+00:06:01.480 --> 00:06:05.083
+And like there are different dimensions you can see here,
+
+NOTE Confidence: 0.8910660147666931
+
+00:06:05.147 --> 00:06:08.877
+like token cost, token in, token out, maybe estimated cost,
+
+NOTE Confidence: 0.8910660147666931
+
+00:06:08.940 --> 00:06:09.319
+right?
+
+NOTE Confidence: 0.9105964303016663
+
+00:06:09.920 --> 00:06:12.106
+And I can do sort and filtering if I want
+
+NOTE Confidence: 0.9105964303016663
+
+00:06:12.160 --> 00:06:12.320
+to.
+
+NOTE Confidence: 0.9403451085090637
+
+00:06:12.760 --> 00:06:17.099
+And maybe we can also like dig into a specific
+
+NOTE Confidence: 0.9403451085090637
+
+00:06:17.193 --> 00:06:17.759
+trace.
+
+NOTE Confidence: 0.8160004615783691
+
+00:06:19.160 --> 00:06:25.120
+OK, let's try a different one.
+
+NOTE Confidence: 0.9613221883773804
+
+00:06:26.920 --> 00:06:28.240
+OK, Yeah, this is a good one.
+
+NOTE Confidence: 0.8680224418640137
+
+00:06:28.960 --> 00:06:33.173
+And Foundry provides also this like clear view to allow
+
+NOTE Confidence: 0.8680224418640137
+
+00:06:33.249 --> 00:06:37.080
+me to understand the behavior of my agents, right?
+
+NOTE Confidence: 0.8983505964279175
+
+00:06:37.600 --> 00:06:40.689
+I can even maximize it a little bit at the
+
+NOTE Confidence: 0.8983505964279175
+
+00:06:40.762 --> 00:06:42.159
+upper right corner.
+
+NOTE Confidence: 0.9196057319641113
+
+00:06:42.160 --> 00:06:43.040
+It's a little bit small.
+
+NOTE Confidence: 0.8769215941429138
+
+00:06:43.040 --> 00:06:47.076
+But I think these are key metrics about this conversation
+
+NOTE Confidence: 0.8769215941429138
+
+00:06:47.146 --> 00:06:50.899
+like number of spans, number of chat calls, number of
+
+NOTE Confidence: 0.8769215941429138
+
+00:06:50.970 --> 00:06:54.439
+tool calls, latency and token consumption, right?
+
+NOTE Confidence: 0.9344973564147949
+
+00:06:54.440 --> 00:06:56.600
+So it's very clear those are the key metrics.
+
+NOTE Confidence: 0.8866058588027954
+
+00:06:56.960 --> 00:07:00.799
+And if you look at this tree view, everything is
+
+NOTE Confidence: 0.8866058588027954
+
+00:07:00.879 --> 00:07:05.039
+rooted under a single invoke agent spam that has the
+
+NOTE Confidence: 0.8866058588027954
+
+00:07:05.119 --> 00:07:09.759
+system message, the input from the customer and the output
+
+NOTE Confidence: 0.8866058588027954
+
+00:07:09.839 --> 00:07:11.039
+from the agent.
+
+NOTE Confidence: 0.7877720594406128
+
+00:07:12.400 --> 00:07:17.159
+And following that is a executed tool spam that the
+
+NOTE Confidence: 0.7877720594406128
+
+00:07:17.253 --> 00:07:21.359
+agent uses to look up my travel notes right?
+
+NOTE Confidence: 0.8032662272453308
+
+00:07:21.600 --> 00:07:24.916
+If we look take a closer look at the metadata
+
+NOTE Confidence: 0.8032662272453308
+
+00:07:24.990 --> 00:07:28.159
+tab here, we'll be able to see like, oh the
+
+NOTE Confidence: 0.8032662272453308
+
+00:07:28.232 --> 00:07:31.917
+this is a query the agent used to retrieve content
+
+NOTE Confidence: 0.8032662272453308
+
+00:07:31.991 --> 00:07:33.760
+from my PDF file, right?
+
+NOTE Confidence: 0.8615913987159729
+
+00:07:33.920 --> 00:07:37.027
+And this is like the final answer the tool was
+
+NOTE Confidence: 0.8615913987159729
+
+00:07:37.095 --> 00:07:39.999
+able to retrieve to give back to the agent.
+
+NOTE Confidence: 0.8268862366676331
+
+00:07:41.520 --> 00:07:44.318
+This is kind of a classic RAG pattern if you
+
+NOTE Confidence: 0.8268862366676331
+
+00:07:44.382 --> 00:07:47.371
+guys have heard about that and in case you know
+
+NOTE Confidence: 0.8268862366676331
+
+00:07:47.434 --> 00:07:51.187
+like if the agent running into any hallucination problem or
+
+NOTE Confidence: 0.8268862366676331
+
+00:07:51.250 --> 00:07:54.876
+groundliness problem, this is likely we will where I will
+
+NOTE Confidence: 0.8268862366676331
+
+00:07:54.939 --> 00:07:58.819
+start my debugging from and eventually everything is fed into
+
+NOTE Confidence: 0.8268862366676331
+
+00:07:58.882 --> 00:08:00.600
+an LM for the final answer.
+
+NOTE Confidence: 0.9059317708015442
+
+00:08:03.040 --> 00:08:06.304
+You can see that we have a replay button here
+
+NOTE Confidence: 0.9059317708015442
+
+00:08:06.377 --> 00:08:09.496
+that, you know, I can choose the speed if I
+
+NOTE Confidence: 0.9059317708015442
+
+00:08:09.569 --> 00:08:12.688
+do this, you know, I see like how the agent
+
+NOTE Confidence: 0.9059317708015442
+
+00:08:12.761 --> 00:08:14.719
+is actually being executed.
+
+NOTE Confidence: 0.8778737187385559
+
+00:08:16.000 --> 00:08:18.508
+And if I go to the user view, I can
+
+NOTE Confidence: 0.8778737187385559
+
+00:08:18.580 --> 00:08:22.236
+even experience what an end user will see from this
+
+NOTE Confidence: 0.8778737187385559
+
+00:08:22.308 --> 00:08:23.240
+agent, right?
+
+NOTE Confidence: 0.9632694721221924
+
+00:08:23.560 --> 00:08:24.040
+Pretty cool.
+
+NOTE Confidence: 0.8440812826156616
+
+00:08:25.720 --> 00:08:29.351
+OK, yeah, this really gives me a very clear view
+
+NOTE Confidence: 0.8440812826156616
+
+00:08:29.426 --> 00:08:33.436
+to help me to deeply understand my agent behavior and
+
+NOTE Confidence: 0.8440812826156616
+
+00:08:33.512 --> 00:08:36.160
+debug issues when I need to, right.
+
+NOTE Confidence: 0.9299163222312927
+
+00:08:36.480 --> 00:08:39.715
+And at this point, you might be wondering, does this
+
+NOTE Confidence: 0.9299163222312927
+
+00:08:39.777 --> 00:08:42.079
+only come with Foundry native agents?
+
+NOTE Confidence: 0.8925438523292542
+
+00:08:42.240 --> 00:08:45.760
+What about my agents running somewhere else, right?
+
+NOTE Confidence: 0.922007143497467
+
+00:08:45.760 --> 00:08:46.920
+Do I get the same experience?
+
+NOTE Confidence: 0.8470920324325562
+
+00:08:47.200 --> 00:08:49.744
+To answer that question, let me bring in my colleague
+
+NOTE Confidence: 0.8470920324325562
+
+00:08:49.792 --> 00:08:50.320
+like Kumar.
+
+NOTE Confidence: 0.6741182804107666
+
+00:08:51.040 --> 00:08:52.000
+Hi, talk about that.
+
+NOTE Confidence: 0.8709433674812317
+
+00:08:52.880 --> 00:08:55.941
+Hi, I'm Nak Kumar and what I did along with
+
+NOTE Confidence: 0.8709433674812317
+
+00:08:56.012 --> 00:08:59.714
+Hanshi was to build a similar travel agent about the
+
+NOTE Confidence: 0.8709433674812317
+
+00:08:59.785 --> 00:09:03.131
+place that I'm from Bangalore and I call it the
+
+NOTE Confidence: 0.8709433674812317
+
+00:09:03.202 --> 00:09:04.840
+Bangalore travel agent.
+
+NOTE Confidence: 0.841532289981842
+
+00:09:05.160 --> 00:09:09.821
+Unlike Hanshi's agent, Mind runs on GCP using the Google,
+
+NOTE Confidence: 0.841532289981842
+
+00:09:09.902 --> 00:09:14.482
+Google's ADK, and after registering it on the Foundry as
+
+NOTE Confidence: 0.841532289981842
+
+00:09:14.563 --> 00:09:18.570
+an external agent, we'll get to see the same rich
+
+NOTE Confidence: 0.841532289981842
+
+00:09:18.652 --> 00:09:21.759
+trace experience that you saw earlier.
+
+NOTE Confidence: 0.8918216228485107
+
+00:09:22.000 --> 00:09:25.223
+So this is my trace experience screen, and I can
+
+NOTE Confidence: 0.8918216228485107
+
+00:09:25.290 --> 00:09:28.111
+click on a screen on a trace and then look
+
+NOTE Confidence: 0.8918216228485107
+
+00:09:28.178 --> 00:09:29.320
+at the responses.
+
+NOTE Confidence: 0.8703970313072205
+
+00:09:29.600 --> 00:09:32.943
+But while we do that, I want to also send
+
+NOTE Confidence: 0.8703970313072205
+
+00:09:33.025 --> 00:09:35.879
+a request to my GCP agent via curl.
+
+NOTE Confidence: 0.7540908455848694
+
+00:09:35.880 --> 00:09:39.259
+So you can see it's running on Run dot app,
+
+NOTE Confidence: 0.7540908455848694
+
+00:09:39.338 --> 00:09:40.359
+which is DCP.
+
+NOTE Confidence: 0.9386162161827087
+
+00:09:41.400 --> 00:09:42.942
+And then we can take a look at the response
+
+NOTE Confidence: 0.9386162161827087
+
+00:09:42.978 --> 00:09:43.839
+as soon as it's up here.
+
+NOTE Confidence: 0.6085151433944702
+
+00:09:43.840 --> 00:09:43.960
+Yeah.
+
+NOTE Confidence: 0.8352023363113403
+
+00:09:44.240 --> 00:09:46.417
+So that we know this is a real agent running
+
+NOTE Confidence: 0.8352023363113403
+
+00:09:46.467 --> 00:09:47.159
+on GCP, right?
+
+NOTE Confidence: 0.626914381980896
+
+00:09:47.160 --> 00:09:48.480
+We're not like picking anything.
+
+NOTE Confidence: 0.9057602882385254
+
+00:09:49.440 --> 00:09:51.143
+Yeah, I guess it will take a little bit to
+
+NOTE Confidence: 0.9057602882385254
+
+00:09:51.183 --> 00:09:52.360
+come back because of network.
+
+NOTE Confidence: 0.741805911064148
+
+00:09:52.360 --> 00:09:53.400
+OK, here it comes back.
+
+NOTE Confidence: 0.7402344346046448
+
+00:09:53.760 --> 00:09:55.160
+Yeah, you can see the city there.
+
+NOTE Confidence: 0.676181972026825
+
+00:09:55.440 --> 00:09:56.000
+And what?
+
+NOTE Confidence: 0.7954293489456177
+
+00:09:56.320 --> 00:09:58.708
+OK, like this is a real agent running on GCP,
+
+NOTE Confidence: 0.7954293489456177
+
+00:09:58.761 --> 00:09:59.079
+right?
+
+NOTE Confidence: 0.8115521669387817
+
+00:09:59.280 --> 00:10:01.546
+We were able to send the HP request and get
+
+NOTE Confidence: 0.8115521669387817
+
+00:10:01.598 --> 00:10:02.600
+this response back.
+
+NOTE Confidence: 0.8256109952926636
+
+00:10:03.880 --> 00:10:08.138
+And to make this even more interesting, because like Kumar
+
+NOTE Confidence: 0.8256109952926636
+
+00:10:08.212 --> 00:10:11.737
+and I both live in Seattle currently, so we even
+
+NOTE Confidence: 0.8256109952926636
+
+00:10:11.810 --> 00:10:15.481
+build a third agent for Seattle Travel Tips and we
+
+NOTE Confidence: 0.8256109952926636
+
+00:10:15.555 --> 00:10:19.080
+have it using the land graph and running on AWS.
+
+NOTE Confidence: 0.8602315783500671
+
+00:10:20.120 --> 00:10:24.426
+Yeah, so I'm doing the same thing, sending out a
+
+NOTE Confidence: 0.8602315783500671
+
+00:10:24.515 --> 00:10:28.552
+call to my agent on AWS with a question about
+
+NOTE Confidence: 0.8602315783500671
+
+00:10:28.642 --> 00:10:29.359
+Seattle.
+
+NOTE Confidence: 0.865045428276062
+
+00:10:30.240 --> 00:10:33.273
+And while this is running, I'll explain the whole magic
+
+NOTE Confidence: 0.865045428276062
+
+00:10:33.328 --> 00:10:33.879
+behind it.
+
+NOTE Confidence: 0.8561267852783203
+
+00:10:34.120 --> 00:10:38.400
+We also built another agent which acts as an orchestrator.
+
+NOTE Confidence: 0.8415630459785461
+
+00:10:39.160 --> 00:10:43.060
+And that agent was built with Microsoft found is deployed
+
+NOTE Confidence: 0.8415630459785461
+
+00:10:43.129 --> 00:10:46.756
+on the Foundry as hosted agent and uses our Microsoft
+
+NOTE Confidence: 0.8415630459785461
+
+00:10:46.824 --> 00:10:47.919
+agent framework.
+
+NOTE Confidence: 0.9063521027565002
+
+00:10:48.400 --> 00:10:51.404
+The way it works is it routes intelligently based on
+
+NOTE Confidence: 0.9063521027565002
+
+00:10:51.462 --> 00:10:53.080
+the city that you ask it to.
+
+NOTE Confidence: 0.8963152766227722
+
+00:10:54.080 --> 00:10:57.600
+And then all of them would emit open telemetry traces.
+
+NOTE Confidence: 0.850915789604187
+
+00:10:58.640 --> 00:10:59.080
+We can.
+
+NOTE Confidence: 0.7861265540122986
+
+00:11:00.000 --> 00:11:03.248
+Here's the difference for the Seattle agent, and we can
+
+NOTE Confidence: 0.7861265540122986
+
+00:11:03.307 --> 00:11:06.320
+jump into showcasing how the trace looks like that.
+
+NOTE Confidence: 0.8829731941223145
+
+00:11:06.600 --> 00:11:06.960
+Sounds great.
+
+NOTE Confidence: 0.8561370968818665
+
+00:11:08.760 --> 00:11:09.240
+Let's do that.
+
+NOTE Confidence: 0.9483485817909241
+
+00:11:10.320 --> 00:11:13.226
+So this is the same agent that I told you
+
+NOTE Confidence: 0.9483485817909241
+
+00:11:13.297 --> 00:11:15.920
+about, the orchestrator that we have.
+
+NOTE Confidence: 0.3985353410243988
+
+00:11:16.560 --> 00:11:17.440
+This is the one.
+
+NOTE Confidence: 0.796165406703949
+
+00:11:17.560 --> 00:11:20.120
+That will invoke multiple agents across multiple.
+
+NOTE Confidence: 0.5986007452011108
+
+00:11:20.120 --> 00:11:20.440
+Clouds, right?
+
+NOTE Confidence: 0.699400007724762
+
+00:11:20.600 --> 00:11:20.960
+Yep.
+
+NOTE Confidence: 0.8923840522766113
+
+00:11:21.040 --> 00:11:23.794
+And if you see my message, I'm asking about Seattle,
+
+NOTE Confidence: 0.8923840522766113
+
+00:11:23.847 --> 00:11:24.959
+Bangalore and Lisbon.
+
+NOTE Confidence: 0.8207393884658813
+
+00:11:25.200 --> 00:11:27.027
+Lisbon is not one of the countries that we built
+
+NOTE Confidence: 0.8207393884658813
+
+00:11:27.065 --> 00:11:27.559
+an agent for.
+
+NOTE Confidence: 0.8491740226745605
+
+00:11:27.559 --> 00:11:29.766
+So there is a copilot SDK which acts as a
+
+NOTE Confidence: 0.8491740226745605
+
+00:11:29.820 --> 00:11:32.510
+fall back for cities that we don't have data about
+
+NOTE Confidence: 0.8491740226745605
+
+00:11:32.564 --> 00:11:35.039
+or we don't have like a specialized agent for.
+
+NOTE Confidence: 0.9268543124198914
+
+00:11:35.640 --> 00:11:37.963
+While this is running, I can head on over to
+
+NOTE Confidence: 0.9268543124198914
+
+00:11:38.016 --> 00:11:40.444
+the traces tab and show you an open trace from
+
+NOTE Confidence: 0.9268543124198914
+
+00:11:40.497 --> 00:11:40.920
+earlier.
+
+NOTE Confidence: 0.9018371105194092
+
+00:11:41.600 --> 00:11:44.988
+So this was the invoke agent span earlier I asked
+
+NOTE Confidence: 0.9018371105194092
+
+00:11:45.057 --> 00:11:48.653
+it about like Seattle and Berlin and the city router
+
+NOTE Confidence: 0.9018371105194092
+
+00:11:48.722 --> 00:11:52.249
+kind of decided to route this to like the Bangalore
+
+NOTE Confidence: 0.9018371105194092
+
+00:11:52.318 --> 00:11:53.839
+and the Seattle agent.
+
+NOTE Confidence: 0.8613534569740295
+
+00:11:54.880 --> 00:11:58.207
+And then you can see it invoke the Seattle specialist
+
+NOTE Confidence: 0.8613534569740295
+
+00:11:58.270 --> 00:12:01.409
+to get all the details about Seattle and then goes
+
+NOTE Confidence: 0.8613534569740295
+
+00:12:01.472 --> 00:12:04.863
+back into the copilot fall back for our Berlin related
+
+NOTE Confidence: 0.8613534569740295
+
+00:12:04.926 --> 00:12:05.239
+data.
+
+NOTE Confidence: 0.884166419506073
+
+00:12:09.000 --> 00:12:10.760
+Yeah, that is super cool.
+
+NOTE Confidence: 0.8545362949371338
+
+00:12:11.200 --> 00:12:15.044
+And to recap, right, So here is a bird's eye
+
+NOTE Confidence: 0.8545362949371338
+
+00:12:15.131 --> 00:12:17.839
+view of what has just happened.
+
+NOTE Confidence: 0.6442893743515015
+
+00:12:20.000 --> 00:12:21.520
+It's actually the next slide.
+
+NOTE Confidence: 0.5397807955741882
+
+00:12:25.440 --> 00:12:25.720
+Yeah.
+
+NOTE Confidence: 0.7845331430435181
+
+00:12:26.160 --> 00:12:30.021
+So what we saw from the playground is that a
+
+NOTE Confidence: 0.7845331430435181
+
+00:12:30.109 --> 00:12:35.551
+user asked a question to the orchestrator and the orchestrator
+
+NOTE Confidence: 0.7845331430435181
+
+00:12:35.639 --> 00:12:38.360
+runs in a foundry hosted agent.
+
+NOTE Confidence: 0.8066219687461853
+
+00:12:38.679 --> 00:12:41.145
+That's kind of the pro code agent that will talk
+
+NOTE Confidence: 0.8066219687461853
+
+00:12:41.197 --> 00:12:43.560
+a little bit more like in a little bit, right.
+
+NOTE Confidence: 0.8330696821212769
+
+00:12:43.720 --> 00:12:48.464
+But that agent serves as orchestrator and route the question
+
+NOTE Confidence: 0.8330696821212769
+
+00:12:48.543 --> 00:12:52.338
+to the right sub agent that is the specialist of
+
+NOTE Confidence: 0.8330696821212769
+
+00:12:52.417 --> 00:12:53.920
+that specific city.
+
+NOTE Confidence: 0.9089961647987366
+
+00:12:54.200 --> 00:12:57.415
+And you can see that each sub agent is running
+
+NOTE Confidence: 0.9089961647987366
+
+00:12:57.485 --> 00:13:01.679
+on a different cloud running with different agent framework.
+
+NOTE Confidence: 0.8759002685546875
+
+00:13:02.400 --> 00:13:07.312
+But because of all of them are emitting open telemetry
+
+NOTE Confidence: 0.8759002685546875
+
+00:13:07.403 --> 00:13:13.316
+traces, Foundry observability was able to stitch together the end
+
+NOTE Confidence: 0.8759002685546875
+
+00:13:13.407 --> 00:13:18.683
+to end execution and put everything in one uniform unified
+
+NOTE Confidence: 0.8759002685546875
+
+00:13:18.774 --> 00:13:19.320
+trace.
+
+NOTE Confidence: 0.8442970514297485
+
+00:13:20.520 --> 00:13:24.035
+And and that's why, like even though they are running
+
+NOTE Confidence: 0.8442970514297485
+
+00:13:24.102 --> 00:13:27.949
+across multiple clouds, it feels like everything is in one
+
+NOTE Confidence: 0.8442970514297485
+
+00:13:28.015 --> 00:13:28.479
+system.
+
+NOTE Confidence: 0.910280168056488
+
+00:13:31.720 --> 00:13:36.882
+OK, yeah, now let's talk about the key ingredients that
+
+NOTE Confidence: 0.910280168056488
+
+00:13:36.976 --> 00:13:38.760
+made this possible.
+
+NOTE Confidence: 0.8138807415962219
+
+00:13:40.120 --> 00:13:44.040
+OK, first is Microsoft's agent platform.
+
+NOTE Confidence: 0.6811027526855469
+
+00:13:44.640 --> 00:13:49.200
+We showcase like a foundry agent, foundry prompt agent, right?
+
+NOTE Confidence: 0.7986476421356201
+
+00:13:49.200 --> 00:13:52.865
+That's the no code agents I demoed at the beginning
+
+NOTE Confidence: 0.7986476421356201
+
+00:13:52.937 --> 00:13:53.799
+of the talk.
+
+NOTE Confidence: 0.8451316952705383
+
+00:13:54.679 --> 00:13:58.963
+And Foundry also has like hosted agent, that's our orchestrator
+
+NOTE Confidence: 0.8451316952705383
+
+00:13:59.031 --> 00:13:59.439
+agent.
+
+NOTE Confidence: 0.7017589211463928
+
+00:13:59.640 --> 00:14:00.720
+That's the pro code.
+
+NOTE Confidence: 0.8969312906265259
+
+00:14:00.920 --> 00:14:03.668
+You submit your code or your container to Foundry and
+
+NOTE Confidence: 0.8969312906265259
+
+00:14:03.720 --> 00:14:06.312
+Foundry helps you to manage that and run your code
+
+NOTE Confidence: 0.8969312906265259
+
+00:14:06.364 --> 00:14:08.801
+right so that we have full control of the agent
+
+NOTE Confidence: 0.8969312906265259
+
+00:14:08.853 --> 00:14:09.320
+behavior.
+
+NOTE Confidence: 0.8080572485923767
+
+00:14:09.840 --> 00:14:15.028
+And Foundry's hosted agent is what really shines for enterprise
+
+NOTE Confidence: 0.8080572485923767
+
+00:14:15.110 --> 00:14:19.640
+scenarios because it has enterprise grade VM isolation.
+
+NOTE Confidence: 0.8069897294044495
+
+00:14:19.920 --> 00:14:24.463
+It has agent identity that from Ontree that really guarantees
+
+NOTE Confidence: 0.8069897294044495
+
+00:14:24.537 --> 00:14:28.633
+security and it has like key features like long running
+
+NOTE Confidence: 0.8069897294044495
+
+00:14:28.708 --> 00:14:32.953
+operation routines, right, that are all like no very nice
+
+NOTE Confidence: 0.8069897294044495
+
+00:14:33.027 --> 00:14:35.559
+features for enterprise customers.
+
+NOTE Confidence: 0.7943483591079712
+
+00:14:36.440 --> 00:14:38.808
+But you know, like pro code or no code, I
+
+NOTE Confidence: 0.7943483591079712
+
+00:14:38.866 --> 00:14:40.080
+think it's up to you.
+
+NOTE Confidence: 0.7694928646087646
+
+00:14:40.320 --> 00:14:42.454
+But like foundry got to cover like you can choose
+
+NOTE Confidence: 0.7694928646087646
+
+00:14:42.497 --> 00:14:44.240
+another one that fits your needs, right?
+
+NOTE Confidence: 0.7426795363426208
+
+00:14:44.440 --> 00:14:48.245
+And once you have that, you can have the your
+
+NOTE Confidence: 0.7426795363426208
+
+00:14:48.329 --> 00:14:52.642
+agent built in GitHub with code and prompt check in
+
+NOTE Confidence: 0.7426795363426208
+
+00:14:52.727 --> 00:14:54.080
+to GitHub right?
+
+NOTE Confidence: 0.748214840888977
+
+00:14:54.440 --> 00:14:58.321
+You can run your agent in Foundry with beauty in
+
+NOTE Confidence: 0.748214840888977
+
+00:14:58.402 --> 00:15:01.880
+observability, evaluation and optimization.
+
+NOTE Confidence: 0.8008912205696106
+
+00:15:02.240 --> 00:15:06.020
+And once you are ready, you can distribute your agents
+
+NOTE Confidence: 0.8008912205696106
+
+00:15:06.090 --> 00:15:07.280
+to users on M-65.
+
+NOTE Confidence: 0.7173559665679932
+
+00:15:08.320 --> 00:15:11.440
+The second ingredient is open telemetry is Gen.
+
+NOTE Confidence: 0.6054100394248962
+
+00:15:11.440 --> 00:15:12.960
+AI Semantic conventions.
+
+NOTE Confidence: 0.8758237361907959
+
+00:15:13.360 --> 00:15:17.480
+Think of this as a common telemetry schema across frameworks.
+
+NOTE Confidence: 0.7476783990859985
+
+00:15:17.680 --> 00:15:21.627
+Whether it's the Foundry Prompt agent, a land graph app,
+
+NOTE Confidence: 0.7476783990859985
+
+00:15:21.697 --> 00:15:25.997
+or an ADK service, they emit spans with consistent attributes
+
+NOTE Confidence: 0.7476783990859985
+
+00:15:26.068 --> 00:15:29.240
+for agent names, model calls, and key events.
+
+NOTE Confidence: 0.9070518016815186
+
+00:15:29.520 --> 00:15:34.424
+That consistency gives you a strong compatibility with downstream observability
+
+NOTE Confidence: 0.9070518016815186
+
+00:15:34.486 --> 00:15:37.280
+and evaluation features on Microsoft Foundry.
+
+NOTE Confidence: 0.869290828704834
+
+00:15:37.680 --> 00:15:41.726
+Microsoft heavily contributes to the standards and we actively add
+
+NOTE Confidence: 0.869290828704834
+
+00:15:41.787 --> 00:15:43.319
+new scenarios to support.
+
+NOTE Confidence: 0.789546012878418
+
+00:15:43.960 --> 00:15:44.880
+Yeah, that sounds great.
+
+NOTE Confidence: 0.7748734354972839
+
+00:15:45.160 --> 00:15:47.706
+Now, Kumar, can you show us what code change that
+
+NOTE Confidence: 0.7748734354972839
+
+00:15:47.758 --> 00:15:50.719
+you need to make to adopt open telemetry instrumentation?
+
+NOTE Confidence: 0.9125558733940125
+
+00:15:51.560 --> 00:15:55.503
+So Microsoft Open Telemetry Distro is the unified SDK that
+
+NOTE Confidence: 0.9125558733940125
+
+00:15:55.571 --> 00:16:00.399
+can instrument most agent frameworks in multiple programming languages.
+
+NOTE Confidence: 0.8691548109054565
+
+00:16:00.880 --> 00:16:06.423
+Foundry native agents have Microsoft Open Telemetry Distro instrumentation built
+
+NOTE Confidence: 0.8691548109054565
+
+00:16:06.492 --> 00:16:09.680
+in, so I didn't have to make any code changes.
+
+NOTE Confidence: 0.881305992603302
+
+00:16:10.120 --> 00:16:13.635
+But for agents outside of Foundry, the distro supports auto
+
+NOTE Confidence: 0.881305992603302
+
+00:16:13.694 --> 00:16:17.507
+instrumentation and it's just a few lines of initialization code
+
+NOTE Confidence: 0.881305992603302
+
+00:16:17.567 --> 00:16:18.640
+to set up the SDK.
+
+NOTE Confidence: 0.8426201343536377
+
+00:16:19.760 --> 00:16:22.400
+Let me hop on over to VS Code.
+
+NOTE Confidence: 0.9248297810554504
+
+00:16:23.800 --> 00:16:26.442
+So this is my agent and all I have to
+
+NOTE Confidence: 0.9248297810554504
+
+00:16:26.514 --> 00:16:29.942
+do is say use open telemetry and enable using it
+
+NOTE Confidence: 0.9248297810554504
+
+00:16:30.014 --> 00:16:34.585
+with Azure Monitor and pass the Azure Monitor connection string,
+
+NOTE Confidence: 0.9248297810554504
+
+00:16:34.657 --> 00:16:38.085
+tell it what framework I'm using and give it the
+
+NOTE Confidence: 0.9248297810554504
+
+00:16:38.157 --> 00:16:38.799
+agent ID.
+
+NOTE Confidence: 0.9278088808059692
+
+00:16:39.000 --> 00:16:41.326
+This is the same agent ID that I used to
+
+NOTE Confidence: 0.9278088808059692
+
+00:16:41.384 --> 00:16:44.117
+register the agent on Foundry so it can pull up
+
+NOTE Confidence: 0.9278088808059692
+
+00:16:44.175 --> 00:16:45.920
+the traces and correlate them.
+
+NOTE Confidence: 0.8236699104309082
+
+00:16:46.800 --> 00:16:47.320
+Yeah, great.
+
+NOTE Confidence: 0.6927734017372131
+
+00:16:47.760 --> 00:16:51.180
+One thing to call here is that Foundry Observability is
+
+NOTE Confidence: 0.6927734017372131
+
+00:16:51.242 --> 00:16:55.160
+powered by Azure Monitor and Azure Application Insights, right?
+
+NOTE Confidence: 0.7909965515136719
+
+00:16:55.360 --> 00:16:58.284
+And all of the foundry's traces are stored in Azure
+
+NOTE Confidence: 0.7909965515136719
+
+00:16:58.341 --> 00:16:58.800
+Monitor.
+
+NOTE Confidence: 0.8627569675445557
+
+00:16:58.960 --> 00:17:02.084
+So if you are an existing Azure Monitor users, maybe
+
+NOTE Confidence: 0.8627569675445557
+
+00:17:02.145 --> 00:17:06.111
+for like other part of your nonagentic workflows and architecture,
+
+NOTE Confidence: 0.8627569675445557
+
+00:17:06.171 --> 00:17:09.716
+you can keep using existing Azure Monitor features that you
+
+NOTE Confidence: 0.8627569675445557
+
+00:17:09.777 --> 00:17:11.640
+might be already familiar with.
+
+NOTE Confidence: 0.6051958799362183
+
+00:17:14.240 --> 00:17:14.400
+Cool.
+
+NOTE Confidence: 0.8141721487045288
+
+00:17:15.640 --> 00:17:18.747
+Now that we will see unified traces from O3 clouds,
+
+NOTE Confidence: 0.8141721487045288
+
+00:17:18.808 --> 00:17:22.159
+let's talk about why this matters in production, right?
+
+NOTE Confidence: 0.8923527002334595
+
+00:17:22.840 --> 00:17:26.972
+Because, you know, seeing all the traces is great, but
+
+NOTE Confidence: 0.8923527002334595
+
+00:17:27.048 --> 00:17:30.951
+the real value is operational that you want to, you
+
+NOTE Confidence: 0.8923527002334595
+
+00:17:31.027 --> 00:17:35.848
+know, debug issues and monitor patterns and evaluate quality in
+
+NOTE Confidence: 0.8923527002334595
+
+00:17:35.925 --> 00:17:36.919
+one workflow.
+
+NOTE Confidence: 0.8650850057601929
+
+00:17:37.840 --> 00:17:41.296
+So traces are only useful if they can answer questions
+
+NOTE Confidence: 0.8650850057601929
+
+00:17:41.360 --> 00:17:42.320
+quickly, right?
+
+NOTE Confidence: 0.8205040097236633
+
+00:17:42.320 --> 00:17:46.070
+In production and for example like questions people may want
+
+NOTE Confidence: 0.8205040097236633
+
+00:17:46.132 --> 00:17:48.507
+to ask in the demo setup we had is you
+
+NOTE Confidence: 0.8205040097236633
+
+00:17:48.570 --> 00:17:51.820
+know did the routing agent route the question to the
+
+NOTE Confidence: 0.8205040097236633
+
+00:17:51.882 --> 00:17:53.320
+right sub agents right?
+
+NOTE Confidence: 0.712297797203064
+
+00:17:53.600 --> 00:17:57.755
+Did the retrieval return like weak contacts that might have
+
+NOTE Confidence: 0.712297797203064
+
+00:17:57.825 --> 00:18:02.191
+caused hallucination problem or maybe like the did the latency
+
+NOTE Confidence: 0.712297797203064
+
+00:18:02.262 --> 00:18:05.854
+come from a cold start network, slow network or the
+
+NOTE Confidence: 0.712297797203064
+
+00:18:05.924 --> 00:18:06.840
+model itself?
+
+NOTE Confidence: 0.8555566668510437
+
+00:18:07.560 --> 00:18:11.142
+And over time, we want to probably monitor if there's
+
+NOTE Confidence: 0.8555566668510437
+
+00:18:11.210 --> 00:18:14.320
+any trend that the agent behavior is shifting.
+
+NOTE Confidence: 0.6366370320320129
+
+00:18:15.600 --> 00:18:19.200
+We touched based on debug ability earlier in the talk.
+
+NOTE Confidence: 0.9274605512619019
+
+00:18:19.480 --> 00:18:22.440
+Let me show you how the Monitor tab works.
+
+NOTE Confidence: 0.9189414978027344
+
+00:18:22.840 --> 00:18:26.707
+Here you can see the live traffic patterns, latency distribution
+
+NOTE Confidence: 0.9189414978027344
+
+00:18:26.767 --> 00:18:28.520
+and a few evaluation results.
+
+NOTE Confidence: 0.8726861476898193
+
+00:18:29.080 --> 00:18:32.850
+One of the interesting things is the estimated cost, the
+
+NOTE Confidence: 0.8726861476898193
+
+00:18:32.918 --> 00:18:36.621
+total token usage, the type of evaluations which ran on
+
+NOTE Confidence: 0.8726861476898193
+
+00:18:36.689 --> 00:18:38.440
+the agent scheduled evals.
+
+NOTE Confidence: 0.8246395587921143
+
+00:18:38.760 --> 00:18:41.888
+There were a few and then scheduled red teams as
+
+NOTE Confidence: 0.8246395587921143
+
+00:18:41.954 --> 00:18:42.279
+well.
+
+NOTE Confidence: 0.8629844784736633
+
+00:18:42.280 --> 00:18:46.120
+If we Scroll down, you can see some operational metrics
+
+NOTE Confidence: 0.8629844784736633
+
+00:18:46.190 --> 00:18:49.263
+and one of the things I noticed is the error
+
+NOTE Confidence: 0.8629844784736633
+
+00:18:49.333 --> 00:18:50.800
+rate went up earlier.
+
+NOTE Confidence: 0.8700035214424133
+
+00:18:50.840 --> 00:18:52.800
+I should probably should get that checked out.
+
+NOTE Confidence: 0.9349165558815002
+
+00:18:53.520 --> 00:18:56.180
+And if you keep scrolling down, you can see more
+
+NOTE Confidence: 0.9349165558815002
+
+00:18:56.236 --> 00:18:59.783
+scheduled evaluation results and what the human evaluator did on
+
+NOTE Confidence: 0.9349165558815002
+
+00:18:59.839 --> 00:19:00.560
+this as well.
+
+NOTE Confidence: 0.8394051790237427
+
+00:19:02.400 --> 00:19:04.923
+Yeah, one of the tool called Successes also went down
+
+NOTE Confidence: 0.8394051790237427
+
+00:19:04.971 --> 00:19:05.399
+recently.
+
+NOTE Confidence: 0.9593410491943359
+
+00:19:05.920 --> 00:19:07.560
+I guess we should take a look at it soon.
+
+NOTE Confidence: 0.8025671243667603
+
+00:19:09.880 --> 00:19:12.280
+OK, now let's take a look at the fleet wheel.
+
+NOTE Confidence: 0.8796933889389038
+
+00:19:14.320 --> 00:19:17.978
+On the Operate tab, you can look at all your
+
+NOTE Confidence: 0.8796933889389038
+
+00:19:18.061 --> 00:19:22.551
+agents in a particular Foundry project and take a look
+
+NOTE Confidence: 0.8796933889389038
+
+00:19:22.634 --> 00:19:24.880
+at everything that pops up.
+
+NOTE Confidence: 0.9169794321060181
+
+00:19:25.160 --> 00:19:28.104
+One of the things you can see is our Active
+
+NOTE Confidence: 0.9169794321060181
+
+00:19:28.172 --> 00:19:29.200
+Alerts Foundry.
+
+NOTE Confidence: 0.884999692440033
+
+00:19:29.600 --> 00:19:32.255
+If you have an agent on Foundry, by default you
+
+NOTE Confidence: 0.884999692440033
+
+00:19:32.312 --> 00:19:35.419
+have a security workflow running, so you get alerts on,
+
+NOTE Confidence: 0.884999692440033
+
+00:19:35.476 --> 00:19:38.583
+you know, things like malicious URLs were detected or a
+
+NOTE Confidence: 0.884999692440033
+
+00:19:38.640 --> 00:19:41.860
+jailbreak attempt was made on your prompt and things like
+
+NOTE Confidence: 0.884999692440033
+
+00:19:41.917 --> 00:19:42.199
+that.
+
+NOTE Confidence: 0.8438012599945068
+
+00:19:42.480 --> 00:19:46.320
+You can also set up alerts on evaluation results.
+
+NOTE Confidence: 0.8855568170547485
+
+00:19:46.320 --> 00:19:50.107
+So let's say your agent stops working the way it's
+
+NOTE Confidence: 0.8855568170547485
+
+00:19:50.183 --> 00:19:51.319
+supposed to do.
+
+NOTE Confidence: 0.8887726664543152
+
+00:19:51.320 --> 00:19:54.151
+Then you can be alerted on it and you can
+
+NOTE Confidence: 0.8887726664543152
+
+00:19:54.220 --> 00:19:58.295
+see things like agent success rate, agent volume, which was
+
+NOTE Confidence: 0.8887726664543152
+
+00:19:58.364 --> 00:20:01.680
+the most used volume agent over time, and so on.
+
+NOTE Confidence: 0.8239455223083496
+
+00:20:02.680 --> 00:20:03.560
+Yeah, that's very cool.
+
+NOTE Confidence: 0.756961464881897
+
+00:20:03.880 --> 00:20:07.328
+Definitely feel more confident in production operations with low small
+
+NOTE Confidence: 0.756961464881897
+
+00:20:07.378 --> 00:20:07.919
+interviews.
+
+NOTE Confidence: 0.8864771127700806
+
+00:20:09.040 --> 00:20:10.520
+Now maybe let's talk about evaluation.
+
+NOTE Confidence: 0.7129100561141968
+
+00:20:11.680 --> 00:20:11.960
+Yeah.
+
+NOTE Confidence: 0.9321163296699524
+
+00:20:11.960 --> 00:20:15.001
+So for evaluations, let me pull up some code that
+
+NOTE Confidence: 0.9321163296699524
+
+00:20:15.063 --> 00:20:15.560
+I wrote.
+
+NOTE Confidence: 0.9212304353713989
+
+00:20:16.520 --> 00:20:19.775
+You can set up evaluations on traces using the Foundry
+
+NOTE Confidence: 0.9212304353713989
+
+00:20:19.836 --> 00:20:23.092
+project line and select what evaluator you want to add
+
+NOTE Confidence: 0.9212304353713989
+
+00:20:23.152 --> 00:20:24.720
+into the testing criteria.
+
+NOTE Confidence: 0.9002490639686584
+
+00:20:24.720 --> 00:20:28.633
+Here I have intent resolution evaluator, and then we run
+
+NOTE Confidence: 0.9002490639686584
+
+00:20:28.703 --> 00:20:30.800
+this on a particular agent ID.
+
+NOTE Confidence: 0.9421101808547974
+
+00:20:31.119 --> 00:20:33.589
+So once you set this up and create an eval,
+
+NOTE Confidence: 0.9421101808547974
+
+00:20:33.646 --> 00:20:36.288
+you get to see eval results which kind of look
+
+NOTE Confidence: 0.9421101808547974
+
+00:20:36.345 --> 00:20:36.919
+like this.
+
+NOTE Confidence: 0.8721234798431396
+
+00:20:38.760 --> 00:20:42.248
+So this one ran a bunch of different metrics, and
+
+NOTE Confidence: 0.8721234798431396
+
+00:20:42.319 --> 00:20:45.736
+I can see that there was some trace which didn't
+
+NOTE Confidence: 0.8721234798431396
+
+00:20:45.808 --> 00:20:46.519
+work well.
+
+NOTE Confidence: 0.8887246251106262
+
+00:20:46.520 --> 00:20:49.450
+So I'll click on this trace and we'll be directly
+
+NOTE Confidence: 0.8887246251106262
+
+00:20:49.510 --> 00:20:52.559
+taken into the trace view of that particular agent.
+
+NOTE Confidence: 0.9352842569351196
+
+00:20:52.880 --> 00:20:54.849
+And once you click on it, you'll be able to
+
+NOTE Confidence: 0.9352842569351196
+
+00:20:54.895 --> 00:20:56.040
+identify what went wrong.
+
+NOTE Confidence: 0.8977491855621338
+
+00:20:56.480 --> 00:20:58.859
+The first thing that I want to see is oh,
+
+NOTE Confidence: 0.8977491855621338
+
+00:20:58.918 --> 00:21:01.936
+this was a the users intent was to compare Bengaluru
+
+NOTE Confidence: 0.8977491855621338
+
+00:21:01.994 --> 00:21:05.187
+and Barcelona for an after work evening and keeping the
+
+NOTE Confidence: 0.8977491855621338
+
+00:21:05.245 --> 00:21:05.999
+plan concise.
+
+NOTE Confidence: 0.9011238217353821
+
+00:21:07.080 --> 00:21:10.732
+But when I see the eval results which show up
+
+NOTE Confidence: 0.9011238217353821
+
+00:21:10.814 --> 00:21:14.629
+here and the task adherence was when we saw the
+
+NOTE Confidence: 0.9011238217353821
+
+00:21:14.710 --> 00:21:15.359
+failure.
+
+NOTE Confidence: 0.9497559666633606
+
+00:21:15.680 --> 00:21:18.971
+So the user asked for a concise comparison, but the
+
+NOTE Confidence: 0.9497559666633606
+
+00:21:19.035 --> 00:21:22.714
+response material did not cover both cities and hence the
+
+NOTE Confidence: 0.9497559666633606
+
+00:21:22.778 --> 00:21:25.360
+task adherence came out to be a failure.
+
+NOTE Confidence: 0.9750531911849976
+
+00:21:25.680 --> 00:21:27.320
+Let's see what the response was.
+
+NOTE Confidence: 0.8830089569091797
+
+00:21:28.560 --> 00:21:30.880
+Well, yeah, there is no comparison.
+
+NOTE Confidence: 0.9631853699684143
+
+00:21:30.880 --> 00:21:32.640
+There is description about both of them.
+
+NOTE Confidence: 0.9457564949989319
+
+00:21:32.960 --> 00:21:36.040
+I guess the evaluator was looking for a table.
+
+NOTE Confidence: 0.9105771780014038
+
+00:21:37.360 --> 00:21:38.440
+Yeah, that's pretty cool.
+
+NOTE Confidence: 0.7883541584014893
+
+00:21:39.040 --> 00:21:42.106
+And yeah, so the the loop we want to draw
+
+NOTE Confidence: 0.7883541584014893
+
+00:21:42.180 --> 00:21:44.199
+here is very simple, right?
+
+NOTE Confidence: 0.8184448480606079
+
+00:21:44.200 --> 00:21:49.263
+Like instrument your code with open telemetry, debug, evaluate and
+
+NOTE Confidence: 0.8184448480606079
+
+00:21:49.340 --> 00:21:53.943
+optimize in production with live traffic and then like again
+
+NOTE Confidence: 0.8184448480606079
+
+00:21:54.020 --> 00:21:58.316
+fleet level visibility if you want to manage and control
+
+NOTE Confidence: 0.8184448480606079
+
+00:21:58.393 --> 00:22:02.920
+them and everything are done on like 1 observability plane.
+
+NOTE Confidence: 0.7971329689025879
+
+00:22:04.920 --> 00:22:07.080
+OK, cool.
+
+NOTE Confidence: 0.8339552283287048
+
+00:22:08.040 --> 00:22:11.044
+And like there are like so many great foundry features
+
+NOTE Confidence: 0.8339552283287048
+
+00:22:11.100 --> 00:22:13.993
+that we cannot cover due to like time constraints in
+
+NOTE Confidence: 0.8339552283287048
+
+00:22:14.049 --> 00:22:16.553
+this session, but want to call out on them so
+
+NOTE Confidence: 0.8339552283287048
+
+00:22:16.609 --> 00:22:19.279
+that you guys can check out check on them later.
+
+NOTE Confidence: 0.8118080496788025
+
+00:22:19.520 --> 00:22:25.469
+So rubric evaluators like creates customized evaluation plan tailored to
+
+NOTE Confidence: 0.8118080496788025
+
+00:22:25.552 --> 00:22:27.040
+your agent, right?
+
+NOTE Confidence: 0.8156083822250366
+
+00:22:27.040 --> 00:22:29.920
+So that solves your evaluation code start problem.
+
+NOTE Confidence: 0.8135823607444763
+
+00:22:30.680 --> 00:22:34.704
+Agent optimization improves your agent by you know, fine tuning
+
+NOTE Confidence: 0.8135823607444763
+
+00:22:34.768 --> 00:22:38.665
+your system prompt, trying out the different models and maybe
+
+NOTE Confidence: 0.8135823607444763
+
+00:22:38.729 --> 00:22:42.179
+leveraging like a few new tools for customers who want
+
+NOTE Confidence: 0.8135823607444763
+
+00:22:42.243 --> 00:22:44.160
+to leverage or opt in for 865.
+
+NOTE Confidence: 0.6222942471504211
+
+00:22:44.360 --> 00:22:45.760
+Foundry natively supports that.
+
+NOTE Confidence: 0.8243247866630554
+
+00:22:46.320 --> 00:22:49.464
+And as much as we like and support and recommend
+
+NOTE Confidence: 0.8243247866630554
+
+00:22:49.530 --> 00:22:54.116
+open telemetry is generative in AI semantic conversions, we understand
+
+NOTE Confidence: 0.8243247866630554
+
+00:22:54.182 --> 00:22:58.179
+like some customers might be using another trace format today
+
+NOTE Confidence: 0.8243247866630554
+
+00:22:58.244 --> 00:23:00.800
+and may not be easy for them to switch.
+
+NOTE Confidence: 0.9245429039001465
+
+00:23:01.040 --> 00:23:03.200
+That's why we want to meet customers where they are.
+
+NOTE Confidence: 0.8205789923667908
+
+00:23:03.480 --> 00:23:07.515
+So we support these two popular frameworks, popular format open
+
+NOTE Confidence: 0.8205789923667908
+
+00:23:07.579 --> 00:23:11.551
+inference and open elementary for like trace viewing and trace
+
+NOTE Confidence: 0.8205789923667908
+
+00:23:11.615 --> 00:23:12.320
+evaluation.
+
+NOTE Confidence: 0.9394194483757019
+
+00:23:13.920 --> 00:23:17.186
+Exactly, We recommend you to check out recordings of other
+
+NOTE Confidence: 0.9394194483757019
+
+00:23:17.242 --> 00:23:18.200
+Foundry sessions.
+
+NOTE Confidence: 0.586703360080719
+
+00:23:18.200 --> 00:23:20.480
+R Wizard Foundry's public documentation.
+
+NOTE Confidence: 0.7955651879310608
+
+00:23:20.800 --> 00:23:23.219
+Here's the QR code that connects to you to our
+
+NOTE Confidence: 0.7955651879310608
+
+00:23:23.271 --> 00:23:26.006
+repo where with all our agents that we had showcased
+
+NOTE Confidence: 0.7955651879310608
+
+00:23:26.059 --> 00:23:26.480
+earlier.
+
+NOTE Confidence: 0.5782728791236877
+
+00:23:27.320 --> 00:23:27.960
+Yeah, that's great.
+
+NOTE Confidence: 0.7847378253936768
+
+00:23:28.040 --> 00:23:31.775
+And we are really proud of the breadth and depth
+
+NOTE Confidence: 0.7847378253936768
+
+00:23:31.852 --> 00:23:35.199
+of what Foundry has to offer to help you to
+
+NOTE Confidence: 0.7847378253936768
+
+00:23:35.276 --> 00:23:40.957
+run consistent, high quality and actionable of agent observability, right
+
+NOTE Confidence: 0.7847378253936768
+
+00:23:41.035 --> 00:23:44.614
+and build what you want, run it where you need
+
+NOTE Confidence: 0.7847378253936768
+
+00:23:44.692 --> 00:23:48.349
+and observe it all in one place, any agent, any
+
+NOTE Confidence: 0.7847378253936768
+
+00:23:48.427 --> 00:23:50.839
+cloud, one observability plane.
+
+NOTE Confidence: 0.9340862035751343
+
+00:23:51.200 --> 00:23:51.560
+Thank you.
+

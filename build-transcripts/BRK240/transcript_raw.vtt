@@ -1,0 +1,4950 @@
+WEBVTT
+
+NOTE
+language:en-US
+
+NOTE Confidence: 0.9037301540374756
+
+00:00:00.200 --> 00:00:02.320
+Welcome everyone to build.
+
+NOTE Confidence: 0.8607512712478638
+
+00:00:02.360 --> 00:00:04.797
+I'm Amanda Silver and I'm joined with my friend here,
+
+NOTE Confidence: 0.8607512712478638
+
+00:00:04.843 --> 00:00:05.119
+Marco.
+
+NOTE Confidence: 0.2855936586856842
+
+00:00:05.280 --> 00:00:06.720
+Hello, I'm Marco Castle, Anna.
+
+NOTE Confidence: 0.9060468673706055
+
+00:00:08.880 --> 00:00:11.582
+So I've spent more than two decades working at Microsoft
+
+NOTE Confidence: 0.9060468673706055
+
+00:00:11.630 --> 00:00:14.574
+on developer tools and platforms, and I've really never, ever
+
+NOTE Confidence: 0.9060468673706055
+
+00:00:14.623 --> 00:00:16.843
+seen a shift as profound as the one that we're
+
+NOTE Confidence: 0.9060468673706055
+
+00:00:16.891 --> 00:00:17.760
+going through now.
+
+NOTE Confidence: 0.9298858046531677
+
+00:00:18.239 --> 00:00:22.591
+What we're seeing is that software is evolving from people
+
+NOTE Confidence: 0.9298858046531677
+
+00:00:22.666 --> 00:00:27.168
+driven applications to agents that are defined by intent and
+
+NOTE Confidence: 0.9298858046531677
+
+00:00:27.243 --> 00:00:29.720
+they're measured by the outcomes.
+
+NOTE Confidence: 0.8510457873344421
+
+00:00:30.360 --> 00:00:33.652
+And so these agents can reason, they can retrieve context,
+
+NOTE Confidence: 0.8510457873344421
+
+00:00:33.709 --> 00:00:36.548
+they can make decisions, they can take action on a
+
+NOTE Confidence: 0.8510457873344421
+
+00:00:36.605 --> 00:00:37.399
+user's behalf.
+
+NOTE Confidence: 0.947315514087677
+
+00:00:37.720 --> 00:00:40.612
+And in many ways this is really the automated future
+
+NOTE Confidence: 0.947315514087677
+
+00:00:40.667 --> 00:00:43.559
+that we've all been working towards for for decades.
+
+NOTE Confidence: 0.9752243757247925
+
+00:00:44.440 --> 00:00:45.480
+But there's a problem.
+
+NOTE Confidence: 0.8501631617546082
+
+00:00:46.320 --> 00:00:50.444
+More than 40% of agentic AI projects are expected to
+
+NOTE Confidence: 0.8501631617546082
+
+00:00:50.523 --> 00:00:50.919
+fail.
+
+NOTE Confidence: 0.9537906050682068
+
+00:00:51.600 --> 00:00:55.273
+And that's not because the models aren't capable, but it's
+
+NOTE Confidence: 0.9537906050682068
+
+00:00:55.336 --> 00:00:58.693
+because the agents lack the context that they need to
+
+NOTE Confidence: 0.9537906050682068
+
+00:00:58.756 --> 00:00:59.959
+be able to succeed.
+
+NOTE Confidence: 0.8935063481330872
+
+00:01:00.480 --> 00:01:03.832
+And so to make it work, developers actually have to
+
+NOTE Confidence: 0.8935063481330872
+
+00:01:03.898 --> 00:01:08.763
+stitch together the fragmented data sources, the custom retrieval systems,
+
+NOTE Confidence: 0.8935063481330872
+
+00:01:08.829 --> 00:01:13.234
+the permissions models, the orchestration logic just to make agents
+
+NOTE Confidence: 0.8935063481330872
+
+00:01:13.299 --> 00:01:13.760
+useful.
+
+NOTE Confidence: 0.9382804036140442
+
+00:01:13.920 --> 00:01:15.720
+And we're all really figuring this out together.
+
+NOTE Confidence: 0.9586937427520752
+
+00:01:15.720 --> 00:01:17.320
+So we're all learning from each other.
+
+NOTE Confidence: 0.9232396483421326
+
+00:01:17.520 --> 00:01:20.669
+We don't necessarily know what the best practices are, but
+
+NOTE Confidence: 0.9232396483421326
+
+00:01:20.724 --> 00:01:23.656
+the result is that the experiences are brittle for the
+
+NOTE Confidence: 0.9232396483421326
+
+00:01:23.711 --> 00:01:24.199
+end user.
+
+NOTE Confidence: 0.9379826784133911
+
+00:01:24.480 --> 00:01:26.720
+And we see agents that hallucinate.
+
+NOTE Confidence: 0.9308117628097534
+
+00:01:27.000 --> 00:01:30.277
+We see systems that miss policy boundaries and they break
+
+NOTE Confidence: 0.9308117628097534
+
+00:01:30.335 --> 00:01:32.520
+when they're deployed into production.
+
+NOTE Confidence: 0.9600744247436523
+
+00:01:33.040 --> 00:01:36.800
+And the challenge isn't giving agents the access to information.
+
+NOTE Confidence: 0.940707802772522
+
+00:01:36.800 --> 00:01:40.571
+It's giving them a shared understanding of the people and
+
+NOTE Confidence: 0.940707802772522
+
+00:01:40.638 --> 00:01:44.277
+the data and the policies and the business context that
+
+NOTE Confidence: 0.940707802772522
+
+00:01:44.343 --> 00:01:47.519
+surround the agents as they're doing their work.
+
+NOTE Confidence: 0.9039014577865601
+
+00:01:48.720 --> 00:01:52.173
+So when a team actually gets this right, when organizations
+
+NOTE Confidence: 0.9039014577865601
+
+00:01:52.231 --> 00:01:54.280
+get this right, everything changes.
+
+NOTE Confidence: 0.9044316411018372
+
+00:01:54.680 --> 00:01:58.233
+The agents stop acting like isolated apps and they start
+
+NOTE Confidence: 0.9044316411018372
+
+00:01:58.296 --> 00:02:02.484
+operating with an understanding of the enterprise around them, the
+
+NOTE Confidence: 0.9044316411018372
+
+00:02:02.547 --> 00:02:05.720
+people, the data, the work flows and the policies.
+
+NOTE Confidence: 0.9366886615753174
+
+00:02:06.080 --> 00:02:09.120
+And the result is that the agents have better accuracy.
+
+NOTE Confidence: 0.6993916034698486
+
+00:02:09.560 --> 00:02:11.920
+They are more reliable actions there.
+
+NOTE Confidence: 0.9352947473526001
+
+00:02:12.240 --> 00:02:15.989
+There's dramatically less engineering that you need to put into
+
+NOTE Confidence: 0.9352947473526001
+
+00:02:16.049 --> 00:02:19.442
+building these agents, and you don't have to recreate the
+
+NOTE Confidence: 0.9352947473526001
+
+00:02:19.501 --> 00:02:22.239
+context for every single agent that you build.
+
+NOTE Confidence: 0.8947168588638306
+
+00:02:22.600 --> 00:02:24.360
+It's really kind of the difference.
+
+NOTE Confidence: 0.932023823261261
+
+00:02:24.360 --> 00:02:27.081
+The way I think about it is the difference between
+
+NOTE Confidence: 0.932023823261261
+
+00:02:27.135 --> 00:02:30.292
+welcoming a brand new employee to the team versus somebody
+
+NOTE Confidence: 0.932023823261261
+
+00:02:30.347 --> 00:02:32.959
+who's actually a seasoned employee on your team.
+
+NOTE Confidence: 0.9235326051712036
+
+00:02:33.320 --> 00:02:36.470
+So the question is, how can you take that knowledge
+
+NOTE Confidence: 0.9235326051712036
+
+00:02:36.531 --> 00:02:39.929
+that a seasoned employee has and infuse every new agent
+
+NOTE Confidence: 0.9235326051712036
+
+00:02:39.991 --> 00:02:42.400
+with that context as they're executing?
+
+NOTE Confidence: 0.9640277028083801
+
+00:02:43.480 --> 00:02:46.080
+So this is how we think about Microsoft IQ.
+
+NOTE Confidence: 0.9181793332099915
+
+00:02:46.600 --> 00:02:49.948
+You can think about IQ as the context layer for
+
+NOTE Confidence: 0.9181793332099915
+
+00:02:50.019 --> 00:02:51.159
+the agentic web.
+
+NOTE Confidence: 0.9519237279891968
+
+00:02:51.720 --> 00:02:54.800
+It brings together 4 different sources of context.
+
+NOTE Confidence: 0.9121570587158203
+
+00:02:55.280 --> 00:02:58.000
+Work IQ for the organizational context.
+
+NOTE Confidence: 0.9395043253898621
+
+00:02:59.000 --> 00:03:02.607
+Fabric IQ for the business knowledge, Foundry IQ for all
+
+NOTE Confidence: 0.9395043253898621
+
+00:03:02.671 --> 00:03:06.278
+of the enterprise knowledge and policies, and Web IQ for
+
+NOTE Confidence: 0.9395043253898621
+
+00:03:06.342 --> 00:03:07.759
+the world's knowledge.
+
+NOTE Confidence: 0.9451902508735657
+
+00:03:08.040 --> 00:03:12.471
+And together, this system really gives agents a shared understanding
+
+NOTE Confidence: 0.9451902508735657
+
+00:03:12.537 --> 00:03:15.730
+of the world of your business, of the work that's
+
+NOTE Confidence: 0.9451902508735657
+
+00:03:15.795 --> 00:03:17.360
+happening on your teams.
+
+NOTE Confidence: 0.9552193284034729
+
+00:03:17.800 --> 00:03:20.950
+And this is what enables the agents to have enough
+
+NOTE Confidence: 0.9552193284034729
+
+00:03:21.013 --> 00:03:24.353
+context to make the right decision, to take the right
+
+NOTE Confidence: 0.9552193284034729
+
+00:03:24.416 --> 00:03:27.946
+actions, and to achieve the outcomes that you are trying
+
+NOTE Confidence: 0.9552193284034729
+
+00:03:28.009 --> 00:03:30.781
+to get them to achieve so that you can trust
+
+NOTE Confidence: 0.9552193284034729
+
+00:03:30.844 --> 00:03:31.160
+them.
+
+NOTE Confidence: 0.9435473680496216
+
+00:03:32.160 --> 00:03:34.880
+So let's jump into a demo really quickly.
+
+NOTE Confidence: 0.9520400762557983
+
+00:03:35.360 --> 00:03:36.927
+I want to show you what it looks like in
+
+NOTE Confidence: 0.9520400762557983
+
+00:03:36.967 --> 00:03:37.319
+practice.
+
+NOTE Confidence: 0.8604208827018738
+
+00:03:37.840 --> 00:03:41.076
+Last week, I sent Marco an e-mail with an idea,
+
+NOTE Confidence: 0.8604208827018738
+
+00:03:41.144 --> 00:03:42.040
+a crazy idea.
+
+NOTE Confidence: 0.7172536253929138
+
+00:03:42.840 --> 00:03:43.200
+It was.
+
+NOTE Confidence: 0.8291535377502441
+
+00:03:43.200 --> 00:03:47.200
+There was no spec, just an e-mail, no design doc.
+
+NOTE Confidence: 0.9347618222236633
+
+00:03:47.880 --> 00:03:49.681
+And so he's going to show you how he went
+
+NOTE Confidence: 0.9347618222236633
+
+00:03:49.725 --> 00:03:51.000
+from that to a working agent.
+
+NOTE Confidence: 0.6295363306999207
+
+00:03:51.320 --> 00:03:51.760
+All right.
+
+NOTE Confidence: 0.8993532061576843
+
+00:03:51.760 --> 00:03:52.400
+Thank you, Amanda.
+
+NOTE Confidence: 0.9079340100288391
+
+00:03:52.400 --> 00:03:55.195
+All right, so here it is, this is the e-mail
+
+NOTE Confidence: 0.9079340100288391
+
+00:03:55.258 --> 00:03:56.719
+that Amanda sent to me.
+
+NOTE Confidence: 0.9362732768058777
+
+00:03:56.720 --> 00:03:59.759
+So we have this onerous refund process and she thought
+
+NOTE Confidence: 0.9362732768058777
+
+00:03:59.815 --> 00:04:02.067
+it might be a good idea to make an agent
+
+NOTE Confidence: 0.9362732768058777
+
+00:04:02.123 --> 00:04:04.599
+to do this stuff with all the different Iqs.
+
+NOTE Confidence: 0.9051384329795837
+
+00:04:04.600 --> 00:04:08.120
+Now I am going to start with work IQ.
+
+NOTE Confidence: 0.82881760597229
+
+00:04:08.120 --> 00:04:10.792
+So here I am in copilot CLI and it does
+
+NOTE Confidence: 0.82881760597229
+
+00:04:10.860 --> 00:04:13.944
+have a handy dandy voice mode over here, so I
+
+NOTE Confidence: 0.82881760597229
+
+00:04:14.012 --> 00:04:15.519
+think it's Control XV.
+
+NOTE Confidence: 0.9372248649597168
+
+00:04:20.600 --> 00:04:24.422
+Amanda Silver sent me an e-mail about this refund agent
+
+NOTE Confidence: 0.9372248649597168
+
+00:04:24.492 --> 00:04:24.839
+idea.
+
+NOTE Confidence: 0.9462882876396179
+
+00:04:24.839 --> 00:04:27.432
+Let's start to make a plan, a little spec for
+
+NOTE Confidence: 0.9462882876396179
+
+00:04:27.490 --> 00:04:29.679
+this thing so we can build this agent.
+
+NOTE Confidence: 0.9563929438591003
+
+00:04:29.680 --> 00:04:30.960
+Go look up that e-mail.
+
+NOTE Confidence: 0.8946725130081177
+
+00:04:34.720 --> 00:04:38.302
+All right, so what's going to happen here in a
+
+NOTE Confidence: 0.8946725130081177
+
+00:04:38.380 --> 00:04:42.041
+moment is that I have work IQ installed into my
+
+NOTE Confidence: 0.8946725130081177
+
+00:04:42.118 --> 00:04:45.701
+copilot CLI and what it's going to do here, it
+
+NOTE Confidence: 0.8946725130081177
+
+00:04:45.779 --> 00:04:48.816
+is going to use work IQ to go find that
+
+NOTE Confidence: 0.8946725130081177
+
+00:04:48.894 --> 00:04:49.440
+e-mail.
+
+NOTE Confidence: 0.8806390166282654
+
+00:04:49.440 --> 00:04:52.589
+So in this case, I am using, or really it's
+
+NOTE Confidence: 0.8806390166282654
+
+00:04:52.662 --> 00:04:54.639
+using Work IQ on my behalf.
+
+NOTE Confidence: 0.9377018809318542
+
+00:04:54.640 --> 00:04:57.240
+I've authorized it on my behalf.
+
+NOTE Confidence: 0.9062122702598572
+
+00:04:57.520 --> 00:05:00.816
+Or you know, it might have a transient error, but
+
+NOTE Confidence: 0.9062122702598572
+
+00:05:00.883 --> 00:05:03.439
+that happens, you know, it's all good.
+
+NOTE Confidence: 0.9164746999740601
+
+00:05:04.000 --> 00:05:05.520
+OK, so anyway.
+
+NOTE Confidence: 0.6435646414756775
+
+00:05:05.960 --> 00:05:06.480
+There we go.
+
+NOTE Confidence: 0.7399195432662964
+
+00:05:06.480 --> 00:05:08.777
+Well, maybe not I I actually had it preloaded in
+
+NOTE Confidence: 0.7399195432662964
+
+00:05:08.825 --> 00:05:10.835
+a tab, so I'm here, but OK, so we're going
+
+NOTE Confidence: 0.7399195432662964
+
+00:05:10.883 --> 00:05:12.079
+to get a transient error.
+
+NOTE Confidence: 0.8581379652023315
+
+00:05:12.240 --> 00:05:15.080
+Suffice it to say that with Work IQ, it can
+
+NOTE Confidence: 0.8581379652023315
+
+00:05:15.146 --> 00:05:16.599
+log in on your behalf.
+
+NOTE Confidence: 0.8222628831863403
+
+00:05:17.040 --> 00:05:19.350
+And in fact, if you use M365 Copilot, that is
+
+NOTE Confidence: 0.8222628831863403
+
+00:05:19.401 --> 00:05:20.479
+also what it's doing.
+
+NOTE Confidence: 0.8885917663574219
+
+00:05:20.480 --> 00:05:22.800
+You'll notice that for those of you who use Copilot
+
+NOTE Confidence: 0.8885917663574219
+
+00:05:22.846 --> 00:05:24.939
+when you use it, there's a little thing at the
+
+NOTE Confidence: 0.8885917663574219
+
+00:05:24.985 --> 00:05:26.987
+top that says Work IQ and it's using work IQ
+
+NOTE Confidence: 0.8885917663574219
+
+00:05:27.033 --> 00:05:28.079
+to look up your e-mail.
+
+NOTE Confidence: 0.951569676399231
+
+00:05:28.120 --> 00:05:31.469
+Now in any case, with that, we did make a
+
+NOTE Confidence: 0.951569676399231
+
+00:05:31.551 --> 00:05:35.064
+spec, and so here is the spec that we ended
+
+NOTE Confidence: 0.951569676399231
+
+00:05:35.146 --> 00:05:35.800
+up with.
+
+NOTE Confidence: 0.9598290324211121
+
+00:05:36.320 --> 00:05:40.117
+And with this spec, we ended up actually building the
+
+NOTE Confidence: 0.9598290324211121
+
+00:05:40.188 --> 00:05:41.120
+agent itself.
+
+NOTE Confidence: 0.9705919027328491
+
+00:05:42.040 --> 00:05:44.640
+And this is the agent.
+
+NOTE Confidence: 0.8328351378440857
+
+00:05:44.920 --> 00:05:47.166
+Now this agent is using, this is the front end,
+
+NOTE Confidence: 0.8328351378440857
+
+00:05:47.214 --> 00:05:48.840
+the fancy front end for the agent.
+
+NOTE Confidence: 0.9236753582954407
+
+00:05:48.839 --> 00:05:50.980
+But if we look at it in Foundry, this is
+
+NOTE Confidence: 0.9236753582954407
+
+00:05:51.033 --> 00:05:52.960
+what this agent actually looks like.
+
+NOTE Confidence: 0.9094880223274231
+
+00:05:53.520 --> 00:05:58.117
+And in this agent, we are using all four of
+
+NOTE Confidence: 0.9094880223274231
+
+00:05:58.224 --> 00:05:59.080
+the Iqs.
+
+NOTE Confidence: 0.9012113213539124
+
+00:05:59.080 --> 00:06:01.904
+And so, Amanda, if you don't mind, maybe you could
+
+NOTE Confidence: 0.9012113213539124
+
+00:06:01.961 --> 00:06:04.559
+tell us a little bit about Web IQ and Foundry.
+
+NOTE Confidence: 0.7852452397346497
+
+00:06:04.800 --> 00:06:06.000
+Sure, sounds good.
+
+NOTE Confidence: 0.6634398102760315
+
+00:06:06.720 --> 00:06:09.000
+OK, so didn't work.
+
+NOTE Confidence: 0.8706679940223694
+
+00:06:09.000 --> 00:06:10.560
+We're going to come back to work IQ.
+
+NOTE Confidence: 0.8428241014480591
+
+00:06:10.560 --> 00:06:12.920
+Maybe Marco can actually go and debug it.
+
+NOTE Confidence: 0.6714239716529846
+
+00:06:12.920 --> 00:06:15.141
+So we make sure that the the work IQ works
+
+NOTE Confidence: 0.6714239716529846
+
+00:06:15.194 --> 00:06:16.200
+for our later demo.
+
+NOTE Confidence: 0.94318687915802
+
+00:06:17.080 --> 00:06:19.796
+But basically what we want to see now is that,
+
+NOTE Confidence: 0.94318687915802
+
+00:06:19.855 --> 00:06:22.571
+you know, we can actually have work IQ kind of
+
+NOTE Confidence: 0.94318687915802
+
+00:06:22.630 --> 00:06:24.520
+work in combination with Web IQ.
+
+NOTE Confidence: 0.931227445602417
+
+00:06:24.920 --> 00:06:27.772
+And So what I want to kind of talk about
+
+NOTE Confidence: 0.931227445602417
+
+00:06:27.843 --> 00:06:30.766
+here is really what is Web IQ in a sense,
+
+NOTE Confidence: 0.931227445602417
+
+00:06:30.838 --> 00:06:34.759
+the agents don't just need to understand your business.
+
+NOTE Confidence: 0.9030322432518005
+
+00:06:35.000 --> 00:06:37.693
+Often times what they need to understand is the real
+
+NOTE Confidence: 0.9030322432518005
+
+00:06:37.744 --> 00:06:39.919
+world in which your business is operating.
+
+NOTE Confidence: 0.9487155079841614
+
+00:06:39.920 --> 00:06:43.482
+I was talking about talking with somebody today who delivers
+
+NOTE Confidence: 0.9487155079841614
+
+00:06:43.541 --> 00:06:46.985
+consumer goods and he really needs to understand the micro
+
+NOTE Confidence: 0.9487155079841614
+
+00:06:47.044 --> 00:06:50.250
+events, the local events that are happening so that he
+
+NOTE Confidence: 0.9487155079841614
+
+00:06:50.309 --> 00:06:53.812
+can actually have micro targeting of his his different, you
+
+NOTE Confidence: 0.9487155079841614
+
+00:06:53.872 --> 00:06:57.137
+know, consumer goods that he's trying to deliver to all
+
+NOTE Confidence: 0.9487155079841614
+
+00:06:57.196 --> 00:06:58.799
+of these different markets.
+
+NOTE Confidence: 0.9200472831726074
+
+00:06:59.080 --> 00:07:01.324
+So that's a great example of where you might use
+
+NOTE Confidence: 0.9200472831726074
+
+00:07:01.371 --> 00:07:02.400
+something like Web IQ.
+
+NOTE Confidence: 0.8865938186645508
+
+00:07:02.920 --> 00:07:07.886
+So Web IQ really connects AI to authoritative real world
+
+NOTE Confidence: 0.8865938186645508
+
+00:07:07.975 --> 00:07:09.039
+information.
+
+NOTE Confidence: 0.8615542650222778
+
+00:07:09.320 --> 00:07:14.350
+It's structured multimodal index across the web, news, images and
+
+NOTE Confidence: 0.8615542650222778
+
+00:07:14.428 --> 00:07:18.607
+video so that agents can be grounded, have their their
+
+NOTE Confidence: 0.8615542650222778
+
+00:07:18.684 --> 00:07:22.400
+responses grounded in fresh, verifiable context.
+
+NOTE Confidence: 0.9359776973724365
+
+00:07:22.640 --> 00:07:25.120
+It's not a traditional search API.
+
+NOTE Confidence: 0.8578868508338928
+
+00:07:25.720 --> 00:07:26.960
+It's that's wrapped in AI.
+
+NOTE Confidence: 0.9261965155601501
+
+00:07:27.160 --> 00:07:31.253
+It's actually a grounding platform that's built specifically for the
+
+NOTE Confidence: 0.9261965155601501
+
+00:07:31.313 --> 00:07:33.240
+needs of modern agentic systems.
+
+NOTE Confidence: 0.9095668792724609
+
+00:07:33.520 --> 00:07:36.390
+So, you know, if you think about building agents at
+
+NOTE Confidence: 0.9095668792724609
+
+00:07:36.446 --> 00:07:38.360
+scale, three things really matter.
+
+NOTE Confidence: 0.9341402053833008
+
+00:07:38.640 --> 00:07:44.255
+First, quality Web IQ delivers structured, citation ready results across
+
+NOTE Confidence: 0.9341402053833008
+
+00:07:44.333 --> 00:07:48.467
+the web, news, images, video, and it helps the agents
+
+NOTE Confidence: 0.9341402053833008
+
+00:07:48.545 --> 00:07:52.679
+generate the answers that users can verify and trust.
+
+NOTE Confidence: 0.92255038022995
+
+00:07:53.080 --> 00:07:54.360
+Second, speed.
+
+NOTE Confidence: 0.8478904962539673
+
+00:07:55.120 --> 00:07:59.587
+Agent workflows are inherently multi step and so retrieval and
+
+NOTE Confidence: 0.8478904962539673
+
+00:07:59.659 --> 00:08:03.551
+reasoning and planning and action are all they all add
+
+NOTE Confidence: 0.8478904962539673
+
+00:08:03.623 --> 00:08:04.199
+latency.
+
+NOTE Confidence: 0.8681490421295166
+
+00:08:04.560 --> 00:08:08.527
+So with sub 200 millisecond P-95 grounding, Web IQ really
+
+NOTE Confidence: 0.8681490421295166
+
+00:08:08.596 --> 00:08:12.911
+helps keep those workflows responsive even as the agents chain
+
+NOTE Confidence: 0.8681490421295166
+
+00:08:12.981 --> 00:08:14.999
+together multiple operations.
+
+NOTE Confidence: 0.9328339099884033
+
+00:08:15.400 --> 00:08:17.760
+And third thing we have to think about is efficiency.
+
+NOTE Confidence: 0.9541798233985901
+
+00:08:18.200 --> 00:08:21.160
+The context windows are really valuable real estate.
+
+NOTE Confidence: 0.9438089728355408
+
+00:08:21.480 --> 00:08:25.614
+So Web IQ uses the passage level ranking to surface
+
+NOTE Confidence: 0.9438089728355408
+
+00:08:25.695 --> 00:08:30.639
+the highest signal information while filtering out the noise.
+
+NOTE Confidence: 0.9336618185043335
+
+00:08:30.840 --> 00:08:34.568
+That allows you to reduce the token consumption and lowering
+
+NOTE Confidence: 0.9336618185043335
+
+00:08:34.631 --> 00:08:37.924
+the overall costs of the agents that are operating at
+
+NOTE Confidence: 0.9336618185043335
+
+00:08:37.987 --> 00:08:38.360
+scale.
+
+NOTE Confidence: 0.8900976777076721
+
+00:08:39.679 --> 00:08:42.806
+So Web IQ is already being used by many front
+
+NOTE Confidence: 0.8900976777076721
+
+00:08:42.875 --> 00:08:46.905
+by Frontier model providers and a bunch of enterprises and
+
+NOTE Confidence: 0.8900976777076721
+
+00:08:46.974 --> 00:08:50.239
+it's available today for a few Azure customers.
+
+NOTE Confidence: 0.7679611444473267
+
+00:08:50.640 --> 00:08:52.680
+One example is is NASDAQ.
+
+NOTE Confidence: 0.7182876467704773
+
+00:08:53.080 --> 00:08:55.880
+So they have this solution they call Board Vantage.
+
+NOTE Confidence: 0.8758960366249084
+
+00:08:56.120 --> 00:09:00.432
+And NASDAQ really helps boards and executives make decisions in
+
+NOTE Confidence: 0.8758960366249084
+
+00:09:00.500 --> 00:09:04.402
+real time where the accuracy, the timelines and the trust
+
+NOTE Confidence: 0.8758960366249084
+
+00:09:04.470 --> 00:09:05.840
+are really critical.
+
+NOTE Confidence: 0.9343035817146301
+
+00:09:06.200 --> 00:09:08.739
+And so that means that they can bring together the
+
+NOTE Confidence: 0.9343035817146301
+
+00:09:08.790 --> 00:09:12.041
+enterprise information and all of the external signals that they
+
+NOTE Confidence: 0.9343035817146301
+
+00:09:12.092 --> 00:09:14.683
+can get on the web without having to compromise the
+
+NOTE Confidence: 0.9343035817146301
+
+00:09:14.734 --> 00:09:16.359
+security or the data boundaries.
+
+NOTE Confidence: 0.9221179485321045
+
+00:09:16.760 --> 00:09:19.956
+So with Web IQ, NASDAQ can actually ground the AI
+
+NOTE Confidence: 0.9221179485321045
+
+00:09:20.021 --> 00:09:24.066
+in this fresh, authoritative information so that they can make
+
+NOTE Confidence: 0.9221179485321045
+
+00:09:24.131 --> 00:09:26.479
+all of these decisions in real time.
+
+NOTE Confidence: 0.9050734639167786
+
+00:09:26.720 --> 00:09:30.391
+And the result is faster access to the external contact
+
+NOTE Confidence: 0.9050734639167786
+
+00:09:30.457 --> 00:09:35.330
+context, higher quality responses, and a simpler architecture that allows
+
+NOTE Confidence: 0.9050734639167786
+
+00:09:35.397 --> 00:09:37.399
+them to build AI applications.
+
+NOTE Confidence: 0.9026334881782532
+
+00:09:38.080 --> 00:09:39.840
+So Next up is Foundry IQ.
+
+NOTE Confidence: 0.882963240146637
+
+00:09:40.200 --> 00:09:43.845
+So if web IQ connects agents to the world's knowledge,
+
+NOTE Confidence: 0.882963240146637
+
+00:09:43.913 --> 00:09:48.571
+Foundry IQ connects them to your knowledge, enterprise knowledge, you
+
+NOTE Confidence: 0.882963240146637
+
+00:09:48.639 --> 00:09:51.947
+could think about it as all of that, that context
+
+NOTE Confidence: 0.882963240146637
+
+00:09:52.015 --> 00:09:56.673
+that is scattered throughout your organization and data platforms and
+
+NOTE Confidence: 0.882963240146637
+
+00:09:56.741 --> 00:10:01.400
+content repositories in business systems in your custom applications.
+
+NOTE Confidence: 0.9153034090995789
+
+00:10:01.679 --> 00:10:05.043
+Now, today, developers have to spend too much time stitching
+
+NOTE Confidence: 0.9153034090995789
+
+00:10:05.099 --> 00:10:08.070
+all of these sources together before an the agent can
+
+NOTE Confidence: 0.9153034090995789
+
+00:10:08.126 --> 00:10:09.639
+actually deliver the value.
+
+NOTE Confidence: 0.9105374813079834
+
+00:10:10.000 --> 00:10:11.640
+But Foundry IQ changes that.
+
+NOTE Confidence: 0.9232520461082458
+
+00:10:12.040 --> 00:10:16.497
+It provides the unified knowledge layer that automatically ingests and
+
+NOTE Confidence: 0.9232520461082458
+
+00:10:16.561 --> 00:10:20.955
+enriches, and it connects the enterprise information and eliminates a
+
+NOTE Confidence: 0.9232520461082458
+
+00:10:21.019 --> 00:10:24.967
+bunch of the retrieval logic and infrastructure that you would
+
+NOTE Confidence: 0.9232520461082458
+
+00:10:25.031 --> 00:10:26.559
+have to build otherwise.
+
+NOTE Confidence: 0.9114494323730469
+
+00:10:27.040 --> 00:10:30.812
+And then at runtime, when the agent is operating, Foundry
+
+NOTE Confidence: 0.9114494323730469
+
+00:10:30.878 --> 00:10:35.180
+IQ intelligently retrieves the right information for you and from
+
+NOTE Confidence: 0.9114494323730469
+
+00:10:35.246 --> 00:10:39.085
+the right sources, giving the agents the context that they
+
+NOTE Confidence: 0.9114494323730469
+
+00:10:39.151 --> 00:10:42.659
+need to answer accurately and enable the agent to act
+
+NOTE Confidence: 0.9114494323730469
+
+00:10:42.725 --> 00:10:43.520
+confidently.
+
+NOTE Confidence: 0.9357125759124756
+
+00:10:43.800 --> 00:10:46.335
+So that means less infrastructure that you have to manage
+
+NOTE Confidence: 0.9357125759124756
+
+00:10:46.379 --> 00:10:48.959
+and more intelligence for the agents that you're building.
+
+NOTE Confidence: 0.9342983365058899
+
+00:10:49.320 --> 00:10:51.440
+So here's the mental model for Foundry IQ.
+
+NOTE Confidence: 0.9288527965545654
+
+00:10:51.800 --> 00:10:55.775
+At the foundation are your knowledge sources, your enterprise data,
+
+NOTE Confidence: 0.9288527965545654
+
+00:10:55.834 --> 00:10:58.920
+your documents, your applications, and the live web.
+
+NOTE Confidence: 0.8472219109535217
+
+00:10:59.360 --> 00:11:03.047
+And above that is the context layer where memory, embeddings,
+
+NOTE Confidence: 0.8472219109535217
+
+00:11:03.108 --> 00:11:07.279
+and the semantic models all turn that information into understanding.
+
+NOTE Confidence: 0.9591721296310425
+
+00:11:07.600 --> 00:11:09.853
+And then at the top are the agents and the
+
+NOTE Confidence: 0.9591721296310425
+
+00:11:09.906 --> 00:11:12.160
+applications that the users interact with.
+
+NOTE Confidence: 0.9547972679138184
+
+00:11:13.360 --> 00:11:15.600
+So the key idea here is delegation.
+
+NOTE Confidence: 0.9724367260932922
+
+00:11:16.120 --> 00:11:19.920
+Every layer does one thing really well, knowledge sources.
+
+NOTE Confidence: 0.9432984590530396
+
+00:11:20.080 --> 00:11:23.247
+They store the information and the agents retrieve it and
+
+NOTE Confidence: 0.9432984590530396
+
+00:11:23.303 --> 00:11:25.359
+reason over it, and they take action.
+
+NOTE Confidence: 0.9604156017303467
+
+00:11:25.720 --> 00:11:28.183
+And as a developer, you don't want to have to
+
+NOTE Confidence: 0.9604156017303467
+
+00:11:28.237 --> 00:11:30.920
+rebuild that machinery inside every single agent.
+
+NOTE Confidence: 0.9500581622123718
+
+00:11:31.120 --> 00:11:33.523
+You might want to define a knowledge base that you
+
+NOTE Confidence: 0.9500581622123718
+
+00:11:33.571 --> 00:11:36.840
+then make available to multiple agents throughout your organization.
+
+NOTE Confidence: 0.9618465304374695
+
+00:11:37.160 --> 00:11:38.969
+So you want to build on top of it so
+
+NOTE Confidence: 0.9618465304374695
+
+00:11:39.019 --> 00:11:41.080
+that you can get to your solution faster.
+
+NOTE Confidence: 0.9503036737442017
+
+00:11:42.600 --> 00:11:46.919
+But great grounding isn't just about the retrieval, it's also
+
+NOTE Confidence: 0.9503036737442017
+
+00:11:46.990 --> 00:11:47.840
+about trust.
+
+NOTE Confidence: 0.9440228939056396
+
+00:11:48.280 --> 00:11:52.058
+So that's why security and governance and policy enforcement are
+
+NOTE Confidence: 0.9440228939056396
+
+00:11:52.117 --> 00:11:55.599
+built directly into the platform, not bolted on afterwards.
+
+NOTE Confidence: 0.9195841550827026
+
+00:11:56.080 --> 00:12:00.305
+And today we're actually introducing a new serverless developer tier
+
+NOTE Confidence: 0.9195841550827026
+
+00:12:00.367 --> 00:12:03.660
+that gives every developer an easy way to get started
+
+NOTE Confidence: 0.9195841550827026
+
+00:12:03.722 --> 00:12:06.953
+building with Foundry IQ and allows them to scale to
+
+NOTE Confidence: 0.9195841550827026
+
+00:12:07.015 --> 00:12:08.879
+production when they're ready.
+
+NOTE Confidence: 0.861703634262085
+
+00:12:09.520 --> 00:12:14.011
+Now, several organizations are already using Foundry IQ Sitecore, which
+
+NOTE Confidence: 0.861703634262085
+
+00:12:14.074 --> 00:12:17.679
+is a leader in digital experience and content management.
+
+NOTE Confidence: 0.9503358006477356
+
+00:12:17.880 --> 00:12:19.924
+It's a great example of what this looks like in
+
+NOTE Confidence: 0.9503358006477356
+
+00:12:19.968 --> 00:12:20.360
+practice.
+
+NOTE Confidence: 0.9145194888114929
+
+00:12:20.880 --> 00:12:25.780
+Foundry IQ gives them reusable knowledge bases, agentic retrieval, and
+
+NOTE Confidence: 0.9145194888114929
+
+00:12:25.850 --> 00:12:28.720
+enterprise grade security out-of-the-box.
+
+NOTE Confidence: 0.913021445274353
+
+00:12:29.160 --> 00:12:33.001
+And Sitecore took those capabilities and then applied them directly
+
+NOTE Confidence: 0.913021445274353
+
+00:12:33.058 --> 00:12:35.925
+to a real business problem so that they could make
+
+NOTE Confidence: 0.913021445274353
+
+00:12:35.982 --> 00:12:39.709
+sure that their marketing and their brand knowledge is accessible
+
+NOTE Confidence: 0.913021445274353
+
+00:12:39.766 --> 00:12:43.321
+to every agent across their organization, every time, with all
+
+NOTE Confidence: 0.913021445274353
+
+00:12:43.378 --> 00:12:44.639
+the right permissions.
+
+NOTE Confidence: 0.8946241736412048
+
+00:12:44.800 --> 00:12:47.979
+So that's exactly why we built Foundry IQ, so that
+
+NOTE Confidence: 0.8946241736412048
+
+00:12:48.043 --> 00:12:52.113
+developers can plug in their existing work flows and immediately
+
+NOTE Confidence: 0.8946241736412048
+
+00:12:52.176 --> 00:12:56.247
+empower the agents to be more accurate, more grounded, governed,
+
+NOTE Confidence: 0.8946241736412048
+
+00:12:56.310 --> 00:12:58.599
+and ready for production deployment.
+
+NOTE Confidence: 0.9546677470207214
+
+00:12:59.120 --> 00:13:00.400
+So now let's bring it all together.
+
+NOTE Confidence: 0.9280185699462891
+
+00:13:01.000 --> 00:13:03.873
+Marco's going to show you now what happens when you
+
+NOTE Confidence: 0.9280185699462891
+
+00:13:03.929 --> 00:13:06.802
+connect our refund agent to both Web IQ and Foundry
+
+NOTE Confidence: 0.9280185699462891
+
+00:13:06.858 --> 00:13:09.901
+IQ and grounding it in the real world information, the
+
+NOTE Confidence: 0.9280185699462891
+
+00:13:09.957 --> 00:13:13.731
+enterprise knowledge that you have inside your organization and the
+
+NOTE Confidence: 0.9280185699462891
+
+00:13:13.788 --> 00:13:15.759
+governance required for production.
+
+NOTE Confidence: 0.88222736120224
+
+00:13:16.000 --> 00:13:19.179
+So you'll see the knowledge base come online, the agent
+
+NOTE Confidence: 0.88222736120224
+
+00:13:19.237 --> 00:13:22.531
+retrieve the context that it needs, and the policies that
+
+NOTE Confidence: 0.88222736120224
+
+00:13:22.589 --> 00:13:25.479
+will ensure that it operates safely in production.
+
+NOTE Confidence: 0.8560986518859863
+
+00:13:25.560 --> 00:13:26.200
+Over to you, Marco.
+
+NOTE Confidence: 0.811433732509613
+
+00:13:26.600 --> 00:13:28.280
+Or we'd like to think that that'll happen.
+
+NOTE Confidence: 0.908543586730957
+
+00:13:28.280 --> 00:13:30.785
+But in the time that you've been talking up there,
+
+NOTE Confidence: 0.908543586730957
+
+00:13:30.835 --> 00:13:33.239
+I discovered that my network has gone down hard.
+
+NOTE Confidence: 0.7786742448806763
+
+00:13:33.280 --> 00:13:35.200
+So we're going to, we're going to make do with
+
+NOTE Confidence: 0.7786742448806763
+
+00:13:35.242 --> 00:13:37.079
+what we got here and, and hope for the best.
+
+NOTE Confidence: 0.8366730809211731
+
+00:13:37.080 --> 00:13:39.680
+So now we talked about Web IQ.
+
+NOTE Confidence: 0.9243996143341064
+
+00:13:39.920 --> 00:13:42.706
+Now we have, as I said, we grounded this agent
+
+NOTE Confidence: 0.9243996143341064
+
+00:13:42.766 --> 00:13:44.159
+to all four of the Iqs.
+
+NOTE Confidence: 0.880805492401123
+
+00:13:44.440 --> 00:13:47.932
+Now with Web IQ that allows us to ground to
+
+NOTE Confidence: 0.880805492401123
+
+00:13:48.014 --> 00:13:49.719
+real time world data.
+
+NOTE Confidence: 0.8773571252822876
+
+00:13:49.720 --> 00:13:51.978
+Now in this case, I'm asking and now this is
+
+NOTE Confidence: 0.8773571252822876
+
+00:13:52.029 --> 00:13:55.159
+our package delivery system and refunds and things like that.
+
+NOTE Confidence: 0.8309944868087769
+
+00:13:55.680 --> 00:13:57.640
+And I am asking you about the Sandy Fire.
+
+NOTE Confidence: 0.9276702404022217
+
+00:13:57.640 --> 00:14:01.518
+The Sandy Fire is right now still burning 400 miles
+
+NOTE Confidence: 0.9276702404022217
+
+00:14:01.594 --> 00:14:03.800
+South of here in Simi Valley.
+
+NOTE Confidence: 0.9043197631835938
+
+00:14:04.240 --> 00:14:08.271
+And so the idea would be by network we're working
+
+NOTE Confidence: 0.9043197631835938
+
+00:14:08.353 --> 00:14:11.809
+that it will very quickly go to Web IQ and
+
+NOTE Confidence: 0.9043197631835938
+
+00:14:11.891 --> 00:14:15.923
+get back this result and ground this agent to the
+
+NOTE Confidence: 0.9043197631835938
+
+00:14:16.005 --> 00:14:17.239
+real time data.
+
+NOTE Confidence: 0.9456108212471008
+
+00:14:17.240 --> 00:14:19.053
+But I'm not going to sit here and wait for
+
+NOTE Confidence: 0.9456108212471008
+
+00:14:19.096 --> 00:14:21.211
+that to come back because that doesn't seem to be
+
+NOTE Confidence: 0.9456108212471008
+
+00:14:21.254 --> 00:14:21.600
+working.
+
+NOTE Confidence: 0.7215855717658997
+
+00:14:21.600 --> 00:14:24.008
+I even tried hotspotting it to my phone, but not
+
+NOTE Confidence: 0.7215855717658997
+
+00:14:24.058 --> 00:14:24.360
+great.
+
+NOTE Confidence: 0.8085283041000366
+
+00:14:24.360 --> 00:14:26.360
+So we're going to make do with what we got.
+
+NOTE Confidence: 0.9323735237121582
+
+00:14:26.360 --> 00:14:32.000
+Now I am also linking this to Foundry IQ.
+
+NOTE Confidence: 0.8787003755569458
+
+00:14:32.000 --> 00:14:35.189
+So you see, I got my my Foundry IQ over
+
+NOTE Confidence: 0.8787003755569458
+
+00:14:35.271 --> 00:14:35.680
+here.
+
+NOTE Confidence: 0.9727410078048706
+
+00:14:35.680 --> 00:14:37.520
+What's that all about?
+
+NOTE Confidence: 0.9181032180786133
+
+00:14:38.000 --> 00:14:40.494
+So here is Foundry IQ with plenty of little errors
+
+NOTE Confidence: 0.9181032180786133
+
+00:14:40.544 --> 00:14:42.840
+on top due to my lack of a network connection.
+
+NOTE Confidence: 0.9318804144859314
+
+00:14:42.840 --> 00:14:45.914
+But what, what is not a problem here is the
+
+NOTE Confidence: 0.9318804144859314
+
+00:14:45.986 --> 00:14:49.203
+fact that I have connected this to a bunch of
+
+NOTE Confidence: 0.9318804144859314
+
+00:14:49.275 --> 00:14:50.919
+different data sources.
+
+NOTE Confidence: 0.9178760051727295
+
+00:14:51.400 --> 00:14:54.846
+And this highlights one of the key aspects of what
+
+NOTE Confidence: 0.9178760051727295
+
+00:14:54.915 --> 00:14:57.880
+these Iqs are all about, and that is reuse.
+
+NOTE Confidence: 0.8091447949409485
+
+00:14:57.880 --> 00:14:59.599
+You know, the fact is, I got, let's see how
+
+NOTE Confidence: 0.8091447949409485
+
+00:14:59.639 --> 00:15:00.879
+many agents have I got in here?
+
+NOTE Confidence: 0.8827111124992371
+
+00:15:00.880 --> 00:15:03.700
+I got 35 agents in here, of which 31 are
+
+NOTE Confidence: 0.8827111124992371
+
+00:15:03.770 --> 00:15:05.040
+currently running.
+
+NOTE Confidence: 0.9086472988128662
+
+00:15:05.600 --> 00:15:08.421
+And I'm connecting a bunch of them to the same
+
+NOTE Confidence: 0.9086472988128662
+
+00:15:08.482 --> 00:15:09.279
+data sources.
+
+NOTE Confidence: 0.9029096364974976
+
+00:15:09.280 --> 00:15:11.280
+I'm grounding them to the same context.
+
+NOTE Confidence: 0.9354336857795715
+
+00:15:11.480 --> 00:15:14.170
+And So what I don't want to do is redefine
+
+NOTE Confidence: 0.9354336857795715
+
+00:15:14.235 --> 00:15:17.438
+this over and over and over again for every single
+
+NOTE Confidence: 0.9354336857795715
+
+00:15:17.502 --> 00:15:18.720
+agent that I build.
+
+NOTE Confidence: 0.915177583694458
+
+00:15:19.680 --> 00:15:22.663
+And so instead what I can do is use a
+
+NOTE Confidence: 0.915177583694458
+
+00:15:22.743 --> 00:15:24.840
+Foundry IQ knowledge base.
+
+NOTE Confidence: 0.9399659037590027
+
+00:15:24.840 --> 00:15:27.380
+Now it's a little bit of a misnomer to call
+
+NOTE Confidence: 0.9399659037590027
+
+00:15:27.439 --> 00:15:30.866
+it a knowledge base because that's not really what Foundry
+
+NOTE Confidence: 0.9399659037590027
+
+00:15:30.925 --> 00:15:31.279
+IQ is.
+
+NOTE Confidence: 0.9009594917297363
+
+00:15:31.280 --> 00:15:34.960
+What it really is, is a separate sub agent.
+
+NOTE Confidence: 0.7816125750541687
+
+00:15:34.960 --> 00:15:36.840
+This is doing a gentic retrieval.
+
+NOTE Confidence: 0.9510844945907593
+
+00:15:36.840 --> 00:15:39.800
+And that means that it can try and try again.
+
+NOTE Confidence: 0.8461203575134277
+
+00:15:39.800 --> 00:15:43.190
+It can re rank results before it gives it up
+
+NOTE Confidence: 0.8461203575134277
+
+00:15:43.267 --> 00:15:45.040
+to my downstream agent.
+
+NOTE Confidence: 0.880061686038971
+
+00:15:45.040 --> 00:15:48.457
+And so it can search through all of these things
+
+NOTE Confidence: 0.880061686038971
+
+00:15:48.528 --> 00:15:52.159
+and it reduces the amount of challenge that I have.
+
+NOTE Confidence: 0.7479511499404907
+
+00:15:52.160 --> 00:15:54.000
+He's giving me a new network connection over here.
+
+NOTE Confidence: 0.9628878831863403
+
+00:15:54.440 --> 00:15:55.440
+I'll take that in a minute.
+
+NOTE Confidence: 0.9744293689727783
+
+00:15:55.760 --> 00:15:57.040
+Not right now anyway.
+
+NOTE Confidence: 0.8685046434402466
+
+00:15:57.320 --> 00:15:57.600
+All right.
+
+NOTE Confidence: 0.9485105872154236
+
+00:15:57.600 --> 00:16:02.565
+So basically this allows me to reuse this context across
+
+NOTE Confidence: 0.9485105872154236
+
+00:16:02.654 --> 00:16:04.960
+multiple different agents.
+
+NOTE Confidence: 0.9228489995002747
+
+00:16:05.320 --> 00:16:07.388
+And so with that, Amanda, maybe we can talk a
+
+NOTE Confidence: 0.9228489995002747
+
+00:16:07.434 --> 00:16:08.400
+little bit about now.
+
+NOTE Confidence: 0.8739607930183411
+
+00:16:08.400 --> 00:16:11.664
+You see also we're using here Foundry, sorry, Fabric IQ
+
+NOTE Confidence: 0.8739607930183411
+
+00:16:11.723 --> 00:16:13.919
+in the form of the Fabric data agent.
+
+NOTE Confidence: 0.8813753128051758
+
+00:16:14.120 --> 00:16:16.372
+And why don't you tell a little bit about Fabric
+
+NOTE Confidence: 0.8813753128051758
+
+00:16:16.419 --> 00:16:16.560
+IQ?
+
+NOTE Confidence: 0.661770224571228
+
+00:16:16.720 --> 00:16:18.800
+While I attempt to repair my network.
+
+NOTE Confidence: 0.6496257185935974
+
+00:16:18.800 --> 00:16:19.520
+Go go, Marco.
+
+NOTE Confidence: 0.8193089365959167
+
+00:16:19.520 --> 00:16:20.640
+We're all rooting for you, man.
+
+NOTE Confidence: 0.9195733666419983
+
+00:16:21.840 --> 00:16:24.912
+All right, so Foundry IQ really helps you unlock all
+
+NOTE Confidence: 0.9195733666419983
+
+00:16:24.971 --> 00:16:28.635
+of the information that your organization knows, but Fabric IQ
+
+NOTE Confidence: 0.9195733666419983
+
+00:16:28.694 --> 00:16:32.239
+is what helps them understand what's happening in real time.
+
+NOTE Confidence: 0.907469630241394
+
+00:16:32.680 --> 00:16:35.484
+It allows the agents to connect to the data that
+
+NOTE Confidence: 0.907469630241394
+
+00:16:35.542 --> 00:16:39.223
+you have in your organization, the metrics, the semantic models
+
+NOTE Confidence: 0.907469630241394
+
+00:16:39.282 --> 00:16:42.729
+and reports that describe the current state of the business
+
+NOTE Confidence: 0.907469630241394
+
+00:16:42.788 --> 00:16:45.709
+so that they can reason with the same context that
+
+NOTE Confidence: 0.907469630241394
+
+00:16:45.767 --> 00:16:49.039
+people use to make decisions across your team every day.
+
+NOTE Confidence: 0.9208139181137085
+
+00:16:49.800 --> 00:16:51.729
+So there are really three different outcomes that it can
+
+NOTE Confidence: 0.9208139181137085
+
+00:16:51.764 --> 00:16:52.039
+deliver.
+
+NOTE Confidence: 0.9094343781471252
+
+00:16:52.200 --> 00:16:56.520
+A shared understanding of how the business operates, insights that
+
+NOTE Confidence: 0.9094343781471252
+
+00:16:56.585 --> 00:17:00.054
+can turn those those into actions and agents that can
+
+NOTE Confidence: 0.9094343781471252
+
+00:17:00.120 --> 00:17:02.280
+reason over the business context.
+
+NOTE Confidence: 0.870187520980835
+
+00:17:02.280 --> 00:17:05.511
+Not just the raw data, but what really is it
+
+NOTE Confidence: 0.870187520980835
+
+00:17:05.584 --> 00:17:09.770
+at the foundation, There's a unified, there's all of your
+
+NOTE Confidence: 0.870187520980835
+
+00:17:09.844 --> 00:17:11.679
+unified data in one lake.
+
+NOTE Confidence: 0.9338863492012024
+
+00:17:11.680 --> 00:17:14.279
+So no matter where your data is today, even if
+
+NOTE Confidence: 0.9338863492012024
+
+00:17:14.336 --> 00:17:17.501
+it's not in a Microsoft database, you can actually bring
+
+NOTE Confidence: 0.9338863492012024
+
+00:17:17.557 --> 00:17:19.931
+it into one lake and it can kind of reason
+
+NOTE Confidence: 0.9338863492012024
+
+00:17:19.987 --> 00:17:20.439
+over it.
+
+NOTE Confidence: 0.8937827944755554
+
+00:17:21.320 --> 00:17:24.695
+You can have semantic models that are modeling all of
+
+NOTE Confidence: 0.8937827944755554
+
+00:17:24.758 --> 00:17:26.160
+your business metrics.
+
+NOTE Confidence: 0.9036709070205688
+
+00:17:26.359 --> 00:17:29.578
+Now, most of you have probably already defined these in
+
+NOTE Confidence: 0.9036709070205688
+
+00:17:29.636 --> 00:17:32.620
+Power BI and one of the things that's so incredible
+
+NOTE Confidence: 0.9036709070205688
+
+00:17:32.679 --> 00:17:35.312
+about Fabric IQ is that it could just pick up
+
+NOTE Confidence: 0.9036709070205688
+
+00:17:35.370 --> 00:17:38.764
+what you've already defined in Power BI and start enabling
+
+NOTE Confidence: 0.9036709070205688
+
+00:17:38.823 --> 00:17:40.519
+the agents to reason over it.
+
+NOTE Confidence: 0.9204810857772827
+
+00:17:41.000 --> 00:17:45.227
+And then the ontologies, they capture what your business really
+
+NOTE Confidence: 0.9204810857772827
+
+00:17:45.294 --> 00:17:49.052
+means, all of the entities and the relationships and the
+
+NOTE Confidence: 0.9204810857772827
+
+00:17:49.119 --> 00:17:53.279
+rules and the constraints that your your business operates on.
+
+NOTE Confidence: 0.8691878914833069
+
+00:17:53.359 --> 00:17:55.984
+So all three of those layers live in fabric and
+
+NOTE Confidence: 0.8691878914833069
+
+00:17:56.040 --> 00:17:58.999
+they're Co located with the data that they described.
+
+NOTE Confidence: 0.9355892539024353
+
+00:17:59.000 --> 00:18:02.560
+They're not stitched together as you're trying to assemble it.
+
+NOTE Confidence: 0.8740720152854919
+
+00:18:03.120 --> 00:18:04.720
+So let's first talk about 1 Lake.
+
+NOTE Confidence: 0.9143847823143005
+
+00:18:05.280 --> 00:18:07.840
+You can think about it as a single unified data
+
+NOTE Confidence: 0.9143847823143005
+
+00:18:07.894 --> 00:18:11.489
+layer for your organization, and it brings together the analytical
+
+NOTE Confidence: 0.9143847823143005
+
+00:18:11.544 --> 00:18:14.758
+and operational data across the systems and the clouds that
+
+NOTE Confidence: 0.9143847823143005
+
+00:18:14.812 --> 00:18:17.917
+you're working in without having to constantly move it or
+
+NOTE Confidence: 0.9143847823143005
+
+00:18:17.971 --> 00:18:18.679
+duplicate it.
+
+NOTE Confidence: 0.9560688138008118
+
+00:18:19.600 --> 00:18:22.665
+And that really matters because agents are only as good
+
+NOTE Confidence: 0.9560688138008118
+
+00:18:22.720 --> 00:18:24.559
+as the data that they can access.
+
+NOTE Confidence: 0.9183589816093445
+
+00:18:24.800 --> 00:18:28.283
+But with one lake, every team, every application, and every
+
+NOTE Confidence: 0.9183589816093445
+
+00:18:28.342 --> 00:18:30.999
+agent can work from the same source of truth.
+
+NOTE Confidence: 0.9405796527862549
+
+00:18:31.280 --> 00:18:33.496
+And that eliminates all of the silos and all of
+
+NOTE Confidence: 0.9405796527862549
+
+00:18:33.543 --> 00:18:36.515
+the RE authentication and all of the authentication errors that
+
+NOTE Confidence: 0.9405796527862549
+
+00:18:36.562 --> 00:18:37.600
+you have to deal with.
+
+NOTE Confidence: 0.9183012843132019
+
+00:18:37.920 --> 00:18:43.003
+And it allows these AI systems to have consistent, you
+
+NOTE Confidence: 0.9183012843132019
+
+00:18:43.097 --> 00:18:47.239
+know, scalable and cost effective solutions.
+
+NOTE Confidence: 0.868584394454956
+
+00:18:47.240 --> 00:18:50.468
+Here now on top of 1 Lake are these semantic
+
+NOTE Confidence: 0.868584394454956
+
+00:18:50.542 --> 00:18:54.285
+models and they are what bridge the gap between the
+
+NOTE Confidence: 0.868584394454956
+
+00:18:54.358 --> 00:18:56.560
+data and the business meeting.
+
+NOTE Confidence: 0.875866174697876
+
+00:18:56.800 --> 00:19:00.091
+And they define the metrics and the concepts that the
+
+NOTE Confidence: 0.875866174697876
+
+00:19:00.153 --> 00:19:03.320
+orgs that that your teams use to run your business.
+
+NOTE Confidence: 0.9369603395462036
+
+00:19:03.800 --> 00:19:06.833
+Now that way when an agent asks what happened, it
+
+NOTE Confidence: 0.9369603395462036
+
+00:19:06.895 --> 00:19:10.238
+gets the same answer that your Power BI solution, your
+
+NOTE Confidence: 0.9369603395462036
+
+00:19:10.300 --> 00:19:13.953
+Power BI dashboards are going to deliver what your analysts
+
+NOTE Confidence: 0.9369603395462036
+
+00:19:14.015 --> 00:19:17.482
+see and ultimately what you report up to your executives
+
+NOTE Confidence: 0.9369603395462036
+
+00:19:17.544 --> 00:19:18.039
+as well.
+
+NOTE Confidence: 0.9201924204826355
+
+00:19:19.240 --> 00:19:23.242
+Now ontologies, this is what gives the live model of
+
+NOTE Confidence: 0.9201924204826355
+
+00:19:23.319 --> 00:19:24.319
+the business.
+
+NOTE Confidence: 0.9079455137252808
+
+00:19:24.680 --> 00:19:27.601
+It's the entities and the relationships and the rules and
+
+NOTE Confidence: 0.9079455137252808
+
+00:19:27.653 --> 00:19:29.960
+the processes for your for your organization.
+
+NOTE Confidence: 0.9451332092285156
+
+00:19:30.320 --> 00:19:33.382
+Now, that means that the agents can actually reason about
+
+NOTE Confidence: 0.9451332092285156
+
+00:19:33.435 --> 00:19:36.283
+the customers and the orders, not just the tables and
+
+NOTE Confidence: 0.9451332092285156
+
+00:19:36.336 --> 00:19:37.679
+the schemas and the rows.
+
+NOTE Confidence: 0.9167307019233704
+
+00:19:38.320 --> 00:19:41.832
+And you can bootstrap an ontology from your existing semantic
+
+NOTE Confidence: 0.9167307019233704
+
+00:19:41.890 --> 00:19:44.999
+models, or you can create one from scratch, obviously.
+
+NOTE Confidence: 0.9598485827445984
+
+00:19:45.200 --> 00:19:49.042
+But this is what gives agents the native understanding of
+
+NOTE Confidence: 0.9598485827445984
+
+00:19:49.110 --> 00:19:51.200
+how your organization operates.
+
+NOTE Confidence: 0.8842234015464783
+
+00:19:52.040 --> 00:19:56.107
+Now, Quanwa Q Cells manages energy for AI data centers,
+
+NOTE Confidence: 0.8842234015464783
+
+00:19:56.181 --> 00:20:00.322
+and they have a problem that is increasingly too dynamic
+
+NOTE Confidence: 0.8842234015464783
+
+00:20:00.396 --> 00:20:04.390
+and complex for humans to really reason about on their
+
+NOTE Confidence: 0.8842234015464783
+
+00:20:04.464 --> 00:20:04.760
+own.
+
+NOTE Confidence: 0.9257113337516785
+
+00:20:05.080 --> 00:20:08.832
+So they've used Fabric IQ to build an operational model
+
+NOTE Confidence: 0.9257113337516785
+
+00:20:08.900 --> 00:20:13.334
+of the data center that's understood by people, applications, but
+
+NOTE Confidence: 0.9257113337516785
+
+00:20:13.402 --> 00:20:15.040
+also by these AI agents.
+
+NOTE Confidence: 0.9558675289154053
+
+00:20:15.640 --> 00:20:19.596
+And that common understanding is what allows the agents to
+
+NOTE Confidence: 0.9558675289154053
+
+00:20:19.665 --> 00:20:24.850
+reason about the business, the recommended actions and continuously optimize
+
+NOTE Confidence: 0.9558675289154053
+
+00:20:24.918 --> 00:20:29.080
+the operations, all while keeping human operators in control.
+
+NOTE Confidence: 0.9281041026115417
+
+00:20:29.520 --> 00:20:33.485
+And it doesn't replace the human judgement, but it allows
+
+NOTE Confidence: 0.9281041026115417
+
+00:20:33.554 --> 00:20:37.519
+the agents to automate given the context of the business.
+
+NOTE Confidence: 0.7010855674743652
+
+00:20:38.720 --> 00:20:39.080
+All right.
+
+NOTE Confidence: 0.7231904864311218
+
+00:20:39.080 --> 00:20:39.920
+How are we doing, Marco?
+
+NOTE Confidence: 0.6846275329589844
+
+00:20:40.960 --> 00:20:42.120
+I think we're going to have to make do.
+
+NOTE Confidence: 0.4800496995449066
+
+00:20:42.240 --> 00:20:43.320
+OK, OK, OK.
+
+NOTE Confidence: 0.2815173864364624
+
+00:20:43.320 --> 00:20:43.680
+We're having.
+
+NOTE Confidence: 0.8799558877944946
+
+00:20:43.760 --> 00:20:46.721
+So what we're going to show you now is how,
+
+NOTE Confidence: 0.8799558877944946
+
+00:20:46.789 --> 00:20:50.439
+how the refund agent can be grounded in the knowledge
+
+NOTE Confidence: 0.8799558877944946
+
+00:20:50.508 --> 00:20:54.433
+from Fabric IQ using the ontology and the semantic models
+
+NOTE Confidence: 0.8799558877944946
+
+00:20:54.502 --> 00:20:55.879
+that we had defined.
+
+NOTE Confidence: 0.9269216060638428
+
+00:20:56.160 --> 00:20:58.418
+So let's see if Marco can show us what we're
+
+NOTE Confidence: 0.9269216060638428
+
+00:20:58.469 --> 00:20:58.879
+talking.
+
+NOTE Confidence: 0.8902457356452942
+
+00:20:58.880 --> 00:21:00.400
+About I'm going to do the best I can.
+
+NOTE Confidence: 0.8055670261383057
+
+00:21:00.400 --> 00:21:01.200
+I don't know man.
+
+NOTE Confidence: 0.8825930953025818
+
+00:21:01.520 --> 00:21:03.148
+He came out, he gave me a new network, and
+
+NOTE Confidence: 0.8825930953025818
+
+00:21:03.187 --> 00:21:04.040
+it still doesn't work.
+
+NOTE Confidence: 0.9173307418823242
+
+00:21:04.040 --> 00:21:05.703
+So I don't know, maybe my computer just doesn't want
+
+NOTE Confidence: 0.9173307418823242
+
+00:21:05.735 --> 00:21:06.279
+to connect today.
+
+NOTE Confidence: 0.8700591921806335
+
+00:21:06.280 --> 00:21:09.029
+Fortunately, I preloaded a lot of this stuff in case
+
+NOTE Confidence: 0.8700591921806335
+
+00:21:09.082 --> 00:21:10.879
+such a thing happened, and it did.
+
+NOTE Confidence: 0.8273628950119019
+
+00:21:11.040 --> 00:21:11.760
+So here we have it.
+
+NOTE Confidence: 0.7414166927337646
+
+00:21:12.080 --> 00:21:12.840
+Now here's the deal.
+
+NOTE Confidence: 0.8977821469306946
+
+00:21:12.840 --> 00:21:15.038
+It brings me back to the old days of like
+
+NOTE Confidence: 0.8977821469306946
+
+00:21:15.091 --> 00:21:17.504
+when the cloud was really flaky and we had to
+
+NOTE Confidence: 0.8977821469306946
+
+00:21:17.557 --> 00:21:20.023
+do demos and like we had to cache every single
+
+NOTE Confidence: 0.8977821469306946
+
+00:21:20.077 --> 00:21:20.560
+web page.
+
+NOTE Confidence: 0.867408037185669
+
+00:21:20.800 --> 00:21:21.680
+So thank you, Marco.
+
+NOTE Confidence: 0.7927852869033813
+
+00:21:21.680 --> 00:21:22.480
+Could be worse, right?
+
+NOTE Confidence: 0.610771119594574
+
+00:21:22.520 --> 00:21:23.480
+At least in blue screen.
+
+NOTE Confidence: 0.813183069229126
+
+00:21:23.920 --> 00:21:28.640
+All right, Anyway, All right, so here's the deal.
+
+NOTE Confidence: 0.8409815430641174
+
+00:21:28.760 --> 00:21:31.680
+We got all this data in our One Lake catalog.
+
+NOTE Confidence: 0.6808879375457764
+
+00:21:31.680 --> 00:21:33.240
+All this like structured data.
+
+NOTE Confidence: 0.9095613956451416
+
+00:21:33.480 --> 00:21:35.855
+And I as a human, this is how I access
+
+NOTE Confidence: 0.9095613956451416
+
+00:21:35.917 --> 00:21:36.480
+the data.
+
+NOTE Confidence: 0.8981313705444336
+
+00:21:36.480 --> 00:21:39.263
+I'll make all these Power BI reports, but what I'm
+
+NOTE Confidence: 0.8981313705444336
+
+00:21:39.318 --> 00:21:41.768
+not going to do, I'm not going to give Power
+
+NOTE Confidence: 0.8981313705444336
+
+00:21:41.823 --> 00:21:43.159
+BI reports to my agents.
+
+NOTE Confidence: 0.9671511054039001
+
+00:21:43.520 --> 00:21:45.240
+That doesn't make any sense.
+
+NOTE Confidence: 0.8528706431388855
+
+00:21:45.240 --> 00:21:46.440
+I don't know why you do that.
+
+NOTE Confidence: 0.8915655612945557
+
+00:21:46.440 --> 00:21:49.480
+So we need something better for our agents.
+
+NOTE Confidence: 0.9359031915664673
+
+00:21:49.480 --> 00:21:54.640
+Now, underneath these Power BI reports is a semantic model.
+
+NOTE Confidence: 0.9258755445480347
+
+00:21:54.640 --> 00:21:58.179
+The semantic model tells the system what the relationships are
+
+NOTE Confidence: 0.9258755445480347
+
+00:21:58.236 --> 00:22:00.120
+between all of the tables, right?
+
+NOTE Confidence: 0.7066038250923157
+
+00:22:00.119 --> 00:22:02.214
+So you got our packages and our drivers and you
+
+NOTE Confidence: 0.7066038250923157
+
+00:22:02.259 --> 00:22:03.239
+see the one to many's.
+
+NOTE Confidence: 0.888044536113739
+
+00:22:03.800 --> 00:22:06.798
+And that's almost, almost what an agent needs, but but
+
+NOTE Confidence: 0.888044536113739
+
+00:22:06.853 --> 00:22:09.574
+not quite, because it kind of tells it about what
+
+NOTE Confidence: 0.888044536113739
+
+00:22:09.630 --> 00:22:12.961
+the relationships are between these tables and stuff, but it
+
+NOTE Confidence: 0.888044536113739
+
+00:22:13.017 --> 00:22:15.737
+doesn't really tell it what it means like what it
+
+NOTE Confidence: 0.888044536113739
+
+00:22:15.793 --> 00:22:15.959
+is.
+
+NOTE Confidence: 0.931212306022644
+
+00:22:16.400 --> 00:22:20.690
+So fortunately now we got this button over here called
+
+NOTE Confidence: 0.931212306022644
+
+00:22:20.769 --> 00:22:22.199
+Generate ontology.
+
+NOTE Confidence: 0.8772978186607361
+
+00:22:22.680 --> 00:22:24.144
+And if I were to press it, if I were
+
+NOTE Confidence: 0.8772978186607361
+
+00:22:24.184 --> 00:22:26.381
+to press it, I expect that nothing will happen because
+
+NOTE Confidence: 0.8772978186607361
+
+00:22:26.421 --> 00:22:27.520
+I got no network right now.
+
+NOTE Confidence: 0.870539665222168
+
+00:22:28.359 --> 00:22:30.739
+But I'm going to press it anyway, just just, you
+
+NOTE Confidence: 0.870539665222168
+
+00:22:30.789 --> 00:22:31.879
+know, for the feeling.
+
+NOTE Confidence: 0.539582371711731
+
+00:22:31.880 --> 00:22:32.120
+Yeah.
+
+NOTE Confidence: 0.8425254821777344
+
+00:22:32.120 --> 00:22:34.640
+So as I expected, nothing.
+
+NOTE Confidence: 0.8841410279273987
+
+00:22:34.800 --> 00:22:38.892
+Nothing but and under normal circumstances we would see a,
+
+NOTE Confidence: 0.8841410279273987
+
+00:22:38.963 --> 00:22:43.196
+an ontology generator screen over here that would, you know,
+
+NOTE Confidence: 0.8841410279273987
+
+00:22:43.267 --> 00:22:47.077
+get me started in generating this ontology which I did
+
+NOTE Confidence: 0.8841410279273987
+
+00:22:47.148 --> 00:22:47.360
+do.
+
+NOTE Confidence: 0.9561198949813843
+
+00:22:47.560 --> 00:22:50.146
+So here is the ontology over here and I probably
+
+NOTE Confidence: 0.9561198949813843
+
+00:22:50.200 --> 00:22:52.679
+won't be able to show you too much about this.
+
+NOTE Confidence: 0.9239449501037598
+
+00:22:52.680 --> 00:22:54.895
+But what I will say is now if you look
+
+NOTE Confidence: 0.9239449501037598
+
+00:22:54.953 --> 00:22:57.635
+at this, this is 1 portion of my ontology that
+
+NOTE Confidence: 0.9239449501037598
+
+00:22:57.693 --> 00:22:58.160
+I built.
+
+NOTE Confidence: 0.9392037391662598
+
+00:22:58.160 --> 00:23:00.562
+This is the part about the packages and the customers
+
+NOTE Confidence: 0.9392037391662598
+
+00:23:00.607 --> 00:23:01.559
+and things like that.
+
+NOTE Confidence: 0.9208922982215881
+
+00:23:01.560 --> 00:23:03.662
+And in a way, it kind of looks like the
+
+NOTE Confidence: 0.9208922982215881
+
+00:23:03.716 --> 00:23:05.280
+semantic model, but it's not.
+
+NOTE Confidence: 0.8185070157051086
+
+00:23:05.280 --> 00:23:09.207
+It's different because these things in the mythology, these things
+
+NOTE Confidence: 0.8185070157051086
+
+00:23:09.267 --> 00:23:10.159
+are not tables.
+
+NOTE Confidence: 0.9620115160942078
+
+00:23:10.400 --> 00:23:12.000
+These are business entities.
+
+NOTE Confidence: 0.9647776484489441
+
+00:23:12.000 --> 00:23:15.435
+These are things that matter to your business and these
+
+NOTE Confidence: 0.9647776484489441
+
+00:23:15.497 --> 00:23:20.120
+relationships between them, these are not necessarily table relationships.
+
+NOTE Confidence: 0.9471530914306641
+
+00:23:20.400 --> 00:23:24.957
+These are verbs, so a customer can send or receive
+
+NOTE Confidence: 0.9471530914306641
+
+00:23:25.048 --> 00:23:25.960
+a package.
+
+NOTE Confidence: 0.925808310508728
+
+00:23:25.960 --> 00:23:29.796
+A package can be sent to customer and that's what
+
+NOTE Confidence: 0.925808310508728
+
+00:23:29.874 --> 00:23:33.320
+forms the relationships in these ontologies.
+
+NOTE Confidence: 0.9260926246643066
+
+00:23:33.480 --> 00:23:35.424
+You can also add to these things, and I'm not
+
+NOTE Confidence: 0.9260926246643066
+
+00:23:35.468 --> 00:23:37.240
+even going to try to show this right now.
+
+NOTE Confidence: 0.8462399244308472
+
+00:23:38.080 --> 00:23:41.960
+You can also add additional metadata, additional semantics to this.
+
+NOTE Confidence: 0.9423794150352478
+
+00:23:42.080 --> 00:23:44.880
+So for example, what is a package to us?
+
+NOTE Confidence: 0.934014618396759
+
+00:23:44.880 --> 00:23:46.920
+What do we consider to be a package?
+
+NOTE Confidence: 0.9593430757522583
+
+00:23:47.080 --> 00:23:48.800
+What are some synonyms?
+
+NOTE Confidence: 0.9154033660888672
+
+00:23:49.000 --> 00:23:51.378
+The I might call it a box or a case
+
+NOTE Confidence: 0.9154033660888672
+
+00:23:51.446 --> 00:23:53.959
+or a shipment or something like that.
+
+NOTE Confidence: 0.9353674054145813
+
+00:23:54.280 --> 00:23:57.640
+And so if I'm interacting with this data, I might
+
+NOTE Confidence: 0.9353674054145813
+
+00:23:57.708 --> 00:24:01.137
+use any of these words and this ontology helps the
+
+NOTE Confidence: 0.9353674054145813
+
+00:24:01.205 --> 00:24:05.182
+agent convert those words to what is underneath the scenes
+
+NOTE Confidence: 0.9353674054145813
+
+00:24:05.251 --> 00:24:05.800
+a query.
+
+NOTE Confidence: 0.9283319711685181
+
+00:24:06.680 --> 00:24:09.997
+And so the ontology allows me to give these semantics
+
+NOTE Confidence: 0.9283319711685181
+
+00:24:10.060 --> 00:24:12.751
+to my table to tell the agents what that is
+
+NOTE Confidence: 0.9283319711685181
+
+00:24:12.814 --> 00:24:13.440
+all about.
+
+NOTE Confidence: 0.9638515710830688
+
+00:24:13.440 --> 00:24:17.290
+Now you can use an ontology directly as an MCP
+
+NOTE Confidence: 0.9638515710830688
+
+00:24:17.374 --> 00:24:17.960
+server.
+
+NOTE Confidence: 0.8911802172660828
+
+00:24:18.240 --> 00:24:20.956
+So you, when you define an ontology, there is an
+
+NOTE Confidence: 0.8911802172660828
+
+00:24:21.012 --> 00:24:23.785
+MCP server that you can then connect to or anyway
+
+NOTE Confidence: 0.8911802172660828
+
+00:24:23.841 --> 00:24:26.671
+connect your agents to that will allow them to use
+
+NOTE Confidence: 0.8911802172660828
+
+00:24:26.727 --> 00:24:27.519
+that ontology.
+
+NOTE Confidence: 0.9174038767814636
+
+00:24:28.440 --> 00:24:31.680
+You can also do it here in Fabric IQ.
+
+NOTE Confidence: 0.8351089954376221
+
+00:24:31.680 --> 00:24:33.320
+So I'm sorry, in Foundry IQ.
+
+NOTE Confidence: 0.9380981922149658
+
+00:24:33.320 --> 00:24:37.555
+So you can actually connect Foundry IQ to a Fabric
+
+NOTE Confidence: 0.9380981922149658
+
+00:24:37.639 --> 00:24:39.079
+ontology as well.
+
+NOTE Confidence: 0.8391113877296448
+
+00:24:39.240 --> 00:24:41.795
+And that really what it's doing, it's connected to the
+
+NOTE Confidence: 0.8391113877296448
+
+00:24:41.842 --> 00:24:42.599
+MCP server also.
+
+NOTE Confidence: 0.922559380531311
+
+00:24:42.760 --> 00:24:45.760
+So it's using that ontology as a data source.
+
+NOTE Confidence: 0.8775971531867981
+
+00:24:46.000 --> 00:24:47.647
+Now in this case, I'm going to just for the
+
+NOTE Confidence: 0.8775971531867981
+
+00:24:47.686 --> 00:24:49.602
+sake of just for sillies, I'm going to reload this
+
+NOTE Confidence: 0.8775971531867981
+
+00:24:49.640 --> 00:24:51.250
+page again just to see if it wants to come
+
+NOTE Confidence: 0.8775971531867981
+
+00:24:51.288 --> 00:24:51.479
+back.
+
+NOTE Confidence: 0.9301257729530334
+
+00:24:51.800 --> 00:24:54.435
+Because if you look closely at the way that I
+
+NOTE Confidence: 0.9301257729530334
+
+00:24:54.493 --> 00:24:57.304
+set up this thing, I actually did not connect it
+
+NOTE Confidence: 0.9301257729530334
+
+00:24:57.363 --> 00:24:59.119
+just directly to the ontology.
+
+NOTE Confidence: 0.888718843460083
+
+00:24:59.520 --> 00:25:01.041
+And the reason is, well, you're not going to be
+
+NOTE Confidence: 0.888718843460083
+
+00:25:01.074 --> 00:25:02.531
+able to see it because it's not going to want
+
+NOTE Confidence: 0.888718843460083
+
+00:25:02.563 --> 00:25:02.919
+to come up.
+
+NOTE Confidence: 0.8111718893051147
+
+00:25:02.920 --> 00:25:05.919
+But the reason I so I connected it instead to
+
+NOTE Confidence: 0.8111718893051147
+
+00:25:05.986 --> 00:25:07.319
+a fabric data agent.
+
+NOTE Confidence: 0.9329438209533691
+
+00:25:07.640 --> 00:25:10.960
+So the fabric data agent is a separate agent.
+
+NOTE Confidence: 0.9263834953308105
+
+00:25:12.080 --> 00:25:14.394
+And with the fabric data agent, I can actually connect
+
+NOTE Confidence: 0.9263834953308105
+
+00:25:14.437 --> 00:25:16.280
+to a whole bunch of different data sources.
+
+NOTE Confidence: 0.9033828973770142
+
+00:25:16.280 --> 00:25:19.384
+So this fabric data agent that you totally can't see
+
+NOTE Confidence: 0.9033828973770142
+
+00:25:19.444 --> 00:25:22.309
+is connected to the ontology, but also to a lake
+
+NOTE Confidence: 0.9033828973770142
+
+00:25:22.369 --> 00:25:24.279
+house and to some other sources.
+
+NOTE Confidence: 0.8890986442565918
+
+00:25:24.920 --> 00:25:28.680
+In that fabric data agent, I have lots of context.
+
+NOTE Confidence: 0.9363056421279907
+
+00:25:28.680 --> 00:25:32.042
+So there's the semantics coming from the ontology itself, but
+
+NOTE Confidence: 0.9363056421279907
+
+00:25:32.097 --> 00:25:34.467
+I also have a lot of semantics that I added
+
+NOTE Confidence: 0.9363056421279907
+
+00:25:34.522 --> 00:25:35.679
+about the lake house.
+
+NOTE Confidence: 0.9100205898284912
+
+00:25:35.680 --> 00:25:39.285
+Because the second real purpose of all of these Iqs
+
+NOTE Confidence: 0.9100205898284912
+
+00:25:39.356 --> 00:25:41.760
+is what I call context delegation.
+
+NOTE Confidence: 0.9323467016220093
+
+00:25:42.040 --> 00:25:45.108
+You know, every agent like this is sitting on top
+
+NOTE Confidence: 0.9323467016220093
+
+00:25:45.171 --> 00:25:48.240
+of a model, and every model has a finite context.
+
+NOTE Confidence: 0.8842257857322693
+
+00:25:48.240 --> 00:25:51.465
+There's only so much that you can put in your
+
+NOTE Confidence: 0.8842257857322693
+
+00:25:51.536 --> 00:25:53.400
+agent's head, so to speak.
+
+NOTE Confidence: 0.8831927180290222
+
+00:25:53.960 --> 00:25:57.147
+And so to query any structured data source, like a
+
+NOTE Confidence: 0.8831927180290222
+
+00:25:57.211 --> 00:26:00.080
+lake house requires tons and tons of context.
+
+NOTE Confidence: 0.8919590711593628
+
+00:26:00.080 --> 00:26:02.880
+You got to give it what is each data source.
+
+NOTE Confidence: 0.904906153678894
+
+00:26:02.880 --> 00:26:05.198
+You got to give it the data dictionary for each
+
+NOTE Confidence: 0.904906153678894
+
+00:26:05.248 --> 00:26:05.840
+data source.
+
+NOTE Confidence: 0.8382010459899902
+
+00:26:05.840 --> 00:26:07.240
+You have to give an example queries.
+
+NOTE Confidence: 0.8917214870452881
+
+00:26:07.240 --> 00:26:08.880
+Here's how you query this thing.
+
+NOTE Confidence: 0.9200831651687622
+
+00:26:09.320 --> 00:26:11.898
+And you also have to give it ancillary instructions, like
+
+NOTE Confidence: 0.9200831651687622
+
+00:26:11.943 --> 00:26:13.798
+in my data agent, if only I could show it
+
+NOTE Confidence: 0.9200831651687622
+
+00:26:13.843 --> 00:26:14.159
+to you.
+
+NOTE Confidence: 0.8995772004127502
+
+00:26:14.400 --> 00:26:17.222
+In my data agent, I got a bunch of acronyms,
+
+NOTE Confidence: 0.8995772004127502
+
+00:26:17.287 --> 00:26:20.430
+so I got an acronym in there called SRC, Shipping
+
+NOTE Confidence: 0.8995772004127502
+
+00:26:20.494 --> 00:26:24.280
+Refund Concession, which is specific only to this business.
+
+NOTE Confidence: 0.828940749168396
+
+00:26:24.440 --> 00:26:25.857
+So it's not going to be in the data, it's
+
+NOTE Confidence: 0.828940749168396
+
+00:26:25.891 --> 00:26:27.240
+not going to be in the data dictionary.
+
+NOTE Confidence: 0.8421207070350647
+
+00:26:27.440 --> 00:26:29.823
+The models going to have no idea what an SRC
+
+NOTE Confidence: 0.8421207070350647
+
+00:26:29.877 --> 00:26:30.039
+is.
+
+NOTE Confidence: 0.9349314570426941
+
+00:26:30.240 --> 00:26:32.679
+So the only way that it would know what this
+
+NOTE Confidence: 0.9349314570426941
+
+00:26:32.735 --> 00:26:34.898
+term is, is if we tell it, if we define
+
+NOTE Confidence: 0.9349314570426941
+
+00:26:34.953 --> 00:26:35.119
+it.
+
+NOTE Confidence: 0.9191754460334778
+
+00:26:35.119 --> 00:26:36.908
+And this is a lot of what you're doing when
+
+NOTE Confidence: 0.9191754460334778
+
+00:26:36.950 --> 00:26:38.240
+you're developing agents today.
+
+NOTE Confidence: 0.8790491819381714
+
+00:26:38.240 --> 00:26:42.412
+You're inputting this sort of tribal knowledge, this information that
+
+NOTE Confidence: 0.8790491819381714
+
+00:26:42.472 --> 00:26:43.440
+is in your head.
+
+NOTE Confidence: 0.8785351514816284
+
+00:26:43.440 --> 00:26:44.680
+What is an SRC?
+
+NOTE Confidence: 0.8942194581031799
+
+00:26:44.680 --> 00:26:47.642
+Well, now it knows, and so we put all of
+
+NOTE Confidence: 0.8942194581031799
+
+00:26:47.717 --> 00:26:50.680
+that context into the fabric data agent.
+
+NOTE Confidence: 0.9657756686210632
+
+00:26:50.880 --> 00:26:53.114
+So I don't have to put it in here, so
+
+NOTE Confidence: 0.9657756686210632
+
+00:26:53.175 --> 00:26:56.134
+I don't have to define that in every single agent
+
+NOTE Confidence: 0.9657756686210632
+
+00:26:56.195 --> 00:26:56.920
+that I have.
+
+NOTE Confidence: 0.8343059420585632
+
+00:26:57.160 --> 00:26:59.701
+We export that knowledge so that when it needs this
+
+NOTE Confidence: 0.8343059420585632
+
+00:26:59.751 --> 00:27:02.592
+structured data, it doesn't need to keep all that context
+
+NOTE Confidence: 0.8343059420585632
+
+00:27:02.641 --> 00:27:03.240
+in its head.
+
+NOTE Confidence: 0.8906300663948059
+
+00:27:03.400 --> 00:27:05.400
+Instead, it phones a friend.
+
+NOTE Confidence: 0.9008723497390747
+
+00:27:05.560 --> 00:27:09.080
+It calls the fabric data agent to get that data.
+
+NOTE Confidence: 0.9142677187919617
+
+00:27:09.800 --> 00:27:12.783
+Now let's take it away and bring it back to
+
+NOTE Confidence: 0.9142677187919617
+
+00:27:12.853 --> 00:27:13.200
+work.
+
+NOTE Confidence: 0.9344725012779236
+
+00:27:13.200 --> 00:27:13.560
+IQ.
+
+NOTE Confidence: 0.8371901512145996
+
+00:27:13.560 --> 00:27:16.120
+Meanwhile, all right, I'll continue fiddling with the network.
+
+NOTE Confidence: 0.8274686932563782
+
+00:27:16.280 --> 00:27:17.080
+Maybe we'll get it back.
+
+NOTE Confidence: 0.65479576587677
+
+00:27:17.560 --> 00:27:19.160
+OK, do we have the We have videos.
+
+NOTE Confidence: 0.4323735535144806
+
+00:27:19.960 --> 00:27:20.360
+I don't know.
+
+NOTE Confidence: 0.28963643312454224
+
+00:27:20.400 --> 00:27:20.760
+I don't.
+
+NOTE Confidence: 0.43260520696640015
+
+00:27:20.760 --> 00:27:22.280
+Think we can always bring this up too.
+
+NOTE Confidence: 0.5526190996170044
+
+00:27:22.680 --> 00:27:23.520
+OK, OK.
+
+NOTE Confidence: 0.7576375007629395
+
+00:27:25.320 --> 00:27:25.520
+OK.
+
+NOTE Confidence: 0.9238253235816956
+
+00:27:25.720 --> 00:27:28.275
+So Marco really used work IQ in Act one or
+
+NOTE Confidence: 0.9238253235816956
+
+00:27:28.336 --> 00:27:31.438
+he was supposed to have, if he could have connected
+
+NOTE Confidence: 0.9238253235816956
+
+00:27:31.499 --> 00:27:34.602
+to the network to basically take my e-mail and turn
+
+NOTE Confidence: 0.9238253235816956
+
+00:27:34.663 --> 00:27:38.192
+that into a plan that he then implemented that application
+
+NOTE Confidence: 0.9238253235816956
+
+00:27:38.253 --> 00:27:40.200
+that he showed you a second ago.
+
+NOTE Confidence: 0.9380600452423096
+
+00:27:40.880 --> 00:27:43.240
+Now let's talk about work IQ specifically.
+
+NOTE Confidence: 0.8405784368515015
+
+00:27:43.920 --> 00:27:46.401
+It's really kind of, you could think about it as
+
+NOTE Confidence: 0.8405784368515015
+
+00:27:46.453 --> 00:27:48.159
+the people layer of Microsoft IQ.
+
+NOTE Confidence: 0.9338176846504211
+
+00:27:48.520 --> 00:27:51.533
+What it does is it basically takes all of the
+
+NOTE Confidence: 0.9338176846504211
+
+00:27:51.600 --> 00:27:54.280
+context of what your organization knows.
+
+NOTE Confidence: 0.9174072742462158
+
+00:27:54.360 --> 00:27:55.960
+Now, what does your organization know?
+
+NOTE Confidence: 0.8270513415336609
+
+00:27:56.280 --> 00:27:59.598
+It knows what you guys converse you, you discuss over
+
+NOTE Confidence: 0.8270513415336609
+
+00:27:59.660 --> 00:28:02.040
+e-mail or what you discuss over Teams.
+
+NOTE Confidence: 0.936018168926239
+
+00:28:02.960 --> 00:28:06.225
+And it basically takes all of that context, all of
+
+NOTE Confidence: 0.936018168926239
+
+00:28:06.291 --> 00:28:08.119
+the data that lives in M365.
+
+NOTE Confidence: 0.9209231734275818
+
+00:28:08.520 --> 00:28:11.531
+And it allows the agent to be imbued with that
+
+NOTE Confidence: 0.9209231734275818
+
+00:28:11.597 --> 00:28:15.852
+knowledge so that it can understand your business processes, your
+
+NOTE Confidence: 0.9209231734275818
+
+00:28:15.918 --> 00:28:20.304
+collaboration, who is involved in a project, what's important, what
+
+NOTE Confidence: 0.9209231734275818
+
+00:28:20.369 --> 00:28:24.559
+decisions have already been made, what needs the attention next.
+
+NOTE Confidence: 0.9386222958564758
+
+00:28:25.240 --> 00:28:29.563
+Because the most valuable context in an organization isn't just
+
+NOTE Confidence: 0.9386222958564758
+
+00:28:29.632 --> 00:28:31.759
+data, it's actually the people.
+
+NOTE Confidence: 0.9269116520881653
+
+00:28:31.880 --> 00:28:35.923
+It's the people that are collaborating that are working across
+
+NOTE Confidence: 0.9269116520881653
+
+00:28:35.989 --> 00:28:39.120
+the team to get everything over the finish line.
+
+NOTE Confidence: 0.7835264205932617
+
+00:28:39.680 --> 00:28:44.284
+So what makes IQ different than say the graph or
+
+NOTE Confidence: 0.7835264205932617
+
+00:28:44.380 --> 00:28:49.080
+a kind of more any traditional APIs historically?
+
+NOTE Confidence: 0.9319852590560913
+
+00:28:49.600 --> 00:28:50.240
+3 things.
+
+NOTE Confidence: 0.9119632244110107
+
+00:28:51.200 --> 00:28:53.600
+1st, it's built for agents, not users.
+
+NOTE Confidence: 0.8856416940689087
+
+00:28:54.160 --> 00:28:57.851
+If you think about the way that APIs you might
+
+NOTE Confidence: 0.8856416940689087
+
+00:28:57.932 --> 00:29:03.068
+traditional applications might access the graph or an API before
+
+NOTE Confidence: 0.8856416940689087
+
+00:29:03.148 --> 00:29:06.680
+that would be on the scale of a human right?
+
+NOTE Confidence: 0.9489351511001587
+
+00:29:06.680 --> 00:29:09.280
+What is the interactivity that a human needs?
+
+NOTE Confidence: 0.8687705397605896
+
+00:29:10.080 --> 00:29:13.147
+This is really designed to support the speed that an
+
+NOTE Confidence: 0.8687705397605896
+
+00:29:13.206 --> 00:29:14.799
+agentic process would need.
+
+NOTE Confidence: 0.9147750735282898
+
+00:29:15.560 --> 00:29:19.316
+It's also built around the organizational context, not the raw
+
+NOTE Confidence: 0.9147750735282898
+
+00:29:19.377 --> 00:29:19.679
+data.
+
+NOTE Confidence: 0.9592969417572021
+
+00:29:20.120 --> 00:29:23.240
+And it's built on top of your existing security model.
+
+NOTE Confidence: 0.9555871486663818
+
+00:29:23.400 --> 00:29:24.600
+It's not a copy of it.
+
+NOTE Confidence: 0.8192223310470581
+
+00:29:24.600 --> 00:29:27.616
+So all of the work IQ data stays in your
+
+NOTE Confidence: 0.8192223310470581
+
+00:29:27.691 --> 00:29:31.160
+M365 context and in in, you know, that tenant.
+
+NOTE Confidence: 0.9522915482521057
+
+00:29:31.400 --> 00:29:34.510
+And so that means that developers don't have to build
+
+NOTE Confidence: 0.9522915482521057
+
+00:29:34.569 --> 00:29:37.679
+their own systems that index all of this information.
+
+NOTE Confidence: 0.9248083233833313
+
+00:29:37.680 --> 00:29:40.579
+They don't have to extract all of the data from
+
+NOTE Confidence: 0.9248083233833313
+
+00:29:40.641 --> 00:29:41.320
+their M365.
+
+NOTE Confidence: 0.9176257848739624
+
+00:29:41.960 --> 00:29:44.792
+They don't have to build their own retrieval pipelines or
+
+NOTE Confidence: 0.9176257848739624
+
+00:29:44.842 --> 00:29:47.575
+their own governance layer just to help the agents have
+
+NOTE Confidence: 0.9176257848739624
+
+00:29:47.625 --> 00:29:50.159
+the context that all of their other employees have.
+
+NOTE Confidence: 0.9518117308616638
+
+00:29:50.400 --> 00:29:53.080
+It allows the agents to just get the work done,
+
+NOTE Confidence: 0.9518117308616638
+
+00:29:53.137 --> 00:29:56.559
+and work IQ is what provides that foundation out-of-the-box.
+
+NOTE Confidence: 0.941335141658783
+
+00:29:57.000 --> 00:29:59.800
+Now it's really built for this agent first world.
+
+NOTE Confidence: 0.8822835087776184
+
+00:29:59.960 --> 00:30:04.000
+So traditional APIs, they were built around applications and users.
+
+NOTE Confidence: 0.9465232491493225
+
+00:30:04.840 --> 00:30:08.474
+Work IQ is designed around agents, these systems that need
+
+NOTE Confidence: 0.9465232491493225
+
+00:30:08.537 --> 00:30:12.234
+to reason and retrieve the context and collaborate and take
+
+NOTE Confidence: 0.9465232491493225
+
+00:30:12.297 --> 00:30:14.240
+action across the organization.
+
+NOTE Confidence: 0.9445163011550903
+
+00:30:14.600 --> 00:30:18.003
+And it brings together 4 different capabilities into a single
+
+NOTE Confidence: 0.9445163011550903
+
+00:30:18.059 --> 00:30:19.120
+intelligence layer.
+
+NOTE Confidence: 0.9578626155853271
+
+00:30:19.480 --> 00:30:20.480
+First is chat.
+
+NOTE Confidence: 0.9071992039680481
+
+00:30:20.920 --> 00:30:24.567
+Chat enables the agents to interact with the people and
+
+NOTE Confidence: 0.9071992039680481
+
+00:30:24.634 --> 00:30:29.675
+the other agents, supporting these conversational experiences that you might
+
+NOTE Confidence: 0.9071992039680481
+
+00:30:29.741 --> 00:30:33.920
+get in Microsoft Copilot with the agent to agent collaboration.
+
+NOTE Confidence: 0.8709239363670349
+
+00:30:34.840 --> 00:30:39.183
+Text gives the agents the grounded understanding of what's happening
+
+NOTE Confidence: 0.8709239363670349
+
+00:30:39.246 --> 00:30:43.526
+across the organization, drawing from the emails, the meetings, the
+
+NOTE Confidence: 0.8709239363670349
+
+00:30:43.590 --> 00:30:48.316
+chat, teams, chats, documents, conversations, work flows without having to
+
+NOTE Confidence: 0.8709239363670349
+
+00:30:48.380 --> 00:30:53.042
+require the developers to build their own retrieval orchestration process
+
+NOTE Confidence: 0.8709239363670349
+
+00:30:53.106 --> 00:30:54.320
+or their own index.
+
+NOTE Confidence: 0.9305748343467712
+
+00:30:54.800 --> 00:30:59.652
+The tools provide the capabilities, the simplified and governed way
+
+NOTE Confidence: 0.9305748343467712
+
+00:30:59.725 --> 00:31:03.854
+for agents to retrieve that information, but also to take
+
+NOTE Confidence: 0.9305748343467712
+
+00:31:03.926 --> 00:31:07.548
+action just as any other user would in the context
+
+NOTE Confidence: 0.9305748343467712
+
+00:31:07.620 --> 00:31:08.199
+of M365.
+
+NOTE Confidence: 0.9469417333602905
+
+00:31:08.200 --> 00:31:11.152
+So they can send an e-mail, they can send a
+
+NOTE Confidence: 0.9469417333602905
+
+00:31:11.221 --> 00:31:14.242
+message, and all of that can be used via any
+
+NOTE Confidence: 0.9469417333602905
+
+00:31:14.311 --> 00:31:16.439
+kind of agent friendly service.
+
+NOTE Confidence: 0.9482898712158203
+
+00:31:16.760 --> 00:31:19.836
+And then last I think this is really interesting is
+
+NOTE Confidence: 0.9482898712158203
+
+00:31:19.896 --> 00:31:20.560
+workspaces.
+
+NOTE Confidence: 0.8541680574417114
+
+00:31:20.880 --> 00:31:21.800
+What are workspaces?
+
+NOTE Confidence: 0.9036675691604614
+
+00:31:21.800 --> 00:31:25.392
+They're they're these the persistent place for the agents to
+
+NOTE Confidence: 0.9036675691604614
+
+00:31:25.452 --> 00:31:29.164
+actually work to kind of store their intermediate work product
+
+NOTE Confidence: 0.9036675691604614
+
+00:31:29.224 --> 00:31:31.080
+as they're getting things done.
+
+NOTE Confidence: 0.9461134672164917
+
+00:31:31.320 --> 00:31:34.859
+So if you think about agents are becoming increasingly more
+
+NOTE Confidence: 0.9461134672164917
+
+00:31:34.919 --> 00:31:37.919
+longer running tasks, they need to maintain state.
+
+NOTE Confidence: 0.9636494517326355
+
+00:31:38.160 --> 00:31:41.106
+They need to be able to share their progress across
+
+NOTE Confidence: 0.9636494517326355
+
+00:31:41.164 --> 00:31:44.746
+different phases of the plan that they're executing with other
+
+NOTE Confidence: 0.9636494517326355
+
+00:31:44.804 --> 00:31:48.213
+agents that they might be collaborating with or with humans
+
+NOTE Confidence: 0.9636494517326355
+
+00:31:48.271 --> 00:31:50.120
+that they're collaborating with.
+
+NOTE Confidence: 0.8163692951202393
+
+00:31:50.520 --> 00:31:53.915
+So all of these capabilities together, these, these are what
+
+NOTE Confidence: 0.8163692951202393
+
+00:31:53.972 --> 00:31:55.840
+gives the organizations the same.
+
+NOTE Confidence: 0.9460943341255188
+
+00:31:55.880 --> 00:31:59.559
+I mean, give the agents the same organizational context that
+
+NOTE Confidence: 0.9460943341255188
+
+00:31:59.621 --> 00:32:01.399
+an employee has on your team.
+
+NOTE Confidence: 0.8679138422012329
+
+00:32:02.760 --> 00:32:04.893
+So Miro is a good example of a of a
+
+NOTE Confidence: 0.8679138422012329
+
+00:32:04.954 --> 00:32:08.918
+partner who's been integrating with work IQ and they're basically
+
+NOTE Confidence: 0.8679138422012329
+
+00:32:08.979 --> 00:32:13.429
+integrating all of the context directly into the collaborative experience
+
+NOTE Confidence: 0.8679138422012329
+
+00:32:13.490 --> 00:32:15.319
+for their application as well.
+
+NOTE Confidence: 0.923765242099762
+
+00:32:15.600 --> 00:32:19.248
+So instead of copying the information between the tools or
+
+NOTE Confidence: 0.923765242099762
+
+00:32:19.311 --> 00:32:23.273
+working from stale snapshots, the teams can actually access the
+
+NOTE Confidence: 0.923765242099762
+
+00:32:23.336 --> 00:32:27.613
+same Microsoft 365 context and the documents, the conversations, the
+
+NOTE Confidence: 0.923765242099762
+
+00:32:27.676 --> 00:32:31.010
+all of the people that they need to collaborate with,
+
+NOTE Confidence: 0.923765242099762
+
+00:32:31.073 --> 00:32:32.520
+all of those decisions.
+
+NOTE Confidence: 0.8027098774909973
+
+00:32:32.760 --> 00:32:35.145
+But they can now access it directly from the Moreau
+
+NOTE Confidence: 0.8027098774909973
+
+00:32:35.192 --> 00:32:35.519
+canvas.
+
+NOTE Confidence: 0.9625822901725769
+
+00:32:35.680 --> 00:32:38.080
+So there's no copy paste that has to be done.
+
+NOTE Confidence: 0.9347643852233887
+
+00:32:38.080 --> 00:32:39.880
+There's no disconnected tools.
+
+NOTE Confidence: 0.8787800073623657
+
+00:32:40.080 --> 00:32:43.221
+There's no stale information when Moreau is connecting to this
+
+NOTE Confidence: 0.8787800073623657
+
+00:32:43.272 --> 00:32:43.880
+environment.
+
+NOTE Confidence: 0.8400400280952454
+
+00:32:44.080 --> 00:32:48.877
+It's just this shared context that seamlessly flows from M365
+
+NOTE Confidence: 0.8400400280952454
+
+00:32:48.956 --> 00:32:51.079
+into Moreau and vice versa.
+
+NOTE Confidence: 0.8457240462303162
+
+00:32:51.280 --> 00:32:55.091
+Now, that's exactly the kind of connection acted experience that
+
+NOTE Confidence: 0.8457240462303162
+
+00:32:55.151 --> 00:32:56.640
+we all want as end users.
+
+NOTE Confidence: 0.955189049243927
+
+00:32:56.680 --> 00:32:59.033
+And it's really what agents need to be able to
+
+NOTE Confidence: 0.955189049243927
+
+00:32:59.084 --> 00:33:02.563
+complete their work without boundaries across all of these different
+
+NOTE Confidence: 0.955189049243927
+
+00:33:02.614 --> 00:33:03.279
+applications.
+
+NOTE Confidence: 0.7082477807998657
+
+00:33:03.720 --> 00:33:04.960
+So Marco, how?
+
+NOTE Confidence: 0.8154005408287048
+
+00:33:04.960 --> 00:33:05.880
+Oh my gosh.
+
+NOTE Confidence: 0.2374086081981659
+
+00:33:05.920 --> 00:33:06.000
+Oh.
+
+NOTE Confidence: 0.7244196534156799
+
+00:33:06.280 --> 00:33:09.280
+Amanda, I got some good news for you.
+
+NOTE Confidence: 0.6312733888626099
+
+00:33:09.440 --> 00:33:10.760
+Let's do it all right?
+
+NOTE Confidence: 0.8227835297584534
+
+00:33:10.840 --> 00:33:11.920
+Let me tell you the story.
+
+NOTE Confidence: 0.7547032833099365
+
+00:33:12.040 --> 00:33:12.600
+Thank you.
+
+NOTE Confidence: 0.9472251534461975
+
+00:33:15.360 --> 00:33:18.021
+Thank you for bearing with me for the most catastrophic
+
+NOTE Confidence: 0.9472251534461975
+
+00:33:18.070 --> 00:33:20.199
+failure I've ever had on any stage anywhere.
+
+NOTE Confidence: 0.9175363779067993
+
+00:33:20.600 --> 00:33:22.538
+So a gentleman just came up to me from the
+
+NOTE Confidence: 0.9175363779067993
+
+00:33:22.584 --> 00:33:23.000
+audience.
+
+NOTE Confidence: 0.907996416091919
+
+00:33:23.000 --> 00:33:24.987
+I actually don't know where you came from, but he
+
+NOTE Confidence: 0.907996416091919
+
+00:33:25.028 --> 00:33:25.839
+came up here and he.
+
+NOTE Confidence: 0.17751997709274292
+
+00:33:25.840 --> 00:33:26.120
+Was from.
+
+NOTE Confidence: 0.48006078600883484
+
+00:33:26.920 --> 00:33:27.120
+Heaven.
+
+NOTE Confidence: 0.6992983818054199
+
+00:33:27.520 --> 00:33:29.520
+Yeah, from heaven, somewhere from Valhalla.
+
+NOTE Confidence: 0.8925377726554871
+
+00:33:29.920 --> 00:33:31.120
+He comes up to me and he goes.
+
+NOTE Confidence: 0.9149019122123718
+
+00:33:31.280 --> 00:33:34.520
+He goes, hey, try turning off global protect.
+
+NOTE Confidence: 0.9249316453933716
+
+00:33:35.160 --> 00:33:36.800
+So I turned off global protect.
+
+NOTE Confidence: 0.9500148296356201
+
+00:33:36.800 --> 00:33:39.633
+It turns out it was globally protecting you all from
+
+NOTE Confidence: 0.9500148296356201
+
+00:33:39.688 --> 00:33:40.560
+seeing my demos.
+
+NOTE Confidence: 0.8214905261993408
+
+00:33:42.440 --> 00:33:44.560
+So I turned it off and we're back online.
+
+NOTE Confidence: 0.9142099022865295
+
+00:33:44.560 --> 00:33:46.330
+I don't know what's up with that, but let's take
+
+NOTE Confidence: 0.9142099022865295
+
+00:33:46.366 --> 00:33:46.920
+a look at this.
+
+NOTE Confidence: 0.8702746033668518
+
+00:33:46.920 --> 00:33:49.400
+So now, now you may remember that back when we
+
+NOTE Confidence: 0.8702746033668518
+
+00:33:49.454 --> 00:33:52.096
+started this thing, you know, we had this kind of
+
+NOTE Confidence: 0.8702746033668518
+
+00:33:52.150 --> 00:33:54.200
+stand alone anonymous agent over here.
+
+NOTE Confidence: 0.9699906706809998
+
+00:33:54.200 --> 00:33:55.480
+But that's how we started.
+
+NOTE Confidence: 0.9302304983139038
+
+00:33:55.480 --> 00:33:59.219
+That's not how we ended up because you see what
+
+NOTE Confidence: 0.9302304983139038
+
+00:33:59.299 --> 00:34:02.879
+we did here, We defined this agent like this.
+
+NOTE Confidence: 0.9280473589897156
+
+00:34:04.160 --> 00:34:10.008
+This agent became a blueprint in a 365 and that
+
+NOTE Confidence: 0.9280473589897156
+
+00:34:10.133 --> 00:34:14.240
+in turn became an agent template.
+
+NOTE Confidence: 0.9034892916679382
+
+00:34:14.680 --> 00:34:16.600
+Now what is an agent template?
+
+NOTE Confidence: 0.7966762781143188
+
+00:34:17.040 --> 00:34:18.720
+Well here let me let me fire this guy up.
+
+NOTE Confidence: 0.8592612743377686
+
+00:34:18.719 --> 00:34:21.041
+Now that I'm back online here, this should go I'm
+
+NOTE Confidence: 0.8592612743377686
+
+00:34:21.088 --> 00:34:22.320
+going to fire this guy up.
+
+NOTE Confidence: 0.9269358515739441
+
+00:34:22.320 --> 00:34:26.176
+But while we're waiting for him, this is my agent
+
+NOTE Confidence: 0.9269358515739441
+
+00:34:26.255 --> 00:34:27.199
+that I made.
+
+NOTE Confidence: 0.8755439519882202
+
+00:34:27.200 --> 00:34:30.447
+Now here's the thing, when you have an agent template,
+
+NOTE Confidence: 0.8755439519882202
+
+00:34:30.507 --> 00:34:32.733
+you can go or any way any user can go
+
+NOTE Confidence: 0.8755439519882202
+
+00:34:32.793 --> 00:34:35.679
+into teams and create an instance of that agent.
+
+NOTE Confidence: 0.9476383328437805
+
+00:34:35.680 --> 00:34:37.720
+So the template by itself is not an agent.
+
+NOTE Confidence: 0.9081674218177795
+
+00:34:38.360 --> 00:34:41.400
+When you instantiate it, that's when you create an agent.
+
+NOTE Confidence: 0.9368043541908264
+
+00:34:41.400 --> 00:34:45.220
+In fact, I didn't just create an agent, I created
+
+NOTE Confidence: 0.9368043541908264
+
+00:34:45.298 --> 00:34:46.000
+my agent.
+
+NOTE Confidence: 0.9428017735481262
+
+00:34:46.000 --> 00:34:48.480
+So if we look at this agent, come on buddy,
+
+NOTE Confidence: 0.9428017735481262
+
+00:34:48.538 --> 00:34:49.000
+wake up.
+
+NOTE Confidence: 0.8500280380249023
+
+00:34:49.840 --> 00:34:51.520
+If we look, here we go again.
+
+NOTE Confidence: 0.8515284657478333
+
+00:34:52.320 --> 00:34:54.044
+If we look at this agent, well, OK, he doesn't
+
+NOTE Confidence: 0.8515284657478333
+
+00:34:54.082 --> 00:34:54.719
+want to open now.
+
+NOTE Confidence: 0.9177337884902954
+
+00:34:54.719 --> 00:34:57.730
+But if we look at this agents in the org
+
+NOTE Confidence: 0.9177337884902954
+
+00:34:57.805 --> 00:35:01.643
+chart, what you're going to find is that this agent
+
+NOTE Confidence: 0.9177337884902954
+
+00:35:01.719 --> 00:35:04.880
+has its own identity and it reports to me.
+
+NOTE Confidence: 0.7040652632713318
+
+00:35:05.560 --> 00:35:06.880
+So OK, doesn't want to click now.
+
+NOTE Confidence: 0.757296085357666
+
+00:35:07.040 --> 00:35:10.065
+So OK, wants to be challenging still apparently, but it's
+
+NOTE Confidence: 0.757296085357666
+
+00:35:10.118 --> 00:35:12.719
+not an anyway, maybe this other window will work.
+
+NOTE Confidence: 0.9566857218742371
+
+00:35:12.720 --> 00:35:13.120
+I don't know.
+
+NOTE Confidence: 0.9642162919044495
+
+00:35:13.560 --> 00:35:14.040
+Let's see.
+
+NOTE Confidence: 0.5164660215377808
+
+00:35:14.040 --> 00:35:15.400
+All right, there you go.
+
+NOTE Confidence: 0.6625252366065979
+
+00:35:15.400 --> 00:35:16.120
+Something's happening.
+
+NOTE Confidence: 0.7344322204589844
+
+00:35:16.120 --> 00:35:17.600
+OK, it's it's slow, but it's working.
+
+NOTE Confidence: 0.8430612087249756
+
+00:35:17.600 --> 00:35:18.320
+There you go.
+
+NOTE Confidence: 0.8392996788024902
+
+00:35:18.320 --> 00:35:19.600
+All right, look at that.
+
+NOTE Confidence: 0.9632125496864319
+
+00:35:20.160 --> 00:35:20.640
+There we go.
+
+NOTE Confidence: 0.9583857655525208
+
+00:35:20.800 --> 00:35:24.844
+So this is the refund processor agent itself, and it
+
+NOTE Confidence: 0.9583857655525208
+
+00:35:24.922 --> 00:35:26.399
+is reporting to me.
+
+NOTE Confidence: 0.7437102794647217
+
+00:35:26.400 --> 00:35:28.320
+And I in turn, I'm reporting here to Amanda Silver.
+
+NOTE Confidence: 0.8205878734588623
+
+00:35:29.280 --> 00:35:32.613
+Now, when I create this agent instance, it has its
+
+NOTE Confidence: 0.8205878734588623
+
+00:35:32.680 --> 00:35:34.279
+own Teams box over here.
+
+NOTE Confidence: 0.855315625667572
+
+00:35:34.280 --> 00:35:36.680
+It also has its own inbox.
+
+NOTE Confidence: 0.8677074313163757
+
+00:35:36.680 --> 00:35:40.200
+Now, I had told it to go check its e-mail.
+
+NOTE Confidence: 0.7428122162818909
+
+00:35:40.200 --> 00:35:41.320
+I told it to check its e-mail.
+
+NOTE Confidence: 0.8726529479026794
+
+00:35:41.320 --> 00:35:44.720
+See, The thing is that I had forwarded it an
+
+NOTE Confidence: 0.8726529479026794
+
+00:35:44.797 --> 00:35:45.880
+e-mail before.
+
+NOTE Confidence: 0.901187002658844
+
+00:35:45.880 --> 00:35:49.055
+So I forward to my refund processor this e-mail that
+
+NOTE Confidence: 0.901187002658844
+
+00:35:49.116 --> 00:35:52.170
+I had gotten from Maria Garcia about the fact that
+
+NOTE Confidence: 0.901187002658844
+
+00:35:52.231 --> 00:35:53.879
+her package hadn't arrived.
+
+NOTE Confidence: 0.9425020217895508
+
+00:35:53.880 --> 00:35:55.200
+So I forwarded that to my agent.
+
+NOTE Confidence: 0.8698664903640747
+
+00:35:55.200 --> 00:35:56.320
+I kind of delegated that work.
+
+NOTE Confidence: 0.9191427230834961
+
+00:35:56.320 --> 00:35:58.642
+And in fact, we can see now that it did
+
+NOTE Confidence: 0.9191427230834961
+
+00:35:58.702 --> 00:35:59.000
+work.
+
+NOTE Confidence: 0.8910706639289856
+
+00:35:59.280 --> 00:36:03.680
+It has emailed back Maria and copied me.
+
+NOTE Confidence: 0.8801053166389465
+
+00:36:04.120 --> 00:36:06.875
+So it emailed Maria and it's like, hey, sorry about
+
+NOTE Confidence: 0.8801053166389465
+
+00:36:06.929 --> 00:36:07.200
+that.
+
+NOTE Confidence: 0.9253243803977966
+
+00:36:07.200 --> 00:36:07.840
+I wasn't able to.
+
+NOTE Confidence: 0.8908022046089172
+
+00:36:07.840 --> 00:36:09.140
+Well, in this case, I wasn't able to find the
+
+NOTE Confidence: 0.8908022046089172
+
+00:36:09.168 --> 00:36:09.400
+package.
+
+NOTE Confidence: 0.9247811436653137
+
+00:36:09.400 --> 00:36:11.200
+So we're full of challenges here today.
+
+NOTE Confidence: 0.9007757902145386
+
+00:36:11.200 --> 00:36:15.599
+But regardless, it was able to send that e-mail directly
+
+NOTE Confidence: 0.9007757902145386
+
+00:36:15.677 --> 00:36:17.719
+back to Maria and copy me.
+
+NOTE Confidence: 0.8893817663192749
+
+00:36:17.720 --> 00:36:18.720
+Now, how did it do that?
+
+NOTE Confidence: 0.8667567372322083
+
+00:36:19.240 --> 00:36:21.680
+How was it able to check its own e-mail box?
+
+NOTE Confidence: 0.9338986873626709
+
+00:36:21.680 --> 00:36:26.160
+Well, it gets us right back to this work IQ.
+
+NOTE Confidence: 0.8750264048576355
+
+00:36:26.440 --> 00:36:29.322
+Work IQ, You could really look at it as the
+
+NOTE Confidence: 0.8750264048576355
+
+00:36:29.389 --> 00:36:33.277
+agent facing headless version of all the Microsoft apps of
+
+NOTE Confidence: 0.8750264048576355
+
+00:36:33.344 --> 00:36:36.159
+Outlook and Teams, of SharePoint and Word.
+
+NOTE Confidence: 0.9607332944869995
+
+00:36:36.680 --> 00:36:40.896
+And this is how my agent is able to interact
+
+NOTE Confidence: 0.9607332944869995
+
+00:36:40.992 --> 00:36:45.879
+with these Microsoft things using its own identity.
+
+NOTE Confidence: 0.9250912070274353
+
+00:36:46.080 --> 00:36:49.550
+And there's an additional advantage to giving this agent its
+
+NOTE Confidence: 0.9250912070274353
+
+00:36:49.608 --> 00:36:50.359
+own identity.
+
+NOTE Confidence: 0.898794949054718
+
+00:36:50.680 --> 00:36:52.880
+It lives in its own security space.
+
+NOTE Confidence: 0.910326361656189
+
+00:36:52.880 --> 00:36:55.280
+It has its own rights and permissions.
+
+NOTE Confidence: 0.8861379027366638
+
+00:36:56.040 --> 00:36:59.059
+So earlier, when I checked that e-mail from you, or
+
+NOTE Confidence: 0.8861379027366638
+
+00:36:59.118 --> 00:37:02.137
+when I attempted to check that e-mail from you from
+
+NOTE Confidence: 0.8861379027366638
+
+00:37:02.196 --> 00:37:04.920
+Copilot CLI, I was using Work IQ on my behalf.
+
+NOTE Confidence: 0.9406893253326416
+
+00:37:04.920 --> 00:37:08.156
+So Work IQ in that case was logged in as
+
+NOTE Confidence: 0.9406893253326416
+
+00:37:08.237 --> 00:37:08.480
+me.
+
+NOTE Confidence: 0.8967167735099792
+
+00:37:09.000 --> 00:37:11.803
+But that means that it inherits all of my rights,
+
+NOTE Confidence: 0.8967167735099792
+
+00:37:11.861 --> 00:37:13.119
+all of my permissions.
+
+NOTE Confidence: 0.9583019018173218
+
+00:37:13.120 --> 00:37:15.600
+It can do anything that I can do.
+
+NOTE Confidence: 0.8696022629737854
+
+00:37:16.000 --> 00:37:19.239
+But when I make one of these agent instances, one
+
+NOTE Confidence: 0.8696022629737854
+
+00:37:19.305 --> 00:37:22.545
+of these autopilot agents, then I can give it its
+
+NOTE Confidence: 0.8696022629737854
+
+00:37:22.611 --> 00:37:23.999
+own permission space.
+
+NOTE Confidence: 0.9321860671043396
+
+00:37:24.000 --> 00:37:26.345
+Maybe, I say, you can send and receive emails, but
+
+NOTE Confidence: 0.9321860671043396
+
+00:37:26.392 --> 00:37:29.160
+you can't write Word documents, or you can't change things.
+
+NOTE Confidence: 0.8079306483268738
+
+00:37:29.320 --> 00:37:31.207
+Or maybe you can only draft emails, but it can't
+
+NOTE Confidence: 0.8079306483268738
+
+00:37:31.246 --> 00:37:31.640
+send them.
+
+NOTE Confidence: 0.9373506903648376
+
+00:37:31.840 --> 00:37:34.796
+Whatever that is, I can give it a different set
+
+NOTE Confidence: 0.9373506903648376
+
+00:37:34.859 --> 00:37:38.570
+of security settings to those that I have, thereby limiting
+
+NOTE Confidence: 0.9373506903648376
+
+00:37:38.633 --> 00:37:40.080
+what that agent can do.
+
+NOTE Confidence: 0.9629315733909607
+
+00:37:40.760 --> 00:37:45.063
+But once again, how does it interact with the world
+
+NOTE Confidence: 0.9629315733909607
+
+00:37:45.147 --> 00:37:46.160
+via Work IQ?
+
+NOTE Confidence: 0.8323683142662048
+
+00:37:46.800 --> 00:37:48.920
+Awesome Amanda, we managed to get it back online.
+
+NOTE Confidence: 0.8433395624160767
+
+00:37:48.920 --> 00:37:49.680
+So are we online?
+
+NOTE Confidence: 0.8943672180175781
+
+00:37:49.680 --> 00:37:51.642
+Do you want to just show them like one more
+
+NOTE Confidence: 0.8943672180175781
+
+00:37:51.687 --> 00:37:52.920
+like go back to the fabric?
+
+NOTE Confidence: 0.6676722764968872
+
+00:37:52.920 --> 00:37:53.440
+Yeah, sure.
+
+NOTE Confidence: 0.38709455728530884
+
+00:37:53.560 --> 00:37:53.800
+Kind of.
+
+NOTE Confidence: 0.7388978600502014
+
+00:37:53.840 --> 00:37:54.200
+You know what?
+
+NOTE Confidence: 0.5587694048881531
+
+00:37:54.360 --> 00:37:55.360
+Why do we do?
+
+NOTE Confidence: 0.7832530736923218
+
+00:37:55.360 --> 00:37:56.160
+A little bit more, but.
+
+NOTE Confidence: 0.8107070922851562
+
+00:37:56.160 --> 00:37:59.000
+We do a little quick synopsis of all the things.
+
+NOTE Confidence: 0.6858475804328918
+
+00:37:59.360 --> 00:38:01.560
+So here finally, how is the sense.
+
+NOTE Confidence: 0.8716414570808411
+
+00:38:01.560 --> 00:38:04.160
+So Web IQ, you may remember back in the day,
+
+NOTE Confidence: 0.8716414570808411
+
+00:38:04.219 --> 00:38:06.820
+not that long ago, Web IQ, I asked about the
+
+NOTE Confidence: 0.8716414570808411
+
+00:38:06.879 --> 00:38:09.775
+Sandy Fire and lo and behold, it totally did find
+
+NOTE Confidence: 0.8716414570808411
+
+00:38:09.834 --> 00:38:13.440
+the information about Sandy Fire and how that's affecting us.
+
+NOTE Confidence: 0.9413625597953796
+
+00:38:14.040 --> 00:38:16.680
+It did that here in just a couple of seconds.
+
+NOTE Confidence: 0.9623018503189087
+
+00:38:16.880 --> 00:38:18.000
+So that was cool.
+
+NOTE Confidence: 0.6965479850769043
+
+00:38:18.600 --> 00:38:19.880
+Well, we saw Foundry IQ.
+
+NOTE Confidence: 0.9017006158828735
+
+00:38:19.880 --> 00:38:22.252
+Now, when it came to my fabric data agent, I
+
+NOTE Confidence: 0.9017006158828735
+
+00:38:22.306 --> 00:38:24.893
+mentioned all of that context that I had to give
+
+NOTE Confidence: 0.9017006158828735
+
+00:38:24.947 --> 00:38:26.079
+my fabric data agent.
+
+NOTE Confidence: 0.8581783175468445
+
+00:38:26.080 --> 00:38:29.339
+So I have my different data sources here and I
+
+NOTE Confidence: 0.8581783175468445
+
+00:38:29.410 --> 00:38:33.448
+this was the context I was talking about the description,
+
+NOTE Confidence: 0.8581783175468445
+
+00:38:33.519 --> 00:38:38.691
+the data dictionary, the example queries and these ancillary instructions
+
+NOTE Confidence: 0.8581783175468445
+
+00:38:38.762 --> 00:38:41.880
+over here, including my SRC special acronym.
+
+NOTE Confidence: 0.9398922324180603
+
+00:38:42.080 --> 00:38:44.429
+So this is all the context that you can put
+
+NOTE Confidence: 0.9398922324180603
+
+00:38:44.484 --> 00:38:46.888
+in fabric that you don't have to give to all
+
+NOTE Confidence: 0.9398922324180603
+
+00:38:46.943 --> 00:38:48.200
+your downstream agents.
+
+NOTE Confidence: 0.842475950717926
+
+00:38:48.200 --> 00:38:51.640
+Say you saw that and you saw a work IQ.
+
+NOTE Confidence: 0.8909714221954346
+
+00:38:51.640 --> 00:38:56.416
+You saw this agent literally reading its e-mail and sending
+
+NOTE Confidence: 0.8909714221954346
+
+00:38:56.497 --> 00:38:58.440
+an e-mail using work IQ.
+
+NOTE Confidence: 0.5238137245178223
+
+00:38:58.760 --> 00:38:58.920
+Awesome.
+
+NOTE Confidence: 0.7518534660339355
+
+00:38:58.960 --> 00:39:01.114
+So yeah, one last one that I I need to
+
+NOTE Confidence: 0.7518534660339355
+
+00:39:01.171 --> 00:39:04.119
+have the satisfaction go back to this to GitHub CLI.
+
+NOTE Confidence: 0.7344064116477966
+
+00:39:04.280 --> 00:39:06.471
+Let's see if we can get work IQ working with
+
+NOTE Confidence: 0.7344064116477966
+
+00:39:06.520 --> 00:39:06.719
+CLI.
+
+NOTE Confidence: 0.33554479479789734
+
+00:39:07.040 --> 00:39:07.200
+Try.
+
+NOTE Confidence: 0.823257565498352
+
+00:39:07.200 --> 00:39:08.920
+You guys are going to forgive us if it doesn't.
+
+NOTE Confidence: 0.4581593871116638
+
+00:39:08.920 --> 00:39:09.120
+Fit.
+
+NOTE Confidence: 0.7325725555419922
+
+00:39:09.120 --> 00:39:09.640
+Let's see.
+
+NOTE Confidence: 0.7658801078796387
+
+00:39:09.640 --> 00:39:10.954
+Let's see if we can get it to do do
+
+NOTE Confidence: 0.7658801078796387
+
+00:39:10.991 --> 00:39:11.480
+it again now.
+
+NOTE Confidence: 0.8077709674835205
+
+00:39:11.480 --> 00:39:12.120
+So hopefully.
+
+NOTE Confidence: 0.8519262671470642
+
+00:39:12.240 --> 00:39:14.880
+So now we're back to work IQ as me.
+
+NOTE Confidence: 0.6940023899078369
+
+00:39:14.880 --> 00:39:16.480
+Well, that's looking promising here.
+
+NOTE Confidence: 0.7640073895454407
+
+00:39:16.680 --> 00:39:20.040
+And lo and behold, it is indeed asking work IQ.
+
+NOTE Confidence: 0.8990409970283508
+
+00:39:20.040 --> 00:39:23.045
+And in a moment, surely it will find that e-mail
+
+NOTE Confidence: 0.8990409970283508
+
+00:39:23.107 --> 00:39:24.360
+that Amanda sent me.
+
+NOTE Confidence: 0.8807788491249084
+
+00:39:24.800 --> 00:39:25.040
+Awesome.
+
+NOTE Confidence: 0.8466106057167053
+
+00:39:25.600 --> 00:39:25.880
+Great.
+
+NOTE Confidence: 0.7203328013420105
+
+00:39:27.360 --> 00:39:27.800
+OK.
+
+NOTE Confidence: 0.7772531509399414
+
+00:39:30.200 --> 00:39:31.080
+Thank you, Marco.
+
+NOTE Confidence: 0.8341915011405945
+
+00:39:33.480 --> 00:39:35.874
+We, we, we always want to do live demos for
+
+NOTE Confidence: 0.8341915011405945
+
+00:39:35.930 --> 00:39:38.547
+you because we know that you guys like the live
+
+NOTE Confidence: 0.8341915011405945
+
+00:39:38.602 --> 00:39:41.554
+demos as developers, we don't want to give you canned
+
+NOTE Confidence: 0.8341915011405945
+
+00:39:41.609 --> 00:39:44.727
+like, you know, screenshots, all this kind of stuff like
+
+NOTE Confidence: 0.8341915011405945
+
+00:39:44.783 --> 00:39:46.119
+I, I live on live demos.
+
+NOTE Confidence: 0.8559549450874329
+
+00:39:46.120 --> 00:39:48.320
+So that's my my call.
+
+NOTE Confidence: 0.9606245756149292
+
+00:39:48.360 --> 00:39:50.709
+I'm glad we did it and hopefully you guys will
+
+NOTE Confidence: 0.9606245756149292
+
+00:39:50.760 --> 00:39:51.680
+forgive us for it.
+
+NOTE Confidence: 0.8971443772315979
+
+00:39:52.400 --> 00:39:55.023
+But I think what you guys saw is that this
+
+NOTE Confidence: 0.8971443772315979
+
+00:39:55.086 --> 00:39:58.959
+is all agentic delegation that's grounded in the real context.
+
+NOTE Confidence: 0.9597799777984619
+
+00:39:59.200 --> 00:40:02.008
+We had one refund agent that you saw that refund
+
+NOTE Confidence: 0.9597799777984619
+
+00:40:02.066 --> 00:40:03.119
+agent we actually.
+
+NOTE Confidence: 0.8968592286109924
+
+00:40:03.360 --> 00:40:06.183
+Founded it in the web, the real world data we
+
+NOTE Confidence: 0.8968592286109924
+
+00:40:06.246 --> 00:40:09.383
+had the work IQ for all of the people interaction,
+
+NOTE Confidence: 0.8968592286109924
+
+00:40:09.446 --> 00:40:12.959
+all of the historical data of how the teams collaborate.
+
+NOTE Confidence: 0.882555365562439
+
+00:40:13.280 --> 00:40:15.740
+We had fabric IQ that had all of the business
+
+NOTE Confidence: 0.882555365562439
+
+00:40:15.795 --> 00:40:18.692
+context around the ontologies and kind of the way the
+
+NOTE Confidence: 0.882555365562439
+
+00:40:18.747 --> 00:40:22.519
+semantic information of the way that your business actually operates.
+
+NOTE Confidence: 0.9012702703475952
+
+00:40:22.920 --> 00:40:25.074
+And we had Fabric Foundry IQ for all of the
+
+NOTE Confidence: 0.9012702703475952
+
+00:40:25.124 --> 00:40:27.680
+enterprise knowledge that the agent was working on.
+
+NOTE Confidence: 0.9188640117645264
+
+00:40:27.880 --> 00:40:31.485
+And then at the end, you saw how Marco actually
+
+NOTE Confidence: 0.9188640117645264
+
+00:40:31.562 --> 00:40:35.474
+created, he kind of embodied this agent in terms of
+
+NOTE Confidence: 0.9188640117645264
+
+00:40:35.551 --> 00:40:39.310
+giving it an addressable name in the org chart so
+
+NOTE Confidence: 0.9188640117645264
+
+00:40:39.386 --> 00:40:42.608
+that I could send an e-mail to it, I could
+
+NOTE Confidence: 0.9188640117645264
+
+00:40:42.685 --> 00:40:44.679
+interact with it in teams.
+
+NOTE Confidence: 0.9475507736206055
+
+00:40:45.239 --> 00:40:48.202
+This is actually super important because a lot of times,
+
+NOTE Confidence: 0.9475507736206055
+
+00:40:48.254 --> 00:40:51.217
+you know, as developers, we're very used to dealing with
+
+NOTE Confidence: 0.9475507736206055
+
+00:40:51.269 --> 00:40:53.279
+very technical user interfaces, right?
+
+NOTE Confidence: 0.9208881855010986
+
+00:40:53.520 --> 00:40:56.757
+But we're building for people who are used to working
+
+NOTE Confidence: 0.9208881855010986
+
+00:40:56.818 --> 00:41:00.240
+in M365, used to working in teams, interacting in teams.
+
+NOTE Confidence: 0.9452828168869019
+
+00:41:00.239 --> 00:41:03.247
+And so this is a critical, critical capability that allows
+
+NOTE Confidence: 0.9452828168869019
+
+00:41:03.299 --> 00:41:05.892
+a bunch of people who don't necessarily want to go
+
+NOTE Confidence: 0.9452828168869019
+
+00:41:05.944 --> 00:41:08.641
+to a different user interface to be able to interact
+
+NOTE Confidence: 0.9452828168869019
+
+00:41:08.693 --> 00:41:10.559
+with the agent that you're building.
+
+NOTE Confidence: 0.9678304195404053
+
+00:41:10.840 --> 00:41:14.192
+Now, all of this together gives the agents the context
+
+NOTE Confidence: 0.9678304195404053
+
+00:41:14.254 --> 00:41:17.110
+that they need to be able to reason, to decide
+
+NOTE Confidence: 0.9678304195404053
+
+00:41:17.172 --> 00:41:18.600
+to act with confidence.
+
+NOTE Confidence: 0.9373553395271301
+
+00:41:19.040 --> 00:41:21.467
+And you know, in a lot of senses, the future
+
+NOTE Confidence: 0.9373553395271301
+
+00:41:21.523 --> 00:41:25.054
+that we're building together, it's not just filling these agents
+
+NOTE Confidence: 0.9373553395271301
+
+00:41:25.109 --> 00:41:28.586
+with more information that's actually going to make agents very
+
+NOTE Confidence: 0.9373553395271301
+
+00:41:28.641 --> 00:41:29.799
+expensive to operate.
+
+NOTE Confidence: 0.9557906985282898
+
+00:41:30.280 --> 00:41:32.304
+What we need to do is to make sure that
+
+NOTE Confidence: 0.9557906985282898
+
+00:41:32.355 --> 00:41:34.898
+they have the right context so that they can make
+
+NOTE Confidence: 0.9557906985282898
+
+00:41:34.950 --> 00:41:38.116
+the best decision with the most minimum amount of information
+
+NOTE Confidence: 0.9557906985282898
+
+00:41:38.168 --> 00:41:40.400
+that they need with the highest confidence.
+
+NOTE Confidence: 0.9324820041656494
+
+00:41:42.320 --> 00:41:45.366
+So it's really this intelligence that is what makes the
+
+NOTE Confidence: 0.9324820041656494
+
+00:41:45.421 --> 00:41:48.800
+agents useful, and it's the trust that makes them deployable.
+
+NOTE Confidence: 0.9634408950805664
+
+00:41:49.280 --> 00:41:52.685
+So that's why every single layer of Microsoft IQ is
+
+NOTE Confidence: 0.9634408950805664
+
+00:41:52.752 --> 00:41:56.692
+built on the same foundation of identity and governance and
+
+NOTE Confidence: 0.9634408950805664
+
+00:41:56.759 --> 00:41:57.359
+security.
+
+NOTE Confidence: 0.9507694840431213
+
+00:41:57.960 --> 00:42:00.440
+The agents are permission aware by default.
+
+NOTE Confidence: 0.9349916577339172
+
+00:42:01.080 --> 00:42:05.357
+Every action is traceable and explainable, and the policies are
+
+NOTE Confidence: 0.9349916577339172
+
+00:42:05.425 --> 00:42:09.159
+applied consistently across the entire agent ecosystem.
+
+NOTE Confidence: 0.95909583568573
+
+00:42:10.000 --> 00:42:13.532
+Now, that's because the challenge isn't really just building a
+
+NOTE Confidence: 0.95909583568573
+
+00:42:13.589 --> 00:42:16.040
+single agent in an intelligent environment.
+
+NOTE Confidence: 0.9700232148170471
+
+00:42:16.360 --> 00:42:18.880
+It's actually building thousands of them.
+
+NOTE Confidence: 0.9133872389793396
+
+00:42:18.920 --> 00:42:21.911
+Actually making sure that your entire organization, as it's building
+
+NOTE Confidence: 0.9133872389793396
+
+00:42:21.955 --> 00:42:24.639
+and deploying these agents, that these are all governed, that
+
+NOTE Confidence: 0.9133872389793396
+
+00:42:24.683 --> 00:42:25.519
+you can trust them.
+
+NOTE Confidence: 0.9526663422584534
+
+00:42:25.760 --> 00:42:29.424
+You can deploy them without having to monitor every single
+
+NOTE Confidence: 0.9526663422584534
+
+00:42:29.487 --> 00:42:31.320
+one of them in a bespoke way.
+
+NOTE Confidence: 0.9444481134414673
+
+00:42:31.320 --> 00:42:33.313
+That you can do it in kind of like a
+
+NOTE Confidence: 0.9444481134414673
+
+00:42:33.368 --> 00:42:36.413
+more unified, unified way so that you can actually make
+
+NOTE Confidence: 0.9444481134414673
+
+00:42:36.468 --> 00:42:39.237
+sure that the agents are behaving the way that you
+
+NOTE Confidence: 0.9444481134414673
+
+00:42:39.292 --> 00:42:39.680
+expect.
+
+NOTE Confidence: 0.9451978206634521
+
+00:42:40.800 --> 00:42:44.299
+So that's really what we've been trying to do across
+
+NOTE Confidence: 0.9451978206634521
+
+00:42:44.366 --> 00:42:45.040
+the board.
+
+NOTE Confidence: 0.9375759363174438
+
+00:42:45.040 --> 00:42:46.923
+And so let's talk about how you guys can all
+
+NOTE Confidence: 0.9375759363174438
+
+00:42:46.966 --> 00:42:47.480
+get started.
+
+NOTE Confidence: 0.9618715643882751
+
+00:42:48.200 --> 00:42:51.104
+Everything that you saw today is available for you to
+
+NOTE Confidence: 0.9618715643882751
+
+00:42:51.158 --> 00:42:52.200
+start building now.
+
+NOTE Confidence: 0.9549277424812317
+
+00:42:52.920 --> 00:42:54.400
+You can try the hands on lab.
+
+NOTE Confidence: 0.860234260559082
+
+00:42:54.400 --> 00:42:57.139
+We have one that'll be going deep on all of
+
+NOTE Confidence: 0.860234260559082
+
+00:42:57.202 --> 00:42:57.839
+these Iqs.
+
+NOTE Confidence: 0.9052360653877258
+
+00:42:57.840 --> 00:42:59.560
+You can join us at the booth.
+
+NOTE Confidence: 0.8894745707511902
+
+00:42:59.560 --> 00:43:02.190
+Obviously you can join the discussion on GitHub and you
+
+NOTE Confidence: 0.8894745707511902
+
+00:43:02.238 --> 00:43:05.299
+know, we're really interested in understanding what you guys are
+
+NOTE Confidence: 0.8894745707511902
+
+00:43:05.347 --> 00:43:07.834
+building so that we can really make the the products
+
+NOTE Confidence: 0.8894745707511902
+
+00:43:07.882 --> 00:43:08.600
+better for you.
+
+NOTE Confidence: 0.8906458020210266
+
+00:43:08.960 --> 00:43:11.363
+We really want to see what you're going to be
+
+NOTE Confidence: 0.8906458020210266
+
+00:43:11.416 --> 00:43:14.194
+creating now, if today is keynote, if, if it sparked
+
+NOTE Confidence: 0.8906458020210266
+
+00:43:14.247 --> 00:43:16.651
+an idea for you, this is really where we want
+
+NOTE Confidence: 0.8906458020210266
+
+00:43:16.704 --> 00:43:18.199
+to see you bring it to life.
+
+NOTE Confidence: 0.9418755173683167
+
+00:43:18.680 --> 00:43:22.262
+We have this Agents League hackathon, and that's your chance
+
+NOTE Confidence: 0.9418755173683167
+
+00:43:22.321 --> 00:43:25.187
+to be able to build with everything that you saw
+
+NOTE Confidence: 0.9418755173683167
+
+00:43:25.247 --> 00:43:29.247
+today from, you know, creative applications to autonomous agents to
+
+NOTE Confidence: 0.9418755173683167
+
+00:43:29.307 --> 00:43:30.800
+enterprise grade systems.
+
+NOTE Confidence: 0.8845277428627014
+
+00:43:31.360 --> 00:43:33.320
+Don't just imagine what's possible.
+
+NOTE Confidence: 0.9631441831588745
+
+00:43:33.320 --> 00:43:35.280
+You should actually go and try to build it.
+
+NOTE Confidence: 0.9360474348068237
+
+00:43:35.680 --> 00:43:38.460
+I hope that, you know, today inspired you and, you
+
+NOTE Confidence: 0.9360474348068237
+
+00:43:38.516 --> 00:43:41.963
+know, we're really looking forward to seeing what you're going
+
+NOTE Confidence: 0.9360474348068237
+
+00:43:42.019 --> 00:43:42.519
+to build.
+
+NOTE Confidence: 0.9368048906326294
+
+00:43:42.680 --> 00:43:45.280
+So thank you, everybody, and thank you, Marco, for that.
+
+NOTE Confidence: 0.4361128509044647
+
+00:43:46.760 --> 00:43:46.920
+Yeah.
+
+NOTE Confidence: 0.9099056720733643
+
+00:43:48.080 --> 00:43:52.521
+Thank you all for bearing with us and enjoy the
+
+NOTE Confidence: 0.9099056720733643
+
+00:43:52.616 --> 00:43:55.640
+cold, cold San Francisco summer.
+
+NOTE Confidence: 0.5071220993995667
+
+00:43:57.320 --> 00:43:58.040
+Have a great build.
+
+NOTE Confidence: 0.7513266801834106
+
+00:43:58.080 --> 00:43:58.680
+Thanks everybody.
+

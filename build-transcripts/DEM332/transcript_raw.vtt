@@ -1,0 +1,2000 @@
+WEBVTT
+
+NOTE
+language:en-US
+
+NOTE Confidence: 0.8032858371734619
+
+00:00:00.600 --> 00:00:03.400
+Hey everyone, welcome to our session at Build.
+
+NOTE Confidence: 0.8007588386535645
+
+00:00:04.000 --> 00:00:04.840
+How are you all doing?
+
+NOTE Confidence: 0.9327709078788757
+
+00:00:07.200 --> 00:00:10.809
+How many of you have built an agent on Teams
+
+NOTE Confidence: 0.9327709078788757
+
+00:00:10.891 --> 00:00:12.039
+Show of hands?
+
+NOTE Confidence: 0.672653079032898
+
+00:00:13.200 --> 00:00:13.520
+Wow.
+
+NOTE Confidence: 0.9657946825027466
+
+00:00:14.200 --> 00:00:16.680
+For those of you that have, you all probably know
+
+NOTE Confidence: 0.9657946825027466
+
+00:00:16.730 --> 00:00:19.211
+the number of steps and concepts it takes for you
+
+NOTE Confidence: 0.9657946825027466
+
+00:00:19.261 --> 00:00:19.920
+to get there.
+
+NOTE Confidence: 0.8398039937019348
+
+00:00:20.320 --> 00:00:22.399
+And for those of you that have not, you're in
+
+NOTE Confidence: 0.8398039937019348
+
+00:00:22.445 --> 00:00:22.999
+for a feast.
+
+NOTE Confidence: 0.9180929660797119
+
+00:00:23.520 --> 00:00:24.080
+Today.
+
+NOTE Confidence: 0.8607608675956726
+
+00:00:24.400 --> 00:00:27.468
+We're going to build an agent from zero to a
+
+NOTE Confidence: 0.8607608675956726
+
+00:00:27.537 --> 00:00:29.559
+teammate in under 25 minutes.
+
+NOTE Confidence: 0.7335603833198547
+
+00:00:30.640 --> 00:00:31.520
+My name is Umang.
+
+NOTE Confidence: 0.7819268703460693
+
+00:00:31.800 --> 00:00:34.577
+I'm a senior product manager on the Teams platform and
+
+NOTE Confidence: 0.7819268703460693
+
+00:00:34.628 --> 00:00:37.508
+joining me is Aamir, who's a senior software engineer on
+
+NOTE Confidence: 0.7819268703460693
+
+00:00:37.560 --> 00:00:38.280
+the Teams SDK.
+
+NOTE Confidence: 0.8512916564941406
+
+00:00:38.840 --> 00:00:40.520
+And we have a packed agenda for you.
+
+NOTE Confidence: 0.7890012264251709
+
+00:00:40.520 --> 00:00:43.140
+We're going to start with a quick recap of the
+
+NOTE Confidence: 0.7890012264251709
+
+00:00:43.197 --> 00:00:45.761
+Teams SDK where we left you guys last year at
+
+NOTE Confidence: 0.7890012264251709
+
+00:00:45.818 --> 00:00:46.159
+build.
+
+NOTE Confidence: 0.9184510111808777
+
+00:00:46.760 --> 00:00:50.000
+We're going to introduce a brand new CLI and walk
+
+NOTE Confidence: 0.9184510111808777
+
+00:00:50.066 --> 00:00:53.439
+you through a bunch of skills with a working agent.
+
+NOTE Confidence: 0.8543483018875122
+
+00:00:54.320 --> 00:00:57.311
+We're then going to talk about how do you build
+
+NOTE Confidence: 0.8543483018875122
+
+00:00:57.375 --> 00:01:00.812
+that agent using the skills and the CLI together, walk
+
+NOTE Confidence: 0.8543483018875122
+
+00:01:00.876 --> 00:01:03.995
+you through it life, take that agent into a group
+
+NOTE Confidence: 0.8543483018875122
+
+00:01:04.058 --> 00:01:07.814
+chat, and finally transform that agent into a teammate with
+
+NOTE Confidence: 0.8543483018875122
+
+00:01:07.877 --> 00:01:08.959
+its own identity.
+
+NOTE Confidence: 0.949619472026825
+
+00:01:10.520 --> 00:01:11.480
+So let's get started.
+
+NOTE Confidence: 0.8379336595535278
+
+00:01:12.160 --> 00:01:15.308
+Last year at Build, we brought to you the Teams
+
+NOTE Confidence: 0.8379336595535278
+
+00:01:15.375 --> 00:01:17.519
+AI library in TypeScript and C#.
+
+NOTE Confidence: 0.8856602311134338
+
+00:01:18.640 --> 00:01:21.486
+This year we're bringing to you the Teams SDK, which
+
+NOTE Confidence: 0.8856602311134338
+
+00:01:21.541 --> 00:01:24.607
+is the consolidation of all the libraries and tools that
+
+NOTE Confidence: 0.8856602311134338
+
+00:01:24.662 --> 00:01:27.399
+you use into one streamlined developer experience.
+
+NOTE Confidence: 0.8538206219673157
+
+00:01:28.200 --> 00:01:32.466
+Last year we also brought to you one-on-one agentic features
+
+NOTE Confidence: 0.8538206219673157
+
+00:01:32.537 --> 00:01:36.306
+such as streaming in a chat, feedback loop, follow up
+
+NOTE Confidence: 0.8538206219673157
+
+00:01:36.377 --> 00:01:39.079
+citations, and even start the prompts.
+
+NOTE Confidence: 0.9153385758399963
+
+00:01:39.680 --> 00:01:43.159
+This year we're bringing to you many more group UX
+
+NOTE Confidence: 0.9153385758399963
+
+00:01:43.229 --> 00:01:46.639
+features to make your agent shine within a group.
+
+NOTE Confidence: 0.8300044536590576
+
+00:01:46.959 --> 00:01:49.795
+And there's a session we have dedicated tomorrow for all
+
+NOTE Confidence: 0.8300044536590576
+
+00:01:49.846 --> 00:01:52.479
+the group UX capabilities that you'll be looking at.
+
+NOTE Confidence: 0.7683805823326111
+
+00:01:53.120 --> 00:01:56.780
+We also look integrating with other SDKS inside the Microsoft
+
+NOTE Confidence: 0.7683805823326111
+
+00:01:56.840 --> 00:01:57.440
+ecosystem.
+
+NOTE Confidence: 0.9116201996803284
+
+00:01:58.440 --> 00:02:00.674
+Over the last year when we last met you at
+
+NOTE Confidence: 0.9116201996803284
+
+00:02:00.727 --> 00:02:03.440
+Build, we've been working with a bunch of partners.
+
+NOTE Confidence: 0.753065824508667
+
+00:02:04.040 --> 00:02:09.689
+We've been working with Cursor, Linear Perplexity, Datadog, Atlatian, they're
+
+NOTE Confidence: 0.753065824508667
+
+00:02:09.762 --> 00:02:12.991
+all building on the team's SDK to make to to
+
+NOTE Confidence: 0.753065824508667
+
+00:02:13.064 --> 00:02:16.879
+benefit from 320 million daily active users we have.
+
+NOTE Confidence: 0.9082072973251343
+
+00:02:18.280 --> 00:02:21.324
+And in the last year that we've been working with
+
+NOTE Confidence: 0.9082072973251343
+
+00:02:21.386 --> 00:02:24.492
+them, we did realize that the path to getting your
+
+NOTE Confidence: 0.9082072973251343
+
+00:02:24.554 --> 00:02:27.039
+agent successful on Teams is a long one.
+
+NOTE Confidence: 0.8019492626190186
+
+00:02:27.400 --> 00:02:30.414
+You'd have to start with registering your app, getting its
+
+NOTE Confidence: 0.8019492626190186
+
+00:02:30.466 --> 00:02:34.936
+credentials, setting an endpoint, uploading and manifest, configuring the environment,
+
+NOTE Confidence: 0.8019492626190186
+
+00:02:34.988 --> 00:02:36.079
+and starting the bot.
+
+NOTE Confidence: 0.886708676815033
+
+00:02:36.560 --> 00:02:42.400
+That journey spans across multiple scenarios, multiple concepts, and even
+
+NOTE Confidence: 0.886708676815033
+
+00:02:42.480 --> 00:02:43.920
+multiple surfaces.
+
+NOTE Confidence: 0.9459935426712036
+
+00:02:44.520 --> 00:02:48.526
+So we wanted to simplify that and our goal was
+
+NOTE Confidence: 0.9459935426712036
+
+00:02:48.613 --> 00:02:52.707
+for you to get your agent into teams as quickly
+
+NOTE Confidence: 0.9459935426712036
+
+00:02:52.794 --> 00:02:53.839
+as possible.
+
+NOTE Confidence: 0.9320237040519714
+
+00:02:54.560 --> 00:02:57.120
+And this relies on three different pillars.
+
+NOTE Confidence: 0.8982200026512146
+
+00:02:57.960 --> 00:03:01.773
+Pillar number one, we want you to bring your agent
+
+NOTE Confidence: 0.8982200026512146
+
+00:03:01.850 --> 00:03:04.520
+on any stack, any agent onto teams.
+
+NOTE Confidence: 0.6446866393089294
+
+00:03:04.639 --> 00:03:09.129
+Whether agent lives in Foundry, Versail, crew, AI or even
+
+NOTE Confidence: 0.6446866393089294
+
+00:03:09.208 --> 00:03:09.760
+Replit.
+
+NOTE Confidence: 0.731496274471283
+
+00:03:09.960 --> 00:03:12.360
+We are unordinated about where your agent lives.
+
+NOTE Confidence: 0.8835228681564331
+
+00:03:12.360 --> 00:03:15.109
+We want you to be successful bringing it to teams
+
+NOTE Confidence: 0.8835228681564331
+
+00:03:15.165 --> 00:03:16.399
+as easily as possible.
+
+NOTE Confidence: 0.8074772953987122
+
+00:03:17.120 --> 00:03:19.880
+That brings me to Pillar 2, which is frictionless scaffolding.
+
+NOTE Confidence: 0.8291646838188171
+
+00:03:20.280 --> 00:03:24.112
+Developers usually spend a lot of cognitive overhead trying to
+
+NOTE Confidence: 0.8291646838188171
+
+00:03:24.174 --> 00:03:25.720
+get the agent onto teams.
+
+NOTE Confidence: 0.9159299731254578
+
+00:03:25.720 --> 00:03:28.514
+You want to minimize that overhead and get you to
+
+NOTE Confidence: 0.9159299731254578
+
+00:03:28.571 --> 00:03:31.880
+be successful as quickly as possible in a seamless manner.
+
+NOTE Confidence: 0.8428763151168823
+
+00:03:32.560 --> 00:03:35.716
+That brings you to the last point, which is to
+
+NOTE Confidence: 0.8428763151168823
+
+00:03:35.785 --> 00:03:39.284
+make your agent a teammate, a true teammate in with
+
+NOTE Confidence: 0.8428763151168823
+
+00:03:39.353 --> 00:03:40.520
+its own identity.
+
+NOTE Confidence: 0.8286081552505493
+
+00:03:40.920 --> 00:03:43.484
+That closes the agent IK loop and with that I'm
+
+NOTE Confidence: 0.8286081552505493
+
+00:03:43.539 --> 00:03:46.158
+going to pass it over to my teammate who's going
+
+NOTE Confidence: 0.8286081552505493
+
+00:03:46.212 --> 00:03:48.722
+to now start showing you how to build an agent
+
+NOTE Confidence: 0.8286081552505493
+
+00:03:48.777 --> 00:03:51.341
+life and if you want, you can start your timers
+
+NOTE Confidence: 0.8286081552505493
+
+00:03:51.396 --> 00:03:51.560
+on.
+
+NOTE Confidence: 0.8703126311302185
+
+00:03:52.600 --> 00:03:54.739
+I don't know how that's going to work out, but
+
+NOTE Confidence: 0.8703126311302185
+
+00:03:54.785 --> 00:03:56.320
+hopefully copilot agrees with me.
+
+NOTE Confidence: 0.8694630861282349
+
+00:03:56.320 --> 00:03:58.880
+So I'm going to switch over to my screen here.
+
+NOTE Confidence: 0.6376634240150452
+
+00:03:59.360 --> 00:04:03.360
+So here I'm actually here.
+
+NOTE Confidence: 0.9608524441719055
+
+00:04:03.360 --> 00:04:05.447
+I have an agent that I've been building on the
+
+NOTE Confidence: 0.9608524441719055
+
+00:04:05.493 --> 00:04:05.720
+side.
+
+NOTE Confidence: 0.924345850944519
+
+00:04:05.800 --> 00:04:07.520
+This is my project management helper.
+
+NOTE Confidence: 0.8889611959457397
+
+00:04:08.560 --> 00:04:10.401
+This is just a web application that I've kind of
+
+NOTE Confidence: 0.8889611959457397
+
+00:04:10.439 --> 00:04:11.360
+been toying around with.
+
+NOTE Confidence: 0.7823749780654907
+
+00:04:12.240 --> 00:04:13.951
+On the left side, you can see it has a
+
+NOTE Confidence: 0.7823749780654907
+
+00:04:13.996 --> 00:04:16.249
+bunch of my projects that I'm kind of working with
+
+NOTE Confidence: 0.7823749780654907
+
+00:04:16.294 --> 00:04:17.240
+working on right now.
+
+NOTE Confidence: 0.766768753528595
+
+00:04:17.560 --> 00:04:21.749
+And then in this view, I sort of have a,
+
+NOTE Confidence: 0.766768753528595
+
+00:04:21.854 --> 00:04:25.519
+whoops, sorry, this is a live demo.
+
+NOTE Confidence: 0.7739331722259521
+
+00:04:27.320 --> 00:04:29.957
+So in this view you have, I have the agent
+
+NOTE Confidence: 0.7739331722259521
+
+00:04:30.019 --> 00:04:32.719
+sort of running where I can ask a question.
+
+NOTE Confidence: 0.8755013942718506
+
+00:04:32.720 --> 00:04:36.943
+So I can ask it something like summarize the status
+
+NOTE Confidence: 0.8755013942718506
+
+00:04:37.026 --> 00:04:40.587
+of all my projects and it's able to give me
+
+NOTE Confidence: 0.8755013942718506
+
+00:04:40.669 --> 00:04:43.319
+the statuses of all my projects.
+
+NOTE Confidence: 0.9106911420822144
+
+00:04:43.640 --> 00:04:47.322
+Or I can ask it a more targeted question like
+
+NOTE Confidence: 0.9106911420822144
+
+00:04:47.404 --> 00:04:50.759
+how is the conference demo project going?
+
+NOTE Confidence: 0.929641842842102
+
+00:04:52.520 --> 00:04:55.086
+And it can give me the status of a particular
+
+NOTE Confidence: 0.929641842842102
+
+00:04:55.143 --> 00:04:55.600
+project.
+
+NOTE Confidence: 0.8891302943229675
+
+00:04:55.839 --> 00:04:58.610
+Now this is just a web application, but we want
+
+NOTE Confidence: 0.8891302943229675
+
+00:04:58.669 --> 00:05:00.320
+to bring this over to Teams.
+
+NOTE Confidence: 0.8667038679122925
+
+00:05:00.560 --> 00:05:04.120
+So I'm going to switch over to our terminal here.
+
+NOTE Confidence: 0.9159641265869141
+
+00:05:04.839 --> 00:05:06.600
+So like you saw, this is just a web application
+
+NOTE Confidence: 0.9159641265869141
+
+00:05:06.638 --> 00:05:07.200
+that's running.
+
+NOTE Confidence: 0.8004034757614136
+
+00:05:08.200 --> 00:05:11.281
+So the first thing like among mentioned is we actually
+
+NOTE Confidence: 0.8004034757614136
+
+00:05:11.339 --> 00:05:12.880
+want to register our agent.
+
+NOTE Confidence: 0.8719083070755005
+
+00:05:13.120 --> 00:05:16.960
+So for that, I'm going to use the Teams CLI.
+
+NOTE Confidence: 0.8449230790138245
+
+00:05:16.960 --> 00:05:18.784
+To do that, I'm going to use the Teams app
+
+NOTE Confidence: 0.8449230790138245
+
+00:05:18.828 --> 00:05:19.480
+create command.
+
+NOTE Confidence: 0.8596543669700623
+
+00:05:19.480 --> 00:05:22.000
+I'm going to make this a little bit bigger.
+
+NOTE Confidence: 0.7932731509208679
+
+00:05:23.400 --> 00:05:23.920
+There we go.
+
+NOTE Confidence: 0.8557699918746948
+
+00:05:25.279 --> 00:05:29.309
+And I'm going to just give it a name, let's
+
+NOTE Confidence: 0.8557699918746948
+
+00:05:29.402 --> 00:05:32.120
+say project management agent.
+
+NOTE Confidence: 0.8677128553390503
+
+00:05:32.720 --> 00:05:35.440
+It asks me for a messaging endpoint URL.
+
+NOTE Confidence: 0.878625750541687
+
+00:05:35.440 --> 00:05:37.040
+I'm just going to skip this for now.
+
+NOTE Confidence: 0.7569944858551025
+
+00:05:37.600 --> 00:05:39.160
+It asks me where I want to put my credentials.
+
+NOTE Confidence: 0.8042652606964111
+
+00:05:39.160 --> 00:05:41.728
+I'm just going to say the env file and it
+
+NOTE Confidence: 0.8042652606964111
+
+00:05:41.790 --> 00:05:44.923
+asks me for some customizations I might want to do
+
+NOTE Confidence: 0.8042652606964111
+
+00:05:44.985 --> 00:05:45.799
+for my agent.
+
+NOTE Confidence: 0.8593271374702454
+
+00:05:45.960 --> 00:05:47.080
+I'm just going to skip that for now.
+
+NOTE Confidence: 0.771602988243103
+
+00:05:47.080 --> 00:05:48.840
+And then I'm going to hit create.
+
+NOTE Confidence: 0.8196134567260742
+
+00:05:49.279 --> 00:05:52.071
+So like among mentioned, this command is doing a bunch
+
+NOTE Confidence: 0.8196134567260742
+
+00:05:52.123 --> 00:05:52.639
+of things.
+
+NOTE Confidence: 0.8581364154815674
+
+00:05:52.640 --> 00:05:57.050
+It's creating intra application, it's creating a bot, it's creating
+
+NOTE Confidence: 0.8581364154815674
+
+00:05:57.116 --> 00:06:00.999
+secrets, and then it's gluing all of those pieces together.
+
+NOTE Confidence: 0.8506278395652771
+
+00:06:01.240 --> 00:06:04.110
+And at the end of this process, you're given an
+
+NOTE Confidence: 0.8506278395652771
+
+00:06:04.171 --> 00:06:07.774
+installation link that you can actually use to install this
+
+NOTE Confidence: 0.8506278395652771
+
+00:06:07.835 --> 00:06:09.239
+application into Teams.
+
+NOTE Confidence: 0.8568906784057617
+
+00:06:16.140 --> 00:06:18.544
+OK, so here we have the installation link, we have
+
+NOTE Confidence: 0.8568906784057617
+
+00:06:18.592 --> 00:06:20.899
+the app that's created, we have the bot ID, etc.
+
+NOTE Confidence: 0.8981037139892578
+
+00:06:21.500 --> 00:06:24.271
+Now this is the first part of this journey, but
+
+NOTE Confidence: 0.8981037139892578
+
+00:06:24.330 --> 00:06:27.219
+the second part is always the actual integration.
+
+NOTE Confidence: 0.9272727966308594
+
+00:06:27.820 --> 00:06:30.780
+We actually want to integrate this into our application.
+
+NOTE Confidence: 0.826569676399231
+
+00:06:31.020 --> 00:06:34.483
+So what this traditionally means is you want to download
+
+NOTE Confidence: 0.826569676399231
+
+00:06:34.544 --> 00:06:37.884
+the Teams SDK packages, go to our docs, understand how
+
+NOTE Confidence: 0.826569676399231
+
+00:06:37.946 --> 00:06:41.532
+our packages work, then start to actually put those pieces
+
+NOTE Confidence: 0.826569676399231
+
+00:06:41.594 --> 00:06:45.119
+together to actually show to actually enable that in your
+
+NOTE Confidence: 0.826569676399231
+
+00:06:45.181 --> 00:06:46.480
+existing application.
+
+NOTE Confidence: 0.9075947999954224
+
+00:06:47.760 --> 00:06:50.016
+Instead of that, I'm going to use Copilot to do
+
+NOTE Confidence: 0.9075947999954224
+
+00:06:50.064 --> 00:06:50.640
+that for me.
+
+NOTE Confidence: 0.7939152717590332
+
+00:06:50.680 --> 00:06:52.960
+So I'm going to use run Copilot in Yolo mode.
+
+NOTE Confidence: 0.8664443492889404
+
+00:06:54.160 --> 00:06:57.040
+Hopefully demo gods agree with me here.
+
+NOTE Confidence: 0.7534525990486145
+
+00:06:58.200 --> 00:07:02.486
+All right, so this particular session of Copilot has been
+
+NOTE Confidence: 0.7534525990486145
+
+00:07:02.561 --> 00:07:05.719
+scaffolded with the Teams dev agent skill.
+
+NOTE Confidence: 0.9181132316589355
+
+00:07:06.839 --> 00:07:10.284
+So I'm just going to give it a very simple
+
+NOTE Confidence: 0.9181132316589355
+
+00:07:10.366 --> 00:07:14.960
+prompt, integrate this application into Microsoft Teams.
+
+NOTE Confidence: 0.867546021938324
+
+00:07:15.920 --> 00:07:21.920
+Once you're done, give me the installation link.
+
+NOTE Confidence: 0.7598675489425659
+
+00:07:24.080 --> 00:07:26.800
+All right, so you can see that it already picked
+
+NOTE Confidence: 0.7598675489425659
+
+00:07:26.856 --> 00:07:29.520
+up the agent skill, the team's dev agent skill.
+
+NOTE Confidence: 0.8716294765472412
+
+00:07:29.800 --> 00:07:33.125
+Now this skill basically has two things that it actually
+
+NOTE Confidence: 0.8716294765472412
+
+00:07:33.184 --> 00:07:33.600
+can do.
+
+NOTE Confidence: 0.7891887426376343
+
+00:07:33.960 --> 00:07:36.994
+It can talk to the team CLI that I'm going
+
+NOTE Confidence: 0.7891887426376343
+
+00:07:37.067 --> 00:07:39.885
+to talk to you in a minute and it knows
+
+NOTE Confidence: 0.7891887426376343
+
+00:07:39.957 --> 00:07:42.919
+the teams It it can read the team's docs.
+
+NOTE Confidence: 0.8956615924835205
+
+00:07:43.440 --> 00:07:45.690
+So while it works, I'm going to show you what
+
+NOTE Confidence: 0.8956615924835205
+
+00:07:45.740 --> 00:07:47.240
+we've done with the teams CLI.
+
+NOTE Confidence: 0.8252593874931335
+
+00:07:47.680 --> 00:07:50.623
+So the team CLI has been, oops, let me make
+
+NOTE Confidence: 0.8252593874931335
+
+00:07:50.691 --> 00:07:53.839
+it a little bit smaller so you can see things.
+
+NOTE Confidence: 0.9092455506324768
+
+00:07:54.200 --> 00:07:57.197
+The team CLI has been built from the ground up
+
+NOTE Confidence: 0.9092455506324768
+
+00:07:57.262 --> 00:07:59.999
+for both humans and for agents for humans.
+
+NOTE Confidence: 0.9584414958953857
+
+00:08:00.000 --> 00:08:00.760
+What does this mean?
+
+NOTE Confidence: 0.8070397973060608
+
+00:08:01.920 --> 00:08:06.224
+Traditionally with CL is you're constructing long commands, you know,
+
+NOTE Confidence: 0.8070397973060608
+
+00:08:06.286 --> 00:08:09.967
+you're, you're putting in arguments that you might need to,
+
+NOTE Confidence: 0.8070397973060608
+
+00:08:10.030 --> 00:08:13.336
+you know, call others CLI commands to get certain IDs
+
+NOTE Confidence: 0.8070397973060608
+
+00:08:13.398 --> 00:08:15.520
+or arguments and things like that.
+
+NOTE Confidence: 0.9388715028762817
+
+00:08:16.440 --> 00:08:19.418
+When we were designing this CLI, we made sure for
+
+NOTE Confidence: 0.9388715028762817
+
+00:08:19.478 --> 00:08:21.120
+humans it was interactable.
+
+NOTE Confidence: 0.8946546912193298
+
+00:08:21.120 --> 00:08:24.107
+So you can do something like Teams app and now
+
+NOTE Confidence: 0.8946546912193298
+
+00:08:24.172 --> 00:08:27.355
+you can use your arrow keys to select app, create
+
+NOTE Confidence: 0.8946546912193298
+
+00:08:27.420 --> 00:08:27.680
+app.
+
+NOTE Confidence: 0.9044480919837952
+
+00:08:27.680 --> 00:08:29.400
+I'm going to go ahead and select.
+
+NOTE Confidence: 0.9062886834144592
+
+00:08:31.600 --> 00:08:32.640
+I'm going to select the app.
+
+NOTE Confidence: 0.8774637579917908
+
+00:08:32.640 --> 00:08:36.418
+We just created the project management helper app, and here
+
+NOTE Confidence: 0.8774637579917908
+
+00:08:36.482 --> 00:08:40.068
+we can get app details, update app, download the package
+
+NOTE Confidence: 0.8774637579917908
+
+00:08:40.132 --> 00:08:43.462
+if you want to share it with your colleagues, manage
+
+NOTE Confidence: 0.8774637579917908
+
+00:08:43.526 --> 00:08:45.319
+secrets, manage permissions.
+
+NOTE Confidence: 0.9111425876617432
+
+00:08:45.600 --> 00:08:47.719
+Most of the things you'd need to actually manage your
+
+NOTE Confidence: 0.9111425876617432
+
+00:08:47.759 --> 00:08:48.799
+app you can do right here.
+
+NOTE Confidence: 0.8817399144172668
+
+00:08:48.800 --> 00:08:52.938
+I'm going to go ahead and update the app, and
+
+NOTE Confidence: 0.8817399144172668
+
+00:08:53.030 --> 00:08:58.364
+I'm going to update basic information and let's change the
+
+NOTE Confidence: 0.8817399144172668
+
+00:08:58.456 --> 00:08:59.559
+description.
+
+NOTE Confidence: 0.902700662612915
+
+00:08:59.760 --> 00:09:02.960
+Use this to manage your project.
+
+NOTE Confidence: 0.7402365207672119
+
+00:09:06.920 --> 00:09:07.960
+Can't spell, but that's OK.
+
+NOTE Confidence: 0.8627616763114929
+
+00:09:09.000 --> 00:09:11.338
+And just like that, we were able to modify our
+
+NOTE Confidence: 0.8627616763114929
+
+00:09:11.389 --> 00:09:12.000
+application.
+
+NOTE Confidence: 0.9251461029052734
+
+00:09:12.840 --> 00:09:14.800
+Now for agents, what does this actually mean?
+
+NOTE Confidence: 0.9232251644134521
+
+00:09:16.480 --> 00:09:19.293
+When we were designing this app, we employed something called
+
+NOTE Confidence: 0.9232251644134521
+
+00:09:19.339 --> 00:09:20.400
+progressive disclosure.
+
+NOTE Confidence: 0.8697583079338074
+
+00:09:20.640 --> 00:09:24.090
+So if you do something like Teams H, the help
+
+NOTE Confidence: 0.8697583079338074
+
+00:09:24.166 --> 00:09:27.770
+command, you can see that we have the top level
+
+NOTE Confidence: 0.8697583079338074
+
+00:09:27.846 --> 00:09:28.920
+commands here.
+
+NOTE Confidence: 0.8050346374511719
+
+00:09:28.920 --> 00:09:32.391
+We have things like Teams app which helps you manage
+
+NOTE Confidence: 0.8050346374511719
+
+00:09:32.458 --> 00:09:36.998
+your application, Teams project which helps you create and configure
+
+NOTE Confidence: 0.8050346374511719
+
+00:09:37.065 --> 00:09:38.200
+new new projects.
+
+NOTE Confidence: 0.9274746775627136
+
+00:09:40.280 --> 00:09:44.745
+So basically what happens with basically instead of the agent
+
+NOTE Confidence: 0.9274746775627136
+
+00:09:44.818 --> 00:09:48.991
+getting all the sub commands all at once with progressive
+
+NOTE Confidence: 0.9274746775627136
+
+00:09:49.064 --> 00:09:53.969
+disclosure, we give you the commands progressively depending on the
+
+NOTE Confidence: 0.9274746775627136
+
+00:09:54.043 --> 00:09:55.799
+goal that the agent has.
+
+NOTE Confidence: 0.9094566106796265
+
+00:09:56.040 --> 00:09:58.983
+So if the agent wants to update the application and
+
+NOTE Confidence: 0.9094566106796265
+
+00:09:59.040 --> 00:10:01.753
+its goal is to update a certain field, it would
+
+NOTE Confidence: 0.9094566106796265
+
+00:10:01.810 --> 00:10:03.599
+first do, hey, this is part of.
+
+NOTE Confidence: 0.17193517088890076
+
+00:10:03.920 --> 00:10:05.400
+So it's like managing.
+
+NOTE Confidence: 0.5496511459350586
+
+00:10:05.400 --> 00:10:09.106
+So it would do teams app H and then here
+
+NOTE Confidence: 0.5496511459350586
+
+00:10:09.199 --> 00:10:10.960
+it needs to update.
+
+NOTE Confidence: 0.6282196044921875
+
+00:10:10.960 --> 00:10:14.172
+So it would do teams app update H and now
+
+NOTE Confidence: 0.6282196044921875
+
+00:10:14.251 --> 00:10:18.404
+you're given the full list of flags that you actually
+
+NOTE Confidence: 0.6282196044921875
+
+00:10:18.482 --> 00:10:20.519
+need to call this command.
+
+NOTE Confidence: 0.8608123064041138
+
+00:10:20.960 --> 00:10:22.440
+Now, why is this actually useful?
+
+NOTE Confidence: 0.8548609018325806
+
+00:10:22.679 --> 00:10:25.242
+It it makes sure that your agent only fills up
+
+NOTE Confidence: 0.8548609018325806
+
+00:10:25.298 --> 00:10:28.307
+its context with things that it actually needs for its
+
+NOTE Confidence: 0.8548609018325806
+
+00:10:28.362 --> 00:10:31.594
+particular goal and not for, you know, useless things that
+
+NOTE Confidence: 0.8548609018325806
+
+00:10:31.650 --> 00:10:33.600
+it might not actually end up using.
+
+NOTE Confidence: 0.9168835878372192
+
+00:10:34.840 --> 00:10:37.229
+Now, secondly, the other thing that we have is something
+
+NOTE Confidence: 0.9168835878372192
+
+00:10:37.272 --> 00:10:38.040
+called Jason mode.
+
+NOTE Confidence: 0.9437165260314941
+
+00:10:38.600 --> 00:10:40.600
+So let me show you how that works.
+
+NOTE Confidence: 0.7615041136741638
+
+00:10:41.120 --> 00:10:43.579
+So we have let me call teams app list and
+
+NOTE Confidence: 0.7615041136741638
+
+00:10:43.639 --> 00:10:46.939
+get the ID for the application, the application we just
+
+NOTE Confidence: 0.7615041136741638
+
+00:10:46.999 --> 00:10:47.479
+created.
+
+NOTE Confidence: 0.7600787878036499
+
+00:10:47.480 --> 00:10:48.920
+So here we go.
+
+NOTE Confidence: 0.7625226974487305
+
+00:10:50.440 --> 00:10:53.760
+And if I do teams up, get the ID.
+
+NOTE Confidence: 0.8217591643333435
+
+00:10:56.040 --> 00:10:59.159
+Now this gives us a nice looking output with, you
+
+NOTE Confidence: 0.8217591643333435
+
+00:10:59.223 --> 00:11:02.533
+know, our the details of our application with a nice
+
+NOTE Confidence: 0.8217591643333435
+
+00:11:02.597 --> 00:11:05.080
+installation link and things like that.
+
+NOTE Confidence: 0.8252472877502441
+
+00:11:05.600 --> 00:11:09.387
+Now this is great for humans because it makes the
+
+NOTE Confidence: 0.8252472877502441
+
+00:11:09.465 --> 00:11:12.479
+the output really grokable and legible.
+
+NOTE Confidence: 0.9751147031784058
+
+00:11:12.760 --> 00:11:14.320
+But agents don't really need that.
+
+NOTE Confidence: 0.8650791049003601
+
+00:11:14.560 --> 00:11:16.640
+They're perfectly fine with just Jason.
+
+NOTE Confidence: 0.8367251753807068
+
+00:11:16.640 --> 00:11:19.764
+So if I do dash, dash Jason, you get the
+
+NOTE Confidence: 0.8367251753807068
+
+00:11:19.842 --> 00:11:23.279
+same output but in a nice structured format.
+
+NOTE Confidence: 0.9049966931343079
+
+00:11:23.520 --> 00:11:27.233
+Now that might not seem that useful, but it's actually
+
+NOTE Confidence: 0.9049966931343079
+
+00:11:27.302 --> 00:11:31.497
+extremely powerful because you can then use these commands in
+
+NOTE Confidence: 0.9049966931343079
+
+00:11:31.566 --> 00:11:35.624
+inside more complex scripts that you can actually that your
+
+NOTE Confidence: 0.9049966931343079
+
+00:11:35.693 --> 00:11:38.994
+agents don't have to parse and they can just use
+
+NOTE Confidence: 0.9049966931343079
+
+00:11:39.063 --> 00:11:40.920
+Jason to get values out of.
+
+NOTE Confidence: 0.8848857879638672
+
+00:11:42.560 --> 00:11:44.200
+That's all I'm going to show for the CLI.
+
+NOTE Confidence: 0.9084928631782532
+
+00:11:44.200 --> 00:11:47.004
+There's a lot more that it has, and I encourage
+
+NOTE Confidence: 0.9084928631782532
+
+00:11:47.063 --> 00:11:49.569
+you to try it out, but let's pop over back
+
+NOTE Confidence: 0.9084928631782532
+
+00:11:49.629 --> 00:11:51.359
+to our agent, see how it did.
+
+NOTE Confidence: 0.6314903497695923
+
+00:11:53.680 --> 00:11:54.240
+Let's see.
+
+NOTE Confidence: 0.9005399346351624
+
+00:11:54.480 --> 00:11:56.426
+OK, I'm going to make this a little bit smaller
+
+NOTE Confidence: 0.9005399346351624
+
+00:11:56.467 --> 00:11:58.000
+so I can read it a little bit better.
+
+NOTE Confidence: 0.8975135087966919
+
+00:11:58.800 --> 00:12:01.213
+Looks like it did a lot of stuff and it
+
+NOTE Confidence: 0.8975135087966919
+
+00:12:01.274 --> 00:12:02.759
+has an endpoint running.
+
+NOTE Confidence: 0.6796398162841797
+
+00:12:02.760 --> 00:12:07.493
+It edited our whoops, it edited our app, and it
+
+NOTE Confidence: 0.6796398162841797
+
+00:12:07.593 --> 00:12:11.319
+finally gave us an installation link.
+
+NOTE Confidence: 0.8547656536102295
+
+00:12:11.320 --> 00:12:17.152
+So I'm just going to copy this installation link and
+
+NOTE Confidence: 0.8547656536102295
+
+00:12:17.264 --> 00:12:22.312
+pop back and open teams on the web and you're
+
+NOTE Confidence: 0.8547656536102295
+
+00:12:22.424 --> 00:12:27.360
+presented with this nice installation model.
+
+NOTE Confidence: 0.7319265007972717
+
+00:12:28.640 --> 00:12:29.480
+I'm going to add.
+
+NOTE Confidence: 0.8399744629859924
+
+00:12:30.520 --> 00:12:34.986
+And if everything worked out fine and copilot didn't betray
+
+NOTE Confidence: 0.8399744629859924
+
+00:12:35.062 --> 00:12:38.393
+me, I'm going to just give it the exact same
+
+NOTE Confidence: 0.8399744629859924
+
+00:12:38.468 --> 00:12:39.679
+query as before.
+
+NOTE Confidence: 0.7651754021644592
+
+00:12:39.720 --> 00:12:44.520
+Summarize the status of status.
+
+NOTE Confidence: 0.8226524591445923
+
+00:12:45.440 --> 00:12:51.929
+All my projects all right, looks like our agent is
+
+NOTE Confidence: 0.8226524591445923
+
+00:12:52.059 --> 00:12:58.807
+responding and the same exact feature that we had in
+
+NOTE Confidence: 0.8226524591445923
+
+00:12:58.937 --> 00:13:03.610
+our web application is now in Teams.
+
+NOTE Confidence: 0.8123421669006348
+
+00:13:04.250 --> 00:13:11.437
+And if I actually use the same installation link again,
+
+NOTE Confidence: 0.8123421669006348
+
+00:13:11.568 --> 00:13:13.789
+open this guy up.
+
+NOTE Confidence: 0.9493662118911743
+
+00:13:19.830 --> 00:13:22.470
+I can also introduce this agent in a group chat.
+
+NOTE Confidence: 0.8723844289779663
+
+00:13:22.470 --> 00:13:25.950
+So this is my group chat, project discussions, group chat.
+
+NOTE Confidence: 0.919326663017273
+
+00:13:29.360 --> 00:13:34.882
+And inside a group chat I can message this agent
+
+NOTE Confidence: 0.919326663017273
+
+00:13:34.997 --> 00:13:41.439
+and say what's the status of my conference demo project.
+
+NOTE Confidence: 0.9217903017997742
+
+00:13:47.070 --> 00:13:50.150
+And the agent is now available in a group chat.
+
+NOTE Confidence: 0.8391205668449402
+
+00:13:50.150 --> 00:13:51.990
+And with that, I'm going to hand it back to.
+
+NOTE Confidence: 0.32526150345802307
+
+00:13:51.990 --> 00:13:52.110
+Him.
+
+NOTE Confidence: 0.8441257476806641
+
+00:13:52.110 --> 00:13:56.564
+I think that is such an amazing presentation of an
+
+NOTE Confidence: 0.8441257476806641
+
+00:13:56.653 --> 00:13:59.950
+agent that a CLI that is agent first.
+
+NOTE Confidence: 0.8226802945137024
+
+00:13:59.990 --> 00:14:02.596
+We're in the world of coding agents and CLI that
+
+NOTE Confidence: 0.8226802945137024
+
+00:14:02.650 --> 00:14:05.365
+is built for coding agents is what we are bringing
+
+NOTE Confidence: 0.8226802945137024
+
+00:14:05.419 --> 00:14:05.799
+to you.
+
+NOTE Confidence: 0.7921982407569885
+
+00:14:06.400 --> 00:14:09.205
+What you just thought towards the end was Aamir bringing
+
+NOTE Confidence: 0.7921982407569885
+
+00:14:09.255 --> 00:14:11.159
+that specific agent into a group chat.
+
+NOTE Confidence: 0.8223461508750916
+
+00:14:11.679 --> 00:14:13.680
+And while we do have a talk tomorrow at 11:50
+
+NOTE Confidence: 0.8223461508750916
+
+00:14:13.724 --> 00:14:16.435
+about bringing your agent into group chats and the capability
+
+NOTE Confidence: 0.8223461508750916
+
+00:14:16.480 --> 00:14:18.480
+that we are bringing, I'm going to give you a
+
+NOTE Confidence: 0.8223461508750916
+
+00:14:18.524 --> 00:14:19.280
+sneak peek today.
+
+NOTE Confidence: 0.8816680908203125
+
+00:14:19.880 --> 00:14:22.123
+So if you do bring your agent into a group
+
+NOTE Confidence: 0.8816680908203125
+
+00:14:22.177 --> 00:14:25.489
+chat, we are introducing emoji reactions, which means that the
+
+NOTE Confidence: 0.8816680908203125
+
+00:14:25.543 --> 00:14:27.520
+agent can respond to you with emojis.
+
+NOTE Confidence: 0.9006494879722595
+
+00:14:28.520 --> 00:14:32.392
+We also bring to you targeted messages and slash commands,
+
+NOTE Confidence: 0.9006494879722595
+
+00:14:32.459 --> 00:14:36.264
+which means that your agent can now privately message you
+
+NOTE Confidence: 0.9006494879722595
+
+00:14:36.331 --> 00:14:37.399
+in a group chat.
+
+NOTE Confidence: 0.9408434629440308
+
+00:14:37.600 --> 00:14:40.095
+And you can also privately message your agent in a
+
+NOTE Confidence: 0.9408434629440308
+
+00:14:40.145 --> 00:14:43.040
+group chat and ask all the embarrassing questions that you
+
+NOTE Confidence: 0.9408434629440308
+
+00:14:43.090 --> 00:14:43.640
+might have.
+
+NOTE Confidence: 0.8635620474815369
+
+00:14:44.440 --> 00:14:47.998
+Next up, we're bringing quoted replies, which is the capability
+
+NOTE Confidence: 0.8635620474815369
+
+00:14:48.055 --> 00:14:50.427
+for you for your agent to be able to quote
+
+NOTE Confidence: 0.8635620474815369
+
+00:14:50.484 --> 00:14:51.839
+a message from the past.
+
+NOTE Confidence: 0.8751712441444397
+
+00:14:51.920 --> 00:14:54.854
+This is usually important for long running tasks in Group
+
+NOTE Confidence: 0.8751712441444397
+
+00:14:54.905 --> 00:14:57.479
+chats, which do have like a fire hose of messages.
+
+NOTE Confidence: 0.8583995699882507
+
+00:14:58.040 --> 00:15:02.137
+We're also bringing other capabilities like suggested actions, markdown support,
+
+NOTE Confidence: 0.8583995699882507
+
+00:15:02.188 --> 00:15:05.211
+source citations, and a bunch of other capabilities that we
+
+NOTE Confidence: 0.8583995699882507
+
+00:15:05.262 --> 00:15:07.413
+brought to you at bit last year, but a lot
+
+NOTE Confidence: 0.8583995699882507
+
+00:15:07.464 --> 00:15:09.359
+more on that in the session tomorrow.
+
+NOTE Confidence: 0.83661949634552
+
+00:15:10.400 --> 00:15:12.753
+However, now we're going to take it to the fun
+
+NOTE Confidence: 0.83661949634552
+
+00:15:12.804 --> 00:15:15.311
+part, which is so far we saw a project management
+
+NOTE Confidence: 0.83661949634552
+
+00:15:15.362 --> 00:15:17.919
+agent being built into teams live in front of you.
+
+NOTE Confidence: 0.7279741764068604
+
+00:15:17.920 --> 00:15:20.692
+We're going to take that agent and make it into
+
+NOTE Confidence: 0.7279741764068604
+
+00:15:20.751 --> 00:15:21.400
+a teammate.
+
+NOTE Confidence: 0.8969261646270752
+
+00:15:21.960 --> 00:15:23.600
+What does it mean to be a teammate?
+
+NOTE Confidence: 0.8552348613739014
+
+00:15:24.320 --> 00:15:27.404
+So for me, that project management agent would be a
+
+NOTE Confidence: 0.8552348613739014
+
+00:15:27.465 --> 00:15:30.065
+teammate when I can say that, OK, this is a
+
+NOTE Confidence: 0.8552348613739014
+
+00:15:30.126 --> 00:15:33.936
+project manager for, let's say, a mobile redesign project, this
+
+NOTE Confidence: 0.8552348613739014
+
+00:15:33.997 --> 00:15:36.839
+project manager lists across my M365 ecosystem.
+
+NOTE Confidence: 0.8579208850860596
+
+00:15:37.360 --> 00:15:39.430
+What that means is that I can send an e-mail
+
+NOTE Confidence: 0.8579208850860596
+
+00:15:39.477 --> 00:15:41.359
+to that mobile redesign product manager.
+
+NOTE Confidence: 0.7864891290664673
+
+00:15:41.760 --> 00:15:44.981
+I can tag that, tag that product manager in a
+
+NOTE Confidence: 0.7864891290664673
+
+00:15:45.052 --> 00:15:45.839
+group chat.
+
+NOTE Confidence: 0.8128643035888672
+
+00:15:46.200 --> 00:15:49.563
+I can add a word, comment and mention that product
+
+NOTE Confidence: 0.8128643035888672
+
+00:15:49.630 --> 00:15:54.136
+manager there, which means there's a true teammate that's embodying
+
+NOTE Confidence: 0.8128643035888672
+
+00:15:54.204 --> 00:15:56.759
+everywhere I live in teams and beyond.
+
+NOTE Confidence: 0.9774091839790344
+
+00:15:57.720 --> 00:15:58.480
+How do we do that?
+
+NOTE Confidence: 0.8627004027366638
+
+00:15:59.080 --> 00:16:02.728
+Much like we have M365 for humans, You must have
+
+NOTE Confidence: 0.8627004027366638
+
+00:16:02.804 --> 00:16:05.920
+heard about 865 or Agents 365 for Agents.
+
+NOTE Confidence: 0.889735758304596
+
+00:16:06.760 --> 00:16:09.822
+That enables you to take your agent and make it
+
+NOTE Confidence: 0.889735758304596
+
+00:16:09.887 --> 00:16:13.341
+into a teammate, give it an agentic identity and make
+
+NOTE Confidence: 0.889735758304596
+
+00:16:13.406 --> 00:16:16.599
+it live across the tools and apps where you live.
+
+NOTE Confidence: 0.8238339424133301
+
+00:16:17.240 --> 00:16:20.791
+In turn, what IT gets its a lot more visibility,
+
+NOTE Confidence: 0.8238339424133301
+
+00:16:20.865 --> 00:16:26.266
+observability, permissions and control to understand the impact that your
+
+NOTE Confidence: 0.8238339424133301
+
+00:16:26.340 --> 00:16:27.080
+agent has.
+
+NOTE Confidence: 0.8906766772270203
+
+00:16:28.480 --> 00:16:30.936
+And just like the agent that we saw you can
+
+NOTE Confidence: 0.8906766772270203
+
+00:16:30.993 --> 00:16:33.963
+create, that agent that Aamir created can be a great
+
+NOTE Confidence: 0.8906766772270203
+
+00:16:34.020 --> 00:16:37.219
+blueprint to create so many project managers and so many
+
+NOTE Confidence: 0.8906766772270203
+
+00:16:37.276 --> 00:16:40.418
+of these personas that can be specific for one project,
+
+NOTE Confidence: 0.8906766772270203
+
+00:16:40.475 --> 00:16:43.503
+let's say the mobile redesign project or the back end
+
+NOTE Confidence: 0.8906766772270203
+
+00:16:43.560 --> 00:16:44.760
+architecture project.
+
+NOTE Confidence: 0.8685510158538818
+
+00:16:45.000 --> 00:16:49.359
+They carry the context throughout the ecosystem of world Outlook,
+
+NOTE Confidence: 0.8685510158538818
+
+00:16:49.426 --> 00:16:51.639
+PowerPoint, Excel and even teams.
+
+NOTE Confidence: 0.9529374837875366
+
+00:16:52.120 --> 00:16:53.120
+Let's see that live.
+
+NOTE Confidence: 0.8059368133544922
+
+00:16:53.120 --> 00:16:53.880
+Let's see that well.
+
+NOTE Confidence: 0.8152679204940796
+
+00:16:55.480 --> 00:16:58.064
+This one is actually a demo, sorry a video just
+
+NOTE Confidence: 0.8152679204940796
+
+00:16:58.119 --> 00:16:59.439
+in the interest of time.
+
+NOTE Confidence: 0.8018110394477844
+
+00:17:00.480 --> 00:17:03.980
+So here we have the same exact project management agent
+
+NOTE Confidence: 0.8018110394477844
+
+00:17:04.043 --> 00:17:07.034
+that you just saw us build with Copilot, but in
+
+NOTE Confidence: 0.8018110394477844
+
+00:17:07.098 --> 00:17:07.480
+Teams.
+
+NOTE Confidence: 0.9276925325393677
+
+00:17:07.480 --> 00:17:10.931
+Now you can actually go and use this project management
+
+NOTE Confidence: 0.9276925325393677
+
+00:17:10.994 --> 00:17:14.319
+agent as a blueprint to create more project managers.
+
+NOTE Confidence: 0.8645797371864319
+
+00:17:14.680 --> 00:17:17.821
+So here we're actually creating a project manager for our
+
+NOTE Confidence: 0.8645797371864319
+
+00:17:17.877 --> 00:17:19.199
+mobile redesign project.
+
+NOTE Confidence: 0.8258272409439087
+
+00:17:20.000 --> 00:17:22.873
+And it has its own identity, so it has its
+
+NOTE Confidence: 0.8258272409439087
+
+00:17:22.941 --> 00:17:24.719
+own alias, its own e-mail.
+
+NOTE Confidence: 0.6187765002250671
+
+00:17:27.160 --> 00:17:31.109
+And once we create this, all right, because it has
+
+NOTE Confidence: 0.6187765002250671
+
+00:17:31.188 --> 00:17:34.901
+its own identity, of course you can do, you can
+
+NOTE Confidence: 0.6187765002250671
+
+00:17:34.980 --> 00:17:36.560
+message it directly.
+
+NOTE Confidence: 0.5334938764572144
+
+00:17:37.040 --> 00:17:38.800
+So here we're going to message it one-on-one.
+
+NOTE Confidence: 0.5987938642501831
+
+00:17:47.690 --> 00:17:51.866
+So I'm messaging the agent, the mobile redesign project manager,
+
+NOTE Confidence: 0.5987938642501831
+
+00:17:51.932 --> 00:17:52.650
+one-on-one.
+
+NOTE Confidence: 0.6139235496520996
+
+00:17:52.930 --> 00:17:55.193
+And notice I asked it, what's the current status of
+
+NOTE Confidence: 0.6139235496520996
+
+00:17:55.237 --> 00:17:55.769
+the project.
+
+NOTE Confidence: 0.6548239588737488
+
+00:17:55.770 --> 00:17:57.170
+I didn't mention which project.
+
+NOTE Confidence: 0.5722683668136597
+
+00:17:57.970 --> 00:18:01.540
+Now, because this project manager is responsible for a particular
+
+NOTE Confidence: 0.5722683668136597
+
+00:18:01.595 --> 00:18:04.451
+project, it knows that that is that's the only thing
+
+NOTE Confidence: 0.5722683668136597
+
+00:18:04.506 --> 00:18:05.330
+in its context.
+
+NOTE Confidence: 0.6790376901626587
+
+00:18:05.490 --> 00:18:09.081
+So then it responds with status of the mobile redesign
+
+NOTE Confidence: 0.6790376901626587
+
+00:18:09.147 --> 00:18:09.679
+project.
+
+NOTE Confidence: 0.8958759307861328
+
+00:18:10.520 --> 00:18:13.986
+And because it has its own identity, now you're able
+
+NOTE Confidence: 0.8958759307861328
+
+00:18:14.053 --> 00:18:18.253
+to also include this particular agent in relevant contexts like
+
+NOTE Confidence: 0.8958759307861328
+
+00:18:18.319 --> 00:18:22.519
+meetings where we're discussing this project or in Group chats.
+
+NOTE Confidence: 0.9440553784370422
+
+00:18:23.600 --> 00:18:26.276
+Just like we add users, we can add this agent
+
+NOTE Confidence: 0.9440553784370422
+
+00:18:26.336 --> 00:18:28.239
+into this particular group chat.
+
+NOTE Confidence: 0.9313403367996216
+
+00:18:33.119 --> 00:18:36.916
+And if we message the agent here, it knows that
+
+NOTE Confidence: 0.9313403367996216
+
+00:18:36.997 --> 00:18:41.440
+it's ready to help us with our mobile redesign project.
+
+NOTE Confidence: 0.8483793139457703
+
+00:18:41.880 --> 00:18:45.393
+And like Umung said, because these agents have access to
+
+NOTE Confidence: 0.8483793139457703
+
+00:18:45.456 --> 00:18:48.467
+the wide range of M365 tools they also have, and
+
+NOTE Confidence: 0.8483793139457703
+
+00:18:48.530 --> 00:18:52.231
+they have their own identity, they can actually send emails
+
+NOTE Confidence: 0.8483793139457703
+
+00:18:52.294 --> 00:18:53.800
+from their own accounts.
+
+NOTE Confidence: 0.7011895179748535
+
+00:18:54.520 --> 00:18:56.159
+So here I'm asking you to send us an E
+
+NOTE Confidence: 0.7011895179748535
+
+00:18:56.202 --> 00:18:58.360
+send us an e-mail with the summary of the project.
+
+NOTE Confidence: 0.8780887126922607
+
+00:18:58.880 --> 00:19:01.301
+And if we pop over to Outlook, you can see
+
+NOTE Confidence: 0.8780887126922607
+
+00:19:01.359 --> 00:19:05.280
+the e-mail actually comes from this mobile redesign project manager.
+
+NOTE Confidence: 0.8316929936408997
+
+00:19:06.240 --> 00:19:09.178
+And if I hover over the the agent, the card,
+
+NOTE Confidence: 0.8316929936408997
+
+00:19:09.245 --> 00:19:12.651
+the contact card, you can see it's an it's actually
+
+NOTE Confidence: 0.8316929936408997
+
+00:19:12.718 --> 00:19:13.519
+an AI agent.
+
+NOTE Confidence: 0.8054996132850647
+
+00:19:13.800 --> 00:19:16.684
+And this AI agent is again powered by the same
+
+NOTE Confidence: 0.8054996132850647
+
+00:19:16.747 --> 00:19:20.446
+Copilot, same agent that we built with Copilot just moments
+
+NOTE Confidence: 0.8054996132850647
+
+00:19:20.509 --> 00:19:20.759
+ago.
+
+NOTE Confidence: 0.8019881844520569
+
+00:19:21.320 --> 00:19:23.240
+Let me re echo how awesome this is.
+
+NOTE Confidence: 0.8486419916152954
+
+00:19:23.520 --> 00:19:26.744
+What you just saw is within Teams, you were able
+
+NOTE Confidence: 0.8486419916152954
+
+00:19:26.811 --> 00:19:29.834
+to ask an agent, a teammate to send an e-mail
+
+NOTE Confidence: 0.8486419916152954
+
+00:19:29.901 --> 00:19:32.320
+using its own e-mail address to you.
+
+NOTE Confidence: 0.9336969256401062
+
+00:19:33.119 --> 00:19:35.863
+With all of this accomplished without you having to leave
+
+NOTE Confidence: 0.9336969256401062
+
+00:19:35.911 --> 00:19:36.200
+Teams.
+
+NOTE Confidence: 0.952318549156189
+
+00:19:36.560 --> 00:19:39.560
+So your work starts to really get done in Teams.
+
+NOTE Confidence: 0.8451856374740601
+
+00:19:42.000 --> 00:19:44.434
+And with that, we are towards the end, we do
+
+NOTE Confidence: 0.8451856374740601
+
+00:19:44.489 --> 00:19:47.753
+have a session tomorrow which we'll, which we'll talk about
+
+NOTE Confidence: 0.8451856374740601
+
+00:19:47.808 --> 00:19:51.183
+all the capabilities on group chats and how we're integrating
+
+NOTE Confidence: 0.8451856374740601
+
+00:19:51.239 --> 00:19:53.120
+your agents into group ecosystems.
+
+NOTE Confidence: 0.83244788646698
+
+00:19:53.480 --> 00:19:55.784
+But do try out our SDK, go to AK dot
+
+NOTE Confidence: 0.83244788646698
+
+00:19:55.848 --> 00:19:56.040
+Ms.
+
+NOTE Confidence: 0.5726878643035889
+
+00:19:56.040 --> 00:19:57.640
+slash teams- SDK.
+
+NOTE Confidence: 0.6985998749732971
+
+00:19:58.080 --> 00:20:00.320
+Do try the new CLI our skills.
+
+NOTE Confidence: 0.931373655796051
+
+00:20:00.720 --> 00:20:02.360
+And please stay connected with us.
+
+NOTE Confidence: 0.9717020988464355
+
+00:20:02.480 --> 00:20:03.160
+Thank you so much.
+
+NOTE Confidence: 0.46462422609329224
+
+00:20:03.160 --> 00:20:03.320
+Thank.
+
+NOTE Confidence: 0.5370529294013977
+
+00:20:04.000 --> 00:20:04.080
+You.
+

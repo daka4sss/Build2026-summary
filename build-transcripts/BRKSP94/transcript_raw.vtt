@@ -1,0 +1,4065 @@
+WEBVTT
+
+NOTE
+language:en-US
+
+NOTE Confidence: 0.8942277431488037
+
+00:00:00.840 --> 00:00:02.320
+All right, we're good to go.
+
+NOTE Confidence: 0.9425488114356995
+
+00:00:02.960 --> 00:00:05.160
+OK, getting started now, you guys hear me?
+
+NOTE Confidence: 0.8144093751907349
+
+00:00:05.160 --> 00:00:06.720
+OK, all right, perfect.
+
+NOTE Confidence: 0.9370819926261902
+
+00:00:07.400 --> 00:00:10.104
+So we're going to cover a bit today around some
+
+NOTE Confidence: 0.9370819926261902
+
+00:00:10.162 --> 00:00:13.557
+new announcements from NVIDIA and work we've done with some
+
+NOTE Confidence: 0.9370819926261902
+
+00:00:13.614 --> 00:00:17.239
+partners, including Microsoft and some orchestration of agents.
+
+NOTE Confidence: 0.8572811484336853
+
+00:00:18.480 --> 00:00:20.806
+So to kind of get a quick agenda here, I'll
+
+NOTE Confidence: 0.8572811484336853
+
+00:00:20.860 --> 00:00:23.295
+talk about a little bit of the history of the
+
+NOTE Confidence: 0.8572811484336853
+
+00:00:23.349 --> 00:00:26.054
+journey we've been on the last few years and where
+
+NOTE Confidence: 0.8572811484336853
+
+00:00:26.108 --> 00:00:26.920
+we're at today.
+
+NOTE Confidence: 0.8993040323257446
+
+00:00:27.120 --> 00:00:29.919
+I'll talk about some new work from NVIDIA and the
+
+NOTE Confidence: 0.8993040323257446
+
+00:00:29.977 --> 00:00:31.519
+Nemotron open model family.
+
+NOTE Confidence: 0.9329453706741333
+
+00:00:31.800 --> 00:00:34.241
+And then we'll talk about the ecosystem and how we're
+
+NOTE Confidence: 0.9329453706741333
+
+00:00:34.287 --> 00:00:36.360
+trying to help out and contribute more there.
+
+NOTE Confidence: 0.8296568393707275
+
+00:00:37.640 --> 00:00:40.444
+So taking a little bit a trip on the journey
+
+NOTE Confidence: 0.8296568393707275
+
+00:00:40.507 --> 00:00:41.400
+we've been on.
+
+NOTE Confidence: 0.8541049957275391
+
+00:00:41.400 --> 00:00:44.312
+So going back about 3 1/2 four years, I'm hoping
+
+NOTE Confidence: 0.8541049957275391
+
+00:00:44.373 --> 00:00:46.799
+many of you remember the ChatGPT moment.
+
+NOTE Confidence: 0.8800566792488098
+
+00:00:46.880 --> 00:00:49.693
+We're all very excited to see that these large language
+
+NOTE Confidence: 0.8800566792488098
+
+00:00:49.744 --> 00:00:52.251
+models we had known about and been working on for
+
+NOTE Confidence: 0.8800566792488098
+
+00:00:52.302 --> 00:00:54.400
+years now, we're much, much more capable.
+
+NOTE Confidence: 0.9650651216506958
+
+00:00:54.600 --> 00:00:56.560
+And it was an amazing interface.
+
+NOTE Confidence: 0.9472602009773254
+
+00:00:56.760 --> 00:01:00.680
+We could ask complex questions and get complex answers back.
+
+NOTE Confidence: 0.9518541693687439
+
+00:01:01.040 --> 00:01:02.560
+And so that was an exciting moment.
+
+NOTE Confidence: 0.8800185322761536
+
+00:01:02.960 --> 00:01:05.728
+And then Fast forward about a year and a half,
+
+NOTE Confidence: 0.8800185322761536
+
+00:01:05.789 --> 00:01:09.160
+DeepSeek published open models that were able to reason.
+
+NOTE Confidence: 0.9101361036300659
+
+00:01:09.480 --> 00:01:12.080
+And in terms of open models, this was a breakthrough.
+
+NOTE Confidence: 0.9648217558860779
+
+00:01:12.319 --> 00:01:15.122
+Previous to that, the ability to reason wasn't a common
+
+NOTE Confidence: 0.9648217558860779
+
+00:01:15.173 --> 00:01:16.600
+thing in the open community.
+
+NOTE Confidence: 0.9076518416404724
+
+00:01:16.920 --> 00:01:20.524
+And so that change enabled many, many more open models
+
+NOTE Confidence: 0.9076518416404724
+
+00:01:20.591 --> 00:01:24.729
+and abilities to go through complex problems, things like math
+
+NOTE Confidence: 0.9076518416404724
+
+00:01:24.796 --> 00:01:27.399
+and coding, scientific question answer.
+
+NOTE Confidence: 0.937442421913147
+
+00:01:28.040 --> 00:01:31.116
+And then moving forward even further to a few months
+
+NOTE Confidence: 0.937442421913147
+
+00:01:31.175 --> 00:01:33.956
+back at the beginning of this year, we now were
+
+NOTE Confidence: 0.937442421913147
+
+00:01:34.015 --> 00:01:37.565
+able to see agents, meaning software where we could interact
+
+NOTE Confidence: 0.937442421913147
+
+00:01:37.625 --> 00:01:39.400
+with models in the background.
+
+NOTE Confidence: 0.9333664178848267
+
+00:01:39.680 --> 00:01:42.043
+But we're able to get a lot more work done
+
+NOTE Confidence: 0.9333664178848267
+
+00:01:42.099 --> 00:01:44.744
+and focus more on the tasks and the outcome and
+
+NOTE Confidence: 0.9333664178848267
+
+00:01:44.800 --> 00:01:48.120
+a little bit less on just simple question answer exchanges.
+
+NOTE Confidence: 0.9530523419380188
+
+00:01:48.600 --> 00:01:52.080
+And that breakthrough enabled many, many more use cases.
+
+NOTE Confidence: 0.9262811541557312
+
+00:01:52.280 --> 00:01:55.145
+And that's where we're going to spend most of our
+
+NOTE Confidence: 0.9262811541557312
+
+00:01:55.204 --> 00:01:57.836
+time today to give a quick overview of how we
+
+NOTE Confidence: 0.9262811541557312
+
+00:01:57.894 --> 00:02:00.702
+think about these agents and the work they do in
+
+NOTE Confidence: 0.9262811541557312
+
+00:02:00.760 --> 00:02:03.217
+the in the kind of upper left, you can see
+
+NOTE Confidence: 0.9262811541557312
+
+00:02:03.275 --> 00:02:05.439
+the prompt, which is often a request.
+
+NOTE Confidence: 0.9514963030815125
+
+00:02:05.440 --> 00:02:08.443
+It could be work to get done, a job to
+
+NOTE Confidence: 0.9514963030815125
+
+00:02:08.522 --> 00:02:08.760
+do.
+
+NOTE Confidence: 0.913682758808136
+
+00:02:09.280 --> 00:02:12.030
+And as that goes into the center, we think about
+
+NOTE Confidence: 0.913682758808136
+
+00:02:12.088 --> 00:02:14.953
+an agent and essentially this kind of a loop where
+
+NOTE Confidence: 0.913682758808136
+
+00:02:15.011 --> 00:02:18.850
+there's some context or background, some knowledge, either what the
+
+NOTE Confidence: 0.913682758808136
+
+00:02:18.908 --> 00:02:21.429
+agent needs to go do, what it has access to,
+
+NOTE Confidence: 0.913682758808136
+
+00:02:21.487 --> 00:02:22.919
+what its skills might be.
+
+NOTE Confidence: 0.9033283591270447
+
+00:02:23.440 --> 00:02:25.924
+And then as it starts to proceed, it looks and
+
+NOTE Confidence: 0.9033283591270447
+
+00:02:25.978 --> 00:02:29.002
+observes, it looks at what's available, it looks at what
+
+NOTE Confidence: 0.9033283591270447
+
+00:02:29.056 --> 00:02:31.000
+it can do, likely can create a plan.
+
+NOTE Confidence: 0.9522622227668762
+
+00:02:31.400 --> 00:02:34.167
+It starts to reason through that plan how it makes
+
+NOTE Confidence: 0.9522622227668762
+
+00:02:34.223 --> 00:02:36.879
+progress, what are some of the tasks to be done.
+
+NOTE Confidence: 0.9455022215843201
+
+00:02:37.120 --> 00:02:39.301
+And then it goes and starts acting and doing that
+
+NOTE Confidence: 0.9455022215843201
+
+00:02:39.345 --> 00:02:39.879
+actual work.
+
+NOTE Confidence: 0.900547444820404
+
+00:02:40.360 --> 00:02:42.783
+And it'll loop through that until it gets the job
+
+NOTE Confidence: 0.900547444820404
+
+00:02:42.832 --> 00:02:43.080
+done.
+
+NOTE Confidence: 0.909339427947998
+
+00:02:43.800 --> 00:02:45.954
+And then in the upper right, you can see things
+
+NOTE Confidence: 0.909339427947998
+
+00:02:45.999 --> 00:02:48.199
+like tools and skills that we'll have access to.
+
+NOTE Confidence: 0.9687541723251343
+
+00:02:48.520 --> 00:02:51.040
+And so often you can configure these things.
+
+NOTE Confidence: 0.8023765087127686
+
+00:02:51.040 --> 00:02:53.440
+An enterprise Oregon company might provide some of them.
+
+NOTE Confidence: 0.9587713479995728
+
+00:02:53.840 --> 00:02:55.600
+There's also security and governance.
+
+NOTE Confidence: 0.9677872061729431
+
+00:02:55.800 --> 00:02:59.107
+Just like employees have access to things today, we expect
+
+NOTE Confidence: 0.9677872061729431
+
+00:02:59.164 --> 00:03:01.160
+agents to also have access as well.
+
+NOTE Confidence: 0.9266695380210876
+
+00:03:01.600 --> 00:03:03.400
+And then in the bottom, of course, there's memory.
+
+NOTE Confidence: 0.9174434542655945
+
+00:03:03.640 --> 00:03:06.000
+Can be short term memory, can be long term memory.
+
+NOTE Confidence: 0.9321666359901428
+
+00:03:06.240 --> 00:03:08.476
+The idea is, is allowing it to know what work
+
+NOTE Confidence: 0.9321666359901428
+
+00:03:08.526 --> 00:03:11.211
+it's done, what work needs to happen, and also perhaps
+
+NOTE Confidence: 0.9321666359901428
+
+00:03:11.260 --> 00:03:14.193
+even broader knowledge of other work other agents are doing
+
+NOTE Confidence: 0.9321666359901428
+
+00:03:14.243 --> 00:03:14.839
+as well too.
+
+NOTE Confidence: 0.9582682251930237
+
+00:03:15.400 --> 00:03:17.353
+And then on the far left under prompt, you can
+
+NOTE Confidence: 0.9582682251930237
+
+00:03:17.395 --> 00:03:18.159
+see orchestration.
+
+NOTE Confidence: 0.961788535118103
+
+00:03:18.560 --> 00:03:20.482
+And so the idea here is that one agent is
+
+NOTE Confidence: 0.961788535118103
+
+00:03:20.529 --> 00:03:22.639
+running through this loop, getting work done.
+
+NOTE Confidence: 0.9157034754753113
+
+00:03:22.960 --> 00:03:25.389
+It could even work with other agents and be able
+
+NOTE Confidence: 0.9157034754753113
+
+00:03:25.440 --> 00:03:28.275
+to orchestrate workloads with them and across a fleet of
+
+NOTE Confidence: 0.9157034754753113
+
+00:03:28.325 --> 00:03:28.679
+agents.
+
+NOTE Confidence: 0.9511540532112122
+
+00:03:29.080 --> 00:03:31.865
+And so we think about this idea of these agents
+
+NOTE Confidence: 0.9511540532112122
+
+00:03:31.924 --> 00:03:35.005
+being powered by a harness as well as large language
+
+NOTE Confidence: 0.9511540532112122
+
+00:03:35.065 --> 00:03:35.479
+models.
+
+NOTE Confidence: 0.9415954351425171
+
+00:03:35.880 --> 00:03:38.361
+And so to get even more specific, here we overlaid
+
+NOTE Confidence: 0.9415954351425171
+
+00:03:38.411 --> 00:03:41.240
+some icons of where we see large language models running.
+
+NOTE Confidence: 0.9539822936058044
+
+00:03:41.440 --> 00:03:43.000
+You can see a lot of it in the center.
+
+NOTE Confidence: 0.8306208848953247
+
+00:03:43.240 --> 00:03:45.828
+So they power a lot of the, we'll say context
+
+NOTE Confidence: 0.8306208848953247
+
+00:03:45.886 --> 00:03:49.280
+of their reason act essentially the work the agent's doing.
+
+NOTE Confidence: 0.879973828792572
+
+00:03:49.600 --> 00:03:53.440
+There's skills, and skills often can run on a CPU.
+
+NOTE Confidence: 0.9313313961029053
+
+00:03:53.680 --> 00:03:55.360
+They can also run on a GPU.
+
+NOTE Confidence: 0.9084165096282959
+
+00:03:55.560 --> 00:03:57.642
+We have our CUDA software stack there as well as
+
+NOTE Confidence: 0.9084165096282959
+
+00:03:57.685 --> 00:03:58.639
+large language models.
+
+NOTE Confidence: 0.8556564450263977
+
+00:03:58.960 --> 00:04:02.443
+There's security and governance that could be access to network
+
+NOTE Confidence: 0.8556564450263977
+
+00:04:02.498 --> 00:04:04.600
+protocols or content across a company.
+
+NOTE Confidence: 0.9249430894851685
+
+00:04:05.120 --> 00:04:06.440
+At the bottom there's memory.
+
+NOTE Confidence: 0.9631578326225281
+
+00:04:06.760 --> 00:04:09.360
+Memory can take place in many different locations.
+
+NOTE Confidence: 0.8875181078910828
+
+00:04:09.560 --> 00:04:12.913
+It can be across the network, it could be local,
+
+NOTE Confidence: 0.8875181078910828
+
+00:04:12.983 --> 00:04:14.520
+it could be on CPUGPU.
+
+NOTE Confidence: 0.9038044214248657
+
+00:04:14.800 --> 00:04:17.823
+And there's also some memory inside the LLM as well
+
+NOTE Confidence: 0.9038044214248657
+
+00:04:17.882 --> 00:04:18.119
+too.
+
+NOTE Confidence: 0.8968770503997803
+
+00:04:20.279 --> 00:04:22.465
+To to take a step now into how NVIDIA, how
+
+NOTE Confidence: 0.8968770503997803
+
+00:04:22.517 --> 00:04:25.534
+we think about these long running agentic systems and what
+
+NOTE Confidence: 0.8968770503997803
+
+00:04:25.586 --> 00:04:28.239
+are some of the key pillars we think are essential.
+
+NOTE Confidence: 0.9404950737953186
+
+00:04:28.760 --> 00:04:31.425
+So the first one, we think about our systems of
+
+NOTE Confidence: 0.9404950737953186
+
+00:04:31.481 --> 00:04:34.713
+models, meaning our view is that in order for enterprises
+
+NOTE Confidence: 0.9404950737953186
+
+00:04:34.770 --> 00:04:37.889
+to be the most successful agents, they will likely need
+
+NOTE Confidence: 0.9404950737953186
+
+00:04:37.945 --> 00:04:39.079
+more than one model.
+
+NOTE Confidence: 0.9403641223907471
+
+00:04:39.400 --> 00:04:43.200
+And these models might be different languages, different modalities, they
+
+NOTE Confidence: 0.9403641223907471
+
+00:04:43.252 --> 00:04:46.479
+might be different sizes, they can run in different locations.
+
+NOTE Confidence: 0.9192889928817749
+
+00:04:46.839 --> 00:04:49.182
+And so in this world of a system of models,
+
+NOTE Confidence: 0.9192889928817749
+
+00:04:49.236 --> 00:04:52.124
+you can imagine many of these working together in the
+
+NOTE Confidence: 0.9192889928817749
+
+00:04:52.178 --> 00:04:52.559
+center.
+
+NOTE Confidence: 0.9051552414894104
+
+00:04:52.560 --> 00:04:55.916
+We think about agents as being secialized, meaning there's a
+
+NOTE Confidence: 0.9051552414894104
+
+00:04:55.972 --> 00:04:58.881
+certain skill or set of knowledge that they have and
+
+NOTE Confidence: 0.9051552414894104
+
+00:04:58.937 --> 00:05:00.279
+often inside enterrises.
+
+NOTE Confidence: 0.9113686084747314
+
+00:05:00.279 --> 00:05:03.319
+Today, just like many of us secialize, you can imagine
+
+NOTE Confidence: 0.9113686084747314
+
+00:05:03.375 --> 00:05:06.639
+these agents also gaining secialized skills and knowledge.
+
+NOTE Confidence: 0.8848458528518677
+
+00:05:06.960 --> 00:05:09.397
+And you can see some fun graphics we have there
+
+NOTE Confidence: 0.8848458528518677
+
+00:05:09.449 --> 00:05:11.628
+of our our CEO, we call it toy Jensen, but
+
+NOTE Confidence: 0.8848458528518677
+
+00:05:11.680 --> 00:05:15.259
+you can see them, they're having different outfits, showing different
+
+NOTE Confidence: 0.8848458528518677
+
+00:05:15.311 --> 00:05:18.008
+skill sets and you can imagine being post trained or
+
+NOTE Confidence: 0.8848458528518677
+
+00:05:18.060 --> 00:05:21.535
+having the knowledge and capabilities and access to certain systems
+
+NOTE Confidence: 0.8848458528518677
+
+00:05:21.587 --> 00:05:23.039
+to take tasks and do things.
+
+NOTE Confidence: 0.947465717792511
+
+00:05:23.680 --> 00:05:26.240
+And then on the right, we always think about efficiency.
+
+NOTE Confidence: 0.9122915267944336
+
+00:05:26.480 --> 00:05:29.649
+And so we think about pre training, post training and
+
+NOTE Confidence: 0.9122915267944336
+
+00:05:29.708 --> 00:05:32.279
+inference or runtime or test time thinking.
+
+NOTE Confidence: 0.8826948404312134
+
+00:05:32.800 --> 00:05:35.280
+And on the X axis we think about compute.
+
+NOTE Confidence: 0.9597564935684204
+
+00:05:35.480 --> 00:05:37.720
+And so we're constantly trying to move the curve to
+
+NOTE Confidence: 0.9597564935684204
+
+00:05:37.763 --> 00:05:40.267
+the left, meaning we want to improve the intelligence and
+
+NOTE Confidence: 0.9597564935684204
+
+00:05:40.311 --> 00:05:42.200
+reduce the amount of compute that it takes.
+
+NOTE Confidence: 0.9697421193122864
+
+00:05:42.400 --> 00:05:44.160
+So things are able to get done faster.
+
+NOTE Confidence: 0.9058776497840881
+
+00:05:46.680 --> 00:05:49.934
+In terms of NVIDIA Nemotron, to give a quick overview,
+
+NOTE Confidence: 0.9058776497840881
+
+00:05:49.994 --> 00:05:53.067
+we think of Nemotron as a family of models, meaning
+
+NOTE Confidence: 0.9058776497840881
+
+00:05:53.128 --> 00:05:55.839
+checkpoints as well as data as well as tools.
+
+NOTE Confidence: 0.8875182867050171
+
+00:05:56.480 --> 00:05:59.962
+And inside the Nemotron family, we have some key pillars
+
+NOTE Confidence: 0.8875182867050171
+
+00:06:00.024 --> 00:06:03.258
+and across kind of the center there reasoning is one
+
+NOTE Confidence: 0.8875182867050171
+
+00:06:03.321 --> 00:06:05.560
+of the more common and popular ones.
+
+NOTE Confidence: 0.9192124605178833
+
+00:06:05.960 --> 00:06:07.320
+We'll talk a bit about that today.
+
+NOTE Confidence: 0.9661912322044373
+
+00:06:07.600 --> 00:06:09.440
+We also have vision capabilities.
+
+NOTE Confidence: 0.8561410307884216
+
+00:06:09.720 --> 00:06:12.576
+We have information retrieval, meaning things like embedding and re
+
+NOTE Confidence: 0.8561410307884216
+
+00:06:12.618 --> 00:06:12.959
+ranking.
+
+NOTE Confidence: 0.959517776966095
+
+00:06:13.440 --> 00:06:16.247
+We also have content moderation under safety and we have
+
+NOTE Confidence: 0.959517776966095
+
+00:06:16.297 --> 00:06:17.200
+work under speech.
+
+NOTE Confidence: 0.9149773716926575
+
+00:06:17.400 --> 00:06:19.760
+So think about speech to text and text to speech.
+
+NOTE Confidence: 0.9106099009513855
+
+00:06:20.200 --> 00:06:22.411
+All of these are part of the family in terms
+
+NOTE Confidence: 0.9106099009513855
+
+00:06:22.462 --> 00:06:24.874
+of being open models with open data sets as well
+
+NOTE Confidence: 0.9106099009513855
+
+00:06:24.925 --> 00:06:27.539
+as the training techniques we use to create them and
+
+NOTE Confidence: 0.9106099009513855
+
+00:06:27.589 --> 00:06:29.600
+software to allow you to customize them.
+
+NOTE Confidence: 0.8891992568969727
+
+00:06:30.080 --> 00:06:32.874
+And across the bottom, you can see kind of those
+
+NOTE Confidence: 0.8891992568969727
+
+00:06:32.932 --> 00:06:35.611
+families of content that we publish to to be a
+
+NOTE Confidence: 0.8891992568969727
+
+00:06:35.669 --> 00:06:38.638
+bit more specific now in terms of the the reasoning
+
+NOTE Confidence: 0.8891992568969727
+
+00:06:38.696 --> 00:06:41.782
+side where we'll spend more time today and now moving
+
+NOTE Confidence: 0.8891992568969727
+
+00:06:41.840 --> 00:06:44.810
+into the agentic world, we have three main sizes of
+
+NOTE Confidence: 0.8891992568969727
+
+00:06:44.868 --> 00:06:45.800
+Nemotron models.
+
+NOTE Confidence: 0.9607608914375305
+
+00:06:46.080 --> 00:06:48.516
+And we think of these in terms of the GPU
+
+NOTE Confidence: 0.9607608914375305
+
+00:06:48.575 --> 00:06:51.962
+type of footprint or infrastructure that is needed to run
+
+NOTE Confidence: 0.9607608914375305
+
+00:06:52.022 --> 00:06:54.933
+them as well as the capabilities of the model and
+
+NOTE Confidence: 0.9607608914375305
+
+00:06:54.993 --> 00:06:56.360
+the size and the speed.
+
+NOTE Confidence: 0.8921839594841003
+
+00:06:57.000 --> 00:07:00.198
+And so nano is our smallest and that focuses on
+
+NOTE Confidence: 0.8921839594841003
+
+00:07:00.266 --> 00:07:02.240
+a very small data center GPU.
+
+NOTE Confidence: 0.8260917067527771
+
+00:07:02.440 --> 00:07:05.600
+It's a small mixture of experts, model A30B, active 3B.
+
+NOTE Confidence: 0.9630749225616455
+
+00:07:06.240 --> 00:07:08.640
+We then have super that we published in March.
+
+NOTE Confidence: 0.8825289011001587
+
+00:07:08.920 --> 00:07:11.314
+The Nano is from December and in March when we
+
+NOTE Confidence: 0.8825289011001587
+
+00:07:11.366 --> 00:07:12.200
+published super.
+
+NOTE Confidence: 0.8526978492736816
+
+00:07:12.440 --> 00:07:16.013
+Think of this as say one or two H 180
+
+NOTE Confidence: 0.8526978492736816
+
+00:07:16.110 --> 00:07:20.360
+gig type of data center GPUs and then ultra.
+
+NOTE Confidence: 0.9193891882896423
+
+00:07:20.360 --> 00:07:23.392
+Think of this as the largest open model we have
+
+NOTE Confidence: 0.9193891882896423
+
+00:07:23.457 --> 00:07:26.425
+and I'll talk more about it on the next slide,
+
+NOTE Confidence: 0.9193891882896423
+
+00:07:26.489 --> 00:07:29.200
+but this will be thinking about say 2B200.
+
+NOTE Confidence: 0.8766568899154663
+
+00:07:29.200 --> 00:07:31.782
+So in the data center side, also taking a few
+
+NOTE Confidence: 0.8766568899154663
+
+00:07:31.840 --> 00:07:35.111
+GPUs, but being able to provide the best capabilities and
+
+NOTE Confidence: 0.8766568899154663
+
+00:07:35.168 --> 00:07:37.120
+this will be available on Tuesday.
+
+NOTE Confidence: 0.8514236807823181
+
+00:07:37.960 --> 00:07:41.113
+And then repeating across the bottom, just emphasizing all of
+
+NOTE Confidence: 0.8514236807823181
+
+00:07:41.165 --> 00:07:44.009
+these models, we have open data sets which includes pre
+
+NOTE Confidence: 0.8514236807823181
+
+00:07:44.060 --> 00:07:47.318
+training data, post training data, also the RL environments and
+
+NOTE Confidence: 0.8514236807823181
+
+00:07:47.369 --> 00:07:49.799
+skills under Nemo Jim, as well as the research.
+
+NOTE Confidence: 0.945935070514679
+
+00:07:49.800 --> 00:07:51.400
+We continue to publish that as well too.
+
+NOTE Confidence: 0.928291380405426
+
+00:07:52.600 --> 00:07:55.614
+And then the announcement that we made on Sunday and
+
+NOTE Confidence: 0.928291380405426
+
+00:07:55.672 --> 00:07:57.990
+we want to be able to share more here is
+
+NOTE Confidence: 0.928291380405426
+
+00:07:58.048 --> 00:07:59.439
+around Nemotron 3 Ultra.
+
+NOTE Confidence: 0.8841971755027771
+
+00:07:59.680 --> 00:08:02.311
+And so this is our largest model we published to
+
+NOTE Confidence: 0.8841971755027771
+
+00:08:02.365 --> 00:08:02.639
+date.
+
+NOTE Confidence: 0.9513431191444397
+
+00:08:02.880 --> 00:08:04.760
+It's also our most capable model.
+
+NOTE Confidence: 0.8735860586166382
+
+00:08:05.160 --> 00:08:07.879
+And Nemotron 3 Ultra, you can think of this as
+
+NOTE Confidence: 0.8735860586166382
+
+00:08:07.938 --> 00:08:11.721
+I'll go into more detail, but essentially frontier reasoning and
+
+NOTE Confidence: 0.8735860586166382
+
+00:08:11.780 --> 00:08:15.800
+orchestration capabilities that's 550 billion and active 55 billion.
+
+NOTE Confidence: 0.9342524409294128
+
+00:08:16.520 --> 00:08:18.240
+And across the bottom, we have some of the highlights.
+
+NOTE Confidence: 0.9276648163795471
+
+00:08:18.560 --> 00:08:21.164
+So because we focus a bit on the inference and
+
+NOTE Confidence: 0.9276648163795471
+
+00:08:21.220 --> 00:08:24.787
+the runtime, you'll see great task completion times, meaning we
+
+NOTE Confidence: 0.9276648163795471
+
+00:08:24.844 --> 00:08:27.504
+focus a lot on the output generation as well as
+
+NOTE Confidence: 0.9276648163795471
+
+00:08:27.561 --> 00:08:30.335
+the ability to prefill quickly and be able to run
+
+NOTE Confidence: 0.9276648163795471
+
+00:08:30.392 --> 00:08:32.600
+through turns quickly on agentic tasks.
+
+NOTE Confidence: 0.9219624400138855
+
+00:08:32.960 --> 00:08:35.317
+We also focus a bit on making sure that these
+
+NOTE Confidence: 0.9219624400138855
+
+00:08:35.369 --> 00:08:37.884
+translate to lower costs so we can get more work
+
+NOTE Confidence: 0.9219624400138855
+
+00:08:37.936 --> 00:08:38.879
+done in less time.
+
+NOTE Confidence: 0.9417527914047241
+
+00:08:39.600 --> 00:08:42.833
+And we also spent time thinking about the agentic harnesses
+
+NOTE Confidence: 0.9417527914047241
+
+00:08:42.888 --> 00:08:45.737
+in the ecosystem, and we'll have a demo video coming
+
+NOTE Confidence: 0.9417527914047241
+
+00:08:45.792 --> 00:08:46.560
+up about that.
+
+NOTE Confidence: 0.8949545621871948
+
+00:08:47.080 --> 00:08:49.745
+But we spent time making sure that Nemotron Ultra runs
+
+NOTE Confidence: 0.8949545621871948
+
+00:08:49.794 --> 00:08:51.719
+well across the ecosystem of harnesses.
+
+NOTE Confidence: 0.9390519857406616
+
+00:08:52.440 --> 00:08:55.222
+And then the last piece to emphasize is everything is
+
+NOTE Confidence: 0.9390519857406616
+
+00:08:55.275 --> 00:08:55.800
+open here.
+
+NOTE Confidence: 0.9186674356460571
+
+00:08:55.800 --> 00:08:57.869
+So we publish as much as we can and we
+
+NOTE Confidence: 0.9186674356460571
+
+00:08:57.924 --> 00:08:58.359
+do that.
+
+NOTE Confidence: 0.9551714062690735
+
+00:08:58.360 --> 00:09:00.321
+So it allows people to be able to go look
+
+NOTE Confidence: 0.9551714062690735
+
+00:09:00.369 --> 00:09:03.145
+through it, gain confidence in it and build their business
+
+NOTE Confidence: 0.9551714062690735
+
+00:09:03.192 --> 00:09:03.479
+on it.
+
+NOTE Confidence: 0.9197929501533508
+
+00:09:05.440 --> 00:09:07.972
+Some of the breakthroughs in Nemotron 3 Ultra that we
+
+NOTE Confidence: 0.9197929501533508
+
+00:09:08.020 --> 00:09:08.880
+want to celebrate.
+
+NOTE Confidence: 0.9676241874694824
+
+00:09:09.120 --> 00:09:11.640
+The 1st is in terms of training techniques.
+
+NOTE Confidence: 0.947534441947937
+
+00:09:11.880 --> 00:09:15.531
+We've improved over the years from things like supervised fine
+
+NOTE Confidence: 0.947534441947937
+
+00:09:15.590 --> 00:09:18.122
+tuning and then say late last year a lot of
+
+NOTE Confidence: 0.947534441947937
+
+00:09:18.181 --> 00:09:20.359
+it was around reinforcement learning.
+
+NOTE Confidence: 0.8228800296783447
+
+00:09:20.679 --> 00:09:24.709
+And now we have multi teacher on olicy distillation, meaning
+
+NOTE Confidence: 0.8228800296783447
+
+00:09:24.776 --> 00:09:28.000
+we're able to use multiple large teacher models.
+
+NOTE Confidence: 0.9040674567222595
+
+00:09:28.240 --> 00:09:31.141
+You can think of them as we have various Ultra
+
+NOTE Confidence: 0.9040674567222595
+
+00:09:31.205 --> 00:09:34.548
+models that are trained on specific tasks and then we
+
+NOTE Confidence: 0.9040674567222595
+
+00:09:34.611 --> 00:09:38.712
+use these teachers and distill their knowledge down into Nemotron
+
+NOTE Confidence: 0.9040674567222595
+
+00:09:38.775 --> 00:09:39.280
+3 Ultra.
+
+NOTE Confidence: 0.9335401058197021
+
+00:09:39.559 --> 00:09:41.651
+And so we spent quite a bit of time making
+
+NOTE Confidence: 0.9335401058197021
+
+00:09:41.701 --> 00:09:44.391
+sure that that our Ultra model learns well from across
+
+NOTE Confidence: 0.9335401058197021
+
+00:09:44.441 --> 00:09:47.279
+all the teachers and gains those capabilities and skills.
+
+NOTE Confidence: 0.9163510203361511
+
+00:09:48.000 --> 00:09:50.502
+The second is that we have NBFP 4 as a
+
+NOTE Confidence: 0.9163510203361511
+
+00:09:50.568 --> 00:09:54.849
+precision format that's optimized to run on Blackwell that allows
+
+NOTE Confidence: 0.9163510203361511
+
+00:09:54.914 --> 00:09:58.339
+us to not only reduce the memory footprint, but also
+
+NOTE Confidence: 0.9163510203361511
+
+00:09:58.405 --> 00:09:59.919
+accelerate the compute.
+
+NOTE Confidence: 0.9516295790672302
+
+00:10:00.520 --> 00:10:03.737
+And one unique thing we've done in Ultra is rather
+
+NOTE Confidence: 0.9516295790672302
+
+00:10:03.801 --> 00:10:07.920
+than having separate checkpoints or files for different formats.
+
+NOTE Confidence: 0.8401598930358887
+
+00:10:08.080 --> 00:10:10.556
+So previously if we were on Hopper, we would do
+
+NOTE Confidence: 0.8401598930358887
+
+00:10:10.608 --> 00:10:12.399
+be float, we would do floating .8.
+
+NOTE Confidence: 0.7497578263282776
+
+00:10:12.679 --> 00:10:15.216
+And if we're on Ampere, we do be float 16
+
+NOTE Confidence: 0.7497578263282776
+
+00:10:15.278 --> 00:10:17.320
+and with Blackwell, we do NVFB 4.
+
+NOTE Confidence: 0.88834547996521
+
+00:10:17.600 --> 00:10:20.764
+With Ultra, we're now able to fit one checkpoint, meaning
+
+NOTE Confidence: 0.88834547996521
+
+00:10:20.819 --> 00:10:24.039
+one file, for example, can download from Hugging Face, and
+
+NOTE Confidence: 0.88834547996521
+
+00:10:24.095 --> 00:10:27.092
+that checkpoint runs both in NVFB 4 and Blackwell, but
+
+NOTE Confidence: 0.88834547996521
+
+00:10:27.148 --> 00:10:29.480
+also can fall back and run well on Hopper.
+
+NOTE Confidence: 0.9323938488960266
+
+00:10:29.960 --> 00:10:32.255
+In addition, making it much easier to select the right
+
+NOTE Confidence: 0.9323938488960266
+
+00:10:32.297 --> 00:10:34.040
+checkpoint because there's fewer options.
+
+NOTE Confidence: 0.8944381475448608
+
+00:10:35.080 --> 00:10:37.350
+Then the third piece I mentioned briefly on the previous
+
+NOTE Confidence: 0.8944381475448608
+
+00:10:37.391 --> 00:10:39.256
+slide is we spent quite a bit of time thinking
+
+NOTE Confidence: 0.8944381475448608
+
+00:10:39.297 --> 00:10:40.959
+through open harnesses and the ecosystem.
+
+NOTE Confidence: 0.8964383006095886
+
+00:10:41.280 --> 00:10:43.808
+And so these are things like Open Code and Hermes
+
+NOTE Confidence: 0.8964383006095886
+
+00:10:43.860 --> 00:10:46.749
+Agent, Open Claw and Pie, making sure that Nemotron runs
+
+NOTE Confidence: 0.8964383006095886
+
+00:10:46.801 --> 00:10:48.039
+well across all of them.
+
+NOTE Confidence: 0.8872581720352173
+
+00:10:48.679 --> 00:10:51.920
+And then the far right, there's some architecture and features
+
+NOTE Confidence: 0.8872581720352173
+
+00:10:51.972 --> 00:10:54.533
+that we've added in Nemotron 3 Ultra that we also
+
+NOTE Confidence: 0.8872581720352173
+
+00:10:54.585 --> 00:10:55.840
+had in Nemotron 3 Super.
+
+NOTE Confidence: 0.8866026401519775
+
+00:10:56.200 --> 00:10:59.039
+So there's a hybrid Moe architecture where we made sure
+
+NOTE Confidence: 0.8866026401519775
+
+00:10:59.091 --> 00:11:01.931
+that this was compute efficient in the data center also
+
+NOTE Confidence: 0.8866026401519775
+
+00:11:01.982 --> 00:11:03.479
+that it was memory efficient.
+
+NOTE Confidence: 0.9141862988471985
+
+00:11:03.480 --> 00:11:06.471
+In terms of long context, we have a latent Moe
+
+NOTE Confidence: 0.9141862988471985
+
+00:11:06.536 --> 00:11:10.244
+architecture allowing us to be able to reach more experts
+
+NOTE Confidence: 0.9141862988471985
+
+00:11:10.309 --> 00:11:11.480
+with less compute.
+
+NOTE Confidence: 0.8897735476493835
+
+00:11:11.920 --> 00:11:14.807
+We have multi token prediction which allows us that with
+
+NOTE Confidence: 0.8897735476493835
+
+00:11:14.858 --> 00:11:17.694
+one inference query we're able to we're able to predict
+
+NOTE Confidence: 0.8897735476493835
+
+00:11:17.746 --> 00:11:20.839
+multiple tokens instead of 1, which improves the throughput.
+
+NOTE Confidence: 0.9068921804428101
+
+00:11:21.400 --> 00:11:24.419
+And then the last piece is we have 1,000,000 context
+
+NOTE Confidence: 0.9068921804428101
+
+00:11:24.477 --> 00:11:27.321
+length, meaning that on the input side we can fit
+
+NOTE Confidence: 0.9068921804428101
+
+00:11:27.379 --> 00:11:30.166
+up to 1,000,000 tokens that the model can use to
+
+NOTE Confidence: 0.9068921804428101
+
+00:11:30.224 --> 00:11:33.359
+then run through agentic tasks and keep in its memory.
+
+NOTE Confidence: 0.8984512090682983
+
+00:11:35.679 --> 00:11:38.676
+To go through some details for Nemotron 3 Ultra, we
+
+NOTE Confidence: 0.8984512090682983
+
+00:11:38.735 --> 00:11:41.848
+think of it as it's smaller and smarter, bringing the
+
+NOTE Confidence: 0.8984512090682983
+
+00:11:41.907 --> 00:11:43.200
+frontier intelligence.
+
+NOTE Confidence: 0.9406558871269226
+
+00:11:43.440 --> 00:11:46.036
+And you can see some references to the right here,
+
+NOTE Confidence: 0.9406558871269226
+
+00:11:46.088 --> 00:11:48.840
+Nemotron 3 Ultra running down some tasks on the left.
+
+NOTE Confidence: 0.733069121837616
+
+00:11:49.080 --> 00:11:52.167
+So across the right, we have GLM 51, Kimi K26,
+
+NOTE Confidence: 0.733069121837616
+
+00:11:52.234 --> 00:11:53.040
+and Clen 35.
+
+NOTE Confidence: 0.9522256255149841
+
+00:11:53.240 --> 00:11:54.760
+These are amazing open models.
+
+NOTE Confidence: 0.942226767539978
+
+00:11:55.040 --> 00:11:57.989
+They've been great in the community, and we love seeing
+
+NOTE Confidence: 0.942226767539978
+
+00:11:58.043 --> 00:11:59.759
+the progress on the NVIDIA side.
+
+NOTE Confidence: 0.893706202507019
+
+00:11:59.760 --> 00:12:02.909
+For Nemotron, we looked at more agentic tasks this time
+
+NOTE Confidence: 0.893706202507019
+
+00:12:02.967 --> 00:12:04.799
+around than we have in the past.
+
+NOTE Confidence: 0.9468317031860352
+
+00:12:05.120 --> 00:12:07.543
+And so things like pinch bench where we look at
+
+NOTE Confidence: 0.9468317031860352
+
+00:12:07.595 --> 00:12:10.225
+the productivity of an agent, meaning is it able to
+
+NOTE Confidence: 0.9468317031860352
+
+00:12:10.277 --> 00:12:11.360
+call the right tools?
+
+NOTE Confidence: 0.9567311406135559
+
+00:12:11.520 --> 00:12:12.920
+Is it able to get the work done?
+
+NOTE Confidence: 0.9398455619812012
+
+00:12:12.920 --> 00:12:14.400
+Is it able to do that efficiently?
+
+NOTE Confidence: 0.9662235379219055
+
+00:12:14.840 --> 00:12:16.640
+And so you can see some great scores there.
+
+NOTE Confidence: 0.8467923402786255
+
+00:12:16.960 --> 00:12:19.815
+We also looked at long horizon planning and this was
+
+NOTE Confidence: 0.8467923402786255
+
+00:12:19.870 --> 00:12:22.341
+a, a data set or eval from service now called
+
+NOTE Confidence: 0.8467923402786255
+
+00:12:22.396 --> 00:12:23.439
+Enterprise OPS Gym.
+
+NOTE Confidence: 0.9578971266746521
+
+00:12:23.800 --> 00:12:26.666
+And this looks at being able to take a complex
+
+NOTE Confidence: 0.9578971266746521
+
+00:12:26.728 --> 00:12:27.040
+task.
+
+NOTE Confidence: 0.9069020748138428
+
+00:12:27.280 --> 00:12:29.880
+So say it's something like a password reset that might
+
+NOTE Confidence: 0.9069020748138428
+
+00:12:29.928 --> 00:12:32.818
+need to reach many systems, might need to record information
+
+NOTE Confidence: 0.9069020748138428
+
+00:12:32.866 --> 00:12:35.564
+and might need to send responses back and perhaps things
+
+NOTE Confidence: 0.9069020748138428
+
+00:12:35.612 --> 00:12:36.720
+don't work and iterate.
+
+NOTE Confidence: 0.9028605222702026
+
+00:12:37.040 --> 00:12:38.581
+And so we also looked at how to make sure
+
+NOTE Confidence: 0.9028605222702026
+
+00:12:38.618 --> 00:12:40.685
+that we're running well in, in that type of environment
+
+NOTE Confidence: 0.9028605222702026
+
+00:12:40.723 --> 00:12:41.399
+for an enterprise.
+
+NOTE Confidence: 0.862659752368927
+
+00:12:42.040 --> 00:12:44.279
+Then there's other things on here like coding, which has
+
+NOTE Confidence: 0.862659752368927
+
+00:12:44.319 --> 00:12:45.799
+become a lot more common and popular.
+
+NOTE Confidence: 0.8858082294464111
+
+00:12:45.800 --> 00:12:48.560
+And we're excited to see that things like instruction following.
+
+NOTE Confidence: 0.9301797151565552
+
+00:12:48.559 --> 00:12:50.731
+So make sure that when we give directions to the
+
+NOTE Confidence: 0.9301797151565552
+
+00:12:50.776 --> 00:12:52.360
+model, it adheres to them strictly.
+
+NOTE Confidence: 0.8905947208404541
+
+00:12:53.080 --> 00:12:55.760
+And then some more agentic tasks around knowledge work.
+
+NOTE Confidence: 0.8965713977813721
+
+00:12:55.960 --> 00:12:59.050
+So think of these like, say more common tasks in
+
+NOTE Confidence: 0.8965713977813721
+
+00:12:59.114 --> 00:13:04.071
+common industries like say manufacturing and healthcare and then professional
+
+NOTE Confidence: 0.8965713977813721
+
+00:13:04.135 --> 00:13:07.290
+work tasks, things like PhD level work as well as
+
+NOTE Confidence: 0.8965713977813721
+
+00:13:07.354 --> 00:13:08.320
+MBA level work.
+
+NOTE Confidence: 0.8531432747840881
+
+00:13:09.120 --> 00:13:10.751
+And then of course, at the bottom we have our
+
+NOTE Confidence: 0.8531432747840881
+
+00:13:10.788 --> 00:13:11.839
+our 1,000,000 context length.
+
+NOTE Confidence: 0.9072041511535645
+
+00:13:11.840 --> 00:13:16.520
+We're really excited to see the next slide.
+
+NOTE Confidence: 0.9100414514541626
+
+00:13:16.679 --> 00:13:20.378
+We think about both these tasks, tasks and accuracy on
+
+NOTE Confidence: 0.9100414514541626
+
+00:13:20.446 --> 00:13:21.200
+the Y axis.
+
+NOTE Confidence: 0.91009920835495
+
+00:13:21.480 --> 00:13:24.824
+And so this is from a third party called artificial
+
+NOTE Confidence: 0.91009920835495
+
+00:13:24.889 --> 00:13:25.480
+analysis.
+
+NOTE Confidence: 0.9229813814163208
+
+00:13:25.760 --> 00:13:28.221
+And they do a great job being able to measure
+
+NOTE Confidence: 0.9229813814163208
+
+00:13:28.276 --> 00:13:31.394
+the capabilities of models as well as their throughput or
+
+NOTE Confidence: 0.9229813814163208
+
+00:13:31.448 --> 00:13:32.160
+output speed.
+
+NOTE Confidence: 0.9235848188400269
+
+00:13:32.559 --> 00:13:34.772
+And so on the Y axis, you have an index,
+
+NOTE Confidence: 0.9235848188400269
+
+00:13:34.828 --> 00:13:37.760
+which is a combination of some of the previous tasks.
+
+NOTE Confidence: 0.9635812044143677
+
+00:13:38.120 --> 00:13:40.363
+And then you can see the scores from these models
+
+NOTE Confidence: 0.9635812044143677
+
+00:13:40.409 --> 00:13:41.599
+across the open ecosystem.
+
+NOTE Confidence: 0.8851068019866943
+
+00:13:42.160 --> 00:13:44.068
+And then on the X axis, you can see the
+
+NOTE Confidence: 0.8851068019866943
+
+00:13:44.117 --> 00:13:46.613
+speed or meaning the output, the speed at which the
+
+NOTE Confidence: 0.8851068019866943
+
+00:13:46.662 --> 00:13:49.697
+model is able to generate tokens, which essentially means it's
+
+NOTE Confidence: 0.8851068019866943
+
+00:13:49.746 --> 00:13:50.040
+speed.
+
+NOTE Confidence: 0.9358025193214417
+
+00:13:50.040 --> 00:13:51.640
+It's able to think and answer questions.
+
+NOTE Confidence: 0.952140212059021
+
+00:13:52.120 --> 00:13:53.995
+And so you can see in the upper right the
+
+NOTE Confidence: 0.952140212059021
+
+00:13:54.041 --> 00:13:56.466
+idea of being able to have both the frontier accuracy
+
+NOTE Confidence: 0.952140212059021
+
+00:13:56.512 --> 00:13:58.480
+as well as having the throughput and speed.
+
+NOTE Confidence: 0.8766568899154663
+
+00:13:59.120 --> 00:14:01.459
+And then for reference, we have NVIDIA and Emotron 3
+
+NOTE Confidence: 0.8766568899154663
+
+00:14:01.504 --> 00:14:02.359
+down there as well.
+
+NOTE Confidence: 0.7650108933448792
+
+00:14:02.360 --> 00:14:03.600
+That was our release in March.
+
+NOTE Confidence: 0.90114426612854
+
+00:14:05.120 --> 00:14:07.322
+And so what's exciting here is to see that with
+
+NOTE Confidence: 0.90114426612854
+
+00:14:07.368 --> 00:14:10.086
+that Frontier level accuracy, we're able to have 5X faster
+
+NOTE Confidence: 0.90114426612854
+
+00:14:10.133 --> 00:14:12.710
+inference speed and we expect that we'll likely be able
+
+NOTE Confidence: 0.90114426612854
+
+00:14:12.756 --> 00:14:14.912
+to push this further as well over the next few
+
+NOTE Confidence: 0.90114426612854
+
+00:14:14.958 --> 00:14:15.240
+weeks.
+
+NOTE Confidence: 0.8661527037620544
+
+00:14:17.559 --> 00:14:19.896
+The the last slide here on the Motron 3 Ultra,
+
+NOTE Confidence: 0.8661527037620544
+
+00:14:19.947 --> 00:14:22.639
+we wanted to think about things slightly differently.
+
+NOTE Confidence: 0.9670991897583008
+
+00:14:23.000 --> 00:14:25.017
+And so we have a new chart here that we
+
+NOTE Confidence: 0.9670991897583008
+
+00:14:25.069 --> 00:14:26.880
+haven't shared as much in the past.
+
+NOTE Confidence: 0.8225084543228149
+
+00:14:26.880 --> 00:14:29.880
+And our first time was our CE OS Keynote GTCA
+
+NOTE Confidence: 0.8225084543228149
+
+00:14:29.946 --> 00:14:30.880
+few days back.
+
+NOTE Confidence: 0.9190255403518677
+
+00:14:31.320 --> 00:14:33.639
+And so in the upper right or I guess upper
+
+NOTE Confidence: 0.9190255403518677
+
+00:14:33.694 --> 00:14:37.393
+left, we're thinking about the cost efficient frontier, meaning the
+
+NOTE Confidence: 0.9190255403518677
+
+00:14:37.448 --> 00:14:40.099
+target of where we'd like to see all models move
+
+NOTE Confidence: 0.9190255403518677
+
+00:14:40.154 --> 00:14:40.320
+to.
+
+NOTE Confidence: 0.9045559763908386
+
+00:14:40.680 --> 00:14:43.726
+And on the Y axis, it's accuracy, which specifically here
+
+NOTE Confidence: 0.9045559763908386
+
+00:14:43.779 --> 00:14:46.504
+means the ability of the model to complete a coding
+
+NOTE Confidence: 0.9045559763908386
+
+00:14:46.558 --> 00:14:47.360
+task correctly.
+
+NOTE Confidence: 0.8939433693885803
+
+00:14:48.120 --> 00:14:50.237
+And then on the X axis, we have the cost
+
+NOTE Confidence: 0.8939433693885803
+
+00:14:50.290 --> 00:14:52.989
+to complete the task, meaning the query goes in and
+
+NOTE Confidence: 0.8939433693885803
+
+00:14:53.042 --> 00:14:55.530
+the model does a lot of work, calls some tools,
+
+NOTE Confidence: 0.8939433693885803
+
+00:14:55.583 --> 00:14:58.494
+modifies files for some of these, might run a compiler,
+
+NOTE Confidence: 0.8939433693885803
+
+00:14:58.547 --> 00:15:01.406
+might edit some text files, might grep and search, and
+
+NOTE Confidence: 0.8939433693885803
+
+00:15:01.459 --> 00:15:04.000
+then comes back and delivers the correct answer.
+
+NOTE Confidence: 0.9648300409317017
+
+00:15:04.440 --> 00:15:06.431
+And at the end of that, we want to measure
+
+NOTE Confidence: 0.9648300409317017
+
+00:15:06.478 --> 00:15:08.659
+the amount of tokens and time it takes to then
+
+NOTE Confidence: 0.9648300409317017
+
+00:15:08.706 --> 00:15:09.559
+put a price on it.
+
+NOTE Confidence: 0.8261705040931702
+
+00:15:10.040 --> 00:15:12.227
+And so we use prices from COR Weave and deep
+
+NOTE Confidence: 0.8261705040931702
+
+00:15:12.277 --> 00:15:15.359
+infra and pick the lowest price across these different models.
+
+NOTE Confidence: 0.9064072966575623
+
+00:15:15.640 --> 00:15:18.187
+And we essentially priced out how long it took and
+
+NOTE Confidence: 0.9064072966575623
+
+00:15:18.238 --> 00:15:20.479
+how much it costs for each task to complete.
+
+NOTE Confidence: 0.928892195224762
+
+00:15:21.120 --> 00:15:23.543
+And so then on the Pareto curve, what you can
+
+NOTE Confidence: 0.928892195224762
+
+00:15:23.597 --> 00:15:26.452
+see here is that at different cost footprints, so say
+
+NOTE Confidence: 0.928892195224762
+
+00:15:26.505 --> 00:15:29.037
+if you had a smaller budget or a larger budget,
+
+NOTE Confidence: 0.928892195224762
+
+00:15:29.091 --> 00:15:31.730
+you can then trade off and select the accuracy or
+
+NOTE Confidence: 0.928892195224762
+
+00:15:31.784 --> 00:15:33.400
+the capabilities of the model.
+
+NOTE Confidence: 0.8916221857070923
+
+00:15:33.960 --> 00:15:36.029
+And what we're excited to see here is, is with
+
+NOTE Confidence: 0.8916221857070923
+
+00:15:36.074 --> 00:15:38.279
+Nemotron 3 Ultra, we're moving to the upper left.
+
+NOTE Confidence: 0.8754566311836243
+
+00:15:38.480 --> 00:15:40.189
+And we would expect to see over time, all of
+
+NOTE Confidence: 0.8754566311836243
+
+00:15:40.228 --> 00:15:42.053
+these models start to move more and more to the
+
+NOTE Confidence: 0.8754566311836243
+
+00:15:42.092 --> 00:15:42.520
+upper left.
+
+NOTE Confidence: 0.8807417154312134
+
+00:15:46.280 --> 00:15:49.073
+And I think going forward, we have a demo that
+
+NOTE Confidence: 0.8807417154312134
+
+00:15:49.133 --> 00:15:51.805
+we can show here and in, in all the contexts
+
+NOTE Confidence: 0.8807417154312134
+
+00:15:51.866 --> 00:15:54.720
+of everything we shared about Nemotron 3 Ultra.
+
+NOTE Confidence: 0.8868197798728943
+
+00:15:54.920 --> 00:15:57.171
+What we wanted to show is, is not just the
+
+NOTE Confidence: 0.8868197798728943
+
+00:15:57.225 --> 00:16:00.656
+models capabilities, but show it actually running inside an open
+
+NOTE Confidence: 0.8868197798728943
+
+00:16:00.710 --> 00:16:03.444
+harness as think of it as essentially the brains or
+
+NOTE Confidence: 0.8868197798728943
+
+00:16:03.498 --> 00:16:05.803
+a backbone to an agent and being able to do
+
+NOTE Confidence: 0.8868197798728943
+
+00:16:05.857 --> 00:16:07.679
+some work and get some tasks done.
+
+NOTE Confidence: 0.9187836050987244
+
+00:16:08.240 --> 00:16:10.342
+And so I'll, I'll play the demo here and it'll
+
+NOTE Confidence: 0.9187836050987244
+
+00:16:10.388 --> 00:16:12.902
+walk through a business scenario and show being able to
+
+NOTE Confidence: 0.9187836050987244
+
+00:16:12.948 --> 00:16:16.148
+complete some business outcomes and Nemotron running in the background
+
+NOTE Confidence: 0.9187836050987244
+
+00:16:16.194 --> 00:16:17.200
+to make that possible.
+
+NOTE Confidence: 0.7407872080802917
+
+00:16:20.480 --> 00:16:22.788
+4 senior leads are working on the launch with a
+
+NOTE Confidence: 0.7407872080802917
+
+00:16:22.837 --> 00:16:23.279
+two week.
+
+NOTE Confidence: 0.7784515619277954
+
+00:16:23.280 --> 00:16:24.440
+Are you guys able to hear the audio?
+
+NOTE Confidence: 0.8611404895782471
+
+00:16:24.960 --> 00:16:28.000
+Every senior lead works alongside Hermes.
+
+NOTE Confidence: 0.5172784328460693
+
+00:16:28.000 --> 00:16:28.880
+Agent on.
+
+NOTE Confidence: 0.7744406461715698
+
+00:16:29.040 --> 00:16:33.623
+Neotron 3 Ultra bringing reasoning, writing and judgement to every
+
+NOTE Confidence: 0.7744406461715698
+
+00:16:33.692 --> 00:16:34.040
+task.
+
+NOTE Confidence: 0.9491255283355713
+
+00:16:34.760 --> 00:16:37.815
+When one of them corrects Hermes, the correction is saved
+
+NOTE Confidence: 0.9491255283355713
+
+00:16:37.869 --> 00:16:39.959
+as a reusable skill the team can apply.
+
+NOTE Confidence: 0.8573968410491943
+
+00:16:40.520 --> 00:16:42.280
+Maybe I'll pause it real quick and give the intro.
+
+NOTE Confidence: 0.9332320094108582
+
+00:16:42.280 --> 00:16:44.883
+So the intro here is that we're taking a look
+
+NOTE Confidence: 0.9332320094108582
+
+00:16:44.940 --> 00:16:46.040
+at a small company.
+
+NOTE Confidence: 0.937688410282135
+
+00:16:46.440 --> 00:16:48.582
+They want to do a product launch and there's four
+
+NOTE Confidence: 0.937688410282135
+
+00:16:48.626 --> 00:16:51.600
+different people working in four different functions at the company.
+
+NOTE Confidence: 0.9310422539710999
+
+00:16:51.920 --> 00:16:53.830
+They have a two week window to get all the
+
+NOTE Confidence: 0.9310422539710999
+
+00:16:53.875 --> 00:16:55.239
+content ready for that launch.
+
+NOTE Confidence: 0.9049804210662842
+
+00:16:55.680 --> 00:16:58.128
+And then you'll see that inside each of these boxes
+
+NOTE Confidence: 0.9049804210662842
+
+00:16:58.176 --> 00:17:00.720
+represent workflows that those people are working on.
+
+NOTE Confidence: 0.8514156341552734
+
+00:17:01.320 --> 00:17:02.720
+And so I'll go ahead and continue now.
+
+NOTE Confidence: 0.9146341681480408
+
+00:17:06.240 --> 00:17:10.175
+The Hermes Curator runs on Mimotron 3 super processing skills,
+
+NOTE Confidence: 0.9146341681480408
+
+00:17:10.239 --> 00:17:15.445
+continuously merging, deduping, rewriting, testing and promoting only what's ready
+
+NOTE Confidence: 0.9146341681480408
+
+00:17:15.508 --> 00:17:16.079
+to share.
+
+NOTE Confidence: 0.9140026569366455
+
+00:17:16.800 --> 00:17:20.320
+Anything shared goes through enterprise review and approval.
+
+NOTE Confidence: 0.920739471912384
+
+00:17:20.760 --> 00:17:23.690
+The method is what gets shared, while the launch data
+
+NOTE Confidence: 0.920739471912384
+
+00:17:23.745 --> 00:17:24.519
+stays private.
+
+NOTE Confidence: 0.9279271960258484
+
+00:17:25.240 --> 00:17:29.639
+Once approved, the skill joins Hermes Collective Wisdom, the company's
+
+NOTE Confidence: 0.9279271960258484
+
+00:17:29.702 --> 00:17:31.840
+growing library of proven methods.
+
+NOTE Confidence: 0.9418976306915283
+
+00:17:32.720 --> 00:17:35.762
+Months later, the team is moving faster, not from their
+
+NOTE Confidence: 0.9418976306915283
+
+00:17:35.817 --> 00:17:37.920
+own work alone, but from each other's.
+
+NOTE Confidence: 0.9485067129135132
+
+00:17:38.280 --> 00:17:41.173
+Every method captured by 1 lifts the rest of the
+
+NOTE Confidence: 0.9485067129135132
+
+00:17:41.233 --> 00:17:42.680
+team across the company.
+
+NOTE Confidence: 0.8193938136100769
+
+00:17:42.880 --> 00:17:45.600
+Every colleague's improvement makes everyone's work better.
+
+NOTE Confidence: 0.8589237332344055
+
+00:17:45.880 --> 00:17:47.240
+That's the power of Hermes.
+
+NOTE Confidence: 0.7239763140678406
+
+00:17:47.480 --> 00:17:50.840
+From News Research on NVIDIA Nematron 3 Ultra.
+
+NOTE Confidence: 0.8152616024017334
+
+00:17:52.640 --> 00:17:53.040
+Perfect.
+
+NOTE Confidence: 0.9193099141120911
+
+00:17:53.359 --> 00:17:55.497
+I'll go ahead and wrap up here and leave some
+
+NOTE Confidence: 0.9193099141120911
+
+00:17:55.544 --> 00:17:57.777
+thoughts with you and then I'll hand it over to
+
+NOTE Confidence: 0.9193099141120911
+
+00:17:57.824 --> 00:17:58.679
+my colleague here.
+
+NOTE Confidence: 0.9504532217979431
+
+00:17:58.960 --> 00:18:01.646
+So I think what's exciting about the demo, and it
+
+NOTE Confidence: 0.9504532217979431
+
+00:18:01.701 --> 00:18:04.716
+might not seem yet because we're just beginning in this
+
+NOTE Confidence: 0.9504532217979431
+
+00:18:04.771 --> 00:18:08.169
+journey, but the idea that individual people can create skills
+
+NOTE Confidence: 0.9504532217979431
+
+00:18:08.224 --> 00:18:11.239
+essentially ways for the agents to get their work done.
+
+NOTE Confidence: 0.9263110160827637
+
+00:18:11.440 --> 00:18:14.174
+What's exciting is that as these people finish those skills,
+
+NOTE Confidence: 0.9263110160827637
+
+00:18:14.219 --> 00:18:16.589
+the agents can now think about these skills and look
+
+NOTE Confidence: 0.9263110160827637
+
+00:18:16.634 --> 00:18:18.640
+at ways to generalize them across a company.
+
+NOTE Confidence: 0.959622323513031
+
+00:18:19.000 --> 00:18:21.289
+And then you can imagine that as these skills get
+
+NOTE Confidence: 0.959622323513031
+
+00:18:21.336 --> 00:18:23.812
+generalized, more people are able to pick them up and
+
+NOTE Confidence: 0.959622323513031
+
+00:18:23.859 --> 00:18:24.280
+use them.
+
+NOTE Confidence: 0.919140636920929
+
+00:18:24.560 --> 00:18:27.470
+And you can imagine these skills representing things like experts
+
+NOTE Confidence: 0.919140636920929
+
+00:18:27.514 --> 00:18:29.440
+or subject matter experts across a company.
+
+NOTE Confidence: 0.9543406367301941
+
+00:18:29.800 --> 00:18:32.026
+And you can imagine them becoming so great that people
+
+NOTE Confidence: 0.9543406367301941
+
+00:18:32.067 --> 00:18:34.417
+are excited to work with these different agents or skills
+
+NOTE Confidence: 0.9543406367301941
+
+00:18:34.459 --> 00:18:35.160
+inside a company.
+
+NOTE Confidence: 0.9528106451034546
+
+00:18:35.760 --> 00:18:37.699
+You can even think forward to the future of a
+
+NOTE Confidence: 0.9528106451034546
+
+00:18:37.742 --> 00:18:40.242
+world where a company builds these great skills or digital
+
+NOTE Confidence: 0.9528106451034546
+
+00:18:40.285 --> 00:18:41.880
+employees to help get your work done.
+
+NOTE Confidence: 0.918537974357605
+
+00:18:42.200 --> 00:18:44.627
+That maybe when you look at potential job offers, you
+
+NOTE Confidence: 0.918537974357605
+
+00:18:44.673 --> 00:18:47.101
+might ask what type of agents or skills are available
+
+NOTE Confidence: 0.918537974357605
+
+00:18:47.147 --> 00:18:47.879
+at that company.
+
+NOTE Confidence: 0.9280295372009277
+
+00:18:48.119 --> 00:18:50.138
+Because the better the agents and the better the skills,
+
+NOTE Confidence: 0.9280295372009277
+
+00:18:50.174 --> 00:18:51.760
+the easier it will be to get your work done.
+
+NOTE Confidence: 0.8796654939651489
+
+00:18:52.040 --> 00:18:53.484
+So I think we're just at the beginning of this
+
+NOTE Confidence: 0.8796654939651489
+
+00:18:53.515 --> 00:18:54.520
+journey and we're super excited.
+
+NOTE Confidence: 0.9614287614822388
+
+00:18:54.760 --> 00:18:56.971
+And Hermes agent, they have some great work happening there
+
+NOTE Confidence: 0.9614287614822388
+
+00:18:57.008 --> 00:18:58.920
+in terms of being able to orchestrate these skills.
+
+NOTE Confidence: 0.9537613391876221
+
+00:18:59.440 --> 00:19:01.400
+So with that, I'll hand over to my colleague.
+
+NOTE Confidence: 0.48321831226348877
+
+00:19:01.400 --> 00:19:03.320
+Let's see.
+
+NOTE Confidence: 0.8045755624771118
+
+00:19:06.680 --> 00:19:07.240
+Thank you, Joey.
+
+NOTE Confidence: 0.67203289270401
+
+00:19:07.280 --> 00:19:07.560
+Thanks.
+
+NOTE Confidence: 0.7471506595611572
+
+00:19:09.840 --> 00:19:10.280
+All right.
+
+NOTE Confidence: 0.9745734930038452
+
+00:19:10.280 --> 00:19:11.080
+Can you hear me well?
+
+NOTE Confidence: 0.9700259566307068
+
+00:19:13.400 --> 00:19:13.840
+Awesome.
+
+NOTE Confidence: 0.9517910480499268
+
+00:19:13.840 --> 00:19:14.520
+Hi, everyone.
+
+NOTE Confidence: 0.7855339050292969
+
+00:19:14.520 --> 00:19:16.040
+My name is Steven McCullough.
+
+NOTE Confidence: 0.8538538217544556
+
+00:19:16.080 --> 00:19:18.520
+I'm an AI solutions architect with NVIDIA.
+
+NOTE Confidence: 0.927799642086029
+
+00:19:18.960 --> 00:19:21.871
+And essentially that means I work with Microsoft every day
+
+NOTE Confidence: 0.927799642086029
+
+00:19:21.921 --> 00:19:24.933
+to help integrate our hardware and our software together and
+
+NOTE Confidence: 0.927799642086029
+
+00:19:24.983 --> 00:19:26.639
+make it better for our customers.
+
+NOTE Confidence: 0.9433364272117615
+
+00:19:27.720 --> 00:19:31.167
+So we've talked a lot about the intelligence and the
+
+NOTE Confidence: 0.9433364272117615
+
+00:19:31.233 --> 00:19:34.813
+agentic environment and how we can bring our agents to
+
+NOTE Confidence: 0.9433364272117615
+
+00:19:34.879 --> 00:19:38.061
+the real world, and I wanted to show you exactly
+
+NOTE Confidence: 0.9433364272117615
+
+00:19:38.127 --> 00:19:39.519
+what that looks like.
+
+NOTE Confidence: 0.9494372606277466
+
+00:19:40.240 --> 00:19:43.993
+Now, we've worked a lot with Microsoft to think about
+
+NOTE Confidence: 0.9494372606277466
+
+00:19:44.064 --> 00:19:47.888
+how these agents can be best used and best implemented
+
+NOTE Confidence: 0.9494372606277466
+
+00:19:47.958 --> 00:19:49.800
+into real world scenarios.
+
+NOTE Confidence: 0.8906848430633545
+
+00:19:50.119 --> 00:19:54.243
+And a big part of this answer is Microsoft Foundry
+
+NOTE Confidence: 0.8906848430633545
+
+00:19:54.325 --> 00:19:55.479
+hosted agents.
+
+NOTE Confidence: 0.9268114566802979
+
+00:19:56.440 --> 00:19:59.360
+So I have some of the key features highlighted here.
+
+NOTE Confidence: 0.9489741325378418
+
+00:19:59.960 --> 00:20:02.600
+One of the most important is that you're able to
+
+NOTE Confidence: 0.9489741325378418
+
+00:20:02.655 --> 00:20:06.230
+bring your own container, your own harness, your own environment,
+
+NOTE Confidence: 0.9489741325378418
+
+00:20:06.285 --> 00:20:08.320
+deploy it into Foundry hosted agents.
+
+NOTE Confidence: 0.9624261856079102
+
+00:20:08.600 --> 00:20:11.772
+You can give it access to resources just like you
+
+NOTE Confidence: 0.9624261856079102
+
+00:20:11.837 --> 00:20:15.593
+would with a regular colleague because it's given an agent
+
+NOTE Confidence: 0.9624261856079102
+
+00:20:15.657 --> 00:20:18.960
+identity that's recognized across your environment.
+
+NOTE Confidence: 0.9390784502029419
+
+00:20:19.960 --> 00:20:24.800
+You can implement it with a isolated session.
+
+NOTE Confidence: 0.9398429989814758
+
+00:20:25.119 --> 00:20:28.537
+So any code that it writes, any documents that it
+
+NOTE Confidence: 0.9398429989814758
+
+00:20:28.607 --> 00:20:32.653
+produces can be isolated to just a single session, helping
+
+NOTE Confidence: 0.9398429989814758
+
+00:20:32.723 --> 00:20:36.908
+improve security and ensuring that any work done is isolated
+
+NOTE Confidence: 0.9398429989814758
+
+00:20:36.978 --> 00:20:39.280
+to a certain user or environment.
+
+NOTE Confidence: 0.9047440886497498
+
+00:20:40.359 --> 00:20:43.555
+And lastly, the life cycle and compliance of hosted agents
+
+NOTE Confidence: 0.9047440886497498
+
+00:20:43.610 --> 00:20:47.521
+helps you ensure that you're meeting your auditing requirements, you're
+
+NOTE Confidence: 0.9047440886497498
+
+00:20:47.576 --> 00:20:51.102
+meeting your versioning requirements, and you can make sure that
+
+NOTE Confidence: 0.9047440886497498
+
+00:20:51.157 --> 00:20:54.572
+whatever agents you deploy in your environment can be utilized
+
+NOTE Confidence: 0.9047440886497498
+
+00:20:54.628 --> 00:20:55.840
+to their best ability.
+
+NOTE Confidence: 0.9648230075836182
+
+00:20:57.359 --> 00:21:00.806
+So in a real deployment, this is about what it
+
+NOTE Confidence: 0.9648230075836182
+
+00:21:00.881 --> 00:21:02.079
+might look like.
+
+NOTE Confidence: 0.8545370697975159
+
+00:21:02.360 --> 00:21:06.000
+We have Hermes agent running in Foundry hosted agents.
+
+NOTE Confidence: 0.7713064551353455
+
+00:21:06.480 --> 00:21:10.400
+We have our Nemotron Super and our Nemotron Nano models
+
+NOTE Confidence: 0.7713064551353455
+
+00:21:10.472 --> 00:21:13.679
+running in Foundry managed compute endpoints.
+
+NOTE Confidence: 0.9517970085144043
+
+00:21:14.400 --> 00:21:17.654
+And we are using intra ID to give this agent
+
+NOTE Confidence: 0.9517970085144043
+
+00:21:17.728 --> 00:21:19.800
+access to our external data.
+
+NOTE Confidence: 0.9459964036941528
+
+00:21:20.200 --> 00:21:24.632
+So anything from GitHub to teams to our emails can
+
+NOTE Confidence: 0.9459964036941528
+
+00:21:24.721 --> 00:21:28.800
+all be granted through intra ID to our agents.
+
+NOTE Confidence: 0.9531714916229248
+
+00:21:29.080 --> 00:21:31.400
+And this is a massive helper.
+
+NOTE Confidence: 0.9339311718940735
+
+00:21:31.600 --> 00:21:33.463
+And I'm going to show you what this looks like
+
+NOTE Confidence: 0.9339311718940735
+
+00:21:33.504 --> 00:21:34.759
+in a scenario in just a second.
+
+NOTE Confidence: 0.9658774733543396
+
+00:21:35.080 --> 00:21:37.879
+But being able to tell your agent, hey, check my
+
+NOTE Confidence: 0.9658774733543396
+
+00:21:37.937 --> 00:21:39.920
+e-mail and take care of this task.
+
+NOTE Confidence: 0.9180696606636047
+
+00:21:40.160 --> 00:21:42.878
+Look through my teams at what my boss said yesterday
+
+NOTE Confidence: 0.9180696606636047
+
+00:21:42.930 --> 00:21:45.230
+and, and you know, go ahead and take care of
+
+NOTE Confidence: 0.9180696606636047
+
+00:21:45.283 --> 00:21:45.439
+it.
+
+NOTE Confidence: 0.9417957663536072
+
+00:21:46.520 --> 00:21:49.835
+Being able to do that through Foundry hosted agents is
+
+NOTE Confidence: 0.9417957663536072
+
+00:21:49.897 --> 00:21:53.028
+just such a big improvement and how we can leverage
+
+NOTE Confidence: 0.9417957663536072
+
+00:21:53.089 --> 00:21:56.160
+agents and how we can work a lot more efficiently.
+
+NOTE Confidence: 0.9363952279090881
+
+00:21:57.400 --> 00:22:01.934
+So without further ado, I'll show exactly what this looks
+
+NOTE Confidence: 0.9363952279090881
+
+00:22:02.013 --> 00:22:04.400
+like in a real world scenario.
+
+NOTE Confidence: 0.8858480453491211
+
+00:22:07.400 --> 00:22:11.643
+So here I have a Foundry hosted agent deployment running
+
+NOTE Confidence: 0.8858480453491211
+
+00:22:11.719 --> 00:22:16.190
+in running Hermes Agent that's powered by Nemotron 3 Super,
+
+NOTE Confidence: 0.8858480453491211
+
+00:22:16.266 --> 00:22:19.903
+and I just started a new session here in Foundry
+
+NOTE Confidence: 0.8858480453491211
+
+00:22:19.979 --> 00:22:21.040
+Agent service.
+
+NOTE Confidence: 0.9717089533805847
+
+00:22:21.040 --> 00:22:23.471
+So the first thing I'm going to do is just
+
+NOTE Confidence: 0.9717089533805847
+
+00:22:23.529 --> 00:22:25.440
+go ahead and ask it about itself.
+
+NOTE Confidence: 0.9478623270988464
+
+00:22:25.440 --> 00:22:26.560
+What agent is it running?
+
+NOTE Confidence: 0.9603716731071472
+
+00:22:26.560 --> 00:22:27.640
+What model is it running?
+
+NOTE Confidence: 0.9563226699829102
+
+00:22:28.680 --> 00:22:31.060
+And you'll see that in just a few seconds it
+
+NOTE Confidence: 0.9563226699829102
+
+00:22:31.114 --> 00:22:33.494
+spins up my new agent session and we get our
+
+NOTE Confidence: 0.9563226699829102
+
+00:22:33.548 --> 00:22:34.359
+first response.
+
+NOTE Confidence: 0.8145239949226379
+
+00:22:35.200 --> 00:22:37.717
+It tells me it's running in Nematron 3 Super and
+
+NOTE Confidence: 0.8145239949226379
+
+00:22:37.769 --> 00:22:39.920
+that it's using the Hermes Agent harness.
+
+NOTE Confidence: 0.935662567615509
+
+00:22:40.240 --> 00:22:40.680
+Perfect.
+
+NOTE Confidence: 0.9315342307090759
+
+00:22:41.560 --> 00:22:44.958
+All right, so let's see how this agent performs with
+
+NOTE Confidence: 0.9315342307090759
+
+00:22:45.023 --> 00:22:46.199
+a real world task.
+
+NOTE Confidence: 0.8567920327186584
+
+00:22:46.840 --> 00:22:49.882
+Now my colleague Alex, he sent me an e-mail this
+
+NOTE Confidence: 0.8567920327186584
+
+00:22:49.945 --> 00:22:53.368
+morning about a new feature request in LLM Perf Bench,
+
+NOTE Confidence: 0.8567920327186584
+
+00:22:53.431 --> 00:22:55.839
+one of our internal LLM testing repos.
+
+NOTE Confidence: 0.8669578433036804
+
+00:22:56.840 --> 00:22:59.235
+Specifically, we need to add some support for the chat
+
+NOTE Confidence: 0.8669578433036804
+
+00:22:59.279 --> 00:23:01.319
+completions endpoint to our benchmarking tool.
+
+NOTE Confidence: 0.9681480526924133
+
+00:23:01.880 --> 00:23:05.445
+And this is pretty complex, but I believe in my
+
+NOTE Confidence: 0.9681480526924133
+
+00:23:05.521 --> 00:23:06.280
+new agent.
+
+NOTE Confidence: 0.9616557359695435
+
+00:23:06.520 --> 00:23:09.482
+So I'm going to go ahead and delegate the task
+
+NOTE Confidence: 0.9616557359695435
+
+00:23:09.547 --> 00:23:10.320
+to my agent.
+
+NOTE Confidence: 0.9124391674995422
+
+00:23:11.440 --> 00:23:15.444
+Because my hosted Hermes agent is connected to my Outlook
+
+NOTE Confidence: 0.9124391674995422
+
+00:23:15.514 --> 00:23:19.167
+and my GitHub through Foundry, it's able to find the
+
+NOTE Confidence: 0.9124391674995422
+
+00:23:19.237 --> 00:23:23.101
+relevant e-mail, make the code changes and open APR all
+
+NOTE Confidence: 0.9124391674995422
+
+00:23:23.171 --> 00:23:25.560
+by itself without my intervention.
+
+NOTE Confidence: 0.8843980431556702
+
+00:23:26.920 --> 00:23:29.625
+And a key thing to notice here is that I'm
+
+NOTE Confidence: 0.8843980431556702
+
+00:23:29.690 --> 00:23:33.040
+not pasting in the e-mail directly into the context.
+
+NOTE Confidence: 0.8689893484115601
+
+00:23:33.320 --> 00:23:35.378
+I'm not including it in my prompt or as a
+
+NOTE Confidence: 0.8689893484115601
+
+00:23:35.428 --> 00:23:35.679
+file.
+
+NOTE Confidence: 0.8233785629272461
+
+00:23:35.680 --> 00:23:37.120
+Anything like that I'm giving.
+
+NOTE Confidence: 0.9569186568260193
+
+00:23:37.160 --> 00:23:39.613
+I'm talking to this agent in the same way that
+
+NOTE Confidence: 0.9569186568260193
+
+00:23:39.666 --> 00:23:41.159
+I might talk to a colleague.
+
+NOTE Confidence: 0.9058746099472046
+
+00:23:42.240 --> 00:23:46.079
+I'm telling it that my manager sent me an e-mail
+
+NOTE Confidence: 0.9058746099472046
+
+00:23:46.159 --> 00:23:49.279
+and I want it to go find the e-mail and
+
+NOTE Confidence: 0.9058746099472046
+
+00:23:49.359 --> 00:23:50.639
+to do its thing.
+
+NOTE Confidence: 0.9537227153778076
+
+00:23:52.000 --> 00:23:55.526
+So because it has access to Outlook and GitHub, it's
+
+NOTE Confidence: 0.9537227153778076
+
+00:23:55.594 --> 00:23:58.511
+going to go ahead and create this PR on our
+
+NOTE Confidence: 0.9537227153778076
+
+00:23:58.579 --> 00:24:01.360
+behalf so we can go work on other things.
+
+NOTE Confidence: 0.886415421962738
+
+00:24:02.640 --> 00:24:05.504
+Now, while the agent is working on this PR, let's
+
+NOTE Confidence: 0.886415421962738
+
+00:24:05.563 --> 00:24:08.252
+take a look at exactly what our agent is doing
+
+NOTE Confidence: 0.886415421962738
+
+00:24:08.310 --> 00:24:10.240
+to pull in the context like this.
+
+NOTE Confidence: 0.9359793066978455
+
+00:24:11.560 --> 00:24:15.235
+So my hosted Hermes agent has access to several different
+
+NOTE Confidence: 0.9359793066978455
+
+00:24:15.299 --> 00:24:15.879
+services.
+
+NOTE Confidence: 0.8864856362342834
+
+00:24:16.640 --> 00:24:20.284
+And this workflow in particular, of course, it's using Outlook
+
+NOTE Confidence: 0.8864856362342834
+
+00:24:20.342 --> 00:24:23.516
+for e-mail, it's using GitHub, and it's using a coding
+
+NOTE Confidence: 0.8864856362342834
+
+00:24:23.575 --> 00:24:25.279
+sandbox for its code testing.
+
+NOTE Confidence: 0.9280048608779907
+
+00:24:26.160 --> 00:24:30.481
+And instead of wiring up each service, each authentication flow,
+
+NOTE Confidence: 0.9280048608779907
+
+00:24:30.549 --> 00:24:34.871
+each MCP endpoint, and each permission model separately for each
+
+NOTE Confidence: 0.9280048608779907
+
+00:24:34.938 --> 00:24:38.990
+individual server and each service, I can simply connect all
+
+NOTE Confidence: 0.9280048608779907
+
+00:24:39.057 --> 00:24:42.772
+of these services to the agent through a single Foundry
+
+NOTE Confidence: 0.9280048608779907
+
+00:24:42.839 --> 00:24:43.920
+managed toolbox.
+
+NOTE Confidence: 0.8960976004600525
+
+00:24:44.800 --> 00:24:48.146
+And I can control all of those capabilities through the
+
+NOTE Confidence: 0.8960976004600525
+
+00:24:48.207 --> 00:24:49.120
+single toolbox.
+
+NOTE Confidence: 0.9096761345863342
+
+00:24:49.680 --> 00:24:53.150
+And this makes it very easy to grant your agent
+
+NOTE Confidence: 0.9096761345863342
+
+00:24:53.224 --> 00:24:57.507
+access to all sorts of different tools across your company
+
+NOTE Confidence: 0.9096761345863342
+
+00:24:57.581 --> 00:24:59.280
+and built into Foundry.
+
+NOTE Confidence: 0.8992803692817688
+
+00:24:59.800 --> 00:25:02.186
+So if we look in the Foundry catalog, all of
+
+NOTE Confidence: 0.8992803692817688
+
+00:25:02.241 --> 00:25:03.759
+these services are built in.
+
+NOTE Confidence: 0.8798151612281799
+
+00:25:03.760 --> 00:25:07.546
+So we have Mongo DB, we have access to Teams,
+
+NOTE Confidence: 0.8798151612281799
+
+00:25:07.630 --> 00:25:11.417
+we have access to Cosmos DB, all sorts of MCP
+
+NOTE Confidence: 0.8798151612281799
+
+00:25:11.501 --> 00:25:15.120
+servers are built into the Foundry toolbox.
+
+NOTE Confidence: 0.9671326279640198
+
+00:25:15.320 --> 00:25:17.520
+So we can get up and running very, very quickly.
+
+NOTE Confidence: 0.8731764554977417
+
+00:25:17.920 --> 00:25:20.752
+And on top of that, if you want to bring
+
+NOTE Confidence: 0.8731764554977417
+
+00:25:20.823 --> 00:25:24.221
+your own MCP tool, your own agent into into your
+
+NOTE Confidence: 0.8731764554977417
+
+00:25:24.292 --> 00:25:28.682
+hosted agents environment, you can easily do that through this
+
+NOTE Confidence: 0.8731764554977417
+
+00:25:28.753 --> 00:25:29.319
+toolbox.
+
+NOTE Confidence: 0.9459324479103088
+
+00:25:32.119 --> 00:25:36.485
+And when teams have their own internal systems, they can
+
+NOTE Confidence: 0.9459324479103088
+
+00:25:36.563 --> 00:25:40.772
+grant them access to the agent and control exactly the
+
+NOTE Confidence: 0.9459324479103088
+
+00:25:40.850 --> 00:25:45.372
+functions that this agent can call through this toolbox as
+
+NOTE Confidence: 0.9459324479103088
+
+00:25:45.450 --> 00:25:45.839
+well.
+
+NOTE Confidence: 0.9455513954162598
+
+00:25:45.840 --> 00:25:49.323
+So this makes it very, very helpful for administrators to
+
+NOTE Confidence: 0.9455513954162598
+
+00:25:49.384 --> 00:25:52.685
+ensure that their agent is not doing anything it's not
+
+NOTE Confidence: 0.9455513954162598
+
+00:25:52.746 --> 00:25:53.480
+supposed to.
+
+NOTE Confidence: 0.8926094770431519
+
+00:25:54.240 --> 00:25:57.626
+So in this example, I've given access for it to
+
+NOTE Confidence: 0.8926094770431519
+
+00:25:57.698 --> 00:26:00.940
+read from teams, but I do not want it sending
+
+NOTE Confidence: 0.8926094770431519
+
+00:26:01.012 --> 00:26:04.471
+a message to my manager or sending an e-mail to,
+
+NOTE Confidence: 0.8926094770431519
+
+00:26:04.543 --> 00:26:05.839
+you know, whoever.
+
+NOTE Confidence: 0.8648027181625366
+
+00:26:06.080 --> 00:26:09.719
+So I am only very specifically listing exactly what it
+
+NOTE Confidence: 0.8648027181625366
+
+00:26:09.786 --> 00:26:11.000
+can and cannot do.
+
+NOTE Confidence: 0.9249815940856934
+
+00:26:11.960 --> 00:26:14.882
+So this makes it very easy to control all of
+
+NOTE Confidence: 0.9249815940856934
+
+00:26:14.948 --> 00:26:18.999
+these permissions, all of these tools from a single endpoint.
+
+NOTE Confidence: 0.8688656091690063
+
+00:26:19.720 --> 00:26:22.128
+And that matters more and more over time as because
+
+NOTE Confidence: 0.8688656091690063
+
+00:26:22.175 --> 00:26:24.866
+as our workloads become more and more complex, our agents
+
+NOTE Confidence: 0.8688656091690063
+
+00:26:24.913 --> 00:26:25.999
+start using more tools.
+
+NOTE Confidence: 0.8535985946655273
+
+00:26:26.280 --> 00:26:29.330
+Having the single plaintiff management is only going to become
+
+NOTE Confidence: 0.8535985946655273
+
+00:26:29.379 --> 00:26:30.560
+more and more impactful.
+
+NOTE Confidence: 0.9069072008132935
+
+00:26:31.720 --> 00:26:35.239
+So it looks like our hosted Hermes agent has successfully
+
+NOTE Confidence: 0.9069072008132935
+
+00:26:35.300 --> 00:26:37.399
+created the PR for LLM Perf Bench.
+
+NOTE Confidence: 0.9013730883598328
+
+00:26:38.119 --> 00:26:40.830
+And one of the things I really like here is
+
+NOTE Confidence: 0.9013730883598328
+
+00:26:40.893 --> 00:26:44.360
+that Foundry makes it easy to see exactly what happened
+
+NOTE Confidence: 0.9013730883598328
+
+00:26:44.424 --> 00:26:46.000
+during this agent's task.
+
+NOTE Confidence: 0.933922290802002
+
+00:26:46.600 --> 00:26:49.732
+We can expect we can inspect exactly what tools and
+
+NOTE Confidence: 0.933922290802002
+
+00:26:49.793 --> 00:26:53.171
+which MCP servers the agent used, exactly what steps it
+
+NOTE Confidence: 0.933922290802002
+
+00:26:53.232 --> 00:26:55.934
+took along the way, and how it moved all the
+
+NOTE Confidence: 0.933922290802002
+
+00:26:55.996 --> 00:26:58.760
+way from the original e-mail to the final PR.
+
+NOTE Confidence: 0.9510025978088379
+
+00:26:59.080 --> 00:27:03.080
+And this observability is really critical for enterprise level agents.
+
+NOTE Confidence: 0.902400016784668
+
+00:27:03.480 --> 00:27:06.828
+It gives developers a way to debug and to improve
+
+NOTE Confidence: 0.902400016784668
+
+00:27:06.896 --> 00:27:11.270
+workflows, and it gives organizations a much clearer audit trail
+
+NOTE Confidence: 0.902400016784668
+
+00:27:11.338 --> 00:27:14.550
+that shows how the agent acted on behalf of the
+
+NOTE Confidence: 0.902400016784668
+
+00:27:14.618 --> 00:27:14.960
+user.
+
+NOTE Confidence: 0.9681538343429565
+
+00:27:15.200 --> 00:27:18.150
+So all of this is very traceable and very easy
+
+NOTE Confidence: 0.9681538343429565
+
+00:27:18.214 --> 00:27:18.920
+to monitor.
+
+NOTE Confidence: 0.9665038585662842
+
+00:27:19.560 --> 00:27:20.800
+So let's look at the PR.
+
+NOTE Confidence: 0.9753397703170776
+
+00:27:21.600 --> 00:27:22.800
+Everything looks pretty good.
+
+NOTE Confidence: 0.8801239132881165
+
+00:27:22.800 --> 00:27:25.480
+All of the code checks passed successfully.
+
+NOTE Confidence: 0.9371156096458435
+
+00:27:26.360 --> 00:27:28.360
+The code files look great as well.
+
+NOTE Confidence: 0.8394927978515625
+
+00:27:28.720 --> 00:27:30.440
+But there's some things I want to change.
+
+NOTE Confidence: 0.9082527756690979
+
+00:27:31.520 --> 00:27:34.708
+1st I want to add Alex, who was the original
+
+NOTE Confidence: 0.9082527756690979
+
+00:27:34.780 --> 00:27:36.520
+requester as a reviewer.
+
+NOTE Confidence: 0.7965165376663208
+
+00:27:36.600 --> 00:27:40.286
+If you see, there's no reviewers attached to this PR
+
+NOTE Confidence: 0.7965165376663208
+
+00:27:40.357 --> 00:27:43.476
+and I want to make sure that it includes doc
+
+NOTE Confidence: 0.7965165376663208
+
+00:27:43.547 --> 00:27:45.319
+strings and its function.
+
+NOTE Confidence: 0.9530443549156189
+
+00:27:45.520 --> 00:27:47.560
+Just part of how we work as a company.
+
+NOTE Confidence: 0.9071447849273682
+
+00:27:48.880 --> 00:27:52.336
+And more importantly, I want to make sure that anytime
+
+NOTE Confidence: 0.9071447849273682
+
+00:27:52.400 --> 00:27:55.472
+the agent works with this repo in the future, it
+
+NOTE Confidence: 0.9071447849273682
+
+00:27:55.536 --> 00:27:59.120
+remembers this feedback and it can implement docstrings.
+
+NOTE Confidence: 0.8905318975448608
+
+00:27:59.119 --> 00:28:02.577
+It can add Alex as a reviewer anytime it works
+
+NOTE Confidence: 0.8905318975448608
+
+00:28:02.652 --> 00:28:06.034
+with this repo, and this is a good example of
+
+NOTE Confidence: 0.8905318975448608
+
+00:28:06.109 --> 00:28:10.393
+the sort of self learning skill mechanism inside a Hermes
+
+NOTE Confidence: 0.8905318975448608
+
+00:28:10.469 --> 00:28:10.919
+agent.
+
+NOTE Confidence: 0.9442206025123596
+
+00:28:11.200 --> 00:28:14.843
+Instead of treating every interaction as a one off request
+
+NOTE Confidence: 0.9442206025123596
+
+00:28:14.906 --> 00:28:18.486
+and forgetting it later, the agent can turn this feedback
+
+NOTE Confidence: 0.9442206025123596
+
+00:28:18.549 --> 00:28:20.120
+into a reusable behavior.
+
+NOTE Confidence: 0.9002124071121216
+
+00:28:21.040 --> 00:28:24.209
+And in this case, it's learning that whenever it works
+
+NOTE Confidence: 0.9002124071121216
+
+00:28:24.268 --> 00:28:27.496
+with this particular repo, LLM perf bench, it can learn
+
+NOTE Confidence: 0.9002124071121216
+
+00:28:27.554 --> 00:28:30.548
+that Alex is always supposed to be the reviewer and
+
+NOTE Confidence: 0.9002124071121216
+
+00:28:30.606 --> 00:28:33.599
+that docstrings are always supposed to be included.
+
+NOTE Confidence: 0.9102062582969666
+
+00:28:34.760 --> 00:28:38.176
+So I can tell this agent to create the skill
+
+NOTE Confidence: 0.9102062582969666
+
+00:28:38.254 --> 00:28:41.981
+and it goes and edits the PR successfully and it
+
+NOTE Confidence: 0.9102062582969666
+
+00:28:42.058 --> 00:28:43.999
+creates the skill for us.
+
+NOTE Confidence: 0.891584038734436
+
+00:28:44.000 --> 00:28:47.663
+And you'll see that if I open the traces here
+
+NOTE Confidence: 0.891584038734436
+
+00:28:47.744 --> 00:28:50.920
+that it used the skill manage function.
+
+NOTE Confidence: 0.8529776334762573
+
+00:28:51.200 --> 00:28:54.701
+So this is an eternal function within Hermes that Hermes
+
+NOTE Confidence: 0.8529776334762573
+
+00:28:54.764 --> 00:28:58.516
+calls anytime it wants to essentially create a skill, delete
+
+NOTE Confidence: 0.8529776334762573
+
+00:28:58.579 --> 00:29:00.080
+a skill, update a skill.
+
+NOTE Confidence: 0.8542532920837402
+
+00:29:00.320 --> 00:29:04.390
+Anytime it works with its skills, it uses this skill
+
+NOTE Confidence: 0.8542532920837402
+
+00:29:04.468 --> 00:29:07.599
+manage function to control those skills.
+
+NOTE Confidence: 0.9627599716186523
+
+00:29:09.560 --> 00:29:13.813
+So let's verify that the agent updated the PR successfully
+
+NOTE Confidence: 0.9627599716186523
+
+00:29:13.886 --> 00:29:15.279
+after our feedback.
+
+NOTE Confidence: 0.918556272983551
+
+00:29:15.280 --> 00:29:18.606
+Remember it should have Alex as the reviewer and it
+
+NOTE Confidence: 0.918556272983551
+
+00:29:18.671 --> 00:29:21.279
+should have the doc strings in the code.
+
+NOTE Confidence: 0.8676853775978088
+
+00:29:21.520 --> 00:29:25.457
+So perfect, looks like Alex was added as the reviewer
+
+NOTE Confidence: 0.8676853775978088
+
+00:29:25.531 --> 00:29:28.948
+and it looks like the there was a commit added
+
+NOTE Confidence: 0.8676853775978088
+
+00:29:29.022 --> 00:29:31.919
+to add doc strings into the PR Perfect.
+
+NOTE Confidence: 0.893280565738678
+
+00:29:33.040 --> 00:29:37.269
+And notice here I'm using my Oauth pass through to
+
+NOTE Confidence: 0.893280565738678
+
+00:29:37.354 --> 00:29:41.076
+the agent so the agent is able to inherit my
+
+NOTE Confidence: 0.893280565738678
+
+00:29:41.161 --> 00:29:45.391
+identity with the GitHub PR, so all of its commits
+
+NOTE Confidence: 0.893280565738678
+
+00:29:45.475 --> 00:29:47.760
+show as coming from myself.
+
+NOTE Confidence: 0.9197016358375549
+
+00:29:50.000 --> 00:29:53.139
+Now with Foundry hosted agents, you have the full power
+
+NOTE Confidence: 0.9197016358375549
+
+00:29:53.196 --> 00:29:55.880
+to customize these skills that your agent uses.
+
+NOTE Confidence: 0.9364604949951172
+
+00:29:56.040 --> 00:29:59.300
+You have the full power to manage them across agents,
+
+NOTE Confidence: 0.9364604949951172
+
+00:29:59.361 --> 00:30:03.114
+and these capabilities that are running inside your agent are
+
+NOTE Confidence: 0.9364604949951172
+
+00:30:03.175 --> 00:30:04.959
+only going to grow over time.
+
+NOTE Confidence: 0.9446607828140259
+
+00:30:04.960 --> 00:30:08.071
+They're only going to be more accustomed to how you
+
+NOTE Confidence: 0.9446607828140259
+
+00:30:08.132 --> 00:30:11.732
+work, how your team works, and how your entire organization
+
+NOTE Confidence: 0.9446607828140259
+
+00:30:11.793 --> 00:30:12.160
+works.
+
+NOTE Confidence: 0.9592540860176086
+
+00:30:12.160 --> 00:30:15.841
+And that's what's great about these long running agents and
+
+NOTE Confidence: 0.9592540860176086
+
+00:30:15.904 --> 00:30:19.024
+how they're going to make such a big impact across
+
+NOTE Confidence: 0.9592540860176086
+
+00:30:19.086 --> 00:30:19.960
+all companies.
+
+NOTE Confidence: 0.9148675799369812
+
+00:30:21.640 --> 00:30:25.742
+So not only does Foundry enable your agents with tools,
+
+NOTE Confidence: 0.9148675799369812
+
+00:30:25.816 --> 00:30:30.068
+but Foundry also allows us to govern these agents through
+
+NOTE Confidence: 0.9148675799369812
+
+00:30:30.142 --> 00:30:31.559
+Microsoft Intra ID.
+
+NOTE Confidence: 0.9003658294677734
+
+00:30:32.760 --> 00:30:36.412
+So this integration with Intra ID essentially lets you manage
+
+NOTE Confidence: 0.9003658294677734
+
+00:30:36.472 --> 00:30:39.885
+an agent's access essentially the same way that you would
+
+NOTE Confidence: 0.9003658294677734
+
+00:30:39.945 --> 00:30:42.520
+manage access for a person at your company.
+
+NOTE Confidence: 0.9444236159324646
+
+00:30:42.920 --> 00:30:46.286
+I can find this Intra ID from the Foundry UI
+
+NOTE Confidence: 0.9444236159324646
+
+00:30:46.362 --> 00:30:49.728
+and I can grant it access to, for example, a
+
+NOTE Confidence: 0.9444236159324646
+
+00:30:49.805 --> 00:30:50.800
+BLOB storage.
+
+NOTE Confidence: 0.9103202223777771
+
+00:30:51.800 --> 00:30:54.938
+So I can go to my storage account, go into
+
+NOTE Confidence: 0.9103202223777771
+
+00:30:55.013 --> 00:30:58.451
+IM and exactly the same way that I would grant
+
+NOTE Confidence: 0.9103202223777771
+
+00:30:58.526 --> 00:31:02.038
+access to to Alex or or to another colleague, I
+
+NOTE Confidence: 0.9103202223777771
+
+00:31:02.113 --> 00:31:05.028
+can look up this agent and I can add it
+
+NOTE Confidence: 0.9103202223777771
+
+00:31:05.103 --> 00:31:06.000
+as a reader.
+
+NOTE Confidence: 0.9199127554893494
+
+00:31:06.480 --> 00:31:10.287
+So that's exactly what I'm doing this in this example,
+
+NOTE Confidence: 0.9199127554893494
+
+00:31:10.357 --> 00:31:13.459
+I'm giving it read access and you see I type
+
+NOTE Confidence: 0.9199127554893494
+
+00:31:13.530 --> 00:31:16.773
+in that hash that it Foundry had for the agent
+
+NOTE Confidence: 0.9199127554893494
+
+00:31:16.843 --> 00:31:19.311
+ID and I add it here and then I can
+
+NOTE Confidence: 0.9199127554893494
+
+00:31:19.381 --> 00:31:23.400
+grant you access exactly like I would with any colleague.
+
+NOTE Confidence: 0.9671006798744202
+
+00:31:24.840 --> 00:31:25.680
+So this is great.
+
+NOTE Confidence: 0.9140892028808594
+
+00:31:25.880 --> 00:31:29.353
+For example, if you have data that you want the
+
+NOTE Confidence: 0.9140892028808594
+
+00:31:29.427 --> 00:31:32.680
+agent to read or if you have a database that
+
+NOTE Confidence: 0.9140892028808594
+
+00:31:32.753 --> 00:31:36.301
+you want this agent to maintain for you, you can
+
+NOTE Confidence: 0.9140892028808594
+
+00:31:36.375 --> 00:31:40.588
+control very granularly what this agent can and cannot do
+
+NOTE Confidence: 0.9140892028808594
+
+00:31:40.662 --> 00:31:42.880
+through intra IDs permissions.
+
+NOTE Confidence: 0.950363039970398
+
+00:31:44.760 --> 00:31:47.757
+Now the key point here is that the agent now
+
+NOTE Confidence: 0.950363039970398
+
+00:31:47.825 --> 00:31:51.436
+has an identity that can be retrieved and managed and
+
+NOTE Confidence: 0.950363039970398
+
+00:31:51.504 --> 00:31:53.480
+governed across your company.
+
+NOTE Confidence: 0.8976372480392456
+
+00:31:53.840 --> 00:31:55.840
+And now your agent can be granted access.
+
+NOTE Confidence: 0.9506248235702515
+
+00:31:55.840 --> 00:31:58.718
+It can be restricted access, it can be audited, it
+
+NOTE Confidence: 0.9506248235702515
+
+00:31:58.776 --> 00:32:01.770
+can be governed using the same kind of controls that
+
+NOTE Confidence: 0.9506248235702515
+
+00:32:01.827 --> 00:32:03.439
+enterprises already rely on.
+
+NOTE Confidence: 0.7266361713409424
+
+00:32:04.120 --> 00:32:08.844
+And this capability extends far beyond only Azure resources too,
+
+NOTE Confidence: 0.7266361713409424
+
+00:32:08.918 --> 00:32:13.199
+as agents become closer collaborators and day-to-day work.
+
+NOTE Confidence: 0.8759365677833557
+
+00:32:14.240 --> 00:32:19.200
+We're implementing our agents and across the Microsoft 365 ecosystem.
+
+NOTE Confidence: 0.8964983820915222
+
+00:32:20.080 --> 00:32:23.493
+And this built in identity and authentication and access management
+
+NOTE Confidence: 0.8964983820915222
+
+00:32:23.544 --> 00:32:24.919
+is really the core of that.
+
+NOTE Confidence: 0.9456496834754944
+
+00:32:25.080 --> 00:32:28.303
+It's only becoming more and more essential, like as I
+
+NOTE Confidence: 0.9456496834754944
+
+00:32:28.363 --> 00:32:31.769
+said earlier, as our agents become more complex and more
+
+NOTE Confidence: 0.9456496834754944
+
+00:32:31.830 --> 00:32:32.559
+intelligent.
+
+NOTE Confidence: 0.9111232757568359
+
+00:32:34.240 --> 00:32:36.985
+So, so far, we've looked at how Foundry helps control
+
+NOTE Confidence: 0.9111232757568359
+
+00:32:37.037 --> 00:32:39.679
+what services and resources your agents can access.
+
+NOTE Confidence: 0.9712833762168884
+
+00:32:40.240 --> 00:32:42.849
+But Foundry can also make it easy to integrate your
+
+NOTE Confidence: 0.9712833762168884
+
+00:32:42.900 --> 00:32:44.639
+agents into your tools themselves.
+
+NOTE Confidence: 0.9182540774345398
+
+00:32:45.280 --> 00:32:47.817
+So now that my agents configured and I like how
+
+NOTE Confidence: 0.9182540774345398
+
+00:32:47.871 --> 00:32:50.678
+it's working, I can publish it and make it available
+
+NOTE Confidence: 0.9182540774345398
+
+00:32:50.732 --> 00:32:51.919
+through Microsoft 365.
+
+NOTE Confidence: 0.9348349571228027
+
+00:32:53.280 --> 00:32:56.487
+Now after I fill out some information, I can publish
+
+NOTE Confidence: 0.9348349571228027
+
+00:32:56.549 --> 00:32:59.571
+it and make it available to my Microsoft 365 apps
+
+NOTE Confidence: 0.9348349571228027
+
+00:32:59.632 --> 00:33:01.360
+and such as Microsoft Teams.
+
+NOTE Confidence: 0.960728645324707
+
+00:33:02.960 --> 00:33:05.762
+So let's open up Teams and look at our new
+
+NOTE Confidence: 0.960728645324707
+
+00:33:05.829 --> 00:33:08.965
+agent and verify that we can talk to this agent
+
+NOTE Confidence: 0.960728645324707
+
+00:33:09.032 --> 00:33:13.236
+#1 and verify that most importantly, it's remembering the skill
+
+NOTE Confidence: 0.960728645324707
+
+00:33:13.302 --> 00:33:17.640
+this conversation that we had from an entirely different session.
+
+NOTE Confidence: 0.8990775346755981
+
+00:33:19.040 --> 00:33:21.500
+So if I go to Teams, I can pull up
+
+NOTE Confidence: 0.8990775346755981
+
+00:33:21.573 --> 00:33:24.758
+the hosted Hermes agent and I can talk to it
+
+NOTE Confidence: 0.8990775346755981
+
+00:33:24.830 --> 00:33:26.639
+directly in the Teams UI.
+
+NOTE Confidence: 0.8695182800292969
+
+00:33:27.280 --> 00:33:29.688
+So let's go ahead and ask it if it has
+
+NOTE Confidence: 0.8695182800292969
+
+00:33:29.751 --> 00:33:32.919
+the skill for working with the LLM Perf Vent repo.
+
+NOTE Confidence: 0.8394385576248169
+
+00:33:33.400 --> 00:33:36.873
+Remember this is the skill that it just created about
+
+NOTE Confidence: 0.8394385576248169
+
+00:33:36.939 --> 00:33:40.413
+5-10 minutes ago so that it remembers that anytime we
+
+NOTE Confidence: 0.8394385576248169
+
+00:33:40.478 --> 00:33:43.493
+any time that we are working with the LLM perf
+
+NOTE Confidence: 0.8394385576248169
+
+00:33:43.559 --> 00:33:44.280
+bench repo.
+
+NOTE Confidence: 0.9322707653045654
+
+00:33:45.600 --> 00:33:50.094
+So this means that I can manage these long running
+
+NOTE Confidence: 0.9322707653045654
+
+00:33:50.184 --> 00:33:53.240
+agentic tasks from the same place.
+
+NOTE Confidence: 0.9533528089523315
+
+00:33:53.320 --> 00:33:55.080
+I already collaborate with my colleagues.
+
+NOTE Confidence: 0.925147533416748
+
+00:33:55.280 --> 00:33:58.369
+I can go into teams, talk to this agent, it
+
+NOTE Confidence: 0.925147533416748
+
+00:33:58.441 --> 00:34:02.681
+can remember these skills, it can remember this context and
+
+NOTE Confidence: 0.925147533416748
+
+00:34:02.752 --> 00:34:05.986
+I can use it to essentially help as you know,
+
+NOTE Confidence: 0.925147533416748
+
+00:34:06.058 --> 00:34:09.435
+my copilot, my partner, and as we can see here,
+
+NOTE Confidence: 0.925147533416748
+
+00:34:09.507 --> 00:34:14.105
+the agent is remembering the specific guidance from our previous
+
+NOTE Confidence: 0.925147533416748
+
+00:34:14.177 --> 00:34:15.039
+interaction.
+
+NOTE Confidence: 0.7992823123931885
+
+00:34:15.120 --> 00:34:15.880
+So perfect.
+
+NOTE Confidence: 0.9643908739089966
+
+00:34:16.280 --> 00:34:18.703
+So this means it's not confined to a single chat
+
+NOTE Confidence: 0.9643908739089966
+
+00:34:18.754 --> 00:34:19.360
+interaction.
+
+NOTE Confidence: 0.9354631304740906
+
+00:34:19.360 --> 00:34:23.860
+This hosted agent can retain useful skills across interactions, across
+
+NOTE Confidence: 0.9354631304740906
+
+00:34:23.925 --> 00:34:26.239
+sessions, across different services.
+
+NOTE Confidence: 0.9378010034561157
+
+00:34:26.680 --> 00:34:29.653
+So over time it becomes more and more aligned to
+
+NOTE Confidence: 0.9378010034561157
+
+00:34:29.715 --> 00:34:32.626
+the way that you and your team and your company
+
+NOTE Confidence: 0.9378010034561157
+
+00:34:32.688 --> 00:34:33.679
+all collaborate.
+
+NOTE Confidence: 0.8628577589988708
+
+00:34:35.960 --> 00:34:39.048
+So to recap, Foundry hosted agents help solve some of
+
+NOTE Confidence: 0.8628577589988708
+
+00:34:39.106 --> 00:34:42.720
+the key problems that typically slow down agentic development.
+
+NOTE Confidence: 0.9009803533554077
+
+00:34:43.200 --> 00:34:46.083
+With hosted Hermes, we saw this agent take a real
+
+NOTE Confidence: 0.9009803533554077
+
+00:34:46.142 --> 00:34:47.319
+task from an e-mail.
+
+NOTE Confidence: 0.9032570719718933
+
+00:34:47.520 --> 00:34:49.160
+We saw it go find that e-mail.
+
+NOTE Confidence: 0.7926992177963257
+
+00:34:49.840 --> 00:34:52.600
+We saw it leverage the built in tooling from Foundry.
+
+NOTE Confidence: 0.9122641086578369
+
+00:34:52.880 --> 00:34:55.682
+We saw it create its own PR, expose its tools
+
+NOTE Confidence: 0.9122641086578369
+
+00:34:55.744 --> 00:34:59.606
+through observability, and learn a very specific skill that it
+
+NOTE Confidence: 0.9122641086578369
+
+00:34:59.668 --> 00:35:02.719
+can remember across sessions and across services.
+
+NOTE Confidence: 0.9443538188934326
+
+00:35:03.640 --> 00:35:06.818
+So the value here, it's not just that your model
+
+NOTE Confidence: 0.9443538188934326
+
+00:35:06.884 --> 00:35:10.196
+can reason or that your model can write code, it's
+
+NOTE Confidence: 0.9443538188934326
+
+00:35:10.262 --> 00:35:14.434
+that Foundry gives you this infrastructure and this tooling and
+
+NOTE Confidence: 0.9443538188934326
+
+00:35:14.500 --> 00:35:18.341
+observability that you can use to customize your agent and
+
+NOTE Confidence: 0.9443538188934326
+
+00:35:18.407 --> 00:35:21.520
+turn that model into a useful enterprise agent.
+
+NOTE Confidence: 0.8863625526428223
+
+00:35:22.800 --> 00:35:26.121
+Now, there's so many great features about Foundry hosted agents
+
+NOTE Confidence: 0.8863625526428223
+
+00:35:26.174 --> 00:35:27.440
+and Hermes and Nemotron.
+
+NOTE Confidence: 0.9070117473602295
+
+00:35:27.640 --> 00:35:30.362
+So definitely come visit us at the booth and we'll
+
+NOTE Confidence: 0.9070117473602295
+
+00:35:30.416 --> 00:35:31.560
+help you get started.
+
+NOTE Confidence: 0.9240285754203796
+
+00:35:33.680 --> 00:35:36.699
+Now I want to recap some of the key points
+
+NOTE Confidence: 0.9240285754203796
+
+00:35:36.771 --> 00:35:41.085
+that you know this combination of Nemotron and Foundry agent
+
+NOTE Confidence: 0.9240285754203796
+
+00:35:41.157 --> 00:35:45.039
+service and Hermes bring to the table for enterprises.
+
+NOTE Confidence: 0.8769643306732178
+
+00:35:45.640 --> 00:35:49.641
+So with Nemotron we're getting the highest token efficiency provided,
+
+NOTE Confidence: 0.8769643306732178
+
+00:35:49.699 --> 00:35:54.048
+we're getting Frontier Intelligence, we're getting open models and training
+
+NOTE Confidence: 0.8769643306732178
+
+00:35:54.106 --> 00:35:55.439
+data and open research.
+
+NOTE Confidence: 0.8091717958450317
+
+00:35:55.719 --> 00:35:59.042
+And this is post trained like Joey said for agent
+
+NOTE Confidence: 0.8091717958450317
+
+00:35:59.109 --> 00:35:59.719
+take use.
+
+NOTE Confidence: 0.8943253755569458
+
+00:36:01.239 --> 00:36:04.391
+Now Hermes is coming in and it's helping us get
+
+NOTE Confidence: 0.8943253755569458
+
+00:36:04.458 --> 00:36:07.677
+the most out of this model with the Hermes agent
+
+NOTE Confidence: 0.8943253755569458
+
+00:36:07.744 --> 00:36:12.102
+wrapper or Hermes agent plus Nemotron with Hermes wrapping around
+
+NOTE Confidence: 0.8943253755569458
+
+00:36:12.169 --> 00:36:15.119
+Nemotron, we have multi model orchestration.
+
+NOTE Confidence: 0.921953022480011
+
+00:36:15.560 --> 00:36:18.898
+Our agent is able to continuously learn over time, continuously
+
+NOTE Confidence: 0.921953022480011
+
+00:36:18.951 --> 00:36:21.919
+improve and become more of an asset to the organization.
+
+NOTE Confidence: 0.9437850117683411
+
+00:36:22.520 --> 00:36:26.265
+Now Foundry comes in here and provides the infrastructure to
+
+NOTE Confidence: 0.9437850117683411
+
+00:36:26.328 --> 00:36:28.950
+run this and to support it and to bring it
+
+NOTE Confidence: 0.9437850117683411
+
+00:36:29.012 --> 00:36:32.695
+out to our entire company with the agent identities through
+
+NOTE Confidence: 0.9437850117683411
+
+00:36:32.758 --> 00:36:33.319
+Intra ID.
+
+NOTE Confidence: 0.9655938148498535
+
+00:36:33.560 --> 00:36:35.898
+This is a big part because we can now treat
+
+NOTE Confidence: 0.9655938148498535
+
+00:36:35.952 --> 00:36:38.400
+this agent like we would a regular colleague.
+
+NOTE Confidence: 0.8728033900260925
+
+00:36:38.400 --> 00:36:42.489
+We can grant access, revoke access, and integrate it into
+
+NOTE Confidence: 0.8728033900260925
+
+00:36:42.560 --> 00:36:44.999
+our different tools such as Teams.
+
+NOTE Confidence: 0.8950141668319702
+
+00:36:45.000 --> 00:36:48.685
+As you saw earlier, the toolbox helps you manage all
+
+NOTE Confidence: 0.8950141668319702
+
+00:36:48.756 --> 00:36:52.159
+of the tools and MCP servers that your agent can
+
+NOTE Confidence: 0.8950141668319702
+
+00:36:52.230 --> 00:36:54.640
+access and a single control plane.
+
+NOTE Confidence: 0.9386332035064697
+
+00:36:55.520 --> 00:36:58.894
+And the secure session management helps you ensure that you
+
+NOTE Confidence: 0.9386332035064697
+
+00:36:58.951 --> 00:37:02.097
+don't have any data leaving your session and that every
+
+NOTE Confidence: 0.9386332035064697
+
+00:37:02.154 --> 00:37:05.243
+agent, every user gets a fresh session where they have
+
+NOTE Confidence: 0.9386332035064697
+
+00:37:05.300 --> 00:37:07.359
+full control over their environment.
+
+NOTE Confidence: 0.8872389197349548
+
+00:37:09.280 --> 00:37:12.069
+So if you'd like to learn more, we have this
+
+NOTE Confidence: 0.8872389197349548
+
+00:37:12.133 --> 00:37:14.796
+demo running at our booth in the three O 8
+
+NOTE Confidence: 0.8872389197349548
+
+00:37:14.859 --> 00:37:15.240
+space.
+
+NOTE Confidence: 0.9396147131919861
+
+00:37:16.280 --> 00:37:19.584
+So please come by, talk to the experts and we'd
+
+NOTE Confidence: 0.9396147131919861
+
+00:37:19.654 --> 00:37:20.919
+love to talk more.
+
+NOTE Confidence: 0.903117835521698
+
+00:37:21.560 --> 00:37:26.360
+Also check out our NVIDIA models and our Nemo skills.
+
+NOTE Confidence: 0.9426195621490479
+
+00:37:27.080 --> 00:37:29.947
+We have tons of resources online for free that you
+
+NOTE Confidence: 0.9426195621490479
+
+00:37:30.004 --> 00:37:32.814
+can go use, not just our models, our open source,
+
+NOTE Confidence: 0.9426195621490479
+
+00:37:32.872 --> 00:37:36.083
+but all of the research and information about the models
+
+NOTE Confidence: 0.9426195621490479
+
+00:37:36.141 --> 00:37:36.599
+as well.
+
+NOTE Confidence: 0.945486307144165
+
+00:37:37.040 --> 00:37:40.280
+So feel free to come find us, ask us questions.
+
+NOTE Confidence: 0.9224767684936523
+
+00:37:40.440 --> 00:37:41.440
+We'd be glad to come help.
+
+NOTE Confidence: 0.8342370986938477
+
+00:37:44.000 --> 00:37:46.040
+All right, now I have a QR code for you.
+
+NOTE Confidence: 0.9053811430931091
+
+00:37:46.640 --> 00:37:48.974
+So please, if you have a chance, you know, fill
+
+NOTE Confidence: 0.9053811430931091
+
+00:37:49.024 --> 00:37:51.160
+out the survey, let us know what you think.
+
+NOTE Confidence: 0.5558872818946838
+
+00:37:51.160 --> 00:37:52.480
+All right.
+
+NOTE Confidence: 0.9674376845359802
+
+00:37:52.600 --> 00:37:53.320
+Thank you everyone.
+

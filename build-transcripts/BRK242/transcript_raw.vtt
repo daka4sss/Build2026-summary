@@ -1,0 +1,4310 @@
+WEBVTT
+
+NOTE
+language:en-US
+
+NOTE Confidence: 0.9483492970466614
+
+00:00:01.320 --> 00:00:03.200
+Hi everyone, can you hear me OK?
+
+NOTE Confidence: 0.9786440134048462
+
+00:00:03.920 --> 00:00:04.360
+Thank you.
+
+NOTE Confidence: 0.9028595089912415
+
+00:00:04.360 --> 00:00:06.748
+They are headsets in the back just in case you
+
+NOTE Confidence: 0.9028595089912415
+
+00:00:06.800 --> 00:00:07.320
+need them.
+
+NOTE Confidence: 0.9469723701477051
+
+00:00:07.680 --> 00:00:10.068
+I'm going to try my best to project but I
+
+NOTE Confidence: 0.9469723701477051
+
+00:00:10.127 --> 00:00:12.457
+have a little bit of a cold so I'm sorry
+
+NOTE Confidence: 0.9469723701477051
+
+00:00:12.516 --> 00:00:14.846
+if my voice goes in and out so bear with
+
+NOTE Confidence: 0.9469723701477051
+
+00:00:14.905 --> 00:00:15.079
+me.
+
+NOTE Confidence: 0.9356675148010254
+
+00:00:15.560 --> 00:00:18.938
+So first of all, thank you for making it to
+
+NOTE Confidence: 0.9356675148010254
+
+00:00:19.017 --> 00:00:19.960
+build Day 2.
+
+NOTE Confidence: 0.9726077914237976
+
+00:00:20.480 --> 00:00:23.720
+And we are so happy to have a full house.
+
+NOTE Confidence: 0.9357463717460632
+
+00:00:23.960 --> 00:00:27.480
+And because of that, you get 2 talks in one.
+
+NOTE Confidence: 0.8637368083000183
+
+00:00:28.880 --> 00:00:31.080
+So my name is Maria Nagaga.
+
+NOTE Confidence: 0.9151443243026733
+
+00:00:31.560 --> 00:00:34.774
+I am a product manager here at Microsoft working on
+
+NOTE Confidence: 0.9151443243026733
+
+00:00:34.837 --> 00:00:35.719
+Foundry tools.
+
+NOTE Confidence: 0.8905590772628784
+
+00:00:36.080 --> 00:00:38.459
+And I am joined by my friend over here, Joe
+
+NOTE Confidence: 0.8905590772628784
+
+00:00:38.515 --> 00:00:40.839
+Flick, who works on Content Understanding.
+
+NOTE Confidence: 0.9619979858398438
+
+00:00:41.360 --> 00:00:43.240
+So thank you for joining our talk.
+
+NOTE Confidence: 0.8784998059272766
+
+00:00:43.600 --> 00:00:49.320
+Turn your agents into action with tools, APIs and documents.
+
+NOTE Confidence: 0.9277923703193665
+
+00:00:49.880 --> 00:00:52.618
+So let's go quickly through what our session agenda is
+
+NOTE Confidence: 0.9277923703193665
+
+00:00:52.668 --> 00:00:53.480
+going to happen.
+
+NOTE Confidence: 0.9519460797309875
+
+00:00:53.800 --> 00:00:56.908
+We're going to do a brief announcement, but believe me,
+
+NOTE Confidence: 0.9519460797309875
+
+00:00:56.965 --> 00:00:58.999
+we know you come here for the demos.
+
+NOTE Confidence: 0.9217967987060547
+
+00:00:59.000 --> 00:01:01.094
+We will give you the demos, we will give you
+
+NOTE Confidence: 0.9217967987060547
+
+00:01:01.142 --> 00:01:03.569
+the content to the demos, and then we're just going
+
+NOTE Confidence: 0.9217967987060547
+
+00:01:03.617 --> 00:01:04.760
+to have closing remarks.
+
+NOTE Confidence: 0.965541422367096
+
+00:01:05.360 --> 00:01:08.648
+But I think we need to start this with what
+
+NOTE Confidence: 0.965541422367096
+
+00:01:08.724 --> 00:01:12.318
+does it mean to build an agent platform here at
+
+NOTE Confidence: 0.965541422367096
+
+00:01:12.395 --> 00:01:13.160
+Microsoft?
+
+NOTE Confidence: 0.8962209224700928
+
+00:01:13.440 --> 00:01:17.278
+Well, it starts with building on GitHub using Foundry as
+
+NOTE Confidence: 0.8962209224700928
+
+00:01:17.346 --> 00:01:21.458
+your platform where you can have your agent runtime optimize
+
+NOTE Confidence: 0.8962209224700928
+
+00:01:21.527 --> 00:01:24.748
+your agents and and have all the tools that you
+
+NOTE Confidence: 0.8962209224700928
+
+00:01:24.817 --> 00:01:25.160
+need.
+
+NOTE Confidence: 0.8793030381202698
+
+00:01:25.520 --> 00:01:29.222
+And you can distribute these tools through M365 S Let's
+
+NOTE Confidence: 0.8793030381202698
+
+00:01:29.290 --> 00:01:32.117
+zoom in a little bit more on the tool that
+
+NOTE Confidence: 0.8793030381202698
+
+00:01:32.185 --> 00:01:35.080
+I sit in, like I work on Microsoft Foundry.
+
+NOTE Confidence: 0.8347530961036682
+
+00:01:35.600 --> 00:01:40.656
+Microsoft Foundry allows for you to have your agent services,
+
+NOTE Confidence: 0.8347530961036682
+
+00:01:40.739 --> 00:01:45.049
+models, IQ tools, a control plane, and we enable you
+
+NOTE Confidence: 0.8347530961036682
+
+00:01:45.132 --> 00:01:49.360
+to govern the life cycle from cloud to edge, right?
+
+NOTE Confidence: 0.9159466028213501
+
+00:01:49.800 --> 00:01:53.089
+I have been working on Foundry tools along with my
+
+NOTE Confidence: 0.9159466028213501
+
+00:01:53.155 --> 00:01:57.102
+colleague over here, Linda, and we are providing this single
+
+NOTE Confidence: 0.9159466028213501
+
+00:01:57.167 --> 00:02:00.917
+hub for people to have prebuilt tools, third party tools,
+
+NOTE Confidence: 0.9159466028213501
+
+00:02:00.983 --> 00:02:05.325
+while providing you with the enterprise grade scalability that you
+
+NOTE Confidence: 0.9159466028213501
+
+00:02:05.391 --> 00:02:05.720
+need.
+
+NOTE Confidence: 0.8860901594161987
+
+00:02:06.320 --> 00:02:09.493
+So in summary, with Foundry tools, we want to have
+
+NOTE Confidence: 0.8860901594161987
+
+00:02:09.557 --> 00:02:12.477
+this one in place, this one place for all your
+
+NOTE Confidence: 0.8860901594161987
+
+00:02:12.540 --> 00:02:15.080
+tools regardless of tool types to exist.
+
+NOTE Confidence: 0.9648262858390808
+
+00:02:15.560 --> 00:02:19.773
+But before we jump into tools, let's talk about the
+
+NOTE Confidence: 0.9648262858390808
+
+00:02:19.856 --> 00:02:24.400
+single most important capability that your agent needs.
+
+NOTE Confidence: 0.9588936567306519
+
+00:02:25.639 --> 00:02:29.674
+So agents and tools are rapidly growing, and this is
+
+NOTE Confidence: 0.9588936567306519
+
+00:02:29.752 --> 00:02:32.079
+leading to a host of problems.
+
+NOTE Confidence: 0.8093359470367432
+
+00:02:32.600 --> 00:02:36.066
+So LLMS provide you with the reasoning for your tool
+
+NOTE Confidence: 0.8093359470367432
+
+00:02:36.133 --> 00:02:37.399
+for for your agent.
+
+NOTE Confidence: 0.9131617546081543
+
+00:02:37.960 --> 00:02:42.041
+Tool calling is what enables your agent to perform an
+
+NOTE Confidence: 0.9131617546081543
+
+00:02:42.118 --> 00:02:43.120
+action right?
+
+NOTE Confidence: 0.92801433801651
+
+00:02:43.280 --> 00:02:47.160
+And this is how your agents provide real business value.
+
+NOTE Confidence: 0.8991938829421997
+
+00:02:48.040 --> 00:02:50.578
+But one of the problems that we are seeing with
+
+NOTE Confidence: 0.8991938829421997
+
+00:02:50.632 --> 00:02:54.035
+our customers, they have been thousands of papers written about
+
+NOTE Confidence: 0.8991938829421997
+
+00:02:54.089 --> 00:02:54.360
+this.
+
+NOTE Confidence: 0.8425027132034302
+
+00:02:54.520 --> 00:02:59.552
+When you're trying to integrate tools into your agentic application,
+
+NOTE Confidence: 0.8425027132034302
+
+00:02:59.626 --> 00:03:03.400
+they steering finding the right tools for the jobs.
+
+NOTE Confidence: 0.9101488590240479
+
+00:03:04.200 --> 00:03:07.400
+The tool ecosystem is rapidly growing.
+
+NOTE Confidence: 0.887992262840271
+
+00:03:07.400 --> 00:03:10.320
+Who remember the time when all we had was MCP?
+
+NOTE Confidence: 0.8241482377052307
+
+00:03:12.320 --> 00:03:15.640
+Who remember the time we're in now, right.
+
+NOTE Confidence: 0.7333014011383057
+
+00:03:15.800 --> 00:03:20.855
+There's skills, there's plugins, there's APIs, there's connectors, there's going
+
+NOTE Confidence: 0.7333014011383057
+
+00:03:20.919 --> 00:03:22.119
+to be foobar X bar.
+
+NOTE Confidence: 0.938779354095459
+
+00:03:22.120 --> 00:03:23.520
+It's going to continuously grow.
+
+NOTE Confidence: 0.9669932126998901
+
+00:03:23.800 --> 00:03:25.692
+So how do we steer our tools in the right
+
+NOTE Confidence: 0.9669932126998901
+
+00:03:25.738 --> 00:03:26.200
+direction?
+
+NOTE Confidence: 0.3691760301589966
+
+00:03:26.880 --> 00:03:28.240
+There's scrolling.
+
+NOTE Confidence: 0.965007483959198
+
+00:03:28.480 --> 00:03:30.280
+How do we manage the tools?
+
+NOTE Confidence: 0.8502070307731628
+
+00:03:30.720 --> 00:03:32.977
+How do we make sure they're securely in the place
+
+NOTE Confidence: 0.8502070307731628
+
+00:03:33.023 --> 00:03:34.360
+and they're easily published?
+
+NOTE Confidence: 0.8965060114860535
+
+00:03:34.800 --> 00:03:38.000
+And then there's security controlling the tools.
+
+NOTE Confidence: 0.9232519268989563
+
+00:03:38.400 --> 00:03:41.778
+And it has to be incredibly important for us to
+
+NOTE Confidence: 0.9232519268989563
+
+00:03:41.850 --> 00:03:46.378
+keep these secure because tools reach into your production code
+
+NOTE Confidence: 0.9232519268989563
+
+00:03:46.450 --> 00:03:47.959
+and generate results.
+
+NOTE Confidence: 0.8390529155731201
+
+00:03:47.960 --> 00:03:50.880
+They're reaching into your databases, they're reaching into your APIs.
+
+NOTE Confidence: 0.9412159323692322
+
+00:03:51.160 --> 00:03:53.860
+And we have to make sure that not only the
+
+NOTE Confidence: 0.9412159323692322
+
+00:03:53.924 --> 00:03:57.074
+agent has access to the right amount of tools and
+
+NOTE Confidence: 0.9412159323692322
+
+00:03:57.138 --> 00:04:00.931
+securely, but so do the individuals who are leveraging your
+
+NOTE Confidence: 0.9412159323692322
+
+00:04:00.995 --> 00:04:01.960
+agents as well.
+
+NOTE Confidence: 0.9271550178527832
+
+00:04:02.680 --> 00:04:06.480
+So what does solving this problem look like?
+
+NOTE Confidence: 0.8961787223815918
+
+00:04:06.880 --> 00:04:09.941
+I wish I could tell you here is a single
+
+NOTE Confidence: 0.8961787223815918
+
+00:04:10.018 --> 00:04:14.380
+solution and it's done, but unfortunately that is not the
+
+NOTE Confidence: 0.8961787223815918
+
+00:04:14.457 --> 00:04:14.840
+case.
+
+NOTE Confidence: 0.8676761388778687
+
+00:04:15.600 --> 00:04:19.604
+This is an ecosystem made-up of various components where we
+
+NOTE Confidence: 0.8676761388778687
+
+00:04:19.671 --> 00:04:21.639
+are investing in and foundry.
+
+NOTE Confidence: 0.9445605874061584
+
+00:04:22.160 --> 00:04:25.615
+We have the tool catalog, which is about discovering and
+
+NOTE Confidence: 0.9445605874061584
+
+00:04:25.677 --> 00:04:27.960
+publishing and installing your tools.
+
+NOTE Confidence: 0.944644033908844
+
+00:04:28.240 --> 00:04:29.200
+That sounds easy.
+
+NOTE Confidence: 0.9569984674453735
+
+00:04:29.720 --> 00:04:31.600
+The next one is tool creation.
+
+NOTE Confidence: 0.9051122069358826
+
+00:04:32.120 --> 00:04:35.614
+You curate a set of tools that your agent needs
+
+NOTE Confidence: 0.9051122069358826
+
+00:04:35.688 --> 00:04:38.440
+in order to complete a specific task.
+
+NOTE Confidence: 0.9020900726318359
+
+00:04:38.760 --> 00:04:41.355
+And then how do you actually get that curated list
+
+NOTE Confidence: 0.9020900726318359
+
+00:04:41.406 --> 00:04:44.209
+and share it amongst every single agent that you might
+
+NOTE Confidence: 0.9020900726318359
+
+00:04:44.261 --> 00:04:45.040
+be controlling?
+
+NOTE Confidence: 0.8175811171531677
+
+00:04:45.640 --> 00:04:47.000
+There's tool discovery.
+
+NOTE Confidence: 0.951699435710907
+
+00:04:47.440 --> 00:04:50.453
+Now, sometimes when people think about tool discovery, they think
+
+NOTE Confidence: 0.951699435710907
+
+00:04:50.500 --> 00:04:53.003
+it's about you searching on a registry and finding the
+
+NOTE Confidence: 0.951699435710907
+
+00:04:53.050 --> 00:04:53.560
+right tool.
+
+NOTE Confidence: 0.9084472060203552
+
+00:04:54.080 --> 00:04:55.560
+That's not tool discovery.
+
+NOTE Confidence: 0.9315110445022583
+
+00:04:56.120 --> 00:05:00.360
+Tool discovery is choosing the best tool to complete the
+
+NOTE Confidence: 0.9315110445022583
+
+00:05:00.436 --> 00:05:03.919
+task while using the limited amount of tokens.
+
+NOTE Confidence: 0.9453291296958923
+
+00:05:04.120 --> 00:05:05.840
+How many of you want to use less tokens?
+
+NOTE Confidence: 0.8214815855026245
+
+00:05:06.720 --> 00:05:07.560
+Oh, not a lot of people.
+
+NOTE Confidence: 0.7519879341125488
+
+00:05:07.560 --> 00:05:10.040
+OK, you guys just like, spin all the tokens, right?
+
+NOTE Confidence: 0.9523823857307434
+
+00:05:10.440 --> 00:05:15.261
+So that's when tool discovery comes and tool governance, this
+
+NOTE Confidence: 0.9523823857307434
+
+00:05:15.340 --> 00:05:19.529
+is a conversation that we hear from our customers all
+
+NOTE Confidence: 0.9523823857307434
+
+00:05:19.608 --> 00:05:20.320
+the time.
+
+NOTE Confidence: 0.9278205633163452
+
+00:05:20.480 --> 00:05:22.240
+I love these tools, they're amazing.
+
+NOTE Confidence: 0.8424789905548096
+
+00:05:22.480 --> 00:05:25.320
+But I don't want Maria to have the same access
+
+NOTE Confidence: 0.8424789905548096
+
+00:05:25.382 --> 00:05:28.531
+of tools, but Linda does because Linda is better at
+
+NOTE Confidence: 0.8424789905548096
+
+00:05:28.593 --> 00:05:29.519
+her job, right?
+
+NOTE Confidence: 0.8714079260826111
+
+00:05:29.760 --> 00:05:32.658
+So like those are the things that we're putting together
+
+NOTE Confidence: 0.8714079260826111
+
+00:05:32.710 --> 00:05:34.160
+in terms of tool governance.
+
+NOTE Confidence: 0.8682804107666016
+
+00:05:36.160 --> 00:05:39.440
+So the tool catalog, let's start at the beginning.
+
+NOTE Confidence: 0.9455772638320923
+
+00:05:40.120 --> 00:05:44.792
+You have thousands of tools, probably soon millions of tools
+
+NOTE Confidence: 0.9455772638320923
+
+00:05:44.870 --> 00:05:47.439
+and you have multiple tool types.
+
+NOTE Confidence: 0.8792074918746948
+
+00:05:48.120 --> 00:05:50.184
+And in found, we want to make sure that you
+
+NOTE Confidence: 0.8792074918746948
+
+00:05:50.232 --> 00:05:51.720
+have all of those in one place.
+
+NOTE Confidence: 0.9575745463371277
+
+00:05:52.160 --> 00:05:53.800
+So let's look at the tool types.
+
+NOTE Confidence: 0.9140934348106384
+
+00:05:55.040 --> 00:05:58.259
+The tool landscape is growing, and it's not about just
+
+NOTE Confidence: 0.9140934348106384
+
+00:05:58.319 --> 00:06:01.359
+the number of tools, it's about the types of tools.
+
+NOTE Confidence: 0.8829091191291809
+
+00:06:01.920 --> 00:06:06.000
+We have open API, you're all useful, used to this.
+
+NOTE Confidence: 0.8187682032585144
+
+00:06:06.440 --> 00:06:09.131
+We have MCP, we have A to a, we have
+
+NOTE Confidence: 0.8187682032585144
+
+00:06:09.206 --> 00:06:13.317
+logic app connectors, we have skills, we have CLI's, we
+
+NOTE Confidence: 0.8187682032585144
+
+00:06:13.392 --> 00:06:17.279
+have hooks, we have plug insurance and so much more.
+
+NOTE Confidence: 0.9305858612060547
+
+00:06:18.240 --> 00:06:21.584
+So how do we make sure that all our developers
+
+NOTE Confidence: 0.9305858612060547
+
+00:06:21.656 --> 00:06:25.436
+and our entire ecosystem can find all these tools in
+
+NOTE Confidence: 0.9305858612060547
+
+00:06:25.509 --> 00:06:26.600
+a single place?
+
+NOTE Confidence: 0.8773398995399475
+
+00:06:27.400 --> 00:06:31.760
+Last year I worked to build the tools catalog.
+
+NOTE Confidence: 0.8224940299987793
+
+00:06:31.760 --> 00:06:33.200
+We shipped it in 2025.
+
+NOTE Confidence: 0.9007303714752197
+
+00:06:33.600 --> 00:06:37.019
+We have one on Foundry where we have a host
+
+NOTE Confidence: 0.9007303714752197
+
+00:06:37.099 --> 00:06:40.360
+of tools custom built from the ecosystem.
+
+NOTE Confidence: 0.8824114203453064
+
+00:06:40.560 --> 00:06:43.540
+But in addition to that, if you need your own
+
+NOTE Confidence: 0.8824114203453064
+
+00:06:43.606 --> 00:06:46.918
+private registry, you can do it as well with Azure
+
+NOTE Confidence: 0.8824114203453064
+
+00:06:46.984 --> 00:06:50.626
+API Center and Azure API Management that allows to give
+
+NOTE Confidence: 0.8824114203453064
+
+00:06:50.693 --> 00:06:52.680
+you that additional covenants.
+
+NOTE Confidence: 0.7506270408630371
+
+00:06:53.080 --> 00:06:55.640
+So we solved the catalog problem, right?
+
+NOTE Confidence: 0.9707033038139343
+
+00:06:55.680 --> 00:06:57.600
+You can get all your tools in one place.
+
+NOTE Confidence: 0.9674484729766846
+
+00:06:58.320 --> 00:07:00.600
+So I want you to imagine this.
+
+NOTE Confidence: 0.9357288479804993
+
+00:07:00.600 --> 00:07:03.320
+Just go with me on this journey, right?
+
+NOTE Confidence: 0.8847597241401672
+
+00:07:03.720 --> 00:07:05.687
+It's a short one, I promise you, you only have
+
+NOTE Confidence: 0.8847597241401672
+
+00:07:05.730 --> 00:07:06.799
+me for 20 minutes, right?
+
+NOTE Confidence: 0.9305534958839417
+
+00:07:07.240 --> 00:07:10.633
+So we have the catalog and developers can find the
+
+NOTE Confidence: 0.9305534958839417
+
+00:07:10.700 --> 00:07:14.772
+right tools, but finding the right tools and integrating the
+
+NOTE Confidence: 0.9305534958839417
+
+00:07:14.840 --> 00:07:17.079
+tools are two different problems.
+
+NOTE Confidence: 0.8823428750038147
+
+00:07:17.680 --> 00:07:21.872
+So imagine you're building a filled up agent for your
+
+NOTE Confidence: 0.8823428750038147
+
+00:07:21.951 --> 00:07:25.589
+company and you have this one agent that has 6
+
+NOTE Confidence: 0.8823428750038147
+
+00:07:25.668 --> 00:07:31.205
+integrations, Entra, SharePoint, ticketing, your own custom MCP or API
+
+NOTE Confidence: 0.8823428750038147
+
+00:07:31.284 --> 00:07:35.159
+access to your teams, BLOB storage, Azure Search.
+
+NOTE Confidence: 0.9421653747558594
+
+00:07:35.480 --> 00:07:38.200
+So this sounds simple, right?
+
+NOTE Confidence: 0.8680225014686584
+
+00:07:38.800 --> 00:07:40.160
+Does it sound simple to people?
+
+NOTE Confidence: 0.8774058818817139
+
+00:07:40.880 --> 00:07:41.760
+It sounds simple to you.
+
+NOTE Confidence: 0.8346215486526489
+
+00:07:41.760 --> 00:07:44.800
+OK, It sounds simple, OK, You're not convinced, right?
+
+NOTE Confidence: 0.8835897445678711
+
+00:07:45.160 --> 00:07:48.774
+So no, it is not simple because every single one
+
+NOTE Confidence: 0.8835897445678711
+
+00:07:48.850 --> 00:07:52.615
+of those tools has its own identity, is built from
+
+NOTE Confidence: 0.8835897445678711
+
+00:07:52.690 --> 00:07:56.832
+a different team, has a various set of protocols right,
+
+NOTE Confidence: 0.8835897445678711
+
+00:07:56.907 --> 00:07:59.919
+and has different credential management.
+
+NOTE Confidence: 0.8599309325218201
+
+00:08:00.360 --> 00:08:04.601
+Now multiply that with every single integration you need for
+
+NOTE Confidence: 0.8599309325218201
+
+00:08:04.672 --> 00:08:06.440
+that one filled up agent.
+
+NOTE Confidence: 0.9150429368019104
+
+00:08:06.760 --> 00:08:10.725
+But then you also have your customer support agent, your
+
+NOTE Confidence: 0.9150429368019104
+
+00:08:10.795 --> 00:08:15.468
+billing agent, your networks agent, your inventory agent, and what
+
+NOTE Confidence: 0.9150429368019104
+
+00:08:15.539 --> 00:08:20.142
+seems like 6 integrations ends up being hundreds of integrations,
+
+NOTE Confidence: 0.9150429368019104
+
+00:08:20.212 --> 00:08:25.240
+not taking into account things like permissions, failures in debugging.
+
+NOTE Confidence: 0.9176178574562073
+
+00:08:25.400 --> 00:08:28.843
+And what we find is developers are spending more time
+
+NOTE Confidence: 0.9176178574562073
+
+00:08:28.908 --> 00:08:32.806
+doing integrations and less time doing what makes them money
+
+NOTE Confidence: 0.9176178574562073
+
+00:08:32.871 --> 00:08:36.640
+and makes their business better, which is building agents.
+
+NOTE Confidence: 0.9102362394332886
+
+00:08:37.480 --> 00:08:42.124
+So you might remember this from earlier, what's missing that
+
+NOTE Confidence: 0.9102362394332886
+
+00:08:42.201 --> 00:08:46.613
+we need to solve in the agentic ecosystem, Tool creation,
+
+NOTE Confidence: 0.9102362394332886
+
+00:08:46.690 --> 00:08:49.400
+tool discovery and tool governance.
+
+NOTE Confidence: 0.8495175838470459
+
+00:08:50.040 --> 00:08:52.614
+Being able to curate the set of tools for your
+
+NOTE Confidence: 0.8495175838470459
+
+00:08:52.670 --> 00:08:55.691
+agent, being able to minimize the amount of tokens and
+
+NOTE Confidence: 0.8495175838470459
+
+00:08:55.747 --> 00:08:58.825
+over bloating into your agent in the context window and
+
+NOTE Confidence: 0.8495175838470459
+
+00:08:58.881 --> 00:09:00.840
+being able to securely govern them.
+
+NOTE Confidence: 0.9271507263183594
+
+00:09:01.440 --> 00:09:04.887
+And we think that toolbox is the beginning of the
+
+NOTE Confidence: 0.9271507263183594
+
+00:09:04.958 --> 00:09:07.279
+promise to enable that to happen.
+
+NOTE Confidence: 0.7980903387069702
+
+00:09:09.480 --> 00:09:13.320
+And this was in Satya's keynote earlier today, but yesterday.
+
+NOTE Confidence: 0.7776774764060974
+
+00:09:13.360 --> 00:09:14.720
+But what is a toolbox?
+
+NOTE Confidence: 0.7737131714820862
+
+00:09:16.200 --> 00:09:19.266
+A tool boxes are a usable bundle of tools managed
+
+NOTE Confidence: 0.7737131714820862
+
+00:09:19.329 --> 00:09:23.209
+in Foundry that agents can consume through a single consistent
+
+NOTE Confidence: 0.7737131714820862
+
+00:09:23.272 --> 00:09:25.400
+interface regardless of tool type.
+
+NOTE Confidence: 0.917001485824585
+
+00:09:25.720 --> 00:09:28.795
+That is a lot of words, so let's pay attention
+
+NOTE Confidence: 0.917001485824585
+
+00:09:28.862 --> 00:09:30.200
+to a couple of them.
+
+NOTE Confidence: 0.907214343547821
+
+00:09:31.680 --> 00:09:32.400
+Reusable.
+
+NOTE Confidence: 0.9510239958763123
+
+00:09:33.040 --> 00:09:35.617
+You should be able to build a set of tool
+
+NOTE Confidence: 0.9510239958763123
+
+00:09:35.680 --> 00:09:37.440
+boxes and be able to use it.
+
+NOTE Confidence: 0.5901079177856445
+
+00:09:37.560 --> 00:09:38.680
+Want build it once?
+
+NOTE Confidence: 0.8239730000495911
+
+00:09:38.760 --> 00:09:40.680
+Use it across any single agent.
+
+NOTE Confidence: 0.8194193243980408
+
+00:09:41.600 --> 00:09:45.494
+Managed Foundry handles a life cycle for you so you
+
+NOTE Confidence: 0.8194193243980408
+
+00:09:45.570 --> 00:09:46.640
+don't have to.
+
+NOTE Confidence: 0.9537837505340576
+
+00:09:47.200 --> 00:09:50.200
+And finally, a consistent interface.
+
+NOTE Confidence: 0.7343486547470093
+
+00:09:50.679 --> 00:09:54.960
+Your agent shouldn't have to care what the underlining tool
+
+NOTE Confidence: 0.7343486547470093
+
+00:09:55.033 --> 00:09:58.443
+type is, whether it has an MCP, Open AIAPI spec
+
+NOTE Confidence: 0.7343486547470093
+
+00:09:58.516 --> 00:10:00.039
+skill or a connector.
+
+NOTE Confidence: 0.9084333181381226
+
+00:10:00.240 --> 00:10:03.886
+We give you 1 unified endpoint with one oath and
+
+NOTE Confidence: 0.9084333181381226
+
+00:10:03.962 --> 00:10:08.519
+one experience that you can integrate into any single agent.
+
+NOTE Confidence: 0.9152200222015381
+
+00:10:10.040 --> 00:10:13.800
+So what are we doing with our tool boxes?
+
+NOTE Confidence: 0.9589673280715942
+
+00:10:13.800 --> 00:10:15.200
+We have 4 pillars.
+
+NOTE Confidence: 0.8375627398490906
+
+00:10:15.880 --> 00:10:20.688
+Build, You create tools, you create, You create tools in
+
+NOTE Confidence: 0.8375627398490906
+
+00:10:20.774 --> 00:10:25.239
+a named reusable bundle, configure and publish them.
+
+NOTE Confidence: 0.8203405737876892
+
+00:10:25.760 --> 00:10:28.671
+So if you go back to our filled up agent,
+
+NOTE Confidence: 0.8203405737876892
+
+00:10:28.742 --> 00:10:31.440
+you could have your filled up toolbox.
+
+NOTE Confidence: 0.8847576975822449
+
+00:10:31.600 --> 00:10:35.744
+So rather than having your ENTRA configuration, your SharePoint configuration,
+
+NOTE Confidence: 0.8847576975822449
+
+00:10:35.797 --> 00:10:38.401
+and all the others, you're putting it in a single
+
+NOTE Confidence: 0.8847576975822449
+
+00:10:38.454 --> 00:10:38.880
+toolbox.
+
+NOTE Confidence: 0.6789783239364624
+
+00:10:39.120 --> 00:10:42.720
+Regardless of toolbox to two type, you have discovery.
+
+NOTE Confidence: 0.9294272661209106
+
+00:10:43.400 --> 00:10:47.074
+This is the ability that when the agent makes a
+
+NOTE Confidence: 0.9294272661209106
+
+00:10:47.152 --> 00:10:51.687
+request through a prompt to the toolbox, it only retrieves
+
+NOTE Confidence: 0.9294272661209106
+
+00:10:51.765 --> 00:10:55.440
+the tool that it requires to complete the task.
+
+NOTE Confidence: 0.8857879042625427
+
+00:10:55.960 --> 00:11:01.190
+And then consuming, we have a single MCP compatible endpoint
+
+NOTE Confidence: 0.8857879042625427
+
+00:11:01.277 --> 00:11:05.200
+that exposes every tool to any agent runtime.
+
+NOTE Confidence: 0.8264794945716858
+
+00:11:05.600 --> 00:11:07.894
+So we're giving you the promises, we give you this
+
+NOTE Confidence: 0.8264794945716858
+
+00:11:07.939 --> 00:11:08.719
+unified endpoint.
+
+NOTE Confidence: 0.8482764363288879
+
+00:11:08.880 --> 00:11:11.897
+You can carry it across any single agent that you're
+
+NOTE Confidence: 0.8482764363288879
+
+00:11:11.955 --> 00:11:15.610
+building or leveraging for your business and governed will give
+
+NOTE Confidence: 0.8482764363288879
+
+00:11:15.668 --> 00:11:19.903
+you this centralized authentication and observability to monitor all your
+
+NOTE Confidence: 0.8482764363288879
+
+00:11:19.961 --> 00:11:20.600
+tool calls.
+
+NOTE Confidence: 0.951595664024353
+
+00:11:22.080 --> 00:11:24.202
+And these are the features that we have built to
+
+NOTE Confidence: 0.951595664024353
+
+00:11:24.246 --> 00:11:24.599
+do this.
+
+NOTE Confidence: 0.9020084738731384
+
+00:11:25.400 --> 00:11:27.120
+Toolbox is how you build them.
+
+NOTE Confidence: 0.7650175094604492
+
+00:11:27.640 --> 00:11:30.421
+Tool search is the protocol that is what the tool
+
+NOTE Confidence: 0.7650175094604492
+
+00:11:30.478 --> 00:11:31.159
+we've built.
+
+NOTE Confidence: 0.9314234256744385
+
+00:11:31.160 --> 00:11:33.724
+So you can actually search and discover your tools at
+
+NOTE Confidence: 0.9314234256744385
+
+00:11:33.772 --> 00:11:34.159
+runtime.
+
+NOTE Confidence: 0.8870987892150879
+
+00:11:34.559 --> 00:11:38.496
+The unified is endpoint is an MCP compatible endpoint and
+
+NOTE Confidence: 0.8870987892150879
+
+00:11:38.565 --> 00:11:42.295
+then control and visibility where we enable you to add
+
+NOTE Confidence: 0.8870987892150879
+
+00:11:42.364 --> 00:11:45.679
+your own policies and guardrails And the future.
+
+NOTE Confidence: 0.8885846734046936
+
+00:11:45.679 --> 00:11:48.544
+We're also going to be giving you a governed dashboard
+
+NOTE Confidence: 0.8885846734046936
+
+00:11:48.597 --> 00:11:50.559
+where you can see it in more details.
+
+NOTE Confidence: 0.9109539985656738
+
+00:11:51.320 --> 00:11:56.269
+So the promise of toolbox is you can consume it
+
+NOTE Confidence: 0.9109539985656738
+
+00:11:56.375 --> 00:11:59.639
+across any agent, hosted agent.
+
+NOTE Confidence: 0.7591044902801514
+
+00:12:00.040 --> 00:12:03.834
+You can use it in the GitHub Copilot or CLI
+
+NOTE Confidence: 0.7591044902801514
+
+00:12:03.923 --> 00:12:05.600
+GitHub copilot SDK.
+
+NOTE Confidence: 0.7993856072425842
+
+00:12:06.040 --> 00:12:08.440
+We want to get working in cloud code as well.
+
+NOTE Confidence: 0.8903114795684814
+
+00:12:08.600 --> 00:12:10.923
+And soon you'll be able to use it also in
+
+NOTE Confidence: 0.8903114795684814
+
+00:12:10.979 --> 00:12:13.359
+your Microsoft Copilot Studio application.
+
+NOTE Confidence: 0.8611986637115479
+
+00:12:13.880 --> 00:12:16.793
+So the tool like my life cycle management is that
+
+NOTE Confidence: 0.8611986637115479
+
+00:12:16.852 --> 00:12:20.063
+you build a toolbox and you consume A unified endpoint
+
+NOTE Confidence: 0.8611986637115479
+
+00:12:20.123 --> 00:12:22.680
+and you know it's all going to be governed.
+
+NOTE Confidence: 0.8154631853103638
+
+00:12:22.960 --> 00:12:26.120
+So I promise that there will be demos.
+
+NOTE Confidence: 0.9508125185966492
+
+00:12:26.120 --> 00:12:29.720
+So fingers crossed, nothing breaks.
+
+NOTE Confidence: 0.9278817176818848
+
+00:12:31.360 --> 00:12:32.960
+So let's go and see some demos.
+
+NOTE Confidence: 0.5299996733665466
+
+00:12:41.920 --> 00:12:45.680
+All right, yeah, so it's showing up.
+
+NOTE Confidence: 0.9130517840385437
+
+00:12:46.320 --> 00:12:48.950
+So I'm going to show you how you can build
+
+NOTE Confidence: 0.9130517840385437
+
+00:12:49.013 --> 00:12:49.640
+a toolbox.
+
+NOTE Confidence: 0.9316606521606445
+
+00:12:50.080 --> 00:12:52.599
+You can build a toolbox in code or you can
+
+NOTE Confidence: 0.9316606521606445
+
+00:12:52.659 --> 00:12:54.519
+build it in the Foundry portal.
+
+NOTE Confidence: 0.9479385614395142
+
+00:12:54.880 --> 00:12:57.387
+But I wanted to start by showing you what tool
+
+NOTE Confidence: 0.9479385614395142
+
+00:12:57.442 --> 00:13:00.222
+configuration would look like if you did not have a
+
+NOTE Confidence: 0.9479385614395142
+
+00:13:00.276 --> 00:13:01.039
+toolbox today.
+
+NOTE Confidence: 0.8602089881896973
+
+00:13:01.679 --> 00:13:04.842
+So the first thing you need to do is you're
+
+NOTE Confidence: 0.8602089881896973
+
+00:13:04.916 --> 00:13:08.520
+configuring every single MCP endpoint separately.
+
+NOTE Confidence: 0.915343165397644
+
+00:13:09.520 --> 00:13:15.572
+But where it gets really interesting is if I go
+
+NOTE Confidence: 0.915343165397644
+
+00:13:15.701 --> 00:13:20.852
+down to line 33 all the way to line 104,
+
+NOTE Confidence: 0.915343165397644
+
+00:13:20.981 --> 00:13:27.419
+that's all off configuration for your application.
+
+NOTE Confidence: 0.9663325548171997
+
+00:13:27.940 --> 00:13:30.180
+And this is only three MCP servers.
+
+NOTE Confidence: 0.907123327255249
+
+00:13:30.460 --> 00:13:34.697
+So imagine if you required multiple MCP servers, that could
+
+NOTE Confidence: 0.907123327255249
+
+00:13:34.769 --> 00:13:38.360
+become a lot more robust very, very, very quickly.
+
+NOTE Confidence: 0.9119482636451721
+
+00:13:38.679 --> 00:13:42.083
+And imagine if you're doing different protocols or like it
+
+NOTE Confidence: 0.9119482636451721
+
+00:13:42.142 --> 00:13:45.487
+just gets longer and you shouldn't be spending time doing
+
+NOTE Confidence: 0.9119482636451721
+
+00:13:45.546 --> 00:13:45.839
+this.
+
+NOTE Confidence: 0.9017537832260132
+
+00:13:46.160 --> 00:13:50.411
+Also, this code doesn't run, it's 100% generated by AI,
+
+NOTE Confidence: 0.9017537832260132
+
+00:13:50.489 --> 00:13:54.200
+but we will have demos for you to share shortly.
+
+NOTE Confidence: 0.9034441709518433
+
+00:13:54.920 --> 00:13:57.080
+The next one is with Toolbox.
+
+NOTE Confidence: 0.8235457539558411
+
+00:13:59.120 --> 00:13:59.640
+That's it.
+
+NOTE Confidence: 0.9466683268547058
+
+00:14:01.240 --> 00:14:03.040
+I have configured authentication.
+
+NOTE Confidence: 0.831031084060669
+
+00:14:03.360 --> 00:14:05.869
+I have all my different app, all my servers in
+
+NOTE Confidence: 0.831031084060669
+
+00:14:05.923 --> 00:14:06.959
+a specific toolbox.
+
+NOTE Confidence: 0.9273368716239929
+
+00:14:07.200 --> 00:14:09.229
+It will generate a URL for me and I can
+
+NOTE Confidence: 0.9273368716239929
+
+00:14:09.281 --> 00:14:12.039
+then put that in any single application of my choice.
+
+NOTE Confidence: 0.9374744296073914
+
+00:14:13.400 --> 00:14:15.839
+Now the last thing that I wanted to show you
+
+NOTE Confidence: 0.9374744296073914
+
+00:14:15.895 --> 00:14:19.000
+in toolbox is something that we have called tool search.
+
+NOTE Confidence: 0.8767049908638
+
+00:14:19.240 --> 00:14:21.684
+And what tool search does it is a tool within
+
+NOTE Confidence: 0.8767049908638
+
+00:14:21.739 --> 00:14:25.162
+toolbox that actually searches for the specific tool within the
+
+NOTE Confidence: 0.8767049908638
+
+00:14:25.216 --> 00:14:28.585
+toolbox by leveraging and pulling all the metadata and finding
+
+NOTE Confidence: 0.8767049908638
+
+00:14:28.639 --> 00:14:29.399
+the right one.
+
+NOTE Confidence: 0.8984999060630798
+
+00:14:29.680 --> 00:14:33.163
+So in that situation, you're not loading everything into the
+
+NOTE Confidence: 0.8984999060630798
+
+00:14:33.221 --> 00:14:36.762
+context window, you're only loading the tool that is required
+
+NOTE Confidence: 0.8984999060630798
+
+00:14:36.820 --> 00:14:38.040
+to complete the task.
+
+NOTE Confidence: 0.9005153179168701
+
+00:14:38.800 --> 00:14:42.111
+So in summary, if you look at this diagram, you
+
+NOTE Confidence: 0.9005153179168701
+
+00:14:42.181 --> 00:14:43.520
+can take a picture.
+
+NOTE Confidence: 0.8965460658073425
+
+00:14:43.920 --> 00:14:48.232
+You're going from manually wiring every single tool to your
+
+NOTE Confidence: 0.8965460658073425
+
+00:14:48.305 --> 00:14:52.251
+specific agent to just attaching it to a toolbox which
+
+NOTE Confidence: 0.8965460658073425
+
+00:14:52.324 --> 00:14:55.759
+exposed to an agent through a unified endpoint.
+
+NOTE Confidence: 0.9192156195640564
+
+00:14:56.000 --> 00:14:59.745
+And then tool search enables the search and makes a
+
+NOTE Confidence: 0.9192156195640564
+
+00:14:59.819 --> 00:15:00.479
+decision.
+
+NOTE Confidence: 0.8829092979431152
+
+00:15:00.480 --> 00:15:03.160
+So this one says I need AI, need GitHub.
+
+NOTE Confidence: 0.9250032901763916
+
+00:15:03.480 --> 00:15:06.784
+It just directly picks the GitHub toolbox that is the
+
+NOTE Confidence: 0.9250032901763916
+
+00:15:06.847 --> 00:15:09.839
+only one that is loaded into the context window.
+
+NOTE Confidence: 0.9411301016807556
+
+00:15:10.720 --> 00:15:13.092
+Now let me take you on a tour of what
+
+NOTE Confidence: 0.9411301016807556
+
+00:15:13.156 --> 00:15:14.760
+it looks like in Foundry.
+
+NOTE Confidence: 0.8640882968902588
+
+00:15:15.240 --> 00:15:17.760
+You can build a toolbox in Foundry.
+
+NOTE Confidence: 0.8954391479492188
+
+00:15:17.760 --> 00:15:19.440
+You can build it through code.
+
+NOTE Confidence: 0.8352106809616089
+
+00:15:19.640 --> 00:15:23.165
+You can also do it in the Foundry through the
+
+NOTE Confidence: 0.8352106809616089
+
+00:15:23.243 --> 00:15:25.280
+tool, the Foundry toolkit.
+
+NOTE Confidence: 0.8043599128723145
+
+00:15:25.680 --> 00:15:27.320
+I always get that thing mixed up in my mind.
+
+NOTE Confidence: 0.9530585408210754
+
+00:15:27.320 --> 00:15:28.360
+So sorry about that.
+
+NOTE Confidence: 0.9134138226509094
+
+00:15:28.800 --> 00:15:31.779
+So when I go into Foundry today and I click
+
+NOTE Confidence: 0.9134138226509094
+
+00:15:31.848 --> 00:15:35.105
+on build, you're going to present it and you go
+
+NOTE Confidence: 0.9134138226509094
+
+00:15:35.174 --> 00:15:38.916
+to tools, you're going to notice that there is toolbox
+
+NOTE Confidence: 0.9134138226509094
+
+00:15:38.985 --> 00:15:41.479
+tools and surprise, surprise skills.
+
+NOTE Confidence: 0.8644647598266602
+
+00:15:42.240 --> 00:15:44.889
+So I'm going to start with skills and I'm going
+
+NOTE Confidence: 0.8644647598266602
+
+00:15:44.945 --> 00:15:45.959
+to end on Toolbox.
+
+NOTE Confidence: 0.8603062033653259
+
+00:15:45.960 --> 00:15:49.224
+So you all saw that really snazzy image that I
+
+NOTE Confidence: 0.8603062033653259
+
+00:15:49.295 --> 00:15:50.360
+created, right?
+
+NOTE Confidence: 0.9618918895721436
+
+00:15:50.360 --> 00:15:51.560
+I bet you all loved it.
+
+NOTE Confidence: 0.9043049812316895
+
+00:15:52.000 --> 00:15:54.639
+Let's say I wanted to share it with everybody on
+
+NOTE Confidence: 0.9043049812316895
+
+00:15:54.694 --> 00:15:57.279
+my team because I built a skill that enables me
+
+NOTE Confidence: 0.9043049812316895
+
+00:15:57.334 --> 00:16:00.799
+to make better architectural diagrams and it works pretty well.
+
+NOTE Confidence: 0.9196746349334717
+
+00:16:00.800 --> 00:16:06.810
+So I can go in here, upload a skill, browse
+
+NOTE Confidence: 0.9196746349334717
+
+00:16:06.950 --> 00:16:12.960
+from my desktop, if I can find it, there it
+
+NOTE Confidence: 0.9196746349334717
+
+00:16:13.100 --> 00:16:13.519
+is.
+
+NOTE Confidence: 0.5460866093635559
+
+00:16:13.560 --> 00:16:15.120
+There's my art skill.
+
+NOTE Confidence: 0.9127833843231201
+
+00:16:15.640 --> 00:16:17.643
+I will also make this available in the repo just
+
+NOTE Confidence: 0.9127833843231201
+
+00:16:17.685 --> 00:16:18.519
+in case you want it.
+
+NOTE Confidence: 0.9492292404174805
+
+00:16:20.080 --> 00:16:20.880
+Give it a name.
+
+NOTE Confidence: 0.667732298374176
+
+00:16:28.940 --> 00:16:29.420
+OK?
+
+NOTE Confidence: 0.650885283946991
+
+00:16:29.500 --> 00:16:30.900
+Must have Laura's face.
+
+NOTE Confidence: 0.8849291205406189
+
+00:16:37.270 --> 00:16:40.685
+And if this uploads successfully, I'll know every single other
+
+NOTE Confidence: 0.8849291205406189
+
+00:16:40.740 --> 00:16:43.109
+demo is going to be absolutely magnificent.
+
+NOTE Confidence: 0.8664764761924744
+
+00:16:44.160 --> 00:16:45.280
+It uploaded, right?
+
+NOTE Confidence: 0.9254263043403625
+
+00:16:45.280 --> 00:16:48.967
+So now this is available to any single agent that
+
+NOTE Confidence: 0.9254263043403625
+
+00:16:49.043 --> 00:16:50.999
+is in my specific project.
+
+NOTE Confidence: 0.9614734053611755
+
+00:16:51.720 --> 00:16:55.998
+Now, I told you how tools are constantly growing and
+
+NOTE Confidence: 0.9614734053611755
+
+00:16:56.080 --> 00:17:00.441
+I am very excited to share that browser automation is
+
+NOTE Confidence: 0.9614734053611755
+
+00:17:00.523 --> 00:17:01.840
+available today.
+
+NOTE Confidence: 0.872143030166626
+
+00:17:02.760 --> 00:17:05.169
+This is one of the new tools that we have
+
+NOTE Confidence: 0.872143030166626
+
+00:17:05.228 --> 00:17:07.519
+delivered built on Power on Playwright.
+
+NOTE Confidence: 0.900505781173706
+
+00:17:07.680 --> 00:17:10.680
+This enables you to scrape information and fill in forms.
+
+NOTE Confidence: 0.9648845791816711
+
+00:17:10.680 --> 00:17:12.200
+So let me just show you a quick demo.
+
+NOTE Confidence: 0.8287686705589294
+
+00:17:12.640 --> 00:17:15.363
+Now, as a person who is a horrible typer, I'm
+
+NOTE Confidence: 0.8287686705589294
+
+00:17:15.424 --> 00:17:18.752
+going to copy and paste unapologetically and try to see
+
+NOTE Confidence: 0.8287686705589294
+
+00:17:18.813 --> 00:17:19.600
+if this runs.
+
+NOTE Confidence: 0.9597577452659607
+
+00:17:19.840 --> 00:17:22.363
+If it doesn't, the browser automation team is here in
+
+NOTE Confidence: 0.9597577452659607
+
+00:17:22.411 --> 00:17:22.839
+the room.
+
+NOTE Confidence: 0.91335529088974
+
+00:17:24.160 --> 00:17:25.760
+I'll get them on stage.
+
+NOTE Confidence: 0.7952723503112793
+
+00:17:26.240 --> 00:17:28.320
+I will get this running right.
+
+NOTE Confidence: 0.9048227667808533
+
+00:17:28.320 --> 00:17:31.400
+So fingers crossed.
+
+NOTE Confidence: 0.891419529914856
+
+00:17:31.440 --> 00:17:33.740
+If not, I promise you I have a GIF that
+
+NOTE Confidence: 0.891419529914856
+
+00:17:33.798 --> 00:17:36.040
+actually demonstrates that this works.
+
+NOTE Confidence: 0.8722092509269714
+
+00:17:38.560 --> 00:17:43.525
+OK, while we're while that's happening, I'll pretend to one
+
+NOTE Confidence: 0.8722092509269714
+
+00:17:43.610 --> 00:17:46.640
+that I did earlier and there you go.
+
+NOTE Confidence: 0.88691246509552
+
+00:17:46.800 --> 00:17:49.812
+It sends it over and you will see in a
+
+NOTE Confidence: 0.88691246509552
+
+00:17:49.891 --> 00:17:53.617
+moment what has happened here is that we put in
+
+NOTE Confidence: 0.88691246509552
+
+00:17:53.696 --> 00:17:57.739
+a request of what it's going to do is automatically
+
+NOTE Confidence: 0.88691246509552
+
+00:17:57.818 --> 00:17:59.799
+fill in a Microsoft form.
+
+NOTE Confidence: 0.7116702795028687
+
+00:18:02.160 --> 00:18:06.480
+OK, And that's browser automation.
+
+NOTE Confidence: 0.9226846098899841
+
+00:18:07.680 --> 00:18:10.958
+OK, the next thing I wanted to show you is
+
+NOTE Confidence: 0.9226846098899841
+
+00:18:11.036 --> 00:18:14.079
+how you can create and build a toolbox.
+
+NOTE Confidence: 0.8973032236099243
+
+00:18:15.520 --> 00:18:22.892
+Go into Foundry, click toolbox, create, give it a name,
+
+NOTE Confidence: 0.8973032236099243
+
+00:18:23.026 --> 00:18:29.862
+and you'll see the option to add tools, which shows
+
+NOTE Confidence: 0.8973032236099243
+
+00:18:29.996 --> 00:18:36.966
+you every single tool that's in the catalog, as well
+
+NOTE Confidence: 0.8973032236099243
+
+00:18:37.100 --> 00:18:40.719
+as an option to add skills.
+
+NOTE Confidence: 0.9189392924308777
+
+00:18:41.440 --> 00:18:43.800
+So I could add the skill that I just created.
+
+NOTE Confidence: 0.8093860745429993
+
+00:18:44.280 --> 00:18:45.920
+OK, there's no sales in this project.
+
+NOTE Confidence: 0.8959088921546936
+
+00:18:46.680 --> 00:18:53.680
+OK, so while this loads, give me one second.
+
+NOTE Confidence: 0.8194223046302795
+
+00:18:59.470 --> 00:19:04.967
+Yeah, let's we're going to switch screens because I've been
+
+NOTE Confidence: 0.8194223046302795
+
+00:19:05.060 --> 00:19:07.390
+having permission issues.
+
+NOTE Confidence: 0.7772579193115234
+
+00:19:07.510 --> 00:19:09.879
+Now, you know, this demo is live, but this demo
+
+NOTE Confidence: 0.7772579193115234
+
+00:19:09.929 --> 00:19:11.190
+is also going to be live.
+
+NOTE Confidence: 0.8414701223373413
+
+00:19:14.520 --> 00:19:17.177
+Who says CEOs are the only people who get demo
+
+NOTE Confidence: 0.8414701223373413
+
+00:19:17.235 --> 00:19:18.680
+ghosts in the background?
+
+NOTE Confidence: 0.9447535872459412
+
+00:19:18.680 --> 00:19:19.600
+I have one too.
+
+NOTE Confidence: 0.759563684463501
+
+00:19:22.080 --> 00:19:25.040
+OK, All right.
+
+NOTE Confidence: 0.5083751082420349
+
+00:19:27.400 --> 00:19:27.720
+Is it good?
+
+NOTE Confidence: 0.8097096085548401
+
+00:19:30.600 --> 00:19:32.120
+Yes, it worked perfectly.
+
+NOTE Confidence: 0.8456436991691589
+
+00:19:32.560 --> 00:19:34.080
+All right, so let's go ahead.
+
+NOTE Confidence: 0.88005530834198
+
+00:19:34.080 --> 00:19:35.440
+We're going to create a toolbox.
+
+NOTE Confidence: 0.6422508955001831
+
+00:19:35.480 --> 00:19:36.480
+So I added one.
+
+NOTE Confidence: 0.9189696311950684
+
+00:19:37.080 --> 00:19:40.869
+So I have a toolbox here that Linda created for
+
+NOTE Confidence: 0.9189696311950684
+
+00:19:40.950 --> 00:19:42.160
+me as a backup.
+
+NOTE Confidence: 0.8668347597122192
+
+00:19:42.600 --> 00:19:46.588
+And you'll notice there's an option for you to turn
+
+NOTE Confidence: 0.8668347597122192
+
+00:19:46.666 --> 00:19:47.839
+tool search on.
+
+NOTE Confidence: 0.9490757584571838
+
+00:19:48.119 --> 00:19:50.320
+So I'm just going to turn that off for a
+
+NOTE Confidence: 0.9490757584571838
+
+00:19:50.375 --> 00:19:50.760
+moment.
+
+NOTE Confidence: 0.9152629375457764
+
+00:19:51.520 --> 00:19:54.453
+I'm going to set this one as default and this
+
+NOTE Confidence: 0.9152629375457764
+
+00:19:54.519 --> 00:19:57.583
+is going to set the endpoint in my hosted agent
+
+NOTE Confidence: 0.9152629375457764
+
+00:19:57.648 --> 00:19:59.800
+to this specific toolbox version.
+
+NOTE Confidence: 0.9534764885902405
+
+00:20:00.800 --> 00:20:04.892
+So when I go over to my agent and I
+
+NOTE Confidence: 0.9534764885902405
+
+00:20:05.009 --> 00:20:06.879
+am going to say.
+
+NOTE Confidence: 0.6883794069290161
+
+00:20:12.200 --> 00:20:17.160
+Find me three.
+
+NOTE Confidence: 0.9662924408912659
+
+00:20:17.960 --> 00:20:19.200
+Let's see if this works.
+
+NOTE Confidence: 0.7403342127799988
+
+00:20:29.330 --> 00:20:34.930
+OK, all right, not working.
+
+NOTE Confidence: 0.9529380202293396
+
+00:20:34.930 --> 00:20:35.770
+It is fine.
+
+NOTE Confidence: 0.9572031497955322
+
+00:20:35.770 --> 00:20:36.490
+It is fine.
+
+NOTE Confidence: 0.8729879856109619
+
+00:20:36.570 --> 00:20:38.090
+It means that they're just too many people.
+
+NOTE Confidence: 0.6817169189453125
+
+00:20:38.130 --> 00:20:39.730
+So, OK, something's happening.
+
+NOTE Confidence: 0.7004987001419067
+
+00:20:44.930 --> 00:20:45.250
+All right?
+
+NOTE Confidence: 0.7575600743293762
+
+00:20:45.250 --> 00:20:46.930
+This, this is this is a good sign.
+
+NOTE Confidence: 0.8813363909721375
+
+00:20:48.119 --> 00:20:50.556
+So what this is doing, it is going into a
+
+NOTE Confidence: 0.8813363909721375
+
+00:20:50.615 --> 00:20:53.706
+work order, finding me the work order, and it should
+
+NOTE Confidence: 0.8813363909721375
+
+00:20:53.765 --> 00:20:56.618
+generate me to see if the work order is complete
+
+NOTE Confidence: 0.8813363909721375
+
+00:20:56.677 --> 00:20:58.519
+and if the parts are available.
+
+NOTE Confidence: 0.845723569393158
+
+00:21:01.040 --> 00:21:03.200
+OK, it worked, right?
+
+NOTE Confidence: 0.9100243449211121
+
+00:21:03.200 --> 00:21:04.440
+That was a live demo.
+
+NOTE Confidence: 0.9233313798904419
+
+00:21:06.120 --> 00:21:07.720
+Thank you for your patience.
+
+NOTE Confidence: 0.7252296209335327
+
+00:21:08.160 --> 00:21:08.480
+Right.
+
+NOTE Confidence: 0.8918337821960449
+
+00:21:08.920 --> 00:21:12.234
+OK, so I don't want to eat into too much
+
+NOTE Confidence: 0.8918337821960449
+
+00:21:12.317 --> 00:21:15.962
+of Joe's time, so I'm just going to show you
+
+NOTE Confidence: 0.8918337821960449
+
+00:21:16.045 --> 00:21:19.774
+one last thing in Toolbox When I go back, you
+
+NOTE Confidence: 0.8918337821960449
+
+00:21:19.857 --> 00:21:24.000
+will notice that you are given a unified endpoint.
+
+NOTE Confidence: 0.9397778511047363
+
+00:21:24.200 --> 00:21:28.047
+You can take this unified endpoint into any single application
+
+NOTE Confidence: 0.9397778511047363
+
+00:21:28.109 --> 00:21:29.040
+of your choice.
+
+NOTE Confidence: 0.9706740379333496
+
+00:21:29.400 --> 00:21:32.167
+So I want to show you one that is actually
+
+NOTE Confidence: 0.9706740379333496
+
+00:21:32.232 --> 00:21:32.759
+running.
+
+NOTE Confidence: 0.964282214641571
+
+00:21:32.760 --> 00:21:34.000
+You can go there today.
+
+NOTE Confidence: 0.5866203904151917
+
+00:21:34.400 --> 00:21:36.320
+AK Oh, I forgot.
+
+NOTE Confidence: 0.8062632083892822
+
+00:21:40.520 --> 00:21:41.400
+Oh, the third tab.
+
+NOTE Confidence: 0.7333258390426636
+
+00:21:42.760 --> 00:21:44.400
+Oh yes, the FIBI agent.
+
+NOTE Confidence: 0.8721966743469238
+
+00:21:44.840 --> 00:21:48.940
+So FIBI agent is using the exact same MCP endpoint
+
+NOTE Confidence: 0.8721966743469238
+
+00:21:49.022 --> 00:21:52.385
+and I want to show you this is all hosted
+
+NOTE Confidence: 0.8721966743469238
+
+00:21:52.467 --> 00:21:54.600
+in an Azure Container App.
+
+NOTE Confidence: 0.9278017282485962
+
+00:21:55.280 --> 00:21:58.459
+It's going to run the work order and I want
+
+NOTE Confidence: 0.9278017282485962
+
+00:21:58.533 --> 00:22:02.674
+you to pay particular attention to the activity live and
+
+NOTE Confidence: 0.9278017282485962
+
+00:22:02.748 --> 00:22:04.079
+the activity view.
+
+NOTE Confidence: 0.8994105458259583
+
+00:22:04.600 --> 00:22:09.351
+Once it is working, it will show you which tools
+
+NOTE Confidence: 0.8994105458259583
+
+00:22:09.450 --> 00:22:14.399
+are called Form Tool Search and how it was loaded.
+
+NOTE Confidence: 0.805648684501648
+
+00:22:14.720 --> 00:22:17.113
+And with that being said, I'm going to hand it
+
+NOTE Confidence: 0.805648684501648
+
+00:22:17.166 --> 00:22:19.559
+over to you Joe, because we are short on time.
+
+NOTE Confidence: 0.3300325274467468
+
+00:22:23.960 --> 00:22:24.160
+Yeah.
+
+NOTE Confidence: 0.8637763857841492
+
+00:22:31.120 --> 00:22:31.840
+Thanks so much, Maria.
+
+NOTE Confidence: 0.7534279823303223
+
+00:22:31.840 --> 00:22:32.400
+Appreciate it.
+
+NOTE Confidence: 0.7372583746910095
+
+00:22:33.280 --> 00:22:35.080
+All right, we're going to jump back to PowerPoint.
+
+NOTE Confidence: 0.8399902582168579
+
+00:22:42.280 --> 00:22:46.019
+All right, so so far we've seen how Toolbox solves
+
+NOTE Confidence: 0.8399902582168579
+
+00:22:46.094 --> 00:22:50.956
+problems with agents accessing tools, saves, saves tokens on tool
+
+NOTE Confidence: 0.8399902582168579
+
+00:22:51.031 --> 00:22:51.479
+calls.
+
+NOTE Confidence: 0.939314067363739
+
+00:22:51.880 --> 00:22:54.612
+But now we're going to talk about agents in the
+
+NOTE Confidence: 0.939314067363739
+
+00:22:54.671 --> 00:22:57.811
+real world where all the content you want doesn't come
+
+NOTE Confidence: 0.939314067363739
+
+00:22:57.869 --> 00:22:58.159
+from.
+
+NOTE Confidence: 0.8378243446350098
+
+00:22:58.160 --> 00:23:00.662
+AP is often the content you need is in the
+
+NOTE Confidence: 0.8378243446350098
+
+00:23:00.721 --> 00:23:03.879
+document, it's in a video, it's in a PowerPoint deck,
+
+NOTE Confidence: 0.8378243446350098
+
+00:23:03.939 --> 00:23:06.680
+and the agent needs to go access that content.
+
+NOTE Confidence: 0.8922496438026428
+
+00:23:07.520 --> 00:23:11.490
+But when agents try to access that content, they often
+
+NOTE Confidence: 0.8922496438026428
+
+00:23:11.563 --> 00:23:15.239
+break, they scramble costs, grow, use more tokens.
+
+NOTE Confidence: 0.905773401260376
+
+00:23:15.240 --> 00:23:17.514
+The agent tries to write custom code to go crack
+
+NOTE Confidence: 0.905773401260376
+
+00:23:17.561 --> 00:23:18.319
+that PowerPoint.
+
+NOTE Confidence: 0.8586702942848206
+
+00:23:18.680 --> 00:23:21.445
+It might go miss content, it might go and try
+
+NOTE Confidence: 0.8586702942848206
+
+00:23:21.506 --> 00:23:24.026
+to find a table but not be able to access
+
+NOTE Confidence: 0.8586702942848206
+
+00:23:24.088 --> 00:23:25.440
+the data in the table.
+
+NOTE Confidence: 0.8806660771369934
+
+00:23:26.680 --> 00:23:28.546
+These are the kind of these are the kind of
+
+NOTE Confidence: 0.8806660771369934
+
+00:23:28.589 --> 00:23:30.759
+problems we built constant understanding to solve.
+
+NOTE Confidence: 0.864490270614624
+
+00:23:32.040 --> 00:23:36.744
+So content understanding takes messy multimodal content and turns it
+
+NOTE Confidence: 0.864490270614624
+
+00:23:36.814 --> 00:23:39.720
+into clean, structured agent ready output.
+
+NOTE Confidence: 0.7955732941627502
+
+00:23:40.600 --> 00:23:42.506
+So you can see here the all any kind of
+
+NOTE Confidence: 0.7955732941627502
+
+00:23:42.555 --> 00:23:44.560
+file can come into content understanding.
+
+NOTE Confidence: 0.900691032409668
+
+00:23:45.119 --> 00:23:50.271
+It gets parsed, classified, extracted, and turns into structured Jason
+
+NOTE Confidence: 0.900691032409668
+
+00:23:50.345 --> 00:23:54.835
+with key value pairs and markdown that represents the details
+
+NOTE Confidence: 0.900691032409668
+
+00:23:54.908 --> 00:23:57.999
+of what's in that file with high fidelity.
+
+NOTE Confidence: 0.9657709002494812
+
+00:23:59.200 --> 00:24:00.840
+And this isn't just a brand new service.
+
+NOTE Confidence: 0.8578885793685913
+
+00:24:01.440 --> 00:24:04.853
+This has been in GAGAD since last six months ago
+
+NOTE Confidence: 0.8578885793685913
+
+00:24:04.924 --> 00:24:08.053
+and it's been in production for a year and a
+
+NOTE Confidence: 0.8578885793685913
+
+00:24:08.124 --> 00:24:08.480
+half.
+
+NOTE Confidence: 0.8788727521896362
+
+00:24:09.080 --> 00:24:12.859
+Foundry IQ uses it to is as its content extraction
+
+NOTE Confidence: 0.8788727521896362
+
+00:24:12.934 --> 00:24:17.016
+layer to make sure it has the highest fidelity version
+
+NOTE Confidence: 0.8788727521896362
+
+00:24:17.091 --> 00:24:20.417
+of the input to give you as as grounding for
+
+NOTE Confidence: 0.8788727521896362
+
+00:24:20.493 --> 00:24:21.399
+your agents.
+
+NOTE Confidence: 0.8226788640022278
+
+00:24:21.800 --> 00:24:25.171
+And Microsoft 365 Copilot uses it when you ask a
+
+NOTE Confidence: 0.8226788640022278
+
+00:24:25.241 --> 00:24:27.559
+question about a document or PDF.
+
+NOTE Confidence: 0.8635377883911133
+
+00:24:28.080 --> 00:24:30.695
+But what's most interesting about content understanding is not how
+
+NOTE Confidence: 0.8635377883911133
+
+00:24:30.735 --> 00:24:32.360
+we use it, it's how our customers use it.
+
+NOTE Confidence: 0.8918635249137878
+
+00:24:32.800 --> 00:24:35.680
+So we worked with customers like Walter Skewers.
+
+NOTE Confidence: 0.8350517153739929
+
+00:24:36.160 --> 00:24:40.296
+They are they they build trusted professional tools for tax
+
+NOTE Confidence: 0.8350517153739929
+
+00:24:40.366 --> 00:24:42.679
+automation, legal and healthcare.
+
+NOTE Confidence: 0.7990284562110901
+
+00:24:43.000 --> 00:24:46.289
+And they use content understanding in their CCH access tax
+
+NOTE Confidence: 0.7990284562110901
+
+00:24:46.346 --> 00:24:46.799
+product.
+
+NOTE Confidence: 0.9137085676193237
+
+00:24:47.720 --> 00:24:51.377
+They use it to ingest things like tax forms, supporting
+
+NOTE Confidence: 0.9137085676193237
+
+00:24:51.443 --> 00:24:55.766
+documents for taxes, other financial documents and make sure they
+
+NOTE Confidence: 0.9137085676193237
+
+00:24:55.832 --> 00:24:59.490
+come in and structured format so that they can automate
+
+NOTE Confidence: 0.9137085676193237
+
+00:24:59.556 --> 00:25:02.815
+your processing end to end for your tax, for your
+
+NOTE Confidence: 0.9137085676193237
+
+00:25:02.881 --> 00:25:03.479
+tax prep.
+
+NOTE Confidence: 0.7259920835494995
+
+00:25:05.000 --> 00:25:09.011
+Also, Data Sniper is an agentic platform for audit and
+
+NOTE Confidence: 0.7259920835494995
+
+00:25:09.085 --> 00:25:09.679
+finance.
+
+NOTE Confidence: 0.8016124367713928
+
+00:25:10.080 --> 00:25:14.640
+They use content understanding to power their AI extraction capability.
+
+NOTE Confidence: 0.9015237092971802
+
+00:25:15.000 --> 00:25:17.931
+It's powered by content understanding, and it allows them to
+
+NOTE Confidence: 0.9015237092971802
+
+00:25:17.980 --> 00:25:20.521
+take any kind of document and bring it directly into
+
+NOTE Confidence: 0.9015237092971802
+
+00:25:20.570 --> 00:25:24.039
+Excel, where financial professionals want to live in structured format.
+
+NOTE Confidence: 0.8747294545173645
+
+00:25:25.160 --> 00:25:28.626
+They talk about it as enabling faster reviews, more reliable
+
+NOTE Confidence: 0.8747294545173645
+
+00:25:28.684 --> 00:25:30.360
+evidence, and trustworthy AI.
+
+NOTE Confidence: 0.8776991963386536
+
+00:25:31.200 --> 00:25:33.534
+So with that context, we're going to dive deeper into
+
+NOTE Confidence: 0.8776991963386536
+
+00:25:33.578 --> 00:25:36.133
+what content understanding is, and then we'll come back to
+
+NOTE Confidence: 0.8776991963386536
+
+00:25:36.177 --> 00:25:38.159
+see the agent in that FIBBY demo in practice.
+
+NOTE Confidence: 0.8757610321044922
+
+00:25:39.520 --> 00:25:43.508
+So content understanding is a pipeline, a single pipeline that
+
+NOTE Confidence: 0.8757610321044922
+
+00:25:43.572 --> 00:25:45.759
+does parse, extract, and Classify.
+
+NOTE Confidence: 0.8403811454772949
+
+00:25:46.440 --> 00:25:48.532
+Parse allows you to take any kind of input document
+
+NOTE Confidence: 0.8403811454772949
+
+00:25:48.573 --> 00:25:49.640
+and turn it into Markdown.
+
+NOTE Confidence: 0.9071719646453857
+
+00:25:50.280 --> 00:25:53.392
+Then Classify decides what kind of document that thing is
+
+NOTE Confidence: 0.9071719646453857
+
+00:25:53.447 --> 00:25:56.560
+or breaks into pieces that are relevant to your scenario.
+
+NOTE Confidence: 0.9386472105979919
+
+00:25:57.240 --> 00:26:00.008
+And then extract allows you to get key, value pairs
+
+NOTE Confidence: 0.9386472105979919
+
+00:26:00.062 --> 00:26:03.917
+or structured content that's relevant for your particular documents out
+
+NOTE Confidence: 0.9386472105979919
+
+00:26:03.971 --> 00:26:04.839
+of that content.
+
+NOTE Confidence: 0.9400622248649597
+
+00:26:05.360 --> 00:26:08.520
+And this same pipeline is available for any modality.
+
+NOTE Confidence: 0.9099942445755005
+
+00:26:08.800 --> 00:26:11.773
+So you can bring in any kind of file, a
+
+NOTE Confidence: 0.9099942445755005
+
+00:26:11.850 --> 00:26:16.044
+video of image, document, APDF, even like old, even old
+
+NOTE Confidence: 0.9099942445755005
+
+00:26:16.120 --> 00:26:19.780
+files like zip files or e-mail files can come in
+
+NOTE Confidence: 0.9099942445755005
+
+00:26:19.857 --> 00:26:24.203
+and there's a custom tailored solution that gives you the
+
+NOTE Confidence: 0.9099942445755005
+
+00:26:24.279 --> 00:26:26.719
+best results for that file type.
+
+NOTE Confidence: 0.7562835216522217
+
+00:26:30.760 --> 00:26:34.096
+We're improving content understanding with broad coverage of qual and
+
+NOTE Confidence: 0.7562835216522217
+
+00:26:34.144 --> 00:26:35.159
+quality integrations.
+
+NOTE Confidence: 0.8535413146018982
+
+00:26:35.400 --> 00:26:38.318
+Here you can see we have broad coverage with new
+
+NOTE Confidence: 0.8535413146018982
+
+00:26:38.379 --> 00:26:41.845
+file type supported, better quality with the GBT 5 family
+
+NOTE Confidence: 0.8535413146018982
+
+00:26:41.906 --> 00:26:44.460
+of models being added as a as a engine for
+
+NOTE Confidence: 0.8535413146018982
+
+00:26:44.520 --> 00:26:49.263
+running extraction and classification and then easier integration with support
+
+NOTE Confidence: 0.8535413146018982
+
+00:26:49.324 --> 00:26:52.000
+for Logic Apps Agent framework laying chain.
+
+NOTE Confidence: 0.8797778487205505
+
+00:26:52.000 --> 00:26:54.815
+Mark it down, a set of open source tools that
+
+NOTE Confidence: 0.8797778487205505
+
+00:26:54.877 --> 00:26:57.693
+allow you to use this extraction as a part of
+
+NOTE Confidence: 0.8797778487205505
+
+00:26:57.755 --> 00:26:59.319
+your agent agent runtime.
+
+NOTE Confidence: 0.914236307144165
+
+00:27:00.240 --> 00:27:02.760
+So let's drill into the improvements by each area.
+
+NOTE Confidence: 0.8399837613105774
+
+00:27:04.320 --> 00:27:08.136
+Parts is where we apply Microsoft's OCR and layout technology
+
+NOTE Confidence: 0.8399837613105774
+
+00:27:08.198 --> 00:27:11.514
+that we've refined over 20 years and still maintain a
+
+NOTE Confidence: 0.8399837613105774
+
+00:27:11.576 --> 00:27:15.705
+state-of-the-art, continuing to approve it over as new things come
+
+NOTE Confidence: 0.8399837613105774
+
+00:27:15.768 --> 00:27:17.519
+out in the, in the industry.
+
+NOTE Confidence: 0.8972077369689941
+
+00:27:18.720 --> 00:27:23.561
+This gives you detailed extraction of tables of multilingual documents,
+
+NOTE Confidence: 0.8972077369689941
+
+00:27:23.630 --> 00:27:27.449
+even this like crumpled page, we're able to extract some
+
+NOTE Confidence: 0.8972077369689941
+
+00:27:27.517 --> 00:27:30.586
+details off of it to enable you to parse that
+
+NOTE Confidence: 0.8972077369689941
+
+00:27:30.654 --> 00:27:31.200
+content.
+
+NOTE Confidence: 0.863601565361023
+
+00:27:31.960 --> 00:27:36.865
+It's the foundation of search ingestion for Foundry IQ and
+
+NOTE Confidence: 0.863601565361023
+
+00:27:36.950 --> 00:27:40.925
+we and we see here's some new things coming for
+
+NOTE Confidence: 0.863601565361023
+
+00:27:41.010 --> 00:27:43.040
+for parse in Foundry IQ.
+
+NOTE Confidence: 0.9038342833518982
+
+00:27:43.040 --> 00:27:46.018
+One of the key advancements we get from using content
+
+NOTE Confidence: 0.9038342833518982
+
+00:27:46.074 --> 00:27:48.940
+understanding that we'll see in the demo is that we
+
+NOTE Confidence: 0.9038342833518982
+
+00:27:48.997 --> 00:27:51.919
+can extract tables well from a document and give you
+
+NOTE Confidence: 0.9038342833518982
+
+00:27:51.975 --> 00:27:54.279
+structured markdown to ground your agent.
+
+NOTE Confidence: 0.8892974853515625
+
+00:27:54.760 --> 00:27:59.369
+We also can extract detailed representations of figures, like charts
+
+NOTE Confidence: 0.8892974853515625
+
+00:27:59.437 --> 00:28:03.165
+and diagrams from documents so that you don't lose that
+
+NOTE Confidence: 0.8892974853515625
+
+00:28:03.233 --> 00:28:06.079
+content as you ingest it into your system.
+
+NOTE Confidence: 0.6645169258117676
+
+00:28:07.880 --> 00:28:09.560
+Next, we'll show classification.
+
+NOTE Confidence: 0.9045351147651672
+
+00:28:09.560 --> 00:28:12.037
+So once I do parse, then I might want to
+
+NOTE Confidence: 0.9045351147651672
+
+00:28:12.099 --> 00:28:16.001
+classify this document, identifying the type of document it is,
+
+NOTE Confidence: 0.9045351147651672
+
+00:28:16.063 --> 00:28:19.159
+or breaking a long document up into logical parts.
+
+NOTE Confidence: 0.882114052772522
+
+00:28:20.160 --> 00:28:23.786
+Many times, enterprise documents aren't just one document, they're a
+
+NOTE Confidence: 0.882114052772522
+
+00:28:23.839 --> 00:28:25.439
+set of documents in a package.
+
+NOTE Confidence: 0.8829079866409302
+
+00:28:25.520 --> 00:28:28.976
+So I might have a case file, an application bundle,
+
+NOTE Confidence: 0.8829079866409302
+
+00:28:29.044 --> 00:28:30.400
+or a tax submission.
+
+NOTE Confidence: 0.8843150734901428
+
+00:28:30.600 --> 00:28:32.451
+It's not just one document, it's a bunch of different
+
+NOTE Confidence: 0.8843150734901428
+
+00:28:32.486 --> 00:28:33.640
+things all combined in one thing.
+
+NOTE Confidence: 0.8934643268585205
+
+00:28:34.119 --> 00:28:37.251
+So content understanding allows you to find the classes you
+
+NOTE Confidence: 0.8934643268585205
+
+00:28:37.305 --> 00:28:40.277
+want to identify, throw away some parts of the document,
+
+NOTE Confidence: 0.8934643268585205
+
+00:28:40.330 --> 00:28:43.197
+identify the key parts that you care about and extract
+
+NOTE Confidence: 0.8934643268585205
+
+00:28:43.250 --> 00:28:45.479
+the the right information from each piece.
+
+NOTE Confidence: 0.9108444452285767
+
+00:28:46.520 --> 00:28:49.174
+And coming in July will enable you to split your
+
+NOTE Confidence: 0.9108444452285767
+
+00:28:49.230 --> 00:28:52.217
+documents not just on the page boundaries, but also on
+
+NOTE Confidence: 0.9108444452285767
+
+00:28:52.272 --> 00:28:55.259
+the section boundaries as well, as that's a kiosk from
+
+NOTE Confidence: 0.9108444452285767
+
+00:28:55.314 --> 00:28:58.854
+customers where you know the boundaries and documents don't fall
+
+NOTE Confidence: 0.9108444452285767
+
+00:28:58.909 --> 00:29:00.679
+neatly on page boundaries often.
+
+NOTE Confidence: 0.7167810797691345
+
+00:29:00.920 --> 00:29:04.080
+And so now in content understanding the classification doesn't either.
+
+NOTE Confidence: 0.9604751467704773
+
+00:29:05.920 --> 00:29:07.160
+Now for extraction.
+
+NOTE Confidence: 0.8619362115859985
+
+00:29:08.080 --> 00:29:12.199
+Extraction allows us to parse content into structured fields and
+
+NOTE Confidence: 0.8619362115859985
+
+00:29:12.263 --> 00:29:13.680
+out structured output.
+
+NOTE Confidence: 0.9218560457229614
+
+00:29:14.360 --> 00:29:19.120
+You get key value pairs, confidence scores, and grounded results.
+
+NOTE Confidence: 0.8381746411323547
+
+00:29:19.480 --> 00:29:23.114
+So each of these fields extracted aren't just a completion
+
+NOTE Confidence: 0.8381746411323547
+
+00:29:23.176 --> 00:29:25.996
+from an LLM, they're grounded back to a, to a
+
+NOTE Confidence: 0.8381746411323547
+
+00:29:26.059 --> 00:29:29.254
+bounding box in the document, A, a word, a sentence
+
+NOTE Confidence: 0.8381746411323547
+
+00:29:29.317 --> 00:29:30.320
+in the document.
+
+NOTE Confidence: 0.9440436363220215
+
+00:29:30.320 --> 00:29:32.636
+So you can go directly back into the file to
+
+NOTE Confidence: 0.9440436363220215
+
+00:29:32.689 --> 00:29:34.479
+find where that content came from.
+
+NOTE Confidence: 0.9172212481498718
+
+00:29:35.240 --> 00:29:37.974
+And they also give you a confidence score that allows
+
+NOTE Confidence: 0.9172212481498718
+
+00:29:38.026 --> 00:29:40.760
+you to auto approve when confidence is high and route
+
+NOTE Confidence: 0.9172212481498718
+
+00:29:40.812 --> 00:29:42.359
+to human review when it isn't.
+
+NOTE Confidence: 0.8981874585151672
+
+00:29:43.680 --> 00:29:47.337
+This is what allows customers to build real automation workloads
+
+NOTE Confidence: 0.8981874585151672
+
+00:29:47.394 --> 00:29:50.022
+on top of tools like content on top of content
+
+NOTE Confidence: 0.8981874585151672
+
+00:29:50.080 --> 00:29:50.880
+understanding.
+
+NOTE Confidence: 0.9401612877845764
+
+00:29:52.080 --> 00:29:56.085
+And here's what's coming next with Extract in July, we're
+
+NOTE Confidence: 0.9401612877845764
+
+00:29:56.155 --> 00:30:00.582
+shipping a new training process using knowledge sources so that
+
+NOTE Confidence: 0.9401612877845764
+
+00:30:00.652 --> 00:30:04.728
+you can improve extraction on the documents that matter to
+
+NOTE Confidence: 0.9401612877845764
+
+00:30:04.798 --> 00:30:05.079
+you.
+
+NOTE Confidence: 0.9169234037399292
+
+00:30:06.440 --> 00:30:08.748
+We have, if you have a specific document like a
+
+NOTE Confidence: 0.9169234037399292
+
+00:30:08.797 --> 00:30:11.744
+tax form, a financial document that matters to your industry
+
+NOTE Confidence: 0.9169234037399292
+
+00:30:11.793 --> 00:30:14.200
+for your workflow, you can provide some examples.
+
+NOTE Confidence: 0.8003578186035156
+
+00:30:14.400 --> 00:30:17.676
+Content understanding will train on that file and improve its
+
+NOTE Confidence: 0.8003578186035156
+
+00:30:17.730 --> 00:30:18.159
+results.
+
+NOTE Confidence: 0.8072623014450073
+
+00:30:19.400 --> 00:30:23.863
+Also, we'll ship new, new prebuilt analyzers that will have
+
+NOTE Confidence: 0.8072623014450073
+
+00:30:23.939 --> 00:30:28.251
+significant cost reductions over in terms of tokens to be
+
+NOTE Confidence: 0.8072623014450073
+
+00:30:28.326 --> 00:30:29.840
+much more efficient.
+
+NOTE Confidence: 0.6839777827262878
+
+00:30:30.840 --> 00:30:33.160
+And we'll also ship a Gentic extraction.
+
+NOTE Confidence: 0.834845781326294
+
+00:30:34.200 --> 00:30:35.852
+So I'm going to drill in a little bit on
+
+NOTE Confidence: 0.834845781326294
+
+00:30:35.893 --> 00:30:36.720
+a Gentic extraction.
+
+NOTE Confidence: 0.8830218315124512
+
+00:30:36.720 --> 00:30:38.680
+So it's a, it's coming in July.
+
+NOTE Confidence: 0.8353436589241028
+
+00:30:38.960 --> 00:30:43.102
+Constant understanding extraction does a good job at finding answers
+
+NOTE Confidence: 0.8353436589241028
+
+00:30:43.163 --> 00:30:45.599
+and summarizing data in a in a document.
+
+NOTE Confidence: 0.8994590640068054
+
+00:30:45.920 --> 00:30:49.017
+But there's another Class, A broader class of use cases
+
+NOTE Confidence: 0.8994590640068054
+
+00:30:49.074 --> 00:30:51.440
+that it doesn't do a great job with today.
+
+NOTE Confidence: 0.9040958285331726
+
+00:30:53.160 --> 00:30:56.524
+Those cases are when an answer needs to be built,
+
+NOTE Confidence: 0.9040958285331726
+
+00:30:56.593 --> 00:31:00.507
+not found, built step by step by reasoning across content
+
+NOTE Confidence: 0.9040958285331726
+
+00:31:00.575 --> 00:31:01.399
+in the file.
+
+NOTE Confidence: 0.8648173213005066
+
+00:31:01.800 --> 00:31:05.492
+When you have a, when you're asking a question like
+
+NOTE Confidence: 0.8648173213005066
+
+00:31:05.564 --> 00:31:09.835
+for this contract and this set of amendments, which, which,
+
+NOTE Confidence: 0.8648173213005066
+
+00:31:09.908 --> 00:31:14.034
+which clause applies in this, across this entire chain of
+
+NOTE Confidence: 0.8648173213005066
+
+00:31:14.107 --> 00:31:17.726
+changes to this, to this, to this contract, or how
+
+NOTE Confidence: 0.8648173213005066
+
+00:31:17.799 --> 00:31:20.840
+could I root cause this, this, this issue?
+
+NOTE Confidence: 0.910553514957428
+
+00:31:21.880 --> 00:31:24.469
+The just extracting, just finding a specific value in the
+
+NOTE Confidence: 0.910553514957428
+
+00:31:24.515 --> 00:31:25.559
+file isn't good enough.
+
+NOTE Confidence: 0.808899462223053
+
+00:31:25.800 --> 00:31:28.470
+You need to reason across the files to, to, to
+
+NOTE Confidence: 0.808899462223053
+
+00:31:28.528 --> 00:31:30.559
+answer those kind of hard problems.
+
+NOTE Confidence: 0.6702508926391602
+
+00:31:30.840 --> 00:31:32.679
+So that's what a gentic mode will allow you to
+
+NOTE Confidence: 0.6702508926391602
+
+00:31:32.719 --> 00:31:33.919
+do with content understanding.
+
+NOTE Confidence: 0.795360267162323
+
+00:31:34.080 --> 00:31:38.639
+For the hardest problems where standard content understanding doesn't work,
+
+NOTE Confidence: 0.795360267162323
+
+00:31:38.700 --> 00:31:41.314
+you can turn on the gentic and get the best
+
+NOTE Confidence: 0.795360267162323
+
+00:31:41.374 --> 00:31:44.839
+possible extractions and from from content understanding.
+
+NOTE Confidence: 0.9607011079788208
+
+00:31:45.640 --> 00:31:47.360
+So this is coming in July.
+
+NOTE Confidence: 0.8925597667694092
+
+00:31:47.360 --> 00:31:49.245
+We don't have a live demo here, but I'm going
+
+NOTE Confidence: 0.8925597667694092
+
+00:31:49.287 --> 00:31:50.880
+to show us a quick recorded demo here.
+
+NOTE Confidence: 0.9265227317810059
+
+00:31:52.400 --> 00:31:56.063
+So this is using the same grounding documents that we
+
+NOTE Confidence: 0.9265227317810059
+
+00:31:56.133 --> 00:31:58.760
+showed this morning in a demo session.
+
+NOTE Confidence: 0.9244308471679688
+
+00:31:58.760 --> 00:31:59.880
+Demo 331.
+
+NOTE Confidence: 0.9385678172111511
+
+00:32:00.240 --> 00:32:02.772
+You can grab this QR code and go get that
+
+NOTE Confidence: 0.9385678172111511
+
+00:32:02.834 --> 00:32:04.439
+repo if you're interested.
+
+NOTE Confidence: 0.8627877235412598
+
+00:32:04.760 --> 00:32:08.911
+But in that demo, we show extracting from a a
+
+NOTE Confidence: 0.8627877235412598
+
+00:32:09.003 --> 00:32:13.800
+very complicated fiber optic cable failure scenario.
+
+NOTE Confidence: 0.8806204199790955
+
+00:32:13.800 --> 00:32:16.245
+So I have this document that describes the fiber optic
+
+NOTE Confidence: 0.8806204199790955
+
+00:32:16.290 --> 00:32:18.599
+cable failure, the history of how, how it happened.
+
+NOTE Confidence: 0.7866167426109314
+
+00:32:19.000 --> 00:32:20.741
+And So what I do is I ask a Genting
+
+NOTE Confidence: 0.7866167426109314
+
+00:32:20.791 --> 00:32:21.039
+mode.
+
+NOTE Confidence: 0.8046422004699707
+
+00:32:21.480 --> 00:32:23.580
+I, I set a set of questions to it in
+
+NOTE Confidence: 0.8046422004699707
+
+00:32:23.638 --> 00:32:24.280
+the schema.
+
+NOTE Confidence: 0.9247549772262573
+
+00:32:25.160 --> 00:32:27.247
+The set of questions would be things like, what's the
+
+NOTE Confidence: 0.9247549772262573
+
+00:32:27.286 --> 00:32:27.719
+root cause?
+
+NOTE Confidence: 0.9242773056030273
+
+00:32:28.400 --> 00:32:29.840
+How much is it going to cost to fix?
+
+NOTE Confidence: 0.9580932855606079
+
+00:32:30.000 --> 00:32:30.920
+Is it on budget?
+
+NOTE Confidence: 0.860697865486145
+
+00:32:31.680 --> 00:32:35.471
+And with, by setting those questions in the prompts or
+
+NOTE Confidence: 0.860697865486145
+
+00:32:35.541 --> 00:32:39.754
+in the schema constant understanding, a Genting mode is able
+
+NOTE Confidence: 0.860697865486145
+
+00:32:39.824 --> 00:32:42.844
+to use a set of tools to reason across this
+
+NOTE Confidence: 0.860697865486145
+
+00:32:42.914 --> 00:32:46.144
+big corpus of evidence and loop over it to, to
+
+NOTE Confidence: 0.860697865486145
+
+00:32:46.214 --> 00:32:48.039
+to get a good answer Here.
+
+NOTE Confidence: 0.8306823968887329
+
+00:32:48.040 --> 00:32:50.177
+It's not just look to doing a one shot, it's
+
+NOTE Confidence: 0.8306823968887329
+
+00:32:50.225 --> 00:32:51.440
+able to search across it.
+
+NOTE Confidence: 0.946372926235199
+
+00:32:51.880 --> 00:32:54.324
+And if I look at what it actually does here
+
+NOTE Confidence: 0.946372926235199
+
+00:32:54.381 --> 00:32:57.336
+in the trace, it's able to go find specific evidence
+
+NOTE Confidence: 0.946372926235199
+
+00:32:57.393 --> 00:32:58.359
+in the documents.
+
+NOTE Confidence: 0.7644280195236206
+
+00:32:58.720 --> 00:33:02.990
+It's able to ask, ask follow up questions about images,
+
+NOTE Confidence: 0.7644280195236206
+
+00:33:03.068 --> 00:33:05.319
+to run calculations and code.
+
+NOTE Confidence: 0.9017861485481262
+
+00:33:05.760 --> 00:33:08.642
+And by doing so, it's able to capture a set
+
+NOTE Confidence: 0.9017861485481262
+
+00:33:08.709 --> 00:33:12.127
+of evidence to support the final answer and give me
+
+NOTE Confidence: 0.9017861485481262
+
+00:33:12.194 --> 00:33:15.814
+a root 'cause that's very that's well grounded in the,
+
+NOTE Confidence: 0.9017861485481262
+
+00:33:15.881 --> 00:33:18.160
+in the, in the, in the input data.
+
+NOTE Confidence: 0.9298327565193176
+
+00:33:19.200 --> 00:33:22.037
+So ultimately, I'm able to get a root cause, a
+
+NOTE Confidence: 0.9298327565193176
+
+00:33:22.098 --> 00:33:25.552
+cost analysis and get the right answer for this question
+
+NOTE Confidence: 0.9298327565193176
+
+00:33:25.614 --> 00:33:28.574
+that would otherwise be require me to do a bunch
+
+NOTE Confidence: 0.9298327565193176
+
+00:33:28.636 --> 00:33:30.239
+of custom coding to build.
+
+NOTE Confidence: 0.8885694146156311
+
+00:33:31.680 --> 00:33:34.470
+So with that, I'm going to jump into the fiber
+
+NOTE Confidence: 0.8885694146156311
+
+00:33:34.531 --> 00:33:37.928
+fiber optic agent that Maria showed earlier and show how
+
+NOTE Confidence: 0.8885694146156311
+
+00:33:37.988 --> 00:33:40.840
+content understanding can work in that context.
+
+NOTE Confidence: 0.7871818542480469
+
+00:33:41.320 --> 00:33:45.094
+First, we're going to show how content are sending works
+
+NOTE Confidence: 0.7871818542480469
+
+00:33:45.161 --> 00:33:48.531
+for Foundry IQ ingestion and then we'll show it as
+
+NOTE Confidence: 0.7871818542480469
+
+00:33:48.599 --> 00:33:49.880
+a context provider.
+
+NOTE Confidence: 0.925580620765686
+
+00:33:53.920 --> 00:33:57.920
+OK, so here's my demo, see if my mouse works.
+
+NOTE Confidence: 0.9711487889289856
+
+00:34:00.520 --> 00:34:00.920
+There we go.
+
+NOTE Confidence: 0.9515236616134644
+
+00:34:02.160 --> 00:34:05.493
+So same agent that we saw earlier with Maria, but
+
+NOTE Confidence: 0.9515236616134644
+
+00:34:05.561 --> 00:34:08.895
+you'll notice on the left side over here, we have
+
+NOTE Confidence: 0.9515236616134644
+
+00:34:08.963 --> 00:34:10.120
+a set of options.
+
+NOTE Confidence: 0.8685082793235779
+
+00:34:10.640 --> 00:34:14.640
+There's what Foundry IQ knowledge source it's using and what
+
+NOTE Confidence: 0.8685082793235779
+
+00:34:14.706 --> 00:34:18.373
+context provider the agent is using to process files at
+
+NOTE Confidence: 0.8685082793235779
+
+00:34:18.439 --> 00:34:19.839
+their as their input.
+
+NOTE Confidence: 0.849570631980896
+
+00:34:20.640 --> 00:34:23.920
+So I'll start with Foundry IQ knowledge source that's minimal
+
+NOTE Confidence: 0.849570631980896
+
+00:34:23.973 --> 00:34:27.200
+that doesn't use content understanding to process documents.
+
+NOTE Confidence: 0.8910480737686157
+
+00:34:27.680 --> 00:34:31.191
+I'm asking a specific question here about this F3 fiber
+
+NOTE Confidence: 0.8910480737686157
+
+00:34:31.254 --> 00:34:33.999
+and it needs to ground it in this document.
+
+NOTE Confidence: 0.9102463126182556
+
+00:34:34.520 --> 00:34:36.261
+You can see here this F3 fiber has a set
+
+NOTE Confidence: 0.9102463126182556
+
+00:34:36.304 --> 00:34:37.479
+of measurements against it.
+
+NOTE Confidence: 0.8374725580215454
+
+00:34:37.800 --> 00:34:41.858
+I'm actually asking it about this three O 131310 answer
+
+NOTE Confidence: 0.8374725580215454
+
+00:34:41.932 --> 00:34:46.581
+and there's actually no evidence about what the measurement was
+
+NOTE Confidence: 0.8374725580215454
+
+00:34:46.655 --> 00:34:49.975
+in that on that fiber, but the agent tells me
+
+NOTE Confidence: 0.8374725580215454
+
+00:34:50.049 --> 00:34:50.639
+it's 46.
+
+NOTE Confidence: 0.8457188010215759
+
+00:34:51.240 --> 00:34:55.240
+So the agent generates an ungrounded result here.
+
+NOTE Confidence: 0.8804080486297607
+
+00:34:56.760 --> 00:34:59.094
+And but what we're going to see is it let's
+
+NOTE Confidence: 0.8804080486297607
+
+00:34:59.148 --> 00:35:02.080
+see what happens when I turn on content understanding.
+
+NOTE Confidence: 0.9374263286590576
+
+00:35:03.840 --> 00:35:06.159
+When I turn on content understanding on this file, I'll
+
+NOTE Confidence: 0.9374263286590576
+
+00:35:06.201 --> 00:35:07.719
+show you what the output looks like.
+
+NOTE Confidence: 0.9061623811721802
+
+00:35:07.960 --> 00:35:12.478
+So this maintenance log that we just saw will generate
+
+NOTE Confidence: 0.9061623811721802
+
+00:35:12.562 --> 00:35:19.925
+content understanding, will generate this structured markdown representation that allows
+
+NOTE Confidence: 0.9061623811721802
+
+00:35:20.009 --> 00:35:23.440
+me to see that missing value right there.
+
+NOTE Confidence: 0.9594826102256775
+
+00:35:23.800 --> 00:35:26.897
+If I use a simple PDF parser, I can easily
+
+NOTE Confidence: 0.9594826102256775
+
+00:35:26.970 --> 00:35:31.100
+miss that missing value because it just gets lumped into
+
+NOTE Confidence: 0.9594826102256775
+
+00:35:31.173 --> 00:35:32.279
+this long list.
+
+NOTE Confidence: 0.9259834885597229
+
+00:35:33.120 --> 00:35:36.422
+But in fact, when I turn on standard mode with
+
+NOTE Confidence: 0.9259834885597229
+
+00:35:36.494 --> 00:35:41.449
+content understanding, it tells me there's no recorded separate value
+
+NOTE Confidence: 0.9259834885597229
+
+00:35:41.520 --> 00:35:41.880
+here.
+
+NOTE Confidence: 0.9050589799880981
+
+00:35:41.920 --> 00:35:44.370
+So it gives me the right answer now to this
+
+NOTE Confidence: 0.9050589799880981
+
+00:35:44.427 --> 00:35:48.360
+difficult question, understanding the details of what's in this file.
+
+NOTE Confidence: 0.9486220479011536
+
+00:35:50.120 --> 00:35:53.429
+So I also might have another case where someone emails
+
+NOTE Confidence: 0.9486220479011536
+
+00:35:53.490 --> 00:35:55.758
+me a file with a work order in it and
+
+NOTE Confidence: 0.9486220479011536
+
+00:35:55.819 --> 00:35:57.719
+I need to give it to the agent.
+
+NOTE Confidence: 0.9145365357398987
+
+00:35:57.719 --> 00:36:00.031
+So I take this DOCX file, I give it to
+
+NOTE Confidence: 0.9145365357398987
+
+00:36:00.092 --> 00:36:00.640
+my agent.
+
+NOTE Confidence: 0.8885903358459473
+
+00:36:00.640 --> 00:36:03.228
+I say, can you answer some questions about this file
+
+NOTE Confidence: 0.8885903358459473
+
+00:36:03.278 --> 00:36:05.717
+and add it into my work workflow system using the
+
+NOTE Confidence: 0.8885903358459473
+
+00:36:05.767 --> 00:36:07.359
+toolbox that Maria said earlier.
+
+NOTE Confidence: 0.9062123894691467
+
+00:36:07.920 --> 00:36:11.795
+But actually, docx files aren't supported by my agent because
+
+NOTE Confidence: 0.9062123894691467
+
+00:36:11.858 --> 00:36:15.480
+typically agent harnesses have very limited file support.
+
+NOTE Confidence: 0.9138489365577698
+
+00:36:15.920 --> 00:36:18.812
+This is one of the things that I can fix
+
+NOTE Confidence: 0.9138489365577698
+
+00:36:18.885 --> 00:36:23.079
+by turning on content understanding as a context provider.
+
+NOTE Confidence: 0.8592802882194519
+
+00:36:23.520 --> 00:36:26.785
+So context providers and agent framework allow you to preprocess
+
+NOTE Confidence: 0.8592802882194519
+
+00:36:26.836 --> 00:36:29.387
+files and generate a text version that you give to
+
+NOTE Confidence: 0.8592802882194519
+
+00:36:29.438 --> 00:36:29.999
+your agent.
+
+NOTE Confidence: 0.9506452679634094
+
+00:36:30.600 --> 00:36:32.416
+So I can turn that on, but I'm going to
+
+NOTE Confidence: 0.9506452679634094
+
+00:36:32.462 --> 00:36:33.720
+test one other thing first.
+
+NOTE Confidence: 0.941326916217804
+
+00:36:34.080 --> 00:36:36.040
+I can also just pass APDF to my agent.
+
+NOTE Confidence: 0.8067218065261841
+
+00:36:36.040 --> 00:36:39.364
+In this case the agent can receive PD FS, but
+
+NOTE Confidence: 0.8067218065261841
+
+00:36:39.438 --> 00:36:43.279
+again, it's using a a low quality parser by default.
+
+NOTE Confidence: 0.9046258926391602
+
+00:36:43.800 --> 00:36:45.840
+So it's gives me incorrect answers.
+
+NOTE Confidence: 0.9426808953285217
+
+00:36:45.840 --> 00:36:50.217
+So for example, here I asked about this work order
+
+NOTE Confidence: 0.9426808953285217
+
+00:36:50.305 --> 00:36:54.245
+89, it tells me it's scheduled, but if I look
+
+NOTE Confidence: 0.9426808953285217
+
+00:36:54.333 --> 00:36:56.960
+work order 89, it's completed.
+
+NOTE Confidence: 0.9611924290657043
+
+00:36:57.440 --> 00:36:59.593
+So it gives me the wrong answer for what's in
+
+NOTE Confidence: 0.9611924290657043
+
+00:36:59.641 --> 00:37:00.119
+this file.
+
+NOTE Confidence: 0.87173992395401
+
+00:37:00.719 --> 00:37:03.599
+So I'm going to turn on content understanding, go back
+
+NOTE Confidence: 0.87173992395401
+
+00:37:03.653 --> 00:37:05.359
+and get do the same thing again.
+
+NOTE Confidence: 0.9618293046951294
+
+00:37:06.440 --> 00:37:08.532
+I'll show you what the results, what the results look
+
+NOTE Confidence: 0.9618293046951294
+
+00:37:08.572 --> 00:37:09.519
+like for this file here.
+
+NOTE Confidence: 0.7395052313804626
+
+00:37:09.520 --> 00:37:12.560
+Here's what content understanding generates for the output.
+
+NOTE Confidence: 0.8486506342887878
+
+00:37:12.640 --> 00:37:14.440
+Again, a nice structure table.
+
+NOTE Confidence: 0.8811231851577759
+
+00:37:15.000 --> 00:37:17.635
+You can also see here in this file, I have
+
+NOTE Confidence: 0.8811231851577759
+
+00:37:17.698 --> 00:37:21.525
+these charts that are here and content understanding gives me
+
+NOTE Confidence: 0.8811231851577759
+
+00:37:21.588 --> 00:37:24.788
+a Jason representation of the data in that chart so
+
+NOTE Confidence: 0.8811231851577759
+
+00:37:24.851 --> 00:37:27.800
+that I don't lose the context of what's in that
+
+NOTE Confidence: 0.8811231851577759
+
+00:37:27.863 --> 00:37:28.239
+chart.
+
+NOTE Confidence: 0.9576839208602905
+
+00:37:28.480 --> 00:37:29.800
+When I go into my agent.
+
+NOTE Confidence: 0.961727499961853
+
+00:37:29.800 --> 00:37:31.760
+I can ask questions about that chart now as well.
+
+NOTE Confidence: 0.8615286946296692
+
+00:37:33.719 --> 00:37:37.027
+Coming back to coming back here, it tells me that
+
+NOTE Confidence: 0.8615286946296692
+
+00:37:37.095 --> 00:37:39.120
+work order a nine is complete.
+
+NOTE Confidence: 0.8183846473693848
+
+00:37:39.440 --> 00:37:40.880
+It's exactly what the PDF says.
+
+NOTE Confidence: 0.9310617446899414
+
+00:37:40.920 --> 00:37:43.364
+Now it knows what's there because I've given it a
+
+NOTE Confidence: 0.9310617446899414
+
+00:37:43.414 --> 00:37:45.759
+good structured representation to that content.
+
+NOTE Confidence: 0.897430956363678
+
+00:37:48.600 --> 00:37:51.160
+Sometimes this isn't good enough.
+
+NOTE Confidence: 0.9314406514167786
+
+00:37:51.160 --> 00:37:54.042
+Sometimes I ask a question about a file and the
+
+NOTE Confidence: 0.9314406514167786
+
+00:37:54.104 --> 00:37:55.760
+file itself is complicated.
+
+NOTE Confidence: 0.9552517533302307
+
+00:37:55.760 --> 00:37:56.640
+It's hard to interpret.
+
+NOTE Confidence: 0.9497150182723999
+
+00:37:57.240 --> 00:37:59.000
+So I'll show an example here.
+
+NOTE Confidence: 0.7142418026924133
+
+00:37:59.080 --> 00:38:01.920
+This is a a work order.
+
+NOTE Confidence: 0.9134470820426941
+
+00:38:02.200 --> 00:38:05.459
+You can see here I'm asking who's the who's the
+
+NOTE Confidence: 0.9134470820426941
+
+00:38:05.529 --> 00:38:08.719
+who's the field technician on this work order?
+
+NOTE Confidence: 0.8672577738761902
+
+00:38:09.120 --> 00:38:12.000
+There's this Jay Martinez, he's actually the field technician.
+
+NOTE Confidence: 0.8929906487464905
+
+00:38:12.400 --> 00:38:15.248
+But there's these other people mentioned like the site contact
+
+NOTE Confidence: 0.8929906487464905
+
+00:38:15.294 --> 00:38:15.799
+John Smith.
+
+NOTE Confidence: 0.9236272573471069
+
+00:38:17.280 --> 00:38:19.354
+I need to give the agent some guidance of how
+
+NOTE Confidence: 0.9236272573471069
+
+00:38:19.400 --> 00:38:22.120
+to process this file, how to interpret it without guidance.
+
+NOTE Confidence: 0.9384036064147949
+
+00:38:22.120 --> 00:38:25.285
+It says the agent, the field technician is John Smith
+
+NOTE Confidence: 0.9384036064147949
+
+00:38:25.344 --> 00:38:26.360
+the wrong answer.
+
+NOTE Confidence: 0.915956437587738
+
+00:38:26.960 --> 00:38:29.680
+So I can give it guidance.
+
+NOTE Confidence: 0.849762499332428
+
+00:38:29.680 --> 00:38:31.949
+One way I can give it guidance is by giving
+
+NOTE Confidence: 0.849762499332428
+
+00:38:32.001 --> 00:38:35.590
+a creating a classify and extract analyzer and content understanding
+
+NOTE Confidence: 0.849762499332428
+
+00:38:35.643 --> 00:38:38.123
+so that it has a predefined way to process this
+
+NOTE Confidence: 0.849762499332428
+
+00:38:38.176 --> 00:38:38.440
+file.
+
+NOTE Confidence: 0.89063960313797
+
+00:38:38.880 --> 00:38:41.451
+So I'm going to switch on the right to a
+
+NOTE Confidence: 0.89063960313797
+
+00:38:41.515 --> 00:38:46.015
+context provider that uses that an analyzer from content understanding
+
+NOTE Confidence: 0.89063960313797
+
+00:38:46.079 --> 00:38:47.879
+and rerun the same question.
+
+NOTE Confidence: 0.9369758367538452
+
+00:38:48.840 --> 00:38:51.320
+So I'll show you real quick what this analyzer does.
+
+NOTE Confidence: 0.7690552473068237
+
+00:38:51.320 --> 00:38:54.629
+Here's a copy of this analyzer and content understanding studio,
+
+NOTE Confidence: 0.7690552473068237
+
+00:38:54.681 --> 00:38:57.112
+which is where one way I can visualize and edit
+
+NOTE Confidence: 0.7690552473068237
+
+00:38:57.163 --> 00:38:58.560
+these edit these analyzers.
+
+NOTE Confidence: 0.9611467123031616
+
+00:39:00.200 --> 00:39:03.640
+Here you can see this analyzer classifieds the input document.
+
+NOTE Confidence: 0.9277480244636536
+
+00:39:03.880 --> 00:39:05.631
+It says is it a work order and with a
+
+NOTE Confidence: 0.9277480244636536
+
+00:39:05.679 --> 00:39:07.762
+description of what a work order is or is it
+
+NOTE Confidence: 0.9277480244636536
+
+00:39:07.809 --> 00:39:08.520
+something else?
+
+NOTE Confidence: 0.9549663066864014
+
+00:39:08.960 --> 00:39:10.799
+I could have a list of hundreds of things that
+
+NOTE Confidence: 0.9549663066864014
+
+00:39:10.839 --> 00:39:11.799
+I want to classify here.
+
+NOTE Confidence: 0.903744637966156
+
+00:39:12.040 --> 00:39:14.378
+I can also classify pages page by page or section
+
+NOTE Confidence: 0.903744637966156
+
+00:39:14.426 --> 00:39:16.239
+by section as we talked about earlier.
+
+NOTE Confidence: 0.9236962795257568
+
+00:39:16.640 --> 00:39:18.368
+But in this case, I'm just going to classify the
+
+NOTE Confidence: 0.9236962795257568
+
+00:39:18.404 --> 00:39:18.800
+whole file.
+
+NOTE Confidence: 0.8136202096939087
+
+00:39:18.800 --> 00:39:19.880
+Is this a work order or not?
+
+NOTE Confidence: 0.932636022567749
+
+00:39:20.640 --> 00:39:23.134
+And when I get a work order, it's going to
+
+NOTE Confidence: 0.932636022567749
+
+00:39:23.193 --> 00:39:24.559
+extract the technician.
+
+NOTE Confidence: 0.9347207546234131
+
+00:39:24.560 --> 00:39:26.494
+And I have some guidance here about how to how
+
+NOTE Confidence: 0.9347207546234131
+
+00:39:26.536 --> 00:39:27.840
+to how to pick up a technician.
+
+NOTE Confidence: 0.8257724642753601
+
+00:39:28.160 --> 00:39:30.128
+It tells it this route thing is how you go
+
+NOTE Confidence: 0.8257724642753601
+
+00:39:30.174 --> 00:39:31.440
+know who the technician is.
+
+NOTE Confidence: 0.8650563955307007
+
+00:39:31.960 --> 00:39:34.674
+And now I have the standard business rules for my
+
+NOTE Confidence: 0.8650563955307007
+
+00:39:34.730 --> 00:39:37.666
+content that I've encoded in my agent by calling this
+
+NOTE Confidence: 0.8650563955307007
+
+00:39:37.722 --> 00:39:40.160
+content understanding analyzer on the input.
+
+NOTE Confidence: 0.9666536450386047
+
+00:39:40.840 --> 00:39:42.861
+And by doing that, it's able to give me the
+
+NOTE Confidence: 0.9666536450386047
+
+00:39:42.908 --> 00:39:43.519
+right answer.
+
+NOTE Confidence: 0.8269875049591064
+
+00:39:43.800 --> 00:39:48.160
+Jay Martinez is the is the field technician.
+
+NOTE Confidence: 0.8722783327102661
+
+00:39:48.400 --> 00:39:50.120
+This is exactly what I see in the file.
+
+NOTE Confidence: 0.8736549019813538
+
+00:39:50.320 --> 00:39:53.024
+Jay Martinez is the field technician that got routed to
+
+NOTE Confidence: 0.8736549019813538
+
+00:39:53.074 --> 00:39:53.319
+this.
+
+NOTE Confidence: 0.9531455039978027
+
+00:39:53.680 --> 00:39:56.379
+And so by giving it instructions, my own business rules
+
+NOTE Confidence: 0.9531455039978027
+
+00:39:56.428 --> 00:39:58.735
+on this content, now I can get the right answer
+
+NOTE Confidence: 0.9531455039978027
+
+00:39:58.784 --> 00:40:01.680
+from these documents even when it's a really hard question.
+
+NOTE Confidence: 0.871298611164093
+
+00:40:02.800 --> 00:40:05.112
+So with that, I'm just going to come back and
+
+NOTE Confidence: 0.871298611164093
+
+00:40:05.164 --> 00:40:07.528
+show we, we, we showed here in this demo these
+
+NOTE Confidence: 0.871298611164093
+
+00:40:07.579 --> 00:40:11.280
+three different scenarios where content understanding is super valuable.
+
+NOTE Confidence: 0.8629682064056396
+
+00:40:11.840 --> 00:40:14.454
+1 is when you're using Foundry IQ you can turn
+
+NOTE Confidence: 0.8629682064056396
+
+00:40:14.511 --> 00:40:17.808
+on content understanding and that is part of your indexing
+
+NOTE Confidence: 0.8629682064056396
+
+00:40:17.865 --> 00:40:18.319
+process.
+
+NOTE Confidence: 0.8892080187797546
+
+00:40:18.719 --> 00:40:21.641
+You can you can extract the details of the structure
+
+NOTE Confidence: 0.8892080187797546
+
+00:40:21.697 --> 00:40:25.686
+of documents, getting figure descriptions, tables out all the structure
+
+NOTE Confidence: 0.8892080187797546
+
+00:40:25.742 --> 00:40:28.551
+with as little loss as possible into your index so
+
+NOTE Confidence: 0.8892080187797546
+
+00:40:28.607 --> 00:40:31.079
+that you get the right answers from indexes.
+
+NOTE Confidence: 0.8987594842910767
+
+00:40:31.560 --> 00:40:33.805
+And then when I upload a file in real time
+
+NOTE Confidence: 0.8987594842910767
+
+00:40:33.858 --> 00:40:36.477
+to my agent, I can use content understanding as a
+
+NOTE Confidence: 0.8987594842910767
+
+00:40:36.531 --> 00:40:37.440
+context provider.
+
+NOTE Confidence: 0.8037530779838562
+
+00:40:37.680 --> 00:40:40.125
+Or in Langshane, I can use the Langshane primitive for
+
+NOTE Confidence: 0.8037530779838562
+
+00:40:40.171 --> 00:40:40.760
+that as well.
+
+NOTE Confidence: 0.912415623664856
+
+00:40:41.040 --> 00:40:43.404
+So I can plug it into the my agent and
+
+NOTE Confidence: 0.912415623664856
+
+00:40:43.466 --> 00:40:47.137
+process files and incoming, allowing me to process any kind
+
+NOTE Confidence: 0.912415623664856
+
+00:40:47.200 --> 00:40:50.062
+of file, not just APDF, and also get the right
+
+NOTE Confidence: 0.912415623664856
+
+00:40:50.124 --> 00:40:51.680
+answers for tricky files.
+
+NOTE Confidence: 0.8831560015678406
+
+00:40:52.800 --> 00:40:55.019
+And then I can also encode my business rules using
+
+NOTE Confidence: 0.8831560015678406
+
+00:40:55.063 --> 00:40:56.039
+content understanding.
+
+NOTE Confidence: 0.8942553400993347
+
+00:40:56.040 --> 00:40:58.027
+So I know how to process a work order or
+
+NOTE Confidence: 0.8942553400993347
+
+00:40:58.077 --> 00:41:00.363
+a tax file or whatever the type of documents I
+
+NOTE Confidence: 0.8942553400993347
+
+00:41:00.413 --> 00:41:00.959
+care about.
+
+NOTE Confidence: 0.825028657913208
+
+00:41:01.520 --> 00:41:05.120
+I can get that accurately represented with content understanding.
+
+NOTE Confidence: 0.7869342565536499
+
+00:41:07.040 --> 00:41:11.658
+And with that, I think Marie is coming back and
+
+NOTE Confidence: 0.7869342565536499
+
+00:41:11.757 --> 00:41:15.000
+we're going to thank you so much.
+
+NOTE Confidence: 0.889065682888031
+
+00:41:15.160 --> 00:41:15.920
+Thank you so much.
+
+NOTE Confidence: 0.8842379450798035
+
+00:41:15.920 --> 00:41:18.640
+So I tried my best to show you how everything
+
+NOTE Confidence: 0.8842379450798035
+
+00:41:18.700 --> 00:41:21.239
+worked, but I promise you, this all works.
+
+NOTE Confidence: 0.9140612483024597
+
+00:41:21.240 --> 00:41:24.120
+So I wanted to show if we have three.
+
+NOTE Confidence: 0.8228791356086731
+
+00:41:24.240 --> 00:41:25.120
+Oh, we have 3 minutes.
+
+NOTE Confidence: 0.6531034111976624
+
+00:41:25.400 --> 00:41:25.720
+OK.
+
+NOTE Confidence: 0.6034608483314514
+
+00:41:25.720 --> 00:41:26.640
+I want to try to do this.
+
+NOTE Confidence: 0.4927539825439453
+
+00:41:26.640 --> 00:41:27.000
+Done.
+
+NOTE Confidence: 0.8417301177978516
+
+00:41:28.200 --> 00:41:30.120
+I wanted to show you this.
+
+NOTE Confidence: 0.4027984142303467
+
+00:41:30.880 --> 00:41:31.040
+Yeah.
+
+NOTE Confidence: 0.9697767496109009
+
+00:41:31.080 --> 00:41:31.960
+Thank you so much.
+
+NOTE Confidence: 0.7702453136444092
+
+00:41:32.400 --> 00:41:35.251
+I wanted to show you like an agent that was
+
+NOTE Confidence: 0.7702453136444092
+
+00:41:35.318 --> 00:41:39.297
+leveraging A unified endpoint in an agent freight land graph
+
+NOTE Confidence: 0.7702453136444092
+
+00:41:39.364 --> 00:41:40.160
+application.
+
+NOTE Confidence: 0.8631465435028076
+
+00:41:40.560 --> 00:41:42.298
+So this is similar to what we showed in City
+
+NOTE Confidence: 0.8631465435028076
+
+00:41:42.337 --> 00:41:43.760
+and very similar to what you showed.
+
+NOTE Confidence: 0.8328350186347961
+
+00:41:44.400 --> 00:41:46.934
+And I wanted you to pay particular attention to the
+
+NOTE Confidence: 0.8328350186347961
+
+00:41:46.984 --> 00:41:47.679
+activity line.
+
+NOTE Confidence: 0.8289815783500671
+
+00:41:48.200 --> 00:41:51.406
+You'll notice that it's going into the toolbox, loading a
+
+NOTE Confidence: 0.8289815783500671
+
+00:41:51.462 --> 00:41:51.800
+spill.
+
+NOTE Confidence: 0.9331808686256409
+
+00:41:52.000 --> 00:41:55.080
+It's found 10 tools, but only selected one.
+
+NOTE Confidence: 0.943219780921936
+
+00:41:55.520 --> 00:41:58.770
+It is pulling that tool, it is checking the order,
+
+NOTE Confidence: 0.943219780921936
+
+00:41:58.835 --> 00:42:01.240
+and it's generating the results back.
+
+NOTE Confidence: 0.9044749736785889
+
+00:42:01.560 --> 00:42:04.757
+So rather than loading every single tool into the context
+
+NOTE Confidence: 0.9044749736785889
+
+00:42:04.813 --> 00:42:06.159
+window, it's selected 1.
+
+NOTE Confidence: 0.8899722099304199
+
+00:42:06.160 --> 00:42:08.370
+So I need to show you that this is real
+
+NOTE Confidence: 0.8899722099304199
+
+00:42:08.426 --> 00:42:10.240
+and you can actually work on it.
+
+NOTE Confidence: 0.8725136518478394
+
+00:42:10.480 --> 00:42:14.001
+Now the best thing is, is that you can try
+
+NOTE Confidence: 0.8725136518478394
+
+00:42:14.085 --> 00:42:14.839
+this OOP.
+
+NOTE Confidence: 0.7269989848136902
+
+00:42:15.520 --> 00:42:20.038
+You can try this all out by going to azureai.azure.com
+
+NOTE Confidence: 0.7269989848136902
+
+00:42:20.122 --> 00:42:21.880
+and going to Foundry.
+
+NOTE Confidence: 0.8472245335578918
+
+00:42:22.320 --> 00:42:25.873
+You can also get all our demo content in ask
+
+NOTE Confidence: 0.8472245335578918
+
+00:42:25.954 --> 00:42:26.520
+dot Ms.
+
+NOTE Confidence: 0.8823781609535217
+
+00:42:26.560 --> 00:42:28.800
+the build number of this this account.
+
+NOTE Confidence: 0.9568401575088501
+
+00:42:29.040 --> 00:42:31.252
+And if you want to play around with the live
+
+NOTE Confidence: 0.9568401575088501
+
+00:42:31.302 --> 00:42:33.615
+demo that I just showed you, you can pull this
+
+NOTE Confidence: 0.9568401575088501
+
+00:42:33.665 --> 00:42:34.519
+up on your phone.
+
+NOTE Confidence: 0.893074631690979
+
+00:42:34.680 --> 00:42:37.272
+You can pull this up on your computer right now,
+
+NOTE Confidence: 0.893074631690979
+
+00:42:37.326 --> 00:42:37.919
+AKA dot Ms.
+
+NOTE Confidence: 0.854230523109436
+
+00:42:37.920 --> 00:42:40.379
+slash fibi and it will be up for the rest
+
+NOTE Confidence: 0.854230523109436
+
+00:42:40.439 --> 00:42:41.159
+of the week.
+
+NOTE Confidence: 0.9633532166481018
+
+00:42:41.200 --> 00:42:43.200
+And we also have the demo code there.
+
+NOTE Confidence: 0.8785598874092102
+
+00:42:43.560 --> 00:42:48.404
+So join our Discord on Foundry, try all our documentation,
+
+NOTE Confidence: 0.8785598874092102
+
+00:42:48.488 --> 00:42:49.239
+the demo.
+
+NOTE Confidence: 0.6046038269996643
+
+00:42:49.240 --> 00:42:50.920
+God's work with me today.
+
+NOTE Confidence: 0.9335218071937561
+
+00:42:50.920 --> 00:42:53.280
+I should run my application locally later.
+
+NOTE Confidence: 0.9689710140228271
+
+00:42:53.280 --> 00:42:55.720
+But thank you so much for coming.
+
+NOTE Confidence: 0.8287497162818909
+
+00:42:55.960 --> 00:42:58.367
+And we'll be here asking questions like we'll be done
+
+NOTE Confidence: 0.8287497162818909
+
+00:42:58.412 --> 00:42:58.640
+here.
+
+NOTE Confidence: 0.6700555086135864
+
+00:42:58.720 --> 00:43:07.680
+Yes, Ralph, don't hold me to it.
+
+NOTE Confidence: 0.8276244401931763
+
+00:43:08.640 --> 00:43:10.400
+Two to three months, OK.
+
+NOTE Confidence: 0.7776374220848083
+
+00:43:11.320 --> 00:43:11.760
+Thank you so much.
+
+NOTE Confidence: 0.17128977179527283
+
+00:43:11.760 --> 00:43:12.080
+All right.
+
+NOTE Confidence: 0.7257091999053955
+
+00:43:12.240 --> 00:43:12.720
+Thank you.
+

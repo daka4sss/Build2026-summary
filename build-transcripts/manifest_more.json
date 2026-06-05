@@ -1,0 +1,38 @@
+[
+  {
+    "id": "DEM340",
+    "url": "https://build.microsoft.com/en-US/sessions/DEM340",
+    "title": "Build work-ready agents with Foundry + Work IQ, govern with Agent 365",
+    "description": "An agent that knows nothing about your work is only half an agent. In this demo, we connect a Foundry agent to Work IQ via MCP, giving it real context about your work and ecosystem, governed by Agent 365. See it run under agent identity, watch Work IQ tools invoked at runtime, and get full observability on every call. Then we run side-by-side evals context-aware vs. context-blind, with scores that prove the difference. Leave knowing how to ground, govern, and evaluate your Foundry agents.\n\nSeating for this session is first-come, first-served. Add it to your schedule to plan your day and arrive early to secure a spot.",
+    "asset_id": "4ce5f64d-3565-4d14-8010-32ad80dc7524",
+    "caption_route": "CAPTION",
+    "caption_bytes": 60782,
+    "clean_chars": 22212,
+    "status": "ok",
+    "note": ""
+  },
+  {
+    "id": "DEM341",
+    "url": "https://build.microsoft.com/en-US/sessions/DEM341",
+    "title": "Any agent, any cloud: Standardized tracing with Foundry+OpenTelemetry",
+    "description": "Teams are shipping agents across clouds and frameworks—but telemetry is fragmented. In this demo, see how Microsoft Foundry and OpenTelemetry standards for GenAI tracing bring consistent observability that is agent framework agnostic and cloud agnostic. We’ll walk through the simple setup steps to instrument model and tool calls, quickly diagnose failures, latency, and cost spikes, and close the loop with trace-based evaluation, visualization and optimization.\n\nSeating for this session is first-come, first-served. Add it to your schedule to plan your day and arrive early to secure a spot.",
+    "asset_id": "f1e85c0c-4927-4179-bf56-f6ec097af7dc",
+    "caption_route": "CAPTION",
+    "caption_bytes": 49737,
+    "clean_chars": 18900,
+    "status": "ok",
+    "note": ""
+  },
+  {
+    "id": "OD840",
+    "url": "https://build.microsoft.com/en-US/sessions/OD840",
+    "title": "Enable agents for enterprises using Agent 365 SDK",
+    "description": "As agents move from prototypes into real business workflows, organizations need a way to make custom and third-party agents visible, governable, and secure at enterprise scale. This session shows how Agent 365 SDK helps bring agents into an enterprise-ready control plane so teams can manage identity, observability, governance, and security with confidence.",
+    "asset_id": "dc54c74e-26f4-4838-b660-c88746833c20",
+    "caption_route": "CAPTION",
+    "caption_bytes": 32346,
+    "clean_chars": 18853,
+    "status": "ok",
+    "note": ""
+  }
+]

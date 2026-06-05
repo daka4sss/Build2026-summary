@@ -1,0 +1,3850 @@
+WEBVTT
+
+NOTE
+language:en-US
+
+NOTE Confidence: 0.9112296104431152
+
+00:00:00.120 --> 00:00:03.942
+To our session from Observability to ROI for AI agents
+
+NOTE Confidence: 0.9112296104431152
+
+00:00:04.013 --> 00:00:08.331
+on any framework, we're excited to walk you through Microsoft
+
+NOTE Confidence: 0.9112296104431152
+
+00:00:08.402 --> 00:00:09.959
+Foundry Observability.
+
+NOTE Confidence: 0.885345995426178
+
+00:00:09.960 --> 00:00:13.779
+We'll start with an introduction, but then we'll get right
+
+NOTE Confidence: 0.885345995426178
+
+00:00:13.845 --> 00:00:16.808
+into a variety of demos that cover the end to
+
+NOTE Confidence: 0.885345995426178
+
+00:00:16.874 --> 00:00:20.627
+end agent DevOps life cycle, where we'll walk you through
+
+NOTE Confidence: 0.885345995426178
+
+00:00:20.693 --> 00:00:23.986
+how you can observe any agent on any framework run
+
+NOTE Confidence: 0.885345995426178
+
+00:00:24.052 --> 00:00:25.039
+through a code.
+
+NOTE Confidence: 0.89841628074646
+
+00:00:25.040 --> 00:00:29.375
+First, end to end observability, talking about both inner and
+
+NOTE Confidence: 0.89841628074646
+
+00:00:29.446 --> 00:00:33.710
+outer loop optimization, how you turn traces into action for
+
+NOTE Confidence: 0.89841628074646
+
+00:00:33.781 --> 00:00:38.401
+continuous improvement, and then finally, how you prove the value
+
+NOTE Confidence: 0.89841628074646
+
+00:00:38.472 --> 00:00:41.599
+of your genetic workloads through agent ROI.
+
+NOTE Confidence: 0.9576478600502014
+
+00:00:43.240 --> 00:00:47.030
+Now we all know that agents are non deterministic, creating
+
+NOTE Confidence: 0.9576478600502014
+
+00:00:47.094 --> 00:00:51.719
+new reliability and consistency challenges for developers and operators.
+
+NOTE Confidence: 0.9378443360328674
+
+00:00:52.640 --> 00:00:54.640
+This is where observability comes in.
+
+NOTE Confidence: 0.9177050590515137
+
+00:00:55.840 --> 00:01:00.080
+Microsoft Foundry Observability covers 4 core pillars.
+
+NOTE Confidence: 0.9495998024940491
+
+00:01:00.480 --> 00:01:03.600
+Starting with tracing that let you view the full end
+
+NOTE Confidence: 0.9495998024940491
+
+00:01:03.660 --> 00:01:06.120
+to end execution workflow of your agents.
+
+NOTE Confidence: 0.9486758708953857
+
+00:01:07.000 --> 00:01:10.257
+Then going into evaluation which are all run off of
+
+NOTE Confidence: 0.9486758708953857
+
+00:01:10.321 --> 00:01:13.450
+the traces so that you can assess the quality and
+
+NOTE Confidence: 0.9486758708953857
+
+00:01:13.514 --> 00:01:14.919
+safety of your agents.
+
+NOTE Confidence: 0.8899214267730713
+
+00:01:15.840 --> 00:01:19.886
+Transitioning to monitoring, where you can run the same evaluations
+
+NOTE Confidence: 0.8899214267730713
+
+00:01:19.946 --> 00:01:22.905
+that you run offline in an online setting so that
+
+NOTE Confidence: 0.8899214267730713
+
+00:01:22.966 --> 00:01:25.080
+you can detect issues in real time.
+
+NOTE Confidence: 0.9167990684509277
+
+00:01:25.480 --> 00:01:28.914
+And then finally leading to optimization so that you can
+
+NOTE Confidence: 0.9167990684509277
+
+00:01:28.976 --> 00:01:31.000
+continuously improve your agents.
+
+NOTE Confidence: 0.946043074131012
+
+00:01:33.280 --> 00:01:37.098
+Now Microsoft Foundry provides all of the building blocks that
+
+NOTE Confidence: 0.946043074131012
+
+00:01:37.159 --> 00:01:40.177
+you can that you need to create reliable and high
+
+NOTE Confidence: 0.946043074131012
+
+00:01:40.238 --> 00:01:41.840
+quality production agents.
+
+NOTE Confidence: 0.8910582661628723
+
+00:01:42.319 --> 00:01:46.347
+Observability is part of the control plane that spans across
+
+NOTE Confidence: 0.8910582661628723
+
+00:01:46.414 --> 00:01:50.040
+all of the capabilities that you need to build agents,
+
+NOTE Confidence: 0.8910582661628723
+
+00:01:50.107 --> 00:01:54.336
+including our agent service models, IQ for knowledge tools, and
+
+NOTE Confidence: 0.8910582661628723
+
+00:01:54.403 --> 00:01:57.760
+machine learning capabilities such as fine tuning.
+
+NOTE Confidence: 0.8608834743499756
+
+00:01:59.480 --> 00:02:01.876
+What we're going to cover today in this session is
+
+NOTE Confidence: 0.8608834743499756
+
+00:02:01.924 --> 00:02:04.464
+we're going to walk you through the agent DevOps life
+
+NOTE Confidence: 0.8608834743499756
+
+00:02:04.512 --> 00:02:04.800
+cycle.
+
+NOTE Confidence: 0.8973971605300903
+
+00:02:04.920 --> 00:02:09.118
+We're going to show you how traditional DevOps is evolving
+
+NOTE Confidence: 0.8973971605300903
+
+00:02:09.190 --> 00:02:10.999
+for the age of AI agents.
+
+NOTE Confidence: 0.9015206098556519
+
+00:02:11.400 --> 00:02:14.904
+We're going to start with getting started, show you how
+
+NOTE Confidence: 0.9015206098556519
+
+00:02:14.968 --> 00:02:19.556
+you can get out-of-the-box observability, and then we'll transition into
+
+NOTE Confidence: 0.9015206098556519
+
+00:02:19.620 --> 00:02:23.506
+the inner loop where developers plan, code, test, and release
+
+NOTE Confidence: 0.9015206098556519
+
+00:02:23.570 --> 00:02:27.840
+all with observability at their fingertips directly within the IDE.
+
+NOTE Confidence: 0.9132320284843445
+
+00:02:28.240 --> 00:02:31.112
+And then as they transition to the outer loop, they
+
+NOTE Confidence: 0.9132320284843445
+
+00:02:31.168 --> 00:02:35.279
+can leverage the same observability capabilities to monitor their agents,
+
+NOTE Confidence: 0.9132320284843445
+
+00:02:35.336 --> 00:02:38.884
+analyze results and get insights, optimize, and then feed those
+
+NOTE Confidence: 0.9132320284843445
+
+00:02:38.940 --> 00:02:42.319
+signals back into the inner loop for continuous improvement.
+
+NOTE Confidence: 0.7662550210952759
+
+00:02:43.680 --> 00:02:45.240
+Now before that, do we do that?
+
+NOTE Confidence: 0.9419481754302979
+
+00:02:45.280 --> 00:02:47.920
+Let me walk you through our demo scenario.
+
+NOTE Confidence: 0.8429003953933716
+
+00:02:48.400 --> 00:02:52.301
+Our demo scenario builds on the, you know, data center
+
+NOTE Confidence: 0.8429003953933716
+
+00:02:52.373 --> 00:02:55.768
+scenario that you saw in BRK 241, which was the
+
+NOTE Confidence: 0.8429003953933716
+
+00:02:55.840 --> 00:03:00.103
+other session on developing production agents and we have a
+
+NOTE Confidence: 0.8429003953933716
+
+00:03:00.175 --> 00:03:05.160
+vendor history analyst agents for Microsoft's data center operations.
+
+NOTE Confidence: 0.9313709735870361
+
+00:03:05.360 --> 00:03:08.266
+What this agent does is if I'm a vendor manager
+
+NOTE Confidence: 0.9313709735870361
+
+00:03:08.327 --> 00:03:12.161
+and I'm managing vendors that are fixing and addressing issues
+
+NOTE Confidence: 0.9313709735870361
+
+00:03:12.223 --> 00:03:15.871
+in data centers, I want information about how those vendors
+
+NOTE Confidence: 0.9313709735870361
+
+00:03:15.933 --> 00:03:18.962
+are doing so that when I have a conversation with
+
+NOTE Confidence: 0.9313709735870361
+
+00:03:19.024 --> 00:03:22.734
+those vendors, I can have a data-driven your conversation to
+
+NOTE Confidence: 0.9313709735870361
+
+00:03:22.796 --> 00:03:23.599
+get outcomes.
+
+NOTE Confidence: 0.9216113090515137
+
+00:03:23.919 --> 00:03:26.989
+And what this agent does is it summarizes vendor job
+
+NOTE Confidence: 0.9216113090515137
+
+00:03:27.048 --> 00:03:31.120
+history, surfaces, insights, highlights key learnings to help me have
+
+NOTE Confidence: 0.9216113090515137
+
+00:03:31.179 --> 00:03:32.359
+those conversations.
+
+NOTE Confidence: 0.9570289254188538
+
+00:03:33.800 --> 00:03:36.341
+Now in the first part, let's go into the getting
+
+NOTE Confidence: 0.9570289254188538
+
+00:03:36.394 --> 00:03:37.400
+started experience.
+
+NOTE Confidence: 0.8555148839950562
+
+00:03:37.840 --> 00:03:40.346
+Here we'll walk you through how you can get out
+
+NOTE Confidence: 0.8555148839950562
+
+00:03:40.400 --> 00:03:44.080
+of out-of-the-box observability and we'll start with the beginning of
+
+NOTE Confidence: 0.8555148839950562
+
+00:03:44.133 --> 00:03:46.640
+the inner loop, going from plan to code test to
+
+NOTE Confidence: 0.8555148839950562
+
+00:03:46.693 --> 00:03:47.120
+release.
+
+NOTE Confidence: 0.9183182716369629
+
+00:03:47.400 --> 00:03:50.471
+And for that, I would like to welcome Felicia on
+
+NOTE Confidence: 0.9183182716369629
+
+00:03:50.535 --> 00:03:50.919
+stage.
+
+NOTE Confidence: 0.8805869817733765
+
+00:03:50.920 --> 00:03:53.384
+She's going to kick it off with a live demo
+
+NOTE Confidence: 0.8805869817733765
+
+00:03:53.441 --> 00:03:54.760
+to help us get started.
+
+NOTE Confidence: 0.9003663063049316
+
+00:03:54.760 --> 00:03:55.800
+Welcome, Felicia.
+
+NOTE Confidence: 0.8712950944900513
+
+00:03:56.040 --> 00:03:58.400
+Hi, Sebastian and thank you everybody.
+
+NOTE Confidence: 0.8048093318939209
+
+00:03:58.400 --> 00:04:00.978
+I'm so excited to be here to show you the
+
+NOTE Confidence: 0.8048093318939209
+
+00:04:01.041 --> 00:04:04.060
+end to end loop and the especially the the agent
+
+NOTE Confidence: 0.8048093318939209
+
+00:04:04.123 --> 00:04:07.080
+life cycle and the inner to outer loop journey.
+
+NOTE Confidence: 0.9186192750930786
+
+00:04:07.440 --> 00:04:10.289
+So as you have probably seen in one of the
+
+NOTE Confidence: 0.9186192750930786
+
+00:04:10.356 --> 00:04:13.409
+talks that Jeff and Tina did all about how we
+
+NOTE Confidence: 0.9186192750930786
+
+00:04:13.477 --> 00:04:17.208
+deploy A hosted agent and what hosted agents are about,
+
+NOTE Confidence: 0.9186192750930786
+
+00:04:17.276 --> 00:04:20.599
+I'm going to start with an existing hosted agent.
+
+NOTE Confidence: 0.9406468868255615
+
+00:04:21.040 --> 00:04:23.560
+And this is the agent that Sebastian was talking about.
+
+NOTE Confidence: 0.8962200880050659
+
+00:04:24.360 --> 00:04:27.152
+It provides us with details about the vendors and you
+
+NOTE Confidence: 0.8962200880050659
+
+00:04:27.205 --> 00:04:29.840
+know, what are things that they're probably doing.
+
+NOTE Confidence: 0.953671395778656
+
+00:04:29.839 --> 00:04:33.484
+Is there any investigation or insight that I need about
+
+NOTE Confidence: 0.953671395778656
+
+00:04:33.551 --> 00:04:34.280
+their work?
+
+NOTE Confidence: 0.9264751076698303
+
+00:04:34.480 --> 00:04:36.720
+So this is the playground that's in our portal.
+
+NOTE Confidence: 0.9258993268013
+
+00:04:36.839 --> 00:04:40.687
+You can send it a query and see what it
+
+NOTE Confidence: 0.9258993268013
+
+00:04:40.786 --> 00:04:41.279
+does.
+
+NOTE Confidence: 0.7030669450759888
+
+00:04:42.400 --> 00:04:44.892
+I've sent it a query, the basic query of something
+
+NOTE Confidence: 0.7030669450759888
+
+00:04:44.942 --> 00:04:45.839
+a user might type.
+
+NOTE Confidence: 0.9017521739006042
+
+00:04:46.160 --> 00:04:49.162
+And soon you'll see on the right side that the
+
+NOTE Confidence: 0.9017521739006042
+
+00:04:49.227 --> 00:04:51.119
+logs will start streaming in.
+
+NOTE Confidence: 0.910879909992218
+
+00:04:51.120 --> 00:04:53.200
+So you know that this has been sent.
+
+NOTE Confidence: 0.17173418402671814
+
+00:04:53.200 --> 00:04:53.280
+Oh.
+
+NOTE Confidence: 0.24374112486839294
+
+00:04:53.400 --> 00:04:53.720
+That's great.
+
+NOTE Confidence: 0.5490978360176086
+
+00:04:53.720 --> 00:04:53.960
+Awesome.
+
+NOTE Confidence: 0.9390761256217957
+
+00:04:54.800 --> 00:04:58.162
+Yeah, and I'm hoping to get some result back to
+
+NOTE Confidence: 0.9390761256217957
+
+00:04:58.233 --> 00:05:02.240
+understand how my agent might actually do in production.
+
+NOTE Confidence: 0.8857430219650269
+
+00:05:03.640 --> 00:05:06.690
+And what's really important is when we start playing with
+
+NOTE Confidence: 0.8857430219650269
+
+00:05:06.743 --> 00:05:10.007
+agents, it's really hard to assess if they're trustworthy, if
+
+NOTE Confidence: 0.8857430219650269
+
+00:05:10.061 --> 00:05:11.719
+they actually have good health.
+
+NOTE Confidence: 0.9738345146179199
+
+00:05:12.320 --> 00:05:14.448
+And I don't always know how well I can do
+
+NOTE Confidence: 0.9738345146179199
+
+00:05:14.500 --> 00:05:14.760
+that.
+
+NOTE Confidence: 0.9661074876785278
+
+00:05:14.920 --> 00:05:15.840
+So how do I do that?
+
+NOTE Confidence: 0.9670547246932983
+
+00:05:15.840 --> 00:05:16.000
+How?
+
+NOTE Confidence: 0.9191356897354126
+
+00:05:16.080 --> 00:05:19.360
+How do I figure out how to evaluate my agent?
+
+NOTE Confidence: 0.24287375807762146
+
+00:05:19.560 --> 00:05:19.840
+Yes.
+
+NOTE Confidence: 0.8972569108009338
+
+00:05:19.840 --> 00:05:22.000
+So evaluation is the keyword over there.
+
+NOTE Confidence: 0.9104797840118408
+
+00:05:22.520 --> 00:05:24.718
+The thing that I wanted to see is can I
+
+NOTE Confidence: 0.9104797840118408
+
+00:05:24.775 --> 00:05:26.748
+set up my agent in a way that I can
+
+NOTE Confidence: 0.9104797840118408
+
+00:05:26.804 --> 00:05:30.017
+evaluate for a bunch of different types of questions that
+
+NOTE Confidence: 0.9104797840118408
+
+00:05:30.074 --> 00:05:30.919
+a user may ask?
+
+NOTE Confidence: 0.8114519119262695
+
+00:05:30.920 --> 00:05:33.240
+So it can cover a wide range of cases.
+
+NOTE Confidence: 0.9506075978279114
+
+00:05:34.360 --> 00:05:37.418
+This agent is thinking for a little bit, but while
+
+NOTE Confidence: 0.9506075978279114
+
+00:05:37.480 --> 00:05:40.110
+it's doing that, what I'm going to do is go
+
+NOTE Confidence: 0.9506075978279114
+
+00:05:40.171 --> 00:05:43.047
+ahead and show you the various ways in which we
+
+NOTE Confidence: 0.9506075978279114
+
+00:05:43.108 --> 00:05:44.760
+can actually do evaluation.
+
+NOTE Confidence: 0.8740723729133606
+
+00:05:44.760 --> 00:05:48.766
+But the one interesting thing I want to demonstrate today
+
+NOTE Confidence: 0.8740723729133606
+
+00:05:48.836 --> 00:05:52.000
+is something that we call a rubric evaluator.
+
+NOTE Confidence: 0.829497218132019
+
+00:05:52.120 --> 00:05:55.853
+So a rubric evaluator is a really interesting new feature
+
+NOTE Confidence: 0.829497218132019
+
+00:05:55.919 --> 00:05:58.932
+that we've added to Foundry and it gives you a
+
+NOTE Confidence: 0.829497218132019
+
+00:05:58.997 --> 00:06:01.880
+multi, a multi dimensional evaluation score.
+
+NOTE Confidence: 0.9123908281326294
+
+00:06:02.440 --> 00:06:02.920
+That's cool.
+
+NOTE Confidence: 0.9266769886016846
+
+00:06:02.920 --> 00:06:04.640
+So I have no data.
+
+NOTE Confidence: 0.7415740489959717
+
+00:06:04.760 --> 00:06:06.880
+How can I, you know, get started?
+
+NOTE Confidence: 0.9082830548286438
+
+00:06:07.120 --> 00:06:08.800
+OK, so that's a good question too.
+
+NOTE Confidence: 0.8879069685935974
+
+00:06:08.880 --> 00:06:11.280
+Let me see if I can actually first start with
+
+NOTE Confidence: 0.8879069685935974
+
+00:06:11.333 --> 00:06:11.920
+the rubric.
+
+NOTE Confidence: 0.7791601419448853
+
+00:06:12.600 --> 00:06:15.035
+I'm going to, I'm going to just show you how
+
+NOTE Confidence: 0.7791601419448853
+
+00:06:15.090 --> 00:06:16.640
+I like fill out this rubric.
+
+NOTE Confidence: 0.9142256379127502
+
+00:06:16.640 --> 00:06:19.001
+So what I'm going to do for this rubric is
+
+NOTE Confidence: 0.9142256379127502
+
+00:06:19.057 --> 00:06:21.868
+I'm going to name it something and suggest that it
+
+NOTE Confidence: 0.9142256379127502
+
+00:06:21.924 --> 00:06:22.880
+be a rubric type.
+
+NOTE Confidence: 0.8883945345878601
+
+00:06:22.920 --> 00:06:25.505
+I'm going to give it the system prompt that my
+
+NOTE Confidence: 0.8883945345878601
+
+00:06:25.562 --> 00:06:28.260
+agent uses, select a model and the target for it
+
+NOTE Confidence: 0.8883945345878601
+
+00:06:28.316 --> 00:06:30.958
+is the hosted agent that I just showed you, and
+
+NOTE Confidence: 0.8883945345878601
+
+00:06:31.015 --> 00:06:33.320
+then I'm going to go generate the rubric.
+
+NOTE Confidence: 0.8490260243415833
+
+00:06:33.320 --> 00:06:33.920
+Oh, this is cool.
+
+NOTE Confidence: 0.8557046055793762
+
+00:06:33.920 --> 00:06:36.696
+So this is where I can add the context that
+
+NOTE Confidence: 0.8557046055793762
+
+00:06:36.761 --> 00:06:39.280
+to go and generate an evaluator that's.
+
+NOTE Confidence: 0.7887506484985352
+
+00:06:39.279 --> 00:06:41.994
+Awesome, yes, so you can always upload and more context
+
+NOTE Confidence: 0.7887506484985352
+
+00:06:42.043 --> 00:06:43.079
+files from your code.
+
+NOTE Confidence: 0.8833003044128418
+
+00:06:43.080 --> 00:06:45.691
+You could obviously do this in code as well and
+
+NOTE Confidence: 0.8833003044128418
+
+00:06:45.746 --> 00:06:48.746
+once this has gone ahead it will create something like
+
+NOTE Confidence: 0.8833003044128418
+
+00:06:48.802 --> 00:06:49.079
+this.
+
+NOTE Confidence: 0.842791736125946
+
+00:06:49.279 --> 00:06:52.297
+Over here you will see that my rubric is generated
+
+NOTE Confidence: 0.842791736125946
+
+00:06:52.357 --> 00:06:56.340
+across 8 different dimensions and the whole different weights, and
+
+NOTE Confidence: 0.842791736125946
+
+00:06:56.400 --> 00:06:59.719
+it's really interesting that it's copilot, not copilot.
+
+NOTE Confidence: 0.9421204328536987
+
+00:06:59.839 --> 00:07:02.976
+Boundary is able to actually do this based on the
+
+NOTE Confidence: 0.9421204328536987
+
+00:07:03.040 --> 00:07:05.920
+prompt and the agent that you have suggested.
+
+NOTE Confidence: 0.8683006167411804
+
+00:07:05.920 --> 00:07:09.015
+So this really simplifies evaluation for me because I can
+
+NOTE Confidence: 0.8683006167411804
+
+00:07:09.069 --> 00:07:12.273
+see everything across a whole set of dimensions, all within
+
+NOTE Confidence: 0.8683006167411804
+
+00:07:12.328 --> 00:07:13.359
+a single evaluator.
+
+NOTE Confidence: 0.9311956763267517
+
+00:07:13.360 --> 00:07:14.000
+That's really cool.
+
+NOTE Confidence: 0.7081842422485352
+
+00:07:14.040 --> 00:07:16.691
+Yes, now I, I want to see how well my
+
+NOTE Confidence: 0.7081842422485352
+
+00:07:16.763 --> 00:07:17.479
+agent did.
+
+NOTE Confidence: 0.952958881855011
+
+00:07:17.480 --> 00:07:18.760
+So let's go back to my agent.
+
+NOTE Confidence: 0.8727887272834778
+
+00:07:18.760 --> 00:07:22.014
+So it has replied and you can see over here
+
+NOTE Confidence: 0.8727887272834778
+
+00:07:22.089 --> 00:07:26.024
+that it's, it didn't think for 0.0 seconds, but it's
+
+NOTE Confidence: 0.8727887272834778
+
+00:07:26.100 --> 00:07:27.159
+contradictory.
+
+NOTE Confidence: 0.9019056558609009
+
+00:07:27.160 --> 00:07:30.515
+The evidence is they're not sure whether this vendor actually
+
+NOTE Confidence: 0.9019056558609009
+
+00:07:30.570 --> 00:07:32.880
+needs some management from my side or not.
+
+NOTE Confidence: 0.9701229333877563
+
+00:07:33.000 --> 00:07:34.200
+They have a recommendation.
+
+NOTE Confidence: 0.9340757131576538
+
+00:07:34.200 --> 00:07:34.560
+Great.
+
+NOTE Confidence: 0.9534351229667664
+
+00:07:34.560 --> 00:07:37.600
+So this is something that I would want to investigate.
+
+NOTE Confidence: 0.9274433255195618
+
+00:07:37.760 --> 00:07:40.460
+So let's go to the traces over here where you
+
+NOTE Confidence: 0.9274433255195618
+
+00:07:40.520 --> 00:07:41.000
+can see.
+
+NOTE Confidence: 0.9105905294418335
+
+00:07:41.840 --> 00:07:44.824
+Let me pull up the traces of other types of
+
+NOTE Confidence: 0.9105905294418335
+
+00:07:44.893 --> 00:07:48.710
+queries that this agent might have interfaced with so I
+
+NOTE Confidence: 0.9105905294418335
+
+00:07:48.779 --> 00:07:52.319
+know exactly whether there is an issue with the way
+
+NOTE Confidence: 0.9105905294418335
+
+00:07:52.388 --> 00:07:53.360
+it's replying.
+
+NOTE Confidence: 0.9076510071754456
+
+00:07:53.360 --> 00:07:55.239
+Is it actually a good reply or not a good
+
+NOTE Confidence: 0.9076510071754456
+
+00:07:55.285 --> 00:07:55.560
+reply?
+
+NOTE Confidence: 0.9202015995979309
+
+00:07:56.080 --> 00:07:58.877
+You can see that these traces are being run because
+
+NOTE Confidence: 0.9202015995979309
+
+00:07:58.931 --> 00:08:01.400
+we've set up continuous evaluations and jobs.
+
+NOTE Confidence: 0.9347133636474609
+
+00:08:01.400 --> 00:08:04.590
+So it's pulling production traces from App Insights for me,
+
+NOTE Confidence: 0.9347133636474609
+
+00:08:04.644 --> 00:08:07.240
+and I can see all of them represented over here.
+
+NOTE Confidence: 0.9258601665496826
+
+00:08:07.480 --> 00:08:10.173
+And you can also see the evaluator that I had
+
+NOTE Confidence: 0.9258601665496826
+
+00:08:10.233 --> 00:08:14.064
+previously created running against these traces, and it gives me
+
+NOTE Confidence: 0.9258601665496826
+
+00:08:14.124 --> 00:08:16.159
+a score as the traces populate in.
+
+NOTE Confidence: 0.8696640133857727
+
+00:08:16.280 --> 00:08:19.190
+You can see over here that the scores are varied
+
+NOTE Confidence: 0.8696640133857727
+
+00:08:19.251 --> 00:08:21.920
+based on the kind of question the user asks.
+
+NOTE Confidence: 0.5751937031745911
+
+00:08:22.600 --> 00:08:23.120
+Interesting.
+
+NOTE Confidence: 0.9331063032150269
+
+00:08:23.120 --> 00:08:25.350
+You can see one score over here, which is a
+
+NOTE Confidence: 0.9331063032150269
+
+00:08:25.402 --> 00:08:27.839
+little bit low, and I want to investigate that.
+
+NOTE Confidence: 0.9502318501472473
+
+00:08:27.840 --> 00:08:31.303
+So I'm going to just look at that trace and
+
+NOTE Confidence: 0.9502318501472473
+
+00:08:31.384 --> 00:08:33.640
+then click on this trace ID.
+
+NOTE Confidence: 0.9066526293754578
+
+00:08:33.960 --> 00:08:37.769
+And as I open this trace ID, it gives me
+
+NOTE Confidence: 0.9066526293754578
+
+00:08:37.864 --> 00:08:39.959
+this really rich view.
+
+NOTE Confidence: 0.8936429619789124
+
+00:08:40.320 --> 00:08:43.522
+In this view, you can see that when I'm invoking
+
+NOTE Confidence: 0.8936429619789124
+
+00:08:43.589 --> 00:08:46.725
+the agent, I am able to look at the evaluations
+
+NOTE Confidence: 0.8936429619789124
+
+00:08:46.792 --> 00:08:49.928
+against them and OK, I see the detailed view of
+
+NOTE Confidence: 0.8936429619789124
+
+00:08:49.995 --> 00:08:53.798
+the fact that both task completion and the vendor history
+
+NOTE Confidence: 0.8936429619789124
+
+00:08:53.865 --> 00:08:55.600
+rubric score are both low.
+
+NOTE Confidence: 0.8476083874702454
+
+00:08:55.800 --> 00:08:57.880
+Can you click on the user view so that I
+
+NOTE Confidence: 0.8476083874702454
+
+00:08:57.932 --> 00:09:00.636
+can see what actually happened so that I can analyze
+
+NOTE Confidence: 0.8476083874702454
+
+00:09:00.688 --> 00:09:01.520
+the explanation?
+
+NOTE Confidence: 0.8232067823410034
+
+00:09:01.760 --> 00:09:04.543
+So let's look at what this prompt was that generated
+
+NOTE Confidence: 0.8232067823410034
+
+00:09:04.597 --> 00:09:05.399
+this low score.
+
+NOTE Confidence: 0.8672184348106384
+
+00:09:05.640 --> 00:09:09.919
+So it seems like the user asked a very specific
+
+NOTE Confidence: 0.8672184348106384
+
+00:09:10.010 --> 00:09:14.927
+question and it seemed like the agent lacked the exact
+
+NOTE Confidence: 0.8672184348106384
+
+00:09:15.018 --> 00:09:19.934
+data that it was supposed to provide because which was
+
+NOTE Confidence: 0.8672184348106384
+
+00:09:20.025 --> 00:09:22.119
+referenced by the user.
+
+NOTE Confidence: 0.8323887586593628
+
+00:09:22.160 --> 00:09:23.720
+Yeah, yeah, that makes sense.
+
+NOTE Confidence: 0.9528142809867859
+
+00:09:23.720 --> 00:09:25.760
+So it's effectively hallucinating.
+
+NOTE Confidence: 0.8662207722663879
+
+00:09:25.760 --> 00:09:30.137
+It's pretending to say, hey, this vendor's performing well, but
+
+NOTE Confidence: 0.8662207722663879
+
+00:09:30.207 --> 00:09:34.515
+it's not actually giving the correct response with the context
+
+NOTE Confidence: 0.8662207722663879
+
+00:09:34.584 --> 00:09:36.599
+that the user was requesting.
+
+NOTE Confidence: 0.6309022307395935
+
+00:09:37.480 --> 00:09:37.720
+Awesome.
+
+NOTE Confidence: 0.9325281977653503
+
+00:09:37.720 --> 00:09:37.920
+Yeah.
+
+NOTE Confidence: 0.9185009002685547
+
+00:09:37.920 --> 00:09:39.760
+This is very cool, Felicia.
+
+NOTE Confidence: 0.6053178906440735
+
+00:09:39.760 --> 00:09:41.440
+I'd love, love the demo.
+
+NOTE Confidence: 0.9483401775360107
+
+00:09:41.440 --> 00:09:44.518
+We're going to do a quick recap of everything that
+
+NOTE Confidence: 0.9483401775360107
+
+00:09:44.580 --> 00:09:46.119
+we just saw in this demo.
+
+NOTE Confidence: 0.8865315914154053
+
+00:09:46.800 --> 00:09:50.542
+One of the exciting things that we are looking forward
+
+NOTE Confidence: 0.8865315914154053
+
+00:09:50.612 --> 00:09:54.632
+to announcing today is the the open ecosystem support that
+
+NOTE Confidence: 0.8865315914154053
+
+00:09:54.701 --> 00:09:55.879
+Foundry provides.
+
+NOTE Confidence: 0.8930599093437195
+
+00:09:55.880 --> 00:09:58.996
+So what you saw within the tracing experience and the
+
+NOTE Confidence: 0.8930599093437195
+
+00:09:59.055 --> 00:10:01.584
+evals being run off of the traces is a core
+
+NOTE Confidence: 0.8930599093437195
+
+00:10:01.642 --> 00:10:03.759
+part of Foundry's value proposition.
+
+NOTE Confidence: 0.8954847455024719
+
+00:10:04.120 --> 00:10:07.658
+Not only can you evaluate Foundry agents, but you can
+
+NOTE Confidence: 0.8954847455024719
+
+00:10:07.725 --> 00:10:11.664
+also evaluate Foundry and non Foundry agents that are built
+
+NOTE Confidence: 0.8954847455024719
+
+00:10:11.731 --> 00:10:12.999
+with any framework.
+
+NOTE Confidence: 0.7880890965461731
+
+00:10:13.000 --> 00:10:16.930
+So that includes the most popular agent frameworks that are
+
+NOTE Confidence: 0.7880890965461731
+
+00:10:16.997 --> 00:10:21.127
+out there, Lang chain, Land Graph, Open AISDK, Microsoft Agent
+
+NOTE Confidence: 0.7880890965461731
+
+00:10:21.193 --> 00:10:25.257
+Framework and you get complete visibility into the full Asian
+
+NOTE Confidence: 0.7880890965461731
+
+00:10:25.324 --> 00:10:29.787
+execution workflow and eval signals that are produced directly from
+
+NOTE Confidence: 0.7880890965461731
+
+00:10:29.854 --> 00:10:30.920
+from the traces.
+
+NOTE Confidence: 0.9121419191360474
+
+00:10:31.760 --> 00:10:36.370
+Now from there you get full stack observability through Foundries
+
+NOTE Confidence: 0.9121419191360474
+
+00:10:36.441 --> 00:10:38.639
+partnership with Azure Monitor.
+
+NOTE Confidence: 0.9524571895599365
+
+00:10:38.920 --> 00:10:39.920
+Within Foundry.
+
+NOTE Confidence: 0.9463096261024475
+
+00:10:40.160 --> 00:10:43.792
+We give you observability for your apps, agents and all
+
+NOTE Confidence: 0.9463096261024475
+
+00:10:43.858 --> 00:10:45.839
+of the AI platform components.
+
+NOTE Confidence: 0.9350643754005432
+
+00:10:46.040 --> 00:10:49.173
+But then all of that data goes to Azure Monitor
+
+NOTE Confidence: 0.9350643754005432
+
+00:10:49.240 --> 00:10:52.373
+where you can get full stack view across all of
+
+NOTE Confidence: 0.9350643754005432
+
+00:10:52.440 --> 00:10:56.840
+your Azure resources, your data, your infrastructure and so forth.
+
+NOTE Confidence: 0.9063417911529541
+
+00:10:57.120 --> 00:11:00.189
+And then we read that data back into Foundry so
+
+NOTE Confidence: 0.9063417911529541
+
+00:11:00.254 --> 00:11:04.041
+that you have centralized observability for all of your AI
+
+NOTE Confidence: 0.9063417911529541
+
+00:11:04.107 --> 00:11:04.760
+workloads.
+
+NOTE Confidence: 0.9208111763000488
+
+00:11:06.120 --> 00:11:09.253
+The other thing that you saw Felicia present is our
+
+NOTE Confidence: 0.9208111763000488
+
+00:11:09.315 --> 00:11:10.359
+Rubric Evaluator.
+
+NOTE Confidence: 0.923342764377594
+
+00:11:10.360 --> 00:11:14.045
+We're really excited to announce that the Rubric Evaluator is
+
+NOTE Confidence: 0.923342764377594
+
+00:11:14.106 --> 00:11:16.040
+now available in public preview.
+
+NOTE Confidence: 0.9266536831855774
+
+00:11:16.480 --> 00:11:21.944
+It gives you out-of-the-box and context specific observability for your
+
+NOTE Confidence: 0.9266536831855774
+
+00:11:22.021 --> 00:11:22.559
+agents.
+
+NOTE Confidence: 0.9001687169075012
+
+00:11:22.720 --> 00:11:26.511
+Whether you're creating a new agent and you have no
+
+NOTE Confidence: 0.9001687169075012
+
+00:11:26.586 --> 00:11:30.378
+data or you have an existing agent that already has
+
+NOTE Confidence: 0.9001687169075012
+
+00:11:30.452 --> 00:11:34.541
+traces, you can use Rubric Evaluator to auto generate a
+
+NOTE Confidence: 0.9001687169075012
+
+00:11:34.616 --> 00:11:39.225
+multi dimensional evaluator and use that both for your offline
+
+NOTE Confidence: 0.9001687169075012
+
+00:11:39.300 --> 00:11:42.199
+testing and for your online evaluation.
+
+NOTE Confidence: 0.9166089296340942
+
+00:11:44.520 --> 00:11:47.873
+Now let's take it one step further and let's move
+
+NOTE Confidence: 0.9166089296340942
+
+00:11:47.941 --> 00:11:51.705
+into the full agent DevOps loop covering both the inner
+
+NOTE Confidence: 0.9166089296340942
+
+00:11:51.773 --> 00:11:52.800
+and outer loop.
+
+NOTE Confidence: 0.889851987361908
+
+00:11:53.320 --> 00:11:56.463
+We covered a little bit of the getting started experience,
+
+NOTE Confidence: 0.889851987361908
+
+00:11:56.517 --> 00:11:59.065
+but I'm going to hand back to Felicia again for
+
+NOTE Confidence: 0.889851987361908
+
+00:11:59.119 --> 00:12:01.612
+the next part of the demo where we'll show you
+
+NOTE Confidence: 0.889851987361908
+
+00:12:01.666 --> 00:12:04.160
+how you can use our code First, Observability.
+
+NOTE Confidence: 0.8752411603927612
+
+00:12:05.000 --> 00:12:06.000
+Yeah, awesome.
+
+NOTE Confidence: 0.960885226726532
+
+00:12:06.559 --> 00:12:10.004
+So we were in the portal as you may have
+
+NOTE Confidence: 0.960885226726532
+
+00:12:10.090 --> 00:12:12.759
+seen and I am now in my editor.
+
+NOTE Confidence: 0.8985175490379333
+
+00:12:13.040 --> 00:12:16.422
+And what I wanted to demonstrate is how we can
+
+NOTE Confidence: 0.8985175490379333
+
+00:12:16.495 --> 00:12:20.392
+use this the Foundry MCP server and the Foundry skill
+
+NOTE Confidence: 0.8985175490379333
+
+00:12:20.466 --> 00:12:24.804
+to better understand, analyze and even do actions on behalf
+
+NOTE Confidence: 0.8985175490379333
+
+00:12:24.878 --> 00:12:28.040
+of Foundry from your developer environment.
+
+NOTE Confidence: 0.9370486736297607
+
+00:12:28.120 --> 00:12:30.640
+So how do I get access to the Foundry MCP?
+
+NOTE Confidence: 0.9617501497268677
+
+00:12:30.760 --> 00:12:31.520
+How does that work?
+
+NOTE Confidence: 0.858208954334259
+
+00:12:31.520 --> 00:12:34.559
+So the Foundry MCP and the Foundry skill are both
+
+NOTE Confidence: 0.858208954334259
+
+00:12:34.621 --> 00:12:38.281
+packaged under the Foundry Toolkit which is an extension in
+
+NOTE Confidence: 0.858208954334259
+
+00:12:38.343 --> 00:12:38.840
+VS Code.
+
+NOTE Confidence: 0.9418779015541077
+
+00:12:39.080 --> 00:12:42.214
+Eventually we will be working with other coding agents and
+
+NOTE Confidence: 0.9418779015541077
+
+00:12:42.268 --> 00:12:44.916
+other editors that you can use it over there, but
+
+NOTE Confidence: 0.9418779015541077
+
+00:12:44.970 --> 00:12:47.240
+today you can go and access it from there.
+
+NOTE Confidence: 0.867211103439331
+
+00:12:48.080 --> 00:12:51.956
+What I have done right now is just prompted copilot
+
+NOTE Confidence: 0.867211103439331
+
+00:12:52.032 --> 00:12:55.300
+chat inside VS Code to go and get that eval
+
+NOTE Confidence: 0.867211103439331
+
+00:12:55.376 --> 00:12:58.796
+result that you saw me hook up earlier on the
+
+NOTE Confidence: 0.867211103439331
+
+00:12:58.872 --> 00:13:03.128
+portal and to give me some associate explanations of why
+
+NOTE Confidence: 0.867211103439331
+
+00:13:03.204 --> 00:13:06.472
+you saw that 0.4 that I pulled out from the
+
+NOTE Confidence: 0.867211103439331
+
+00:13:06.548 --> 00:13:07.080
+traces.
+
+NOTE Confidence: 0.9247411489486694
+
+00:13:07.280 --> 00:13:09.506
+Why is that score showing up low and what are
+
+NOTE Confidence: 0.9247411489486694
+
+00:13:09.555 --> 00:13:11.039
+opportunities for improvement?
+
+NOTE Confidence: 0.9042631387710571
+
+00:13:11.520 --> 00:13:14.692
+Now, the cool part about using the skill is that
+
+NOTE Confidence: 0.9042631387710571
+
+00:13:14.758 --> 00:13:18.194
+a skill is ultimately an opinionated flow that we as
+
+NOTE Confidence: 0.9042631387710571
+
+00:13:18.260 --> 00:13:21.697
+Foundry creators are providing to you as an end user
+
+NOTE Confidence: 0.9042631387710571
+
+00:13:21.763 --> 00:13:24.869
+to say, hey, this is how you should observe and
+
+NOTE Confidence: 0.9042631387710571
+
+00:13:24.935 --> 00:13:28.240
+analyze and perhaps you know, optimize your agent.
+
+NOTE Confidence: 0.9688014984130859
+
+00:13:28.240 --> 00:13:30.320
+This is the loop that we would recommend you do.
+
+NOTE Confidence: 0.8769441246986389
+
+00:13:30.480 --> 00:13:33.858
+So when you use this scale, it already knows what
+
+NOTE Confidence: 0.8769441246986389
+
+00:13:33.927 --> 00:13:37.031
+part of the observably loop you are in and it
+
+NOTE Confidence: 0.8769441246986389
+
+00:13:37.099 --> 00:13:40.961
+can suggest you things that from Foundry or perhaps they
+
+NOTE Confidence: 0.8769441246986389
+
+00:13:41.030 --> 00:13:43.719
+could be like coding, you know, issues.
+
+NOTE Confidence: 0.8709394931793213
+
+00:13:43.840 --> 00:13:45.670
+It could be either a client side thing or a
+
+NOTE Confidence: 0.8709394931793213
+
+00:13:45.713 --> 00:13:46.479
+server side thing.
+
+NOTE Confidence: 0.9067494869232178
+
+00:13:46.480 --> 00:13:50.263
+It helps you connect both those layers to suggest improvements
+
+NOTE Confidence: 0.9067494869232178
+
+00:13:50.324 --> 00:13:51.239
+for your agent.
+
+NOTE Confidence: 0.6396080255508423
+
+00:13:51.360 --> 00:13:51.600
+So.
+
+NOTE Confidence: 0.8621453046798706
+
+00:13:51.800 --> 00:13:53.692
+Yeah, so wait a minute, I don't have to go
+
+NOTE Confidence: 0.8621453046798706
+
+00:13:53.737 --> 00:13:56.080
+through hundreds of traces and eval results anymore.
+
+NOTE Confidence: 0.9273082613945007
+
+00:13:56.280 --> 00:13:59.361
+Yeah, I mean, that's the power of being able to
+
+NOTE Confidence: 0.9273082613945007
+
+00:13:59.426 --> 00:14:00.999
+actually use this skill.
+
+NOTE Confidence: 0.8556786179542542
+
+00:14:01.200 --> 00:14:03.850
+And you can see over here choosing A Foundry MCP
+
+NOTE Confidence: 0.8556786179542542
+
+00:14:03.905 --> 00:14:05.120
+and getting the evals.
+
+NOTE Confidence: 0.8730493187904358
+
+00:14:05.360 --> 00:14:09.589
+And it's it's going to run this entire thing for
+
+NOTE Confidence: 0.8730493187904358
+
+00:14:09.677 --> 00:14:11.439
+me for a little bit.
+
+NOTE Confidence: 0.9025399088859558
+
+00:14:11.440 --> 00:14:13.865
+So what I'm going to do is show you a
+
+NOTE Confidence: 0.9025399088859558
+
+00:14:13.930 --> 00:14:17.077
+run that I did previously over here and here you
+
+NOTE Confidence: 0.9025399088859558
+
+00:14:17.142 --> 00:14:20.092
+can see the exact same query that I just sent
+
+NOTE Confidence: 0.9025399088859558
+
+00:14:20.157 --> 00:14:21.600
+a couple of hours ago.
+
+NOTE Confidence: 0.8262616991996765
+
+00:14:22.120 --> 00:14:25.858
+I was using my project endpoint and it got all
+
+NOTE Confidence: 0.8262616991996765
+
+00:14:25.939 --> 00:14:27.240
+these evaluator.
+
+NOTE Confidence: 0.815236508846283
+
+00:14:27.960 --> 00:14:31.344
+It ran eval get and it got the evaluator definition
+
+NOTE Confidence: 0.815236508846283
+
+00:14:31.410 --> 00:14:34.131
+and the last run and all of that and it's
+
+NOTE Confidence: 0.815236508846283
+
+00:14:34.198 --> 00:14:37.715
+giving me the last 8 hour evaluation analysis and and
+
+NOTE Confidence: 0.815236508846283
+
+00:14:37.781 --> 00:14:39.640
+here is that entire summary.
+
+NOTE Confidence: 0.9257581233978271
+
+00:14:40.080 --> 00:14:40.800
+Wow, that's cool.
+
+NOTE Confidence: 0.7918057441711426
+
+00:14:40.800 --> 00:14:42.819
+And it's even all of us were trying out this
+
+NOTE Confidence: 0.7918057441711426
+
+00:14:42.865 --> 00:14:45.160
+agent and it's showing all of our evaluation runs.
+
+NOTE Confidence: 0.9482915997505188
+
+00:14:45.160 --> 00:14:45.640
+That's awesome.
+
+NOTE Confidence: 0.8903719782829285
+
+00:14:45.640 --> 00:14:46.600
+Yeah, we're a great team.
+
+NOTE Confidence: 0.8528075814247131
+
+00:14:47.160 --> 00:14:50.352
+It looks like my runs actually didn't do as well
+
+NOTE Confidence: 0.8528075814247131
+
+00:14:50.418 --> 00:14:52.679
+as perhaps Vivex, but that's fine.
+
+NOTE Confidence: 0.8953598737716675
+
+00:14:54.160 --> 00:14:57.640
+So it's it's also giving you a per dimension breakdown,
+
+NOTE Confidence: 0.8953598737716675
+
+00:14:57.703 --> 00:15:01.310
+and it's also telling you which dimension is actually the
+
+NOTE Confidence: 0.8953598737716675
+
+00:15:01.373 --> 00:15:01.880
+weakest.
+
+NOTE Confidence: 0.8812341690063477
+
+00:15:01.880 --> 00:15:02.920
+Oh, that's really cool.
+
+NOTE Confidence: 0.9144293069839478
+
+00:15:02.920 --> 00:15:05.423
+So within the rubric, right, we have a bunch of
+
+NOTE Confidence: 0.9144293069839478
+
+00:15:05.476 --> 00:15:08.831
+different dimensions and being able to drill into the dimension
+
+NOTE Confidence: 0.9144293069839478
+
+00:15:08.884 --> 00:15:11.281
+that that has the low score is a really great
+
+NOTE Confidence: 0.9144293069839478
+
+00:15:11.334 --> 00:15:12.400
+way to get insights.
+
+NOTE Confidence: 0.8800156712532043
+
+00:15:12.520 --> 00:15:15.132
+Yeah, and you know, it's always well and good if
+
+NOTE Confidence: 0.8800156712532043
+
+00:15:15.187 --> 00:15:18.018
+my monitoring tab is showing me some things off, but
+
+NOTE Confidence: 0.8800156712532043
+
+00:15:18.072 --> 00:15:19.759
+what do I actually do about it?
+
+NOTE Confidence: 0.8090444803237915
+
+00:15:19.760 --> 00:15:21.280
+I mean, that's a real challenge.
+
+NOTE Confidence: 0.9023350477218628
+
+00:15:21.600 --> 00:15:26.261
+And over here it's actually giving you a pretty detailed
+
+NOTE Confidence: 0.9023350477218628
+
+00:15:26.344 --> 00:15:29.840
+explanation of what could have gone wrong.
+
+NOTE Confidence: 0.930296003818512
+
+00:15:30.040 --> 00:15:33.615
+What are the patterns and what are the recommended improvements
+
+NOTE Confidence: 0.930296003818512
+
+00:15:33.672 --> 00:15:34.239
+over here?
+
+NOTE Confidence: 0.8605685234069824
+
+00:15:34.400 --> 00:15:36.571
+The the other thing that I want to drive home
+
+NOTE Confidence: 0.8605685234069824
+
+00:15:36.619 --> 00:15:38.984
+is that this is something that you can trust more
+
+NOTE Confidence: 0.8605685234069824
+
+00:15:39.032 --> 00:15:41.735
+than obviously just putting that result in a general LLM
+
+NOTE Confidence: 0.8605685234069824
+
+00:15:41.783 --> 00:15:44.148
+because it is grounded first of all, in your repo
+
+NOTE Confidence: 0.8605685234069824
+
+00:15:44.196 --> 00:15:46.320
+context and in the skill context of Foundry.
+
+NOTE Confidence: 0.8993085622787476
+
+00:15:46.480 --> 00:15:49.245
+So it just makes that more actionable and trustable as
+
+NOTE Confidence: 0.8993085622787476
+
+00:15:49.296 --> 00:15:51.960
+you analyze the failure patterns that are coming up.
+
+NOTE Confidence: 0.9092055559158325
+
+00:15:52.320 --> 00:15:55.619
+So Jared's recommending that I can perhaps do a system
+
+NOTE Confidence: 0.9092055559158325
+
+00:15:55.680 --> 00:15:58.735
+prompt change and it tells me reasons for that and
+
+NOTE Confidence: 0.9092055559158325
+
+00:15:58.796 --> 00:16:02.279
+also perhaps how I should change my harness and evaluator
+
+NOTE Confidence: 0.9092055559158325
+
+00:16:02.340 --> 00:16:03.440
+to better do that.
+
+NOTE Confidence: 0.9379086494445801
+
+00:16:03.440 --> 00:16:05.681
+So what I'm going to do is I'm going to
+
+NOTE Confidence: 0.9379086494445801
+
+00:16:05.738 --> 00:16:07.520
+actually say that's what I did.
+
+NOTE Confidence: 0.9158282279968262
+
+00:16:07.520 --> 00:16:09.834
+I said yeah, draft the system prompt and I'm going
+
+NOTE Confidence: 0.9158282279968262
+
+00:16:09.880 --> 00:16:11.685
+to set it off and it's going to come up
+
+NOTE Confidence: 0.9158282279968262
+
+00:16:11.731 --> 00:16:13.120
+with like a new prompt for me.
+
+NOTE Confidence: 0.8911094665527344
+
+00:16:14.120 --> 00:16:17.167
+And it did come up with a new prompt, like
+
+NOTE Confidence: 0.8911094665527344
+
+00:16:17.240 --> 00:16:21.304
+a new system prompt, which oops, I actually deleted that
+
+NOTE Confidence: 0.8911094665527344
+
+00:16:21.376 --> 00:16:22.320
+file earlier.
+
+NOTE Confidence: 0.8375133275985718
+
+00:16:22.320 --> 00:16:24.786
+But what what I can do is I can like
+
+NOTE Confidence: 0.8375133275985718
+
+00:16:24.855 --> 00:16:27.870
+actually set out a new baseline and see if I
+
+NOTE Confidence: 0.8375133275985718
+
+00:16:27.939 --> 00:16:31.160
+actually helps improve the score on the rubric.
+
+NOTE Confidence: 0.9312549233436584
+
+00:16:31.360 --> 00:16:33.879
+Yeah, the cool part is that first one metric definition
+
+NOTE Confidence: 0.9312549233436584
+
+00:16:33.925 --> 00:16:36.719
+block addresses exactly that trace issue that we saw earlier.
+
+NOTE Confidence: 0.9608452320098877
+
+00:16:36.720 --> 00:16:38.720
+But how do I do this at scale?
+
+NOTE Confidence: 0.8546635508537292
+
+00:16:38.720 --> 00:16:40.913
+You know, is there I can do this kind of
+
+NOTE Confidence: 0.8546635508537292
+
+00:16:40.968 --> 00:16:43.216
+one off, but you know what, what can I do
+
+NOTE Confidence: 0.8546635508537292
+
+00:16:43.271 --> 00:16:43.599
+there?
+
+NOTE Confidence: 0.883246898651123
+
+00:16:43.600 --> 00:16:47.228
+So the cool thing about Foundry and it all being
+
+NOTE Confidence: 0.883246898651123
+
+00:16:47.303 --> 00:16:50.781
+all in one is that you can actually pull these
+
+NOTE Confidence: 0.883246898651123
+
+00:16:50.856 --> 00:16:53.200
+traces back into your data set.
+
+NOTE Confidence: 0.8920350074768066
+
+00:16:53.440 --> 00:16:56.308
+And what that helps you do is it helps you
+
+NOTE Confidence: 0.8920350074768066
+
+00:16:56.376 --> 00:16:59.040
+regression prove these things later on.
+
+NOTE Confidence: 0.9112309813499451
+
+00:16:59.040 --> 00:17:01.889
+So if you're just a developer working in your inner
+
+NOTE Confidence: 0.9112309813499451
+
+00:17:01.945 --> 00:17:04.459
+loop, you can run the changes that you may be
+
+NOTE Confidence: 0.9112309813499451
+
+00:17:04.515 --> 00:17:07.644
+locally staging for your agent against that data set and
+
+NOTE Confidence: 0.9112309813499451
+
+00:17:07.700 --> 00:17:09.599
+then push that code to production.
+
+NOTE Confidence: 0.8549717664718628
+
+00:17:10.520 --> 00:17:11.200
+That's awesome.
+
+NOTE Confidence: 0.9205214381217957
+
+00:17:11.200 --> 00:17:12.040
+Really great demo.
+
+NOTE Confidence: 0.8922291994094849
+
+00:17:12.040 --> 00:17:13.080
+Thank you, Felicia.
+
+NOTE Confidence: 0.9049270749092102
+
+00:17:13.080 --> 00:17:15.963
+And we'll do a quick run through again of the
+
+NOTE Confidence: 0.9049270749092102
+
+00:17:16.027 --> 00:17:20.192
+core set of capabilities that we just highlighted, including code
+
+NOTE Confidence: 0.9049270749092102
+
+00:17:20.256 --> 00:17:24.805
+first observability for Foundry agents, which we're super excited about
+
+NOTE Confidence: 0.9049270749092102
+
+00:17:24.869 --> 00:17:28.457
+the skill based guided user experience that you just saw
+
+NOTE Confidence: 0.9049270749092102
+
+00:17:28.521 --> 00:17:31.789
+where you can not only run evaluations, but you can
+
+NOTE Confidence: 0.9049270749092102
+
+00:17:31.853 --> 00:17:34.159
+also analyze the evaluation results.
+
+NOTE Confidence: 0.95365309715271
+
+00:17:34.160 --> 00:17:37.415
+You can do comparisons across, you can look at traces
+
+NOTE Confidence: 0.95365309715271
+
+00:17:37.477 --> 00:17:41.961
+and then seamlessly transition to optimization and making improvements to
+
+NOTE Confidence: 0.95365309715271
+
+00:17:42.022 --> 00:17:42.760
+your agents.
+
+NOTE Confidence: 0.7815514206886292
+
+00:17:43.040 --> 00:17:46.825
+And that's all available in VS Code, GitHub, copilot chat,
+
+NOTE Confidence: 0.7815514206886292
+
+00:17:46.890 --> 00:17:48.000
+CLI and so forth.
+
+NOTE Confidence: 0.9101565480232239
+
+00:17:48.720 --> 00:17:52.814
+There are a number of other additional public preview capabilities
+
+NOTE Confidence: 0.9101565480232239
+
+00:17:52.877 --> 00:17:57.158
+that we're excited to announce including multi turn evaluation, which
+
+NOTE Confidence: 0.9101565480232239
+
+00:17:57.220 --> 00:17:59.639
+is a new capability within the Foundry.
+
+NOTE Confidence: 0.9640378355979919
+
+00:17:59.640 --> 00:18:03.499
+Previously everything was single turn, but now you can look
+
+NOTE Confidence: 0.9640378355979919
+
+00:18:03.564 --> 00:18:05.200
+across an entire session.
+
+NOTE Confidence: 0.9590263366699219
+
+00:18:05.600 --> 00:18:08.825
+Where this is really powerful is an agent might succeed
+
+NOTE Confidence: 0.9590263366699219
+
+00:18:08.884 --> 00:18:11.406
+at the end of the session, but if a session
+
+NOTE Confidence: 0.9590263366699219
+
+00:18:11.465 --> 00:18:14.691
+took 20 minutes, that's not a successful session if you
+
+NOTE Confidence: 0.9590263366699219
+
+00:18:14.749 --> 00:18:16.919
+expect the session to take 5 minutes.
+
+NOTE Confidence: 0.8531409502029419
+
+00:18:16.920 --> 00:18:20.840
+So we can do that with multi turn evaluation.
+
+NOTE Confidence: 0.8719413876533508
+
+00:18:22.119 --> 00:18:25.941
+Another feature that we're shipping that goes along with multi
+
+NOTE Confidence: 0.8719413876533508
+
+00:18:26.002 --> 00:18:28.159
+turn evaluation is user simulation.
+
+NOTE Confidence: 0.91497802734375
+
+00:18:28.480 --> 00:18:33.080
+User simulation enables you to automatically generate realistic conversations.
+
+NOTE Confidence: 0.9288359880447388
+
+00:18:33.080 --> 00:18:36.420
+So if you don't have multi turn data available to
+
+NOTE Confidence: 0.9288359880447388
+
+00:18:36.488 --> 00:18:40.919
+run your first evaluation, user simulation helps you get started.
+
+NOTE Confidence: 0.7626871466636658
+
+00:18:41.760 --> 00:18:45.383
+And then the other bit is, and Felicia alluded to
+
+NOTE Confidence: 0.7626871466636658
+
+00:18:45.456 --> 00:18:46.639
+this already is.
+
+NOTE Confidence: 0.9756765961647034
+
+00:18:46.640 --> 00:18:49.071
+What do you do with all of the signals that
+
+NOTE Confidence: 0.9756765961647034
+
+00:18:49.128 --> 00:18:49.920
+are generated?
+
+NOTE Confidence: 0.9500792026519775
+
+00:18:50.160 --> 00:18:52.822
+Well, you want to be able to feed traces back
+
+NOTE Confidence: 0.9500792026519775
+
+00:18:52.881 --> 00:18:55.840
+into the inner loop to improve your test coverage.
+
+NOTE Confidence: 0.9528728127479553
+
+00:18:56.119 --> 00:18:59.024
+Your initial test coverage is only going to get you
+
+NOTE Confidence: 0.9528728127479553
+
+00:18:59.081 --> 00:18:59.479
+so far.
+
+NOTE Confidence: 0.9641356468200684
+
+00:18:59.480 --> 00:19:02.007
+If you have 20 test cases, that's not going to
+
+NOTE Confidence: 0.9641356468200684
+
+00:19:02.062 --> 00:19:04.480
+cover everything that you see in production.
+
+NOTE Confidence: 0.8202371597290039
+
+00:19:04.680 --> 00:19:07.902
+So now with traces to data sets and smart filtering
+
+NOTE Confidence: 0.8202371597290039
+
+00:19:07.965 --> 00:19:11.756
+capabilities, you can select traces and feed those back into
+
+NOTE Confidence: 0.8202371597290039
+
+00:19:11.819 --> 00:19:15.041
+your data sets to improve your test coverage in the
+
+NOTE Confidence: 0.8202371597290039
+
+00:19:15.105 --> 00:19:15.800
+inner loop.
+
+NOTE Confidence: 0.834827184677124
+
+00:19:17.160 --> 00:19:20.120
+Now I'll quickly walk you through our evaluator catalog.
+
+NOTE Confidence: 0.8721380233764648
+
+00:19:20.120 --> 00:19:21.560
+So you also saw this earlier.
+
+NOTE Confidence: 0.8991020321846008
+
+00:19:21.560 --> 00:19:25.410
+We have a very comprehensive evaluator catalog in the foundry
+
+NOTE Confidence: 0.8991020321846008
+
+00:19:25.474 --> 00:19:29.451
+with built in evaluators that span across quality, risk, safety
+
+NOTE Confidence: 0.8991020321846008
+
+00:19:29.514 --> 00:19:30.840
+and agent evaluation.
+
+NOTE Confidence: 0.8582212328910828
+
+00:19:31.320 --> 00:19:34.702
+Several of our evaluators are now multi turn as well,
+
+NOTE Confidence: 0.8582212328910828
+
+00:19:34.766 --> 00:19:40.446
+groundedness, coherence, task completion, customer satisfaction and our rubric evaluators
+
+NOTE Confidence: 0.8582212328910828
+
+00:19:40.510 --> 00:19:43.573
+are also multi turn so that you have the ability
+
+NOTE Confidence: 0.8582212328910828
+
+00:19:43.637 --> 00:19:46.573
+to create, you know both custom LLM as a judge
+
+NOTE Confidence: 0.8582212328910828
+
+00:19:46.637 --> 00:19:50.594
+and code based evaluators and rubric evaluators and make those
+
+NOTE Confidence: 0.8582212328910828
+
+00:19:50.657 --> 00:19:51.360
+multi turn.
+
+NOTE Confidence: 0.9057297706604004
+
+00:19:52.000 --> 00:19:55.280
+We recommend that you use a variety of these evaluators.
+
+NOTE Confidence: 0.836480438709259
+
+00:19:55.520 --> 00:20:01.159
+Rubric covers obviously multi dimension, but custom evaluators including code
+
+NOTE Confidence: 0.836480438709259
+
+00:20:01.232 --> 00:20:05.920
+based evaluators especially for non deterministic scenarios are.
+
+NOTE Confidence: 0.7443356513977051
+
+00:20:06.080 --> 00:20:07.000
+Highly recommended.
+
+NOTE Confidence: 0.8908824920654297
+
+00:20:07.000 --> 00:20:09.154
+For example, if you want to do a regex check
+
+NOTE Confidence: 0.8908824920654297
+
+00:20:09.203 --> 00:20:11.455
+or look up something in a database, you can do
+
+NOTE Confidence: 0.8908824920654297
+
+00:20:11.504 --> 00:20:13.120
+that with a code based evaluator.
+
+NOTE Confidence: 0.9291901588439941
+
+00:20:13.119 --> 00:20:15.745
+You don't need an LLM as a judge to do
+
+NOTE Confidence: 0.9291901588439941
+
+00:20:15.814 --> 00:20:16.159
+that.
+
+NOTE Confidence: 0.930508017539978
+
+00:20:16.800 --> 00:20:19.559
+Now let's move on to the next part of our
+
+NOTE Confidence: 0.930508017539978
+
+00:20:19.627 --> 00:20:22.319
+session, which is optimization at scale.
+
+NOTE Confidence: 0.9218427538871765
+
+00:20:22.560 --> 00:20:25.052
+So for that I would like to invite Vivek on
+
+NOTE Confidence: 0.9218427538871765
+
+00:20:25.110 --> 00:20:27.892
+stage and he's going to walk us through the next
+
+NOTE Confidence: 0.9218427538871765
+
+00:20:27.950 --> 00:20:28.240
+demo.
+
+NOTE Confidence: 0.432578980922699
+
+00:20:28.680 --> 00:20:29.520
+Thanks Sebastian.
+
+NOTE Confidence: 0.9171893000602722
+
+00:20:30.440 --> 00:20:31.360
+So happy to be here.
+
+NOTE Confidence: 0.8874000906944275
+
+00:20:32.800 --> 00:20:34.920
+Let me start with a quick recap.
+
+NOTE Confidence: 0.933746874332428
+
+00:20:36.240 --> 00:20:39.210
+So we started with, we have an agent that's working
+
+NOTE Confidence: 0.933746874332428
+
+00:20:39.268 --> 00:20:39.560
+well.
+
+NOTE Confidence: 0.49030113220214844
+
+00:20:39.560 --> 00:20:40.600
+It's hosted in Foundry.
+
+NOTE Confidence: 0.8651505708694458
+
+00:20:41.080 --> 00:20:42.725
+We have a set of, we have a data set
+
+NOTE Confidence: 0.8651505708694458
+
+00:20:42.771 --> 00:20:45.148
+which is a list of representative tasks that we want
+
+NOTE Confidence: 0.8651505708694458
+
+00:20:45.194 --> 00:20:46.199
+our agent to be doing.
+
+NOTE Confidence: 0.9167920351028442
+
+00:20:46.600 --> 00:20:48.977
+And we have rubrics which tells us how good it
+
+NOTE Confidence: 0.9167920351028442
+
+00:20:49.029 --> 00:20:49.959
+is on those tasks.
+
+NOTE Confidence: 0.9642616510391235
+
+00:20:50.480 --> 00:20:53.051
+Now what comes next, we know that how good it
+
+NOTE Confidence: 0.9642616510391235
+
+00:20:53.108 --> 00:20:53.280
+is.
+
+NOTE Confidence: 0.9147540926933289
+
+00:20:53.480 --> 00:20:54.520
+We want to still improve it.
+
+NOTE Confidence: 0.9210655689239502
+
+00:20:54.520 --> 00:20:56.682
+We want to fix specific gaps and we want to,
+
+NOTE Confidence: 0.9210655689239502
+
+00:20:56.731 --> 00:20:58.992
+we want that agent to be in general doing well
+
+NOTE Confidence: 0.9210655689239502
+
+00:20:59.042 --> 00:21:00.320
+across all of those tasks.
+
+NOTE Confidence: 0.697435736656189
+
+00:21:01.000 --> 00:21:03.280
+This is where ACD AI Agent Optimize comes in.
+
+NOTE Confidence: 0.8526561260223389
+
+00:21:03.280 --> 00:21:05.876
+There's a new feature that we're launching and we're going
+
+NOTE Confidence: 0.8526561260223389
+
+00:21:05.920 --> 00:21:07.039
+to see live how it works.
+
+NOTE Confidence: 0.8836484551429749
+
+00:21:10.880 --> 00:21:14.760
+I'm going to start and it starts with a warning.
+
+NOTE Confidence: 0.8320822715759277
+
+00:21:15.320 --> 00:21:18.624
+Optimization will create new versions of your agent, and this
+
+NOTE Confidence: 0.8320822715759277
+
+00:21:18.678 --> 00:21:21.387
+is a key feature that we are just not recommending
+
+NOTE Confidence: 0.8320822715759277
+
+00:21:21.441 --> 00:21:24.799
+with this optimization what your next system prompt should be.
+
+NOTE Confidence: 0.9610641002655029
+
+00:21:24.960 --> 00:21:26.360
+It is also trying out.
+
+NOTE Confidence: 0.8517670035362244
+
+00:21:26.359 --> 00:21:29.626
+It is deploying those versions for your agents, trying across
+
+NOTE Confidence: 0.8517670035362244
+
+00:21:29.679 --> 00:21:32.785
+those tasks and assessing on rubrics and then iterating on
+
+NOTE Confidence: 0.8517670035362244
+
+00:21:32.839 --> 00:21:32.999
+it.
+
+NOTE Confidence: 0.896311342716217
+
+00:21:33.240 --> 00:21:35.080
+The prompt or the context that works.
+
+NOTE Confidence: 0.8944293260574341
+
+00:21:35.080 --> 00:21:37.240
+It double S down on it, which doesn't work.
+
+NOTE Confidence: 0.8019933700561523
+
+00:21:37.320 --> 00:21:38.960
+It tries another strategy for it.
+
+NOTE Confidence: 0.9521541595458984
+
+00:21:39.120 --> 00:21:39.640
+That's awesome.
+
+NOTE Confidence: 0.6771699786186218
+
+00:21:39.640 --> 00:21:41.000
+So it's, it's real.
+
+NOTE Confidence: 0.6554231643676758
+
+00:21:41.000 --> 00:21:41.560
+It's live.
+
+NOTE Confidence: 0.7253071665763855
+
+00:21:41.720 --> 00:21:43.520
+Yes, it is real and it is iterative.
+
+NOTE Confidence: 0.6684361100196838
+
+00:21:43.680 --> 00:21:44.000
+Yeah.
+
+NOTE Confidence: 0.8166778087615967
+
+00:21:44.960 --> 00:21:46.400
+The next thing is eval dot Yamil.
+
+NOTE Confidence: 0.8345667719841003
+
+00:21:46.560 --> 00:21:49.760
+And just to quickly state we already recapped it.
+
+NOTE Confidence: 0.8504523634910583
+
+00:21:49.840 --> 00:21:52.285
+What I need to get started is, is an agent
+
+NOTE Confidence: 0.8504523634910583
+
+00:21:52.344 --> 00:21:53.799
+that's hosted a data set.
+
+NOTE Confidence: 0.9426412582397461
+
+00:21:54.000 --> 00:21:55.600
+That's my data set that I wanted to be doing.
+
+NOTE Confidence: 0.7509910464286804
+
+00:21:55.600 --> 00:21:59.120
+Well, it's a 40 query data set, an evaluator.
+
+NOTE Confidence: 0.7573323249816895
+
+00:21:59.119 --> 00:22:01.923
+This is my rubrics that Felicia walk through that how
+
+NOTE Confidence: 0.7573323249816895
+
+00:22:01.976 --> 00:22:04.673
+I'm assessing how good that agent is on those tasks
+
+NOTE Confidence: 0.7573323249816895
+
+00:22:04.726 --> 00:22:05.520
+and that's all.
+
+NOTE Confidence: 0.9339708685874939
+
+00:22:06.760 --> 00:22:07.920
+So I'm going to say yes.
+
+NOTE Confidence: 0.9787168502807617
+
+00:22:07.920 --> 00:22:08.520
+For this one.
+
+NOTE Confidence: 0.8591828942298889
+
+00:22:10.120 --> 00:22:11.360
+It's reading my instructions file.
+
+NOTE Confidence: 0.7724387645721436
+
+00:22:11.359 --> 00:22:13.134
+So this is a system prompt that I've given for
+
+NOTE Confidence: 0.7724387645721436
+
+00:22:13.172 --> 00:22:13.520
+my agent.
+
+NOTE Confidence: 0.7902320027351379
+
+00:22:13.520 --> 00:22:14.920
+I want it to be iterating on it.
+
+NOTE Confidence: 0.8967183232307434
+
+00:22:16.120 --> 00:22:17.680
+I can also iterate on skills.
+
+NOTE Confidence: 0.9262136220932007
+
+00:22:17.680 --> 00:22:19.646
+I have not configured skills for this agent, so I'm
+
+NOTE Confidence: 0.9262136220932007
+
+00:22:19.684 --> 00:22:20.879
+not going to say anything here.
+
+NOTE Confidence: 0.8334175944328308
+
+00:22:21.560 --> 00:22:24.072
+It can also iterate on my tool description and parameter
+
+NOTE Confidence: 0.8334175944328308
+
+00:22:24.117 --> 00:22:26.989
+descriptions because that also goes into your agents context and
+
+NOTE Confidence: 0.8334175944328308
+
+00:22:27.034 --> 00:22:28.560
+effect how agents use those tools.
+
+NOTE Confidence: 0.9285279512405396
+
+00:22:29.000 --> 00:22:30.880
+I'm going to want to improve that too.
+
+NOTE Confidence: 0.9441191554069519
+
+00:22:32.960 --> 00:22:35.401
+And there's also one more thing where we can also
+
+NOTE Confidence: 0.9441191554069519
+
+00:22:35.451 --> 00:22:36.000
+iterate on.
+
+NOTE Confidence: 0.8559526801109314
+
+00:22:36.440 --> 00:22:38.287
+If there's a set of models and I'm not sure
+
+NOTE Confidence: 0.8559526801109314
+
+00:22:38.330 --> 00:22:39.920
+which model is great good one for me.
+
+NOTE Confidence: 0.8663644790649414
+
+00:22:40.080 --> 00:22:42.479
+I can specify a list of models here, and it
+
+NOTE Confidence: 0.8663644790649414
+
+00:22:42.535 --> 00:22:45.827
+can recommend the model that's best performing for my agent
+
+NOTE Confidence: 0.8663644790649414
+
+00:22:45.883 --> 00:22:46.720
+on those tasks.
+
+NOTE Confidence: 0.9650818705558777
+
+00:22:46.800 --> 00:22:47.840
+Why is that important?
+
+NOTE Confidence: 0.8734117150306702
+
+00:22:48.359 --> 00:22:51.126
+Yeah, this is one of the things where there are
+
+NOTE Confidence: 0.8734117150306702
+
+00:22:51.185 --> 00:22:52.479
+new models every time.
+
+NOTE Confidence: 0.8909348249435425
+
+00:22:52.480 --> 00:22:55.918
+There are trade-offs between cost, latency, and you need to
+
+NOTE Confidence: 0.8909348249435425
+
+00:22:55.976 --> 00:22:59.298
+be able to run these evaluations multiple times to figure
+
+NOTE Confidence: 0.8909348249435425
+
+00:22:59.356 --> 00:23:01.279
+out what what good this model is.
+
+NOTE Confidence: 0.8735928535461426
+
+00:23:02.160 --> 00:23:04.424
+As a developer, I've done it a lot of times
+
+NOTE Confidence: 0.8735928535461426
+
+00:23:04.477 --> 00:23:06.742
+in a very non streamlined way where I try a
+
+NOTE Confidence: 0.8735928535461426
+
+00:23:06.794 --> 00:23:09.112
+new model and then figure out what it is and
+
+NOTE Confidence: 0.8735928535461426
+
+00:23:09.164 --> 00:23:11.640
+then have to redo on it many, many other tasks.
+
+NOTE Confidence: 0.8971367478370667
+
+00:23:11.920 --> 00:23:14.471
+This one is where I can figure out the best
+
+NOTE Confidence: 0.8971367478370667
+
+00:23:14.531 --> 00:23:18.566
+possible combination of model prompt, tool definition and skills all
+
+NOTE Confidence: 0.8971367478370667
+
+00:23:18.625 --> 00:23:19.160
+together.
+
+NOTE Confidence: 0.6681438088417053
+
+00:23:19.440 --> 00:23:19.760
+Awesome.
+
+NOTE Confidence: 0.8395705223083496
+
+00:23:21.400 --> 00:23:24.165
+So in this one, just to recap, we just, we,
+
+NOTE Confidence: 0.8395705223083496
+
+00:23:24.230 --> 00:23:27.574
+I'm selecting only a model, a system prompt and tool
+
+NOTE Confidence: 0.8395705223083496
+
+00:23:27.639 --> 00:23:29.439
+definitions to be optimised.
+
+NOTE Confidence: 0.8237059116363525
+
+00:23:30.080 --> 00:23:33.440
+This is asking you to select an optimization model.
+
+NOTE Confidence: 0.7289676666259766
+
+00:23:33.440 --> 00:23:34.920
+And this is different from my agent model.
+
+NOTE Confidence: 0.8643172979354858
+
+00:23:34.920 --> 00:23:37.434
+This is a model that's going to be used by
+
+NOTE Confidence: 0.8643172979354858
+
+00:23:37.494 --> 00:23:40.967
+the optimization job to self reflect, to retraces, to read
+
+NOTE Confidence: 0.8643172979354858
+
+00:23:41.027 --> 00:23:44.440
+evaluation rubrics, and then decide what needs to change.
+
+NOTE Confidence: 0.7040814757347107
+
+00:23:46.120 --> 00:23:47.440
+The better model, the better it is.
+
+NOTE Confidence: 0.866409420967102
+
+00:23:47.440 --> 00:23:49.758
+So even if your agent might be running with a
+
+NOTE Confidence: 0.866409420967102
+
+00:23:49.810 --> 00:23:53.159
+smaller model, using a better reflection model here really helps.
+
+NOTE Confidence: 0.5561511516571045
+
+00:23:55.640 --> 00:23:57.240
+OK, we have started.
+
+NOTE Confidence: 0.7079112529754639
+
+00:23:57.400 --> 00:23:58.520
+How long is that going to take?
+
+NOTE Confidence: 0.8313874006271362
+
+00:23:59.520 --> 00:24:02.240
+It can take minutes 10s of minutes to.
+
+NOTE Confidence: 0.9370896816253662
+
+00:24:02.280 --> 00:24:04.280
+So I can walk my dog and get coffee.
+
+NOTE Confidence: 0.7544410824775696
+
+00:24:04.440 --> 00:24:07.221
+In the meantime, I have already run this before so
+
+NOTE Confidence: 0.7544410824775696
+
+00:24:07.277 --> 00:24:09.280
+we can jump into it prior run of it.
+
+NOTE Confidence: 0.8823942542076111
+
+00:24:10.600 --> 00:24:11.480
+So this is my agent.
+
+NOTE Confidence: 0.7881979942321777
+
+00:24:12.280 --> 00:24:14.670
+I took the same agent that Felicia had and I
+
+NOTE Confidence: 0.7881979942321777
+
+00:24:14.724 --> 00:24:15.920
+wanted to optimize it.
+
+NOTE Confidence: 0.810431718826294
+
+00:24:16.960 --> 00:24:19.980
+So this is an in progress job that we just
+
+NOTE Confidence: 0.810431718826294
+
+00:24:20.052 --> 00:24:23.288
+started, but we can look at the last job that
+
+NOTE Confidence: 0.810431718826294
+
+00:24:23.360 --> 00:24:26.668
+I've been hill climbing on and first up we got
+
+NOTE Confidence: 0.810431718826294
+
+00:24:26.740 --> 00:24:30.480
+a 2014% boost over what our based system prompt was.
+
+NOTE Confidence: 0.9160189628601074
+
+00:24:30.520 --> 00:24:33.859
+2 definitions were with just context engineering, and this one
+
+NOTE Confidence: 0.9160189628601074
+
+00:24:33.913 --> 00:24:36.713
+I didn't have to sit through, read the prompts, read
+
+NOTE Confidence: 0.9160189628601074
+
+00:24:36.767 --> 00:24:37.360
+the traces.
+
+NOTE Confidence: 0.3958961069583893
+
+00:24:37.680 --> 00:24:39.800
+Wow, that's the last time, yes.
+
+NOTE Confidence: 0.9290894269943237
+
+00:24:41.000 --> 00:24:42.520
+And it happened in 25 minutes.
+
+NOTE Confidence: 0.9266654849052429
+
+00:24:42.960 --> 00:24:44.800
+But more importantly, we can walk through it.
+
+NOTE Confidence: 0.84681636095047
+
+00:24:45.240 --> 00:24:47.840
+It created 4 candidates for me.
+
+NOTE Confidence: 0.8482527136802673
+
+00:24:48.320 --> 00:24:52.908
+The first candidate it suggested a system prompt that made
+
+NOTE Confidence: 0.8482527136802673
+
+00:24:52.987 --> 00:24:55.440
+38 out of 40 tasks work for me.
+
+NOTE Confidence: 0.8812571167945862
+
+00:24:55.920 --> 00:24:58.990
+Then the next one is System prompt and tools, then
+
+NOTE Confidence: 0.8812571167945862
+
+00:24:59.051 --> 00:25:02.305
+Tools, and then finally a candidate 4 which works all
+
+NOTE Confidence: 0.8812571167945862
+
+00:25:02.367 --> 00:25:02.920
+the time.
+
+NOTE Confidence: 0.8196747899055481
+
+00:25:02.920 --> 00:25:07.210
+40 out of 40 has increased the baseline score from
+
+NOTE Confidence: 0.8196747899055481
+
+00:25:07.296 --> 00:25:08.239
+.577 to .7.
+
+NOTE Confidence: 0.9069240093231201
+
+00:25:08.400 --> 00:25:11.520
+So it keeps trying new things and then adjusting along
+
+NOTE Confidence: 0.9069240093231201
+
+00:25:11.577 --> 00:25:12.040
+the way.
+
+NOTE Confidence: 0.9553138613700867
+
+00:25:12.080 --> 00:25:12.400
+Yeah.
+
+NOTE Confidence: 0.880305826663971
+
+00:25:12.400 --> 00:25:14.680
+And that's the beauty of it that it is.
+
+NOTE Confidence: 0.930230438709259
+
+00:25:15.440 --> 00:25:17.845
+It is figuring out the right thing to change, trying
+
+NOTE Confidence: 0.930230438709259
+
+00:25:17.892 --> 00:25:20.390
+it out, learning from that and then iterating and then
+
+NOTE Confidence: 0.930230438709259
+
+00:25:20.437 --> 00:25:21.639
+suggesting the new things.
+
+NOTE Confidence: 0.6831768155097961
+
+00:25:21.880 --> 00:25:22.160
+Awesome.
+
+NOTE Confidence: 0.926997184753418
+
+00:25:23.320 --> 00:25:25.360
+We can quickly see what what it has changed.
+
+NOTE Confidence: 0.9000207781791687
+
+00:25:25.840 --> 00:25:28.193
+And I'd really love this view that you can see
+
+NOTE Confidence: 0.9000207781791687
+
+00:25:28.244 --> 00:25:31.160
+that the system problem has been changed grounded more on
+
+NOTE Confidence: 0.9000207781791687
+
+00:25:31.211 --> 00:25:33.360
+the traces and your data and your rubrics.
+
+NOTE Confidence: 0.8599293828010559
+
+00:25:34.600 --> 00:25:37.560
+And it has also changed tool definitions.
+
+NOTE Confidence: 0.9683558940887451
+
+00:25:38.120 --> 00:25:40.200
+So the description of the tool has changed.
+
+NOTE Confidence: 0.8556864857673645
+
+00:25:40.480 --> 00:25:43.011
+And we remember earlier that was hallucinating on one of
+
+NOTE Confidence: 0.8556864857673645
+
+00:25:43.056 --> 00:25:45.497
+the vendor details that was not there is exactly those
+
+NOTE Confidence: 0.8556864857673645
+
+00:25:45.543 --> 00:25:47.080
+things that it has addressed here.
+
+NOTE Confidence: 0.9299294948577881
+
+00:25:49.160 --> 00:25:50.040
+That's really cool.
+
+NOTE Confidence: 0.9683626294136047
+
+00:25:50.040 --> 00:25:50.680
+That's awesome.
+
+NOTE Confidence: 0.7782691717147827
+
+00:25:52.880 --> 00:25:55.592
+You can dive deep into this view score details and
+
+NOTE Confidence: 0.7782691717147827
+
+00:25:55.646 --> 00:25:57.599
+you can see your evaluation results.
+
+NOTE Confidence: 0.8999215364456177
+
+00:25:57.920 --> 00:26:00.021
+So this is a real evaluation that has been drawn
+
+NOTE Confidence: 0.8999215364456177
+
+00:26:00.065 --> 00:26:01.159
+for this agent iteration.
+
+NOTE Confidence: 0.7805697917938232
+
+00:26:01.720 --> 00:26:05.471
+And I really like this view where I can, yeah,
+
+NOTE Confidence: 0.7805697917938232
+
+00:26:05.553 --> 00:26:07.999
+I can go and see view details.
+
+NOTE Confidence: 0.8949551582336426
+
+00:26:08.000 --> 00:26:10.982
+I can see for a specific task what this task
+
+NOTE Confidence: 0.8949551582336426
+
+00:26:11.050 --> 00:26:13.964
+is, why it has been scored and also read an
+
+NOTE Confidence: 0.8949551582336426
+
+00:26:14.032 --> 00:26:15.320
+analysis out of it.
+
+NOTE Confidence: 0.8996632695198059
+
+00:26:15.920 --> 00:26:18.210
+So is this a once said and done thing or
+
+NOTE Confidence: 0.8996632695198059
+
+00:26:18.267 --> 00:26:18.839
+what do I?
+
+NOTE Confidence: 0.901679277420044
+
+00:26:19.280 --> 00:26:21.840
+Yeah, it's not once said and done.
+
+NOTE Confidence: 0.7807728052139282
+
+00:26:22.040 --> 00:26:24.254
+So I've optimized on this 40 task, but my agent
+
+NOTE Confidence: 0.7807728052139282
+
+00:26:24.301 --> 00:26:25.479
+will do many other tasks.
+
+NOTE Confidence: 0.8371328711509705
+
+00:26:25.680 --> 00:26:27.674
+It's a it's a thing where you have to keep
+
+NOTE Confidence: 0.8371328711509705
+
+00:26:27.721 --> 00:26:30.333
+looking at your traces, figuring out what are the right
+
+NOTE Confidence: 0.8371328711509705
+
+00:26:30.380 --> 00:26:33.039
+right set of traces are smart filtering will help there.
+
+NOTE Confidence: 0.9040120244026184
+
+00:26:33.320 --> 00:26:36.182
+And then keep doing this optimization, keep hill climbing for
+
+NOTE Confidence: 0.9040120244026184
+
+00:26:36.229 --> 00:26:38.200
+your agent based on what users are trying.
+
+NOTE Confidence: 0.790374219417572
+
+00:26:38.200 --> 00:26:40.502
+Domains are changing, model is changing and even your tool
+
+NOTE Confidence: 0.790374219417572
+
+00:26:40.542 --> 00:26:43.560
+descriptions are tool definition and tool implementations are changing here.
+
+NOTE Confidence: 0.9324564933776855
+
+00:26:44.040 --> 00:26:44.640
+That's awesome.
+
+NOTE Confidence: 0.8861237168312073
+
+00:26:44.640 --> 00:26:49.068
+Thank you, Vivek, for for the fantastic demo and Agent
+
+NOTE Confidence: 0.8861237168312073
+
+00:26:49.150 --> 00:26:53.988
+Optimizer is now in private preview and will public preview
+
+NOTE Confidence: 0.8861237168312073
+
+00:26:54.070 --> 00:26:54.480
+soon.
+
+NOTE Confidence: 0.9384896159172058
+
+00:26:55.200 --> 00:26:57.200
+We're really excited about this feature.
+
+NOTE Confidence: 0.971153974533081
+
+00:26:57.200 --> 00:27:01.227
+As you saw, it enables you to try different combinations
+
+NOTE Confidence: 0.971153974533081
+
+00:27:01.299 --> 00:27:04.679
+and then pick the best combination for the job.
+
+NOTE Confidence: 0.8559396862983704
+
+00:27:04.800 --> 00:27:09.554
+You're using evals and running through, you know, those combinations
+
+NOTE Confidence: 0.8559396862983704
+
+00:27:09.623 --> 00:27:12.839
+and then surfacing the results back up to you.
+
+NOTE Confidence: 0.9016975164413452
+
+00:27:14.040 --> 00:27:17.676
+Now let's walk through the final part of the session,
+
+NOTE Confidence: 0.9016975164413452
+
+00:27:17.745 --> 00:27:21.381
+which is you're walking you through how you prove the
+
+NOTE Confidence: 0.9016975164413452
+
+00:27:21.450 --> 00:27:22.960
+value for your agents.
+
+NOTE Confidence: 0.9124380946159363
+
+00:27:22.960 --> 00:27:27.855
+So return on investments for agents in Foundry, this is
+
+NOTE Confidence: 0.9124380946159363
+
+00:27:27.944 --> 00:27:29.279
+the final step.
+
+NOTE Confidence: 0.9106639623641968
+
+00:27:29.280 --> 00:27:32.339
+So once you've you've set up your inner and outer
+
+NOTE Confidence: 0.9106639623641968
+
+00:27:32.401 --> 00:27:35.460
+loop, how do you prove the business value of your
+
+NOTE Confidence: 0.9106639623641968
+
+00:27:35.522 --> 00:27:35.960
+agents?
+
+NOTE Confidence: 0.9607693552970886
+
+00:27:36.440 --> 00:27:38.000
+Well, you have to do math.
+
+NOTE Confidence: 0.9604533910751343
+
+00:27:38.000 --> 00:27:41.394
+You have to figure out whether or not your agents
+
+NOTE Confidence: 0.9604533910751343
+
+00:27:41.463 --> 00:27:43.679
+are generating sufficient value.
+
+NOTE Confidence: 0.9003364443778992
+
+00:27:43.920 --> 00:27:46.445
+It's worth the cost that you're spending on your agent
+
+NOTE Confidence: 0.9003364443778992
+
+00:27:46.492 --> 00:27:46.960
+workloads.
+
+NOTE Confidence: 0.8740395903587341
+
+00:27:47.400 --> 00:27:51.368
+So for that, I'm going to walk you through a
+
+NOTE Confidence: 0.8740395903587341
+
+00:27:51.458 --> 00:27:55.516
+demo and we'll show you the new ROI agent ROI
+
+NOTE Confidence: 0.8740395903587341
+
+00:27:55.606 --> 00:28:00.657
+feature that is in private preview and we'll also public
+
+NOTE Confidence: 0.8740395903587341
+
+00:28:00.747 --> 00:28:01.920
+preview soon.
+
+NOTE Confidence: 0.9404772520065308
+
+00:28:02.520 --> 00:28:06.088
+The way this feature works is it looks at all
+
+NOTE Confidence: 0.9404772520065308
+
+00:28:06.168 --> 00:28:10.530
+of the agent invocations and based on the settings that
+
+NOTE Confidence: 0.9404772520065308
+
+00:28:10.609 --> 00:28:11.719
+you specified.
+
+NOTE Confidence: 0.9254887104034424
+
+00:28:11.720 --> 00:28:15.256
+So you can go to the settings, enable the feature
+
+NOTE Confidence: 0.9254887104034424
+
+00:28:15.329 --> 00:28:18.938
+here you select an evaluator and then you assign a
+
+NOTE Confidence: 0.9254887104034424
+
+00:28:19.010 --> 00:28:21.320
+business value to the evaluator.
+
+NOTE Confidence: 0.9693487882614136
+
+00:28:21.560 --> 00:28:23.722
+Now you have to do the math to figure out
+
+NOTE Confidence: 0.9693487882614136
+
+00:28:23.775 --> 00:28:25.200
+what the business value is.
+
+NOTE Confidence: 0.9064435958862305
+
+00:28:25.440 --> 00:28:29.830
+We don't have that information available, but let's just say,
+
+NOTE Confidence: 0.9064435958862305
+
+00:28:29.902 --> 00:28:33.932
+you know, for this vendor analyst agent, every time this
+
+NOTE Confidence: 0.9064435958862305
+
+00:28:34.004 --> 00:28:38.683
+vendor analyst agent successfully completes its task and gives me
+
+NOTE Confidence: 0.9064435958862305
+
+00:28:38.755 --> 00:28:42.209
+an analysis, that saves me $5 worth of time that
+
+NOTE Confidence: 0.9064435958862305
+
+00:28:42.281 --> 00:28:45.736
+I would have spent running a query or looking up
+
+NOTE Confidence: 0.9064435958862305
+
+00:28:45.808 --> 00:28:47.680
+the information elsewhere.
+
+NOTE Confidence: 0.9570196270942688
+
+00:28:48.600 --> 00:28:52.006
+And that is the business value that's generated by this
+
+NOTE Confidence: 0.9570196270942688
+
+00:28:52.068 --> 00:28:52.439
+agent.
+
+NOTE Confidence: 0.910807192325592
+
+00:28:52.720 --> 00:28:55.560
+Now from there I can go into optional settings.
+
+NOTE Confidence: 0.8735744953155518
+
+00:28:55.600 --> 00:28:58.518
+And one of the things this feature does is it
+
+NOTE Confidence: 0.8735744953155518
+
+00:28:58.583 --> 00:29:02.216
+automatically pulls in the token cost of your agents and
+
+NOTE Confidence: 0.8735744953155518
+
+00:29:02.281 --> 00:29:05.199
+then you specify the tool cost of your agent.
+
+NOTE Confidence: 0.9302849769592285
+
+00:29:05.200 --> 00:29:07.360
+So that's something again, that we don't, we can't provide.
+
+NOTE Confidence: 0.913591206073761
+
+00:29:07.360 --> 00:29:11.063
+And you have to sort of average out across your
+
+NOTE Confidence: 0.913591206073761
+
+00:29:11.141 --> 00:29:12.559
+agent invocations.
+
+NOTE Confidence: 0.9555410146713257
+
+00:29:12.760 --> 00:29:15.080
+But that's the other part of the feature.
+
+NOTE Confidence: 0.9144876599311829
+
+00:29:15.480 --> 00:29:18.481
+And then once enabled, I can track over time the
+
+NOTE Confidence: 0.9144876599311829
+
+00:29:18.543 --> 00:29:20.920
+net value that my agent is generating.
+
+NOTE Confidence: 0.9671631455421448
+
+00:29:20.920 --> 00:29:23.646
+So you can see I have in this case, 3
+
+NOTE Confidence: 0.9671631455421448
+
+00:29:23.720 --> 00:29:25.120
+different versions.
+
+NOTE Confidence: 0.8912521600723267
+
+00:29:25.840 --> 00:29:28.245
+And then over time, I can see the, the difference
+
+NOTE Confidence: 0.8912521600723267
+
+00:29:28.294 --> 00:29:30.700
+between, you know, the value and the cost and the
+
+NOTE Confidence: 0.8912521600723267
+
+00:29:30.749 --> 00:29:31.240
+net value.
+
+NOTE Confidence: 0.8473069071769714
+
+00:29:32.040 --> 00:29:35.521
+And it's interesting because I can see that the tool
+
+NOTE Confidence: 0.8473069071769714
+
+00:29:35.587 --> 00:29:39.069
+calls are actually costing me more than the than the
+
+NOTE Confidence: 0.8473069071769714
+
+00:29:39.135 --> 00:29:43.085
+LLM and you know, that's something that I could potentially
+
+NOTE Confidence: 0.8473069071769714
+
+00:29:43.152 --> 00:29:44.960
+figure out how to optimize.
+
+NOTE Confidence: 0.9064689874649048
+
+00:29:45.760 --> 00:29:48.482
+And then at the bottom, I can also see how
+
+NOTE Confidence: 0.9064689874649048
+
+00:29:48.546 --> 00:29:50.879
+the ROI is changing across versions.
+
+NOTE Confidence: 0.9023438692092896
+
+00:29:50.880 --> 00:29:54.174
+And one of the other features that we'd be providing
+
+NOTE Confidence: 0.9023438692092896
+
+00:29:54.237 --> 00:29:57.278
+as part of this capability is for the ability to
+
+NOTE Confidence: 0.9023438692092896
+
+00:29:57.341 --> 00:30:00.256
+then drill into traces so that you can look at
+
+NOTE Confidence: 0.9023438692092896
+
+00:30:00.319 --> 00:30:01.840
+traces that are low ROI.
+
+NOTE Confidence: 0.8947080373764038
+
+00:30:02.440 --> 00:30:05.719
+To give you a really good example, if you have
+
+NOTE Confidence: 0.8947080373764038
+
+00:30:05.791 --> 00:30:09.427
+an agent invocation that is an agent call that just
+
+NOTE Confidence: 0.8947080373764038
+
+00:30:09.499 --> 00:30:10.639
+doesn't succeed.
+
+NOTE Confidence: 0.8598827123641968
+
+00:30:10.840 --> 00:30:12.920
+That is all negative cost.
+
+NOTE Confidence: 0.905493974685669
+
+00:30:13.400 --> 00:30:15.720
+That's something that you obviously want to drill into.
+
+NOTE Confidence: 0.8671802878379822
+
+00:30:16.160 --> 00:30:19.038
+You can use, you know, the code first capabilities that
+
+NOTE Confidence: 0.8671802878379822
+
+00:30:19.090 --> 00:30:21.760
+we provide to root cause and analyze what happened.
+
+NOTE Confidence: 0.9061318635940552
+
+00:30:22.400 --> 00:30:23.880
+And so we're very excited about this.
+
+NOTE Confidence: 0.9507499933242798
+
+00:30:24.440 --> 00:30:28.813
+As I mentioned earlier, this is now available in private
+
+NOTE Confidence: 0.9507499933242798
+
+00:30:28.891 --> 00:30:31.000
+preview within the Foundry.
+
+NOTE Confidence: 0.9639675617218018
+
+00:30:31.200 --> 00:30:34.372
+We are going to make this available soon in public
+
+NOTE Confidence: 0.9639675617218018
+
+00:30:34.435 --> 00:30:36.720
+preview as we collect more feedback.
+
+NOTE Confidence: 0.9191685914993286
+
+00:30:36.960 --> 00:30:40.146
+And if it's something that you're interested in, we're more
+
+NOTE Confidence: 0.9191685914993286
+
+00:30:40.200 --> 00:30:42.577
+than happy to talk to your sales team and we
+
+NOTE Confidence: 0.9191685914993286
+
+00:30:42.631 --> 00:30:45.007
+can engage with you and and have you try out
+
+NOTE Confidence: 0.9191685914993286
+
+00:30:45.061 --> 00:30:47.600
+the feature, give us feedback and and so forth.
+
+NOTE Confidence: 0.8880001306533813
+
+00:30:49.120 --> 00:30:53.055
+Now we walked you through your end to end observability
+
+NOTE Confidence: 0.8880001306533813
+
+00:30:53.126 --> 00:30:54.200
+in the Foundry.
+
+NOTE Confidence: 0.8526049256324768
+
+00:30:54.600 --> 00:30:57.600
+We started with you're building reliable agents.
+
+NOTE Confidence: 0.8686047792434692
+
+00:30:57.600 --> 00:31:00.324
+So Felicia showed you how you can you test out
+
+NOTE Confidence: 0.8686047792434692
+
+00:31:00.383 --> 00:31:02.160
+your agents in the playground.
+
+NOTE Confidence: 0.927115261554718
+
+00:31:02.680 --> 00:31:05.953
+You can then create a rubric evaluator that is context
+
+NOTE Confidence: 0.927115261554718
+
+00:31:06.014 --> 00:31:06.560
+specific.
+
+NOTE Confidence: 0.9157061576843262
+
+00:31:06.560 --> 00:31:09.768
+You can look at traces to test out the agent
+
+NOTE Confidence: 0.9157061576843262
+
+00:31:09.841 --> 00:31:12.320
+and look at the evaluation scores.
+
+NOTE Confidence: 0.837786078453064
+
+00:31:12.920 --> 00:31:15.880
+And then we went into the IDE.
+
+NOTE Confidence: 0.878551721572876
+
+00:31:15.880 --> 00:31:20.717
+We showed you your code first capabilities with Foundry Toolkit
+
+NOTE Confidence: 0.878551721572876
+
+00:31:20.794 --> 00:31:24.480
+and our Foundry skills so that you can debug it.
+
+NOTE Confidence: 0.9013164639472961
+
+00:31:24.480 --> 00:31:28.101
+Finally, we gave you the ability to optimize and then
+
+NOTE Confidence: 0.9013164639472961
+
+00:31:28.170 --> 00:31:31.381
+you get that sort of broader view with with the
+
+NOTE Confidence: 0.9013164639472961
+
+00:31:31.450 --> 00:31:32.680
+agent ROI feature.
+
+NOTE Confidence: 0.9405298829078674
+
+00:31:33.080 --> 00:31:39.003
+Foundry observability covers broadly all of the capabilities that you
+
+NOTE Confidence: 0.9405298829078674
+
+00:31:39.089 --> 00:31:44.240
+need to ship your agents with confidence giving you tracing,
+
+NOTE Confidence: 0.9405298829078674
+
+00:31:44.326 --> 00:31:47.760
+evaluation, monitoring and optimization.
+
+NOTE Confidence: 0.8939423561096191
+
+00:31:47.760 --> 00:31:50.713
+So we covered on a lot of these features today
+
+NOTE Confidence: 0.8939423561096191
+
+00:31:50.777 --> 00:31:53.987
+and I will just briefly go through and emphasize a
+
+NOTE Confidence: 0.8939423561096191
+
+00:31:54.051 --> 00:31:55.400
+few key capabilities.
+
+NOTE Confidence: 0.9346320629119873
+
+00:31:55.640 --> 00:32:00.360
+For tracing, we continue to invest heavily in open telemetry
+
+NOTE Confidence: 0.9346320629119873
+
+00:32:00.438 --> 00:32:05.080
+as the standard that underpins both tracing and evaluation.
+
+NOTE Confidence: 0.945981502532959
+
+00:32:05.520 --> 00:32:09.640
+Our engineers are heavily involved in the open source community.
+
+NOTE Confidence: 0.8823036551475525
+
+00:32:09.640 --> 00:32:13.891
+We're contributing new semantics, for example for memory, we just
+
+NOTE Confidence: 0.8823036551475525
+
+00:32:13.956 --> 00:32:18.011
+contributed new semantics for memory that are coming soon into
+
+NOTE Confidence: 0.8823036551475525
+
+00:32:18.076 --> 00:32:18.599
+Foundry.
+
+NOTE Confidence: 0.943522572517395
+
+00:32:19.320 --> 00:32:22.018
+That is something that Microsoft is committed to as part
+
+NOTE Confidence: 0.943522572517395
+
+00:32:22.066 --> 00:32:23.320
+of the open source effort.
+
+NOTE Confidence: 0.8542575240135193
+
+00:32:23.840 --> 00:32:27.897
+And then for evaluation, we also have beyond the rubric
+
+NOTE Confidence: 0.8542575240135193
+
+00:32:27.971 --> 00:32:32.176
+evaluator, the built in evaluators that are showed in the
+
+NOTE Confidence: 0.8542575240135193
+
+00:32:32.249 --> 00:32:32.840
+catalog.
+
+NOTE Confidence: 0.7718539237976074
+
+00:32:33.480 --> 00:32:37.446
+We have red teaming agents, CICD integration and so forth
+
+NOTE Confidence: 0.7718539237976074
+
+00:32:37.516 --> 00:32:38.560
+for monitoring.
+
+NOTE Confidence: 0.9055997133255005
+
+00:32:38.760 --> 00:32:43.169
+We also, in addition to running evaluation and production, give
+
+NOTE Confidence: 0.9055997133255005
+
+00:32:43.239 --> 00:32:46.949
+you access to all of the operational metrics that you
+
+NOTE Confidence: 0.9055997133255005
+
+00:32:47.019 --> 00:32:51.079
+need to understand how your AI applications and agents are
+
+NOTE Confidence: 0.9055997133255005
+
+00:32:51.149 --> 00:32:51.919
+performing.
+
+NOTE Confidence: 0.9532188773155212
+
+00:32:52.080 --> 00:32:55.454
+And then finally, for optimization, we have the agent optimizer,
+
+NOTE Confidence: 0.9532188773155212
+
+00:32:55.507 --> 00:32:57.879
+but we also provide single shot optimization.
+
+NOTE Confidence: 0.9721519351005554
+
+00:32:57.880 --> 00:33:00.640
+That's another option that's available for you.
+
+NOTE Confidence: 0.9023757576942444
+
+00:33:01.800 --> 00:33:05.567
+We have a number of customers that are already using
+
+NOTE Confidence: 0.9023757576942444
+
+00:33:05.639 --> 00:33:10.638
+our observability capabilities like Entity Data who are using Foundry
+
+NOTE Confidence: 0.9023757576942444
+
+00:33:10.710 --> 00:33:15.202
+together with Azure Monitor to transform AI into an enterprise
+
+NOTE Confidence: 0.9023757576942444
+
+00:33:15.274 --> 00:33:19.186
+grade production ready system with all of the built in
+
+NOTE Confidence: 0.9023757576942444
+
+00:33:19.259 --> 00:33:21.360
+capabilities that we provide.
+
+NOTE Confidence: 0.9085432291030884
+
+00:33:21.360 --> 00:33:22.600
+We're very excited about this.
+
+NOTE Confidence: 0.9517908692359924
+
+00:33:22.600 --> 00:33:25.202
+We would love for everybody in this room to give
+
+NOTE Confidence: 0.9517908692359924
+
+00:33:25.256 --> 00:33:26.719
+it a try, give us feedback.
+
+NOTE Confidence: 0.8586766719818115
+
+00:33:27.080 --> 00:33:29.515
+We launched a bunch of new capabilities that we're super
+
+NOTE Confidence: 0.8586766719818115
+
+00:33:29.559 --> 00:33:30.559
+excited about to build.
+
+NOTE Confidence: 0.9231619834899902
+
+00:33:31.120 --> 00:33:33.942
+We have a lab where you can get your hands
+
+NOTE Confidence: 0.9231619834899902
+
+00:33:34.009 --> 00:33:37.839
+on sort of experience with a bunch of these capabilities.
+
+NOTE Confidence: 0.9634993672370911
+
+00:33:38.000 --> 00:33:39.320
+You can also take the lab with you.
+
+NOTE Confidence: 0.8872837424278259
+
+00:33:39.320 --> 00:33:41.400
+So that we're excited about as well.
+
+NOTE Confidence: 0.9310327172279358
+
+00:33:41.400 --> 00:33:45.000
+Everything is available online now.
+
+NOTE Confidence: 0.8016899824142456
+
+00:33:45.000 --> 00:33:49.157
+As a reminder, Microsoft provides, you know, all of the
+
+NOTE Confidence: 0.8016899824142456
+
+00:33:49.233 --> 00:33:53.239
+building blocks and the agent for the agent platform.
+
+NOTE Confidence: 0.9112305045127869
+
+00:33:53.600 --> 00:33:57.447
+You can start building in GitHub and then within Foundry
+
+NOTE Confidence: 0.9112305045127869
+
+00:33:57.515 --> 00:34:00.813
+you get all of the capabilities that you need to
+
+NOTE Confidence: 0.9112305045127869
+
+00:34:00.882 --> 00:34:04.591
+be able to run your agents, evaluate and optimize, and
+
+NOTE Confidence: 0.9112305045127869
+
+00:34:04.660 --> 00:34:08.507
+then get all of the, you know, governance capability and
+
+NOTE Confidence: 0.9112305045127869
+
+00:34:08.576 --> 00:34:12.079
+so forth and all the building blocks that you need.
+
+NOTE Confidence: 0.9281125068664551
+
+00:34:12.400 --> 00:34:15.520
+And then finally, you can distribute agents to your users.
+
+NOTE Confidence: 0.6401160955429077
+
+00:34:15.600 --> 00:34:20.600
+RAM 365 Copilot, Teams, apps and APIs.
+
+NOTE Confidence: 0.9037872552871704
+
+00:34:21.920 --> 00:34:22.920
+Now what's next?
+
+NOTE Confidence: 0.8737867474555969
+
+00:34:23.200 --> 00:34:27.112
+We have a bunch of sessions still coming up tomorrow,
+
+NOTE Confidence: 0.8737867474555969
+
+00:34:27.186 --> 00:34:30.877
+so if you missed any of today's sessions, they are
+
+NOTE Confidence: 0.8737867474555969
+
+00:34:30.950 --> 00:34:31.320
+here.
+
+NOTE Confidence: 0.8755591511726379
+
+00:34:31.640 --> 00:34:35.957
+I encourage you to watch the recordings, but tomorrow we
+
+NOTE Confidence: 0.8755591511726379
+
+00:34:36.034 --> 00:34:39.812
+have a breakout session on a 365 that also covers
+
+NOTE Confidence: 0.8755591511726379
+
+00:34:39.889 --> 00:34:43.975
+how your Foundry observability aligns with a 365 S if
+
+NOTE Confidence: 0.8755591511726379
+
+00:34:44.052 --> 00:34:46.519
+you're interested in that topic.
+
+NOTE Confidence: 0.8931899070739746
+
+00:34:46.520 --> 00:34:48.480
+Highly recommend that you attend that session.
+
+NOTE Confidence: 0.9393464922904968
+
+00:34:48.800 --> 00:34:51.428
+We have a demo session that goes into a little
+
+NOTE Confidence: 0.9393464922904968
+
+00:34:51.485 --> 00:34:54.800
+bit more detail on the interoperability story that we just
+
+NOTE Confidence: 0.9393464922904968
+
+00:34:54.857 --> 00:34:55.600
+talked about.
+
+NOTE Confidence: 0.8809231519699097
+
+00:34:56.280 --> 00:34:59.265
+And then we have a lightning talk that covers how
+
+NOTE Confidence: 0.8809231519699097
+
+00:34:59.326 --> 00:35:01.520
+Azure Monitor fits into the picture.
+
+NOTE Confidence: 0.8751620054244995
+
+00:35:01.960 --> 00:35:03.960
+We'd love for you to attend that as well.
+
+NOTE Confidence: 0.8786001205444336
+
+00:35:04.720 --> 00:35:06.720
+Here's a link to all the resources.
+
+NOTE Confidence: 0.9254260063171387
+
+00:35:07.200 --> 00:35:09.666
+Like I said, the lab is going to be public
+
+NOTE Confidence: 0.9254260063171387
+
+00:35:09.724 --> 00:35:12.660
+available, so if you don't have a chance to attend
+
+NOTE Confidence: 0.9254260063171387
+
+00:35:12.719 --> 00:35:15.303
+the lab here, you can get access to that and
+
+NOTE Confidence: 0.9254260063171387
+
+00:35:15.361 --> 00:35:18.415
+we encourage you to start building and we'll take it
+
+NOTE Confidence: 0.9254260063171387
+
+00:35:18.474 --> 00:35:19.120
+from there.
+
+NOTE Confidence: 0.9402363896369934
+
+00:35:19.120 --> 00:35:20.840
+Thank you everybody for attending.
+
+NOTE Confidence: 0.8506537079811096
+
+00:35:21.040 --> 00:35:21.840
+Have a great build.
+

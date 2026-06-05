@@ -1,0 +1,3972 @@
+﻿WEBVTT
+
+00:00:00.030 --> 00:00:01.680
+Alicia Frame: Thank
+you all for coming.
+
+00:00:01.680 --> 00:00:05.700
+I'm Alicia Frame, and I'm
+joined by Omkar More.
+
+00:00:05.700 --> 00:00:08.850
+And we are here to tell
+you about fine-tuning
+
+00:00:08.850 --> 00:00:10.680
+and reinforcement learning.
+
+00:00:10.680 --> 00:00:13.920
+I am the Product Lead
+for Model Customization,
+
+00:00:13.920 --> 00:00:16.710
+Omkar is my engineering
+counterpart,
+
+00:00:16.710 --> 00:00:17.670
+and what we're going to tell you
+
+00:00:17.670 --> 00:00:21.150
+about today is how you
+can deploy, observe,
+
+00:00:21.150 --> 00:00:25.290
+and learn from your production
+agents to get better, smarter,
+
+00:00:25.290 --> 00:00:27.870
+cheaper, and faster models.
+
+00:00:27.870 --> 00:00:28.860
+One thing, just to call
+
+00:00:28.860 --> 00:00:32.220
+out before I get started, is,
+it's a little noisy in here.
+
+00:00:32.220 --> 00:00:34.890
+If you're having trouble
+hearing, there are headsets
+
+00:00:34.890 --> 00:00:38.040
+in the back that you can get
+so that you can kind of cut
+
+00:00:38.040 --> 00:00:39.540
+through the background noise,
+
+00:00:39.540 --> 00:00:43.200
+but I will try to be super
+loud so you can hear me.
+
+00:00:43.200 --> 00:00:46.140
+And with that,
+let's get started.
+
+00:00:46.140 --> 00:00:48.780
+So what are we going
+to cover today?
+
+00:00:48.780 --> 00:00:51.960
+We're going to start with the
+basics, five minutes of slides,
+
+00:00:51.960 --> 00:00:55.320
+and we're going to talk
+about what is fine-tuning,
+
+00:00:55.320 --> 00:00:57.840
+why fine-tune, and what
+does this have to do
+
+00:00:57.840 --> 00:00:59.670
+with production agents?
+
+00:00:59.670 --> 00:01:01.920
+From there, we're going to
+get started with the demos.
+
+00:01:01.920 --> 00:01:02.970
+The first demo we're going
+
+00:01:02.970 --> 00:01:06.810
+to show you is how you can use
+a technique called distillation
+
+00:01:06.810 --> 00:01:10.380
+to create cheaper
+and faster agents.
+
+00:01:10.380 --> 00:01:12.330
+Next, we're going
+to deal with, what
+
+00:01:12.330 --> 00:01:14.340
+if your teacher
+isn't smart enough?
+
+00:01:14.340 --> 00:01:16.830
+How can we use
+reinforcement learning
+
+00:01:16.830 --> 00:01:19.410
+to learn from our mistakes?
+
+00:01:19.410 --> 00:01:22.560
+After that, one level
+harder, we're going to talk
+
+00:01:22.560 --> 00:01:25.620
+about interactive reinforcement
+learning, and you're all going
+
+00:01:25.620 --> 00:01:29.910
+to get a preview of our new,
+low-level training API.
+
+00:01:29.910 --> 00:01:32.130
+Think of it as
+PyTorch as a service.
+
+00:01:32.130 --> 00:01:35.160
+You get access to the
+low-level training primitives,
+
+00:01:35.160 --> 00:01:37.050
+we manage the compute.
+
+00:01:37.050 --> 00:01:39.270
+we build better models for you.
+
+00:01:39.270 --> 00:01:41.160
+And then, after
+you've had a little bit
+
+00:01:41.160 --> 00:01:44.370
+of a panic attack of, "Wow,
+that was a lot of content",
+
+00:01:44.370 --> 00:01:47.550
+we're going to end with
+coding agents for fine-tuning
+
+00:01:47.550 --> 00:01:50.640
+and show you how you can
+use our fine-tuning skill
+
+00:01:50.640 --> 00:01:54.510
+to really use natural language
+to describe your goals
+
+00:01:54.510 --> 00:01:58.080
+and create better
+models in minutes.
+
+00:01:58.080 --> 00:02:01.110
+And with that,
+let's get started.
+
+00:02:01.110 --> 00:02:04.560
+So, before we dive
+in, I want to situate you
+
+00:02:04.560 --> 00:02:06.210
+in the bigger picture.
+
+00:02:06.210 --> 00:02:08.640
+We're part of the
+Microsoft Foundry team,
+
+00:02:08.640 --> 00:02:11.580
+and Foundry gives you
+your agent platform.
+
+00:02:11.580 --> 00:02:14.010
+The foundation is models.
+
+00:02:14.010 --> 00:02:17.280
+There are over 11,000
+models in Foundry,
+
+00:02:17.280 --> 00:02:20.100
+and these models power
+our agent runtime,
+
+00:02:20.100 --> 00:02:23.060
+let you deploy and
+host your agents,
+
+00:02:23.060 --> 00:02:25.700
+observe them, give them tools.
+
+00:02:25.700 --> 00:02:27.980
+And once you've got those
+agents, we want them
+
+00:02:27.980 --> 00:02:29.720
+to be better and smarter.
+
+00:02:29.720 --> 00:02:32.210
+So we offer tooling
+to evaluate them,
+
+00:02:32.210 --> 00:02:34.730
+know if they're doing
+what you want them to do,
+
+00:02:34.730 --> 00:02:38.630
+and optimize them, improve
+their performance based
+
+00:02:38.630 --> 00:02:40.760
+on what you've observed.
+
+00:02:40.760 --> 00:02:42.650
+This talk is really
+going to be focusing
+
+00:02:42.650 --> 00:02:46.430
+on the Evaluate
+and Optimize box.
+
+00:02:46.430 --> 00:02:49.130
+But I want to motivate this talk
+
+00:02:49.130 --> 00:02:51.000
+and explain why we're here.
+
+00:02:51.000 --> 00:02:53.820
+We've been working on
+fine-tuning for a while,
+
+00:02:53.820 --> 00:02:56.580
+and I feel like people are
+finally starting to listen
+
+00:02:56.580 --> 00:03:00.270
+to, "there is a reason
+to customize models."
+
+00:03:00.270 --> 00:03:04.650
+And what we're seeing now
+is agents have taken off.
+
+00:03:04.650 --> 00:03:06.360
+Agents helped us make
+this slide deck.
+
+00:03:06.360 --> 00:03:07.980
+Agents helped us make this demo.
+
+00:03:07.980 --> 00:03:11.250
+A third of enterprise software
+apps say they're going
+
+00:03:11.250 --> 00:03:14.010
+to embed agentic AI
+within two years.
+
+00:03:14.010 --> 00:03:14.790
+I think that's wrong.
+
+00:03:14.790 --> 00:03:17.490
+I think the number is
+higher and sooner.
+
+00:03:17.490 --> 00:03:22.590
+Half of teams already have some
+kind of production agent today.
+
+00:03:22.590 --> 00:03:28.260
+The problem: agents consume 20
+to 30 times more tokens per turn
+
+00:03:28.260 --> 00:03:32.820
+than an old-fashioned
+chat interaction.
+
+00:03:32.820 --> 00:03:36.750
+And so, all of a sudden, we have
+way more models being deployed
+
+00:03:36.750 --> 00:03:41.190
+for way more use cases,
+consuming way more tokens.
+
+00:03:41.190 --> 00:03:43.830
+And all of a sudden,
+we've broken the bank,
+
+00:03:43.830 --> 00:03:47.010
+you've run out of tokens, your
+credit card is maxed out.
+
+00:03:47.010 --> 00:03:48.600
+What do we do?
+
+00:03:48.600 --> 00:03:51.660
+And so, if agents are
+token-consuming machines,
+
+00:03:51.660 --> 00:03:55.860
+fine-tuning lets you
+create a reliable agent
+
+00:03:55.860 --> 00:03:58.380
+without breaking the bank.
+
+00:03:58.380 --> 00:04:00.540
+And so, what does
+fine-tuning do?
+
+00:04:00.540 --> 00:04:04.140
+When you customize a model,
+you can create a cheaper,
+
+00:04:04.140 --> 00:04:06.480
+faster, smarter model.
+
+00:04:06.480 --> 00:04:09.900
+So, historically, I think when
+people think about fine-tuning,
+
+00:04:09.900 --> 00:04:12.180
+they think about
+improving model quality.
+
+00:04:12.180 --> 00:04:14.910
+Two years ago, a lot
+of people said, "Wow,
+
+00:04:14.910 --> 00:04:18.210
+I need to fine-tune
+GPT-3.5 Turbo
+
+00:04:18.210 --> 00:04:20.730
+to teach it about my domain."
+
+00:04:20.730 --> 00:04:23.340
+Today, when we talk
+about improving quality,
+
+00:04:23.340 --> 00:04:25.320
+especially in the
+context of agents,
+
+00:04:25.320 --> 00:04:29.580
+it's really about calling the
+right tool at the right time
+
+00:04:29.580 --> 00:04:31.770
+with the right inputs.
+
+00:04:31.770 --> 00:04:34.140
+Improving quality is
+really about baking
+
+00:04:34.140 --> 00:04:37.320
+in those instructions from
+your prompt into the weights
+
+00:04:37.320 --> 00:04:40.320
+of the model itself, and
+that is super important.
+
+00:04:40.320 --> 00:04:42.750
+But it's not the full story.
+
+00:04:42.750 --> 00:04:44.190
+What we're seeing
+more and more of --
+
+00:04:44.190 --> 00:04:47.420
+and you saw this probably
+in sessions where we talked
+
+00:04:47.420 --> 00:04:51.110
+about Harvey or UiPath,
+
+00:04:51.110 --> 00:04:56.370
+many companies are fine-tuning
+smaller, cheaper, faster models
+
+00:04:56.370 --> 00:05:00.120
+to power their production
+agents for their use cases
+
+00:05:00.120 --> 00:05:03.030
+with the same quality
+as a frontier model
+
+00:05:03.030 --> 00:05:04.890
+at a fraction of the price.
+
+00:05:04.890 --> 00:05:10.200
+So the targets of fine-tuning
+are often 10 to 30 times cheaper
+
+00:05:10.200 --> 00:05:11.310
+than a frontier model.
+
+00:05:11.310 --> 00:05:17.400
+So we're talking about
+replacing GPT-5.4 with 4.1 nano
+
+00:05:17.400 --> 00:05:20.400
+or a Qwen model,
+something much cheaper.
+
+00:05:20.400 --> 00:05:23.730
+And so when you're looking at
+something 30 times cheaper,
+
+00:05:23.730 --> 00:05:26.580
+even if it's consuming
+30 times the tokens,
+
+00:05:26.580 --> 00:05:28.860
+your budget still balances.
+
+00:05:28.860 --> 00:05:30.060
+The other thing we worry
+
+00:05:30.060 --> 00:05:33.750
+about with agents is they're
+chatty, but we're impatient.
+
+00:05:33.750 --> 00:05:35.970
+The big frontier
+models can be slow.
+
+00:05:35.970 --> 00:05:39.120
+We've all sat there and
+watched Claude churn,
+
+00:05:39.120 --> 00:05:40.170
+and you're like, "I'm bored.
+
+00:05:40.170 --> 00:05:41.022
+I'm bored. Come on."
+
+00:05:41.047 --> 00:05:43.890
+Small models
+stream tokens faster.
+
+00:05:43.890 --> 00:05:47.850
+So your agentic workflows, once
+you've got that smaller model,
+
+00:05:47.850 --> 00:05:49.410
+it responds more quickly.
+
+00:05:49.410 --> 00:05:52.800
+So you really now have kind
+of the perfect solution.
+
+00:05:52.800 --> 00:05:55.920
+You've got a model that knows
+what tools to call and how
+
+00:05:55.920 --> 00:05:58.800
+to behave, and it's
+cheaper, and it's faster.
+
+00:05:58.800 --> 00:06:01.590
+And so, because of this, we're
+seeing a lot more traction
+
+00:06:01.590 --> 00:06:04.620
+for fine-tuning
+and customization.
+
+00:06:04.620 --> 00:06:07.920
+When we talk about optimization,
+it's really a journey.
+
+00:06:07.920 --> 00:06:10.830
+So, in Foundry, you often
+start from, "I built my agent.
+
+00:06:10.830 --> 00:06:12.840
+I've got to get
+the prompt right.
+
+00:06:12.840 --> 00:06:16.350
+Can I give it instructions
+to make it do what I want?"
+
+00:06:16.350 --> 00:06:17.760
+Step two is, "Okay.
+
+00:06:17.760 --> 00:06:21.210
+I need to add context
+management to my agent runtime.
+
+00:06:21.210 --> 00:06:24.210
+I'm going to give it data,
+grounding, and memory.
+
+00:06:24.210 --> 00:06:26.850
+And then, I can give it
+tools so it can take actions
+
+00:06:26.850 --> 00:06:29.640
+and call external things."
+
+00:06:29.640 --> 00:06:32.160
+And then, at all this
+time, I'm evaluating it.
+
+00:06:32.160 --> 00:06:33.900
+I'm checking if it's
+doing what I want.
+
+00:06:33.900 --> 00:06:36.780
+I'm checking how
+it's performing.
+
+00:06:36.780 --> 00:06:40.590
+Once we've got that, though, now
+it becomes time to optimize.
+
+00:06:40.590 --> 00:06:43.230
+"Is my model doing
+the wrong stuff?
+
+00:06:43.230 --> 00:06:45.120
+Is it too expensive?
+
+00:06:45.120 --> 00:06:46.710
+Is it too slow?"
+
+00:06:46.710 --> 00:06:48.270
+And that's where
+fine-tuning comes in.
+
+00:06:48.270 --> 00:06:50.940
+And so, this talk today
+is really going to focus
+
+00:06:50.940 --> 00:06:55.680
+on this right-hand side of
+this optimization curve.
+
+00:06:55.680 --> 00:06:58.920
+And I already said, fine-tuning
+is becoming more popular
+
+00:06:58.920 --> 00:07:02.160
+as we see the rise of agents,
+and we're seeing this in
+
+00:07:02.160 --> 00:07:03.600
+the developer world.
+
+00:07:03.600 --> 00:07:06.570
+About half of developers
+say that they want
+
+00:07:06.570 --> 00:07:10.740
+to replace their out-of-the-box
+models with fine-tuning.
+
+00:07:10.740 --> 00:07:13.140
+Three years ago, people
+-- maybe four years ago,
+
+00:07:13.140 --> 00:07:16.140
+people were like, "I'm going to
+build my own foundation model."
+
+00:07:16.140 --> 00:07:17.220
+And then, we kind of moved on,
+
+00:07:17.220 --> 00:07:18.720
+and everyone said,
+"Ah, you know what?
+
+00:07:18.720 --> 00:07:20.550
+Out-of-the-box
+models are amazing.
+
+00:07:20.550 --> 00:07:22.440
+I'm good. I don't
+need to do this."
+
+00:07:22.440 --> 00:07:25.140
+Now, people are starting to
+look at their balance sheets
+
+00:07:25.140 --> 00:07:28.890
+or their CSAT, and they're
+saying, "Actually,
+
+00:07:28.890 --> 00:07:30.960
+maybe fine-tuning is for me."
+
+00:07:30.960 --> 00:07:32.130
+And this really gets back
+
+00:07:32.130 --> 00:07:35.400
+to the cost compounding
+in the agency loop.
+
+00:07:35.400 --> 00:07:39.660
+And it ends up being about
+quality, latency, and cost,
+
+00:07:39.660 --> 00:07:43.410
+all driving people
+towards this decision.
+
+00:07:43.410 --> 00:07:46.260
+And now, I've said the word
+"fine-tuning" like 30 times,
+
+00:07:46.260 --> 00:07:49.410
+and some of you, probably anyone
+who is not a data scientist,
+
+00:07:49.410 --> 00:07:51.720
+is like, "What is fine-tuning?"
+
+00:07:51.720 --> 00:07:53.580
+So I got to this a little late,
+
+00:07:53.580 --> 00:07:56.070
+but fine-tuning is really
+just your cheat code
+
+00:07:56.070 --> 00:07:57.960
+to building a foundation model.
+
+00:07:57.960 --> 00:08:01.860
+So if we go back to, "Where
+do these models come from?",
+
+00:08:01.860 --> 00:08:03.990
+the way you build a
+foundation model is you start
+
+00:08:03.990 --> 00:08:05.010
+with pre-training.
+
+00:08:05.010 --> 00:08:08.130
+You have a massive amount
+of unlabeled data,
+
+00:08:08.130 --> 00:08:10.980
+and you start off by figuring
+out next token prediction.
+
+00:08:10.980 --> 00:08:12.090
+So,"I've got one word;
+
+00:08:12.090 --> 00:08:14.340
+what's the next
+most likely word?"
+
+00:08:14.340 --> 00:08:17.640
+Once you've got that, you
+often use instruction tuning,
+
+00:08:17.640 --> 00:08:21.180
+where you give prompt-response
+data, task-specific data,
+
+00:08:21.180 --> 00:08:23.460
+to teach the model
+how to respond.
+
+00:08:23.460 --> 00:08:26.790
+And then, the final step is
+going to be alignment tuning,
+
+00:08:26.790 --> 00:08:30.450
+where you give the model human
+preference data, reward models,
+
+00:08:30.450 --> 00:08:33.450
+to really steer how you
+want it to respond.
+
+00:08:33.450 --> 00:08:35.040
+You put these three
+steps together,
+
+00:08:35.040 --> 00:08:37.200
+you get your frontier model.
+
+00:08:37.200 --> 00:08:40.320
+Fine-tuning lets you kind
+of skip the most expensive,
+
+00:08:40.320 --> 00:08:42.290
+hardest, complicated part.
+
+00:08:42.290 --> 00:08:45.020
+You pick up your generic,
+off-the-shelf model that's
+
+00:08:45.020 --> 00:08:47.930
+pretty good, and then
+you get to choose,
+
+00:08:47.930 --> 00:08:50.210
+"Do I want to do
+supervised fine-tuning?",
+
+00:08:50.210 --> 00:08:53.270
+so teach it to behave in a
+certain way, give it data
+
+00:08:53.270 --> 00:08:55.470
+to copy and learn from,
+
+00:08:55.470 --> 00:08:56.940
+"Or do I want to align it?
+
+00:08:56.940 --> 00:08:58.110
+Or do I want to do both?"
+
+00:08:58.110 --> 00:09:00.000
+And so, you kind of
+get a head start
+
+00:09:00.000 --> 00:09:03.000
+in the customization
+journey, add your data,
+
+00:09:03.000 --> 00:09:05.430
+and create your own IP.
+
+00:09:05.430 --> 00:09:08.130
+And so, with that, we've kind
+of given you the crash course
+
+00:09:08.130 --> 00:09:10.710
+in fine-tuning, and we're going
+to get to the first demo,
+
+00:09:10.710 --> 00:09:12.660
+which is, I'm sure, what
+you all care about.
+
+00:09:12.660 --> 00:09:16.760
+And so, point one is we're going
+to do "cheaper and faster".
+
+00:09:16.760 --> 00:09:20.090
+So a really common technique in
+the world of model customization
+
+00:09:20.090 --> 00:09:22.460
+and fine-tuning is distillation.
+
+00:09:22.460 --> 00:09:27.650
+And this is where you take a
+large, smart model like GPT-5.5,
+
+00:09:27.650 --> 00:09:32.070
+and you capture its traffic and
+use that as your training data.
+
+00:09:32.070 --> 00:09:34.650
+What we're going to show
+you is how you take traces
+
+00:09:34.650 --> 00:09:38.090
+from your production agent,
+filter and curate them,
+
+00:09:38.090 --> 00:09:41.720
+create a training set, and from
+that, generate your small,
+
+00:09:41.720 --> 00:09:44.870
+fine-tuned model
+that is just as good
+
+00:09:44.870 --> 00:09:47.880
+as your high-quality
+frontier model.
+
+00:09:47.880 --> 00:09:51.090
+So, with that, we're going
+to switch to the demo.
+
+00:09:51.090 --> 00:09:52.200
+Omkar More: All right.
+
+00:09:52.200 --> 00:09:54.840
+So throughout this demo and
+throughout the talk today,
+
+00:09:54.840 --> 00:09:57.270
+we're going to see -- we're
+going to show you a variety
+
+00:09:57.270 --> 00:10:01.140
+of techniques for post-training
+with the intention of making all
+
+00:10:01.140 --> 00:10:04.590
+of your models faster,
+cheaper, and smarter.
+
+00:10:04.590 --> 00:10:09.720
+So across all of these demos,
+we're going to concentrate
+
+00:10:09.720 --> 00:10:12.060
+on a single customer scenario.
+
+00:10:12.060 --> 00:10:13.860
+This customer scenario is
+
+00:10:13.860 --> 00:10:17.610
+about building a
+customer service agent
+
+00:10:17.610 --> 00:10:19.440
+for a retail scenario.
+
+00:10:19.440 --> 00:10:21.960
+So let's say you
+have a retailer,
+
+00:10:21.960 --> 00:10:26.400
+and you have a customer service
+agent that processes refunds.
+
+00:10:26.400 --> 00:10:30.090
+So a customer calls in, asks for
+a refund for a particular item.
+
+00:10:30.090 --> 00:10:31.410
+The agent has to go ahead
+
+00:10:31.410 --> 00:10:34.320
+and decide whether the
+request was valid.
+
+00:10:34.320 --> 00:10:36.630
+It has to decide whether
+the item could be returned.
+
+00:10:36.630 --> 00:10:40.020
+It also has to decide whether
+the item should be replaced
+
+00:10:40.020 --> 00:10:41.130
+or refunded.
+
+00:10:41.130 --> 00:10:44.750
+So these are complex scenarios
+that the agent has to navigate.
+
+00:10:44.750 --> 00:10:48.920
+The agent can look at the
+order details via tool.
+
+00:10:48.920 --> 00:10:51.770
+It could also go and look
+at the fulfillment status.
+
+00:10:51.770 --> 00:10:54.500
+It could go and look
+at the policy details
+
+00:10:54.500 --> 00:10:56.300
+and then process the payments.
+
+00:10:56.300 --> 00:10:57.960
+But what if it gets it wrong?
+
+00:10:57.960 --> 00:10:59.460
+If it gets it wrong,
+it could lead
+
+00:10:59.460 --> 00:11:02.370
+to the retailer losing
+a lot of money.
+
+00:11:02.370 --> 00:11:03.900
+And as you know --
+
+00:11:03.900 --> 00:11:05.190
+Alicia Frame: Or a
+lot of customers.
+
+00:11:05.190 --> 00:11:08.130
+Omkar More: Or a lot of
+customers, and online returns is
+
+00:11:08.130 --> 00:11:12.210
+about $900 billion of
+business in the US last year.
+
+00:11:12.210 --> 00:11:15.210
+So it's very critical for us
+to get this scenario right.
+
+00:11:15.210 --> 00:11:17.310
+So with that setup,
+let's go ahead and look
+
+00:11:17.310 --> 00:11:19.830
+at how we can do distillation
+from a larger model
+
+00:11:19.830 --> 00:11:23.730
+like a 5.4 model to a smaller
+4.1 or 4.1 mini model and see
+
+00:11:23.730 --> 00:11:27.150
+if we can get the models to
+be faster and cheaper, okay?
+
+00:11:27.150 --> 00:11:28.110
+Alicia Frame: Okay.
+
+00:11:28.110 --> 00:11:28.410
+Omkar More: All right.
+
+00:11:28.410 --> 00:11:34.920
+So I have, over here
+-- let's go over to.
+
+00:11:34.920 --> 00:11:36.060
+All right.
+
+00:11:36.060 --> 00:11:40.650
+So let's go to our agents.
+
+00:11:40.650 --> 00:11:41.220
+Okay.
+
+00:11:41.220 --> 00:11:42.480
+Alicia Frame: And so, as
+you're pulling this up,
+
+00:11:42.480 --> 00:11:46.200
+for folks who haven't used it
+before, this is our Foundry UI.
+
+00:11:46.200 --> 00:11:49.560
+This is a really simple,
+no-code way to build agents,
+
+00:11:49.560 --> 00:11:53.070
+fine-tune models, but this is
+also all possible from code.
+
+00:11:53.070 --> 00:11:54.000
+Omkar More: Absolutely.
+
+00:11:54.000 --> 00:11:57.390
+So, to start with, I have
+built a hosted agent.
+
+00:11:57.390 --> 00:12:02.100
+So Foundry allows you to use
+any platform that you want,
+
+00:12:02.100 --> 00:12:05.580
+any agent platform
+like Semantic Kernel,
+
+00:12:05.580 --> 00:12:09.180
+if you want to use LangGraph,
+and host your agents on Foundry.
+
+00:12:09.180 --> 00:12:10.740
+So I have done that over here.
+
+00:12:10.740 --> 00:12:15.660
+This is an agent that is using
+GPT-5.4 as its base model.
+
+00:12:15.660 --> 00:12:19.060
+And let's try it out
+with an example.
+
+00:12:24.150 --> 00:12:25.930
+Not this one.
+
+00:12:27.000 --> 00:12:28.570
+Maybe this one.
+
+00:12:29.910 --> 00:12:31.320
+All right.
+
+00:12:31.320 --> 00:12:33.360
+So the customer is asking
+to return a yoga mat,
+
+00:12:33.360 --> 00:12:36.780
+which they have not used, and
+see if we can process a refund.
+
+00:12:36.780 --> 00:12:40.260
+Foundry agents allow --
+Foundry-hosted agents allow you
+
+00:12:40.260 --> 00:12:43.410
+to actually capture all the
+traces so that you can use
+
+00:12:43.410 --> 00:12:47.400
+that to evaluate and further
+use it to fine-tune as well.
+
+00:12:47.400 --> 00:12:49.800
+So, as you can see, the
+request has been resolved,
+
+00:12:49.800 --> 00:12:51.930
+and you can look at the traces
+
+00:12:51.930 --> 00:12:56.010
+to see what exactly happened
+during the entire process.
+
+00:12:56.010 --> 00:12:57.390
+Alicia Frame: So can
+you show us the tools
+
+00:12:57.390 --> 00:12:59.010
+that your agent is
+calling in here?
+
+00:12:59.010 --> 00:12:59.580
+Omkar More: Absolutely.
+
+00:12:59.580 --> 00:13:01.020
+So here's what has happened.
+
+00:13:01.020 --> 00:13:05.040
+So, if you see, the user view
+shows you what the request was
+
+00:13:05.040 --> 00:13:06.570
+and what the final outcome was.
+
+00:13:06.570 --> 00:13:09.030
+But the trajectories
+actually show you
+
+00:13:09.030 --> 00:13:10.380
+which of our tools were invoked.
+
+00:13:10.380 --> 00:13:13.470
+In this case, the "get
+order details" was invoked.
+
+00:13:13.470 --> 00:13:15.780
+After that, we had the
+"fulfillment status" invoked,
+
+00:13:15.780 --> 00:13:18.750
+and then the "check
+resolution policy",
+
+00:13:18.750 --> 00:13:20.670
+and then the final
+outcome was resulted.
+
+00:13:20.670 --> 00:13:23.040
+So this is really rich
+data that you can use
+
+00:13:23.040 --> 00:13:26.790
+to evaluate your models and
+also use it to improve them.
+
+00:13:26.790 --> 00:13:29.370
+So, going back, let's go
+ahead and look at the
+
+00:13:29.370 --> 00:13:32.550
+"Traces" tab in hosted agents.
+
+00:13:32.550 --> 00:13:34.500
+You'll see that this
+agent has been working
+
+00:13:34.500 --> 00:13:36.840
+for the last few days,
+and we have about --
+
+00:13:36.840 --> 00:13:40.320
+I think, about a thousand-odd
+traces that have been captured.
+
+00:13:40.320 --> 00:13:45.090
+And we'll use these to actually
+go ahead and evaluate the model.
+
+00:13:45.090 --> 00:13:47.220
+Now, the first step to
+think about this is,
+
+00:13:47.220 --> 00:13:49.980
+"Can I just replace my large
+model with a smaller model
+
+00:13:49.980 --> 00:13:51.420
+and see how it performs?"
+
+00:13:51.420 --> 00:13:53.940
+So let's go ahead and build
+up an evaluation scenario
+
+00:13:53.940 --> 00:13:56.040
+and see how they stack
+
+00:13:56.040 --> 00:13:59.010
+up in the first place before we
+do any fine-tuning whatsoever.
+
+00:13:59.010 --> 00:13:59.490
+Alicia Frame: So, really,
+
+00:13:59.490 --> 00:14:02.280
+you're basically showing
+us that we're not lying.
+
+00:14:02.280 --> 00:14:04.170
+We're going to start
+with no fine-tuning,
+
+00:14:04.170 --> 00:14:05.940
+just smaller and cheaper.
+
+00:14:05.940 --> 00:14:07.380
+Let's see how well it works out.
+
+00:14:07.380 --> 00:14:07.740
+Omkar More: All right.
+
+00:14:07.740 --> 00:14:10.680
+And this I'm going to
+do with the SDK.
+
+00:14:10.680 --> 00:14:14.910
+So let's go ahead
+and start that up.
+
+00:14:14.910 --> 00:14:22.560
+So a few things to talk
+about over here is --
+
+00:14:22.560 --> 00:14:25.300
+let me just start
+off this and then --
+
+00:14:28.290 --> 00:14:30.630
+Alicia Frame: So are you
+loading up all of your evals
+
+00:14:30.630 --> 00:14:33.660
+to be able to check how
+well the models perform?
+
+00:14:33.660 --> 00:14:34.680
+Omkar More: Yes.
+
+00:14:34.680 --> 00:14:38.220
+So, now, Foundry allows you
+to have different graders.
+
+00:14:38.220 --> 00:14:40.050
+So it allows
+out-of-the-box graders
+
+00:14:40.050 --> 00:14:43.980
+like task resolution,
+intent resolution.
+
+00:14:43.980 --> 00:14:47.490
+So these are LLM-based graders
+that can look at the trajectory
+
+00:14:47.490 --> 00:14:50.460
+and tell what the intent was,
+and was it actually done or not.
+
+00:14:50.460 --> 00:14:51.930
+So you could use that.
+
+00:14:51.930 --> 00:14:54.630
+Or you could get more control
+by writing your own graders.
+
+00:14:54.630 --> 00:14:57.360
+And we allow you to write
+graders backed by an LLM
+
+00:14:57.360 --> 00:14:59.880
+or using pure
+Python code itself.
+
+00:14:59.880 --> 00:15:05.040
+So, in this case, I have written
+a Python grader, which allows me
+
+00:15:05.040 --> 00:15:08.370
+to grade the responses
+on three fronts:
+
+00:15:08.370 --> 00:15:11.580
+whether the decision was right --
+in case the refund was supposed
+
+00:15:11.580 --> 00:15:13.440
+to be done or was it rejected.
+
+00:15:13.440 --> 00:15:17.250
+So I give 50% weightage to that.
+
+00:15:17.250 --> 00:15:20.520
+How accurate was it,
+from the dollar amount.
+
+00:15:20.520 --> 00:15:24.090
+So if it was a $50 item,
+was I refunding $500?
+
+00:15:24.090 --> 00:15:25.410
+So that kind of thing.
+
+00:15:25.410 --> 00:15:27.720
+And then it also grades
+about 20% weight
+
+00:15:27.720 --> 00:15:29.730
+for the format itself,
+because this is important,
+
+00:15:29.730 --> 00:15:32.580
+because your downstreams are
+dependent upon how the model
+
+00:15:32.580 --> 00:15:35.310
+format is given.
+
+00:15:35.310 --> 00:15:37.350
+Alicia Frame: And really,
+without this, we have no way
+
+00:15:37.350 --> 00:15:40.890
+of knowing, one, if the
+agent works or not, but two,
+
+00:15:40.890 --> 00:15:43.560
+whether fine-tuning makes
+anything better or worse.
+
+00:15:43.560 --> 00:15:46.350
+So this is really the
+most foundational step.
+
+00:15:46.350 --> 00:15:47.490
+Omkar More: Yes.
+
+00:15:47.490 --> 00:15:50.100
+And then, I build an
+evaluation, which has all
+
+00:15:50.100 --> 00:15:54.630
+of these three graders and
+then submit an eval run
+
+00:15:54.630 --> 00:15:56.760
+for the base models.
+
+00:15:56.760 --> 00:15:58.110
+And let's go ahead
+and have a look
+
+00:15:58.110 --> 00:16:00.730
+at the evaluations themselves.
+
+00:16:02.040 --> 00:16:02.370
+Alicia Frame: And so,
+
+00:16:02.370 --> 00:16:05.040
+whenever you're generating
+something from the SDK,
+
+00:16:05.040 --> 00:16:07.230
+it's automatically
+registered in the UI.
+
+00:16:07.230 --> 00:16:09.780
+So if you want a beautiful
+view of your eval,
+
+00:16:09.780 --> 00:16:11.400
+you can just click
+over here and see it.
+
+00:16:11.400 --> 00:16:12.270
+Omkar More: Yeah.
+
+00:16:12.270 --> 00:16:15.060
+So, as you can see, the o4-mini
+
+00:16:15.060 --> 00:16:19.380
+and GPT-5.4 do reasonably
+okay, 65% quality score.
+
+00:16:19.380 --> 00:16:21.930
+But the smaller models,
+which is 4.1-mini
+
+00:16:21.930 --> 00:16:24.480
+and nano, perform really poorly.
+
+00:16:24.480 --> 00:16:27.480
+And you don't want to
+replace them as-is just
+
+00:16:27.480 --> 00:16:29.100
+to save cost and latency.
+
+00:16:29.100 --> 00:16:30.540
+So, what do we do?
+
+00:16:30.540 --> 00:16:31.800
+Alicia Frame: Cry?
+
+00:16:31.800 --> 00:16:33.360
+Omkar More: Well,
+Foundry to the rescue.
+
+00:16:33.360 --> 00:16:36.870
+You can actually use the traces
+that we have just captured
+
+00:16:36.870 --> 00:16:39.600
+to fine-tune a smaller model
+and see how it performs now.
+
+00:16:39.600 --> 00:16:42.630
+And they make it so simple
+that you can actually do it
+
+00:16:42.630 --> 00:16:44.640
+through the UI directly.
+
+00:16:44.640 --> 00:16:48.090
+So let me go ahead and
+show you just that.
+
+00:16:48.090 --> 00:16:49.380
+So go to "Retail."
+
+00:16:49.380 --> 00:16:51.180
+This is my agent.
+
+00:16:51.180 --> 00:16:53.820
+We'll go back to the traces
+that we saw earlier.
+
+00:16:53.820 --> 00:16:58.290
+And then, click on the
+"Create Dataset" button.
+
+00:16:58.290 --> 00:17:02.910
+This allows you to convert
+your traces from raw traces
+
+00:17:02.910 --> 00:17:05.160
+into datasets that you
+can use for evaluation,
+
+00:17:05.160 --> 00:17:08.310
+for reinforcement fine-tuning,
+or for supervised fine-tuning.
+
+00:17:08.310 --> 00:17:10.440
+So it does a little bit
+smarter things here.
+
+00:17:10.440 --> 00:17:12.300
+It removes all the duplicates.
+
+00:17:12.300 --> 00:17:15.630
+Your trajectories might have
+non-interesting conversations
+
+00:17:15.630 --> 00:17:17.580
+that can be taken off.
+
+00:17:17.580 --> 00:17:19.530
+It will redact some of
+the PII information
+
+00:17:19.530 --> 00:17:22.890
+as well before it
+uses it for training.
+
+00:17:22.890 --> 00:17:23.970
+So I'm going to go and try
+
+00:17:23.970 --> 00:17:26.580
+to do supervised
+fine-tuning over here.
+
+00:17:26.580 --> 00:17:32.790
+You will see that we
+have -- let me see.
+
+00:17:32.790 --> 00:17:34.210
+Okay. Hold on.
+
+00:17:41.190 --> 00:17:41.430
+All right.
+
+00:17:41.430 --> 00:17:45.770
+So, as you can see, I have
+about 1,400 traces here.
+
+00:17:45.770 --> 00:17:48.140
+Supervised fine-tuning -- and
+we suggest you at least have
+
+00:17:48.140 --> 00:17:50.210
+about a thousand samples.
+
+00:17:50.210 --> 00:17:52.010
+When you go to "Reinforcement
+Fine-Tuning," you will see
+
+00:17:52.010 --> 00:17:55.440
+that we can do a lot more with
+the smaller dataset as well.
+
+00:17:55.440 --> 00:17:58.500
+So I'm going to use a thousand
+samples for here and then click
+
+00:17:58.500 --> 00:18:03.810
+on "Start Fine-Tuning" to
+start the wizard right here.
+
+00:18:03.810 --> 00:18:09.350
+Let's go ahead and select
+maybe GPT-4.1 mini or nano.
+
+00:18:09.350 --> 00:18:11.750
+You'll see a few options
+
+00:18:11.750 --> 00:18:14.300
+that you can select while you
+kick off a SFT run as well.
+
+00:18:14.300 --> 00:18:17.550
+So, for instance, the training
+type gives you different SKUs
+
+00:18:17.550 --> 00:18:21.960
+that you can use to govern
+data residency and your cost.
+
+00:18:21.960 --> 00:18:24.180
+My favorite over here is
+the developer preview,
+
+00:18:24.180 --> 00:18:26.430
+which allows you to do
+training at half of the cost
+
+00:18:26.430 --> 00:18:27.780
+of a standard-tier job.
+
+00:18:27.780 --> 00:18:28.470
+Alicia Frame: So
+if you're worried
+
+00:18:28.470 --> 00:18:30.570
+about fine-tuning
+being expensive,
+
+00:18:30.570 --> 00:18:32.460
+developer tier, 50% off.
+
+00:18:32.460 --> 00:18:33.360
+Omkar More: Yes.
+
+00:18:33.360 --> 00:18:34.830
+It runs on our low-priority VMs,
+
+00:18:34.830 --> 00:18:35.940
+so it could take
+a little longer,
+
+00:18:35.940 --> 00:18:38.460
+but for developers,
+it's pretty good.
+
+00:18:38.460 --> 00:18:41.250
+We also introduced at Build
+today the data zone SKU
+
+00:18:41.250 --> 00:18:45.270
+that allows you to have
+residency guarantees in US.
+
+00:18:45.270 --> 00:18:48.360
+So I'm going to use
+just the standard for now.
+
+00:18:48.360 --> 00:18:51.090
+Also, you'll see that the
+datasets are already preloaded
+
+00:18:51.090 --> 00:18:53.370
+from the -- converted from
+the traces into here,
+
+00:18:53.370 --> 00:18:56.370
+so you don't need to go
+ahead and add any datasets.
+
+00:18:56.370 --> 00:18:58.710
+Then, you can click on over here
+
+00:18:58.710 --> 00:19:00.270
+to have it
+automatically deployed
+
+00:19:00.270 --> 00:19:02.190
+to a model after job completion.
+
+00:19:02.190 --> 00:19:03.630
+We'll skip that for now.
+
+00:19:03.630 --> 00:19:05.700
+And you'll see that we
+have a few hyperparameters
+
+00:19:05.700 --> 00:19:07.020
+that you can tweak.
+
+00:19:07.020 --> 00:19:08.430
+And for higher and more control,
+
+00:19:08.430 --> 00:19:09.870
+you might need more
+hyperparameters.
+
+00:19:09.870 --> 00:19:13.140
+We'll show in the next few demos
+how you can get more control
+
+00:19:13.140 --> 00:19:14.760
+onto your fine-tuning process.
+
+00:19:14.760 --> 00:19:16.470
+Alicia Frame: But here is
+really just easy mode, right?
+
+00:19:16.470 --> 00:19:16.980
+Omkar More: Yes.
+
+00:19:16.980 --> 00:19:18.870
+So you can just go ahead and
+click just a few clicks,
+
+00:19:18.870 --> 00:19:22.410
+and then your training is started.
+
+00:19:22.410 --> 00:19:25.690
+Let's go ahead and open up a
+run that is already completed.
+
+00:19:27.450 --> 00:19:30.330
+So this is a distillation
+run that we did earlier,
+
+00:19:30.330 --> 00:19:35.370
+and you can go ahead on the
+"Monitor" tab to see the scores.
+
+00:19:35.370 --> 00:19:38.340
+You'll see there that
+the loss is reducing,
+
+00:19:38.340 --> 00:19:41.220
+accuracy is increasing,
+everything looking good.
+
+00:19:41.220 --> 00:19:43.980
+You can see that we --
+not just the final model,
+
+00:19:43.980 --> 00:19:45.540
+you'll also get checkpoints
+
+00:19:45.540 --> 00:19:48.600
+for interesting cases wherein
+the reward might have
+
+00:19:48.600 --> 00:19:50.460
+increased before the last step.
+
+00:19:50.460 --> 00:19:53.160
+You can use that to deploy
+and have a model as well.
+
+00:19:53.160 --> 00:19:56.010
+Or if you think that you need
+to further fine-tune this
+
+00:19:56.010 --> 00:19:58.590
+with more data, you can
+use continuous fine-tuning
+
+00:19:58.590 --> 00:20:01.200
+and go ahead and
+submit another run.
+
+00:20:01.200 --> 00:20:03.840
+In this case, the run
+looks pretty good.
+
+00:20:03.840 --> 00:20:06.330
+I have actually gone ahead
+and deployed this earlier.
+
+00:20:06.330 --> 00:20:08.910
+I have created an agent on top
+of it and ran the evaluation,
+
+00:20:08.910 --> 00:20:10.320
+just in the interest of time.
+
+00:20:10.320 --> 00:20:14.330
+And we can go ahead and look at
+that evaluation run right now
+
+00:20:14.330 --> 00:20:16.380
+to see how it stacks up.
+
+00:20:20.660 --> 00:20:21.680
+All right.
+
+00:20:21.680 --> 00:20:26.150
+And let's go ahead and
+sort it by retail order.
+
+00:20:26.150 --> 00:20:29.010
+Okay. So, as you can see,
+we have a new winner.
+
+00:20:29.010 --> 00:20:33.600
+So GPT-4.1 mini fine-tuned
+actually outperforms o4-mini
+
+00:20:33.600 --> 00:20:36.240
+and 5.4 as well,
+which is amazing.
+
+00:20:36.240 --> 00:20:37.680
+Now, you have --
+your agents can --
+
+00:20:37.680 --> 00:20:38.460
+Alicia Frame:
+Fraction of the cost.
+
+00:20:38.460 --> 00:20:39.810
+Omkar More: Fraction
+of the cost.
+
+00:20:39.810 --> 00:20:42.480
+Your agents are
+faster and cheaper.
+
+00:20:42.480 --> 00:20:43.860
+Alicia Frame: And I guess
+maybe a little smarter.
+
+00:20:43.860 --> 00:20:44.520
+Omkar More: And slightly
+more performant as well.
+
+00:20:44.520 --> 00:20:45.810
+Alicia Frame: And the
+other thing I want to call
+
+00:20:45.810 --> 00:20:48.660
+out is you did include those
+default graders, right?
+
+00:20:48.660 --> 00:20:48.930
+Omkar More: Yes.
+
+00:20:48.930 --> 00:20:48.970
+Absolutely.
+
+00:20:48.970 --> 00:20:51.060
+Alicia Frame: The intent
+resolution, task completion.
+
+00:20:51.060 --> 00:20:53.940
+And what we can see there is,
+we're not trying to fine-tune
+
+00:20:53.940 --> 00:20:57.660
+to improve those, but our
+fine-tuning hasn't eroded the
+
+00:20:57.660 --> 00:20:59.010
+base model's capabilities.
+
+00:20:59.010 --> 00:21:03.030
+So one fear with fine-tuning is,
+maybe I made it better at this,
+
+00:21:03.030 --> 00:21:04.410
+but worse at other stuff.
+
+00:21:04.410 --> 00:21:06.750
+But we have those
+guardrails in place
+
+00:21:06.750 --> 00:21:09.270
+to make sure that didn't happen.
+
+00:21:09.270 --> 00:21:10.560
+So that was awesome.
+
+00:21:10.560 --> 00:21:11.310
+Omkar More: Thank you.
+
+00:21:11.310 --> 00:21:14.190
+Alicia Frame: So what is
+our current leaderboard?
+
+00:21:14.190 --> 00:21:15.810
+Seventy-four percent.
+
+00:21:15.810 --> 00:21:17.280
+That's an improvement.
+
+00:21:17.280 --> 00:21:18.900
+We've brought down our budget.
+
+00:21:18.900 --> 00:21:22.560
+We're still kind of holding with
+that frontier model standard.
+
+00:21:22.560 --> 00:21:27.210
+But $900 billion, 74% of
+that, we're still losing
+
+00:21:27.210 --> 00:21:30.300
+over $100 billion with
+spurious refunds.
+
+00:21:30.300 --> 00:21:33.750
+So what do we need to do?
+
+00:21:33.750 --> 00:21:35.790
+Sometimes your teacher
+isn't smart enough.
+
+00:21:35.790 --> 00:21:38.640
+So with distillation,
+what we just showed you,
+
+00:21:38.640 --> 00:21:42.060
+where you have your teacher
+model, frontier class,
+
+00:21:42.060 --> 00:21:43.860
+generate a bunch of data,
+
+00:21:43.860 --> 00:21:47.310
+fine-tune a small model using
+supervised fine-tuning.
+
+00:21:47.310 --> 00:21:50.490
+With those techniques,
+super easy to do,
+
+00:21:50.490 --> 00:21:54.360
+but you're really never going to
+get smarter than your teacher.
+
+00:21:54.360 --> 00:21:57.720
+The source of the training data,
+the mark you're trying to hit,
+
+00:21:57.720 --> 00:21:59.490
+is the teacher performance.
+
+00:21:59.490 --> 00:22:01.890
+But for us, if we
+look at this and say,
+
+00:22:01.890 --> 00:22:05.430
+"74% is really not good
+enough for our business;
+
+00:22:05.430 --> 00:22:07.140
+we need a new technique."
+
+00:22:07.140 --> 00:22:10.170
+And that's where reinforcement
+learning comes in.
+
+00:22:10.170 --> 00:22:11.820
+And so, in this scenario,
+
+00:22:11.820 --> 00:22:14.850
+what you're doing is
+the model itself learns
+
+00:22:14.850 --> 00:22:16.800
+from its own mistakes.
+
+00:22:16.800 --> 00:22:19.500
+So we define a grader, and
+so all the work we put
+
+00:22:19.500 --> 00:22:21.210
+into evaluating the baseline,
+
+00:22:21.210 --> 00:22:24.630
+evaluating our fine-tuned
+models, comes in handy.
+
+00:22:24.630 --> 00:22:29.460
+We use that same grader to
+score the model's own responses
+
+00:22:29.460 --> 00:22:31.650
+and learn from those scores.
+
+00:22:31.650 --> 00:22:36.420
+So your model generates sample
+results, you score them,
+
+00:22:36.420 --> 00:22:39.390
+you learn from the
+best-performing results,
+
+00:22:39.390 --> 00:22:43.680
+and the model, over time, learns
+how to reason, in this case,
+
+00:22:43.680 --> 00:22:45.930
+through multiple different
+tool calls that it has
+
+00:22:45.930 --> 00:22:47.790
+to chain and put together.
+
+00:22:47.790 --> 00:22:51.150
+The one caveat, though, for
+reinforcement learning is, most
+
+00:22:51.150 --> 00:22:54.870
+of the time, it needs to
+be a verifiable task.
+
+00:22:54.870 --> 00:22:58.260
+So what you're doing is you're
+grading if the response is good
+
+00:22:58.260 --> 00:23:00.750
+or not and learning
+from that signal.
+
+00:23:00.750 --> 00:23:03.720
+If you can't grade it,
+you can't learn from it.
+
+00:23:03.720 --> 00:23:06.090
+But the good news is
+refunds are gradable.
+
+00:23:06.090 --> 00:23:07.650
+You can look at
+it and say, "Yes,
+
+00:23:07.650 --> 00:23:10.800
+you should have refunded that,"
+or, "No, that was terrible."
+
+00:23:10.800 --> 00:23:12.690
+And so, this is a
+perfect scenario
+
+00:23:12.690 --> 00:23:16.170
+where we can score whether
+it's getting better or worse.
+
+00:23:16.170 --> 00:23:19.770
+So, next demo,
+reinforcement learning,
+
+00:23:19.770 --> 00:23:22.830
+learning from the
+agent's mistakes.
+
+00:23:22.830 --> 00:23:25.440
+And so, before we dive
+into the tech again,
+
+00:23:25.440 --> 00:23:28.020
+I'm going to just spend 30
+seconds explaining kind
+
+00:23:28.020 --> 00:23:30.150
+of what's happening
+under the hood.
+
+00:23:30.150 --> 00:23:32.700
+So, with reinforcement
+learning, you send your prompt
+
+00:23:32.700 --> 00:23:36.390
+to the model, and the model
+generates multiple samples.
+
+00:23:36.390 --> 00:23:37.950
+These are called rollouts.
+
+00:23:37.950 --> 00:23:40.020
+And so, here, the model
+has generated three
+
+00:23:40.020 --> 00:23:41.610
+possible samples.
+
+00:23:41.610 --> 00:23:45.360
+The grader you defined
+scores those samples.
+
+00:23:45.360 --> 00:23:47.730
+And the quality of your
+grader is basically going
+
+00:23:47.730 --> 00:23:50.340
+to determine whether
+this works or not.
+
+00:23:50.340 --> 00:23:52.620
+If there's no signal, if
+your grader is just like,
+
+00:23:52.620 --> 00:23:55.320
+"Everything is wrong", or
+"Everything is right",
+
+00:23:55.320 --> 00:23:57.000
+there's nowhere to go.
+
+00:23:57.000 --> 00:24:00.900
+So you need a grader that, one,
+grades the outcome you want,
+
+00:24:00.900 --> 00:24:03.210
+and two, leaves room
+for improvement.
+
+00:24:03.210 --> 00:24:05.850
+So you need an initial
+signal, and then you need
+
+00:24:05.850 --> 00:24:07.380
+to iterate from there.
+
+00:24:07.380 --> 00:24:10.350
+Once you've got your quality
+score from your grader,
+
+00:24:10.350 --> 00:24:12.840
+that information is
+fed into your trainer.
+
+00:24:12.840 --> 00:24:16.890
+You reinforce the correct
+answers, you learn from them,
+
+00:24:16.890 --> 00:24:20.250
+and the model learns to
+reason about a new domain.
+
+00:24:20.250 --> 00:24:23.070
+And if that sounds a little
+complicated, Omkar is going
+
+00:24:23.070 --> 00:24:25.410
+to show you how simple
+it is to do in our UI.
+
+00:24:25.410 --> 00:24:26.430
+Omkar More: Thank you, Alicia.
+
+00:24:26.430 --> 00:24:31.050
+So let's go ahead and look at
+reinforcement fine-tuning.
+
+00:24:31.050 --> 00:24:34.860
+So we saw in the previous
+demo, we took a teacher model.
+
+00:24:34.860 --> 00:24:37.860
+The teacher model had the entire
+trajectories spelled out.
+
+00:24:37.860 --> 00:24:39.930
+So what tools were
+supposed to be called,
+
+00:24:39.930 --> 00:24:41.010
+what were the responses?
+
+00:24:41.010 --> 00:24:43.650
+All of this was spelled out, and
+that was the training dataset
+
+00:24:43.650 --> 00:24:45.240
+that was used for fine-tuning.
+
+00:24:45.240 --> 00:24:47.940
+Supervised fine-tuning is
+like learning by seeing
+
+00:24:47.940 --> 00:24:52.170
+or copying what a
+smarter person is doing.
+
+00:24:52.170 --> 00:24:53.580
+But in reinforcement
+fine-tuning,
+
+00:24:53.580 --> 00:24:57.120
+what we do is we don't give
+the exact trajectories
+
+00:24:57.120 --> 00:24:59.610
+or prescription of "These are the
+tools that need to be called."
+
+00:24:59.610 --> 00:25:03.780
+Instead, we give the ability
+for the training process itself
+
+00:25:03.780 --> 00:25:07.260
+to invoke these tools on the
+fly and then take the responses
+
+00:25:07.260 --> 00:25:13.290
+of those tools and use that
+to grade against the grader
+
+00:25:13.290 --> 00:25:15.660
+that we wrote in the
+evaluation flow,
+
+00:25:15.660 --> 00:25:18.510
+and see which of these responses
+are giving better results,
+
+00:25:18.510 --> 00:25:21.750
+and then continuously try
+to find out or reason about it
+
+00:25:21.750 --> 00:25:23.160
+to make better decisions.
+
+00:25:23.160 --> 00:25:24.930
+Alicia Frame: So you're
+giving the models the tools
+
+00:25:24.930 --> 00:25:28.470
+to answer the questions, and the
+model figures it out on its own.
+
+00:25:28.470 --> 00:25:29.340
+Omkar More: Exactly.
+
+00:25:29.340 --> 00:25:32.880
+So now let's go ahead and see
+how you can do this in Foundry.
+
+00:25:32.880 --> 00:25:34.800
+So I'm here with the SDK.
+
+00:25:34.800 --> 00:25:37.380
+So let's go step-by-step.
+
+00:25:37.380 --> 00:25:40.620
+So we're going to have
+the configuration done.
+
+00:25:40.620 --> 00:25:44.490
+And one thing that you want
+to note over here is, look
+
+00:25:44.490 --> 00:25:46.830
+at the training and
+the validation data.
+
+00:25:46.830 --> 00:25:49.230
+This data is, again, coming
+from the traces itself.
+
+00:25:49.230 --> 00:25:52.200
+But the training data right now
+doesn't have the entire tool
+
+00:25:52.200 --> 00:25:52.830
+call history.
+
+00:25:52.830 --> 00:25:58.890
+It only has the actual message
+that the user had asked.
+
+00:25:58.890 --> 00:26:01.800
+And then, it has some ground
+truth that will be used
+
+00:26:01.800 --> 00:26:03.900
+by the grader to grade this.
+
+00:26:03.900 --> 00:26:07.470
+So for instance,
+you will have the final score
+
+00:26:07.470 --> 00:26:10.020
+that has to be refunded, but
+it won't have which tools
+
+00:26:10.020 --> 00:26:11.610
+to be called to
+get to that thing.
+
+00:26:11.610 --> 00:26:14.970
+It wouldn't have the message
+body itself that needs
+
+00:26:14.970 --> 00:26:17.430
+to be returned, and so on.
+
+00:26:17.430 --> 00:26:22.290
+So we do this, we upload it to
+Foundry, and then let's go ahead
+
+00:26:22.290 --> 00:26:27.780
+and look at the most important
+part, which is the RFT grader.
+
+00:26:27.780 --> 00:26:29.940
+So you can use the
+evaluation grader
+
+00:26:29.940 --> 00:26:32.670
+that we already wrote itself,
+or you could tweak it as well.
+
+00:26:32.670 --> 00:26:36.810
+So, in this case, I have added
+some coverage to tools itself,
+
+00:26:36.810 --> 00:26:38.400
+which exact tools
+are getting called.
+
+00:26:38.400 --> 00:26:41.220
+So, for instance, I don't
+want to have a high score
+
+00:26:41.220 --> 00:26:45.570
+for a response where the "get
+orders" is not even invoked.
+
+00:26:45.570 --> 00:26:48.150
+So, in those cases,
+I can have control
+
+00:26:48.150 --> 00:26:51.540
+over how I want the
+grader to behave.
+
+00:26:51.540 --> 00:26:52.830
+Alicia Frame: And this
+is really important
+
+00:26:52.830 --> 00:26:54.870
+for avoiding things
+like reward hacking.
+
+00:26:54.870 --> 00:26:56.670
+So a failure mode
+when we were working
+
+00:26:56.670 --> 00:26:59.730
+on putting this together was,
+the model would get things wrong
+
+00:26:59.730 --> 00:27:02.520
+and just learn, "I will
+never call a tool",
+
+00:27:02.520 --> 00:27:04.770
+because it was getting penalized
+for calling the wrong tool.
+
+00:27:04.770 --> 00:27:05.820
+Omkar More: Yes, and
+you'll see that.
+
+00:27:05.820 --> 00:27:06.000
+Yeah.
+
+00:27:06.000 --> 00:27:08.940
+And when we'll see
+the run itself,
+
+00:27:08.940 --> 00:27:11.790
+you will see how you can avoid
+this by looking at our telemetry
+
+00:27:11.790 --> 00:27:13.440
+and the metrics
+that will tell you
+
+00:27:13.440 --> 00:27:15.900
+when such a thing does happen.
+
+00:27:15.900 --> 00:27:16.170
+All right.
+
+00:27:16.170 --> 00:27:19.680
+So now, we said we need to
+give access to the tools
+
+00:27:19.680 --> 00:27:21.000
+to the training run itself.
+
+00:27:21.000 --> 00:27:22.020
+How do you do that?
+
+00:27:22.020 --> 00:27:26.190
+So, in this case, I have
+hosted all of these tools
+
+00:27:26.190 --> 00:27:29.880
+on a function app, and these
+function apps can be invoked.
+
+00:27:29.880 --> 00:27:32.310
+These are real tool
+calls that can be made.
+
+00:27:32.310 --> 00:27:33.750
+It has some of this information.
+
+00:27:33.750 --> 00:27:38.100
+It's like your RL harness or
+RL environment, so to say.
+
+00:27:38.100 --> 00:27:39.960
+You could also use MCP servers
+
+00:27:39.960 --> 00:27:42.960
+or anywhere else you
+have your tools hosted.
+
+00:27:42.960 --> 00:27:47.320
+And let's go ahead
+and kick off a run.
+
+00:27:50.850 --> 00:27:53.160
+And let's go ahead and look
+at this run through Foundry
+
+00:27:53.160 --> 00:27:54.840
+to see what were
+the hyperparameters
+
+00:27:54.840 --> 00:27:57.730
+and how an earlier
+run has performed.
+
+00:28:08.010 --> 00:28:08.880
+Okay. This is queued.
+
+00:28:08.880 --> 00:28:11.910
+So here's a completed run.
+
+00:28:11.910 --> 00:28:13.170
+So you get a few
+more things here.
+
+00:28:13.170 --> 00:28:16.950
+So you get access to a
+few more hyperparameters
+
+00:28:16.950 --> 00:28:18.840
+that are specific to
+reinforcement fine-tuning,
+
+00:28:18.840 --> 00:28:21.180
+especially to a reasoning
+model like o4-mini.
+
+00:28:21.180 --> 00:28:24.150
+You get to choose what is the
+reasoning effort the model has
+
+00:28:24.150 --> 00:28:24.540
+to put in.
+
+00:28:24.540 --> 00:28:26.730
+You can set it to
+low, medium, or high.
+
+00:28:26.730 --> 00:28:29.730
+This tells you how much chain
+of thought the model has to do
+
+00:28:29.730 --> 00:28:31.650
+so that it can come
+to the right answer.
+
+00:28:31.650 --> 00:28:32.970
+And this has implications
+
+00:28:32.970 --> 00:28:36.840
+on what your token cost
+is going to be as well.
+
+00:28:36.840 --> 00:28:39.780
+Next up, you can also change
+the number of epochs,
+
+00:28:39.780 --> 00:28:42.510
+evaluation interval,
+and things thereabout.
+
+00:28:42.510 --> 00:28:45.570
+You will see this is how I
+have configured the tools
+
+00:28:45.570 --> 00:28:48.660
+to be called to
+the function app.
+
+00:28:48.660 --> 00:28:50.610
+Alicia Frame: And so this
+really tells the training run,
+
+00:28:50.610 --> 00:28:52.110
+"These are the
+tools you can use."
+
+00:28:52.110 --> 00:28:52.410
+Omkar More: Yes.
+
+00:28:52.410 --> 00:28:53.430
+This is the real training run.
+
+00:28:53.430 --> 00:28:56.160
+When the training is happening,
+the tools are getting invoked,
+
+00:28:56.160 --> 00:28:58.890
+and then those results are
+what is getting used rather
+
+00:28:58.890 --> 00:29:02.760
+than just copying like
+in supervised fine-tuning.
+
+00:29:02.760 --> 00:29:04.260
+Let's go ahead and look
+at the "Monitor" tab
+
+00:29:04.260 --> 00:29:07.890
+to see what the
+results look like.
+
+00:29:07.890 --> 00:29:12.660
+So the primary metric that you
+want to look at is rewards.
+
+00:29:12.660 --> 00:29:14.610
+Are the rewards
+increasing over time,
+
+00:29:14.610 --> 00:29:15.750
+and are the rewards increasing
+
+00:29:15.750 --> 00:29:17.880
+for your validation
+set over time?
+
+00:29:17.880 --> 00:29:20.580
+As you can see, that looks good.
+
+00:29:20.580 --> 00:29:23.700
+Both the train and validation
+rewards are increasing.
+
+00:29:23.700 --> 00:29:24.630
+The other interesting thing
+
+00:29:24.630 --> 00:29:28.860
+to notice here is the
+reasoning token mean per step.
+
+00:29:28.860 --> 00:29:31.800
+You can see that the model
+was trying to spend a lot
+
+00:29:31.800 --> 00:29:34.200
+of reasoning effort early
+on in the training process,
+
+00:29:34.200 --> 00:29:37.320
+but as it goes on, the
+reasoning effort comes down.
+
+00:29:37.320 --> 00:29:39.000
+So this, again, has
+implications in terms
+
+00:29:39.000 --> 00:29:43.110
+of how much tokens will be
+used by your fine-tuned model,
+
+00:29:43.110 --> 00:29:45.960
+because now the final checkpoint
+will use a lot less reasoning
+
+00:29:45.960 --> 00:29:47.880
+than the base model itself.
+
+00:29:47.880 --> 00:29:48.780
+Alicia Frame: And so, early on,
+
+00:29:48.780 --> 00:29:50.880
+it's just calling a whole
+bunch of different tools,
+
+00:29:50.880 --> 00:29:52.890
+trying to figure it out.
+
+00:29:52.890 --> 00:29:54.000
+Omkar More: And the other
+thing you would look
+
+00:29:54.000 --> 00:29:56.070
+at is the number of
+tool calls per rollout.
+
+00:29:56.070 --> 00:29:59.130
+So, in case it determined
+that, "Hey, I don't want to --"
+
+00:29:59.130 --> 00:30:00.510
+or penalized tool calling itself
+
+00:30:00.510 --> 00:30:02.520
+and then stop calling
+tools altogether,
+
+00:30:02.520 --> 00:30:04.740
+you will notice a dip over
+here and then say that, "Hey,
+
+00:30:04.740 --> 00:30:07.380
+there's something wrong with
+this run," and you would want
+
+00:30:07.380 --> 00:30:11.910
+to iterate on top of your
+grader to tweak these things.
+
+00:30:11.910 --> 00:30:15.120
+Okay. So, with that done,
+let's go ahead and look
+
+00:30:15.120 --> 00:30:18.330
+at the evaluations on how
+this model fares amongst
+
+00:30:18.330 --> 00:30:19.980
+our leaderboard.
+
+00:30:19.980 --> 00:30:21.480
+So we have done
+the distillation.
+
+00:30:21.480 --> 00:30:23.520
+We have looked at the RFT evals.
+
+00:30:23.520 --> 00:30:26.140
+Let's go and check it out.
+
+00:30:29.850 --> 00:30:31.800
+So, again, we have a new winner.
+
+00:30:31.800 --> 00:30:35.190
+We have o4-mini
+coming up at 84%.
+
+00:30:35.190 --> 00:30:41.250
+Yeah. So that's a huge bump up
+from where it was at 75 -- 73%.
+
+00:30:41.250 --> 00:30:42.270
+And the intent resolution
+
+00:30:42.270 --> 00:30:43.980
+and task completion
+are also increasing
+
+00:30:43.980 --> 00:30:46.770
+or maybe staying stable.
+
+00:30:46.770 --> 00:30:50.460
+So this is how you can use --
+the more effort that you put in,
+
+00:30:50.460 --> 00:30:51.360
+the better what you get.
+
+00:30:51.360 --> 00:30:54.420
+So, for instance, reinforcement
+learning can be a bit
+
+00:30:54.420 --> 00:30:56.010
+of an effort to get it right,
+
+00:30:56.010 --> 00:30:58.770
+making sure that your
+model graders are correct,
+
+00:30:58.770 --> 00:31:00.270
+the runs can take
+a little longer,
+
+00:31:00.270 --> 00:31:02.760
+but the outcome is
+also substantial.
+
+00:31:02.760 --> 00:31:03.690
+Alicia Frame: And importantly,
+
+00:31:03.690 --> 00:31:07.020
+we're still keeping true to that
+better, cheaper, faster, right?
+
+00:31:07.020 --> 00:31:09.180
+Because o4-mini is
+still a smaller model
+
+00:31:09.180 --> 00:31:10.950
+than 5.4, which is our teacher.
+
+00:31:10.950 --> 00:31:13.200
+Omkar More: Yeah, it's
+substantially cheaper than 5.4.
+
+00:31:13.200 --> 00:31:15.150
+Alicia Frame: So going back
+to, if you saw in the keynote,
+
+00:31:15.150 --> 00:31:16.410
+that hill climbing narrative,
+
+00:31:16.410 --> 00:31:19.350
+we're kind of on our
+way up the hill.
+
+00:31:19.350 --> 00:31:22.380
+And before we dive
+back into more demos,
+
+00:31:22.380 --> 00:31:26.550
+I do like to take one moment to
+share some real-world use cases.
+
+00:31:26.550 --> 00:31:28.140
+This is not just demo-ware.
+
+00:31:28.140 --> 00:31:30.630
+This is not just us
+making up a new use
+
+00:31:30.630 --> 00:31:32.400
+for some stuff we think is cool.
+
+00:31:32.400 --> 00:31:35.340
+We have customers using
+this in production.
+
+00:31:35.340 --> 00:31:40.740
+So, Decagon AI, they build,
+actually, customer support agent
+
+00:31:40.740 --> 00:31:41.880
+as a service.
+
+00:31:41.880 --> 00:31:45.480
+They used distillation and
+fine-tuning on Foundry
+
+00:31:45.480 --> 00:31:48.600
+to power their service,
+switching to smaller,
+
+00:31:48.600 --> 00:31:50.640
+cheaper, faster models.
+
+00:31:50.640 --> 00:31:54.540
+Discovery Bank used
+distillation and fine-tuning
+
+00:31:54.540 --> 00:31:57.690
+to create a smaller,
+faster, lower-latency model
+
+00:31:57.690 --> 00:31:59.370
+to power their banking app.
+
+00:31:59.370 --> 00:32:02.610
+This was a scenario where
+customers were texting the app
+
+00:32:02.610 --> 00:32:05.610
+and getting a response, and
+they went from six seconds
+
+00:32:05.610 --> 00:32:07.890
+down to one and a half seconds.
+
+00:32:07.890 --> 00:32:11.160
+And for customer
+satisfaction, that's huge.
+
+00:32:11.160 --> 00:32:15.810
+And Docusign is probably one of
+our biggest token customers.
+
+00:32:15.810 --> 00:32:20.280
+They were able to distill and
+see a 50% reduction in cost
+
+00:32:20.280 --> 00:32:22.230
+for AI document processing.
+
+00:32:22.230 --> 00:32:24.330
+So distillation, fine-tuning,
+
+00:32:24.330 --> 00:32:27.360
+reinforcement learning,
+are really critical tools
+
+00:32:27.360 --> 00:32:31.980
+in the toolbox for making
+agents economically viable
+
+00:32:31.980 --> 00:32:35.310
+and delightful to use.
+
+00:32:35.310 --> 00:32:37.920
+So we're still only at 84%.
+
+00:32:37.920 --> 00:32:38.670
+Omkar More: Yep.
+
+00:32:38.670 --> 00:32:42.300
+Alicia Frame: That's still,
+maybe, $90 billion lost.
+
+00:32:42.300 --> 00:32:44.010
+So what if we need more control?
+
+00:32:44.010 --> 00:32:47.130
+Mostly what we've shown you
+so far was super simple,
+
+00:32:47.130 --> 00:32:50.550
+UI-based, high-level APIs.
+
+00:32:50.550 --> 00:32:53.820
+Some of you, if anyone here is a
+data scientist, an AI scientist,
+
+00:32:53.820 --> 00:32:55.440
+are like, "Uh-uh, I want
+
+00:32:55.440 --> 00:32:57.780
+to define my own
+rollout environment.
+
+00:32:57.780 --> 00:32:59.850
+I want to define
+my own algorithm.
+
+00:32:59.850 --> 00:33:03.180
+I want full control over
+the hyperparameters."
+
+00:33:03.180 --> 00:33:05.580
+And if that is you, get excited.
+
+00:33:05.580 --> 00:33:06.990
+We're going to give
+you a sneak peek
+
+00:33:06.990 --> 00:33:10.470
+of our new,
+interactive training API.
+
+00:33:10.470 --> 00:33:12.810
+Before we show you what it
+is, it's helpful to just kind
+
+00:33:12.810 --> 00:33:17.130
+of compare and contrast how the
+two different services work.
+
+00:33:17.130 --> 00:33:18.660
+So everything we've shown you
+
+00:33:18.660 --> 00:33:21.840
+so far is, really,
+managed fine-tuning.
+
+00:33:21.840 --> 00:33:23.040
+You are the user.
+
+00:33:23.040 --> 00:33:24.570
+You pick your model.
+
+00:33:24.570 --> 00:33:27.270
+You pick your
+technique: SFT, RFT.
+
+00:33:27.270 --> 00:33:30.690
+You provide your data, and
+you submit it to the service.
+
+00:33:30.690 --> 00:33:34.590
+And the service does the
+rollouts, grades the responses,
+
+00:33:34.590 --> 00:33:37.320
+does the loss computation,
+updates the weights,
+
+00:33:37.320 --> 00:33:40.470
+and iterates as a closed
+loop before it returns
+
+00:33:40.470 --> 00:33:41.580
+a checkpoint.
+
+00:33:41.580 --> 00:33:43.590
+You can't mess with
+what's happening
+
+00:33:43.590 --> 00:33:45.870
+in that service boundary.
+
+00:33:45.870 --> 00:33:50.040
+Our new training API actually
+gives you much more control.
+
+00:33:50.040 --> 00:33:54.450
+You, as the practitioner, set
+up the config, the recipe.
+
+00:33:54.450 --> 00:33:56.100
+You invoke the rollout engine.
+
+00:33:56.100 --> 00:33:57.270
+You compute the loss.
+
+00:33:57.270 --> 00:33:58.680
+You update the weights.
+
+00:33:58.680 --> 00:34:01.710
+And then look, we're back
+outside that service boundary,
+
+00:34:01.710 --> 00:34:04.200
+so you update the grader itself.
+
+00:34:04.200 --> 00:34:06.840
+And the big difference here
+is you're controlling the
+
+00:34:06.840 --> 00:34:10.820
+algorithm, the training
+primitives, every aspect
+
+00:34:10.820 --> 00:34:15.260
+of the fine-tuning job, except
+the GPU infrastructure.
+
+00:34:15.260 --> 00:34:17.720
+So if anyone here has used
+Pearl or attempted
+
+00:34:17.720 --> 00:34:19.790
+to use Pearl and failed,
+
+00:34:19.790 --> 00:34:23.180
+we're abstracting away all
+the pain of figuring out,
+
+00:34:23.180 --> 00:34:25.100
+"How do I set up
+these GPU clusters?
+
+00:34:25.100 --> 00:34:26.840
+How do I orchestrate this?
+
+00:34:26.840 --> 00:34:27.770
+Is this synchronous?
+
+00:34:27.770 --> 00:34:28.760
+Is it asynchronous?
+
+00:34:28.760 --> 00:34:31.140
+Is it aggregated
+or disaggregated?"
+
+00:34:31.140 --> 00:34:32.640
+We manage that for you.
+
+00:34:32.640 --> 00:34:36.390
+You focus on the algorithm, the
+problem you're trying to solve,
+
+00:34:36.390 --> 00:34:38.520
+and we manage the compute.
+
+00:34:38.520 --> 00:34:40.770
+And with that, I'm going
+to pass it off to Omkar
+
+00:34:40.770 --> 00:34:42.540
+to show you what this
+actually looks like.
+
+00:34:42.540 --> 00:34:43.110
+Omkar More: Thank you.
+
+00:34:43.110 --> 00:34:45.420
+So, in the previous
+first two demos,
+
+00:34:45.420 --> 00:34:48.480
+we looked at the high-level
+APIs that Foundry provides.
+
+00:34:48.480 --> 00:34:50.850
+These are great for
+most of the cases
+
+00:34:50.850 --> 00:34:53.040
+and for most of the people.
+
+00:34:53.040 --> 00:34:55.620
+They are scenarios where you
+just do fire and forget.
+
+00:34:55.620 --> 00:34:57.570
+You give the tools,
+
+00:34:57.570 --> 00:34:59.700
+you give the configuration,
+you give the dataset,
+
+00:34:59.700 --> 00:35:01.830
+and then let Foundry do its job.
+
+00:35:01.830 --> 00:35:04.770
+But as I said, the more
+effort you put in,
+
+00:35:04.770 --> 00:35:06.080
+the more value you get.
+
+00:35:06.080 --> 00:35:08.660
+So if you put in a little
+bit more effort and want
+
+00:35:08.660 --> 00:35:10.970
+to do it yourself,
+we allow you to do
+
+00:35:10.970 --> 00:35:15.180
+that with these low-level APIs,
+wherein you write your own code,
+
+00:35:15.180 --> 00:35:18.210
+and you can use these
+smaller primitives
+
+00:35:18.210 --> 00:35:21.450
+for doing forward pass, backward
+pass, optim stage, sampling.
+
+00:35:21.450 --> 00:35:26.510
+Things that are inherent that
+require GPUs, leave that to us.
+
+00:35:26.510 --> 00:35:28.310
+And you can write
+your own recipes
+
+00:35:28.310 --> 00:35:30.800
+that will give you
+a lot more control.
+
+00:35:30.800 --> 00:35:34.730
+So, in this demo, I'm going
+to use our fine-tuning --
+
+00:35:34.730 --> 00:35:39.540
+fine-grade APIs to fine-tune
+OSS model Qwen3 32B
+
+00:35:39.540 --> 00:35:42.450
+and see how it performs and
+stacks with our scenario.
+
+00:35:42.450 --> 00:35:43.230
+All right?
+
+00:35:43.230 --> 00:35:44.520
+So let's get started.
+
+00:35:44.520 --> 00:35:48.630
+But before that, just to
+give you a visualization,
+
+00:35:48.630 --> 00:35:50.520
+what does a recipe
+really look like?
+
+00:35:50.520 --> 00:35:55.620
+A recipe has specific
+steps, like, "Hey,
+
+00:35:55.620 --> 00:35:57.420
+first you're going
+to take the dataset.
+
+00:35:57.420 --> 00:35:59.580
+You're going to generate
+multiple samples out of it."
+
+00:35:59.580 --> 00:36:02.310
+So, essentially, let's say
+one conversation request.
+
+00:36:02.310 --> 00:36:05.280
+You could have 10 or
+20 samples generated.
+
+00:36:05.280 --> 00:36:09.930
+That's our different options
+that the model is emitting out.
+
+00:36:09.930 --> 00:36:13.980
+For that, you're going
+to call our sample API,
+
+00:36:13.980 --> 00:36:19.920
+which runs on GPUs where we have
+preloaded a base LLM model,
+
+00:36:19.920 --> 00:36:21.330
+and give you the responses.
+
+00:36:21.330 --> 00:36:23.220
+You take these samples
+and then go ahead
+
+00:36:23.220 --> 00:36:25.080
+and write your own grader.
+
+00:36:25.080 --> 00:36:26.280
+You can invoke your own grader
+
+00:36:26.280 --> 00:36:28.740
+to see how these
+samples were behaving.
+
+00:36:28.740 --> 00:36:30.540
+And earlier, the
+grader was supposed
+
+00:36:30.540 --> 00:36:32.580
+to be limited to
+what we support.
+
+00:36:32.580 --> 00:36:34.170
+Let's say you want to
+write a C-Sharp grader,
+
+00:36:34.170 --> 00:36:36.690
+let's say you want to write
+something completely different,
+
+00:36:36.690 --> 00:36:38.700
+you can use that.
+
+00:36:38.700 --> 00:36:42.660
+The tools, for instance, we
+require you to update the tools
+
+00:36:42.660 --> 00:36:45.090
+or upload the tools on an
+MCP server or something.
+
+00:36:45.090 --> 00:36:46.230
+Say you don't want to do that.
+
+00:36:46.230 --> 00:36:49.470
+Say your tools are in some
+format that are not compatible
+
+00:36:49.470 --> 00:36:50.910
+with our high-level APIs.
+
+00:36:50.910 --> 00:36:53.730
+You can use that now because you
+have full control over invoking
+
+00:36:53.730 --> 00:36:55.370
+of the tools in the
+sampling process.
+
+00:36:55.370 --> 00:36:57.860
+Alicia Frame: Or I could
+even have interactions
+
+00:36:57.860 --> 00:36:58.880
+with an environment.
+
+00:36:58.880 --> 00:37:02.630
+So, execute the rollout,
+call real tools
+
+00:37:02.630 --> 00:37:05.070
+in the real world,
+and see what happens.
+
+00:37:05.070 --> 00:37:05.880
+Omkar More: Correct.
+
+00:37:05.880 --> 00:37:08.070
+And then, once you do this,
+this is the GRPO step
+
+00:37:08.070 --> 00:37:09.180
+where you compute
+the advantages,
+
+00:37:09.180 --> 00:37:11.910
+like basically take the
+mean of the samples and see
+
+00:37:11.910 --> 00:37:13.170
+which ones are better.
+
+00:37:13.170 --> 00:37:15.030
+And then, use the
+forward-backward pass
+
+00:37:15.030 --> 00:37:18.480
+to go ahead and
+compute the gradients.
+
+00:37:18.480 --> 00:37:20.730
+Behind the scenes,
+we have two nodes.
+
+00:37:20.730 --> 00:37:24.810
+One is called the training node,
+and one is the sampling node.
+
+00:37:24.810 --> 00:37:27.720
+And in the training node, we
+run the forward-backward pass,
+
+00:37:27.720 --> 00:37:30.600
+compute the gradients, and
+then when you call sync,
+
+00:37:30.600 --> 00:37:35.460
+we actually sync these
+LoRAs to the sampling node.
+
+00:37:35.460 --> 00:37:38.130
+And all of this requires
+a lot of telemetry.
+
+00:37:38.130 --> 00:37:40.530
+It's hard work that
+you don't have to do
+
+00:37:40.530 --> 00:37:41.760
+if you have to do it yourself.
+
+00:37:41.760 --> 00:37:44.700
+Let's say you could very much
+build it this way, but you have
+
+00:37:44.700 --> 00:37:46.350
+to deal with nickel issues,
+you would have to deal
+
+00:37:46.350 --> 00:37:48.180
+with vLLM issues, as you said.
+
+00:37:48.180 --> 00:37:50.760
+So we abstract all
+of this out for you.
+
+00:37:50.760 --> 00:37:53.580
+And once you're done, you can go
+ahead and call sync checkpoint
+
+00:37:53.580 --> 00:37:56.490
+and save the checkpoint
+for training later on.
+
+00:37:56.490 --> 00:37:58.128
+And the great
+thing about this is,
+
+00:37:58.152 --> 00:37:59.790
+this is not outside of Foundry.
+
+00:37:59.790 --> 00:38:01.640
+All of this is within Foundry.
+
+00:38:01.640 --> 00:38:04.820
+So you will see this
+as a run on Foundry.
+
+00:38:04.820 --> 00:38:08.300
+You can use the models as
+any other model in Foundry.
+
+00:38:08.300 --> 00:38:10.670
+You can use it with
+hosted agents.
+
+00:38:10.670 --> 00:38:11.810
+You can use it with evaluation.
+
+00:38:11.810 --> 00:38:14.670
+The entire ecosystem is
+right there for you.
+
+00:38:14.670 --> 00:38:20.820
+So, with that, let me quickly
+run this demo, and we'll see.
+
+00:38:20.820 --> 00:38:24.220
+So, I have this as a --
+
+00:38:29.010 --> 00:38:30.450
+So, in here, I have
+a launcher script
+
+00:38:30.450 --> 00:38:34.470
+that actually
+launches the recipe,
+
+00:38:34.470 --> 00:38:36.120
+and it starts a tmux session
+
+00:38:36.120 --> 00:38:38.490
+that you can go
+ahead and look at.
+
+00:38:38.490 --> 00:38:42.600
+All of this is happening locally
+on your own CPU machine.
+
+00:38:42.600 --> 00:38:45.000
+You could run it on
+your own laptop --
+
+00:38:45.000 --> 00:38:48.270
+this is what I'm doing over here
+-- or you could use an Azure VM
+
+00:38:48.270 --> 00:38:52.410
+if you want to have
+long-running sessions.
+
+00:38:52.410 --> 00:38:55.020
+Now, when this is going
+on, you can go ahead,
+
+00:38:55.020 --> 00:38:58.890
+and we ship a small,
+local dashboard.
+
+00:38:58.890 --> 00:39:01.200
+This is because the training
+entirely is happening
+
+00:39:01.200 --> 00:39:02.490
+on your machines.
+
+00:39:02.490 --> 00:39:04.500
+All the logs, fine-grained
+logs, are there
+
+00:39:04.500 --> 00:39:06.360
+on your machine itself,
+and you can use
+
+00:39:06.360 --> 00:39:09.030
+that to see how things
+are performing.
+
+00:39:09.030 --> 00:39:10.440
+So, with that, let me just open
+
+00:39:10.440 --> 00:39:15.720
+up the local dashboard
+that's running
+
+00:39:15.720 --> 00:39:20.750
+and let me just
+select an existing run.
+
+00:39:20.750 --> 00:39:24.920
+Okay. So this is a completed
+run with our low-level APIs.
+
+00:39:24.920 --> 00:39:28.910
+You can see --
+hopefully, it's visible.
+
+00:39:28.910 --> 00:39:30.890
+You can see that the reward
+and accuracy is increasing
+
+00:39:30.890 --> 00:39:34.170
+over time, just like we
+saw in the previous one.
+
+00:39:34.170 --> 00:39:35.730
+But you also get
+more details here.
+
+00:39:35.730 --> 00:39:38.370
+So, for instance, you see that
+the entropy is reducing down.
+
+00:39:38.370 --> 00:39:40.200
+You'll see that the grand
+norm is reducing down.
+
+00:39:40.200 --> 00:39:42.540
+So all of this information
+is much more fine-grained
+
+00:39:42.540 --> 00:39:44.600
+that you get with this setup.
+
+00:39:44.600 --> 00:39:46.490
+You will also see
+the KL divergence.
+
+00:39:46.490 --> 00:39:49.950
+You will see the group
+composition becoming better
+
+00:39:49.950 --> 00:39:50.700
+over time as well.
+
+00:39:50.700 --> 00:39:52.230
+Alicia Frame: So I can
+have a lot more control
+
+00:39:52.230 --> 00:39:54.210
+over what I can even
+see about this run.
+
+00:39:54.210 --> 00:39:56.670
+So KL divergence is kind
+
+00:39:56.670 --> 00:39:59.850
+of number one investigation
+for reward hacking.
+
+00:39:59.850 --> 00:40:01.340
+Couldn't see that before.
+
+00:40:01.340 --> 00:40:02.120
+Now I can.
+
+00:40:02.120 --> 00:40:03.920
+Omkar More: Yeah.
+
+00:40:03.920 --> 00:40:06.080
+And this allows you to
+have the full control
+
+00:40:06.080 --> 00:40:08.810
+of all the telemetry
+on your side.
+
+00:40:08.810 --> 00:40:09.830
+You can tweak.
+
+00:40:09.830 --> 00:40:12.320
+Say your recipe is ongoing,
+
+00:40:12.320 --> 00:40:15.140
+and you mid-way decide that,
+"Hey, I want to change this
+
+00:40:15.140 --> 00:40:16.580
+to use a different
+sampling strategy."
+
+00:40:16.580 --> 00:40:17.480
+You can do that, and that's
+
+00:40:17.480 --> 00:40:20.240
+where the interactive --
+
+00:40:20.240 --> 00:40:21.510
+Alicia Frame: Or I could
+use curriculum learning.
+
+00:40:21.510 --> 00:40:21.720
+I can do whatever I want.
+
+00:40:21.720 --> 00:40:22.950
+Omkar More: You can use
+curriculum learning to start
+
+00:40:22.950 --> 00:40:25.470
+with a very simple task
+and then graduate it
+
+00:40:25.470 --> 00:40:26.760
+to a larger and larger task.
+
+00:40:26.760 --> 00:40:28.490
+You can do that, too.
+
+00:40:28.490 --> 00:40:30.680
+Say you don't like GRPO,
+you want to experiment
+
+00:40:30.680 --> 00:40:34.790
+with some other mechanism, PPO
+or DPO, and things like that,
+
+00:40:34.790 --> 00:40:37.850
+you can change that, and you can
+still use these same primitives
+
+00:40:37.850 --> 00:40:40.620
+to tweak the way you want.
+
+00:40:40.620 --> 00:40:44.430
+So, with that, let me get
+back to the leaderboard
+
+00:40:44.430 --> 00:40:46.920
+to see how this
+stacks up with our --
+
+00:40:46.920 --> 00:40:51.090
+-- runs.
+
+00:40:51.090 --> 00:40:54.980
+This is my final
+evaluation board.
+
+00:40:54.980 --> 00:41:02.300
+You will see, hopefully, that
+we have been able to beat,
+
+00:41:02.300 --> 00:41:06.620
+even the o4-mini fine-tuned
+version with Qwen3 32B.
+
+00:41:06.620 --> 00:41:08.720
+So, much cheaper, smaller model,
+
+00:41:08.720 --> 00:41:14.160
+and your agents are faster,
+cheaper, and smarter.
+
+00:41:14.160 --> 00:41:15.030
+Alicia Frame: Amazing.
+
+00:41:15.030 --> 00:41:16.380
+Omkar More: Thank you.
+
+00:41:16.380 --> 00:41:21.000
+Alicia Frame: And so, we've
+now gone full, hard mode.
+
+00:41:21.000 --> 00:41:23.970
+We went from simple UI
+to, "Congratulations!
+
+00:41:23.970 --> 00:41:26.700
+You are writing the training
+algorithm yourself."
+
+00:41:26.700 --> 00:41:29.460
+And so some of you who are not
+data scientists might start
+
+00:41:29.460 --> 00:41:31.020
+to feel a little anxious.
+
+00:41:31.020 --> 00:41:36.690
+Me, I hear fine-tuning is great,
+but this sounds really hard.
+
+00:41:36.690 --> 00:41:40.020
+One common complaint we hear
+is, "I don't even have the data
+
+00:41:40.020 --> 00:41:41.340
+to train these models."
+
+00:41:41.340 --> 00:41:44.040
+Or, something I hear a
+lot is, "You know what?
+
+00:41:44.040 --> 00:41:46.110
+I tried fine-tuning once.
+
+00:41:46.110 --> 00:41:47.820
+I made the model worse.
+
+00:41:47.820 --> 00:41:49.710
+I'm never doing this again."
+
+00:41:49.710 --> 00:41:51.960
+And the good news
+is we hear you,
+
+00:41:51.960 --> 00:41:54.750
+and we've added a
+fine-tuning skill.
+
+00:41:54.750 --> 00:41:57.960
+So you can use your
+favorite coding agent
+
+00:41:57.960 --> 00:42:01.320
+and natural language to tell
+it what you want to do,
+
+00:42:01.320 --> 00:42:03.150
+and it's going to
+figure that out.
+
+00:42:03.150 --> 00:42:06.120
+And since I said
+it's a PM skill,
+
+00:42:06.120 --> 00:42:08.100
+I am going to do this demo.
+
+00:42:08.100 --> 00:42:11.430
+And I actually don't trust
+Claude and Copilot CLI
+
+00:42:11.430 --> 00:42:12.660
+to do this on the fly,
+
+00:42:12.660 --> 00:42:15.300
+and because I'm not running
+a fine-tuned model,
+
+00:42:15.300 --> 00:42:16.500
+it's a little slow.
+
+00:42:16.500 --> 00:42:18.330
+So I ran this ahead of time.
+
+00:42:18.330 --> 00:42:21.060
+But basically, you can see
+what I did is I said, "Hey,
+
+00:42:21.060 --> 00:42:22.920
+I've got a hosted agent here."
+
+00:42:22.920 --> 00:42:24.750
+I gave it the address
+of my hosted agent,
+
+00:42:24.750 --> 00:42:26.550
+and I told it what
+I wanted it to do.
+
+00:42:26.550 --> 00:42:28.680
+This is Omkar's first demo.
+
+00:42:28.680 --> 00:42:30.990
+I have an agent.
+
+00:42:30.990 --> 00:42:32.820
+I want to figure out
+how well it does.
+
+00:42:32.820 --> 00:42:35.610
+So step one is I need
+to make a grader.
+
+00:42:35.610 --> 00:42:38.640
+I want it to grade to make sure
+it's calling the right tools.
+
+00:42:38.640 --> 00:42:40.850
+I want it to give
+partial credit.
+
+00:42:40.850 --> 00:42:42.620
+Please come up with that grader,
+
+00:42:42.620 --> 00:42:45.050
+and then report how well
+the model performs.
+
+00:42:45.050 --> 00:42:47.750
+And I don't have to
+learn the API, the SDK.
+
+00:42:47.750 --> 00:42:50.610
+I don't have to click
+around in that UI.
+
+00:42:50.610 --> 00:42:53.760
+All it's going to do is
+use the fine-tuning skill.
+
+00:42:53.760 --> 00:42:55.350
+It knows how to build graders.
+
+00:42:55.350 --> 00:42:57.930
+It knows how to call our APIs.
+
+00:42:57.930 --> 00:43:01.080
+And great, it's done
+the baseline for me.
+
+00:43:01.080 --> 00:43:05.220
+It came up with the grader, so
+it gives full credit if it asks
+
+00:43:05.220 --> 00:43:08.040
+for clarification or if
+it gets the answer right,
+
+00:43:08.040 --> 00:43:11.370
+gives partial credit if it
+gets some of the tool calls.
+
+00:43:11.370 --> 00:43:14.190
+And then we go ahead, and
+we grade the teacher model.
+
+00:43:14.190 --> 00:43:15.810
+So this is our 5.4.
+
+00:43:15.810 --> 00:43:18.390
+It's a little different because
+this is a little different every
+
+00:43:18.390 --> 00:43:24.300
+time I run it, but it gives
+a mean score of 8.37,
+
+00:43:24.300 --> 00:43:27.180
+pass rate at 8 of about 78%.
+
+00:43:27.180 --> 00:43:29.190
+Teacher model is
+doing pretty well.
+
+00:43:29.190 --> 00:43:30.030
+Good. Okay.
+
+00:43:30.030 --> 00:43:34.560
+Step two. I want to create
+my fine-tuned model.
+
+00:43:34.560 --> 00:43:37.500
+So I'm going to go ahead and
+kick off a distillation run.
+
+00:43:37.500 --> 00:43:40.800
+To do that, all I say is let's
+kick off a distillation run.
+
+00:43:40.800 --> 00:43:44.130
+I do say my goal is I want
+it to be cheaper and faster,
+
+00:43:44.130 --> 00:43:45.450
+and that's going to help it pick
+
+00:43:45.450 --> 00:43:48.030
+which models to
+fine-tune for me.
+
+00:43:48.030 --> 00:43:51.720
+I want it to take my agent
+traces from that agent I shared,
+
+00:43:51.720 --> 00:43:54.180
+export them, filter
+them, de-dup them,
+
+00:43:54.180 --> 00:43:56.970
+and kick off a fine-tuning
+autopilot run.
+
+00:43:56.970 --> 00:44:00.390
+What that's going to do is it's
+going to decide based on my data
+
+00:44:00.390 --> 00:44:04.470
+and what I've described, which
+models to run, which algorithm
+
+00:44:04.470 --> 00:44:07.230
+to pick, and run a couple
+different experiments
+
+00:44:07.230 --> 00:44:09.300
+and see how it goes.
+
+00:44:09.300 --> 00:44:12.660
+And so, what it's going to do
+is I had it submit those jobs,
+
+00:44:12.660 --> 00:44:16.740
+and in parallel, I wanted the
+same kind of honesty check
+
+00:44:16.740 --> 00:44:18.750
+that the base
+models, the smaller,
+
+00:44:18.750 --> 00:44:21.930
+cheaper base models are not
+just great on their own.
+
+00:44:21.930 --> 00:44:24.720
+So I ask it to do the same
+thing we showed you earlier.
+
+00:44:24.720 --> 00:44:27.120
+Let's evaluate the smaller,
+cheaper base models,
+
+00:44:27.120 --> 00:44:29.490
+and we'll see how we do.
+
+00:44:29.490 --> 00:44:32.940
+And so, it ran, it
+kicked off the baseline,
+
+00:44:32.940 --> 00:44:35.280
+and I ran this before the
+session, but you can see,
+
+00:44:35.280 --> 00:44:38.400
+it got the base
+model evals first.
+
+00:44:38.400 --> 00:44:40.980
+Then, it finished training.
+
+00:44:40.980 --> 00:44:43.680
+And just like before, we
+have our leaderboard.
+
+00:44:43.680 --> 00:44:44.730
+I had a winner.
+
+00:44:44.730 --> 00:44:47.700
+I came up with a
+fine-tuned 4.1 mini.
+
+00:44:47.700 --> 00:44:51.030
+It picked mini and nano because
+I said, "smaller and cheaper",
+
+00:44:51.030 --> 00:44:54.270
+and it picked the
+hyperparameters on its own.
+
+00:44:54.270 --> 00:44:58.620
+And I can see that the
+fine-tuned 4.1 mini gets almost
+
+00:44:58.620 --> 00:45:02.730
+the same mean score, actually a
+slightly higher pass at eight.
+
+00:45:02.730 --> 00:45:06.330
+And so, I was able to do
+that same distillation flow,
+
+00:45:06.330 --> 00:45:08.460
+but with totally
+natural language.
+
+00:45:08.460 --> 00:45:12.840
+And this is part of the GitHub
+Copilot for Azure skill,
+
+00:45:12.840 --> 00:45:15.180
+or you can download a
+separate fine-tuning skill
+
+00:45:15.180 --> 00:45:17.340
+if you just want it
+as a standalone.
+
+00:45:17.340 --> 00:45:20.070
+And this really makes
+fine-tuning accessible
+
+00:45:20.070 --> 00:45:21.540
+and super easy.
+
+00:45:21.540 --> 00:45:23.460
+So anyone can fine-tune.
+
+00:45:23.460 --> 00:45:25.290
+And the cool thing
+is, what it'll do is,
+
+00:45:25.290 --> 00:45:29.040
+if these all actually just made
+it worse, it'll look at the logs
+
+00:45:29.040 --> 00:45:32.490
+and decide what it needs to
+do next: generate more data,
+
+00:45:32.490 --> 00:45:37.500
+try a different experiment, and
+iterate until it gets it right.
+
+00:45:37.500 --> 00:45:41.370
+And so, just to end, we
+want a take-home message.
+
+00:45:41.370 --> 00:45:44.310
+One thing we hear a lot --
+we're going to dispel two myths.
+
+00:45:44.310 --> 00:45:47.490
+The first is that, "I don't
+need to fine-tune anymore
+
+00:45:47.490 --> 00:45:50.340
+because frontier models
+keep getting smarter.
+
+00:45:50.340 --> 00:45:51.930
+Why would I need to fine-tune?"
+
+00:45:51.930 --> 00:45:54.750
+And the real answer is, "Yes,
+they're getting smarter,
+
+00:45:54.750 --> 00:45:57.330
+but they're also getting bigger,
+slower, and more expensive."
+
+00:45:57.330 --> 00:46:01.740
+And you saw in the keynote
+today, we can fine-tune small,
+
+00:46:01.740 --> 00:46:05.370
+cheap models to outperform
+frontier-class models.
+
+00:46:05.370 --> 00:46:08.850
+And the advantage when
+you fine-tune is your IP,
+
+00:46:08.850 --> 00:46:11.190
+your business knowledge,
+your domain, goes
+
+00:46:11.190 --> 00:46:13.230
+into your custom model.
+
+00:46:13.230 --> 00:46:16.080
+It's not going into that
+frontier lab's weights for them
+
+00:46:16.080 --> 00:46:17.580
+to make money off of you.
+
+00:46:17.580 --> 00:46:20.340
+You keep your IP, you
+get a smarter model
+
+00:46:20.340 --> 00:46:22.380
+and better performance.
+
+00:46:22.380 --> 00:46:25.590
+The other thing I want to touch
+on is often people say, "Okay.
+
+00:46:25.590 --> 00:46:26.190
+That was cool.
+
+00:46:26.190 --> 00:46:27.990
+You showed me some cost savings.
+
+00:46:27.990 --> 00:46:30.510
+It costs a lot to fine-tune.
+
+00:46:30.510 --> 00:46:31.710
+You have to pay to train.
+
+00:46:31.710 --> 00:46:33.150
+You have to pay to host.
+
+00:46:33.150 --> 00:46:35.100
+I don't want to do this."
+
+00:46:35.100 --> 00:46:38.310
+The real answer is, Omkar already
+showed you developer tier
+
+00:46:38.310 --> 00:46:41.820
+training, that's spot
+capacity, 50% off.
+
+00:46:41.820 --> 00:46:43.890
+The median supervised
+fine-tuning job
+
+00:46:43.890 --> 00:46:46.290
+on our platform costs
+about a dollar.
+
+00:46:46.290 --> 00:46:48.120
+It's not super expensive.
+
+00:46:48.120 --> 00:46:51.300
+And we've introduced things
+like developer tier hosting,
+
+00:46:51.300 --> 00:46:52.920
+where there is no hosting fee.
+
+00:46:52.920 --> 00:46:55.350
+So experimentation
+is really easy.
+
+00:46:55.350 --> 00:46:58.770
+It gives you the bridge to get
+to production, and from there,
+
+00:46:58.770 --> 00:47:03.750
+as your usage ramps up, you
+see substantial cost savings.
+
+00:47:03.750 --> 00:47:06.630
+And so, with that, we're
+at the end of our talk.
+
+00:47:06.630 --> 00:47:08.160
+We're going to take
+questions afterwards,
+
+00:47:08.160 --> 00:47:09.930
+feel free to come up to us.
+
+00:47:09.930 --> 00:47:14.220
+But if you want to get started,
+here are some resources.
+
+00:47:14.220 --> 00:47:17.280
+The sample notebooks we showed
+you today are in this repo.
+
+00:47:17.280 --> 00:47:20.100
+You can sign up for the preview
+of what Omkar showed you
+
+00:47:20.100 --> 00:47:24.000
+with the training API,
+or you can learn more.
+
+00:47:24.000 --> 00:47:26.310
+And with that, we thank
+you for your time.
+
+00:47:26.310 --> 00:47:28.500
+And if you want to
+see other sessions,
+
+00:47:28.500 --> 00:47:29.760
+you can come to our lab.
+
+00:47:29.760 --> 00:47:31.380
+We're running three
+of them tomorrow.
+
+00:47:31.380 --> 00:47:34.530
+You'll get to do hands-on with
+the example we showed you
+
+00:47:34.530 --> 00:47:35.850
+in the demo, learn how
+
+00:47:35.850 --> 00:47:38.250
+to do reinforcement
+learning yourselves.
+
+00:47:38.250 --> 00:47:40.740
+And there are some other great
+demos, breakout sessions,
+
+00:47:40.740 --> 00:47:42.900
+and lightning talks that
+you should check out.
+
+00:47:42.900 --> 00:47:45.520
+So thank you so much.
+
+00:47:45.520 --> 00:47:50.560
+[ Music ]
+

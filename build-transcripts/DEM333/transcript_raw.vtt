@@ -1,0 +1,1830 @@
+WEBVTT
+
+NOTE
+language:en-US
+
+NOTE Confidence: 0.7841365337371826
+
+00:00:04.320 --> 00:00:04.920
+Hi everyone.
+
+NOTE Confidence: 0.8721184134483337
+
+00:00:04.960 --> 00:00:08.437
+Welcome to how Foundry integrates with open source frameworks and
+
+NOTE Confidence: 0.8721184134483337
+
+00:00:08.491 --> 00:00:09.080
+technology.
+
+NOTE Confidence: 0.756962776184082
+
+00:00:09.280 --> 00:00:12.129
+My name is Fakundo, Principal Product Manager at Microsoft, and
+
+NOTE Confidence: 0.756962776184082
+
+00:00:12.174 --> 00:00:14.933
+today I'm joined by Nakumar, Senior Software Engineer also at
+
+NOTE Confidence: 0.756962776184082
+
+00:00:14.978 --> 00:00:17.239
+Microsoft, who's going to be driving the keyboard.
+
+NOTE Confidence: 0.8191952109336853
+
+00:00:17.480 --> 00:00:19.200
+So today question is super simple.
+
+NOTE Confidence: 0.8863205909729004
+
+00:00:19.600 --> 00:00:22.191
+If you build an agent using an open source technology,
+
+NOTE Confidence: 0.8863205909729004
+
+00:00:22.239 --> 00:00:25.119
+how you package and deploy that to production without having
+
+NOTE Confidence: 0.8863205909729004
+
+00:00:25.167 --> 00:00:25.839
+to rewrite it.
+
+NOTE Confidence: 0.8137422204017639
+
+00:00:26.400 --> 00:00:29.440
+And for that, we brought you hopefully an interesting setup.
+
+NOTE Confidence: 0.8079121708869934
+
+00:00:29.800 --> 00:00:32.497
+So I'm pretty sure all of you are familiar with
+
+NOTE Confidence: 0.8079121708869934
+
+00:00:32.554 --> 00:00:36.227
+Opencloth, these general purpose agents that can browse the web,
+
+NOTE Confidence: 0.8079121708869934
+
+00:00:36.285 --> 00:00:39.154
+they can search for your emails, they can do stuff
+
+NOTE Confidence: 0.8079121708869934
+
+00:00:39.212 --> 00:00:40.360
+for you and whatnot.
+
+NOTE Confidence: 0.7893298268318176
+
+00:00:40.640 --> 00:00:44.194
+So today we're going to build our own Opencloth Live
+
+NOTE Confidence: 0.7893298268318176
+
+00:00:44.263 --> 00:00:48.638
+using open source frameworks and technologies and then deploy it
+
+NOTE Confidence: 0.7893298268318176
+
+00:00:48.706 --> 00:00:51.919
+to Microsoft Foundry to take you to production.
+
+NOTE Confidence: 0.6833502054214478
+
+00:00:52.800 --> 00:00:53.640
+So let's get started.
+
+NOTE Confidence: 0.9626011848449707
+
+00:00:54.120 --> 00:00:55.000
+Let's start from the bottom.
+
+NOTE Confidence: 0.8783803582191467
+
+00:00:55.000 --> 00:00:58.368
+Nakumar, if I want to build an agent with no
+
+NOTE Confidence: 0.8783803582191467
+
+00:00:58.445 --> 00:01:02.656
+magic platform, no foundry, what is the minimum of code
+
+NOTE Confidence: 0.8783803582191467
+
+00:01:02.732 --> 00:01:04.800
+that I need to get it done?
+
+NOTE Confidence: 0.8650118112564087
+
+00:01:05.520 --> 00:01:08.067
+At the core, we need a model and an agent
+
+NOTE Confidence: 0.8650118112564087
+
+00:01:08.129 --> 00:01:08.440
+loop.
+
+NOTE Confidence: 0.9194037914276123
+
+00:01:09.000 --> 00:01:11.680
+An agent loop is what keeps the agent moving.
+
+NOTE Confidence: 0.8309702277183533
+
+00:01:11.959 --> 00:01:14.967
+It asks the model for the next step, runs tools
+
+NOTE Confidence: 0.8309702277183533
+
+00:01:15.031 --> 00:01:18.615
+when needed, and uses each result to decide what happens
+
+NOTE Confidence: 0.8309702277183533
+
+00:01:18.679 --> 00:01:18.999
+next.
+
+NOTE Confidence: 0.9596612453460693
+
+00:01:19.440 --> 00:01:21.200
+This file is intentionally small.
+
+NOTE Confidence: 0.7580505013465881
+
+00:01:21.240 --> 00:01:23.752
+The model comes from Lang chains in a chat model
+
+NOTE Confidence: 0.7580505013465881
+
+00:01:23.804 --> 00:01:26.159
+and the loop is built with create deep agent.
+
+NOTE Confidence: 0.7093526721000671
+
+00:01:26.640 --> 00:01:29.624
+The important point is that this is simple Lang chain
+
+NOTE Confidence: 0.7093526721000671
+
+00:01:29.681 --> 00:01:30.919
+Lang graph style code.
+
+NOTE Confidence: 0.8396515250205994
+
+00:01:31.240 --> 00:01:35.531
+Most of the foundry models expose open AI compatible APIs,
+
+NOTE Confidence: 0.8396515250205994
+
+00:01:35.605 --> 00:01:39.083
+so Lang chain can talk to a foundry model using
+
+NOTE Confidence: 0.8396515250205994
+
+00:01:39.157 --> 00:01:41.599
+the same protocol it understands.
+
+NOTE Confidence: 0.7973936200141907
+
+00:01:41.760 --> 00:01:45.400
+Changing the model target is configuration, not a rewrite.
+
+NOTE Confidence: 0.7361170053482056
+
+00:01:46.040 --> 00:01:48.631
+So you are saying that in this case LAN chain
+
+NOTE Confidence: 0.7361170053482056
+
+00:01:48.688 --> 00:01:51.855
+owns the Asian loop via that create deep Asian function
+
+NOTE Confidence: 0.7361170053482056
+
+00:01:51.913 --> 00:01:54.907
+and then Foundry provides the models via the open AI
+
+NOTE Confidence: 0.7361170053482056
+
+00:01:54.965 --> 00:01:56.520
+compatible protocol, right?
+
+NOTE Confidence: 0.5820796489715576
+
+00:01:56.800 --> 00:01:57.040
+Right.
+
+NOTE Confidence: 0.8666371703147888
+
+00:01:57.440 --> 00:02:01.832
+I'll run the small local agent first and if I
+
+NOTE Confidence: 0.8666371703147888
+
+00:02:01.930 --> 00:02:06.127
+see this and say hello, we can see that the
+
+NOTE Confidence: 0.8666371703147888
+
+00:02:06.225 --> 00:02:08.079
+agent replied back.
+
+NOTE Confidence: 0.7702271938323975
+
+00:02:08.520 --> 00:02:10.704
+OK, so this is useful, but of course like it
+
+NOTE Confidence: 0.7702271938323975
+
+00:02:10.753 --> 00:02:13.384
+cannot do anything else out of what the model already
+
+NOTE Confidence: 0.7702271938323975
+
+00:02:13.434 --> 00:02:14.079
+knows, right?
+
+NOTE Confidence: 0.8239359259605408
+
+00:02:14.320 --> 00:02:16.698
+So one of the reasons agents like Openflow are so
+
+NOTE Confidence: 0.8239359259605408
+
+00:02:16.747 --> 00:02:19.319
+popular is because they can't get things done, right?
+
+NOTE Confidence: 0.8786075115203857
+
+00:02:19.560 --> 00:02:22.102
+So what's the open source pattern that we should use
+
+NOTE Confidence: 0.8786075115203857
+
+00:02:22.151 --> 00:02:23.959
+to get this agent to do stuff for us?
+
+NOTE Confidence: 0.8714286088943481
+
+00:02:24.320 --> 00:02:28.175
+The open source pattern is MCP Model Context Protocol is
+
+NOTE Confidence: 0.8714286088943481
+
+00:02:28.244 --> 00:02:31.962
+an open protocol that lets an agent discover tools and
+
+NOTE Confidence: 0.8714286088943481
+
+00:02:32.031 --> 00:02:32.720
+call them.
+
+NOTE Confidence: 0.8545361161231995
+
+00:02:33.200 --> 00:02:36.651
+For this demo, the MCP server is Work IQ Mail
+
+NOTE Confidence: 0.8545361161231995
+
+00:02:36.727 --> 00:02:41.559
+which gives the agent access to Microsoft 365 mail capabilities
+
+NOTE Confidence: 0.8545361161231995
+
+00:02:41.636 --> 00:02:43.399
+through tool interface.
+
+NOTE Confidence: 0.918126106262207
+
+00:02:43.800 --> 00:02:47.981
+The agent does not need to know every Http://endpoint that
+
+NOTE Confidence: 0.918126106262207
+
+00:02:48.053 --> 00:02:49.639
+Microsoft 365 exposes.
+
+NOTE Confidence: 0.9015716910362244
+
+00:02:49.880 --> 00:02:52.974
+It connects to the Work IQ MCP server, asks for
+
+NOTE Confidence: 0.9015716910362244
+
+00:02:53.039 --> 00:02:57.121
+tools and then receives the tool schemas like search messages,
+
+NOTE Confidence: 0.9015716910362244
+
+00:02:57.187 --> 00:03:00.610
+get message details, draft replies and so on to show
+
+NOTE Confidence: 0.9015716910362244
+
+00:03:00.676 --> 00:03:02.519
+you how the code looks like.
+
+NOTE Confidence: 0.8310476541519165
+
+00:03:04.080 --> 00:03:06.028
+So this is a different agent, but now with the
+
+NOTE Confidence: 0.8310476541519165
+
+00:03:06.070 --> 00:03:06.239
+MCP.
+
+NOTE Confidence: 0.29243728518486023
+
+00:03:06.320 --> 00:03:07.600
+Yeah, OK.
+
+NOTE Confidence: 0.9302293062210083
+
+00:03:08.000 --> 00:03:11.262
+And then we see that the URL is being passed
+
+NOTE Confidence: 0.9302293062210083
+
+00:03:11.336 --> 00:03:14.451
+from here and we go back to the same agent
+
+NOTE Confidence: 0.9302293062210083
+
+00:03:14.525 --> 00:03:17.640
+loop and we are just adding them as tools.
+
+NOTE Confidence: 0.7592321038246155
+
+00:03:18.120 --> 00:03:20.942
+So you are saying that I can take any land
+
+NOTE Confidence: 0.7592321038246155
+
+00:03:21.009 --> 00:03:24.570
+graph agent that I already have pointing to these MCP
+
+NOTE Confidence: 0.7592321038246155
+
+00:03:24.637 --> 00:03:28.333
+server using the open source protocol and get access to
+
+NOTE Confidence: 0.7592321038246155
+
+00:03:28.400 --> 00:03:33.439
+work IQ mail capabilities, calendar capabilities, teams and whatnot, right?
+
+NOTE Confidence: 0.9000287652015686
+
+00:03:33.640 --> 00:03:37.080
+Yes, let me show you how to run this.
+
+NOTE Confidence: 0.885703980922699
+
+00:03:37.200 --> 00:03:40.489
+So here's my agent with the MCP enabled and I'm
+
+NOTE Confidence: 0.885703980922699
+
+00:03:40.559 --> 00:03:43.079
+going to ask her to check my e-mail.
+
+NOTE Confidence: 0.8793722987174988
+
+00:03:44.840 --> 00:03:47.680
+While the spinner is moving, watch the tool boundary.
+
+NOTE Confidence: 0.8200840353965759
+
+00:03:48.520 --> 00:03:52.161
+The agent discovered that mail tools at runtime and chose
+
+NOTE Confidence: 0.8200840353965759
+
+00:03:52.225 --> 00:03:53.120
+the right one.
+
+NOTE Confidence: 0.7826483249664307
+
+00:03:53.560 --> 00:03:55.955
+We are also keeping the output kind of sort of
+
+NOTE Confidence: 0.7826483249664307
+
+00:03:56.007 --> 00:03:56.320
+clean.
+
+NOTE Confidence: 0.9439678192138672
+
+00:03:57.040 --> 00:04:00.670
+Now the same local agent can call Microsoft 365 through
+
+NOTE Confidence: 0.9439678192138672
+
+00:04:00.736 --> 00:04:01.000
+MCP.
+
+NOTE Confidence: 0.850357174873352
+
+00:04:01.520 --> 00:04:04.643
+The tool boundary is inspectable and the agent is just
+
+NOTE Confidence: 0.850357174873352
+
+00:04:04.701 --> 00:04:05.800
+normal Python code.
+
+NOTE Confidence: 0.38243091106414795
+
+00:04:06.520 --> 00:04:07.480
+Awesome yes we can.
+
+NOTE Confidence: 0.7428772449493408
+
+00:04:07.560 --> 00:04:11.473
+Well we can see it came back like you find
+
+NOTE Confidence: 0.7428772449493408
+
+00:04:11.566 --> 00:04:15.760
+5 emails like through the work IQ MCP server.
+
+NOTE Confidence: 0.8603388071060181
+
+00:04:16.240 --> 00:04:18.480
+So this is useful that the agent has hands.
+
+NOTE Confidence: 0.8409613370895386
+
+00:04:18.480 --> 00:04:21.208
+But like this, this is not nothing interesting in the
+
+NOTE Confidence: 0.8409613370895386
+
+00:04:21.260 --> 00:04:23.319
+sense of it doesn't save me time, right?
+
+NOTE Confidence: 0.8394036293029785
+
+00:04:23.320 --> 00:04:25.566
+Knowing which are the emails that I haven't read is
+
+NOTE Confidence: 0.8394036293029785
+
+00:04:25.611 --> 00:04:26.359
+not that special.
+
+NOTE Confidence: 0.8447279334068298
+
+00:04:26.600 --> 00:04:28.789
+Maybe what I want is this agent to triage my
+
+NOTE Confidence: 0.8447279334068298
+
+00:04:28.839 --> 00:04:31.526
+inbox, which require like knowing a bit more about how
+
+NOTE Confidence: 0.8447279334068298
+
+00:04:31.576 --> 00:04:32.919
+to use each and every tool.
+
+NOTE Confidence: 0.8765779733657837
+
+00:04:33.480 --> 00:04:36.006
+What's the open source pattern that we can use up
+
+NOTE Confidence: 0.8765779733657837
+
+00:04:36.057 --> 00:04:38.120
+here to teach our agent how to use this?
+
+NOTE Confidence: 0.9279292821884155
+
+00:04:38.400 --> 00:04:39.720
+This is where skills come in.
+
+NOTE Confidence: 0.8941383957862854
+
+00:04:40.320 --> 00:04:42.960
+Tools are like verbs, search messages.
+
+NOTE Confidence: 0.8960715532302856
+
+00:04:43.400 --> 00:04:46.930
+A skill is a playbook like triaging Inbox, which can
+
+NOTE Confidence: 0.8960715532302856
+
+00:04:46.997 --> 00:04:51.546
+pull some fields, classify the emails into categories, assign part,
+
+NOTE Confidence: 0.8960715532302856
+
+00:04:51.614 --> 00:04:55.279
+you know, priority, and draft some replies when asked.
+
+NOTE Confidence: 0.8632714748382568
+
+00:04:56.640 --> 00:04:58.394
+I'm going to show you how to run the skills
+
+NOTE Confidence: 0.8632714748382568
+
+00:04:58.435 --> 00:04:58.680
+agent.
+
+NOTE Confidence: 0.8746076226234436
+
+00:04:58.680 --> 00:05:01.806
+So this one's my agent with skills, and I'm going
+
+NOTE Confidence: 0.8746076226234436
+
+00:05:01.869 --> 00:05:03.720
+to ask it to triage my inbox.
+
+NOTE Confidence: 0.9160792827606201
+
+00:05:06.279 --> 00:05:09.421
+And while this agent is running, we can also take
+
+NOTE Confidence: 0.9160792827606201
+
+00:05:09.485 --> 00:05:10.639
+a look at Oh yeah.
+
+NOTE Confidence: 0.719799816608429
+
+00:05:10.880 --> 00:05:13.478
+We can say that it pick up the the triage
+
+NOTE Confidence: 0.719799816608429
+
+00:05:13.541 --> 00:05:16.582
+skill, but like we can see it started using some
+
+NOTE Confidence: 0.719799816608429
+
+00:05:16.646 --> 00:05:20.131
+some tools, but how the agent actually came across with
+
+NOTE Confidence: 0.719799816608429
+
+00:05:20.194 --> 00:05:23.679
+this skill that you're mentioning or how he discovered?
+
+NOTE Confidence: 0.6882280111312866
+
+00:05:24.160 --> 00:05:24.240
+It.
+
+NOTE Confidence: 0.9167224168777466
+
+00:05:24.240 --> 00:05:27.360
+So the agent uses this skill document.
+
+NOTE Confidence: 0.863950252532959
+
+00:05:27.440 --> 00:05:30.633
+This skill is just a markdown document with a small
+
+NOTE Confidence: 0.863950252532959
+
+00:05:30.695 --> 00:05:31.759
+formatting block.
+
+NOTE Confidence: 0.8908295631408691
+
+00:05:32.160 --> 00:05:34.680
+There is no special service or proprietary schema.
+
+NOTE Confidence: 0.9157437086105347
+
+00:05:34.680 --> 00:05:37.720
+The agent reads it when the prompt is relevant.
+
+NOTE Confidence: 0.8416342735290527
+
+00:05:38.400 --> 00:05:41.264
+Now, if we look at the skills, you can see
+
+NOTE Confidence: 0.8416342735290527
+
+00:05:41.333 --> 00:05:44.880
+that we mount the skills into a virtual skills path.
+
+NOTE Confidence: 0.9160056710243225
+
+00:05:45.120 --> 00:05:48.181
+The agent can list it and look at it when
+
+NOTE Confidence: 0.9160056710243225
+
+00:05:48.255 --> 00:05:49.599
+it needs guidance.
+
+NOTE Confidence: 0.7765647172927856
+
+00:05:50.040 --> 00:05:52.358
+Now let's go back to the term or terminal and
+
+NOTE Confidence: 0.7765647172927856
+
+00:05:52.409 --> 00:05:53.440
+see what's going on.
+
+NOTE Confidence: 0.823337972164154
+
+00:05:54.040 --> 00:05:56.827
+We can see that the agent still running but something
+
+NOTE Confidence: 0.823337972164154
+
+00:05:56.880 --> 00:05:59.878
+interesting to see now we see multiple tools being called
+
+NOTE Confidence: 0.823337972164154
+
+00:05:59.931 --> 00:06:01.719
+different from what we saw before.
+
+NOTE Confidence: 0.8208287358283997
+
+00:06:01.720 --> 00:06:03.932
+The only one tool was go out and we can
+
+NOTE Confidence: 0.8208287358283997
+
+00:06:03.988 --> 00:06:06.881
+even see like tools like get message which it looks
+
+NOTE Confidence: 0.8208287358283997
+
+00:06:06.938 --> 00:06:09.661
+to be searching for the actual content of the of
+
+NOTE Confidence: 0.8208287358283997
+
+00:06:09.717 --> 00:06:11.760
+the e-mail which makes sense, right?
+
+NOTE Confidence: 0.8194761872291565
+
+00:06:11.760 --> 00:06:15.000
+Like you cannot triage an e-mail without knowing a bit
+
+NOTE Confidence: 0.8194761872291565
+
+00:06:15.060 --> 00:06:17.640
+more about what is inside of it or what was
+
+NOTE Confidence: 0.8194761872291565
+
+00:06:17.700 --> 00:06:18.960
+the specific request.
+
+NOTE Confidence: 0.825798511505127
+
+00:06:19.320 --> 00:06:21.844
+We can see it came back and now we got
+
+NOTE Confidence: 0.825798511505127
+
+00:06:21.910 --> 00:06:23.039
+a triage summary.
+
+NOTE Confidence: 0.936049222946167
+
+00:06:23.040 --> 00:06:25.076
+Which are the important things that I need to look
+
+NOTE Confidence: 0.936049222946167
+
+00:06:25.117 --> 00:06:25.280
+out?
+
+NOTE Confidence: 0.8331387042999268
+
+00:06:26.120 --> 00:06:28.993
+Which is the category, which is the recommended action, and
+
+NOTE Confidence: 0.8331387042999268
+
+00:06:29.041 --> 00:06:31.720
+which are the reasons for having on that action, right?
+
+NOTE Confidence: 0.850165605545044
+
+00:06:31.720 --> 00:06:34.201
+So this is way different because it's the same model,
+
+NOTE Confidence: 0.850165605545044
+
+00:06:34.248 --> 00:06:37.152
+it's the same tools, but the behavior is completely different,
+
+NOTE Confidence: 0.850165605545044
+
+00:06:37.199 --> 00:06:37.480
+right?
+
+NOTE Confidence: 0.8618581295013428
+
+00:06:37.480 --> 00:06:39.585
+And this is coming from the power of this reusable
+
+NOTE Confidence: 0.8618581295013428
+
+00:06:39.627 --> 00:06:39.880
+skill.
+
+NOTE Confidence: 0.8795618414878845
+
+00:06:40.280 --> 00:06:41.600
+Yep, that's the big point.
+
+NOTE Confidence: 0.9206132888793945
+
+00:06:41.880 --> 00:06:45.895
+Skills are a lightweight way to make agent behavior repeatable
+
+NOTE Confidence: 0.9206132888793945
+
+00:06:45.959 --> 00:06:50.039
+without turning every instruction into a massive system prompt.
+
+NOTE Confidence: 0.48832982778549194
+
+00:06:50.480 --> 00:06:51.320
+That's all.
+
+NOTE Confidence: 0.7290122509002686
+
+00:06:52.400 --> 00:06:54.865
+Another thing that usually you can see in in agents
+
+NOTE Confidence: 0.7290122509002686
+
+00:06:54.913 --> 00:06:57.186
+like Open Clue is the ability to browse the web
+
+NOTE Confidence: 0.7290122509002686
+
+00:06:57.234 --> 00:06:59.458
+right, which opens you a doors for doing a lot
+
+NOTE Confidence: 0.7290122509002686
+
+00:06:59.506 --> 00:07:00.280
+of other things.
+
+NOTE Confidence: 0.7738543152809143
+
+00:07:00.680 --> 00:07:03.101
+What's our the the open source story if I want
+
+NOTE Confidence: 0.7738543152809143
+
+00:07:03.154 --> 00:07:06.102
+to bring that capabilities to an agent using open source
+
+NOTE Confidence: 0.7738543152809143
+
+00:07:06.155 --> 00:07:06.839
+technologies?
+
+NOTE Confidence: 0.9284709095954895
+
+00:07:07.320 --> 00:07:09.320
+We can use something called Playwright.
+
+NOTE Confidence: 0.8900051116943359
+
+00:07:09.680 --> 00:07:14.023
+Playwright is an open source framework which exposes the CLI
+
+NOTE Confidence: 0.8900051116943359
+
+00:07:14.095 --> 00:07:17.353
+utility and we can also add the skill to kind
+
+NOTE Confidence: 0.8900051116943359
+
+00:07:17.426 --> 00:07:21.118
+of teach the agent what to do using that playwright
+
+NOTE Confidence: 0.8900051116943359
+
+00:07:21.190 --> 00:07:21.480
+CLI.
+
+NOTE Confidence: 0.8098009824752808
+
+00:07:22.200 --> 00:07:24.764
+Now if we look at this agent dot PY here,
+
+NOTE Confidence: 0.8098009824752808
+
+00:07:24.826 --> 00:07:28.078
+I've added my playwright tool to my get tools method
+
+NOTE Confidence: 0.8098009824752808
+
+00:07:28.141 --> 00:07:30.080
+and send all the tools with it.
+
+NOTE Confidence: 0.8734643459320068
+
+00:07:30.720 --> 00:07:33.898
+Now here's an agent which has that playwright tool setup
+
+NOTE Confidence: 0.8734643459320068
+
+00:07:33.954 --> 00:07:36.338
+and I'm going to ask it to open Amazon and
+
+NOTE Confidence: 0.8734643459320068
+
+00:07:36.395 --> 00:07:39.516
+tell me the price of the first Microsoft branded coffee
+
+NOTE Confidence: 0.8734643459320068
+
+00:07:39.573 --> 00:07:39.800
+cup.
+
+NOTE Confidence: 0.7914891242980957
+
+00:07:40.320 --> 00:07:40.600
+OK.
+
+NOTE Confidence: 0.8224400877952576
+
+00:07:40.600 --> 00:07:42.037
+Yeah, we can see that now we pick up a
+
+NOTE Confidence: 0.8224400877952576
+
+00:07:42.074 --> 00:07:42.680
+different skill.
+
+NOTE Confidence: 0.7994370460510254
+
+00:07:42.680 --> 00:07:46.564
+The web browser is using that Playwright CLI tool that
+
+NOTE Confidence: 0.7994370460510254
+
+00:07:46.635 --> 00:07:50.519
+you mentioned, plus the MCP server that we have today.
+
+NOTE Confidence: 0.8140215277671814
+
+00:07:50.760 --> 00:07:54.658
+But actually, considering that like before we work IQ, we
+
+NOTE Confidence: 0.8140215277671814
+
+00:07:54.726 --> 00:07:58.283
+connect our agent to an MCP server, now we're giving
+
+NOTE Confidence: 0.8140215277671814
+
+00:07:58.351 --> 00:08:01.429
+the agent access to a CLI tool on the command
+
+NOTE Confidence: 0.8140215277671814
+
+00:08:01.498 --> 00:08:01.839
+line.
+
+NOTE Confidence: 0.8957986235618591
+
+00:08:02.000 --> 00:08:04.360
+Why did we took this different approach?
+
+NOTE Confidence: 0.8858189582824707
+
+00:08:04.360 --> 00:08:05.440
+What is different here?
+
+NOTE Confidence: 0.8402701616287231
+
+00:08:05.720 --> 00:08:09.091
+Yeah, we could have used the MCP server, but browser
+
+NOTE Confidence: 0.8402701616287231
+
+00:08:09.156 --> 00:08:11.879
+work usually creates a large tool surface.
+
+NOTE Confidence: 0.9193763732910156
+
+00:08:12.200 --> 00:08:14.600
+Here the command line is a simpler utility.
+
+NOTE Confidence: 0.8731507062911987
+
+00:08:15.120 --> 00:08:17.837
+The Python tool has 1 ARC string and an optional
+
+NOTE Confidence: 0.8731507062911987
+
+00:08:17.894 --> 00:08:18.800
+browser session.
+
+NOTE Confidence: 0.8687512874603271
+
+00:08:19.120 --> 00:08:22.830
+Snapshots and command details only enter the context window when
+
+NOTE Confidence: 0.8687512874603271
+
+00:08:22.888 --> 00:08:24.280
+the agent asks for them.
+
+NOTE Confidence: 0.8283191919326782
+
+00:08:25.280 --> 00:08:28.021
+Nice, So what you're saying is that this is not
+
+NOTE Confidence: 0.8283191919326782
+
+00:08:28.079 --> 00:08:30.587
+only easier for the model to use to use the
+
+NOTE Confidence: 0.8283191919326782
+
+00:08:30.645 --> 00:08:33.736
+command line to navigate and open a browser, but it's
+
+NOTE Confidence: 0.8283191919326782
+
+00:08:33.795 --> 00:08:35.720
+also more token efficient, right?
+
+NOTE Confidence: 0.8862400054931641
+
+00:08:35.720 --> 00:08:38.417
+Because like the agent doesn't need to connect to an
+
+NOTE Confidence: 0.8862400054931641
+
+00:08:38.469 --> 00:08:39.039
+MCP server.
+
+NOTE Confidence: 0.703481137752533
+
+00:08:39.280 --> 00:08:41.760
+Retrieve those big Jason files.
+
+NOTE Confidence: 0.7683666944503784
+
+00:08:41.800 --> 00:08:46.603
+Sorry, instructions with the with the method description, the arguments
+
+NOTE Confidence: 0.7683666944503784
+
+00:08:46.671 --> 00:08:49.783
+that need to be used, feedback to the model in
+
+NOTE Confidence: 0.7683666944503784
+
+00:08:49.851 --> 00:08:53.639
+each other return and then generate generate a response.
+
+NOTE Confidence: 0.6946494579315186
+
+00:08:54.160 --> 00:08:57.450
+So he came back, he said I couldn't find a
+
+NOTE Confidence: 0.6946494579315186
+
+00:08:57.528 --> 00:09:02.150
+Microsoft branded cup, but the first non Microsoft bag that
+
+NOTE Confidence: 0.6946494579315186
+
+00:09:02.228 --> 00:09:03.560
+he found is 1619.
+
+NOTE Confidence: 0.6490788459777832
+
+00:09:03.880 --> 00:09:06.987
+We don't know what happened but I've learned to inspect
+
+NOTE Confidence: 0.6490788459777832
+
+00:09:07.043 --> 00:09:09.359
+the trace to know why it didn't found it.
+
+NOTE Confidence: 0.8876124024391174
+
+00:09:09.960 --> 00:09:13.322
+So now a fair question from the audience because everything
+
+NOTE Confidence: 0.8876124024391174
+
+00:09:13.379 --> 00:09:15.830
+that you have done so far is running on the
+
+NOTE Confidence: 0.8876124024391174
+
+00:09:15.887 --> 00:09:16.400
+terminal.
+
+NOTE Confidence: 0.7553668022155762
+
+00:09:16.720 --> 00:09:20.685
+But if our production users probably don't want to be
+
+NOTE Confidence: 0.7553668022155762
+
+00:09:20.760 --> 00:09:23.080
+SSH in like your laptop, right?
+
+NOTE Confidence: 0.9134789109230042
+
+00:09:23.560 --> 00:09:25.840
+So what's our story to take this to production?
+
+NOTE Confidence: 0.8965424299240112
+
+00:09:25.840 --> 00:09:28.480
+How can Foundry help us in this journey?
+
+NOTE Confidence: 0.8384138941764832
+
+00:09:28.760 --> 00:09:32.845
+Exactly as you said, Foundry hosts the same land graph
+
+NOTE Confidence: 0.8384138941764832
+
+00:09:32.920 --> 00:09:36.627
+agent as a hosted agent and exposes it through an
+
+NOTE Confidence: 0.8384138941764832
+
+00:09:36.703 --> 00:09:39.199
+open AI compatible responses API.
+
+NOTE Confidence: 0.8902212381362915
+
+00:09:39.680 --> 00:09:41.640
+This file is the adapter layer.
+
+NOTE Confidence: 0.8813408613204956
+
+00:09:42.000 --> 00:09:44.957
+Notice that we call the same build agent that we
+
+NOTE Confidence: 0.8813408613204956
+
+00:09:45.019 --> 00:09:48.839
+used earlier and there are two important things, the responses
+
+NOTE Confidence: 0.8813408613204956
+
+00:09:48.900 --> 00:09:49.639
+host server.
+
+NOTE Confidence: 0.8122627139091492
+
+00:09:50.000 --> 00:09:53.565
+It exposes the land graph agent as a responsible responses
+
+NOTE Confidence: 0.8122627139091492
+
+00:09:53.627 --> 00:09:57.684
+compatible endpoint and then we initialize the Foundry server host
+
+NOTE Confidence: 0.8122627139091492
+
+00:09:57.745 --> 00:10:00.942
+before we build the graph so the open telemetry land
+
+NOTE Confidence: 0.8122627139091492
+
+00:10:01.004 --> 00:10:04.999
+chain instrumentation can attach before the graph is constructed.
+
+NOTE Confidence: 0.6716421842575073
+
+00:10:05.520 --> 00:10:05.960
+Nice.
+
+NOTE Confidence: 0.8664236664772034
+
+00:10:06.200 --> 00:10:09.979
+So if I'm reading this correctly, so we are wrapping
+
+NOTE Confidence: 0.8664236664772034
+
+00:10:10.052 --> 00:10:12.960
+our agent in the responses API protocol.
+
+NOTE Confidence: 0.8461641669273376
+
+00:10:13.840 --> 00:10:16.720
+So this technically speaking can run locally in my machine
+
+NOTE Confidence: 0.8461641669273376
+
+00:10:16.769 --> 00:10:18.160
+but also on the cloud right?
+
+NOTE Confidence: 0.7837501168251038
+
+00:10:18.160 --> 00:10:20.518
+So it's the same code but like I'm running both
+
+NOTE Confidence: 0.7837501168251038
+
+00:10:20.568 --> 00:10:20.920
+places.
+
+NOTE Confidence: 0.5372052192687988
+
+00:10:21.040 --> 00:10:21.480
+Correct.
+
+NOTE Confidence: 0.9084897041320801
+
+00:10:21.800 --> 00:10:24.860
+For the sake of this demo, I had the agent
+
+NOTE Confidence: 0.9084897041320801
+
+00:10:24.933 --> 00:10:28.722
+deployed and then I'm going to send my triage prompt
+
+NOTE Confidence: 0.9084897041320801
+
+00:10:28.795 --> 00:10:29.159
+here.
+
+NOTE Confidence: 0.7719297409057617
+
+00:10:29.680 --> 00:10:31.960
+Triage my inbox maybe?
+
+NOTE Confidence: 0.73625648021698
+
+00:10:31.960 --> 00:10:34.080
+Zoom in a bit so it's not that small.
+
+NOTE Confidence: 0.8529790639877319
+
+00:10:35.760 --> 00:10:36.280
+There we go.
+
+NOTE Confidence: 0.755772054195404
+
+00:10:38.800 --> 00:10:41.237
+OK, so, so we see that the agent is is
+
+NOTE Confidence: 0.755772054195404
+
+00:10:41.301 --> 00:10:44.764
+running, but probably, I mean as it happened just with
+
+NOTE Confidence: 0.755772054195404
+
+00:10:44.828 --> 00:10:47.971
+the with the browser that we didn't found the the
+
+NOTE Confidence: 0.755772054195404
+
+00:10:48.035 --> 00:10:49.959
+answer that we were expecting.
+
+NOTE Confidence: 0.8277986645698547
+
+00:10:50.040 --> 00:10:52.695
+How can I know exactly what the agent did were
+
+NOTE Confidence: 0.8277986645698547
+
+00:10:52.753 --> 00:10:55.582
+the steps that it performed and be let's say more
+
+NOTE Confidence: 0.8277986645698547
+
+00:10:55.639 --> 00:10:58.699
+insightful about how or where or what are the actions
+
+NOTE Confidence: 0.8277986645698547
+
+00:10:58.757 --> 00:11:00.720
+that the agent is actually taking?
+
+NOTE Confidence: 0.8473005294799805
+
+00:11:00.920 --> 00:11:02.000
+What can we do for that?
+
+NOTE Confidence: 0.9231688380241394
+
+00:11:02.360 --> 00:11:06.360
+Foundry integrates with Application Insights and Open Telemetry.
+
+NOTE Confidence: 0.8644838929176331
+
+00:11:06.800 --> 00:11:11.567
+The demo uses the Microsoft Open Telemetry distro and Open
+
+NOTE Confidence: 0.8644838929176331
+
+00:11:11.649 --> 00:11:12.800
+Telemetry Gen.
+
+NOTE Confidence: 0.6429563164710999
+
+00:11:12.800 --> 00:11:14.120
+AI semantic conventions.
+
+NOTE Confidence: 0.7980241179466248
+
+00:11:14.280 --> 00:11:17.786
+So we can expect inspect the line graph, span model
+
+NOTE Confidence: 0.7980241179466248
+
+00:11:17.855 --> 00:11:20.880
+calls, latencies, captured input and output.
+
+NOTE Confidence: 0.9021148681640625
+
+00:11:22.800 --> 00:11:25.757
+So I can head out to the Traces tab and
+
+NOTE Confidence: 0.9021148681640625
+
+00:11:25.832 --> 00:11:29.017
+in the Traces tab, once we will be able to
+
+NOTE Confidence: 0.9021148681640625
+
+00:11:29.093 --> 00:11:32.959
+see all the requests that we've been sending to it.
+
+NOTE Confidence: 0.8842891454696655
+
+00:11:33.960 --> 00:11:36.483
+And then we'll also see some more details around how
+
+NOTE Confidence: 0.8842891454696655
+
+00:11:36.532 --> 00:11:37.599
+long the request took.
+
+NOTE Confidence: 0.7236178517341614
+
+00:11:38.679 --> 00:11:41.368
+And the interesting thing about like you mentioned opens open
+
+NOTE Confidence: 0.7236178517341614
+
+00:11:41.413 --> 00:11:42.999
+telemetry with semantic conventions.
+
+NOTE Confidence: 0.812330961227417
+
+00:11:43.240 --> 00:11:47.936
+The interesting thing about that is it's an open source
+
+NOTE Confidence: 0.812330961227417
+
+00:11:48.021 --> 00:11:52.120
+standard adopted widely adopted by the industry.
+
+NOTE Confidence: 0.8603411912918091
+
+00:11:52.240 --> 00:11:55.104
+So I can use Foundry as we are using right
+
+NOTE Confidence: 0.8603411912918091
+
+00:11:55.173 --> 00:11:58.242
+now, but I can use any other tool, Grafana or
+
+NOTE Confidence: 0.8603411912918091
+
+00:11:58.310 --> 00:12:01.994
+any interesting Divaga tool that I want to use because
+
+NOTE Confidence: 0.8603411912918091
+
+00:12:02.062 --> 00:12:04.722
+the data is open so I can only focus on
+
+NOTE Confidence: 0.8603411912918091
+
+00:12:04.791 --> 00:12:06.359
+all its content, right?
+
+NOTE Confidence: 0.7522785067558289
+
+00:12:06.600 --> 00:12:07.040
+Yes.
+
+NOTE Confidence: 0.8707974553108215
+
+00:12:07.120 --> 00:12:09.988
+So here you can see the invoke agent span and
+
+NOTE Confidence: 0.8707974553108215
+
+00:12:10.052 --> 00:12:13.240
+the chat span from one of the Foundry traces view.
+
+NOTE Confidence: 0.9583778977394104
+
+00:12:13.240 --> 00:12:15.920
+You can also do a trace replay and so on.
+
+NOTE Confidence: 0.927203357219696
+
+00:12:17.080 --> 00:12:19.749
+We can also get to see a historical trace which
+
+NOTE Confidence: 0.927203357219696
+
+00:12:19.806 --> 00:12:22.646
+I had opened up which can showcase the user input,
+
+NOTE Confidence: 0.927203357219696
+
+00:12:22.703 --> 00:12:25.599
+the user output, all the tool actions that it took.
+
+NOTE Confidence: 0.8791877627372742
+
+00:12:25.920 --> 00:12:28.940
+The interesting one is here it try to execute a
+
+NOTE Confidence: 0.8791877627372742
+
+00:12:29.005 --> 00:12:31.833
+tool to read the skill which we had asked it
+
+NOTE Confidence: 0.8791877627372742
+
+00:12:31.897 --> 00:12:34.725
+to read, to know how to, you know, triage my
+
+NOTE Confidence: 0.8791877627372742
+
+00:12:34.790 --> 00:12:35.239
+e-mail.
+
+NOTE Confidence: 0.8121340274810791
+
+00:12:36.040 --> 00:12:38.249
+Yeah, this is all because like when you are moving
+
+NOTE Confidence: 0.8121340274810791
+
+00:12:38.293 --> 00:12:40.768
+things to production like this is when you get surprised
+
+NOTE Confidence: 0.8121340274810791
+
+00:12:40.812 --> 00:12:43.066
+about like where the time that your agent is taking
+
+NOTE Confidence: 0.8121340274810791
+
+00:12:43.110 --> 00:12:45.276
+is being spent and which is all your, your budget
+
+NOTE Confidence: 0.8121340274810791
+
+00:12:45.320 --> 00:12:46.160
+being spent, right.
+
+NOTE Confidence: 0.8571592569351196
+
+00:12:46.160 --> 00:12:48.306
+Like here we can see the amount of tokens that
+
+NOTE Confidence: 0.8571592569351196
+
+00:12:48.353 --> 00:12:49.799
+each of the sections is taking.
+
+NOTE Confidence: 0.8222134113311768
+
+00:12:49.920 --> 00:12:52.822
+So you can know exactly where your money is, is
+
+NOTE Confidence: 0.8222134113311768
+
+00:12:52.884 --> 00:12:56.218
+going, which are the sections that require most of the
+
+NOTE Confidence: 0.8222134113311768
+
+00:12:56.280 --> 00:12:59.677
+maybe improvement or or or adaptation for, for your use
+
+NOTE Confidence: 0.8222134113311768
+
+00:12:59.738 --> 00:13:00.480
+case, Right.
+
+NOTE Confidence: 0.8011114597320557
+
+00:13:01.320 --> 00:13:01.600
+OK.
+
+NOTE Confidence: 0.7746382355690002
+
+00:13:01.600 --> 00:13:04.700
+So last question, I know that 2026 is all of
+
+NOTE Confidence: 0.7746382355690002
+
+00:13:04.771 --> 00:13:08.999
+our like Asians calling other agents, composing and whatnot.
+
+NOTE Confidence: 0.8056198358535767
+
+00:13:09.680 --> 00:13:14.920
+So what's the open source, let's say, approach here?
+
+NOTE Confidence: 0.7387180924415588
+
+00:13:15.160 --> 00:13:17.996
+Can this agent that we just deployed be consumed by
+
+NOTE Confidence: 0.7387180924415588
+
+00:13:18.052 --> 00:13:18.719
+other agent?
+
+NOTE Confidence: 0.8066225051879883
+
+00:13:18.720 --> 00:13:19.720
+How that will work?
+
+NOTE Confidence: 0.891379714012146
+
+00:13:19.880 --> 00:13:23.358
+Yes, one of the most interesting things of hosting the
+
+NOTE Confidence: 0.891379714012146
+
+00:13:23.423 --> 00:13:26.322
+agent in Microsoft Foundry is that I get an A
+
+NOTE Confidence: 0.891379714012146
+
+00:13:26.386 --> 00:13:29.672
+to a endpoint that another A to a compatible client
+
+NOTE Confidence: 0.891379714012146
+
+00:13:29.736 --> 00:13:33.087
+can use to discover the agent card and send messages
+
+NOTE Confidence: 0.891379714012146
+
+00:13:33.151 --> 00:13:34.439
+to the hosted agent.
+
+NOTE Confidence: 0.7964026927947998
+
+00:13:34.960 --> 00:13:38.000
+Let's see how this works with copilot CLI.
+
+NOTE Confidence: 0.8409667015075684
+
+00:13:40.200 --> 00:13:44.309
+I have copilot CLI and asked it to talk to
+
+NOTE Confidence: 0.8409667015075684
+
+00:13:44.406 --> 00:13:48.222
+the agent and I can ask it to triage my
+
+NOTE Confidence: 0.8409667015075684
+
+00:13:48.320 --> 00:13:52.820
+inbox and while this is working we can see how
+
+NOTE Confidence: 0.8409667015075684
+
+00:13:52.918 --> 00:13:55.559
+of the setup is being done.
+
+NOTE Confidence: 0.7117102146148682
+
+00:13:56.679 --> 00:13:59.453
+Yeah, let's take a look about how how this copilot
+
+NOTE Confidence: 0.7117102146148682
+
+00:13:59.509 --> 00:14:02.338
+session is is finding our agent and how is invoking
+
+NOTE Confidence: 0.7117102146148682
+
+00:14:02.393 --> 00:14:02.560
+it.
+
+NOTE Confidence: 0.7024231553077698
+
+00:14:02.800 --> 00:14:03.080
+Yeah.
+
+NOTE Confidence: 0.7327693700790405
+
+00:14:03.120 --> 00:14:07.120
+So Copilot, in the Copilot agent, we expose a tiny
+
+NOTE Confidence: 0.7327693700790405
+
+00:14:07.200 --> 00:14:09.920
+A to a directory as an MCP server.
+
+NOTE Confidence: 0.8742899894714355
+
+00:14:09.920 --> 00:14:12.906
+And we added two tools, the search agent and the
+
+NOTE Confidence: 0.8742899894714355
+
+00:14:12.968 --> 00:14:14.399
+call agent A to a tool.
+
+NOTE Confidence: 0.8722368478775024
+
+00:14:14.840 --> 00:14:18.512
+This is the information that Copilot uses to search for
+
+NOTE Confidence: 0.8722368478775024
+
+00:14:18.579 --> 00:14:21.918
+an agent in the directory and invoke the agent via
+
+NOTE Confidence: 0.8722368478775024
+
+00:14:21.985 --> 00:14:22.720
+the A to A.
+
+NOTE Confidence: 0.9231500625610352
+
+00:14:23.480 --> 00:14:25.708
+Now let's go back to the terminal to see what
+
+NOTE Confidence: 0.9231500625610352
+
+00:14:25.758 --> 00:14:26.600
+Copilot is doing.
+
+NOTE Confidence: 0.8780192732810974
+
+00:14:27.360 --> 00:14:30.274
+So let's pause here for a minute because like there
+
+NOTE Confidence: 0.8780192732810974
+
+00:14:30.331 --> 00:14:32.559
+is a lot of composition happening here.
+
+NOTE Confidence: 0.7424237728118896
+
+00:14:32.720 --> 00:14:35.592
+So we are in compiler studio, sorry in compiler CLI,
+
+NOTE Confidence: 0.7424237728118896
+
+00:14:35.647 --> 00:14:37.360
+a completely different runtime.
+
+NOTE Confidence: 0.6646011471748352
+
+00:14:38.600 --> 00:14:41.080
+This this compiler session.
+
+NOTE Confidence: 0.8223109245300293
+
+00:14:41.320 --> 00:14:44.720
+It searched for an agent using our MCP server.
+
+NOTE Confidence: 0.7600527405738831
+
+00:14:44.720 --> 00:14:47.287
+It looks through the directory with all the available agents
+
+NOTE Confidence: 0.7600527405738831
+
+00:14:47.330 --> 00:14:48.399
+that are available there.
+
+NOTE Confidence: 0.8621782660484314
+
+00:14:48.600 --> 00:14:49.480
+It found one.
+
+NOTE Confidence: 0.7952076196670532
+
+00:14:50.000 --> 00:14:52.393
+If you see the line like a search agent, it
+
+NOTE Confidence: 0.7952076196670532
+
+00:14:52.449 --> 00:14:55.566
+found one agent that can actually perform the tasks that
+
+NOTE Confidence: 0.7952076196670532
+
+00:14:55.622 --> 00:14:56.679
+the user asked for.
+
+NOTE Confidence: 0.7883685827255249
+
+00:14:56.920 --> 00:15:00.526
+It invoked the agent using the HOA protocol which is
+
+NOTE Confidence: 0.7883685827255249
+
+00:15:00.596 --> 00:15:04.758
+actually hosted in Microsoft Foundry which under the hood is
+
+NOTE Confidence: 0.7883685827255249
+
+00:15:04.827 --> 00:15:08.157
+the one that we just built, is using Landgraf as
+
+NOTE Confidence: 0.7883685827255249
+
+00:15:08.226 --> 00:15:11.833
+the agent loop model for for Foundry is calling work
+
+NOTE Confidence: 0.7883685827255249
+
+00:15:11.902 --> 00:15:14.399
+IQ which is hosted in an MCP server.
+
+NOTE Confidence: 0.885873019695282
+
+00:15:15.320 --> 00:15:18.561
+Is using that to get access to my inbox 3,
+
+NOTE Confidence: 0.885873019695282
+
+00:15:18.638 --> 00:15:22.342
+get all the emails, get all the content, use the
+
+NOTE Confidence: 0.885873019695282
+
+00:15:22.419 --> 00:15:26.509
+skill to triage all the content of that e-mail, reply
+
+NOTE Confidence: 0.885873019695282
+
+00:15:26.586 --> 00:15:30.444
+back and get that answer to compiler CLI that then
+
+NOTE Confidence: 0.885873019695282
+
+00:15:30.522 --> 00:15:32.759
+used to answer this question.
+
+NOTE Confidence: 0.8208265900611877
+
+00:15:33.160 --> 00:15:35.187
+So the beauty of this is like none of these
+
+NOTE Confidence: 0.8208265900611877
+
+00:15:35.234 --> 00:15:37.119
+components knew about each other, right?
+
+NOTE Confidence: 0.6925160884857178
+
+00:15:37.120 --> 00:15:39.850
+Like so they will be in isolation, which is composing
+
+NOTE Confidence: 0.6925160884857178
+
+00:15:39.901 --> 00:15:40.519
+all of them.
+
+NOTE Confidence: 0.8063303232192993
+
+00:15:40.840 --> 00:15:44.168
+So that's the that's the story, that's the open source
+
+NOTE Confidence: 0.8063303232192993
+
+00:15:44.230 --> 00:15:47.066
+story that we wanted to tell in this demo, how
+
+NOTE Confidence: 0.8063303232192993
+
+00:15:47.127 --> 00:15:50.641
+you compose each of these these modules using open source
+
+NOTE Confidence: 0.8063303232192993
+
+00:15:50.703 --> 00:15:51.319
+standards.
+
+NOTE Confidence: 0.9155444502830505
+
+00:15:51.640 --> 00:15:55.058
+And then you can compose a bigger solution by using
+
+NOTE Confidence: 0.9155444502830505
+
+00:15:55.125 --> 00:15:56.600
+those open interfaces.
+
+NOTE Confidence: 0.7168161273002625
+
+00:15:56.800 --> 00:15:59.008
+So you are free to change them at any at
+
+NOTE Confidence: 0.7168161273002625
+
+00:15:59.063 --> 00:15:59.560
+any time.
+
+NOTE Confidence: 0.8525130748748779
+
+00:15:59.640 --> 00:16:01.304
+So that's the story we want to tell with open
+
+NOTE Confidence: 0.8525130748748779
+
+00:16:01.341 --> 00:16:01.599
+source.
+
+NOTE Confidence: 0.8740686178207397
+
+00:16:01.600 --> 00:16:03.593
+That's the story we want you to take away from
+
+NOTE Confidence: 0.8740686178207397
+
+00:16:03.636 --> 00:16:04.199
+this session.
+
+NOTE Confidence: 0.8124132752418518
+
+00:16:04.840 --> 00:16:05.840
+So I think it's a wrap.
+
+NOTE Confidence: 0.8413805365562439
+
+00:16:06.280 --> 00:16:08.611
+Thank you everyone for for the time want to stick
+
+NOTE Confidence: 0.8413805365562439
+
+00:16:08.658 --> 00:16:10.799
+around here for for questions if you have it.
+
+NOTE Confidence: 0.8861878514289856
+
+00:16:11.080 --> 00:16:13.303
+But like you can check out the repo we have
+
+NOTE Confidence: 0.8861878514289856
+
+00:16:13.355 --> 00:16:16.045
+there all the content that we were showing here, all
+
+NOTE Confidence: 0.8861878514289856
+
+00:16:16.096 --> 00:16:18.734
+the different stages of the agent as we were moving
+
+NOTE Confidence: 0.8861878514289856
+
+00:16:18.786 --> 00:16:19.200
+forward.
+
+NOTE Confidence: 0.8627550601959229
+
+00:16:19.280 --> 00:16:21.786
+So you can play with that and and see see
+
+NOTE Confidence: 0.8627550601959229
+
+00:16:21.847 --> 00:16:22.520
+the result.
+
+NOTE Confidence: 0.9716178178787231
+
+00:16:22.520 --> 00:16:22.880
+Thank you.
+

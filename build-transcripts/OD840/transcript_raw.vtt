@@ -1,0 +1,1640 @@
+WEBVTT
+
+00:00:01.860 --> 00:00:03.180
+JEREMIAH FOLLIS: Hi,
+I'm Jeremiah Follis,
+
+00:00:03.180 --> 00:00:06.360
+a PMM on Microsoft
+Security for AI team.
+
+00:00:06.360 --> 00:00:07.950
+And, today, we're
+talking about how
+
+00:00:07.950 --> 00:00:14.130
+to make any agent enterprise
+ready using Agent 365 SDK.
+
+00:00:14.130 --> 00:00:16.470
+And I'm joined here
+by Sunil Garg,
+
+00:00:16.470 --> 00:00:22.320
+and he's been leading
+the Agent 365 SDK work.
+
+00:00:22.320 --> 00:00:25.440
+And so, yeah, thanks
+for being here, Sunil.
+
+00:00:25.440 --> 00:00:26.910
+SUNIL GARG: Yeah,
+thank you, Jeremiah.
+
+00:00:26.910 --> 00:00:27.600
+Nice to be here.
+
+00:00:27.600 --> 00:00:29.820
+Hi, everyone, I am Sunil Garg.
+
+00:00:29.820 --> 00:00:33.390
+I am a Product Manager
+on the Agent 365 team.
+
+00:00:33.390 --> 00:00:36.500
+I run the Agent 365 SDK and CLI.
+
+00:00:36.500 --> 00:00:40.340
+And I also am a deployed
+PM in our ecosystem
+
+00:00:40.340 --> 00:00:42.620
+for driving partner adoption.
+
+00:00:42.620 --> 00:00:45.680
+So I get to spend a lot of time
+with developers, and I'm happy
+
+00:00:45.680 --> 00:00:47.750
+to talk about all of that
+today with all of you.
+
+00:00:47.750 --> 00:00:49.500
+Nice to be here.
+
+00:00:49.500 --> 00:00:51.390
+JEREMIAH FOLLIS: Yeah, so
+this session is really
+
+00:00:51.390 --> 00:00:54.360
+to help developers or security
+leaders understand the
+
+00:00:54.360 --> 00:00:58.320
+importance of observability,
+governance, and security
+
+00:00:58.320 --> 00:01:03.510
+for agents, and what Agent
+365 SDK does and what you get
+
+00:01:03.510 --> 00:01:05.150
+out of integrating with it.
+
+00:01:05.150 --> 00:01:07.010
+So, yeah, let's go
+ahead and dig in.
+
+00:01:07.010 --> 00:01:10.640
+Sunil, developers everywhere
+are building agents
+
+00:01:10.640 --> 00:01:13.760
+to drive real business and
+technology transformation,
+
+00:01:13.760 --> 00:01:17.810
+but security and risk concerns
+can stall adoption fast.
+
+00:01:17.810 --> 00:01:21.620
+From where you sit, what should
+developers focus on to clear
+
+00:01:21.620 --> 00:01:25.160
+that hurdle, and what's keeping
+the enterprise customers
+
+00:01:25.160 --> 00:01:26.490
+up at night?
+
+00:01:26.490 --> 00:01:27.750
+SUNIL GARG: And that's
+a great question.
+
+00:01:27.750 --> 00:01:30.180
+And, honestly, it's
+the one I get more
+
+00:01:30.180 --> 00:01:32.700
+than any other right now.
+
+00:01:32.700 --> 00:01:35.730
+So here is what I would say
+to my developer audience.
+
+00:01:35.730 --> 00:01:39.900
+The excitement around agents
+is completely justified.
+
+00:01:39.900 --> 00:01:43.170
+Eight-two percent of leaders
+are planning to deploy agents
+
+00:01:43.170 --> 00:01:46.140
+in the next 12 to 18
+months just to keep
+
+00:01:46.140 --> 00:01:48.960
+up with the workforce demand.
+
+00:01:48.960 --> 00:01:52.950
+But that same momentum is
+what's creating the anxiety
+
+00:01:52.950 --> 00:01:55.260
+on the other side of the table.
+
+00:01:55.260 --> 00:01:57.360
+When I talk to CISOs and CIOs,
+
+00:01:57.360 --> 00:02:00.120
+four things
+consistently come up.
+
+00:02:00.120 --> 00:02:04.290
+First, agent sprawl
+and resource access.
+
+00:02:04.290 --> 00:02:08.820
+Every team is spinning up agents
+and each one needs identity,
+
+00:02:08.820 --> 00:02:12.420
+permissions, and access
+to data and tools.
+
+00:02:12.420 --> 00:02:15.690
+The most important shift
+in your mental model
+
+00:02:15.690 --> 00:02:20.880
+as a developer is this,
+an agent is not an app,
+
+00:02:20.880 --> 00:02:24.180
+it's an actor with
+its own brain.
+
+00:02:24.180 --> 00:02:28.260
+Give it a scoped identity,
+least privilege access,
+
+00:02:28.260 --> 00:02:31.290
+and an audit trail from day one.
+
+00:02:31.290 --> 00:02:36.030
+If you bolt on governance later,
+you have already lost it.
+
+00:02:36.030 --> 00:02:39.560
+Second, data oversharing.
+
+00:02:39.560 --> 00:02:43.580
+Eighty percent of leaders
+tell us their top concern is
+
+00:02:43.580 --> 00:02:47.390
+sensitive data
+leaking through AI.
+
+00:02:47.390 --> 00:02:50.460
+This usually isn't
+a model problem,
+
+00:02:50.460 --> 00:02:52.770
+it's a grounding problem.
+
+00:02:52.770 --> 00:02:57.450
+The agent has access to, say,
+a SharePoint site, a CRM,
+
+00:02:57.450 --> 00:03:01.950
+an email thread that the
+user technically can reach,
+
+00:03:01.950 --> 00:03:05.580
+but probably shouldn't be
+surfacing in this context.
+
+00:03:05.580 --> 00:03:10.980
+Developers need to design agents
+with data boundaries in mind,
+
+00:03:10.980 --> 00:03:14.940
+agents respecting sensitivity
+labels, honoring the permissions
+
+00:03:14.940 --> 00:03:17.520
+of the user invoking the agent,
+
+00:03:17.520 --> 00:03:21.930
+and never let the agent become
+a shortcut around controls
+
+00:03:21.930 --> 00:03:25.950
+that already exist
+in the enterprise.
+
+00:03:25.950 --> 00:03:29.190
+Third, the new threat surface.
+
+00:03:29.190 --> 00:03:32.010
+Eighty-eight percent of
+organizations are worried
+
+00:03:32.010 --> 00:03:37.140
+about indirect prompt
+injections, and they should be.
+
+00:03:37.140 --> 00:03:41.010
+The moment your agent reads
+an email, parses a document,
+
+00:03:41.010 --> 00:03:45.750
+or browses a web page,
+untrusted content enters its
+
+00:03:45.750 --> 00:03:47.250
+reasoning loop.
+
+00:03:47.250 --> 00:03:51.390
+As developers, our job is
+to build the right hooks
+
+00:03:51.390 --> 00:03:53.850
+and guardrails into our agents
+
+00:03:53.850 --> 00:03:57.600
+so enterprise security teams
+can detect and respond
+
+00:03:57.600 --> 00:04:00.240
+to these attempted threats.
+
+00:04:00.240 --> 00:04:03.360
+That's where tools
+like Defender plug in.
+
+00:04:03.360 --> 00:04:07.080
+Assume your agent will be
+manipulated and designed
+
+00:04:07.080 --> 00:04:10.020
+for graceful failure when it is.
+
+00:04:10.020 --> 00:04:13.830
+And, fourth, regulatory
+uncertainty.
+
+00:04:13.830 --> 00:04:16.470
+More than half of
+the leaders I talk
+
+00:04:16.470 --> 00:04:22.080
+to admit don't fully understand
+how AI will be regulated,
+
+00:04:22.080 --> 00:04:25.500
+the EU sector specific
+rules in finance
+
+00:04:25.500 --> 00:04:30.720
+and healthcare evolving
+guidance in the U.S. My advice,
+
+00:04:30.720 --> 00:04:33.450
+don't wait for the
+rules to settle,
+
+00:04:33.450 --> 00:04:37.970
+build observability
+and traceability now.
+
+00:04:37.970 --> 00:04:43.820
+If you can answer what did
+this agent do on whose behalf
+
+00:04:43.820 --> 00:04:46.790
+with what data and
+why, you are ready
+
+00:04:46.790 --> 00:04:49.190
+for whatever framework lands.
+
+00:04:49.190 --> 00:04:52.290
+So what's keeping enterprise
+customers up at night?
+
+00:04:52.290 --> 00:04:54.420
+Well, it's not one of these.
+
+00:04:54.420 --> 00:04:56.910
+It's the compounding risk.
+
+00:04:56.910 --> 00:05:02.010
+An agent with too much access,
+reasoning over untrusted data,
+
+00:05:02.010 --> 00:05:04.860
+making decisions
+no one can audit
+
+00:05:04.860 --> 00:05:09.510
+in a regulatory environment
+that's still being written,
+
+00:05:09.510 --> 00:05:10.950
+that is the risk.
+
+00:05:10.950 --> 00:05:15.570
+The good news is every one of
+these problems has an answer.
+
+00:05:15.570 --> 00:05:19.890
+And most of those answers are
+things developers control,
+
+00:05:19.890 --> 00:05:23.460
+which is exactly what I would
+love to dig into today.
+
+00:05:23.460 --> 00:05:28.230
+Look, the developers who win
+here aren't the ones shipping
+
+00:05:28.230 --> 00:05:32.820
+the flashiest agents, they
+are the ones building agents
+
+00:05:32.820 --> 00:05:35.610
+that CISOs will
+actually approve.
+
+00:05:35.610 --> 00:05:36.000
+JEREMIAH FOLLIS: Wow.
+
+00:05:36.000 --> 00:05:40.650
+So that agent as an actor
+framing is a big mindset shift.
+
+00:05:40.650 --> 00:05:42.150
+Walk us through it.
+
+00:05:42.150 --> 00:05:44.160
+When an enterprise
+is bringing an agent
+
+00:05:44.160 --> 00:05:45.840
+into their organization,
+
+00:05:45.840 --> 00:05:48.510
+what are the questions
+that they're asking?
+
+00:05:48.510 --> 00:05:51.060
+SUNIL GARG: Yeah, let
+me build on that agent
+
+00:05:51.060 --> 00:05:54.360
+as an actor idea because
+it's the frame shift
+
+00:05:54.360 --> 00:05:56.940
+that unlocks everything else.
+
+00:05:56.940 --> 00:05:59.460
+So we need to stop
+thinking about agents
+
+00:05:59.460 --> 00:06:03.210
+as features inside an
+application, and start thinking
+
+00:06:03.210 --> 00:06:06.690
+of them as members
+of the workforce.
+
+00:06:06.690 --> 00:06:09.030
+When a new employee
+joins your company,
+
+00:06:09.030 --> 00:06:11.370
+an entire machinery kicks in.
+
+00:06:11.370 --> 00:06:14.760
+IT provisions a managed
+identity, their access is scoped
+
+00:06:14.760 --> 00:06:18.060
+to their role, their
+manager sets expectations,
+
+00:06:18.060 --> 00:06:20.940
+and everything they
+do is auditable.
+
+00:06:20.940 --> 00:06:23.460
+Nobody calls that
+bureaucratic overhead.
+
+00:06:23.460 --> 00:06:27.180
+That's just how organizations
+operate at scale.
+
+00:06:27.180 --> 00:06:30.180
+Agents need the same treatment.
+
+00:06:30.180 --> 00:06:34.020
+And the questions enterprise
+customers ask maps almost
+
+00:06:34.020 --> 00:06:36.540
+one-on-one to these
+questions they would ask
+
+00:06:36.540 --> 00:06:38.910
+about any new hire.
+
+00:06:38.910 --> 00:06:41.670
+Can IT discover and manage them?
+
+00:06:41.670 --> 00:06:44.040
+Today, mostly no.
+
+00:06:44.040 --> 00:06:47.820
+Register your agents with an
+identity from day one because,
+
+00:06:47.820 --> 00:06:52.380
+if IT can't see it,
+IT can't protect it.
+
+00:06:52.380 --> 00:06:56.700
+Second, who are they sharing
+sensitive information with?
+
+00:06:56.700 --> 00:06:59.460
+Think about flows of data,
+not just permissions
+
+00:06:59.460 --> 00:07:01.410
+on individual actions.
+
+00:07:01.410 --> 00:07:05.070
+An agent can have two perfectly
+reasonable permissions
+
+00:07:05.070 --> 00:07:09.450
+on their own, read from
+a CRM, send an email,
+
+00:07:09.450 --> 00:07:13.230
+and the combination still
+creates an exfiltration path
+
+00:07:13.230 --> 00:07:15.300
+designed with the
+full flow in mind,
+
+00:07:15.300 --> 00:07:18.720
+not just the individual action.
+
+00:07:18.720 --> 00:07:20.880
+Are they behaving properly?
+
+00:07:20.880 --> 00:07:23.910
+Build in the telemetry,
+behavioral signals,
+
+00:07:23.910 --> 00:07:27.960
+and hooks that let enterprise
+security teams monitor
+
+00:07:27.960 --> 00:07:29.790
+and course correct.
+
+00:07:29.790 --> 00:07:33.780
+You can't fix what
+you can't see.
+
+00:07:33.780 --> 00:07:35.970
+Are they well
+governed and audited?
+
+00:07:35.970 --> 00:07:38.880
+Every action needs
+to be attributable,
+
+00:07:38.880 --> 00:07:45.330
+which agent on whose behalf
+with what data to what outcome.
+
+00:07:45.330 --> 00:07:48.210
+So my guidance for developers,
+
+00:07:48.210 --> 00:07:53.340
+the bar for an enterprise-ready
+agent isn't whether it works,
+
+00:07:53.340 --> 00:07:56.610
+it's whether it could
+pass an onboarding review
+
+00:07:56.610 --> 00:07:58.770
+at a Fortune 500.
+
+00:07:58.770 --> 00:08:02.850
+Identity, behavior, data
+handling, auditability,
+
+00:08:02.850 --> 00:08:07.410
+build to that bar and you are
+not just building agents people
+
+00:08:07.410 --> 00:08:12.180
+will use, you are building
+agents enterprise will trust.
+
+00:08:12.180 --> 00:08:16.570
+And trust is what takes
+a demo to production.
+
+00:08:18.600 --> 00:08:20.160
+JEREMIAH FOLLIS: So
+that bar, I mean,
+
+00:08:20.160 --> 00:08:24.720
+passing a Fortune 500
+onboarding review is high.
+
+00:08:24.720 --> 00:08:29.010
+And, honestly, for a developer
+just trying to ship an agent,
+
+00:08:29.010 --> 00:08:31.170
+all of this can
+feel overwhelming.
+
+00:08:31.170 --> 00:08:35.160
+What's your guidance of how does
+Microsoft help developers clear
+
+00:08:35.160 --> 00:08:39.720
+that bar without rebuilding
+the security stack themselves?
+
+00:08:39.720 --> 00:08:42.630
+SUNIL GARG: Yes, you
+are spot on, Jeremiah.
+
+00:08:42.630 --> 00:08:45.510
+It has been a big pain
+point for developers
+
+00:08:45.510 --> 00:08:49.830
+to build enterprise-ready
+agents because they may need
+
+00:08:49.830 --> 00:08:53.570
+to use a variety of open-source
+and development tools.
+
+00:08:53.570 --> 00:08:56.330
+Sometimes they need
+to justify, identify,
+
+00:08:56.330 --> 00:08:58.940
+and patch these
+controls themselves,
+
+00:08:58.940 --> 00:09:02.510
+let alone figuring it out how
+customers will eventually use
+
+00:09:02.510 --> 00:09:06.290
+and benefit from these
+bespoke implementations.
+
+00:09:06.290 --> 00:09:09.800
+So the bottom line is
+that it's challenging
+
+00:09:09.800 --> 00:09:13.700
+to maintain various controls
+from different vendors
+
+00:09:13.700 --> 00:09:15.720
+and make them all
+enterprise proofed.
+
+00:09:15.720 --> 00:09:19.620
+At Microsoft, we really want
+to help solve this challenge
+
+00:09:19.620 --> 00:09:21.990
+for developers to
+enable security
+
+00:09:21.990 --> 00:09:26.160
+and governance controls easily
+in the agents they build,
+
+00:09:26.160 --> 00:09:29.250
+no matter where they build
+it, how they build it,
+
+00:09:29.250 --> 00:09:31.230
+and where they run it.
+
+00:09:31.230 --> 00:09:33.630
+That's where Agent 365 comes in.
+
+00:09:33.630 --> 00:09:37.290
+Agent 365 is the control
+plane for agents,
+
+00:09:37.290 --> 00:09:41.280
+built so enterprise customers
+can observe, govern,
+
+00:09:41.280 --> 00:09:45.300
+and secure every agent
+in their environment.
+
+00:09:45.300 --> 00:09:49.350
+We made Agent 365 generally
+available on May 1st along
+
+00:09:49.350 --> 00:09:54.180
+with the SDK, and the SDK is
+what makes everything real
+
+00:09:54.180 --> 00:09:55.980
+for developers.
+
+00:09:55.980 --> 00:10:01.350
+So, for the rest of the session,
+I will focus exactly on that,
+
+00:10:01.350 --> 00:10:04.620
+how you as a developer
+can use the SDK
+
+00:10:04.620 --> 00:10:08.400
+to make your agent fully
+observable, manageable,
+
+00:10:08.400 --> 00:10:12.220
+and governable by Agent 365.
+
+00:10:13.320 --> 00:10:14.880
+JEREMIAH FOLLIS: So
+building on that,
+
+00:10:14.880 --> 00:10:19.860
+Agent 365 also gives
+developers a clear path
+
+00:10:19.860 --> 00:10:24.740
+to make sure the agents they
+build are manageable inside it.
+
+00:10:24.740 --> 00:10:29.700
+Sunil, when a maker or
+a developer is working
+
+00:10:29.700 --> 00:10:33.180
+in Agent Builder, Copilot
+Studio, or Foundry,
+
+00:10:33.180 --> 00:10:34.830
+what do they need to do
+
+00:10:34.830 --> 00:10:37.650
+to get Agent 365
+controls on their agent?
+
+00:10:37.650 --> 00:10:39.930
+SUNIL GARG: Well, to be
+quite honest, nothing extra.
+
+00:10:39.930 --> 00:10:42.540
+Agent 365 is natively integrated
+
+00:10:42.540 --> 00:10:45.540
+out of the box with
+these platforms.
+
+00:10:45.540 --> 00:10:50.040
+It doesn't matter if you are
+no-code, low-code or pro-code,
+
+00:10:50.040 --> 00:10:54.150
+when makers and developers build
+on Microsoft AI platforms,
+
+00:10:54.150 --> 00:10:57.570
+the agent shows up in
+Agent 365 automatically.
+
+00:10:57.570 --> 00:10:59.580
+Identity, observability,
+governance,
+
+00:10:59.580 --> 00:11:02.220
+and security are all wired in.
+
+00:11:02.220 --> 00:11:04.530
+JEREMIAH FOLLIS: So, yeah, I
+mean, that's a clean story
+
+00:11:04.530 --> 00:11:05.700
+for the Microsoft side.
+
+00:11:05.700 --> 00:11:07.380
+Would like you to flip
+it on me, though.
+
+00:11:07.380 --> 00:11:11.820
+Say I'm a developer building on
+a different platform entirely,
+
+00:11:11.820 --> 00:11:15.540
+how does Agent 365 reach
+my agent in that case?
+
+00:11:15.540 --> 00:11:17.640
+SUNIL GARG: Yep, that's
+a good question.
+
+00:11:17.640 --> 00:11:20.850
+So Agent 365 already
+connects directly
+
+00:11:20.850 --> 00:11:23.880
+to leading third-party
+platforms like Vertex AI
+
+00:11:23.880 --> 00:11:28.200
+and AWS Bedrock, with
+more on the way.
+
+00:11:28.200 --> 00:11:30.600
+Agents built on these
+platforms can be registered
+
+00:11:30.600 --> 00:11:34.950
+in Agent 365 registry through
+connected platform integration.
+
+00:11:34.950 --> 00:11:37.140
+And, remember, registration
+is the first step
+
+00:11:37.140 --> 00:11:39.030
+to solving agent sprawl.
+
+00:11:39.030 --> 00:11:42.420
+So, once your agent is in
+the Agent 365 registry,
+
+00:11:42.420 --> 00:11:44.940
+customer admins can discover it.
+
+00:11:44.940 --> 00:11:45.270
+JEREMIAH FOLLIS: And what
+
+00:11:45.270 --> 00:11:47.610
+about developers building
+their own agents
+
+00:11:47.610 --> 00:11:49.920
+with an SDK or framework?
+
+00:11:49.920 --> 00:11:54.420
+OpenAI's SDK, LangChain,
+Claude, custom code.
+
+00:11:54.420 --> 00:11:57.570
+What if developers'
+other capabilities --
+
+00:11:57.570 --> 00:12:00.960
+what about them rather
+than just registration?
+
+00:12:00.960 --> 00:12:03.870
+That's a huge group and
+they need the same things,
+
+00:12:03.870 --> 00:12:06.960
+observability,
+governance, security.
+
+00:12:06.960 --> 00:12:08.520
+SUNIL GARG: Yeah,
+absolutely correct.
+
+00:12:08.520 --> 00:12:13.890
+So that's exactly where
+Agent 365 SDK comes in.
+
+00:12:13.890 --> 00:12:17.400
+This will be a long answer, but
+let's quickly talk through this.
+
+00:12:17.400 --> 00:12:21.990
+So the first thing I would say
+is Agent 365 SDK is not all
+
+00:12:21.990 --> 00:12:23.790
+or nothing.
+
+00:12:23.790 --> 00:12:27.810
+Whether you are building with
+OpenAI's SDK, LangChain, Claude,
+
+00:12:27.810 --> 00:12:32.880
+LlamaIndex, the Microsoft Agent
+Framework or fully custom code,
+
+00:12:32.880 --> 00:12:35.880
+you can layer Agent
+365 capabilities
+
+00:12:35.880 --> 00:12:40.710
+onto what you are already
+running incrementally.
+
+00:12:40.710 --> 00:12:44.910
+You pick where to start and
+how far you want to go,
+
+00:12:44.910 --> 00:12:49.290
+which are observability,
+governance, and security.
+
+00:12:49.290 --> 00:12:51.840
+Now, let's start
+with observability.
+
+00:12:51.840 --> 00:12:56.730
+The SDK adds full open
+telemetry-based tracing,
+
+00:12:56.730 --> 00:13:00.600
+which means every input, every
+output, every tool call,
+
+00:13:00.600 --> 00:13:03.030
+every model invocation.
+
+00:13:03.030 --> 00:13:05.940
+Developers have two
+paths from here.
+
+00:13:05.940 --> 00:13:09.360
+The first, and the one
+what we recommend,
+
+00:13:09.360 --> 00:13:12.480
+is the Microsoft
+OpenTelemetry Distro.
+
+00:13:12.480 --> 00:13:15.450
+It comes with auto
+instrumentation for OpenAI,
+
+00:13:15.450 --> 00:13:17.820
+and LangChain, and
+Agent Framework,
+
+00:13:17.820 --> 00:13:20.760
+plus hooks for everything else.
+
+00:13:20.760 --> 00:13:25.680
+The second path is direct
+injection to an OTel endpoint.
+
+00:13:25.680 --> 00:13:30.930
+So let's say you already have an
+open telemetry pipeline running
+
+00:13:30.930 --> 00:13:35.370
+or you are on a stack that
+our SDK does not support yet,
+
+00:13:35.370 --> 00:13:37.800
+like Java, for example.
+
+00:13:37.800 --> 00:13:39.330
+You can plug straight in
+
+00:13:39.330 --> 00:13:42.390
+and reuse what you
+have already built.
+
+00:13:42.390 --> 00:13:44.730
+And one more thing
+on observability,
+
+00:13:44.730 --> 00:13:48.750
+we have AI-guided setup for
+coding agents that wires
+
+00:13:48.750 --> 00:13:52.170
+up registration and
+telemetry for you.
+
+00:13:52.170 --> 00:13:55.950
+So developers aren't
+reading docs and telemet
+
+00:13:55.950 --> 00:13:58.830
+to get to their first trace.
+
+00:13:58.830 --> 00:14:02.520
+Now, here is the part
+security teams care about.
+
+00:14:02.520 --> 00:14:04.320
+With observability enabled,
+
+00:14:04.320 --> 00:14:09.720
+enterprise security teams can
+leverage it for threat hunting
+
+00:14:09.720 --> 00:14:13.590
+in the Microsoft
+Defender portal.
+
+00:14:13.590 --> 00:14:19.800
+The Unified Observability SDK
+provided can enable both IT
+
+00:14:19.800 --> 00:14:22.950
+and security team to
+secure and govern agents
+
+00:14:22.950 --> 00:14:25.740
+with complete visibility.
+
+00:14:25.740 --> 00:14:28.230
+Next, governance.
+
+00:14:28.230 --> 00:14:33.570
+Agent 365 SDK can enable a
+customer's IT and security teams
+
+00:14:33.570 --> 00:14:37.080
+to govern tool access,
+including access
+
+00:14:37.080 --> 00:14:40.800
+to Microsoft 365
+data through MCPs.
+
+00:14:40.800 --> 00:14:45.240
+So mail, calendar, OneDrive,
+SharePoint, Teams,
+
+00:14:45.240 --> 00:14:47.640
+they are all reachable
+through governed,
+
+00:14:47.640 --> 00:14:52.080
+admin-controlled auditable,
+revocable permissions.
+
+00:14:52.080 --> 00:14:55.740
+Developers don't have to
+build bespoke connectors
+
+00:14:55.740 --> 00:14:59.250
+or handle consent
+flows themselves.
+
+00:14:59.250 --> 00:15:02.280
+The SDK gives you
+the tool surface
+
+00:15:02.280 --> 00:15:07.110
+and admins decide what your
+agent is allowed to touch.
+
+00:15:07.110 --> 00:15:10.590
+Developers can also bring
+their own MCPs and register
+
+00:15:10.590 --> 00:15:13.860
+with Agent 365 to get the
+same controlled access
+
+00:15:13.860 --> 00:15:16.500
+for all of your MCPs.
+
+00:15:16.500 --> 00:15:18.900
+And, finally, security.
+
+00:15:18.900 --> 00:15:22.080
+So this is where Entra
+Agent ID comes in.
+
+00:15:22.080 --> 00:15:26.100
+Developers enable Entra
+Agent ID through the SDK.
+
+00:15:26.100 --> 00:15:29.580
+And, once it's enabled, a whole
+set of capabilities light
+
+00:15:29.580 --> 00:15:34.800
+up for the customer's admins to
+configure identity protection,
+
+00:15:34.800 --> 00:15:38.250
+conditional access,
+and ID governance.
+
+00:15:38.250 --> 00:15:42.600
+So your agent gets a
+real verifiable identity
+
+00:15:42.600 --> 00:15:44.820
+and the admins get to manage it
+
+00:15:44.820 --> 00:15:48.900
+with the same Entra controls
+they are already using
+
+00:15:48.900 --> 00:15:50.790
+for users.
+
+00:15:50.790 --> 00:15:55.560
+The shortest way to put it
+is bring whatever framework
+
+00:15:55.560 --> 00:16:01.380
+or model you want, Agent 365
+SDK gives you observability,
+
+00:16:01.380 --> 00:16:03.690
+governance, and security
+
+00:16:03.690 --> 00:16:07.260
+as incremental capabilities,
+not a rewrite.
+
+00:16:07.260 --> 00:16:07.710
+JEREMIAH FOLLIS: So,
+
+00:16:07.710 --> 00:16:13.140
+once a developer has
+integrated the Agent 365 SDK,
+
+00:16:13.140 --> 00:16:15.780
+where do Entra and
+Purview fit in?
+
+00:16:15.780 --> 00:16:17.610
+SUNIL GARG: Yep,
+another great question.
+
+00:16:17.610 --> 00:16:20.520
+So we touched on some of
+this on the last slide,
+
+00:16:20.520 --> 00:16:24.690
+but let me put it in a
+different frame here.
+
+00:16:24.690 --> 00:16:29.100
+With Entra, there's really
+nothing extra to wire up.
+
+00:16:29.100 --> 00:16:33.390
+Entra Agent ID is part
+of the Agent 365 SDK.
+
+00:16:33.390 --> 00:16:38.460
+So, once the developers have
+integrated with the SDK,
+
+00:16:38.460 --> 00:16:42.510
+identity and access management,
+governance, threat hunting
+
+00:16:42.510 --> 00:16:46.650
+in Defender, all of that just
+lights up for the customer.
+
+00:16:46.650 --> 00:16:48.270
+No additional
+plumbing is needed.
+
+00:16:48.270 --> 00:16:51.000
+For data security and
+compliance controls,
+
+00:16:51.000 --> 00:16:56.040
+including sensitivity labels,
+DLP, data lifecycle policies,
+
+00:16:56.040 --> 00:17:00.690
+all of these works in the M365
+surface area, such as Teams,
+
+00:17:00.690 --> 00:17:03.360
+where the agent is
+interacting with users.
+
+00:17:03.360 --> 00:17:07.830
+Microsoft also provides Purview
+APIs that developers can use
+
+00:17:07.830 --> 00:17:09.450
+to wire the data controls
+
+00:17:09.450 --> 00:17:13.620
+into agents they are building
+for other scenarios.
+
+00:17:13.620 --> 00:17:16.620
+Regardless, enterprise
+customers can configure
+
+00:17:16.620 --> 00:17:19.110
+and enforce their
+own Purview policies
+
+00:17:19.110 --> 00:17:21.330
+to get it going at runtime.
+
+00:17:21.330 --> 00:17:23.550
+We are looking into making
+this even more easier
+
+00:17:23.550 --> 00:17:25.320
+from a developer perspective.
+
+00:17:25.320 --> 00:17:29.580
+So same agent, two extension
+paths, one built-in
+
+00:17:29.580 --> 00:17:32.190
+and one with runtime hook.
+
+00:17:32.190 --> 00:17:32.910
+JEREMIAH FOLLIS: That's awesome.
+
+00:17:32.910 --> 00:17:35.610
+Well, let's get concrete.
+
+00:17:35.610 --> 00:17:40.050
+Once my agent is integrated,
+what exactly do customers get
+
+00:17:40.050 --> 00:17:44.340
+across access, data,
+and threat protection?
+
+00:17:44.340 --> 00:17:48.210
+SUNIL GARG: Yeah, so this is
+where it all comes together.
+
+00:17:48.210 --> 00:17:49.290
+And let's take a look at it.
+
+00:17:49.290 --> 00:17:51.510
+Right? So three pillars,
+
+00:17:51.510 --> 00:17:55.290
+all built on the security tool
+set enterprise customers already
+
+00:17:55.290 --> 00:17:57.180
+use every day.
+
+00:17:57.180 --> 00:18:02.330
+Once an agent's integrated, here
+is what the security teams get.
+
+00:18:02.330 --> 00:18:07.040
+First, with Microsoft Entra, the
+agent gets assigned an agent ID.
+
+00:18:07.040 --> 00:18:10.190
+And, from there, the agent
+identity can be secured
+
+00:18:10.190 --> 00:18:14.090
+and governed like any
+other identity in the org.
+
+00:18:14.090 --> 00:18:16.340
+Lifecycle management,
+conditional access,
+
+00:18:16.340 --> 00:18:19.860
+access governance, all the
+controls Entra admins already
+
+00:18:19.860 --> 00:18:23.070
+have and know how to run.
+
+00:18:23.070 --> 00:18:25.560
+Second, Microsoft Purview.
+
+00:18:25.560 --> 00:18:28.710
+This is where data security
+and compliance comes in.
+
+00:18:28.710 --> 00:18:32.760
+Enterprise customers can manage
+the agent's data security
+
+00:18:32.760 --> 00:18:36.810
+posture, configure information
+protection and DLP,
+
+00:18:36.810 --> 00:18:39.540
+layer in insider
+risk management,
+
+00:18:39.540 --> 00:18:41.250
+and build compliance control
+
+00:18:41.250 --> 00:18:44.550
+so the agent meets the
+regulatory requirements they are
+
+00:18:44.550 --> 00:18:46.530
+held to.
+
+00:18:46.530 --> 00:18:48.810
+And, third, Microsoft Defender.
+
+00:18:48.810 --> 00:18:52.290
+Security teams can
+investigate misconfigurations
+
+00:18:52.290 --> 00:18:56.970
+or vulnerabilities in agents,
+and do advanced hunting right
+
+00:18:56.970 --> 00:18:58.820
+in the Defender portal.
+
+00:18:58.820 --> 00:19:00.960
+And, if your agents are
+integrated with tools
+
+00:19:00.960 --> 00:19:05.580
+such as Microsoft 365 apps,
+Defender can also detect, block,
+
+00:19:05.580 --> 00:19:10.380
+and respond to threats,
+things like tool misuse.
+
+00:19:10.380 --> 00:19:14.400
+So the pattern across
+all three is the same.
+
+00:19:14.400 --> 00:19:17.730
+Security teams don't
+have to learn new tools.
+
+00:19:17.730 --> 00:19:20.370
+They work where
+they already work.
+
+00:19:20.370 --> 00:19:23.490
+Let me show you some of this
+in action now in the demo.
+
+00:19:23.490 --> 00:19:26.340
+Here, I have a Genspark agent
+
+00:19:26.340 --> 00:19:30.510
+that already integrates
+with Agent 365 SDK.
+
+00:19:30.510 --> 00:19:32.970
+And I can show you
+the security outcomes
+
+00:19:32.970 --> 00:19:37.800
+that enterprise customers
+can get from this agent.
+
+00:19:37.800 --> 00:19:41.160
+Let's start with what
+every agent needs first,
+
+00:19:41.160 --> 00:19:43.590
+being known to the enterprise.
+
+00:19:43.590 --> 00:19:47.790
+Since Genspark already
+integrates with Agent 365 SDK,
+
+00:19:47.790 --> 00:19:51.480
+the agent has Entra Agent
+ID and a blueprint,
+
+00:19:51.480 --> 00:19:54.000
+which makes the agent
+show up right here
+
+00:19:54.000 --> 00:19:59.100
+in the Microsoft 365 Admin
+Center visible, inventoried,
+
+00:19:59.100 --> 00:20:03.210
+and manageable like any
+other enterprise asset.
+
+00:20:03.210 --> 00:20:08.970
+Now, watch what happens the
+instant this agent is registered
+
+00:20:08.970 --> 00:20:10.530
+through a blueprint.
+
+00:20:10.530 --> 00:20:13.380
+The agent gets a
+Microsoft Entra Agent ID,
+
+00:20:13.380 --> 00:20:16.230
+a real first-class
+identity in the tenant.
+
+00:20:16.230 --> 00:20:18.270
+That means it's
+automatically subject
+
+00:20:18.270 --> 00:20:21.480
+to the same governance the
+organization already runs
+
+00:20:21.480 --> 00:20:23.100
+for human users.
+
+00:20:23.100 --> 00:20:26.100
+I can see the audit logs of
+what the agent has done.
+
+00:20:26.100 --> 00:20:27.780
+I can see the sign-in logs
+
+00:20:27.780 --> 00:20:32.490
+to each endpoint the agent
+has made or attempted.
+
+00:20:32.490 --> 00:20:35.400
+Just like how we can
+audit for human users,
+
+00:20:35.400 --> 00:20:37.740
+we can now audit for agents.
+
+00:20:37.740 --> 00:20:41.520
+Identity governs
+who the agent is,
+
+00:20:41.520 --> 00:20:45.600
+Purview governs what
+data it touches.
+
+00:20:45.600 --> 00:20:50.280
+So every interaction this agent
+has, every message it reads,
+
+00:20:50.280 --> 00:20:52.470
+every file it pulls
+from SharePoint,
+
+00:20:52.470 --> 00:20:56.250
+every email it drafts
+automatically flows
+
+00:20:56.250 --> 00:20:58.860
+through the tenant's
+Purview policies.
+
+00:20:58.860 --> 00:21:01.590
+Sensitivity labels are honored.
+
+00:21:01.590 --> 00:21:05.040
+Here, I have configured the
+highly confidential labeled
+
+00:21:05.040 --> 00:21:09.030
+documents to only be
+shared with human users.
+
+00:21:09.030 --> 00:21:12.090
+This prevented the agent from
+reading the document even
+
+00:21:12.090 --> 00:21:15.350
+if this document was
+created by this agent.
+
+00:21:15.350 --> 00:21:18.350
+Next, I have a DLP
+rule to prevent users
+
+00:21:18.350 --> 00:21:22.610
+from sharing sensitive
+data with AI agents.
+
+00:21:22.610 --> 00:21:26.040
+We can see that Purview
+blocked this message.
+
+00:21:26.040 --> 00:21:28.980
+Purview enforces it at
+the platform layer.
+
+00:21:28.980 --> 00:21:34.530
+The same controls protecting
+humans now protect the agent.
+
+00:21:34.530 --> 00:21:36.960
+Finally, security.
+
+00:21:36.960 --> 00:21:41.820
+Defender continuously monitors
+the agent's behavior the same
+
+00:21:41.820 --> 00:21:47.670
+way it monitors any user in the
+tenant, anomalous tool calls,
+
+00:21:47.670 --> 00:21:53.460
+unusual data access patterns,
+signs of compromises.
+
+00:21:53.460 --> 00:21:57.630
+Here, we can see that a high
+severity alert was raised
+
+00:21:57.630 --> 00:22:02.790
+because the user tried a
+prompt injection attack.
+
+00:22:02.790 --> 00:22:06.420
+The rule kicked in and
+the tool was blocked.
+
+00:22:06.420 --> 00:22:10.020
+This functionality is available
+to all tools, like MCPs,
+
+00:22:10.020 --> 00:22:13.170
+that are available on Agent 365,
+
+00:22:13.170 --> 00:22:17.130
+or you can register your
+own MCP with Agent 365.
+
+00:22:17.130 --> 00:22:18.780
+It works for both.
+
+00:22:18.780 --> 00:22:20.130
+So, if something goes wrong,
+
+00:22:20.130 --> 00:22:25.050
+the security team doesn't need a
+custom playbook for AI agents.
+
+00:22:25.050 --> 00:22:27.120
+They use the one
+they already have.
+
+00:22:27.120 --> 00:22:27.540
+JEREMIAH FOLLIS: Sunil,
+
+00:22:27.540 --> 00:22:29.490
+thanks for walking us
+through all of that.
+
+00:22:29.490 --> 00:22:31.800
+Let me wrap this up
+for everyone watching.
+
+00:22:31.800 --> 00:22:33.990
+So here is the picture.
+
+00:22:33.990 --> 00:22:37.950
+Enterprise customers need
+controls to manage agent sprawl,
+
+00:22:37.950 --> 00:22:43.050
+prevent data leakage, protect
+agents against threats,
+
+00:22:43.050 --> 00:22:45.930
+and meet their
+compliance requirements.
+
+00:22:45.930 --> 00:22:49.590
+That's the bar your customers
+are holding you to.
+
+00:22:49.590 --> 00:22:52.860
+And Agent 365 is what
+makes agents meet
+
+00:22:52.860 --> 00:22:56.700
+that bar whether you're building
+on Microsoft AI platforms
+
+00:22:56.700 --> 00:22:59.850
+or you're integrating an
+agent built anywhere else
+
+00:22:59.850 --> 00:23:02.790
+through Agent 365 SDK.
+
+00:23:02.790 --> 00:23:05.670
+The bottom line for
+developers, well,
+
+00:23:05.670 --> 00:23:09.780
+that's Agent 365 gives
+you a comprehensive way
+
+00:23:09.780 --> 00:23:12.270
+to make your agent
+enterprise-ready
+
+00:23:12.270 --> 00:23:15.870
+so you can build agents your
+customers actually want
+
+00:23:15.870 --> 00:23:18.030
+and will adopt.
+
+00:23:18.030 --> 00:23:18.420
+SUNIL GARG: Yeah.
+
+00:23:18.420 --> 00:23:22.080
+And, just to add to that, right,
+from a developer's perspective,
+
+00:23:22.080 --> 00:23:25.920
+this means you don't have to
+choose between shipping fast
+
+00:23:25.920 --> 00:23:29.220
+and being enterprise
+ready, to be quite honest.
+
+00:23:29.220 --> 00:23:32.160
+The SDK gives you a path
+where you can build
+
+00:23:32.160 --> 00:23:34.200
+on the framework
+you already use.
+
+00:23:34.200 --> 00:23:36.150
+And, the moment you
+integrate your agents,
+
+00:23:36.150 --> 00:23:39.240
+inherits the
+identity, governance,
+
+00:23:39.240 --> 00:23:42.870
+and security capabilities
+enterprise customers expect.
+
+00:23:42.870 --> 00:23:44.880
+So that's what unlocks adoption.
+
+00:23:44.880 --> 00:23:45.750
+JEREMIAH FOLLIS: Three resources
+
+00:23:45.750 --> 00:23:48.870
+to help you get building
+with Agent 365 SDK.
+
+00:23:48.870 --> 00:23:51.690
+Please take a look
+and save these links.
+
+00:23:51.690 --> 00:23:55.170
+And we can't wait to
+see what you can build.
+
+00:23:55.170 --> 00:23:56.340
+Thank you for joining us.
+
+00:23:56.340 --> 00:23:57.700
+SUNIL GARG: Thank you.

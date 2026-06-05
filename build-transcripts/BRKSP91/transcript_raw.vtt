@@ -1,0 +1,4460 @@
+WEBVTT
+
+NOTE
+language:en-US
+
+NOTE Confidence: 0.8453291058540344
+
+00:00:01.000 --> 00:00:02.720
+Joining the session, can you guys all hear me?
+
+NOTE Confidence: 0.8299474120140076
+
+00:00:03.680 --> 00:00:05.618
+If you cannot hear me, you can use the the
+
+NOTE Confidence: 0.8299474120140076
+
+00:00:05.664 --> 00:00:07.280
+headsets which we have on the back.
+
+NOTE Confidence: 0.6846994757652283
+
+00:00:09.200 --> 00:00:10.120
+I'm Vivek Chauhan.
+
+NOTE Confidence: 0.8531582951545715
+
+00:00:10.119 --> 00:00:12.889
+I'll be presenting this session with my friend and colleague
+
+NOTE Confidence: 0.8531582951545715
+
+00:00:12.935 --> 00:00:13.119
+Jed.
+
+NOTE Confidence: 0.8308889865875244
+
+00:00:13.280 --> 00:00:15.360
+We also have a special guest Nico from Harvey.
+
+NOTE Confidence: 0.8545201420783997
+
+00:00:15.360 --> 00:00:16.280
+He'll be joining the call.
+
+NOTE Confidence: 0.8294094204902649
+
+00:00:16.880 --> 00:00:20.352
+Today we're going to talk about how you can save
+
+NOTE Confidence: 0.8294094204902649
+
+00:00:20.425 --> 00:00:24.910
+a ton of money and build application specific production graze
+
+NOTE Confidence: 0.8294094204902649
+
+00:00:24.983 --> 00:00:29.541
+inference optimized AI using open source models there are using
+
+NOTE Confidence: 0.8294094204902649
+
+00:00:29.613 --> 00:00:33.448
+fireworks and then how you can serve those models for
+
+NOTE Confidence: 0.8294094204902649
+
+00:00:33.520 --> 00:00:35.039
+inference on foundry.
+
+NOTE Confidence: 0.7203488349914551
+
+00:00:35.920 --> 00:00:36.160
+Cool.
+
+NOTE Confidence: 0.9208171963691711
+
+00:00:36.360 --> 00:00:37.680
+OK, let's get started.
+
+NOTE Confidence: 0.8450626134872437
+
+00:00:39.960 --> 00:00:42.707
+There are three fundamental truths we believe in the AI's
+
+NOTE Confidence: 0.8450626134872437
+
+00:00:42.755 --> 00:00:43.719
+landscape right now.
+
+NOTE Confidence: 0.9108861684799194
+
+00:00:44.159 --> 00:00:47.998
+Number one, for all practical purposes for most enterprise use
+
+NOTE Confidence: 0.9108861684799194
+
+00:00:48.060 --> 00:00:51.837
+cases, the gap between open weight models and frontier closed
+
+NOTE Confidence: 0.9108861684799194
+
+00:00:51.899 --> 00:00:53.199
+models has collapsed.
+
+NOTE Confidence: 0.8976072669029236
+
+00:00:54.640 --> 00:00:57.035
+What it means is that a lot of the companies
+
+NOTE Confidence: 0.8976072669029236
+
+00:00:57.090 --> 00:00:59.649
+can switch to an open weight model if they want
+
+NOTE Confidence: 0.8976072669029236
+
+00:00:59.704 --> 00:01:02.317
+to while keeping the same quality bar and save a
+
+NOTE Confidence: 0.8976072669029236
+
+00:01:02.372 --> 00:01:05.258
+ton of money as compared to pointing let's say clawed
+
+NOTE Confidence: 0.8976072669029236
+
+00:01:05.312 --> 00:01:07.600
+Opus 4.7 for an e-mail summarization task.
+
+NOTE Confidence: 0.8519651293754578
+
+00:01:07.800 --> 00:01:09.591
+You can use a smaller model and open weight model
+
+NOTE Confidence: 0.8519651293754578
+
+00:01:09.627 --> 00:01:11.199
+and get to the same quality and save money.
+
+NOTE Confidence: 0.9441632628440857
+
+00:01:11.840 --> 00:01:15.847
+The second thing, the true differentiation only comes from actually
+
+NOTE Confidence: 0.9441632628440857
+
+00:01:15.907 --> 00:01:18.359
+embedding your own data mode into the AI.
+
+NOTE Confidence: 0.8419449925422668
+
+00:01:18.800 --> 00:01:20.868
+If you are using the same close weight model which
+
+NOTE Confidence: 0.8419449925422668
+
+00:01:20.909 --> 00:01:23.639
+everyone of your competitor is using, there is no differentiation.
+
+NOTE Confidence: 0.878226637840271
+
+00:01:25.200 --> 00:01:28.170
+If you wanted to redifferentiate your own AI stack, leveraging
+
+NOTE Confidence: 0.878226637840271
+
+00:01:28.218 --> 00:01:29.799
+fine tuning is actually very key.
+
+NOTE Confidence: 0.854824960231781
+
+00:01:30.640 --> 00:01:33.425
+And 3rd and the most important thing, the most leading
+
+NOTE Confidence: 0.854824960231781
+
+00:01:33.476 --> 00:01:36.158
+companies in this space which we see on our platform
+
+NOTE Confidence: 0.854824960231781
+
+00:01:36.210 --> 00:01:39.769
+are actually going beyond just inference or inference optimization or
+
+NOTE Confidence: 0.854824960231781
+
+00:01:39.821 --> 00:01:40.440
+fine tuning.
+
+NOTE Confidence: 0.9182891249656677
+
+00:01:40.800 --> 00:01:44.042
+They are continuously improving their AI stack and they are,
+
+NOTE Confidence: 0.9182891249656677
+
+00:01:44.096 --> 00:01:47.123
+they have found a flywheel on our platform through which
+
+NOTE Confidence: 0.9182891249656677
+
+00:01:47.177 --> 00:01:49.880
+they can actually have a very differentiated mode.
+
+NOTE Confidence: 0.9294533729553223
+
+00:01:50.160 --> 00:01:52.969
+And we'll talk about how leveraging fireworks, you can get
+
+NOTE Confidence: 0.9294533729553223
+
+00:01:53.018 --> 00:01:54.520
+the same mode on your platform.
+
+NOTE Confidence: 0.7562324404716492
+
+00:01:56.440 --> 00:01:58.563
+And we have the platform on fireworks AI side where
+
+NOTE Confidence: 0.7562324404716492
+
+00:01:58.604 --> 00:02:00.520
+we provide world class inference and training.
+
+NOTE Confidence: 0.8273587226867676
+
+00:02:00.520 --> 00:02:01.480
+So we'll cover that also.
+
+NOTE Confidence: 0.9171043634414673
+
+00:02:02.000 --> 00:02:05.450
+OK, a little bit about Fireworks AI, We process more
+
+NOTE Confidence: 0.9171043634414673
+
+00:02:05.516 --> 00:02:07.640
+than 30 trillion tokens per day.
+
+NOTE Confidence: 0.6325926184654236
+
+00:02:08.680 --> 00:02:12.380
+It's actually right behind Frontier close weight labs like cloud
+
+NOTE Confidence: 0.6325926184654236
+
+00:02:12.438 --> 00:02:13.999
+and and Tropic and open AI.
+
+NOTE Confidence: 0.8283047676086426
+
+00:02:14.520 --> 00:02:19.029
+We saw more than 10,000 enterprise customers globally who leverage
+
+NOTE Confidence: 0.8283047676086426
+
+00:02:19.098 --> 00:02:23.813
+our platform to build production blade applications using open weight
+
+NOTE Confidence: 0.8283047676086426
+
+00:02:23.881 --> 00:02:24.359
+models.
+
+NOTE Confidence: 0.8603543639183044
+
+00:02:24.840 --> 00:02:28.936
+You have some names on the screen cursor actually leverage
+
+NOTE Confidence: 0.8603543639183044
+
+00:02:29.006 --> 00:02:33.315
+our RL rollout capabilities to build Composer 2, Composer 2.5
+
+NOTE Confidence: 0.8603543639183044
+
+00:02:33.385 --> 00:02:33.880
+models.
+
+NOTE Confidence: 0.8289326429367065
+
+00:02:34.240 --> 00:02:37.578
+We have customers like Versal, Genspark, Uber, Do Dash, a
+
+NOTE Confidence: 0.8289326429367065
+
+00:02:37.637 --> 00:02:40.448
+long list of customers who lean on us for better
+
+NOTE Confidence: 0.8289326429367065
+
+00:02:40.507 --> 00:02:44.080
+quality through fine tuning and training, better performance.
+
+NOTE Confidence: 0.8238353133201599
+
+00:02:44.280 --> 00:02:46.465
+It could be speed, it could be throughput, time to
+
+NOTE Confidence: 0.8238353133201599
+
+00:02:46.508 --> 00:02:48.999
+first look on whatever is your application specific need.
+
+NOTE Confidence: 0.8928743004798889
+
+00:02:49.320 --> 00:02:51.720
+We're able to take care of that using a platform.
+
+NOTE Confidence: 0.9738166928291321
+
+00:02:52.280 --> 00:02:53.120
+How do we do that?
+
+NOTE Confidence: 0.88454270362854
+
+00:02:54.520 --> 00:02:57.520
+We have our own inference engine, our own inference stack.
+
+NOTE Confidence: 0.9219242334365845
+
+00:02:58.040 --> 00:03:00.676
+If you think about it, LLM inference actually is a
+
+NOTE Confidence: 0.9219242334365845
+
+00:03:00.729 --> 00:03:03.840
+very, very difficult and very brutal combinatorial problem.
+
+NOTE Confidence: 0.7976183891296387
+
+00:03:05.320 --> 00:03:10.374
+Across optimizations on speculative decoding or quantization modes, various different
+
+NOTE Confidence: 0.7976183891296387
+
+00:03:10.434 --> 00:03:14.240
+queues you have access to, different parallelization strategies.
+
+NOTE Confidence: 0.8554871678352356
+
+00:03:14.560 --> 00:03:19.607
+There's more than 85,000 permutations, 84,000 permutations for one model
+
+NOTE Confidence: 0.8554871678352356
+
+00:03:19.677 --> 00:03:21.360
+which you want to serve.
+
+NOTE Confidence: 0.9608374834060669
+
+00:03:22.040 --> 00:03:24.896
+For most companies, it does not make sense to actually
+
+NOTE Confidence: 0.9608374834060669
+
+00:03:24.948 --> 00:03:26.800
+deal with this complexity in house.
+
+NOTE Confidence: 0.8576802015304565
+
+00:03:27.040 --> 00:03:31.200
+They would rather focus on their users, their application and
+
+NOTE Confidence: 0.8576802015304565
+
+00:03:31.268 --> 00:03:32.360
+leaner platform.
+
+NOTE Confidence: 0.8523433208465576
+
+00:03:32.360 --> 00:03:33.800
+Because we keep up with this space.
+
+NOTE Confidence: 0.8459334373474121
+
+00:03:33.800 --> 00:03:35.080
+This space is moving too fast.
+
+NOTE Confidence: 0.7824903726577759
+
+00:03:35.640 --> 00:03:38.716
+We deal with everything in terms of the Kuda kernels,
+
+NOTE Confidence: 0.7824903726577759
+
+00:03:38.774 --> 00:03:42.199
+in terms of quantization, spell decoding, adaptive caching.
+
+NOTE Confidence: 0.9063258171081543
+
+00:03:42.200 --> 00:03:45.675
+Every new fancy AI optimization trick which comes out, we
+
+NOTE Confidence: 0.9063258171081543
+
+00:03:45.736 --> 00:03:47.200
+embed that in our stack.
+
+NOTE Confidence: 0.968743622303009
+
+00:03:47.400 --> 00:03:48.600
+You don't have to worry about it.
+
+NOTE Confidence: 0.9203086495399475
+
+00:03:49.000 --> 00:03:51.537
+You can focus on your application and we can take
+
+NOTE Confidence: 0.9203086495399475
+
+00:03:51.589 --> 00:03:53.039
+care of your specific needs.
+
+NOTE Confidence: 0.8645715713500977
+
+00:03:53.160 --> 00:03:55.591
+I want my time to 1st token to be less
+
+NOTE Confidence: 0.8645715713500977
+
+00:03:55.655 --> 00:03:56.999
+than 500 millisecond.
+
+NOTE Confidence: 0.7283109426498413
+
+00:03:57.000 --> 00:03:58.490
+I want my N 20 density to be less than
+
+NOTE Confidence: 0.7283109426498413
+
+00:03:58.529 --> 00:03:58.999
+two seconds.
+
+NOTE Confidence: 0.70955890417099
+
+00:03:59.280 --> 00:04:01.000
+I want my throughput to be such.
+
+NOTE Confidence: 0.9298381209373474
+
+00:04:01.400 --> 00:04:04.200
+We can take care of that using our inference engine.
+
+NOTE Confidence: 0.8981090188026428
+
+00:04:04.960 --> 00:04:08.116
+And all of these inference engine capabilities are now available
+
+NOTE Confidence: 0.8981090188026428
+
+00:04:08.165 --> 00:04:10.039
+on Foundry, and we'll talk about that.
+
+NOTE Confidence: 0.886817455291748
+
+00:04:10.040 --> 00:04:11.000
+We'll do a live demo of that.
+
+NOTE Confidence: 0.9050674438476562
+
+00:04:12.920 --> 00:04:14.840
+This slide actually is my favorite slide.
+
+NOTE Confidence: 0.9045922160148621
+
+00:04:15.640 --> 00:04:19.760
+We want all companies to actually own their AI stack.
+
+NOTE Confidence: 0.9401857852935791
+
+00:04:20.640 --> 00:04:24.431
+Its paramount that companies do that and we want to
+
+NOTE Confidence: 0.9401857852935791
+
+00:04:24.505 --> 00:04:28.000
+meet customers where they are in their journey.
+
+NOTE Confidence: 0.9247223138809204
+
+00:04:29.400 --> 00:04:31.889
+Different companies are actually in different stages of their AI
+
+NOTE Confidence: 0.9247223138809204
+
+00:04:31.928 --> 00:04:32.240
+journey.
+
+NOTE Confidence: 0.8270861506462097
+
+00:04:32.240 --> 00:04:34.623
+In fact within a company also different teams are in
+
+NOTE Confidence: 0.8270861506462097
+
+00:04:34.669 --> 00:04:36.320
+different stage of their AI journey.
+
+NOTE Confidence: 0.9684292674064636
+
+00:04:36.760 --> 00:04:38.519
+We want to find a way to meet them where
+
+NOTE Confidence: 0.9684292674064636
+
+00:04:38.563 --> 00:04:38.959
+they are.
+
+NOTE Confidence: 0.8782376646995544
+
+00:04:39.360 --> 00:04:41.853
+We have a training agent which is more targeted towards
+
+NOTE Confidence: 0.8782376646995544
+
+00:04:41.898 --> 00:04:43.440
+product managers and app builders.
+
+NOTE Confidence: 0.8652275800704956
+
+00:04:43.920 --> 00:04:46.967
+The training agent basically can take your data and your
+
+NOTE Confidence: 0.8652275800704956
+
+00:04:47.022 --> 00:04:49.743
+business use case and it can give you a fine-tuned
+
+NOTE Confidence: 0.8652275800704956
+
+00:04:49.798 --> 00:04:52.356
+model, will give you a live demo, will give you
+
+NOTE Confidence: 0.8652275800704956
+
+00:04:52.410 --> 00:04:53.879
+a demo of the of the agent.
+
+NOTE Confidence: 0.9265526533126831
+
+00:04:53.880 --> 00:04:56.664
+Right now we have a managed training platform which is
+
+NOTE Confidence: 0.9265526533126831
+
+00:04:56.715 --> 00:04:58.520
+more targeted towards ML engineers.
+
+NOTE Confidence: 0.8815026879310608
+
+00:04:58.800 --> 00:05:01.340
+If you already know what training method you want to
+
+NOTE Confidence: 0.8815026879310608
+
+00:05:01.389 --> 00:05:03.684
+use, you already have a data set which you have
+
+NOTE Confidence: 0.8815026879310608
+
+00:05:03.733 --> 00:05:04.320
+want to use.
+
+NOTE Confidence: 0.8830403089523315
+
+00:05:04.640 --> 00:05:06.600
+You can literally just port the data set and kick
+
+NOTE Confidence: 0.8830403089523315
+
+00:05:06.640 --> 00:05:08.040
+off a training job on the platform.
+
+NOTE Confidence: 0.9570427536964417
+
+00:05:08.279 --> 00:05:10.412
+You do not have to worry about any of the
+
+NOTE Confidence: 0.9570427536964417
+
+00:05:10.464 --> 00:05:12.440
+back end infrastructure orchestration.
+
+NOTE Confidence: 0.9690144658088684
+
+00:05:12.640 --> 00:05:13.440
+We take care of that.
+
+NOTE Confidence: 0.8787482380867004
+
+00:05:14.160 --> 00:05:17.072
+If you are an advanced ML team, if you are
+
+NOTE Confidence: 0.8787482380867004
+
+00:05:17.141 --> 00:05:21.440
+researchers, you actually would love our training API product.
+
+NOTE Confidence: 0.765635073184967
+
+00:05:22.279 --> 00:05:25.512
+With the training API product, we expose the raw primitives
+
+NOTE Confidence: 0.765635073184967
+
+00:05:25.566 --> 00:05:29.456
+of the platform, custom loss functions, reward functions, advanced algo
+
+NOTE Confidence: 0.765635073184967
+
+00:05:29.511 --> 00:05:29.839
+suite.
+
+NOTE Confidence: 0.8517051935195923
+
+00:05:29.839 --> 00:05:32.592
+If you want access to highest context window, full parameter
+
+NOTE Confidence: 0.8517051935195923
+
+00:05:32.638 --> 00:05:35.024
+fine tuning, we provide that in our training API and
+
+NOTE Confidence: 0.8517051935195923
+
+00:05:35.070 --> 00:05:36.080
+we'll talk about that.
+
+NOTE Confidence: 0.9203773736953735
+
+00:05:36.720 --> 00:05:39.740
+Basically, we have a, we have a surface from high
+
+NOTE Confidence: 0.9203773736953735
+
+00:05:39.801 --> 00:05:42.760
+to very low controls depending on what you want.
+
+NOTE Confidence: 0.9143654108047485
+
+00:05:42.960 --> 00:05:45.730
+And you can actually meet your key needs in one
+
+NOTE Confidence: 0.9143654108047485
+
+00:05:45.789 --> 00:05:46.320
+platform.
+
+NOTE Confidence: 0.8314321041107178
+
+00:05:46.560 --> 00:05:48.907
+And no matter what surface you use, you can one
+
+NOTE Confidence: 0.8314321041107178
+
+00:05:48.957 --> 00:05:51.905
+click deploy in the platform, which is very, very important
+
+NOTE Confidence: 0.8314321041107178
+
+00:05:51.955 --> 00:05:54.852
+for speed of iteration as coming to training somewhere and
+
+NOTE Confidence: 0.8314321041107178
+
+00:05:54.902 --> 00:05:57.799
+doing inference somewhere else, downloading, reformatting.
+
+NOTE Confidence: 0.9264641404151917
+
+00:05:57.800 --> 00:05:59.240
+You don't have to deal with any of that.
+
+NOTE Confidence: 0.6807094812393188
+
+00:05:59.280 --> 00:06:02.280
+One click deploy, run your evals, cheaper to production.
+
+NOTE Confidence: 0.844764769077301
+
+00:06:03.560 --> 00:06:04.920
+And this is the flywheel I was talking about.
+
+NOTE Confidence: 0.861490786075592
+
+00:06:06.480 --> 00:06:09.078
+We have seen, we are already seeing leading companies in
+
+NOTE Confidence: 0.861490786075592
+
+00:06:09.124 --> 00:06:11.723
+the space find this flywheel on our platform and they're
+
+NOTE Confidence: 0.861490786075592
+
+00:06:11.769 --> 00:06:13.440
+actually spinning faster and faster.
+
+NOTE Confidence: 0.8499266505241394
+
+00:06:13.839 --> 00:06:16.411
+They are training models on the platform, they're deploying it
+
+NOTE Confidence: 0.8499266505241394
+
+00:06:16.452 --> 00:06:19.189
+on the platform, they're monitoring it, They're getting the traces
+
+NOTE Confidence: 0.8499266505241394
+
+00:06:19.231 --> 00:06:20.599
+out of it, they're retraining it.
+
+NOTE Confidence: 0.9146891236305237
+
+00:06:21.080 --> 00:06:23.095
+And they're able to do that on our platform because
+
+NOTE Confidence: 0.9146891236305237
+
+00:06:23.135 --> 00:06:24.439
+we take care of the complex part.
+
+NOTE Confidence: 0.8979122638702393
+
+00:06:24.800 --> 00:06:26.320
+We take care of the GPU orchestrations.
+
+NOTE Confidence: 0.7987087368965149
+
+00:06:26.560 --> 00:06:27.760
+You don't need to scavenge for GPUs.
+
+NOTE Confidence: 0.8651659488677979
+
+00:06:27.760 --> 00:06:29.240
+You don't need to worry about elasticity.
+
+NOTE Confidence: 0.8187784552574158
+
+00:06:29.240 --> 00:06:31.284
+You don't need to worry about bad notes or CSP
+
+NOTE Confidence: 0.8187784552574158
+
+00:06:31.328 --> 00:06:31.639
+issues.
+
+NOTE Confidence: 0.5224122405052185
+
+00:06:31.920 --> 00:06:32.600
+That's our headache.
+
+NOTE Confidence: 0.7911580204963684
+
+00:06:33.240 --> 00:06:35.426
+We take care of just the core part of the
+
+NOTE Confidence: 0.7911580204963684
+
+00:06:35.480 --> 00:06:38.360
+the family itself in terms of like putting the weights
+
+NOTE Confidence: 0.7911580204963684
+
+00:06:38.413 --> 00:06:40.120
+over hot loading, checkpointing.
+
+NOTE Confidence: 0.8601783514022827
+
+00:06:40.400 --> 00:06:43.391
+That's not your pain point as compared to doing this
+
+NOTE Confidence: 0.8601783514022827
+
+00:06:43.448 --> 00:06:46.439
+DIY in house, which might take you many, many weeks.
+
+NOTE Confidence: 0.9138769507408142
+
+00:06:46.680 --> 00:06:49.280
+You can probably get 10 iterations done in fireworks.
+
+NOTE Confidence: 0.9269176721572876
+
+00:06:50.040 --> 00:06:53.080
+The third thing is we guarantee numerical fidelity for you.
+
+NOTE Confidence: 0.8042313456535339
+
+00:06:53.800 --> 00:06:56.622
+It's actually a very big thing when you're training a
+
+NOTE Confidence: 0.8042313456535339
+
+00:06:56.675 --> 00:06:59.658
+large model, when you're training an NMOE model which is
+
+NOTE Confidence: 0.8042313456535339
+
+00:06:59.711 --> 00:07:02.960
+using floating point precision, the numerics can drift a lot.
+
+NOTE Confidence: 0.9272345304489136
+
+00:07:02.960 --> 00:07:05.347
+What you train on might not be what you serve
+
+NOTE Confidence: 0.9272345304489136
+
+00:07:05.400 --> 00:07:05.559
+on.
+
+NOTE Confidence: 0.9413964152336121
+
+00:07:06.120 --> 00:07:08.418
+And we guarantee numerics where you don't have to worry
+
+NOTE Confidence: 0.9413964152336121
+
+00:07:08.460 --> 00:07:08.919
+about that.
+
+NOTE Confidence: 0.8616032600402832
+
+00:07:09.000 --> 00:07:11.885
+You can be assured that what I trained, the results
+
+NOTE Confidence: 0.8616032600402832
+
+00:07:11.942 --> 00:07:15.337
+I got is matching the production platform performance for my
+
+NOTE Confidence: 0.8616032600402832
+
+00:07:15.394 --> 00:07:15.960
+end users.
+
+NOTE Confidence: 0.864034116268158
+
+00:07:16.560 --> 00:07:17.840
+And again, no vendors for all.
+
+NOTE Confidence: 0.8359068632125854
+
+00:07:18.000 --> 00:07:20.677
+Everything is in one platform, training and inference, one click
+
+NOTE Confidence: 0.8359068632125854
+
+00:07:20.719 --> 00:07:22.853
+deploy and you know you can focus on an application
+
+NOTE Confidence: 0.8359068632125854
+
+00:07:22.895 --> 00:07:24.360
+and leave the infrastructure to us.
+
+NOTE Confidence: 0.9139885902404785
+
+00:07:25.280 --> 00:07:27.360
+OK, enough with the slides.
+
+NOTE Confidence: 0.9231511950492859
+
+00:07:27.360 --> 00:07:30.920
+Let's do some live demo, actually recorded demo.
+
+NOTE Confidence: 0.8572875261306763
+
+00:07:32.520 --> 00:07:34.291
+So I'm going to start with a demo of the
+
+NOTE Confidence: 0.8572875261306763
+
+00:07:34.335 --> 00:07:34.999
+training agent.
+
+NOTE Confidence: 0.9430457353591919
+
+00:07:36.280 --> 00:07:39.160
+The idea is very simple actually.
+
+NOTE Confidence: 0.9227515459060669
+
+00:07:39.160 --> 00:07:40.240
+Let me ask a question first.
+
+NOTE Confidence: 0.8943936228752136
+
+00:07:40.920 --> 00:07:44.560
+How many of you love writing evals and reformatting data?
+
+NOTE Confidence: 0.8156577348709106
+
+00:07:46.320 --> 00:07:46.760
+No one.
+
+NOTE Confidence: 0.9132077693939209
+
+00:07:47.480 --> 00:07:48.880
+OK, so the agent is for you.
+
+NOTE Confidence: 0.8470373749732971
+
+00:07:49.840 --> 00:07:51.520
+The idea behind the agent is very simple.
+
+NOTE Confidence: 0.9284787178039551
+
+00:07:52.120 --> 00:07:53.480
+You speak in plain English.
+
+NOTE Confidence: 0.8380584716796875
+
+00:07:53.960 --> 00:07:56.776
+This is my data set, this is my business goal,
+
+NOTE Confidence: 0.8380584716796875
+
+00:07:56.838 --> 00:07:58.920
+and you help me fine tune a model.
+
+NOTE Confidence: 0.8972405791282654
+
+00:07:59.280 --> 00:08:01.280
+The agent can reformat the data.
+
+NOTE Confidence: 0.8764592409133911
+
+00:08:01.960 --> 00:08:03.760
+The agent can write evals for you.
+
+NOTE Confidence: 0.9540960192680359
+
+00:08:04.560 --> 00:08:06.719
+The agent can help you find a model which might
+
+NOTE Confidence: 0.9540960192680359
+
+00:08:06.765 --> 00:08:07.960
+be good for your use case.
+
+NOTE Confidence: 0.8895772695541382
+
+00:08:08.600 --> 00:08:10.760
+The agent can do hyperparameter search for you.
+
+NOTE Confidence: 0.8660651445388794
+
+00:08:11.080 --> 00:08:12.960
+So usually when you are doing a fine tuning of
+
+NOTE Confidence: 0.8660651445388794
+
+00:08:13.001 --> 00:08:14.963
+the model, there are so many knobs you can tweak
+
+NOTE Confidence: 0.8660651445388794
+
+00:08:15.004 --> 00:08:16.640
+to get to the output you're looking for.
+
+NOTE Confidence: 0.8839841485023499
+
+00:08:17.160 --> 00:08:20.703
+And its extremely actually very painful to go through all
+
+NOTE Confidence: 0.8839841485023499
+
+00:08:20.766 --> 00:08:22.879
+the permutations manually, 1 by 1.
+
+NOTE Confidence: 0.9769113063812256
+
+00:08:23.200 --> 00:08:24.280
+You don't have to do that.
+
+NOTE Confidence: 0.9502138495445251
+
+00:08:24.640 --> 00:08:27.416
+We have an agent which can take your business use
+
+NOTE Confidence: 0.9502138495445251
+
+00:08:27.473 --> 00:08:31.270
+case, deal with model selection, evaluating data formatting, and it
+
+NOTE Confidence: 0.9502138495445251
+
+00:08:31.326 --> 00:08:33.876
+can give you a plan and the plan will outline
+
+NOTE Confidence: 0.9502138495445251
+
+00:08:33.933 --> 00:08:35.519
+what the agent is proposing.
+
+NOTE Confidence: 0.9049692749977112
+
+00:08:36.080 --> 00:08:38.624
+It can also tell you upfront what it will cost
+
+NOTE Confidence: 0.9049692749977112
+
+00:08:38.679 --> 00:08:40.560
+you to do this training iteration.
+
+NOTE Confidence: 0.894711434841156
+
+00:08:41.240 --> 00:08:43.658
+Once you're happy with the plan at a high level,
+
+NOTE Confidence: 0.894711434841156
+
+00:08:43.708 --> 00:08:46.127
+you can just say, OK, you know what, approve, go
+
+NOTE Confidence: 0.894711434841156
+
+00:08:46.177 --> 00:08:46.479
+ahead.
+
+NOTE Confidence: 0.8858838677406311
+
+00:08:47.640 --> 00:08:50.645
+Then the agent will take your data set, make a
+
+NOTE Confidence: 0.8858838677406311
+
+00:08:50.711 --> 00:08:54.108
+small cut of the data set, and do the hyperparameter
+
+NOTE Confidence: 0.8858838677406311
+
+00:08:54.174 --> 00:08:57.245
+grid search on that data set to narrow down the
+
+NOTE Confidence: 0.8858838677406311
+
+00:08:57.310 --> 00:08:58.160
+sample space.
+
+NOTE Confidence: 0.9297652244567871
+
+00:08:58.760 --> 00:09:00.617
+And once it has narrowed down the sample space, it
+
+NOTE Confidence: 0.9297652244567871
+
+00:09:00.654 --> 00:09:01.359
+will ask you again.
+
+NOTE Confidence: 0.958089292049408
+
+00:09:01.360 --> 00:09:01.960
+OK, you know what?
+
+NOTE Confidence: 0.885246753692627
+
+00:09:02.400 --> 00:09:04.440
+I tried like these ten different iterations.
+
+NOTE Confidence: 0.9693658351898193
+
+00:09:04.640 --> 00:09:06.640
+These are the 2 which are the most promising.
+
+NOTE Confidence: 0.9165047407150269
+
+00:09:06.640 --> 00:09:08.789
+This is the reason why it's more promising along with
+
+NOTE Confidence: 0.9165047407150269
+
+00:09:08.830 --> 00:09:09.520
+the eval results.
+
+NOTE Confidence: 0.9682750105857849
+
+00:09:09.840 --> 00:09:11.680
+Do you want me to do a full run?
+
+NOTE Confidence: 0.8975213766098022
+
+00:09:11.680 --> 00:09:13.080
+The full data set run on the platform?
+
+NOTE Confidence: 0.9299139380455017
+
+00:09:13.440 --> 00:09:16.394
+Once you say yes, the agent will take your full
+
+NOTE Confidence: 0.9299139380455017
+
+00:09:16.457 --> 00:09:19.662
+data set and it will actually do the whole training
+
+NOTE Confidence: 0.9299139380455017
+
+00:09:19.725 --> 00:09:21.360
+run on your full data set.
+
+NOTE Confidence: 0.8686251640319824
+
+00:09:21.679 --> 00:09:24.456
+It will give you a very comprehensive, like step by
+
+NOTE Confidence: 0.8686251640319824
+
+00:09:24.510 --> 00:09:27.286
+step view of what's happening under the hood and it
+
+NOTE Confidence: 0.8686251640319824
+
+00:09:27.341 --> 00:09:28.919
+will give you a final report.
+
+NOTE Confidence: 0.9112701416015625
+
+00:09:28.960 --> 00:09:31.631
+In the end, Everything which I'm showing here on the
+
+NOTE Confidence: 0.9112701416015625
+
+00:09:31.682 --> 00:09:34.199
+screen is actually available in headless fashion.
+
+NOTE Confidence: 0.9319611191749573
+
+00:09:34.200 --> 00:09:35.200
+So we have a skill file.
+
+NOTE Confidence: 0.8465827703475952
+
+00:09:35.480 --> 00:09:37.927
+If you want to train a modeler directly from your
+
+NOTE Confidence: 0.8465827703475952
+
+00:09:37.977 --> 00:09:41.124
+own coding agent, from your own harness, Kittup, Copilot, clod,
+
+NOTE Confidence: 0.8465827703475952
+
+00:09:41.174 --> 00:09:43.572
+cursor, you name it, you can just drop the skill
+
+NOTE Confidence: 0.8465827703475952
+
+00:09:43.622 --> 00:09:45.920
+file, add your API keys and you're good to go.
+
+NOTE Confidence: 0.9290237426757812
+
+00:09:46.880 --> 00:09:49.979
+It also gives you suggestions what else you could do
+
+NOTE Confidence: 0.9290237426757812
+
+00:09:50.038 --> 00:09:52.601
+if you want to do more iterations on top of
+
+NOTE Confidence: 0.9290237426757812
+
+00:09:52.661 --> 00:09:52.840
+it.
+
+NOTE Confidence: 0.8321284651756287
+
+00:09:53.200 --> 00:09:55.218
+The agent can take care of your supervised fine tuning
+
+NOTE Confidence: 0.8321284651756287
+
+00:09:55.255 --> 00:09:55.480
+needs.
+
+NOTE Confidence: 0.8332054018974304
+
+00:09:55.480 --> 00:09:57.680
+It can take care of preference optimization needs.
+
+NOTE Confidence: 0.8802838921546936
+
+00:09:57.960 --> 00:10:00.880
+It can help you make a model for classification tasks.
+
+NOTE Confidence: 0.9206063151359558
+
+00:10:01.400 --> 00:10:02.720
+All of that is packaged already.
+
+NOTE Confidence: 0.8699077367782593
+
+00:10:03.640 --> 00:10:05.979
+OK, so agent is for people who do not want
+
+NOTE Confidence: 0.8699077367782593
+
+00:10:06.034 --> 00:10:08.039
+to like deal with the ML part of it.
+
+NOTE Confidence: 0.9449388384819031
+
+00:10:08.800 --> 00:10:11.160
+We also have a very simple clickable workflow.
+
+NOTE Confidence: 0.8677231073379517
+
+00:10:11.400 --> 00:10:13.414
+If you want to just train a model and you
+
+NOTE Confidence: 0.8677231073379517
+
+00:10:13.464 --> 00:10:15.724
+have a data set already, and if you know which
+
+NOTE Confidence: 0.8677231073379517
+
+00:10:15.773 --> 00:10:18.329
+method you want to use, what hyperparams you want to
+
+NOTE Confidence: 0.8677231073379517
+
+00:10:18.378 --> 00:10:20.835
+use, what I'm showing on the screen is our managed
+
+NOTE Confidence: 0.8677231073379517
+
+00:10:20.884 --> 00:10:21.720
+training product.
+
+NOTE Confidence: 0.8700045347213745
+
+00:10:22.240 --> 00:10:24.535
+You can come into the platform and you can choose
+
+NOTE Confidence: 0.8700045347213745
+
+00:10:24.582 --> 00:10:28.564
+supervised fine tuning, reinforcement, fine tuning, preference optimization, and just
+
+NOTE Confidence: 0.8700045347213745
+
+00:10:28.611 --> 00:10:30.719
+just select the workflow you want to go with.
+
+NOTE Confidence: 0.9343883395195007
+
+00:10:31.360 --> 00:10:32.560
+You can choose the model.
+
+NOTE Confidence: 0.7185476422309875
+
+00:10:32.640 --> 00:10:36.317
+We are usually day zero provider for open weight models
+
+NOTE Confidence: 0.7185476422309875
+
+00:10:36.383 --> 00:10:37.319
+for inference.
+
+NOTE Confidence: 0.8423104882240295
+
+00:10:37.760 --> 00:10:41.525
+That also means we are the fastest providers for supporting
+
+NOTE Confidence: 0.8423104882240295
+
+00:10:41.589 --> 00:10:43.759
+fine tuning on open weight models.
+
+NOTE Confidence: 0.9538223743438721
+
+00:10:44.320 --> 00:10:46.520
+You can come in here, select the model you want.
+
+NOTE Confidence: 0.8947374224662781
+
+00:10:47.320 --> 00:10:49.282
+Once you have selected the model, you can upload the
+
+NOTE Confidence: 0.8947374224662781
+
+00:10:49.320 --> 00:10:49.999
+data set directly.
+
+NOTE Confidence: 0.8948011994361877
+
+00:10:50.000 --> 00:10:53.003
+We also provide secure training, so you can actually stream
+
+NOTE Confidence: 0.8948011994361877
+
+00:10:53.054 --> 00:10:55.039
+data BYOB directly from your own cloud.
+
+NOTE Confidence: 0.8283780217170715
+
+00:10:55.640 --> 00:10:58.356
+And we expose raw parameters where you can choose the
+
+NOTE Confidence: 0.8283780217170715
+
+00:10:58.407 --> 00:11:00.559
+epochs, the learning rate, the batch size.
+
+NOTE Confidence: 0.8991471529006958
+
+00:11:00.960 --> 00:11:03.619
+A lot of like smart defaults are available out-of-the-box to
+
+NOTE Confidence: 0.8991471529006958
+
+00:11:03.663 --> 00:11:05.879
+you and you can basically kick off a training job.
+
+NOTE Confidence: 0.9080231189727783
+
+00:11:06.440 --> 00:11:08.617
+If you want to do reinforcement fine tuning, there is
+
+NOTE Confidence: 0.9080231189727783
+
+00:11:08.658 --> 00:11:09.479
+one additional step.
+
+NOTE Confidence: 0.8353790044784546
+
+00:11:09.800 --> 00:11:13.275
+Basically you have to upload your grader or connect your
+
+NOTE Confidence: 0.8353790044784546
+
+00:11:13.337 --> 00:11:17.247
+grader using your GitHub repo so that they reinforcement tuning
+
+NOTE Confidence: 0.8353790044784546
+
+00:11:17.309 --> 00:11:20.288
+job can use a grader to actually give rewards to
+
+NOTE Confidence: 0.8353790044784546
+
+00:11:20.350 --> 00:11:21.839
+the agent, to the model.
+
+NOTE Confidence: 0.7548439502716064
+
+00:11:22.559 --> 00:11:25.920
+And again, we expose features where you can change your
+
+NOTE Confidence: 0.7548439502716064
+
+00:11:25.981 --> 00:11:28.120
+different knobs, top K, top P, etc.
+
+NOTE Confidence: 0.8150182366371155
+
+00:11:28.120 --> 00:11:31.610
+Along with that size learning rate, we also support weights
+
+NOTE Confidence: 0.8150182366371155
+
+00:11:31.669 --> 00:11:32.320
+and biases.
+
+NOTE Confidence: 0.907903254032135
+
+00:11:32.679 --> 00:11:35.005
+So if you want more detailed telemetry, you can just
+
+NOTE Confidence: 0.907903254032135
+
+00:11:35.050 --> 00:11:37.152
+plug in your API key and get weights and biases
+
+NOTE Confidence: 0.907903254032135
+
+00:11:37.196 --> 00:11:39.880
+so you can actually monitor what's happening under the hood.
+
+NOTE Confidence: 0.898734986782074
+
+00:11:40.559 --> 00:11:43.209
+If you want to do preference optimization that's also supported
+
+NOTE Confidence: 0.898734986782074
+
+00:11:43.251 --> 00:11:43.839
+similar setup.
+
+NOTE Confidence: 0.9175665378570557
+
+00:11:43.920 --> 00:11:46.600
+Upload the data, choose the configs you want to run,
+
+NOTE Confidence: 0.9175665378570557
+
+00:11:46.652 --> 00:11:48.559
+run as many times as you want to run.
+
+NOTE Confidence: 0.9446725249290466
+
+00:11:48.559 --> 00:11:51.829
+All your trained models show up on the platform and
+
+NOTE Confidence: 0.9446725249290466
+
+00:11:51.893 --> 00:11:55.227
+while the training job is going on, you can actually
+
+NOTE Confidence: 0.9446725249290466
+
+00:11:55.291 --> 00:11:57.919
+monitor the results live on the platform.
+
+NOTE Confidence: 0.905017614364624
+
+00:11:57.920 --> 00:12:00.002
+It will show you the loss function or the reward
+
+NOTE Confidence: 0.905017614364624
+
+00:12:00.045 --> 00:12:00.999
+function in real time.
+
+NOTE Confidence: 0.872098982334137
+
+00:12:01.000 --> 00:12:02.798
+So you can see if it's behaving it's supposed to
+
+NOTE Confidence: 0.872098982334137
+
+00:12:02.835 --> 00:12:03.359
+behave or not.
+
+NOTE Confidence: 0.7390757203102112
+
+00:12:03.640 --> 00:12:06.225
+You can pause something if it's not behaving, redo the
+
+NOTE Confidence: 0.7390757203102112
+
+00:12:06.273 --> 00:12:08.954
+the reward functions or whatever eval you have picked up
+
+NOTE Confidence: 0.7390757203102112
+
+00:12:09.002 --> 00:12:09.959
+for the for the job.
+
+NOTE Confidence: 0.8879785537719727
+
+00:12:10.960 --> 00:12:12.927
+The best part of this this whole thing is that
+
+NOTE Confidence: 0.8879785537719727
+
+00:12:12.970 --> 00:12:14.040
+you can one click deploy.
+
+NOTE Confidence: 0.8620255589485168
+
+00:12:15.080 --> 00:12:17.427
+You do not have to worry about downloading the way
+
+NOTE Confidence: 0.8620255589485168
+
+00:12:17.474 --> 00:12:20.760
+it's reformatting it, uploading it somewhere, worry about numerics and
+
+NOTE Confidence: 0.8620255589485168
+
+00:12:20.807 --> 00:12:21.839
+just waste time on it.
+
+NOTE Confidence: 0.8814207911491394
+
+00:12:22.040 --> 00:12:23.600
+Just one click deploy on the platform.
+
+NOTE Confidence: 0.9610112905502319
+
+00:12:24.480 --> 00:12:26.800
+And also we provide compound training.
+
+NOTE Confidence: 0.856955349445343
+
+00:12:27.240 --> 00:12:30.350
+So you can take a supervised fine-tuned model and then
+
+NOTE Confidence: 0.856955349445343
+
+00:12:30.408 --> 00:12:31.559
+do DPO on top of it.
+
+NOTE Confidence: 0.8632685542106628
+
+00:12:31.960 --> 00:12:35.315
+Then take a DPO model, do reinforcement learning on top
+
+NOTE Confidence: 0.8632685542106628
+
+00:12:35.376 --> 00:12:37.939
+of it and you can do as many iterations or
+
+NOTE Confidence: 0.8632685542106628
+
+00:12:38.000 --> 00:12:39.159
+passes as you want.
+
+NOTE Confidence: 0.8173717856407166
+
+00:12:39.440 --> 00:12:41.454
+That is the flywheel I was talking about of continuous
+
+NOTE Confidence: 0.8173717856407166
+
+00:12:41.491 --> 00:12:42.759
+iteration and continuous training.
+
+NOTE Confidence: 0.8810704946517944
+
+00:12:44.760 --> 00:12:46.240
+What happens once you train the model?
+
+NOTE Confidence: 0.8438572883605957
+
+00:12:46.760 --> 00:12:49.144
+This is the part where we talk about inference and
+
+NOTE Confidence: 0.8438572883605957
+
+00:12:49.192 --> 00:12:50.479
+doing dedicated deployment.
+
+NOTE Confidence: 0.8809122443199158
+
+00:12:51.040 --> 00:12:57.000
+So we support on demand deployment of these fine-tuned models.
+
+NOTE Confidence: 0.903592050075531
+
+00:12:57.440 --> 00:13:00.655
+Again, we support the largest array of open weight models
+
+NOTE Confidence: 0.903592050075531
+
+00:13:00.712 --> 00:13:03.363
+you can do inference on just like base model on
+
+NOTE Confidence: 0.903592050075531
+
+00:13:03.420 --> 00:13:04.999
+the platform if you want to.
+
+NOTE Confidence: 0.8026257753372192
+
+00:13:06.040 --> 00:13:08.529
+We also support inference on the fine-tuned model which I
+
+NOTE Confidence: 0.8026257753372192
+
+00:13:08.573 --> 00:13:09.359
+was talking about.
+
+NOTE Confidence: 0.6830752491950989
+
+00:13:10.560 --> 00:13:12.200
+So basically just come and select the model.
+
+NOTE Confidence: 0.8608537316322327
+
+00:13:14.280 --> 00:13:17.959
+One thing which is interesting here, remember I was talking
+
+NOTE Confidence: 0.8608537316322327
+
+00:13:18.021 --> 00:13:21.763
+about how using our fire optimizer capabilities were able to
+
+NOTE Confidence: 0.8608537316322327
+
+00:13:21.826 --> 00:13:25.069
+give you custom shapes of the model specific to your
+
+NOTE Confidence: 0.8608537316322327
+
+00:13:25.131 --> 00:13:25.879
+own traffic.
+
+NOTE Confidence: 0.8277689218521118
+
+00:13:26.520 --> 00:13:27.600
+You are seeing an example here.
+
+NOTE Confidence: 0.8634642362594604
+
+00:13:28.000 --> 00:13:30.560
+The same model on the same number of GPUs can
+
+NOTE Confidence: 0.8634642362594604
+
+00:13:30.617 --> 00:13:34.088
+give you very different performance depending on how you have
+
+NOTE Confidence: 0.8634642362594604
+
+00:13:34.145 --> 00:13:37.730
+orchestrated and packaged the whole GPU stack from CUDA kernels
+
+NOTE Confidence: 0.8634642362594604
+
+00:13:37.787 --> 00:13:40.119
+to spec decoding to everything around it.
+
+NOTE Confidence: 0.7160462141036987
+
+00:13:40.480 --> 00:13:41.560
+We are seeing an example here.
+
+NOTE Confidence: 0.8273425102233887
+
+00:13:41.600 --> 00:13:44.059
+The same model can be served in a minimal shape
+
+NOTE Confidence: 0.8273425102233887
+
+00:13:44.111 --> 00:13:46.571
+way or a full precision shape way can be served
+
+NOTE Confidence: 0.8273425102233887
+
+00:13:46.623 --> 00:13:49.240
+for optimized for speed, optimized for throughput.
+
+NOTE Confidence: 0.8838497996330261
+
+00:13:50.480 --> 00:13:53.845
+So the screen is showing you selecting a custom tuned
+
+NOTE Confidence: 0.8838497996330261
+
+00:13:53.908 --> 00:13:57.273
+model and you can choose the shape you want depending
+
+NOTE Confidence: 0.8838497996330261
+
+00:13:57.337 --> 00:14:01.210
+on your applications need and basically one click deploy that
+
+NOTE Confidence: 0.8838497996330261
+
+00:14:01.273 --> 00:14:02.479
+shape on the model.
+
+NOTE Confidence: 0.892877459526062
+
+00:14:02.800 --> 00:14:05.175
+We also support auto scaling, so you don't have to
+
+NOTE Confidence: 0.892877459526062
+
+00:14:05.222 --> 00:14:07.740
+worry about peaks and troughs of your traffic that we
+
+NOTE Confidence: 0.892877459526062
+
+00:14:07.787 --> 00:14:10.400
+already scale up and scale down as your traffic shifts.
+
+NOTE Confidence: 0.9133601784706116
+
+00:14:11.160 --> 00:14:13.920
+And yeah, that's how the deployment works.
+
+NOTE Confidence: 0.9663002490997314
+
+00:14:14.360 --> 00:14:17.194
+I also talked about the training API a couple of
+
+NOTE Confidence: 0.9663002490997314
+
+00:14:17.253 --> 00:14:18.080
+slides before.
+
+NOTE Confidence: 0.8444668650627136
+
+00:14:18.360 --> 00:14:19.280
+What is the training API?
+
+NOTE Confidence: 0.8994532823562622
+
+00:14:20.200 --> 00:14:23.054
+If you want raw power of the platform exposed to
+
+NOTE Confidence: 0.8994532823562622
+
+00:14:23.113 --> 00:14:26.205
+you because you're an advanced ML user, this is what
+
+NOTE Confidence: 0.8994532823562622
+
+00:14:26.264 --> 00:14:26.800
+you need.
+
+NOTE Confidence: 0.8949028849601746
+
+00:14:27.680 --> 00:14:29.834
+We take care of everything behind the scene in terms
+
+NOTE Confidence: 0.8949028849601746
+
+00:14:29.876 --> 00:14:31.948
+of infra, but still give you all the Norse exposed
+
+NOTE Confidence: 0.8949028849601746
+
+00:14:31.989 --> 00:14:32.279
+to you.
+
+NOTE Confidence: 0.9336903691291809
+
+00:14:32.720 --> 00:14:34.360
+You can write your own custom loss functions.
+
+NOTE Confidence: 0.8807543516159058
+
+00:14:34.680 --> 00:14:37.041
+You can, you know, go with the latest and greatest
+
+NOTE Confidence: 0.8807543516159058
+
+00:14:37.088 --> 00:14:38.079
+algorithms out there.
+
+NOTE Confidence: 0.7438998818397522
+
+00:14:38.080 --> 00:14:41.040
+Everybody is talking about on policy registration right now, Cisco.
+
+NOTE Confidence: 0.9203040599822998
+
+00:14:41.200 --> 00:14:43.794
+All these things are available and then you have full
+
+NOTE Confidence: 0.9203040599822998
+
+00:14:43.843 --> 00:14:44.920
+parameter fine tuning.
+
+NOTE Confidence: 0.8848843574523926
+
+00:14:45.080 --> 00:14:47.303
+We have a cookbook which has a bunch of recipes
+
+NOTE Confidence: 0.8848843574523926
+
+00:14:47.350 --> 00:14:49.479
+in a GitHub repo which is publicly available.
+
+NOTE Confidence: 0.9090031385421753
+
+00:14:49.880 --> 00:14:52.802
+You don't have to write something from scratch if you
+
+NOTE Confidence: 0.9090031385421753
+
+00:14:52.857 --> 00:14:55.559
+don't want to just pick a recipe chain the knobs.
+
+NOTE Confidence: 0.9110004901885986
+
+00:14:56.080 --> 00:14:59.540
+The beauty about this particular product is that you can
+
+NOTE Confidence: 0.9110004901885986
+
+00:14:59.602 --> 00:15:03.371
+train the model from within your harness, and that's actually
+
+NOTE Confidence: 0.9110004901885986
+
+00:15:03.433 --> 00:15:04.359
+very important.
+
+NOTE Confidence: 0.9549081325531006
+
+00:15:04.880 --> 00:15:07.110
+AI needs to learn how to do the job better,
+
+NOTE Confidence: 0.9549081325531006
+
+00:15:07.162 --> 00:15:09.185
+but it needs to learn how to do the job
+
+NOTE Confidence: 0.9549081325531006
+
+00:15:09.237 --> 00:15:12.868
+better from within your environment, from within your harness, knowing
+
+NOTE Confidence: 0.9549081325531006
+
+00:15:12.920 --> 00:15:15.565
+which tools it has access to and how to orchestrate
+
+NOTE Confidence: 0.9549081325531006
+
+00:15:15.617 --> 00:15:16.240
+these tools.
+
+NOTE Confidence: 0.8170801997184753
+
+00:15:16.600 --> 00:15:19.022
+With the training API, we are giving those capabilities to
+
+NOTE Confidence: 0.8170801997184753
+
+00:15:19.064 --> 00:15:19.439
+you Well.
+
+NOTE Confidence: 0.8619567155838013
+
+00:15:19.440 --> 00:15:21.684
+Also talk a little bit about harness and AI model
+
+NOTE Confidence: 0.8619567155838013
+
+00:15:21.730 --> 00:15:23.883
+coming together for fine tuning as we go to the
+
+NOTE Confidence: 0.8619567155838013
+
+00:15:23.929 --> 00:15:25.119
+later half of the session.
+
+NOTE Confidence: 0.8528839349746704
+
+00:15:28.600 --> 00:15:30.730
+And there's a bunch of examples which you can use
+
+NOTE Confidence: 0.8528839349746704
+
+00:15:30.773 --> 00:15:31.600
+to, to get started.
+
+NOTE Confidence: 0.9374232292175293
+
+00:15:31.600 --> 00:15:33.396
+You don't have to worry about like writing something from
+
+NOTE Confidence: 0.9374232292175293
+
+00:15:33.427 --> 00:15:33.679
+scratch.
+
+NOTE Confidence: 0.8071984648704529
+
+00:15:34.000 --> 00:15:37.567
+You can train A1 trillion parameter model from your laptop
+
+NOTE Confidence: 0.8071984648704529
+
+00:15:37.628 --> 00:15:39.719
+and we take care of all the infra.
+
+NOTE Confidence: 0.39325273036956787
+
+00:15:41.480 --> 00:15:41.720
+Cool.
+
+NOTE Confidence: 0.6854755282402039
+
+00:15:41.880 --> 00:15:42.120
+OK.
+
+NOTE Confidence: 0.933324933052063
+
+00:15:42.520 --> 00:15:47.275
+So we also want to talk about an exciting announcement
+
+NOTE Confidence: 0.933324933052063
+
+00:15:47.363 --> 00:15:53.263
+we had yesterday on Satya's keynote about fireworks being available
+
+NOTE Confidence: 0.933324933052063
+
+00:15:53.351 --> 00:15:54.319
+on Foundry.
+
+NOTE Confidence: 0.8632950782775879
+
+00:15:54.960 --> 00:15:57.582
+Everything which I showed you in terms of inference deployment
+
+NOTE Confidence: 0.8632950782775879
+
+00:15:57.624 --> 00:15:58.640
+is available on Foundry.
+
+NOTE Confidence: 0.7866271734237671
+
+00:15:58.640 --> 00:15:59.760
+The training side is not.
+
+NOTE Confidence: 0.7874690890312195
+
+00:16:00.000 --> 00:16:01.839
+You can train a model on Fireworks and you can
+
+NOTE Confidence: 0.7874690890312195
+
+00:16:01.879 --> 00:16:03.959
+download it and move it to a custom model deployment
+
+NOTE Confidence: 0.7874690890312195
+
+00:16:03.999 --> 00:16:04.439
+on Foundry.
+
+NOTE Confidence: 0.7741707563400269
+
+00:16:04.680 --> 00:16:06.560
+So you're not, you don't have to worry about that.
+
+NOTE Confidence: 0.9262148141860962
+
+00:16:07.160 --> 00:16:10.760
+And we have an announcement video.
+
+NOTE Confidence: 0.9013137817382812
+
+00:16:16.700 --> 00:16:20.528
+And now, which is the exciting thing that we're here
+
+NOTE Confidence: 0.9013137817382812
+
+00:16:20.601 --> 00:16:25.313
+together to announce is the general availability of Fireworks in
+
+NOTE Confidence: 0.9013137817382812
+
+00:16:25.386 --> 00:16:29.582
+Microsoft Foundry and how customers can not only take all
+
+NOTE Confidence: 0.9013137817382812
+
+00:16:29.656 --> 00:16:33.631
+of the greatness that Fireworks has to offer, but also
+
+NOTE Confidence: 0.9013137817382812
+
+00:16:33.705 --> 00:16:37.312
+all of the greatness that Foundry has to offer in
+
+NOTE Confidence: 0.9013137817382812
+
+00:16:37.386 --> 00:16:41.729
+a simplified way, 1 endpoint, one contract and one journey,
+
+NOTE Confidence: 0.9013137817382812
+
+00:16:41.802 --> 00:16:42.760
+one platform.
+
+NOTE Confidence: 0.941620945930481
+
+00:16:42.760 --> 00:16:44.280
+So I'm super excited.
+
+NOTE Confidence: 0.7125506401062012
+
+00:16:44.520 --> 00:16:45.280
+Thank you, Lean.
+
+NOTE Confidence: 0.9249035120010376
+
+00:16:45.280 --> 00:16:47.560
+It's been an amazing partnership with your team.
+
+NOTE Confidence: 0.8961644172668457
+
+00:16:56.000 --> 00:16:59.080
+Thank you, Vivek, for introducing Fireworks.
+
+NOTE Confidence: 0.9079852104187012
+
+00:16:59.680 --> 00:17:02.841
+Now what you're all here for today in terms of
+
+NOTE Confidence: 0.9079852104187012
+
+00:17:02.910 --> 00:17:06.485
+how Fireworks actually fits on Foundry and how to go
+
+NOTE Confidence: 0.9079852104187012
+
+00:17:06.553 --> 00:17:10.128
+from that model catalog on Azure Foundry all the way
+
+NOTE Confidence: 0.9079852104187012
+
+00:17:10.196 --> 00:17:13.840
+into production, it's actually quite straightforward.
+
+NOTE Confidence: 0.8318753242492676
+
+00:17:14.040 --> 00:17:16.931
+And before we even get into that in a demo,
+
+NOTE Confidence: 0.8318753242492676
+
+00:17:16.998 --> 00:17:21.771
+let's talk about why customers choose Fireworks on Foundry specifically
+
+NOTE Confidence: 0.8318753242492676
+
+00:17:21.839 --> 00:17:23.519
+for mainly 4 key reasons.
+
+NOTE Confidence: 0.8614752888679504
+
+00:17:23.800 --> 00:17:26.160
+One, because of performance.
+
+NOTE Confidence: 0.8453477025032043
+
+00:17:26.280 --> 00:17:30.387
+So my colleague Vivek actually introduced our inference engine that
+
+NOTE Confidence: 0.8453477025032043
+
+00:17:30.449 --> 00:17:33.760
+helps you do optimization from a CUDA kernel level up.
+
+NOTE Confidence: 0.929562509059906
+
+00:17:34.320 --> 00:17:37.107
+And so when customers come to us, we can actually
+
+NOTE Confidence: 0.929562509059906
+
+00:17:37.164 --> 00:17:40.235
+optimize for their specific use case and give the most
+
+NOTE Confidence: 0.929562509059906
+
+00:17:40.292 --> 00:17:42.625
+out of the GPU when the model sits on top
+
+NOTE Confidence: 0.929562509059906
+
+00:17:42.682 --> 00:17:45.639
+of the GPU for their inferencing needs and use case.
+
+NOTE Confidence: 0.9253718256950378
+
+00:17:46.000 --> 00:17:49.160
+The second reason being the model advantage.
+
+NOTE Confidence: 0.8800603151321411
+
+00:17:49.760 --> 00:17:53.256
+Most of the models that are released on fireworks, we
+
+NOTE Confidence: 0.8800603151321411
+
+00:17:53.322 --> 00:17:54.840
+release it on day zero.
+
+NOTE Confidence: 0.8482644557952881
+
+00:17:55.040 --> 00:17:58.077
+So when Deep V4 came out or the Kimi 2.6
+
+NOTE Confidence: 0.8482644557952881
+
+00:17:58.153 --> 00:18:01.798
+came out, we tried our best to release all these
+
+NOTE Confidence: 0.8482644557952881
+
+00:18:01.874 --> 00:18:05.520
+state-of-the-art open source models on day zero.
+
+NOTE Confidence: 0.8666194677352905
+
+00:18:05.520 --> 00:18:07.775
+So you can plug it into your agents as soon
+
+NOTE Confidence: 0.8666194677352905
+
+00:18:07.828 --> 00:18:08.720
+as they come out.
+
+NOTE Confidence: 0.9324893951416016
+
+00:18:09.200 --> 00:18:14.840
+The third reason being more of control and extensibility itself.
+
+NOTE Confidence: 0.8962876796722412
+
+00:18:15.720 --> 00:18:19.042
+So a lot of the custom models can now be
+
+NOTE Confidence: 0.8962876796722412
+
+00:18:19.125 --> 00:18:24.606
+deployed on Foundry through the integration of Fireworks and Azure
+
+NOTE Confidence: 0.8962876796722412
+
+00:18:24.689 --> 00:18:26.600
+Foundry Catalog itself.
+
+NOTE Confidence: 0.9431019425392151
+
+00:18:26.960 --> 00:18:29.160
+The last being economics.
+
+NOTE Confidence: 0.9542754888534546
+
+00:18:29.160 --> 00:18:32.320
+This is what most customers really, really care about.
+
+NOTE Confidence: 0.9028979539871216
+
+00:18:32.640 --> 00:18:36.932
+When you start scaling these closed source models specifically in
+
+NOTE Confidence: 0.9028979539871216
+
+00:18:36.998 --> 00:18:40.959
+your applications, they get really expensive really quickly.
+
+NOTE Confidence: 0.8548451662063599
+
+00:18:41.200 --> 00:18:44.592
+So what customers are looking for is a cheaper alternative
+
+NOTE Confidence: 0.8548451662063599
+
+00:18:44.650 --> 00:18:47.750
+at the same time meeting the quality that these close
+
+NOTE Confidence: 0.8548451662063599
+
+00:18:47.808 --> 00:18:48.919
+source models give.
+
+NOTE Confidence: 0.9393046498298645
+
+00:18:49.240 --> 00:18:52.280
+And that's what the models on Fireworks actually provide.
+
+NOTE Confidence: 0.902870774269104
+
+00:18:52.520 --> 00:18:56.034
+And integrated with Azure Foundry, it's even more easier for
+
+NOTE Confidence: 0.902870774269104
+
+00:18:56.093 --> 00:18:58.846
+you to use up these Azure credits that you have
+
+NOTE Confidence: 0.902870774269104
+
+00:18:58.905 --> 00:18:59.959
+on Foundry itself.
+
+NOTE Confidence: 0.8072336316108704
+
+00:19:01.480 --> 00:19:05.600
+So that there are three main integration modes that customers
+
+NOTE Confidence: 0.8072336316108704
+
+00:19:05.667 --> 00:19:08.640
+use when integrating fireworks with Foundry.
+
+NOTE Confidence: 0.870271623134613
+
+00:19:08.880 --> 00:19:10.960
+The first being serverless.
+
+NOTE Confidence: 0.8938974142074585
+
+00:19:11.280 --> 00:19:14.875
+These are models that are deployed on Foundry and you
+
+NOTE Confidence: 0.8938974142074585
+
+00:19:14.943 --> 00:19:18.199
+don't really have to create a deployment per SE.
+
+NOTE Confidence: 0.9167554974555969
+
+00:19:18.880 --> 00:19:20.080
+It's already created.
+
+NOTE Confidence: 0.8581748604774475
+
+00:19:20.080 --> 00:19:23.080
+It's a shared deployment among multiple users.
+
+NOTE Confidence: 0.8291342854499817
+
+00:19:23.320 --> 00:19:25.120
+It is per token basis.
+
+NOTE Confidence: 0.9031059741973877
+
+00:19:25.119 --> 00:19:28.722
+You'll be charged per token when you use this particular
+
+NOTE Confidence: 0.9031059741973877
+
+00:19:28.786 --> 00:19:29.880
+model on Foundry.
+
+NOTE Confidence: 0.9153540134429932
+
+00:19:30.080 --> 00:19:34.194
+So we have a lot state-of-the-art OSS models available today
+
+NOTE Confidence: 0.9153540134429932
+
+00:19:34.262 --> 00:19:35.360
+through Foundry.
+
+NOTE Confidence: 0.9110054969787598
+
+00:19:35.359 --> 00:19:38.002
+In this particular mode that is the serverless or pay
+
+NOTE Confidence: 0.9110054969787598
+
+00:19:38.052 --> 00:19:38.799
+as you go mode.
+
+NOTE Confidence: 0.8889923095703125
+
+00:19:39.160 --> 00:19:42.836
+We have GLM 5.1, Kimi 2.6, GPT 120B and we
+
+NOTE Confidence: 0.8889923095703125
+
+00:19:42.923 --> 00:19:46.600
+are releasing models as they come as well.
+
+NOTE Confidence: 0.7632261514663696
+
+00:19:46.960 --> 00:19:50.965
+The second mode being mode, the PTU or provisional throughput
+
+NOTE Confidence: 0.7632261514663696
+
+00:19:51.031 --> 00:19:51.360
+mode.
+
+NOTE Confidence: 0.8824192881584167
+
+00:19:51.680 --> 00:19:55.614
+This is when you already have a production workload in
+
+NOTE Confidence: 0.8824192881584167
+
+00:19:55.687 --> 00:19:59.257
+mind and you want to reserve some GPUs and deploy
+
+NOTE Confidence: 0.8824192881584167
+
+00:19:59.330 --> 00:20:01.880
+a model for your specific use case.
+
+NOTE Confidence: 0.8171370029449463
+
+00:20:02.160 --> 00:20:05.432
+This is PTU gated and it works really, really well
+
+NOTE Confidence: 0.8171370029449463
+
+00:20:05.498 --> 00:20:07.919
+for production workload specifically.
+
+NOTE Confidence: 0.8899645805358887
+
+00:20:08.280 --> 00:20:11.280
+And then the last one being bring your own weights.
+
+NOTE Confidence: 0.8986803889274597
+
+00:20:11.600 --> 00:20:13.594
+A lot of the customers, when they come to us
+
+NOTE Confidence: 0.8986803889274597
+
+00:20:13.639 --> 00:20:16.766
+and when they're especially competing with closed source models, they
+
+NOTE Confidence: 0.8986803889274597
+
+00:20:16.811 --> 00:20:19.304
+have trained open source models to compete with them in
+
+NOTE Confidence: 0.8986803889274597
+
+00:20:19.349 --> 00:20:20.120
+terms of quality.
+
+NOTE Confidence: 0.8624079823493958
+
+00:20:20.640 --> 00:20:23.340
+And when they have their own models that they have
+
+NOTE Confidence: 0.8624079823493958
+
+00:20:23.394 --> 00:20:26.311
+trained and the custom weights, they want to deploy it
+
+NOTE Confidence: 0.8624079823493958
+
+00:20:26.365 --> 00:20:26.960
+on Foundry.
+
+NOTE Confidence: 0.8553369045257568
+
+00:20:27.160 --> 00:20:30.932
+So like Vivek mentioned, you can chain these models on
+
+NOTE Confidence: 0.8553369045257568
+
+00:20:31.002 --> 00:20:35.123
+Fireworks and then download the model weights, upload it to
+
+NOTE Confidence: 0.8553369045257568
+
+00:20:35.193 --> 00:20:38.476
+Azure and deploy it on Azure and use your Azure
+
+NOTE Confidence: 0.8553369045257568
+
+00:20:38.546 --> 00:20:41.759
+credits for that particular deployment itself.
+
+NOTE Confidence: 0.8239359855651855
+
+00:20:42.200 --> 00:20:47.973
+This particular integration architecture deployment work, deployment mode works very
+
+NOTE Confidence: 0.8239359855651855
+
+00:20:48.042 --> 00:20:52.097
+well when you have trained proprietary models and you wanna
+
+NOTE Confidence: 0.8239359855651855
+
+00:20:52.166 --> 00:20:54.160
+use that in your application.
+
+NOTE Confidence: 0.932299017906189
+
+00:20:55.840 --> 00:20:58.485
+Now that we know a little bit about what the
+
+NOTE Confidence: 0.932299017906189
+
+00:20:58.545 --> 00:21:02.212
+Azure and Fireworks integration is about, let's talk a little
+
+NOTE Confidence: 0.932299017906189
+
+00:21:02.272 --> 00:21:06.240
+bit about what customers are saying about this integration itself.
+
+NOTE Confidence: 0.7907953858375549
+
+00:21:07.200 --> 00:21:11.159
+One, our friends at UI Path actually wanted a faster
+
+NOTE Confidence: 0.7907953858375549
+
+00:21:11.235 --> 00:21:13.519
+and more cost effective model.
+
+NOTE Confidence: 0.8088626861572266
+
+00:21:13.760 --> 00:21:17.374
+Not only that, they actually wanted a model, an open
+
+NOTE Confidence: 0.8088626861572266
+
+00:21:17.443 --> 00:21:20.988
+source model to beat the quality of a closed source
+
+NOTE Confidence: 0.8088626861572266
+
+00:21:21.058 --> 00:21:22.239
+Sonnet 4.6 model.
+
+NOTE Confidence: 0.9184820055961609
+
+00:21:22.520 --> 00:21:27.063
+And this was achievable by using models on Fireworks and
+
+NOTE Confidence: 0.9184820055961609
+
+00:21:27.144 --> 00:21:28.280
+Azure Foundry.
+
+NOTE Confidence: 0.8530402779579163
+
+00:21:28.920 --> 00:21:31.730
+And then there there are stakeholders from Bolt knew what
+
+NOTE Confidence: 0.8530402779579163
+
+00:21:31.779 --> 00:21:34.886
+they were looking for, for their application was something that
+
+NOTE Confidence: 0.8530402779579163
+
+00:21:34.935 --> 00:21:37.548
+can scale well in terms of throughput and latency for
+
+NOTE Confidence: 0.8530402779579163
+
+00:21:37.598 --> 00:21:38.880
+their production use case.
+
+NOTE Confidence: 0.9066616296768188
+
+00:21:39.440 --> 00:21:41.280
+And this was definitely possible.
+
+NOTE Confidence: 0.8345617651939392
+
+00:21:41.280 --> 00:21:45.317
+And their particular, we found a solution for their particular
+
+NOTE Confidence: 0.8345617651939392
+
+00:21:45.382 --> 00:21:49.160
+problem using the Azure ecosystem and the fireworks model.
+
+NOTE Confidence: 0.8214031457901001
+
+00:21:49.680 --> 00:21:53.860
+Lastly, some of the key decision makers at Motif were
+
+NOTE Confidence: 0.8214031457901001
+
+00:21:53.939 --> 00:21:58.356
+actually trying to have models run a repeatable task and
+
+NOTE Confidence: 0.8214031457901001
+
+00:21:58.434 --> 00:22:00.880
+also at a high volume workload.
+
+NOTE Confidence: 0.8544563055038452
+
+00:22:01.240 --> 00:22:05.884
+And to support that specific workload, they deployed models on
+
+NOTE Confidence: 0.8544563055038452
+
+00:22:05.959 --> 00:22:10.229
+Azure Foundry that was also optimized using the using the
+
+NOTE Confidence: 0.8544563055038452
+
+00:22:10.304 --> 00:22:14.124
+engine that Fireworks has and we were able to serve
+
+NOTE Confidence: 0.8544563055038452
+
+00:22:14.199 --> 00:22:18.319
+that particular repeatable high volume workload itself.
+
+NOTE Confidence: 0.9129915833473206
+
+00:22:19.280 --> 00:22:21.802
+Now that we know a bit about what customers are
+
+NOTE Confidence: 0.9129915833473206
+
+00:22:21.856 --> 00:22:24.916
+telling us and what that integration is about, let's look
+
+NOTE Confidence: 0.9129915833473206
+
+00:22:24.969 --> 00:22:27.600
+at quick demos on this particular section itself.
+
+NOTE Confidence: 0.9433772563934326
+
+00:22:29.640 --> 00:22:33.920
+So when customers actually come to the Azure Foundry platform,
+
+NOTE Confidence: 0.9433772563934326
+
+00:22:33.989 --> 00:22:37.165
+they can go to the Discover page as pointed to
+
+NOTE Confidence: 0.9433772563934326
+
+00:22:37.234 --> 00:22:38.960
+in this particular video.
+
+NOTE Confidence: 0.8636874556541443
+
+00:22:39.359 --> 00:22:42.928
+And then in the catalog itself, go to the models
+
+NOTE Confidence: 0.8636874556541443
+
+00:22:43.003 --> 00:22:45.679
+page and look at the model catalogs.
+
+NOTE Confidence: 0.8356888890266418
+
+00:22:46.119 --> 00:22:49.253
+And within these model catalogs, if you want to find
+
+NOTE Confidence: 0.8356888890266418
+
+00:22:49.313 --> 00:22:52.989
+all the Fireworks models and that are optimized on Fireworks,
+
+NOTE Confidence: 0.8356888890266418
+
+00:22:53.049 --> 00:22:55.399
+most of them have the prefix called FW.
+
+NOTE Confidence: 0.8664218187332153
+
+00:22:56.520 --> 00:22:59.440
+For using the serverless pay as you go method.
+
+NOTE Confidence: 0.9669221639633179
+
+00:22:59.440 --> 00:23:02.514
+You can just click on this particular model and then
+
+NOTE Confidence: 0.9669221639633179
+
+00:23:02.573 --> 00:23:03.520
+click on deploy.
+
+NOTE Confidence: 0.8415839076042175
+
+00:23:05.680 --> 00:23:08.429
+Once customer click on deploy, it asks you whether you
+
+NOTE Confidence: 0.8415839076042175
+
+00:23:08.479 --> 00:23:10.159
+want to set some custom settings.
+
+NOTE Confidence: 0.8619361519813538
+
+00:23:10.160 --> 00:23:13.631
+These custom settings actually are settings that you can configure
+
+NOTE Confidence: 0.8619361519813538
+
+00:23:13.684 --> 00:23:15.998
+based on the PTU or the rate limits that you
+
+NOTE Confidence: 0.8619361519813538
+
+00:23:16.051 --> 00:23:16.840
+are interested.
+
+NOTE Confidence: 0.8645786643028259
+
+00:23:17.080 --> 00:23:20.539
+All serverless models that are deployed through Azure and Fireworks
+
+NOTE Confidence: 0.8645786643028259
+
+00:23:20.590 --> 00:23:23.533
+actually have some kind of rate limit because it's shared
+
+NOTE Confidence: 0.8645786643028259
+
+00:23:23.585 --> 00:23:24.360
+infrastructure.
+
+NOTE Confidence: 0.8493215441703796
+
+00:23:24.680 --> 00:23:27.645
+So you can talk this particular switch to figure out
+
+NOTE Confidence: 0.8493215441703796
+
+00:23:27.702 --> 00:23:30.040
+what kind of rate limits you want to set.
+
+NOTE Confidence: 0.9235368371009827
+
+00:23:30.600 --> 00:23:33.645
+And once you do and you click deploy, you will
+
+NOTE Confidence: 0.9235368371009827
+
+00:23:33.711 --> 00:23:36.889
+actually see a screen as shown above and you can
+
+NOTE Confidence: 0.9235368371009827
+
+00:23:36.955 --> 00:23:38.279
+chat with the model.
+
+NOTE Confidence: 0.9122638702392578
+
+00:23:38.280 --> 00:23:40.972
+In fact, you can even use the API itself to
+
+NOTE Confidence: 0.9122638702392578
+
+00:23:41.035 --> 00:23:44.480
+plug into your agents or applications that you do have.
+
+NOTE Confidence: 0.8814675807952881
+
+00:23:45.680 --> 00:23:48.339
+You might be wondering, OK, great, I can use a
+
+NOTE Confidence: 0.8814675807952881
+
+00:23:48.396 --> 00:23:51.460
+model that already exists in the catalog, but what do
+
+NOTE Confidence: 0.8814675807952881
+
+00:23:51.518 --> 00:23:54.119
+I do if I care about my custom models itself?
+
+NOTE Confidence: 0.8924124240875244
+
+00:23:54.640 --> 00:23:57.640
+In this case, you can even upload your custom models.
+
+NOTE Confidence: 0.9533731937408447
+
+00:23:57.640 --> 00:24:00.430
+So you might have to train these models on fireworks
+
+NOTE Confidence: 0.9533731937408447
+
+00:24:00.484 --> 00:24:01.879
+and download these models.
+
+NOTE Confidence: 0.8775038719177246
+
+00:24:02.200 --> 00:24:05.139
+But once you do, actually uploading it and deploying it
+
+NOTE Confidence: 0.8775038719177246
+
+00:24:05.193 --> 00:24:08.239
+is quite straightforward and it's just a bunch of clicks.
+
+NOTE Confidence: 0.9509851336479187
+
+00:24:10.119 --> 00:24:14.466
+In this particular video, it actually shows you how to
+
+NOTE Confidence: 0.9509851336479187
+
+00:24:14.546 --> 00:24:16.719
+deploy these custom models.
+
+NOTE Confidence: 0.9054311513900757
+
+00:24:16.720 --> 00:24:20.184
+You go to the build section of Azure itself and
+
+NOTE Confidence: 0.9054311513900757
+
+00:24:20.258 --> 00:24:23.648
+once you do and go to the model pages, instead
+
+NOTE Confidence: 0.9054311513900757
+
+00:24:23.722 --> 00:24:27.334
+of going to the deployments, you go to the custom
+
+NOTE Confidence: 0.9054311513900757
+
+00:24:27.408 --> 00:24:28.439
+model section.
+
+NOTE Confidence: 0.9381797909736633
+
+00:24:28.720 --> 00:24:31.120
+Over here you have a button that says Add.
+
+NOTE Confidence: 0.8836875557899475
+
+00:24:31.480 --> 00:24:33.760
+This lets you add your own custom models.
+
+NOTE Confidence: 0.9202904105186462
+
+00:24:34.240 --> 00:24:36.933
+You can name it whatever you want and choose the
+
+NOTE Confidence: 0.9202904105186462
+
+00:24:36.989 --> 00:24:38.000
+base architecture.
+
+NOTE Confidence: 0.9176323413848877
+
+00:24:38.200 --> 00:24:41.451
+If the base architecture is not by default supported, then
+
+NOTE Confidence: 0.9176323413848877
+
+00:24:41.507 --> 00:24:44.422
+you can contact Azure and Fireworks and we will help
+
+NOTE Confidence: 0.9176323413848877
+
+00:24:44.478 --> 00:24:46.159
+you enable it on Azure itself.
+
+NOTE Confidence: 0.8619992733001709
+
+00:24:46.640 --> 00:24:49.594
+And once you do have it, you've got to use
+
+NOTE Confidence: 0.8619992733001709
+
+00:24:49.664 --> 00:24:53.885
+this command line, command line prompt that it actually gave
+
+NOTE Confidence: 0.8619992733001709
+
+00:24:53.955 --> 00:24:56.840
+you to upload your custom model to Azure.
+
+NOTE Confidence: 0.9231050610542297
+
+00:24:57.240 --> 00:25:00.200
+And once it's uploaded, it's very easy to deploy.
+
+NOTE Confidence: 0.9549881815910339
+
+00:25:00.440 --> 00:25:04.972
+You just click on the custom model that you have
+
+NOTE Confidence: 0.9549881815910339
+
+00:25:05.066 --> 00:25:08.559
+on the platform and you click deploy.
+
+NOTE Confidence: 0.9342628121376038
+
+00:25:09.080 --> 00:25:10.360
+It's as simple as that.
+
+NOTE Confidence: 0.8655581474304199
+
+00:25:11.520 --> 00:25:14.887
+And because this is your particular deployment, you don't really
+
+NOTE Confidence: 0.8655581474304199
+
+00:25:14.939 --> 00:25:17.465
+have any rate limits and you can decide how many
+
+NOTE Confidence: 0.8655581474304199
+
+00:25:17.517 --> 00:25:20.621
+Ptus or provision throughput you want to provision for this
+
+NOTE Confidence: 0.8655581474304199
+
+00:25:20.674 --> 00:25:22.199
+particular deployment itself.
+
+NOTE Confidence: 0.9283332228660583
+
+00:25:23.720 --> 00:25:26.840
+And very similar to what we saw before, once this
+
+NOTE Confidence: 0.9283332228660583
+
+00:25:26.904 --> 00:25:29.451
+model is ready, you can go to the UI and
+
+NOTE Confidence: 0.9283332228660583
+
+00:25:29.515 --> 00:25:32.317
+chat with the model or use the API itself to
+
+NOTE Confidence: 0.9283332228660583
+
+00:25:32.381 --> 00:25:35.119
+integrate with your applications or agents.
+
+NOTE Confidence: 0.8909569382667542
+
+00:25:40.040 --> 00:25:43.830
+Say you have your models, either custom or existing based
+
+NOTE Confidence: 0.8909569382667542
+
+00:25:43.896 --> 00:25:47.421
+models on Azure ready and you want to actually deploy
+
+NOTE Confidence: 0.8909569382667542
+
+00:25:47.487 --> 00:25:50.480
+these models through the Azure agents itself.
+
+NOTE Confidence: 0.9785581231117249
+
+00:25:50.760 --> 00:25:51.640
+How do you do that?
+
+NOTE Confidence: 0.9342995285987854
+
+00:25:52.200 --> 00:25:54.760
+That's a question that a lot of customers ask us.
+
+NOTE Confidence: 0.8993129730224609
+
+00:25:54.760 --> 00:25:57.343
+And I'll quickly show you a demo on how to
+
+NOTE Confidence: 0.8993129730224609
+
+00:25:57.405 --> 00:26:00.788
+plug in the fireworks models on Foundry into the agents
+
+NOTE Confidence: 0.8993129730224609
+
+00:26:00.850 --> 00:26:03.679
+that you found on in the Azure catalog itself.
+
+NOTE Confidence: 0.9281851053237915
+
+00:26:04.240 --> 00:26:07.544
+So when you go to the build page, you will
+
+NOTE Confidence: 0.9281851053237915
+
+00:26:07.623 --> 00:26:10.927
+see even a step to look at the agents that
+
+NOTE Confidence: 0.9281851053237915
+
+00:26:11.006 --> 00:26:13.760
+are existing on your Azure account.
+
+NOTE Confidence: 0.9491041302680969
+
+00:26:14.400 --> 00:26:16.894
+And you can name your agent whatever you want and
+
+NOTE Confidence: 0.9491041302680969
+
+00:26:16.945 --> 00:26:17.760
+click on deploy.
+
+NOTE Confidence: 0.8665757179260254
+
+00:26:18.119 --> 00:26:20.946
+Once you deploy, you can change the models that works
+
+NOTE Confidence: 0.8665757179260254
+
+00:26:20.999 --> 00:26:22.919
+behind this particular agent itself.
+
+NOTE Confidence: 0.8595148324966431
+
+00:26:25.400 --> 00:26:27.400
+It'll just take a couple of minutes to deploy.
+
+NOTE Confidence: 0.9415544271469116
+
+00:26:27.640 --> 00:26:30.091
+And as you can see, it lists a bunch of
+
+NOTE Confidence: 0.9415544271469116
+
+00:26:30.154 --> 00:26:32.040
+models that the agent can use.
+
+NOTE Confidence: 0.8916720151901245
+
+00:26:32.040 --> 00:26:35.038
+You can choose a fireworks model that already exists on
+
+NOTE Confidence: 0.8916720151901245
+
+00:26:35.092 --> 00:26:37.599
+Foundry or you can even choose a custom model.
+
+NOTE Confidence: 0.819516658782959
+
+00:26:37.880 --> 00:26:41.360
+You can even integrate these agent with different tools.
+
+NOTE Confidence: 0.9489104747772217
+
+00:26:41.359 --> 00:26:43.576
+It can be web search tools, it can be tools
+
+NOTE Confidence: 0.9489104747772217
+
+00:26:43.628 --> 00:26:46.359
+that you define or functions that you define as well.
+
+NOTE Confidence: 0.9556565880775452
+
+00:26:46.600 --> 00:26:49.419
+And the agent will work really well with the tools
+
+NOTE Confidence: 0.9556565880775452
+
+00:26:49.476 --> 00:26:52.803
+along with the fireworks model that you have integrated the
+
+NOTE Confidence: 0.9556565880775452
+
+00:26:52.859 --> 00:26:53.479
+agent with.
+
+NOTE Confidence: 0.9370666742324829
+
+00:26:55.960 --> 00:26:57.840
+So this is all well and good.
+
+NOTE Confidence: 0.8685511946678162
+
+00:26:57.840 --> 00:27:02.422
+And you might be wondering, OK, let's hear actual customer
+
+NOTE Confidence: 0.8685511946678162
+
+00:27:02.501 --> 00:27:07.715
+talk about deploying their their application and agents using this
+
+NOTE Confidence: 0.8685511946678162
+
+00:27:07.794 --> 00:27:10.559
+fireworks and Azure Foundry itself.
+
+NOTE Confidence: 0.906068742275238
+
+00:27:10.800 --> 00:27:13.960
+And for that today here we have Nico.
+
+NOTE Confidence: 0.870927631855011
+
+00:27:14.120 --> 00:27:15.800
+A quick round of applause for Nico.
+
+NOTE Confidence: 0.819472074508667
+
+00:27:15.800 --> 00:27:20.124
+He'll be talking about Harvey and how they used Azure
+
+NOTE Confidence: 0.819472074508667
+
+00:27:20.206 --> 00:27:21.919
+and Fireworks itself.
+
+NOTE Confidence: 0.6815944314002991
+
+00:27:26.880 --> 00:27:30.120
+Awesome thank you so much Nico for for joining.
+
+NOTE Confidence: 0.6503057479858398
+
+00:27:30.320 --> 00:27:33.960
+Nico leads the applied research team at Harvey AI.
+
+NOTE Confidence: 0.5899249315261841
+
+00:27:34.359 --> 00:27:38.381
+Harvey AI is a can you guys not hear us
+
+NOTE Confidence: 0.5899249315261841
+
+00:27:38.484 --> 00:27:43.021
+is the mic for kick OK better now OK awesome
+
+NOTE Confidence: 0.5899249315261841
+
+00:27:43.124 --> 00:27:43.639
+yeah.
+
+NOTE Confidence: 0.742836058139801
+
+00:27:44.000 --> 00:27:47.000
+Nico leads the applied research team at Harvey AI.
+
+NOTE Confidence: 0.7791517972946167
+
+00:27:47.000 --> 00:27:50.279
+Harvey is the leading native AI startup and and it
+
+NOTE Confidence: 0.7791517972946167
+
+00:27:50.344 --> 00:27:53.820
+is used by hundreds of leading legal firms around the
+
+NOTE Confidence: 0.7791517972946167
+
+00:27:53.886 --> 00:27:54.279
+globe.
+
+NOTE Confidence: 0.8072183132171631
+
+00:27:55.080 --> 00:27:58.411
+And two weeks ago, 3 weeks ago, they launched the
+
+NOTE Confidence: 0.8072183132171631
+
+00:27:58.479 --> 00:28:01.879
+new benchmark for legal lab legal agent benchmark.
+
+NOTE Confidence: 0.7780098915100098
+
+00:28:01.880 --> 00:28:04.400
+So we're excited to talk about the benchmark.
+
+NOTE Confidence: 0.8442292213439941
+
+00:28:04.760 --> 00:28:08.514
+We're excited to talk about how we're using, working together,
+
+NOTE Confidence: 0.8442292213439941
+
+00:28:08.575 --> 00:28:12.572
+open weight models, closes models and orchestrating and getting to
+
+NOTE Confidence: 0.8442292213439941
+
+00:28:12.632 --> 00:28:15.599
+a really good price performance for applications.
+
+NOTE Confidence: 0.8577908873558044
+
+00:28:15.840 --> 00:28:16.520
+OK, awesome.
+
+NOTE Confidence: 0.7664145827293396
+
+00:28:17.480 --> 00:28:19.118
+You're going to talk a little bit about Harvey and
+
+NOTE Confidence: 0.7664145827293396
+
+00:28:19.151 --> 00:28:19.839
+the benchmark itself.
+
+NOTE Confidence: 0.8105599880218506
+
+00:28:20.080 --> 00:28:23.440
+Sure, happy to and thanks for having me incredible event.
+
+NOTE Confidence: 0.8139033913612366
+
+00:28:23.440 --> 00:28:25.719
+So my name is Nico Grupin, I'm the head of
+
+NOTE Confidence: 0.8139033913612366
+
+00:28:25.774 --> 00:28:27.239
+applied research at Harvey.
+
+NOTE Confidence: 0.8731218576431274
+
+00:28:27.240 --> 00:28:29.884
+Harvey is of course the generative AI platform for legal
+
+NOTE Confidence: 0.8731218576431274
+
+00:28:29.932 --> 00:28:31.159
+and professional services.
+
+NOTE Confidence: 0.9058437347412109
+
+00:28:31.480 --> 00:28:35.387
+We serve actually thousands of, of law firms across the
+
+NOTE Confidence: 0.9058437347412109
+
+00:28:35.458 --> 00:28:38.725
+world and our mission is to make the work that
+
+NOTE Confidence: 0.9058437347412109
+
+00:28:38.796 --> 00:28:43.130
+lawyers do more efficient, higher quality and reduce the busy
+
+NOTE Confidence: 0.9058437347412109
+
+00:28:43.201 --> 00:28:44.480
+work within legal.
+
+NOTE Confidence: 0.8460271954536438
+
+00:28:44.480 --> 00:28:47.897
+So as, as was kind of alluded to three weeks
+
+NOTE Confidence: 0.8460271954536438
+
+00:28:47.975 --> 00:28:51.159
+ago, we'd launched legal agent benchmark.
+
+NOTE Confidence: 0.9241940975189209
+
+00:28:51.360 --> 00:28:54.929
+As agents sort of proliferate in the application layer, one
+
+NOTE Confidence: 0.9241940975189209
+
+00:28:54.990 --> 00:28:57.713
+of the biggest questions on the top of all of
+
+NOTE Confidence: 0.9241940975189209
+
+00:28:57.773 --> 00:29:00.375
+our minds are what does it mean in terms of
+
+NOTE Confidence: 0.9241940975189209
+
+00:29:00.435 --> 00:29:00.919
+quality?
+
+NOTE Confidence: 0.9671375751495361
+
+00:29:00.920 --> 00:29:04.376
+How do I think about quality in my respective vertical
+
+NOTE Confidence: 0.9671375751495361
+
+00:29:04.440 --> 00:29:05.080
+or domain?
+
+NOTE Confidence: 0.8385213017463684
+
+00:29:05.800 --> 00:29:08.653
+That's what lab for short is intended to, to to
+
+NOTE Confidence: 0.8385213017463684
+
+00:29:08.714 --> 00:29:09.200
+address.
+
+NOTE Confidence: 0.9113748669624329
+
+00:29:09.200 --> 00:29:12.656
+So it's a benchmark to measure the performance of long
+
+NOTE Confidence: 0.9113748669624329
+
+00:29:12.720 --> 00:29:14.640
+horizon agents on legal tasks.
+
+NOTE Confidence: 0.9545961022377014
+
+00:29:15.480 --> 00:29:16.280
+So what does that mean?
+
+NOTE Confidence: 0.955226480960846
+
+00:29:16.280 --> 00:29:17.880
+There's really 4 components here.
+
+NOTE Confidence: 0.8116207718849182
+
+00:29:18.480 --> 00:29:20.560
+The first is the agent's environment.
+
+NOTE Confidence: 0.853178858757019
+
+00:29:20.560 --> 00:29:23.680
+So the agent's environment is effectively a client matter.
+
+NOTE Confidence: 0.9004841446876526
+
+00:29:24.120 --> 00:29:27.038
+A client matter is the term that we use to
+
+NOTE Confidence: 0.9004841446876526
+
+00:29:27.107 --> 00:29:32.111
+describe the universe of documents, work, intermediate work product that
+
+NOTE Confidence: 0.9004841446876526
+
+00:29:32.180 --> 00:29:34.959
+a lawyer uses when completing a project.
+
+NOTE Confidence: 0.7490061521530151
+
+00:29:35.160 --> 00:29:35.360
+Right.
+
+NOTE Confidence: 0.8617887496948242
+
+00:29:35.360 --> 00:29:38.453
+So the agents dropped into this environment and it's given
+
+NOTE Confidence: 0.8617887496948242
+
+00:29:38.506 --> 00:29:39.679
+an instruction, right?
+
+NOTE Confidence: 0.935710072517395
+
+00:29:39.680 --> 00:29:42.045
+And the instruction is not a detailed list of hey,
+
+NOTE Confidence: 0.935710072517395
+
+00:29:42.092 --> 00:29:44.080
+here are all of the things you need to do.
+
+NOTE Confidence: 0.9499157667160034
+
+00:29:44.080 --> 00:29:45.920
+It's a partner level instruction, right?
+
+NOTE Confidence: 0.8648954629898071
+
+00:29:46.200 --> 00:29:48.692
+Which is, hey, here's a data room, go write me
+
+NOTE Confidence: 0.8648954629898071
+
+00:29:48.747 --> 00:29:49.559
+an issues list.
+
+NOTE Confidence: 0.9456728100776672
+
+00:29:49.760 --> 00:29:51.666
+And then you have to circle back with the complete
+
+NOTE Confidence: 0.9456728100776672
+
+00:29:51.704 --> 00:29:52.200
+work product.
+
+NOTE Confidence: 0.6532069444656372
+
+00:29:52.200 --> 00:29:54.080
+So that's the context that the agent's given.
+
+NOTE Confidence: 0.8912023305892944
+
+00:29:54.280 --> 00:29:56.654
+It needs to rely on both its priors for how
+
+NOTE Confidence: 0.8912023305892944
+
+00:29:56.709 --> 00:29:59.138
+legal work is done as well as tools and kind
+
+NOTE Confidence: 0.8912023305892944
+
+00:29:59.194 --> 00:30:02.341
+of harness, harness skills, those sort of things that has
+
+NOTE Confidence: 0.8912023305892944
+
+00:30:02.396 --> 00:30:03.280
+available to it.
+
+NOTE Confidence: 0.9340326189994812
+
+00:30:04.240 --> 00:30:06.920
+It's asked to produce real legal work product.
+
+NOTE Confidence: 0.858109176158905
+
+00:30:07.400 --> 00:30:09.947
+So it's not just a chat based kind of interface
+
+NOTE Confidence: 0.858109176158905
+
+00:30:10.001 --> 00:30:10.759
+a chat answer.
+
+NOTE Confidence: 0.916102409362793
+
+00:30:11.040 --> 00:30:14.725
+The agent has to produce real word docs, Excel spreadsheets,
+
+NOTE Confidence: 0.916102409362793
+
+00:30:14.786 --> 00:30:18.041
+PowerPoints, potentially many of them 5 to 10 of them
+
+NOTE Confidence: 0.916102409362793
+
+00:30:18.103 --> 00:30:20.560
+in a single in a single scope of a task.
+
+NOTE Confidence: 0.9044482111930847
+
+00:30:21.000 --> 00:30:24.600
+And then it's graded using expert rubrics, right.
+
+NOTE Confidence: 0.8905214071273804
+
+00:30:24.600 --> 00:30:27.994
+So each task has about 50 plus rubric criteria that
+
+NOTE Confidence: 0.8905214071273804
+
+00:30:28.061 --> 00:30:31.922
+specify all of the material points that are are considered
+
+NOTE Confidence: 0.8905214071273804
+
+00:30:31.988 --> 00:30:33.320
+a good work product.
+
+NOTE Confidence: 0.8711345195770264
+
+00:30:33.320 --> 00:30:38.267
+So overall we have coverage of 24 legal practice areas
+
+NOTE Confidence: 0.8711345195770264
+
+00:30:38.358 --> 00:30:42.572
+over 1200 tasks total and I think up to 75,000
+
+NOTE Confidence: 0.8711345195770264
+
+00:30:42.664 --> 00:30:44.679
+total rubber criteria.
+
+NOTE Confidence: 0.8881499767303467
+
+00:30:44.720 --> 00:30:48.163
+So we're really excited about this for benchmarking to spawn
+
+NOTE Confidence: 0.8881499767303467
+
+00:30:48.221 --> 00:30:51.263
+a number of of research directions that I think we'll
+
+NOTE Confidence: 0.8881499767303467
+
+00:30:51.320 --> 00:30:54.363
+talk about and to to start running open weight models
+
+NOTE Confidence: 0.8881499767303467
+
+00:30:54.420 --> 00:30:56.199
+and post training over as well.
+
+NOTE Confidence: 0.7649896144866943
+
+00:30:56.720 --> 00:30:57.240
+It's amazing.
+
+NOTE Confidence: 0.8045434355735779
+
+00:30:57.600 --> 00:31:00.975
+It's great to have industry specific benchmarks because then you
+
+NOTE Confidence: 0.8045434355735779
+
+00:31:01.028 --> 00:31:03.982
+can truly capture how the models do on industry specific
+
+NOTE Confidence: 0.8045434355735779
+
+00:31:04.035 --> 00:31:06.883
+task and actually the all pass criteria which you have
+
+NOTE Confidence: 0.8045434355735779
+
+00:31:06.936 --> 00:31:09.520
+is very, very strict, very high measure of is the
+
+NOTE Confidence: 0.8045434355735779
+
+00:31:09.573 --> 00:31:11.999
+agent truly doing the task the human would do.
+
+NOTE Confidence: 0.5627473592758179
+
+00:31:12.520 --> 00:31:13.320
+So that's amazing.
+
+NOTE Confidence: 0.800972580909729
+
+00:31:14.000 --> 00:31:16.704
+We'd love to talk about the work we have been
+
+NOTE Confidence: 0.800972580909729
+
+00:31:16.764 --> 00:31:19.829
+doing together on fine tuning and using the work on
+
+NOTE Confidence: 0.800972580909729
+
+00:31:19.890 --> 00:31:22.654
+GLM 5.1 and use the custom harness work on top
+
+NOTE Confidence: 0.800972580909729
+
+00:31:22.714 --> 00:31:24.998
+of it if you want to talk about that a
+
+NOTE Confidence: 0.800972580909729
+
+00:31:25.058 --> 00:31:25.720
+little bit.
+
+NOTE Confidence: 0.675451934337616
+
+00:31:25.880 --> 00:31:28.160
+Yeah, we actually published an article today morning about this.
+
+NOTE Confidence: 0.7742480039596558
+
+00:31:28.160 --> 00:31:28.920
+You can check it out.
+
+NOTE Confidence: 0.9061869382858276
+
+00:31:29.480 --> 00:31:31.440
+Yeah, a lot of interesting work streams going on.
+
+NOTE Confidence: 0.9283078908920288
+
+00:31:31.440 --> 00:31:34.275
+As I mentioned, Lab is not just a benchmark, we
+
+NOTE Confidence: 0.9283078908920288
+
+00:31:34.335 --> 00:31:37.472
+really view it as a foundation for research into all
+
+NOTE Confidence: 0.9283078908920288
+
+00:31:37.532 --> 00:31:41.332
+of these areas that are important for production deployments at
+
+NOTE Confidence: 0.9283078908920288
+
+00:31:41.392 --> 00:31:42.719
+the application layer.
+
+NOTE Confidence: 0.826931357383728
+
+00:31:42.720 --> 00:31:46.934
+So think post training of open weight models, harness optimizations,
+
+NOTE Confidence: 0.826931357383728
+
+00:31:46.996 --> 00:31:50.467
+how do you bake domain specificity into an agent harness
+
+NOTE Confidence: 0.826931357383728
+
+00:31:50.529 --> 00:31:53.691
+as well as things like skills tool use more cutting
+
+NOTE Confidence: 0.826931357383728
+
+00:31:53.753 --> 00:31:57.720
+edge, cutting edge kind of frontier things like memory etcetera.
+
+NOTE Confidence: 0.8859501481056213
+
+00:31:58.200 --> 00:32:01.918
+So with the fireworks team, we're partnering on a number
+
+NOTE Confidence: 0.8859501481056213
+
+00:32:01.985 --> 00:32:06.567
+of of research tracks including kind of straightforward post training
+
+NOTE Confidence: 0.8859501481056213
+
+00:32:06.633 --> 00:32:08.360
+like SFT with Kimi models.
+
+NOTE Confidence: 0.8562358021736145
+
+00:32:08.360 --> 00:32:11.552
+We've shown some nice improvements there in terms of lift
+
+NOTE Confidence: 0.8562358021736145
+
+00:32:11.608 --> 00:32:14.408
+on labs kind of all pass scoring criteria over the
+
+NOTE Confidence: 0.8562358021736145
+
+00:32:14.464 --> 00:32:15.080
+base model.
+
+NOTE Confidence: 0.8505811095237732
+
+00:32:15.560 --> 00:32:18.679
+But that the track that I'm most excited about which
+
+NOTE Confidence: 0.8505811095237732
+
+00:32:18.739 --> 00:32:19.999
+we did publish today.
+
+NOTE Confidence: 0.9630633592605591
+
+00:32:20.000 --> 00:32:20.960
+So go check it out.
+
+NOTE Confidence: 0.9045588970184326
+
+00:32:21.800 --> 00:32:25.520
+Is this work on advisor agents, right?
+
+NOTE Confidence: 0.8923249244689941
+
+00:32:25.520 --> 00:32:30.159
+So we've effectively built a system that leverages worker agents
+
+NOTE Confidence: 0.8923249244689941
+
+00:32:30.232 --> 00:32:33.857
+that are driven by open weight models like GLM 5.1
+
+NOTE Confidence: 0.8923249244689941
+
+00:32:33.929 --> 00:32:37.699
+and then call to advisor models that are heavier, in
+
+NOTE Confidence: 0.8923249244689941
+
+00:32:37.772 --> 00:32:41.759
+many cases closed source frontier models like Opus 4.7.
+
+NOTE Confidence: 0.9350175261497498
+
+00:32:42.000 --> 00:32:45.885
+And it turns out that you can effectively navigate the
+
+NOTE Confidence: 0.9350175261497498
+
+00:32:45.957 --> 00:32:50.418
+Pareto frontier of quality and cost by leveraging these hybrid
+
+NOTE Confidence: 0.9350175261497498
+
+00:32:50.490 --> 00:32:54.160
+systems that effectively do inference time routing.
+
+NOTE Confidence: 0.8866307735443115
+
+00:32:54.160 --> 00:32:56.631
+And so that's what the plot is showing here is
+
+NOTE Confidence: 0.8866307735443115
+
+00:32:56.684 --> 00:33:00.122
+essentially with a closed frontier, you know, you're getting the
+
+NOTE Confidence: 0.8866307735443115
+
+00:33:00.176 --> 00:33:03.668
+frontier of performance, but it often comes with significant cost
+
+NOTE Confidence: 0.8866307735443115
+
+00:33:03.721 --> 00:33:07.482
+and latency trade-offs, open weight models, much cheaper, much faster,
+
+NOTE Confidence: 0.8866307735443115
+
+00:33:07.535 --> 00:33:09.040
+greater security guarantees.
+
+NOTE Confidence: 0.8917789459228516
+
+00:33:09.720 --> 00:33:12.950
+But with that trade off in in performance and with
+
+NOTE Confidence: 0.8917789459228516
+
+00:33:13.015 --> 00:33:16.763
+this hybrid system, not only are we maintaining quality at
+
+NOTE Confidence: 0.8917789459228516
+
+00:33:16.827 --> 00:33:20.510
+a lower cost and latency, but we're actually improving it
+
+NOTE Confidence: 0.8917789459228516
+
+00:33:20.575 --> 00:33:21.479
+in many cases.
+
+NOTE Confidence: 0.8974454402923584
+
+00:33:21.480 --> 00:33:23.902
+So really excited line of work and I think we're
+
+NOTE Confidence: 0.8974454402923584
+
+00:33:23.953 --> 00:33:25.720
+going to continue to build upon it.
+
+NOTE Confidence: 0.5532304644584656
+
+00:33:26.360 --> 00:33:26.680
+That's awesome.
+
+NOTE Confidence: 0.6226805448532104
+
+00:33:26.680 --> 00:33:26.880
+Yeah.
+
+NOTE Confidence: 0.8676648736000061
+
+00:33:27.680 --> 00:33:31.231
+To 2.4 X cheaper on a task where it's about
+
+NOTE Confidence: 0.8676648736000061
+
+00:33:31.314 --> 00:33:35.526
+30% better on the all pass metric, which is really,
+
+NOTE Confidence: 0.8676648736000061
+
+00:33:35.608 --> 00:33:36.600
+really cool.
+
+NOTE Confidence: 0.9078278541564941
+
+00:33:37.120 --> 00:33:39.308
+I think I was talking about this earlier in the
+
+NOTE Confidence: 0.9078278541564941
+
+00:33:39.355 --> 00:33:41.683
+session, like a lot of the companies are using the
+
+NOTE Confidence: 0.9078278541564941
+
+00:33:41.730 --> 00:33:43.360
+frontier close model for all tasks.
+
+NOTE Confidence: 0.8255714178085327
+
+00:33:43.680 --> 00:33:46.452
+It's like having an aircraft carrier to point at a
+
+NOTE Confidence: 0.8255714178085327
+
+00:33:46.508 --> 00:33:48.559
+bunker as well as to point at an Ant.
+
+NOTE Confidence: 0.9512865543365479
+
+00:33:48.840 --> 00:33:49.680
+You don't need that.
+
+NOTE Confidence: 0.8042314648628235
+
+00:33:49.920 --> 00:33:52.218
+Like you, you have to have judgement on where and
+
+NOTE Confidence: 0.8042314648628235
+
+00:33:52.265 --> 00:33:53.719
+what kind of models are needed.
+
+NOTE Confidence: 0.76194167137146
+
+00:33:53.720 --> 00:33:56.120
+And open models are actually really good on that one.
+
+NOTE Confidence: 0.8210908770561218
+
+00:33:56.120 --> 00:33:59.218
+Actually, I would love to hear Harvey's strategy around open
+
+NOTE Confidence: 0.8210908770561218
+
+00:33:59.270 --> 00:34:00.199
+models in general.
+
+NOTE Confidence: 0.7929438352584839
+
+00:34:00.520 --> 00:34:02.420
+Like, why do you think it's important for Harvey to
+
+NOTE Confidence: 0.7929438352584839
+
+00:34:02.457 --> 00:34:03.240
+leverage open models?
+
+NOTE Confidence: 0.6523814797401428
+
+00:34:03.520 --> 00:34:03.760
+Yeah.
+
+NOTE Confidence: 0.9110672473907471
+
+00:34:04.200 --> 00:34:06.460
+So I think what's great about partnership like ours with
+
+NOTE Confidence: 0.9110672473907471
+
+00:34:06.501 --> 00:34:08.559
+Fireworks is there's kind of two sides here, right.
+
+NOTE Confidence: 0.7759144306182861
+
+00:34:08.560 --> 00:34:12.107
+There's the consumption of open weight models based models through
+
+NOTE Confidence: 0.7759144306182861
+
+00:34:12.161 --> 00:34:13.720
+a managed inference provider.
+
+NOTE Confidence: 0.9555612206459045
+
+00:34:14.040 --> 00:34:16.200
+We're interested in using these out-of-the-box.
+
+NOTE Confidence: 0.8862233757972717
+
+00:34:17.160 --> 00:34:19.808
+And then there's also this question of, hey, can we
+
+NOTE Confidence: 0.8862233757972717
+
+00:34:19.860 --> 00:34:22.560
+improve open weight models via post training, right.
+
+NOTE Confidence: 0.916106641292572
+
+00:34:22.560 --> 00:34:24.680
+So we're investing in both parts of this equation.
+
+NOTE Confidence: 0.9331715106964111
+
+00:34:25.120 --> 00:34:28.345
+And with respect to post training in particular, I think
+
+NOTE Confidence: 0.9331715106964111
+
+00:34:28.402 --> 00:34:31.627
+there are four kind of key considerations here that make
+
+NOTE Confidence: 0.9331715106964111
+
+00:34:31.685 --> 00:34:34.680
+this an extremely kind of compelling premise for us.
+
+NOTE Confidence: 0.742037296295166
+
+00:34:35.120 --> 00:34:37.060
+The first, everyone thinks we're going to say cost and
+
+NOTE Confidence: 0.742037296295166
+
+00:34:37.096 --> 00:34:37.600
+latency first.
+
+NOTE Confidence: 0.653437077999115
+
+00:34:37.600 --> 00:34:38.400
+It's definitely there.
+
+NOTE Confidence: 0.8872760534286499
+
+00:34:38.800 --> 00:34:41.040
+The 1st is actually domain expertise, right?
+
+NOTE Confidence: 0.8711481690406799
+
+00:34:41.040 --> 00:34:44.509
+So what we've seen through our evaluations is that there's
+
+NOTE Confidence: 0.8711481690406799
+
+00:34:44.569 --> 00:34:47.680
+a significant element of jagged intelligence, right?
+
+NOTE Confidence: 0.8923535943031311
+
+00:34:47.680 --> 00:34:50.051
+And So what that means is this is a phrase
+
+NOTE Confidence: 0.8923535943031311
+
+00:34:50.108 --> 00:34:51.519
+coined by Andre Carpathy.
+
+NOTE Confidence: 0.9097556471824646
+
+00:34:51.520 --> 00:34:54.439
+It refers to this observation that we've we've sort of
+
+NOTE Confidence: 0.9097556471824646
+
+00:34:54.493 --> 00:34:58.115
+seen in many different verticals and with language models generally
+
+NOTE Confidence: 0.9097556471824646
+
+00:34:58.169 --> 00:35:01.359
+that they're really, really good at certain things and then
+
+NOTE Confidence: 0.9097556471824646
+
+00:35:01.413 --> 00:35:03.360
+they fail miserably at other things.
+
+NOTE Confidence: 0.8749763369560242
+
+00:35:04.040 --> 00:35:06.269
+And it's really hard to, to, to interpret a reason
+
+NOTE Confidence: 0.8749763369560242
+
+00:35:06.313 --> 00:35:08.319
+about why that is for any given model, right?
+
+NOTE Confidence: 0.8993249535560608
+
+00:35:08.320 --> 00:35:10.936
+And we see the same thing and legal, right, a
+
+NOTE Confidence: 0.8993249535560608
+
+00:35:10.994 --> 00:35:14.773
+model might be really strong at transactional work like corporate
+
+NOTE Confidence: 0.8993249535560608
+
+00:35:14.831 --> 00:35:18.435
+M&A, financial due diligence, but poor at litigation work like
+
+NOTE Confidence: 0.8993249535560608
+
+00:35:18.494 --> 00:35:22.679
+case law, research, writing intensive tasks, something like that, right?
+
+NOTE Confidence: 0.8843249678611755
+
+00:35:22.680 --> 00:35:25.136
+And so via post training, we can kind of smoothen
+
+NOTE Confidence: 0.8843249678611755
+
+00:35:25.186 --> 00:35:27.542
+out these rough edges and bring the model up to
+
+NOTE Confidence: 0.8843249678611755
+
+00:35:27.592 --> 00:35:30.600
+speed across all practice areas, disciplines, types of work.
+
+NOTE Confidence: 0.8480731248855591
+
+00:35:30.600 --> 00:35:33.200
+So that's one cost and latency is the second factor.
+
+NOTE Confidence: 0.9200584888458252
+
+00:35:33.200 --> 00:35:35.979
+I think you described it perfectly as you don't need
+
+NOTE Confidence: 0.9200584888458252
+
+00:35:36.032 --> 00:35:38.598
+to bring the Ferrari off of the racetrack if you
+
+NOTE Confidence: 0.9200584888458252
+
+00:35:38.651 --> 00:35:39.400
+don't need to.
+
+NOTE Confidence: 0.8952313661575317
+
+00:35:39.400 --> 00:35:42.075
+I think we see sort of a bimodal distribution of
+
+NOTE Confidence: 0.8952313661575317
+
+00:35:42.131 --> 00:35:45.866
+usage emerging, right, where for really high stakes, really complex
+
+NOTE Confidence: 0.8952313661575317
+
+00:35:45.922 --> 00:35:49.155
+work, you'll pay a premium, use the frontier closed source
+
+NOTE Confidence: 0.8952313661575317
+
+00:35:49.211 --> 00:35:52.054
+models, but there's also a lot of simpler work that
+
+NOTE Confidence: 0.8952313661575317
+
+00:35:52.109 --> 00:35:55.120
+open weight models are, are perfectly well suited for.
+
+NOTE Confidence: 0.7950034141540527
+
+00:35:55.760 --> 00:35:57.858
+So routing between these two modes is, is going to
+
+NOTE Confidence: 0.7950034141540527
+
+00:35:57.900 --> 00:35:59.160
+become increasingly important.
+
+NOTE Confidence: 0.9217036366462708
+
+00:36:00.000 --> 00:36:02.561
+And then something that we think about a lot that
+
+NOTE Confidence: 0.9217036366462708
+
+00:36:02.613 --> 00:36:05.069
+I think the industry as a whole is, is starting
+
+NOTE Confidence: 0.9217036366462708
+
+00:36:05.122 --> 00:36:07.839
+to come around to is security and governance, right.
+
+NOTE Confidence: 0.8687790036201477
+
+00:36:07.840 --> 00:36:10.861
+So for the highest stakes type of work, you know,
+
+NOTE Confidence: 0.8687790036201477
+
+00:36:10.922 --> 00:36:13.882
+what our customers are really asking us for is a
+
+NOTE Confidence: 0.8687790036201477
+
+00:36:13.943 --> 00:36:16.040
+secure deployment within the RVPC.
+
+NOTE Confidence: 0.9118174910545349
+
+00:36:16.640 --> 00:36:19.912
+Open weight models enable that by also having access to
+
+NOTE Confidence: 0.9118174910545349
+
+00:36:19.972 --> 00:36:23.423
+things like the complete reasoning trace of the model, you
+
+NOTE Confidence: 0.9118174910545349
+
+00:36:23.482 --> 00:36:27.350
+can do much greater interpretability, auditability work on top of
+
+NOTE Confidence: 0.9118174910545349
+
+00:36:27.409 --> 00:36:31.336
+the behavior of an agent, which is increasingly becoming important
+
+NOTE Confidence: 0.9118174910545349
+
+00:36:31.396 --> 00:36:33.359
+for compliance reasons over time.
+
+NOTE Confidence: 0.8595169186592102
+
+00:36:33.680 --> 00:36:36.017
+So all that is to say, both the consumption of
+
+NOTE Confidence: 0.8595169186592102
+
+00:36:36.068 --> 00:36:39.320
+open wave models and post training increasingly important for us
+
+NOTE Confidence: 0.8595169186592102
+
+00:36:39.371 --> 00:36:39.880
+at Harvey.
+
+NOTE Confidence: 0.9020469784736633
+
+00:36:41.120 --> 00:36:44.273
+All the points that you put forward and the expertise
+
+NOTE Confidence: 0.9020469784736633
+
+00:36:44.333 --> 00:36:47.427
+and the agent work that you're talking about, if you
+
+NOTE Confidence: 0.9020469784736633
+
+00:36:47.487 --> 00:36:50.165
+can double click on that and speak a bit more
+
+NOTE Confidence: 0.9020469784736633
+
+00:36:50.224 --> 00:36:53.497
+about the end to end iteration cycle with fireworks and
+
+NOTE Confidence: 0.9020469784736633
+
+00:36:53.557 --> 00:36:57.484
+what's possible today that was not possible previously, that would
+
+NOTE Confidence: 0.9020469784736633
+
+00:36:57.544 --> 00:36:58.079
+be great.
+
+NOTE Confidence: 0.8043666481971741
+
+00:36:58.600 --> 00:36:58.920
+Yeah.
+
+NOTE Confidence: 0.8971090316772461
+
+00:36:58.960 --> 00:37:01.955
+So within the manage inference side, it's basically plug and
+
+NOTE Confidence: 0.8971090316772461
+
+00:37:02.005 --> 00:37:04.451
+play, which is great because you don't need to do
+
+NOTE Confidence: 0.8971090316772461
+
+00:37:04.501 --> 00:37:05.599
+that iteration, right.
+
+NOTE Confidence: 0.8195707201957703
+
+00:37:05.600 --> 00:37:09.582
+So we can start consuming open source models pretty pretty
+
+NOTE Confidence: 0.8195707201957703
+
+00:37:09.650 --> 00:37:10.200
+quickly.
+
+NOTE Confidence: 0.9182391166687012
+
+00:37:11.000 --> 00:37:13.510
+And then with all of the work that you've done
+
+NOTE Confidence: 0.9182391166687012
+
+00:37:13.564 --> 00:37:17.493
+around managed training infrastructure, it makes the iteration loop much
+
+NOTE Confidence: 0.9182391166687012
+
+00:37:17.548 --> 00:37:19.839
+tighter, much faster, much more efficient.
+
+NOTE Confidence: 0.7548975944519043
+
+00:37:20.480 --> 00:37:23.252
+We have a saying at Harvey, it's that all timelines
+
+NOTE Confidence: 0.7548975944519043
+
+00:37:23.306 --> 00:37:24.719
+are are compressed, right?
+
+NOTE Confidence: 0.8517592549324036
+
+00:37:24.719 --> 00:37:28.253
+And this sort of dynamic AI landscape and environment that
+
+NOTE Confidence: 0.8517592549324036
+
+00:37:28.314 --> 00:37:31.359
+we're in, that applies to research as well, right?
+
+NOTE Confidence: 0.8621485829353333
+
+00:37:31.360 --> 00:37:34.214
+So being able to pick up the pace on things
+
+NOTE Confidence: 0.8621485829353333
+
+00:37:34.281 --> 00:37:38.994
+like post training experiments, running many iterations in parallel and
+
+NOTE Confidence: 0.8621485829353333
+
+00:37:39.061 --> 00:37:41.982
+and in a pretty low touch manner for for our
+
+NOTE Confidence: 0.8621485829353333
+
+00:37:42.048 --> 00:37:45.567
+research team picks up our velocity, which is kind of
+
+NOTE Confidence: 0.8621485829353333
+
+00:37:45.633 --> 00:37:47.360
+a a crucial factor for us.
+
+NOTE Confidence: 0.868600070476532
+
+00:37:48.480 --> 00:37:50.805
+And like you said, I think at Fireworks, we too
+
+NOTE Confidence: 0.868600070476532
+
+00:37:50.855 --> 00:37:53.280
+believe that all iteration cycles are compressed.
+
+NOTE Confidence: 0.9275282621383667
+
+00:37:54.000 --> 00:37:56.509
+One thing I would love for you to dive a
+
+NOTE Confidence: 0.9275282621383667
+
+00:37:56.572 --> 00:37:59.772
+little bit deeper on is you've always been an Azure
+
+NOTE Confidence: 0.9275282621383667
+
+00:37:59.835 --> 00:38:00.399
+customer.
+
+NOTE Confidence: 0.9009845852851868
+
+00:38:00.719 --> 00:38:05.451
+So how does this particular foundry with Fireworks partnership really
+
+NOTE Confidence: 0.9009845852851868
+
+00:38:05.520 --> 00:38:06.480
+like help you?
+
+NOTE Confidence: 0.8225613236427307
+
+00:38:06.480 --> 00:38:09.380
+And if there are customers today who are trying to
+
+NOTE Confidence: 0.8225613236427307
+
+00:38:09.438 --> 00:38:13.151
+use the similar platform and path, what advice or recommendation
+
+NOTE Confidence: 0.8225613236427307
+
+00:38:13.209 --> 00:38:14.079
+would you have?
+
+NOTE Confidence: 0.7112817764282227
+
+00:38:14.080 --> 00:38:15.080
+Yeah, yeah, absolutely.
+
+NOTE Confidence: 0.9075319170951843
+
+00:38:15.080 --> 00:38:17.080
+Well, I mean, this is Microsoft Foundry, right?
+
+NOTE Confidence: 0.9057774543762207
+
+00:38:17.640 --> 00:38:22.381
+When I think of enterprise grade infrastructure, especially AI infrastructure,
+
+NOTE Confidence: 0.9057774543762207
+
+00:38:22.442 --> 00:38:25.360
+I immediately think of Microsoft Foundry, right?
+
+NOTE Confidence: 0.9569276571273804
+
+00:38:25.640 --> 00:38:28.998
+Like I said earlier, legal work is the highest stakes
+
+NOTE Confidence: 0.9569276571273804
+
+00:38:29.062 --> 00:38:30.520
+type of knowledge work.
+
+NOTE Confidence: 0.941734254360199
+
+00:38:30.760 --> 00:38:33.493
+For that, you need the highest grade of infrastructure, security,
+
+NOTE Confidence: 0.941734254360199
+
+00:38:33.535 --> 00:38:35.680
+governance, compliance, all of these things, right?
+
+NOTE Confidence: 0.909514307975769
+
+00:38:35.960 --> 00:38:39.228
+So that's why we've been kind of a happy Azure
+
+NOTE Confidence: 0.909514307975769
+
+00:38:39.299 --> 00:38:41.359
+customer for this whole time.
+
+NOTE Confidence: 0.9266103506088257
+
+00:38:41.360 --> 00:38:44.598
+And I think that that applies to model training as
+
+NOTE Confidence: 0.9266103506088257
+
+00:38:44.662 --> 00:38:45.439
+well, right?
+
+NOTE Confidence: 0.8728663325309753
+
+00:38:45.440 --> 00:38:47.927
+So with fireworks, it's sort of a best of both
+
+NOTE Confidence: 0.8728663325309753
+
+00:38:47.981 --> 00:38:51.820
+worlds scenario where you can take this enterprise grade infrastructure
+
+NOTE Confidence: 0.8728663325309753
+
+00:38:51.874 --> 00:38:55.118
+that we've already been leveraging and then layer on managed
+
+NOTE Confidence: 0.8728663325309753
+
+00:38:55.172 --> 00:38:59.227
+inference for open weight models, training infrastructure and then seamless
+
+NOTE Confidence: 0.8728663325309753
+
+00:38:59.281 --> 00:39:01.119
+deployment of those models, right?
+
+NOTE Confidence: 0.8574008941650391
+
+00:39:01.120 --> 00:39:04.863
+That's not, you know, significantly handicapping our own infrastructure teams,
+
+NOTE Confidence: 0.8574008941650391
+
+00:39:04.911 --> 00:39:05.199
+right?
+
+NOTE Confidence: 0.9523873329162598
+
+00:39:05.840 --> 00:39:07.720
+So it's a marriage of these two incredible things.
+
+NOTE Confidence: 0.9081620573997498
+
+00:39:07.720 --> 00:39:08.960
+We're very excited about it.
+
+NOTE Confidence: 0.9384928345680237
+
+00:39:09.920 --> 00:39:12.080
+And just to give a little bit of kind of
+
+NOTE Confidence: 0.9384928345680237
+
+00:39:12.134 --> 00:39:15.536
+historical context, when I joined Harvey, we were talking about
+
+NOTE Confidence: 0.9384928345680237
+
+00:39:15.590 --> 00:39:16.400
+this off stage.
+
+NOTE Confidence: 0.8430077433586121
+
+00:39:16.680 --> 00:39:18.760
+We were 5 or 6 people in an Airbnb.
+
+NOTE Confidence: 0.8163720965385437
+
+00:39:19.040 --> 00:39:21.440
+You know, forget innovative AI problems.
+
+NOTE Confidence: 0.6964001059532166
+
+00:39:21.440 --> 00:39:23.695
+It was, you know, we were thinking about whether the
+
+NOTE Confidence: 0.6964001059532166
+
+00:39:23.738 --> 00:39:25.040
+Wi-Fi was on in any given day.
+
+NOTE Confidence: 0.919692873954773
+
+00:39:25.040 --> 00:39:28.602
+But this was three years ago before a lot of
+
+NOTE Confidence: 0.919692873954773
+
+00:39:28.683 --> 00:39:31.759
+this AI infrastructure existed, right?
+
+NOTE Confidence: 0.9581155776977539
+
+00:39:31.760 --> 00:39:34.098
+And I can't tell you how relieving it is to
+
+NOTE Confidence: 0.9581155776977539
+
+00:39:34.152 --> 00:39:36.491
+me now and how much better I sleep at night
+
+NOTE Confidence: 0.9581155776977539
+
+00:39:36.545 --> 00:39:39.155
+knowing that we don't have to go figure this all
+
+NOTE Confidence: 0.9581155776977539
+
+00:39:39.210 --> 00:39:41.711
+out ourselves and that we can sort of ride the
+
+NOTE Confidence: 0.9581155776977539
+
+00:39:41.766 --> 00:39:44.485
+tailwinds of your great work and the great work of
+
+NOTE Confidence: 0.9581155776977539
+
+00:39:44.539 --> 00:39:46.280
+your partnership with Microsoft.
+
+NOTE Confidence: 0.8916031122207642
+
+00:39:46.280 --> 00:39:48.632
+So my advice would be if you are a founder
+
+NOTE Confidence: 0.8916031122207642
+
+00:39:48.688 --> 00:39:51.824
+starting an AI native company today and building your AI
+
+NOTE Confidence: 0.8916031122207642
+
+00:39:51.880 --> 00:39:54.512
+stack for the first time, or if you're a larger
+
+NOTE Confidence: 0.8916031122207642
+
+00:39:54.568 --> 00:39:57.760
+enterprise and you're rebuilding your AI stack to be sort
+
+NOTE Confidence: 0.8916031122207642
+
+00:39:57.816 --> 00:40:00.448
+of agent native, I would take, I would ride the
+
+NOTE Confidence: 0.8916031122207642
+
+00:40:00.504 --> 00:40:02.520
+tailwinds that are available to you.
+
+NOTE Confidence: 0.849406898021698
+
+00:40:02.520 --> 00:40:05.400
+And I would recommend using this, this managed infrastructure.
+
+NOTE Confidence: 0.8510951995849609
+
+00:40:06.080 --> 00:40:08.843
+As we said, all timelines are compressed, so it'll help
+
+NOTE Confidence: 0.8510951995849609
+
+00:40:08.893 --> 00:40:10.199
+you move much much faster.
+
+NOTE Confidence: 0.8457798957824707
+
+00:40:11.040 --> 00:40:11.160
+OK.
+
+NOTE Confidence: 0.8909292817115784
+
+00:40:11.160 --> 00:40:13.745
+Thank you so much for your time in coming here
+
+NOTE Confidence: 0.8909292817115784
+
+00:40:13.801 --> 00:40:15.600
+and talking about Harvey itself.
+
+NOTE Confidence: 0.8580611348152161
+
+00:40:15.960 --> 00:40:19.210
+And just as Nico said, if you were starting a
+
+NOTE Confidence: 0.8580611348152161
+
+00:40:19.282 --> 00:40:23.110
+new use case or reimagining your use case and already
+
+NOTE Confidence: 0.8580611348152161
+
+00:40:23.182 --> 00:40:26.866
+using Azure, then do go out and check out fireworks
+
+NOTE Confidence: 0.8580611348152161
+
+00:40:26.938 --> 00:40:28.600
+models on Azure itself.
+
+NOTE Confidence: 0.8762568831443787
+
+00:40:29.239 --> 00:40:32.143
+You have different modes that you can deploy and integrate
+
+NOTE Confidence: 0.8762568831443787
+
+00:40:32.193 --> 00:40:35.047
+into your agents, whether you're using agents on Azure or
+
+NOTE Confidence: 0.8762568831443787
+
+00:40:35.097 --> 00:40:37.199
+agents that you've built yourself as well.
+
+NOTE Confidence: 0.845867931842804
+
+00:40:37.920 --> 00:40:39.960
+Thank you for your time and happy to take any
+
+NOTE Confidence: 0.845867931842804
+
+00:40:40.005 --> 00:40:42.000
+questions for Niko, Vivek or myself as well.
+

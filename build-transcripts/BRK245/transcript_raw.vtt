@@ -1,0 +1,4220 @@
+WEBVTT
+
+NOTE
+language:en-US
+
+NOTE Confidence: 0.9247075319290161
+
+00:00:00.240 --> 00:00:01.440
+Good afternoon.
+
+NOTE Confidence: 0.8346551060676575
+
+00:00:09.410 --> 00:00:11.730
+All right, let's see if we got this working here.
+
+NOTE Confidence: 0.8208208084106445
+
+00:00:12.530 --> 00:00:16.610
+Yeah, So don't expect a regular presentation here.
+
+NOTE Confidence: 0.7707789540290833
+
+00:00:17.970 --> 00:00:21.268
+My talk is about build a thing that builds the
+
+NOTE Confidence: 0.7707789540290833
+
+00:00:21.339 --> 00:00:21.769
+thing.
+
+NOTE Confidence: 0.9465333223342896
+
+00:00:21.770 --> 00:00:25.247
+I want to inspire you a little bit how to
+
+NOTE Confidence: 0.9465333223342896
+
+00:00:25.332 --> 00:00:28.809
+approach building software in the future.
+
+NOTE Confidence: 0.9168821573257446
+
+00:00:29.850 --> 00:00:33.977
+You know, it's been not even a year since we
+
+NOTE Confidence: 0.9168821573257446
+
+00:00:34.071 --> 00:00:38.480
+have coding agents and it's kind of like half a
+
+NOTE Confidence: 0.9168821573257446
+
+00:00:38.574 --> 00:00:43.640
+year since they got good and there's no stopping down.
+
+NOTE Confidence: 0.8419148921966553
+
+00:00:43.640 --> 00:00:48.018
+So a lot of the ways we built software in
+
+NOTE Confidence: 0.8419148921966553
+
+00:00:48.124 --> 00:00:53.036
+the past I feel are obsolete and we we haven't
+
+NOTE Confidence: 0.8419148921966553
+
+00:00:53.143 --> 00:00:55.920
+really figured it out yet.
+
+NOTE Confidence: 0.7473254203796387
+
+00:00:58.480 --> 00:01:02.680
+I'm curious here, is anyone here who maintains open source?
+
+NOTE Confidence: 0.9213826656341553
+
+00:01:04.800 --> 00:01:05.600
+Yes.
+
+NOTE Confidence: 0.9665774703025818
+
+00:01:06.520 --> 00:01:07.680
+How are you handling the pain?
+
+NOTE Confidence: 0.8895578980445862
+
+00:01:09.920 --> 00:01:17.560
+So I kind of stumbled into into open claw people.
+
+NOTE Confidence: 0.8424052596092224
+
+00:01:19.920 --> 00:01:23.795
+I saw this all these articles where people say, oh,
+
+NOTE Confidence: 0.8424052596092224
+
+00:01:23.871 --> 00:01:28.127
+Peter made 43 projects that failed and then finally like
+
+NOTE Confidence: 0.8424052596092224
+
+00:01:28.203 --> 00:01:29.039
+one worked.
+
+NOTE Confidence: 0.9101611971855164
+
+00:01:30.800 --> 00:01:34.702
+And I had to laugh at this because none of
+
+NOTE Confidence: 0.9101611971855164
+
+00:01:34.795 --> 00:01:36.839
+these projects failed.
+
+NOTE Confidence: 0.9195871949195862
+
+00:01:37.240 --> 00:01:42.806
+All of these projects are things I built for myself
+
+NOTE Confidence: 0.9195871949195862
+
+00:01:42.915 --> 00:01:48.482
+to work faster to like mostly actually to like help
+
+NOTE Confidence: 0.9195871949195862
+
+00:01:48.591 --> 00:01:51.320
+my agents to work faster.
+
+NOTE Confidence: 0.8824914693832397
+
+00:01:52.000 --> 00:01:55.393
+Like anytime you build software now, your job is no
+
+NOTE Confidence: 0.8824914693832397
+
+00:01:55.460 --> 00:01:59.120
+longer to, to figure out how you build software faster.
+
+NOTE Confidence: 0.916053295135498
+
+00:01:59.920 --> 00:02:02.634
+Really your job should be, what can I do to
+
+NOTE Confidence: 0.916053295135498
+
+00:02:02.697 --> 00:02:05.160
+help my agent to build software faster?
+
+NOTE Confidence: 0.9621899724006653
+
+00:02:05.520 --> 00:02:09.560
+And even more so, it's all about closing the loop.
+
+NOTE Confidence: 0.8327416777610779
+
+00:02:10.840 --> 00:02:15.182
+You know, last year I built, I, I spent a
+
+NOTE Confidence: 0.8327416777610779
+
+00:02:15.288 --> 00:02:20.796
+few months building a SaaS and the agent would write
+
+NOTE Confidence: 0.8327416777610779
+
+00:02:20.901 --> 00:02:25.879
+code and then it would like, tell me it's done.
+
+NOTE Confidence: 0.8501763343811035
+
+00:02:25.880 --> 00:02:27.596
+And then I would look at the browser, I would
+
+NOTE Confidence: 0.8501763343811035
+
+00:02:27.635 --> 00:02:28.360
+pitch at the agent.
+
+NOTE Confidence: 0.6847316026687622
+
+00:02:28.880 --> 00:02:30.625
+It will like go in the loop, it will fix
+
+NOTE Confidence: 0.6847316026687622
+
+00:02:30.669 --> 00:02:30.799
+it.
+
+NOTE Confidence: 0.8176913857460022
+
+00:02:30.800 --> 00:02:32.720
+And eventually we will be there.
+
+NOTE Confidence: 0.7598492503166199
+
+00:02:33.960 --> 00:02:37.352
+And that was until I figured out like, hey, no,
+
+NOTE Confidence: 0.7598492503166199
+
+00:02:37.424 --> 00:02:40.600
+the the agent just cannot make a screenshot.
+
+NOTE Confidence: 0.9498199820518494
+
+00:02:40.760 --> 00:02:46.222
+You know, just like humans would like anything that where
+
+NOTE Confidence: 0.9498199820518494
+
+00:02:46.318 --> 00:02:50.440
+you feel this is something I do repeatedly.
+
+NOTE Confidence: 0.8965250849723816
+
+00:02:51.080 --> 00:02:53.440
+Just start thinking, how can I automate this?
+
+NOTE Confidence: 0.9439109563827515
+
+00:02:53.440 --> 00:02:56.036
+How can I, how can I help my agent to
+
+NOTE Confidence: 0.9439109563827515
+
+00:02:56.107 --> 00:02:57.160
+close the loop?
+
+NOTE Confidence: 0.8375787734985352
+
+00:02:58.360 --> 00:03:01.546
+So I'm going to guide you a little bit through
+
+NOTE Confidence: 0.8375787734985352
+
+00:03:01.615 --> 00:03:04.940
+all my failed projects and give you a little bit
+
+NOTE Confidence: 0.8375787734985352
+
+00:03:05.009 --> 00:03:08.196
+of the, the, the thought process I put on this
+
+NOTE Confidence: 0.8375787734985352
+
+00:03:08.265 --> 00:03:09.719
+website a little bit.
+
+NOTE Confidence: 0.8391244411468506
+
+00:03:11.040 --> 00:03:14.331
+It's pure slop, but I think it's kind of nice
+
+NOTE Confidence: 0.8391244411468506
+
+00:03:14.404 --> 00:03:17.769
+for that all the little tools that we built to
+
+NOTE Confidence: 0.8391244411468506
+
+00:03:17.843 --> 00:03:21.719
+build Opencloud and I don't think it's even complete.
+
+NOTE Confidence: 0.7297458648681641
+
+00:03:26.240 --> 00:03:31.604
+So my, my first problem was that open clock clinic
+
+NOTE Confidence: 0.7297458648681641
+
+00:03:31.711 --> 00:03:37.720
+exploded and then the issues and PRS started increasing.
+
+NOTE Confidence: 0.8476501703262329
+
+00:03:37.720 --> 00:03:41.056
+And I didn't know that this number you actually once
+
+NOTE Confidence: 0.8476501703262329
+
+00:03:41.120 --> 00:03:43.750
+it reaches 5K, it stays at 5K and kind of
+
+NOTE Confidence: 0.8476501703262329
+
+00:03:43.815 --> 00:03:44.199
+masks.
+
+NOTE Confidence: 0.8577472567558289
+
+00:03:44.440 --> 00:03:47.068
+At some point we had like more than 10,000 issues
+
+NOTE Confidence: 0.8577472567558289
+
+00:03:47.121 --> 00:03:49.160
+because people don't, they don't look.
+
+NOTE Confidence: 0.8198257088661194
+
+00:03:49.160 --> 00:03:53.119
+They're just like, oh, I mean people, the agents don't
+
+NOTE Confidence: 0.8198257088661194
+
+00:03:53.193 --> 00:03:53.559
+look.
+
+NOTE Confidence: 0.7510924935340881
+
+00:03:53.640 --> 00:03:56.030
+You know, it's like, let's not pretend any of that
+
+NOTE Confidence: 0.7510924935340881
+
+00:03:56.078 --> 00:03:57.799
+is, is is written by humans anymore.
+
+NOTE Confidence: 0.8754061460494995
+
+00:03:58.280 --> 00:04:01.667
+And I know a lot of open source people get
+
+NOTE Confidence: 0.8754061460494995
+
+00:04:01.747 --> 00:04:05.699
+really mad at all the slop they're getting, but I
+
+NOTE Confidence: 0.8754061460494995
+
+00:04:05.780 --> 00:04:08.280
+feel you can't fight the world.
+
+NOTE Confidence: 0.948540210723877
+
+00:04:08.360 --> 00:04:10.054
+You have to figure out a way how to deal
+
+NOTE Confidence: 0.948540210723877
+
+00:04:10.096 --> 00:04:10.519
+with that.
+
+NOTE Confidence: 0.894618809223175
+
+00:04:11.120 --> 00:04:12.840
+So I see differently.
+
+NOTE Confidence: 0.8772725462913513
+
+00:04:12.840 --> 00:04:16.636
+Yes, there's a lot of slop, but the real problem
+
+NOTE Confidence: 0.8772725462913513
+
+00:04:16.715 --> 00:04:19.800
+is that it's still called pull request.
+
+NOTE Confidence: 0.8335135579109192
+
+00:04:20.480 --> 00:04:24.080
+I call it prompt request because what you really want
+
+NOTE Confidence: 0.8335135579109192
+
+00:04:24.148 --> 00:04:27.545
+is anytime someone opens an issue or PR, it's just
+
+NOTE Confidence: 0.8335135579109192
+
+00:04:27.613 --> 00:04:31.281
+a signal that somebody's not happy with what you built
+
+NOTE Confidence: 0.8335135579109192
+
+00:04:31.349 --> 00:04:33.320
+and it's asking for a change.
+
+NOTE Confidence: 0.8442720174789429
+
+00:04:33.400 --> 00:04:37.140
+Actually, like these two things are like interchangeable, like mostly
+
+NOTE Confidence: 0.8442720174789429
+
+00:04:37.195 --> 00:04:39.960
+doesn't matter if it's an issue or PR, Sometimes an
+
+NOTE Confidence: 0.8442720174789429
+
+00:04:40.014 --> 00:04:42.779
+issue is actually nicer because I can work fresh if
+
+NOTE Confidence: 0.8442720174789429
+
+00:04:42.833 --> 00:04:45.760
+it's a pull request and like somebody used Claude, I'm
+
+NOTE Confidence: 0.8442720174789429
+
+00:04:45.815 --> 00:04:48.363
+like I it's probably takes me more time to like
+
+NOTE Confidence: 0.8442720174789429
+
+00:04:48.417 --> 00:04:50.965
+make my agent read the code and then like bitch
+
+NOTE Confidence: 0.8442720174789429
+
+00:04:51.019 --> 00:04:53.080
+at the code and then rewrite the code.
+
+NOTE Confidence: 0.8952060341835022
+
+00:04:56.640 --> 00:04:58.575
+But the first thing, the first thing I had to,
+
+NOTE Confidence: 0.8952060341835022
+
+00:04:58.617 --> 00:05:00.132
+I had to solve was how do I get this
+
+NOTE Confidence: 0.8952060341835022
+
+00:05:00.175 --> 00:05:00.680
+number down?
+
+NOTE Confidence: 0.8100988864898682
+
+00:05:01.440 --> 00:05:04.200
+And I tried, obviously you tried tools, right?
+
+NOTE Confidence: 0.8133426904678345
+
+00:05:04.200 --> 00:05:07.328
+I tried code rabbit, I tried grabbed, I tried a
+
+NOTE Confidence: 0.8133426904678345
+
+00:05:07.395 --> 00:05:10.989
+bunch of tools and they were nice, but they ultimately
+
+NOTE Confidence: 0.8133426904678345
+
+00:05:11.056 --> 00:05:12.919
+would just give me a review.
+
+NOTE Confidence: 0.8257350921630859
+
+00:05:13.080 --> 00:05:16.054
+I wanted more I reviews are nice but I kind
+
+NOTE Confidence: 0.8257350921630859
+
+00:05:16.123 --> 00:05:20.619
+of want something that automatically groups and closes the issues
+
+NOTE Confidence: 0.8257350921630859
+
+00:05:20.688 --> 00:05:23.039
+and I couldn't find anything good.
+
+NOTE Confidence: 0.9169797897338867
+
+00:05:23.760 --> 00:05:26.070
+And in this day and age you don't actually need
+
+NOTE Confidence: 0.9169797897338867
+
+00:05:26.119 --> 00:05:27.840
+to wait anymore to like find stuff.
+
+NOTE Confidence: 0.9424000382423401
+
+00:05:28.320 --> 00:05:29.640
+You can just build your own stuff.
+
+NOTE Confidence: 0.6231130361557007
+
+00:05:29.839 --> 00:05:34.116
+So I built close rebar again, totally slopped website because
+
+NOTE Confidence: 0.6231130361557007
+
+00:05:34.186 --> 00:05:36.079
+the website doesn't matter.
+
+NOTE Confidence: 0.9724825620651245
+
+00:05:41.560 --> 00:05:43.680
+But it's actually really simple to build.
+
+NOTE Confidence: 0.7903352975845337
+
+00:05:43.720 --> 00:05:47.011
+Like I don't know what all these SAS tools where
+
+NOTE Confidence: 0.7903352975845337
+
+00:05:47.080 --> 00:05:51.125
+their mode is, because ultimately any time someone opens an
+
+NOTE Confidence: 0.7903352975845337
+
+00:05:51.194 --> 00:05:54.280
+issue or a pull request, I just start a codex
+
+NOTE Confidence: 0.7903352975845337
+
+00:05:54.348 --> 00:05:55.240
+in the cloud.
+
+NOTE Confidence: 0.7970818281173706
+
+00:05:55.960 --> 00:06:00.717
+We are a GitHub action and have a nice prompt
+
+NOTE Confidence: 0.7970818281173706
+
+00:06:00.822 --> 00:06:03.359
+that explains the codex.
+
+NOTE Confidence: 0.8982972502708435
+
+00:06:03.360 --> 00:06:07.000
+Like what is, what's the goal of the project?
+
+NOTE Confidence: 0.8747318983078003
+
+00:06:07.200 --> 00:06:08.160
+What's our vision?
+
+NOTE Confidence: 0.9110447764396667
+
+00:06:08.920 --> 00:06:10.543
+I do this now for any of my open source
+
+NOTE Confidence: 0.9110447764396667
+
+00:06:10.585 --> 00:06:10.960
+projects.
+
+NOTE Confidence: 0.8012356758117676
+
+00:06:10.960 --> 00:06:13.414
+I have a vision dot MD and part of my
+
+NOTE Confidence: 0.8012356758117676
+
+00:06:13.480 --> 00:06:16.929
+standard prompt is that my agent reads that file and
+
+NOTE Confidence: 0.8012356758117676
+
+00:06:16.996 --> 00:06:19.914
+in that file is kind of like what stuff that
+
+NOTE Confidence: 0.8012356758117676
+
+00:06:19.981 --> 00:06:23.762
+yes, we totally want, What stuff that definitely we don't
+
+NOTE Confidence: 0.8012356758117676
+
+00:06:23.828 --> 00:06:24.160
+want.
+
+NOTE Confidence: 0.8198503255844116
+
+00:06:24.680 --> 00:06:29.121
+And based on those rules clause, Reaper will run and
+
+NOTE Confidence: 0.8198503255844116
+
+00:06:29.206 --> 00:06:33.562
+we'll just either comment on the issue or close the
+
+NOTE Confidence: 0.8198503255844116
+
+00:06:33.647 --> 00:06:34.160
+issue.
+
+NOTE Confidence: 0.9459302425384521
+
+00:06:35.080 --> 00:06:37.254
+And through that, I was able to like close around
+
+NOTE Confidence: 0.9459302425384521
+
+00:06:37.298 --> 00:06:37.920
+15,000 issues.
+
+NOTE Confidence: 0.7804275155067444
+
+00:06:39.720 --> 00:06:41.843
+I mean, yes, I also operate under assumption that I
+
+NOTE Confidence: 0.7804275155067444
+
+00:06:41.885 --> 00:06:42.759
+have infinite tokens.
+
+NOTE Confidence: 0.7927426099777222
+
+00:06:43.400 --> 00:06:45.440
+You could definitely do this a little bit more efficient.
+
+NOTE Confidence: 0.8839476704597473
+
+00:06:46.480 --> 00:06:47.800
+But we didn't stop there.
+
+NOTE Confidence: 0.94992995262146
+
+00:06:47.800 --> 00:06:51.575
+Once we had a system that could close issues, of
+
+NOTE Confidence: 0.94992995262146
+
+00:06:51.653 --> 00:06:54.799
+course, we also wanted to review issues.
+
+NOTE Confidence: 0.9573646783828735
+
+00:06:58.960 --> 00:07:02.600
+And it's not a static process, right?
+
+NOTE Confidence: 0.8320490717887878
+
+00:07:02.680 --> 00:07:06.558
+At our scale, any time a fixed lens on main,
+
+NOTE Confidence: 0.8320490717887878
+
+00:07:06.646 --> 00:07:10.878
+there's a good chance that I solve an issue that
+
+NOTE Confidence: 0.8320490717887878
+
+00:07:10.966 --> 00:07:16.519
+I've never read because there's like many thousand issues open.
+
+NOTE Confidence: 0.8296288251876831
+
+00:07:17.000 --> 00:07:20.068
+So what we do is actually we rerun clause weeper
+
+NOTE Confidence: 0.8296288251876831
+
+00:07:20.132 --> 00:07:23.136
+on every issue and pull request at least once a
+
+NOTE Confidence: 0.8296288251876831
+
+00:07:23.200 --> 00:07:23.519
+week.
+
+NOTE Confidence: 0.8486320376396179
+
+00:07:24.200 --> 00:07:25.743
+Depending on how many tokens you want to spend, you
+
+NOTE Confidence: 0.8486320376396179
+
+00:07:25.774 --> 00:07:26.439
+could do it every day.
+
+NOTE Confidence: 0.7922086715698242
+
+00:07:28.920 --> 00:07:31.695
+So what regularly happens is is that I I have
+
+NOTE Confidence: 0.7922086715698242
+
+00:07:31.756 --> 00:07:35.086
+an integration on Discord and then and then the report
+
+NOTE Confidence: 0.7922086715698242
+
+00:07:35.148 --> 00:07:38.231
+will tell me yeah, a close issue from three months
+
+NOTE Confidence: 0.7922086715698242
+
+00:07:38.293 --> 00:07:41.685
+ago that I've never seen just because, because Kodak, a
+
+NOTE Confidence: 0.7922086715698242
+
+00:07:41.746 --> 00:07:43.720
+classic would run on that issue.
+
+NOTE Confidence: 0.8577101230621338
+
+00:07:44.440 --> 00:07:46.546
+And then a person that wrote an issue will get
+
+NOTE Confidence: 0.8577101230621338
+
+00:07:46.592 --> 00:07:47.600
+a will get a response.
+
+NOTE Confidence: 0.6876417398452759
+
+00:07:47.600 --> 00:07:48.840
+Hey, we fixed this on main.
+
+NOTE Confidence: 0.9255774617195129
+
+00:07:48.840 --> 00:07:50.842
+And again, it's something I don't have to deal with
+
+NOTE Confidence: 0.9255774617195129
+
+00:07:50.882 --> 00:07:50.999
+it.
+
+NOTE Confidence: 0.7464346289634705
+
+00:07:51.000 --> 00:07:51.680
+I automated it.
+
+NOTE Confidence: 0.8128634691238403
+
+00:07:52.560 --> 00:07:53.520
+It solves the problem.
+
+NOTE Confidence: 0.7327170968055725
+
+00:07:57.640 --> 00:07:58.960
+I also build a nice dashboard.
+
+NOTE Confidence: 0.8723366260528564
+
+00:07:58.960 --> 00:08:04.643
+So I see right now there's only 18, 18 codecs
+
+NOTE Confidence: 0.8723366260528564
+
+00:08:04.769 --> 00:08:10.200
+working right now and this is how it looks.
+
+NOTE Confidence: 0.8238600492477417
+
+00:08:11.160 --> 00:08:15.126
+It's just one long comment that explains what it does
+
+NOTE Confidence: 0.8238600492477417
+
+00:08:15.201 --> 00:08:18.569
+and it gives people a ray of issues that they
+
+NOTE Confidence: 0.8238600492477417
+
+00:08:18.643 --> 00:08:20.439
+that they need to solve.
+
+NOTE Confidence: 0.6729323267936707
+
+00:08:20.480 --> 00:08:21.200
+Typical stuff.
+
+NOTE Confidence: 0.940162718296051
+
+00:08:24.720 --> 00:08:27.560
+The next thing I I had to solve now.
+
+NOTE Confidence: 0.874028205871582
+
+00:08:27.560 --> 00:08:29.760
+Now the project gained momentum.
+
+NOTE Confidence: 0.8626337051391602
+
+00:08:29.760 --> 00:08:33.889
+I added more maintainers and some people turn out to
+
+NOTE Confidence: 0.8626337051391602
+
+00:08:33.968 --> 00:08:35.160
+be really good.
+
+NOTE Confidence: 0.9180507063865662
+
+00:08:35.760 --> 00:08:38.910
+Some people, they kind of showed up for a few
+
+NOTE Confidence: 0.9180507063865662
+
+00:08:38.980 --> 00:08:40.800
+days and then disappeared.
+
+NOTE Confidence: 0.8895457983016968
+
+00:08:41.800 --> 00:08:44.435
+And I was very liberal in the beginning of adding
+
+NOTE Confidence: 0.8895457983016968
+
+00:08:44.488 --> 00:08:46.640
+people and I lost a little bit overview.
+
+NOTE Confidence: 0.9200384616851807
+
+00:08:47.320 --> 00:08:49.760
+So I wanted a dashboard.
+
+NOTE Confidence: 0.8510610461235046
+
+00:08:50.400 --> 00:08:51.760
+So I just built the dashboard.
+
+NOTE Confidence: 0.7286139130592346
+
+00:08:52.200 --> 00:08:54.160
+So now we have reports with open claw.
+
+NOTE Confidence: 0.8888289928436279
+
+00:08:54.160 --> 00:08:57.178
+This is not public for everyone because it because you
+
+NOTE Confidence: 0.8888289928436279
+
+00:08:57.234 --> 00:08:58.800
+want a little bit more data.
+
+NOTE Confidence: 0.907827615737915
+
+00:08:58.800 --> 00:09:01.760
+Actually, I'm not just looking at GitHub issues.
+
+NOTE Confidence: 0.8180109858512878
+
+00:09:01.760 --> 00:09:03.680
+I also look at all our Discord stuff.
+
+NOTE Confidence: 0.8784825205802917
+
+00:09:04.200 --> 00:09:07.577
+So to me, being a good maintainer doesn't just mean
+
+NOTE Confidence: 0.8784825205802917
+
+00:09:07.643 --> 00:09:11.286
+you push code domain also means that you participate in
+
+NOTE Confidence: 0.8784825205802917
+
+00:09:11.352 --> 00:09:14.200
+discussions, which we use Discord for that.
+
+NOTE Confidence: 0.798977255821228
+
+00:09:14.800 --> 00:09:17.480
+So, so this system integrates all data from Discord.
+
+NOTE Confidence: 0.9580097794532776
+
+00:09:18.800 --> 00:09:21.400
+Now that brought me to the next problem.
+
+NOTE Confidence: 0.9505131840705872
+
+00:09:21.480 --> 00:09:23.200
+How do I get the data from Discord?
+
+NOTE Confidence: 0.7639743089675903
+
+00:09:25.960 --> 00:09:28.120
+Well, let's just build this crawl.
+
+NOTE Confidence: 0.8064090609550476
+
+00:09:30.880 --> 00:09:33.010
+Like in this day and age, any problem is just
+
+NOTE Confidence: 0.8064090609550476
+
+00:09:33.057 --> 00:09:33.719
+a prompt away.
+
+NOTE Confidence: 0.7585400938987732
+
+00:09:34.440 --> 00:09:36.160
+Like building this thing is never the hard thing.
+
+NOTE Confidence: 0.7572848200798035
+
+00:09:36.160 --> 00:09:37.840
+Maintaining this thing is actually the hard thing.
+
+NOTE Confidence: 0.9260067939758301
+
+00:09:40.320 --> 00:09:44.198
+But again, even even on even now, when I when
+
+NOTE Confidence: 0.9260067939758301
+
+00:09:44.284 --> 00:09:49.024
+I maintain stuff, I don't think about the project level
+
+NOTE Confidence: 0.9260067939758301
+
+00:09:49.110 --> 00:09:49.799
+anymore.
+
+NOTE Confidence: 0.9083181619644165
+
+00:09:51.120 --> 00:09:54.400
+I it looks like this.
+
+NOTE Confidence: 0.8296484351158142
+
+00:09:55.400 --> 00:09:58.080
+I basically tell I go one level beyond.
+
+NOTE Confidence: 0.6822002530097961
+
+00:09:58.080 --> 00:10:00.639
+I go into my projects folder and ask codex, hey,
+
+NOTE Confidence: 0.6822002530097961
+
+00:10:00.693 --> 00:10:01.439
+let's try ash.
+
+NOTE Confidence: 0.8893218636512756
+
+00:10:01.440 --> 00:10:02.920
+What are the things that I should work on?
+
+NOTE Confidence: 0.805438220500946
+
+00:10:03.440 --> 00:10:06.192
+And it just finds a list of all the all
+
+NOTE Confidence: 0.805438220500946
+
+00:10:06.263 --> 00:10:08.240
+my projects and open issues.
+
+NOTE Confidence: 0.8908887505531311
+
+00:10:08.360 --> 00:10:11.836
+And then I basically say, yes, do all of them
+
+NOTE Confidence: 0.8908887505531311
+
+00:10:11.913 --> 00:10:15.776
+because I already have my slop is better than your
+
+NOTE Confidence: 0.8908887505531311
+
+00:10:15.853 --> 00:10:16.240
+slop.
+
+NOTE Confidence: 0.9273713231086731
+
+00:10:18.520 --> 00:10:21.698
+No, I don't do all of them because there's still
+
+NOTE Confidence: 0.9273713231086731
+
+00:10:21.764 --> 00:10:25.671
+sometimes people report weird stuff and I don't fully trust
+
+NOTE Confidence: 0.9273713231086731
+
+00:10:25.737 --> 00:10:26.400
+my agents.
+
+NOTE Confidence: 0.8523575067520142
+
+00:10:26.960 --> 00:10:30.080
+So I want to, I want to read that right.
+
+NOTE Confidence: 0.8002105355262756
+
+00:10:31.200 --> 00:10:33.160
+So again, I, I'm a lazy person.
+
+NOTE Confidence: 0.9134676456451416
+
+00:10:33.320 --> 00:10:36.357
+I could click on each of those URLs, but it's
+
+NOTE Confidence: 0.9134676456451416
+
+00:10:36.424 --> 00:10:37.639
+kind of like slow.
+
+NOTE Confidence: 0.8685405254364014
+
+00:10:37.880 --> 00:10:41.393
+So I built something where you just select the text
+
+NOTE Confidence: 0.8685405254364014
+
+00:10:41.462 --> 00:10:45.113
+and I built myself an issue browser because again, it
+
+NOTE Confidence: 0.8685405254364014
+
+00:10:45.182 --> 00:10:48.351
+was like like there was like just a few clicks
+
+NOTE Confidence: 0.8685405254364014
+
+00:10:48.419 --> 00:10:49.039
+too much.
+
+NOTE Confidence: 0.8269948363304138
+
+00:10:49.040 --> 00:10:51.044
+It annoyed me a little bit too much and and
+
+NOTE Confidence: 0.8269948363304138
+
+00:10:51.091 --> 00:10:53.516
+the critical the critical thing that you are is like
+
+NOTE Confidence: 0.8269948363304138
+
+00:10:53.562 --> 00:10:55.707
+your time is limited, so you need to build the
+
+NOTE Confidence: 0.8269948363304138
+
+00:10:55.754 --> 00:10:56.919
+tools to build the tools.
+
+NOTE Confidence: 0.758664608001709
+
+00:10:57.600 --> 00:11:01.683
+So again, I built this little slop wiped issue browser
+
+NOTE Confidence: 0.758664608001709
+
+00:11:01.759 --> 00:11:05.389
+where I can copy by now any format because turns
+
+NOTE Confidence: 0.758664608001709
+
+00:11:05.464 --> 00:11:09.548
+out there is clank is given an almost unlimited amount
+
+NOTE Confidence: 0.758664608001709
+
+00:11:09.624 --> 00:11:12.119
+of versions how to format things.
+
+NOTE Confidence: 0.8418921232223511
+
+00:11:12.640 --> 00:11:15.805
+So I anytime something didn't work, I just like fixed
+
+NOTE Confidence: 0.8418921232223511
+
+00:11:15.865 --> 00:11:16.999
+it to make it work.
+
+NOTE Confidence: 0.7470965385437012
+
+00:11:17.000 --> 00:11:19.418
+And now it basically parses all the formats that it's
+
+NOTE Confidence: 0.7470965385437012
+
+00:11:19.463 --> 00:11:19.919
+ever seen.
+
+NOTE Confidence: 0.9354397654533386
+
+00:11:20.440 --> 00:11:23.480
+And I can very quickly click through this list.
+
+NOTE Confidence: 0.8580643534660339
+
+00:11:24.920 --> 00:11:27.958
+In many cases, the agents are already so good because
+
+NOTE Confidence: 0.8580643534660339
+
+00:11:28.016 --> 00:11:30.825
+I have this vision dot MD file that the selection
+
+NOTE Confidence: 0.8580643534660339
+
+00:11:30.882 --> 00:11:31.799
+is mostly right.
+
+NOTE Confidence: 0.6260088086128235
+
+00:11:32.680 --> 00:11:34.280
+And they usually say do those eight.
+
+NOTE Confidence: 0.8529667854309082
+
+00:11:34.280 --> 00:11:37.178
+Don't do those two because I know this needs actual
+
+NOTE Confidence: 0.8529667854309082
+
+00:11:37.235 --> 00:11:37.520
+time.
+
+NOTE Confidence: 0.8661301732063293
+
+00:11:38.320 --> 00:11:41.815
+You know, anytime you work with agents, you want to
+
+NOTE Confidence: 0.8661301732063293
+
+00:11:41.883 --> 00:11:45.858
+optimize what they can do autonomously and then it doesn't
+
+NOTE Confidence: 0.8661301732063293
+
+00:11:45.926 --> 00:11:47.640
+matter how long it takes.
+
+NOTE Confidence: 0.921197772026062
+
+00:11:48.360 --> 00:11:51.362
+You want to you want to really manage the focus
+
+NOTE Confidence: 0.921197772026062
+
+00:11:51.426 --> 00:11:54.045
+time where you want to be in the loop for
+
+NOTE Confidence: 0.921197772026062
+
+00:11:54.109 --> 00:11:57.239
+the things that are important and all the things.
+
+NOTE Confidence: 0.7531863451004028
+
+00:11:58.120 --> 00:12:00.240
+What is that even Gmail draft create.
+
+NOTE Confidence: 0.6635922789573669
+
+00:12:01.000 --> 00:12:02.240
+Yeah, that's pretty nice feature.
+
+NOTE Confidence: 0.8819104433059692
+
+00:12:03.360 --> 00:12:03.640
+Oh yeah.
+
+NOTE Confidence: 0.9534927606582642
+
+00:12:03.640 --> 00:12:04.400
+Let's look at this.
+
+NOTE Confidence: 0.8243685364723206
+
+00:12:04.680 --> 00:12:08.400
+This is a nice feature on GOG.
+
+NOTE Confidence: 0.8171042203903198
+
+00:12:08.400 --> 00:12:12.120
+Another thing that I built because I got annoyed that
+
+NOTE Confidence: 0.8171042203903198
+
+00:12:12.191 --> 00:12:15.420
+Google doesn't have a CLI and I want my agents
+
+NOTE Confidence: 0.8171042203903198
+
+00:12:15.490 --> 00:12:19.000
+to access all my Google yes, like codecs has Gmail
+
+NOTE Confidence: 0.8171042203903198
+
+00:12:19.071 --> 00:12:23.704
+integration and now calendar integration, but only for one account
+
+NOTE Confidence: 0.8171042203903198
+
+00:12:23.774 --> 00:12:25.600
+against and it annoyed me.
+
+NOTE Confidence: 0.7291024923324585
+
+00:12:25.600 --> 00:12:28.047
+So I just built the CLI that can do everything
+
+NOTE Confidence: 0.7291024923324585
+
+00:12:28.101 --> 00:12:31.347
+anytime something's missing because I, I, I control the whole
+
+NOTE Confidence: 0.7291024923324585
+
+00:12:31.400 --> 00:12:31.719
+stack.
+
+NOTE Confidence: 0.8339573740959167
+
+00:12:32.280 --> 00:12:33.720
+My agent controls the whole stack.
+
+NOTE Confidence: 0.826400637626648
+
+00:12:33.760 --> 00:12:36.076
+So it can just fix itself like so like you
+
+NOTE Confidence: 0.826400637626648
+
+00:12:36.131 --> 00:12:37.399
+own the whole universe.
+
+NOTE Confidence: 0.9090492129325867
+
+00:12:37.520 --> 00:12:38.600
+Anything is fixable.
+
+NOTE Confidence: 0.8564304709434509
+
+00:12:39.160 --> 00:12:42.624
+And this is all these issues are are super nice
+
+NOTE Confidence: 0.8564304709434509
+
+00:12:42.698 --> 00:12:46.973
+because this would eventually add a feature codecs can not
+
+NOTE Confidence: 0.8564304709434509
+
+00:12:47.046 --> 00:12:50.290
+only build it, but also end to end verify it
+
+NOTE Confidence: 0.8564304709434509
+
+00:12:50.363 --> 00:12:53.828
+because I of course have like a demo account on
+
+NOTE Confidence: 0.8564304709434509
+
+00:12:53.901 --> 00:12:56.776
+GOG so it can end to end test the whole
+
+NOTE Confidence: 0.8564304709434509
+
+00:12:56.850 --> 00:12:57.440
+feature.
+
+NOTE Confidence: 0.94355708360672
+
+00:12:57.440 --> 00:12:59.592
+And I basically have to do nothing other than saying
+
+NOTE Confidence: 0.94355708360672
+
+00:12:59.634 --> 00:12:59.800
+yes.
+
+NOTE Confidence: 0.7864790558815002
+
+00:13:00.320 --> 00:13:01.905
+And I can ship it and I can ship it
+
+NOTE Confidence: 0.7864790558815002
+
+00:13:01.950 --> 00:13:04.079
+with confidence because it's end to end tested.
+
+NOTE Confidence: 0.7214697003364563
+
+00:13:09.360 --> 00:13:12.480
+So then I build this scroll for the maintenance reports.
+
+NOTE Confidence: 0.9155302047729492
+
+00:13:13.160 --> 00:13:16.356
+Turns out this is like this solves a much bigger
+
+NOTE Confidence: 0.9155302047729492
+
+00:13:16.423 --> 00:13:19.886
+problem because when you do open source and you have
+
+NOTE Confidence: 0.9155302047729492
+
+00:13:19.953 --> 00:13:23.882
+multiple thousands of issues, it's very hard to know what's
+
+NOTE Confidence: 0.9155302047729492
+
+00:13:23.949 --> 00:13:26.680
+actually the thing that I should work on.
+
+NOTE Confidence: 0.8617261648178101
+
+00:13:27.880 --> 00:13:31.041
+So now I I hooked up this crawl to codecs
+
+NOTE Confidence: 0.8617261648178101
+
+00:13:31.118 --> 00:13:34.666
+and it will it will go through all my channels
+
+NOTE Confidence: 0.8617261648178101
+
+00:13:34.743 --> 00:13:38.907
+and I can't basically ask it what are people screaming
+
+NOTE Confidence: 0.8617261648178101
+
+00:13:38.985 --> 00:13:42.918
+the most correlated to open issues and PRS and find
+
+NOTE Confidence: 0.8617261648178101
+
+00:13:42.995 --> 00:13:46.080
+me the top five things I should work on.
+
+NOTE Confidence: 0.8988519906997681
+
+00:13:48.320 --> 00:13:50.400
+It should like match it with my vision document.
+
+NOTE Confidence: 0.9018535614013672
+
+00:13:51.080 --> 00:13:54.187
+Pick the stuff that you can work autonomously and then
+
+NOTE Confidence: 0.9018535614013672
+
+00:13:54.245 --> 00:13:57.237
+basically it can run off and work for doesn't matter
+
+NOTE Confidence: 0.9018535614013672
+
+00:13:57.295 --> 00:13:59.999
+how many hours you can, you can parallelize it.
+
+NOTE Confidence: 0.7813825607299805
+
+00:14:04.800 --> 00:14:07.527
+And then what you always should know when you build,
+
+NOTE Confidence: 0.7813825607299805
+
+00:14:07.580 --> 00:14:10.412
+even when you highly automate this agent is you should
+
+NOTE Confidence: 0.7813825607299805
+
+00:14:10.465 --> 00:14:13.140
+have this the, you should have the overview of your
+
+NOTE Confidence: 0.7813825607299805
+
+00:14:13.192 --> 00:14:13.559
+system.
+
+NOTE Confidence: 0.843986988067627
+
+00:14:14.000 --> 00:14:16.441
+So you will know which issues are like, probably fine,
+
+NOTE Confidence: 0.843986988067627
+
+00:14:16.486 --> 00:14:17.120
+probably fine.
+
+NOTE Confidence: 0.624308705329895
+
+00:14:17.120 --> 00:14:17.800
+Oh, this is Harry.
+
+NOTE Confidence: 0.9339993000030518
+
+00:14:17.880 --> 00:14:19.960
+I need to look at that more specifically.
+
+NOTE Confidence: 0.6802253723144531
+
+00:14:22.480 --> 00:14:23.560
+So I built disk crawl.
+
+NOTE Confidence: 0.7658929824829102
+
+00:14:24.280 --> 00:14:26.560
+And then of course, all my maintainers wanted disk crawl.
+
+NOTE Confidence: 0.8798564076423645
+
+00:14:26.920 --> 00:14:29.499
+But again, it there's no, there's no public way to
+
+NOTE Confidence: 0.8798564076423645
+
+00:14:29.551 --> 00:14:30.479
+get all this data.
+
+NOTE Confidence: 0.6762639880180359
+
+00:14:30.480 --> 00:14:33.556
+So I used a bot multi that was in this
+
+NOTE Confidence: 0.6762639880180359
+
+00:14:33.637 --> 00:14:37.200
+code to like use him to access all the data.
+
+NOTE Confidence: 0.8376358151435852
+
+00:14:37.960 --> 00:14:39.790
+But then how do you distribute it to to the
+
+NOTE Confidence: 0.8376358151435852
+
+00:14:39.833 --> 00:14:40.599
+other maintainers?
+
+NOTE Confidence: 0.8660139441490173
+
+00:14:41.560 --> 00:14:48.076
+Well, what's the what's the simplest backup system there is
+
+NOTE Confidence: 0.8660139441490173
+
+00:14:48.186 --> 00:14:48.959
+GitHub.
+
+NOTE Confidence: 0.7984289526939392
+
+00:14:50.600 --> 00:14:53.980
+So, so all the, all the data from our Discord
+
+NOTE Confidence: 0.7984289526939392
+
+00:14:54.055 --> 00:14:57.435
+is not just in some oh, this could store just
+
+NOTE Confidence: 0.7984289526939392
+
+00:14:57.510 --> 00:15:02.017
+in some, some format that serializes the database and anyone
+
+NOTE Confidence: 0.7984289526939392
+
+00:15:02.092 --> 00:15:06.073
+that uses Discord can just use this as an alternative
+
+NOTE Confidence: 0.7984289526939392
+
+00:15:06.148 --> 00:15:09.903
+data server if they don't have a bot token because
+
+NOTE Confidence: 0.7984289526939392
+
+00:15:09.979 --> 00:15:13.058
+I didn't want to give my bot token to all
+
+NOTE Confidence: 0.7984289526939392
+
+00:15:13.133 --> 00:15:13.959
+the people.
+
+NOTE Confidence: 0.9665485620498657
+
+00:15:14.360 --> 00:15:15.120
+This is good enough.
+
+NOTE Confidence: 0.9590454697608948
+
+00:15:15.600 --> 00:15:17.080
+Again, problem solved.
+
+NOTE Confidence: 0.8716254830360413
+
+00:15:19.160 --> 00:15:23.589
+Now, if you're like me and you're maintaining a lot
+
+NOTE Confidence: 0.8716254830360413
+
+00:15:23.676 --> 00:15:28.105
+of open source projects, what I always wanted was a
+
+NOTE Confidence: 0.8716254830360413
+
+00:15:28.192 --> 00:15:32.361
+way to have this a little dashboard of like what
+
+NOTE Confidence: 0.8716254830360413
+
+00:15:32.448 --> 00:15:34.880
+actually needs my attention.
+
+NOTE Confidence: 0.7688817381858826
+
+00:15:35.400 --> 00:15:36.880
+Where are the most pull requests?
+
+NOTE Confidence: 0.9376122951507568
+
+00:15:37.520 --> 00:15:38.680
+Should I do another release?
+
+NOTE Confidence: 0.8235298991203308
+
+00:15:38.680 --> 00:15:42.570
+But there wasn't really anything good, so I just build
+
+NOTE Confidence: 0.8235298991203308
+
+00:15:42.643 --> 00:15:46.461
+release bar and now I can filter on this specifically
+
+NOTE Confidence: 0.8235298991203308
+
+00:15:46.533 --> 00:15:49.200
+how many days since the last release?
+
+NOTE Confidence: 0.7918452024459839
+
+00:15:50.000 --> 00:15:52.937
+So whenever I do like my little fixes and you
+
+NOTE Confidence: 0.7918452024459839
+
+00:15:53.002 --> 00:15:57.310
+know, software, if you don't constantly garden your software, it's
+
+NOTE Confidence: 0.7918452024459839
+
+00:15:57.376 --> 00:16:01.880
+dead because dependencies, everything needs updating, systems change.
+
+NOTE Confidence: 0.8978990912437439
+
+00:16:02.720 --> 00:16:05.058
+So now I have a nice dashboard to know when
+
+NOTE Confidence: 0.8978990912437439
+
+00:16:05.112 --> 00:16:08.048
+should I do another release and I can basically filter
+
+NOTE Confidence: 0.8978990912437439
+
+00:16:08.103 --> 00:16:09.680
+on stuff that need attention.
+
+NOTE Confidence: 0.8268457651138306
+
+00:16:09.680 --> 00:16:13.983
+And again, the beauty of all these little all these
+
+NOTE Confidence: 0.8268457651138306
+
+00:16:14.067 --> 00:16:18.202
+little tools that you build to help you build the
+
+NOTE Confidence: 0.8268457651138306
+
+00:16:18.286 --> 00:16:21.239
+thing, they're not system critical.
+
+NOTE Confidence: 0.8936342597007751
+
+00:16:21.520 --> 00:16:24.980
+So all these tools, I didn't, yes, I actually didn't
+
+NOTE Confidence: 0.8936342597007751
+
+00:16:25.046 --> 00:16:28.440
+look at any of that code because it doesn't matter.
+
+NOTE Confidence: 0.8579962849617004
+
+00:16:29.160 --> 00:16:32.335
+Like for, for stuff that a lot of people run
+
+NOTE Confidence: 0.8579962849617004
+
+00:16:32.407 --> 00:16:36.160
+open claw, I read more code than people would think.
+
+NOTE Confidence: 0.7301387190818787
+
+00:16:37.200 --> 00:16:41.320
+But for all this little helper tools, vibe them away.
+
+NOTE Confidence: 0.7812644243240356
+
+00:16:42.160 --> 00:16:44.056
+And if you don't, maybe you use them a lot,
+
+NOTE Confidence: 0.7812644243240356
+
+00:16:44.100 --> 00:16:45.599
+then you can like iterate on them.
+
+NOTE Confidence: 0.9018423557281494
+
+00:16:45.600 --> 00:16:48.320
+Maybe they don't work out at no cost.
+
+NOTE Confidence: 0.760937511920929
+
+00:16:51.960 --> 00:16:53.600
+Yeah, we talked about the little browser here.
+
+NOTE Confidence: 0.9728916883468628
+
+00:16:55.280 --> 00:16:56.000
+There's another thing.
+
+NOTE Confidence: 0.8324019312858582
+
+00:16:56.000 --> 00:16:59.431
+Now that I, I use more and more aids to
+
+NOTE Confidence: 0.8324019312858582
+
+00:16:59.519 --> 00:17:03.919
+work on things in parallel, I hit another problem.
+
+NOTE Confidence: 0.9187979102134705
+
+00:17:05.680 --> 00:17:08.280
+There's only so many GitHub tokens that you can use.
+
+NOTE Confidence: 0.8770312666893005
+
+00:17:09.119 --> 00:17:12.326
+And then, and because we have so many issues and
+
+NOTE Confidence: 0.8770312666893005
+
+00:17:12.392 --> 00:17:15.665
+I instructed my, my agent to look at find related
+
+NOTE Confidence: 0.8770312666893005
+
+00:17:15.732 --> 00:17:16.200
+issues.
+
+NOTE Confidence: 0.9079208970069885
+
+00:17:16.200 --> 00:17:18.240
+I always ran out of token.
+
+NOTE Confidence: 0.7556144595146179
+
+00:17:19.280 --> 00:17:21.284
+And I know that I, I don't know if they
+
+NOTE Confidence: 0.7556144595146179
+
+00:17:21.335 --> 00:17:24.059
+get the people out here like they're good friends and
+
+NOTE Confidence: 0.7556144595146179
+
+00:17:24.111 --> 00:17:26.938
+I have someone literally clicking a button once an hour
+
+NOTE Confidence: 0.7556144595146179
+
+00:17:26.989 --> 00:17:28.479
+to reset Peter's rate limits.
+
+NOTE Confidence: 0.873572587966919
+
+00:17:29.840 --> 00:17:31.640
+But the problem is these people need sleep.
+
+NOTE Confidence: 0.7494227886199951
+
+00:17:31.680 --> 00:17:32.640
+It's not clankers.
+
+NOTE Confidence: 0.7649791240692139
+
+00:17:33.280 --> 00:17:36.574
+So so so when I was working weird hours like
+
+NOTE Confidence: 0.7649791240692139
+
+00:17:36.649 --> 00:17:40.767
+Ashley wasn't around, I couldn't ping her to like reset
+
+NOTE Confidence: 0.7649791240692139
+
+00:17:40.842 --> 00:17:42.040
+my tokens again.
+
+NOTE Confidence: 0.9145050048828125
+
+00:17:43.560 --> 00:17:46.639
+I find being annoyed is the very best way to
+
+NOTE Confidence: 0.9145050048828125
+
+00:17:46.709 --> 00:17:47.759
+solve problems.
+
+NOTE Confidence: 0.7478996515274048
+
+00:17:49.480 --> 00:17:52.897
+So I built Octopus and you're like, my feelings were
+
+NOTE Confidence: 0.7478996515274048
+
+00:17:52.962 --> 00:17:55.919
+like transported into this distinct feelings.
+
+NOTE Confidence: 0.7779650092124939
+
+00:17:59.440 --> 00:18:04.440
+But the principle is the principle is very, very easy.
+
+NOTE Confidence: 0.12168552726507187
+
+00:18:04.480 --> 00:18:04.960
+Octopus.
+
+NOTE Confidence: 0.804002583026886
+
+00:18:07.760 --> 00:18:09.160
+Let's see if this actually works.
+
+NOTE Confidence: 0.7800059914588928
+
+00:18:13.000 --> 00:18:15.080
+But again, the the principle is very easy.
+
+NOTE Confidence: 0.9081977605819702
+
+00:18:15.880 --> 00:18:20.854
+You as a as a individual have 5000 API tokens
+
+NOTE Confidence: 0.9081977605819702
+
+00:18:20.965 --> 00:18:21.959
+per hour.
+
+NOTE Confidence: 0.7648522257804871
+
+00:18:22.560 --> 00:18:24.837
+But if you install a GitHub app, you can see
+
+NOTE Confidence: 0.7648522257804871
+
+00:18:24.889 --> 00:18:26.079
+15,000 tokens per hour.
+
+NOTE Confidence: 0.8274914622306824
+
+00:18:27.040 --> 00:18:30.961
+So I just built the thing that since GH and
+
+NOTE Confidence: 0.8274914622306824
+
+00:18:31.052 --> 00:18:35.612
+then calls this thing on Cloudflare if it's a read
+
+NOTE Confidence: 0.8274914622306824
+
+00:18:35.704 --> 00:18:36.160
+only.
+
+NOTE Confidence: 0.8267574310302734
+
+00:18:36.160 --> 00:18:38.980
+If it's a non mutating read only action from a
+
+NOTE Confidence: 0.8267574310302734
+
+00:18:39.041 --> 00:18:42.291
+public repository, it can use the GitHub app and then
+
+NOTE Confidence: 0.8267574310302734
+
+00:18:42.352 --> 00:18:45.050
+use the token from the GitHub app and not my
+
+NOTE Confidence: 0.8267574310302734
+
+00:18:45.112 --> 00:18:45.479
+token.
+
+NOTE Confidence: 0.8899526000022888
+
+00:18:45.840 --> 00:18:48.699
+Only if it's something that's mutating or it doesn't fit
+
+NOTE Confidence: 0.8899526000022888
+
+00:18:48.750 --> 00:18:50.639
+that that match it will use my token.
+
+NOTE Confidence: 0.8218209147453308
+
+00:18:50.720 --> 00:18:57.056
+Bam again, problem solved and all the tools are so
+
+NOTE Confidence: 0.8218209147453308
+
+00:18:57.183 --> 00:19:02.759
+good now, especially, especially Cloudflare.
+
+NOTE Confidence: 0.7676311135292053
+
+00:19:03.720 --> 00:19:06.591
+I didn't have I I I just explained the agent
+
+NOTE Confidence: 0.7676311135292053
+
+00:19:06.656 --> 00:19:07.440
+what I want.
+
+NOTE Confidence: 0.9131873846054077
+
+00:19:11.000 --> 00:19:15.217
+And then with the combination of really smart models browser
+
+NOTE Confidence: 0.9131873846054077
+
+00:19:15.287 --> 00:19:18.240
+use you don't have to do anything anymore.
+
+NOTE Confidence: 0.8324760794639587
+
+00:19:18.320 --> 00:19:20.880
+Like literally could configure Cloudflare itself.
+
+NOTE Confidence: 0.8864144682884216
+
+00:19:21.359 --> 00:19:23.766
+You probably still want to have a look at because
+
+NOTE Confidence: 0.8864144682884216
+
+00:19:23.815 --> 00:19:26.221
+you want to review if it actually doesn't mess up
+
+NOTE Confidence: 0.8864144682884216
+
+00:19:26.270 --> 00:19:27.399
+your security settings.
+
+NOTE Confidence: 0.830136239528656
+
+00:19:32.400 --> 00:19:35.605
+But the idea is anytime, anytime you feel you feel
+
+NOTE Confidence: 0.830136239528656
+
+00:19:35.669 --> 00:19:38.425
+pain, think of go, go, go, go level out and
+
+NOTE Confidence: 0.830136239528656
+
+00:19:38.489 --> 00:19:41.246
+think about what, what can I do to like get
+
+NOTE Confidence: 0.830136239528656
+
+00:19:41.310 --> 00:19:42.399
+rid of that pain?
+
+NOTE Confidence: 0.9441355466842651
+
+00:19:43.480 --> 00:19:46.378
+And then usually it will not only help you, it
+
+NOTE Confidence: 0.9441355466842651
+
+00:19:46.441 --> 00:19:48.079
+will help your whole team.
+
+NOTE Confidence: 0.7604740858078003
+
+00:19:48.600 --> 00:19:51.040
+And it's, it's A and it compounds.
+
+NOTE Confidence: 0.8650574088096619
+
+00:19:51.040 --> 00:19:53.056
+All the little tools are built help me to build
+
+NOTE Confidence: 0.8650574088096619
+
+00:19:53.099 --> 00:19:53.399
+faster.
+
+NOTE Confidence: 0.947601318359375
+
+00:19:54.400 --> 00:19:56.680
+Another, another problem I had.
+
+NOTE Confidence: 0.26745396852493286
+
+00:19:58.280 --> 00:19:58.720
+Yeah, how?
+
+NOTE Confidence: 0.63917475938797
+
+00:19:58.720 --> 00:19:59.200
+We're on time.
+
+NOTE Confidence: 0.8279451727867126
+
+00:19:59.200 --> 00:20:01.400
+Actually, I think we're good.
+
+NOTE Confidence: 0.8529129028320312
+
+00:20:06.860 --> 00:20:08.300
+Who who here had this problem?
+
+NOTE Confidence: 0.7089114189147949
+
+00:20:08.660 --> 00:20:11.708
+Who who's crazy enough to runs like more than let's
+
+NOTE Confidence: 0.7089114189147949
+
+00:20:11.768 --> 00:20:13.980
+say 10 codec sessions except Cloud 2.
+
+NOTE Confidence: 0.9056460857391357
+
+00:20:16.260 --> 00:20:17.260
+Yeah, you guys need to level up.
+
+NOTE Confidence: 0.8269479274749756
+
+00:20:20.100 --> 00:20:26.687
+So the project grew, it kind of exploded the code
+
+NOTE Confidence: 0.8269479274749756
+
+00:20:26.822 --> 00:20:29.779
+and the features grew.
+
+NOTE Confidence: 0.8096415400505066
+
+00:20:31.040 --> 00:20:32.160
+People reported bugs.
+
+NOTE Confidence: 0.8916239142417908
+
+00:20:32.400 --> 00:20:36.789
+Our test case grew and the tests were becoming more
+
+NOTE Confidence: 0.8916239142417908
+
+00:20:36.875 --> 00:20:38.079
+and more pain.
+
+NOTE Confidence: 0.7376313805580139
+
+00:20:38.120 --> 00:20:40.560
+You know, that's, that's the stuff kind of creeps in.
+
+NOTE Confidence: 0.7730394601821899
+
+00:20:40.560 --> 00:20:43.590
+It takes like took like 10 seconds and took 30
+
+NOTE Confidence: 0.7730394601821899
+
+00:20:43.656 --> 00:20:47.082
+seconds and took a minute, then it took two minutes,
+
+NOTE Confidence: 0.7730394601821899
+
+00:20:47.148 --> 00:20:48.399
+100 took 5 minutes.
+
+NOTE Confidence: 0.7370654344558716
+
+00:20:48.600 --> 00:20:50.965
+Then I optimized it from a mixed studio to work
+
+NOTE Confidence: 0.7370654344558716
+
+00:20:51.015 --> 00:20:51.719
+in one minute.
+
+NOTE Confidence: 0.7990829944610596
+
+00:20:52.080 --> 00:20:55.882
+And everybody complained that that like their computers were melting
+
+NOTE Confidence: 0.7990829944610596
+
+00:20:55.938 --> 00:20:58.120
+because they didn't have like 40 cores.
+
+NOTE Confidence: 0.7715946435928345
+
+00:21:00.080 --> 00:21:01.920
+So we had this shared painting again.
+
+NOTE Confidence: 0.7269750237464905
+
+00:21:02.920 --> 00:21:08.028
+And around the time I saw that, oops, oh, this
+
+NOTE Confidence: 0.7269750237464905
+
+00:21:08.139 --> 00:21:10.359
+doesn't, I saw that.
+
+NOTE Confidence: 0.7560543417930603
+
+00:21:11.600 --> 00:21:12.120
+What's it called?
+
+NOTE Confidence: 0.1934709995985031
+
+00:21:12.760 --> 00:21:13.360
+Blacksmiths.
+
+NOTE Confidence: 0.7519412636756897
+
+00:21:13.880 --> 00:21:20.280
+They had, they started something, a test box concept.
+
+NOTE Confidence: 0.9135000705718994
+
+00:21:21.040 --> 00:21:25.440
+So the idea is your computer power is limited, so
+
+NOTE Confidence: 0.9135000705718994
+
+00:21:25.529 --> 00:21:29.570
+you want to give the agent a little box where
+
+NOTE Confidence: 0.9135000705718994
+
+00:21:29.660 --> 00:21:33.611
+it can run the tests or do whatever it needs
+
+NOTE Confidence: 0.9135000705718994
+
+00:21:33.701 --> 00:21:34.240
+to be.
+
+NOTE Confidence: 0.7527164816856384
+
+00:21:34.240 --> 00:21:40.200
+That's that's super intensive and that's beautiful for a while.
+
+NOTE Confidence: 0.8695985674858093
+
+00:21:40.320 --> 00:21:43.507
+But the problem was their stuff was very new and
+
+NOTE Confidence: 0.8695985674858093
+
+00:21:43.573 --> 00:21:46.495
+was like, it was down for at least two hours
+
+NOTE Confidence: 0.8695985674858093
+
+00:21:46.561 --> 00:21:46.959
+a day.
+
+NOTE Confidence: 0.7236881852149963
+
+00:21:47.800 --> 00:21:49.540
+And by then our team was so dependent on it
+
+NOTE Confidence: 0.7236881852149963
+
+00:21:49.580 --> 00:21:51.726
+that like nothing would get done anymore in those two
+
+NOTE Confidence: 0.7236881852149963
+
+00:21:51.766 --> 00:21:53.871
+hours because see, I would break down and then tests
+
+NOTE Confidence: 0.7236881852149963
+
+00:21:53.911 --> 00:21:54.600
+would break down.
+
+NOTE Confidence: 0.8685916066169739
+
+00:21:55.560 --> 00:21:56.640
+So I was like, this is fine.
+
+NOTE Confidence: 0.8439362645149231
+
+00:21:56.640 --> 00:22:00.600
+I'll just build something that wraps it with alternatives.
+
+NOTE Confidence: 0.8186607956886292
+
+00:22:00.680 --> 00:22:03.040
+And that's how Crab Box was born because you have
+
+NOTE Confidence: 0.8186607956886292
+
+00:22:03.088 --> 00:22:05.159
+to keep it with the weird crustacean names.
+
+NOTE Confidence: 0.9173982739448547
+
+00:22:07.640 --> 00:22:09.640
+Again, very simple, a very simple concept.
+
+NOTE Confidence: 0.8101353645324707
+
+00:22:09.640 --> 00:22:13.745
+You spin up a little inferile machine in the cloud
+
+NOTE Confidence: 0.8101353645324707
+
+00:22:13.827 --> 00:22:17.440
+and then it our syncs your changes in there.
+
+NOTE Confidence: 0.5741804838180542
+
+00:22:17.440 --> 00:22:18.760
+Your report's already checked out.
+
+NOTE Confidence: 0.8468408584594727
+
+00:22:18.960 --> 00:22:21.486
+It runs the tests in there and then you to
+
+NOTE Confidence: 0.8468408584594727
+
+00:22:21.547 --> 00:22:24.254
+pay the all the CPU stuff that you would need
+
+NOTE Confidence: 0.8468408584594727
+
+00:22:24.314 --> 00:22:26.240
+to run the test on your machine.
+
+NOTE Confidence: 0.9574201107025146
+
+00:22:26.720 --> 00:22:28.320
+You can use really beefy hardware.
+
+NOTE Confidence: 0.8210933208465576
+
+00:22:28.560 --> 00:22:31.760
+You can massively parallelize everyone's happy.
+
+NOTE Confidence: 0.7200608849525452
+
+00:22:34.320 --> 00:22:39.385
+And then this, this tool quickly became like universally loft
+
+NOTE Confidence: 0.7200608849525452
+
+00:22:39.468 --> 00:22:43.703
+because it would it would use our main provider and
+
+NOTE Confidence: 0.7200608849525452
+
+00:22:43.786 --> 00:22:47.440
+if that one's down, it would just use AWS or
+
+NOTE Confidence: 0.7200608849525452
+
+00:22:47.523 --> 00:22:48.519
+now as Asia.
+
+NOTE Confidence: 0.8252410292625427
+
+00:22:48.520 --> 00:22:51.568
+And then people started making pull requests and now it
+
+NOTE Confidence: 0.8252410292625427
+
+00:22:51.623 --> 00:22:53.119
+supports like 20 providers.
+
+NOTE Confidence: 0.810408890247345
+
+00:22:56.440 --> 00:22:59.789
+But it didn't stop there because I recognized this is
+
+NOTE Confidence: 0.810408890247345
+
+00:22:59.852 --> 00:23:03.770
+actually way more useful because oftentimes we have bugs where
+
+NOTE Confidence: 0.810408890247345
+
+00:23:03.833 --> 00:23:06.677
+Oh yeah, on on Windows there is AE Prem issue
+
+NOTE Confidence: 0.810408890247345
+
+00:23:06.741 --> 00:23:10.279
+even though we use no, then it should be cross-platform.
+
+NOTE Confidence: 0.8316692113876343
+
+00:23:10.320 --> 00:23:14.410
+There's like always little weird details where cross-platform is a
+
+NOTE Confidence: 0.8316692113876343
+
+00:23:14.472 --> 00:23:14.719
+lie.
+
+NOTE Confidence: 0.8407403230667114
+
+00:23:16.200 --> 00:23:19.216
+And then in the past, I would just sometimes just
+
+NOTE Confidence: 0.8407403230667114
+
+00:23:19.278 --> 00:23:21.987
+like vibe it because I'm too lazy to spin up
+
+NOTE Confidence: 0.8407403230667114
+
+00:23:22.048 --> 00:23:23.279
+my Windows computer.
+
+NOTE Confidence: 0.8535284996032715
+
+00:23:23.400 --> 00:23:25.234
+I could spin up AVM, but then how do I
+
+NOTE Confidence: 0.8535284996032715
+
+00:23:25.282 --> 00:23:26.200
+get it into the VM?
+
+NOTE Confidence: 0.7773926258087158
+
+00:23:26.200 --> 00:23:28.317
+And then I kind of like have to do get
+
+NOTE Confidence: 0.7773926258087158
+
+00:23:28.373 --> 00:23:30.937
+codecs into the VM because I can't, I can't do
+
+NOTE Confidence: 0.7773926258087158
+
+00:23:30.993 --> 00:23:33.946
+get anymore without an agent because it's 3:00 AM and
+
+NOTE Confidence: 0.7773926258087158
+
+00:23:34.002 --> 00:23:34.560
+I'm tired.
+
+NOTE Confidence: 0.7432323098182678
+
+00:23:35.320 --> 00:23:37.920
+You know, you know, you have to fight friction.
+
+NOTE Confidence: 0.7561619281768799
+
+00:23:38.000 --> 00:23:42.000
+Like, like ultimately we are being lazy is good.
+
+NOTE Confidence: 0.8643674254417419
+
+00:23:42.080 --> 00:23:47.107
+So I noticed that I'm, I'm pushing SLOB because I'm
+
+NOTE Confidence: 0.8643674254417419
+
+00:23:47.206 --> 00:23:51.840
+too lazy to come up with a good testing system.
+
+NOTE Confidence: 0.7766728401184082
+
+00:23:52.160 --> 00:23:56.560
+So I added cross-platform support to crap box.
+
+NOTE Confidence: 0.7595750093460083
+
+00:23:57.240 --> 00:24:00.325
+And now anytime there's something that's hairy, I just tell
+
+NOTE Confidence: 0.7595750093460083
+
+00:24:00.377 --> 00:24:02.468
+my my agent, hey, test it on all OSS and
+
+NOTE Confidence: 0.7595750093460083
+
+00:24:02.521 --> 00:24:04.874
+it will not just like create one box, it will
+
+NOTE Confidence: 0.7595750093460083
+
+00:24:04.926 --> 00:24:05.920
+create three boxes.
+
+NOTE Confidence: 0.7947263717651367
+
+00:24:06.440 --> 00:24:08.501
+Or maybe maybe there's a big issue that's only on
+
+NOTE Confidence: 0.7947263717651367
+
+00:24:08.543 --> 00:24:08.880
+Red Hat.
+
+NOTE Confidence: 0.8098182678222656
+
+00:24:08.880 --> 00:24:11.280
+Sorry, Sally love Red Hat.
+
+NOTE Confidence: 0.8346041440963745
+
+00:24:11.280 --> 00:24:13.584
+And it will spin up four boxes and you can
+
+NOTE Confidence: 0.8346041440963745
+
+00:24:13.638 --> 00:24:16.656
+like, you can scale it infinitum and like increase your
+
+NOTE Confidence: 0.8346041440963745
+
+00:24:16.710 --> 00:24:18.960
+confidence that your code actually works.
+
+NOTE Confidence: 0.9305447340011597
+
+00:24:18.960 --> 00:24:21.746
+And it can do that in parallel, which is really
+
+NOTE Confidence: 0.9305447340011597
+
+00:24:21.805 --> 00:24:22.280
+amazing.
+
+NOTE Confidence: 0.9196664690971375
+
+00:24:23.800 --> 00:24:28.004
+And then once I built that got me thinking like,
+
+NOTE Confidence: 0.9196664690971375
+
+00:24:28.092 --> 00:24:32.209
+I have this bug, but it's like actually only on
+
+NOTE Confidence: 0.9196664690971375
+
+00:24:32.297 --> 00:24:34.399
+Windows on this browser.
+
+NOTE Confidence: 0.6383846998214722
+
+00:24:34.920 --> 00:24:36.400
+So I kind of need UI for that.
+
+NOTE Confidence: 0.6288937330245972
+
+00:24:37.760 --> 00:24:38.800
+People already solved that.
+
+NOTE Confidence: 0.7589133381843567
+
+00:24:38.800 --> 00:24:40.040
+Just add V&C into it.
+
+NOTE Confidence: 0.8307473659515381
+
+00:24:40.920 --> 00:24:43.146
+So now I have a crack box that like can
+
+NOTE Confidence: 0.8307473659515381
+
+00:24:43.203 --> 00:24:46.458
+recreate exact scenario and then my agent opens a browser
+
+NOTE Confidence: 0.8307473659515381
+
+00:24:46.515 --> 00:24:49.427
+with web VNC and in there there's already a browser
+
+NOTE Confidence: 0.8307473659515381
+
+00:24:49.484 --> 00:24:52.625
+waiting and a terminal and maybe Telegram or whatever I
+
+NOTE Confidence: 0.8307473659515381
+
+00:24:52.682 --> 00:24:55.137
+need so I can recreate the issue end to end
+
+NOTE Confidence: 0.8307473659515381
+
+00:24:55.194 --> 00:24:55.880
+and test it.
+
+NOTE Confidence: 0.9757420420646667
+
+00:24:57.560 --> 00:24:58.360
+That was amazing.
+
+NOTE Confidence: 0.8290964365005493
+
+00:24:59.960 --> 00:25:05.385
+But still like I had to click myself, you know,
+
+NOTE Confidence: 0.8290964365005493
+
+00:25:05.500 --> 00:25:08.039
+like laziness is good.
+
+NOTE Confidence: 0.7411895394325256
+
+00:25:09.200 --> 00:25:11.040
+So that got us the idea.
+
+NOTE Confidence: 0.9032288789749146
+
+00:25:11.040 --> 00:25:12.880
+Wouldn't it be cool if the clanker could do it?
+
+NOTE Confidence: 0.9634338021278381
+
+00:25:13.760 --> 00:25:14.680
+Of course they can do it.
+
+NOTE Confidence: 0.7195791006088257
+
+00:25:14.680 --> 00:25:16.480
+They have computer vision models could really good.
+
+NOTE Confidence: 0.7846623659133911
+
+00:25:17.480 --> 00:25:21.529
+So so now crapbox also has little little tools for
+
+NOTE Confidence: 0.7846623659133911
+
+00:25:21.610 --> 00:25:24.040
+screenshot and click and type.
+
+NOTE Confidence: 0.8627210259437561
+
+00:25:24.560 --> 00:25:27.347
+And now I can actually my agent can have its
+
+NOTE Confidence: 0.8627210259437561
+
+00:25:27.411 --> 00:25:30.389
+own little box with UI that it can use computer
+
+NOTE Confidence: 0.8627210259437561
+
+00:25:30.452 --> 00:25:32.480
+automation in to control the UI.
+
+NOTE Confidence: 0.7519351243972778
+
+00:25:35.680 --> 00:25:36.640
+And it's still not good enough.
+
+NOTE Confidence: 0.7874767780303955
+
+00:25:38.040 --> 00:25:40.920
+And like, I don't want to watch the clanker.
+
+NOTE Confidence: 0.9053425192832947
+
+00:25:40.920 --> 00:25:41.920
+I just want to see a video.
+
+NOTE Confidence: 0.8673279881477356
+
+00:25:43.359 --> 00:25:46.420
+So what we built next was Mantis, where now we
+
+NOTE Confidence: 0.8673279881477356
+
+00:25:46.487 --> 00:25:49.015
+have an agent that I can ping on a, on
+
+NOTE Confidence: 0.8673279881477356
+
+00:25:49.081 --> 00:25:50.080
+a pull request.
+
+NOTE Confidence: 0.8886541128158569
+
+00:25:51.040 --> 00:25:54.303
+They'll spin up correct boxes, make a video of the
+
+NOTE Confidence: 0.8886541128158569
+
+00:25:54.368 --> 00:25:56.978
+bug, fix it, make a video of the fix and
+
+NOTE Confidence: 0.8886541128158569
+
+00:25:57.044 --> 00:25:59.720
+actually look at the video and verify it.
+
+NOTE Confidence: 0.9376630783081055
+
+00:26:00.320 --> 00:26:02.848
+And then all I get I can basically I see
+
+NOTE Confidence: 0.9376630783081055
+
+00:26:02.911 --> 00:26:03.480
+an issue.
+
+NOTE Confidence: 0.7896877527236938
+
+00:26:03.600 --> 00:26:05.920
+I can ping clause Reaper to fix it.
+
+NOTE Confidence: 0.8060080409049988
+
+00:26:06.520 --> 00:26:09.595
+It will create the PR meant just for like do
+
+NOTE Confidence: 0.8060080409049988
+
+00:26:09.664 --> 00:26:12.949
+the visual verification and all I have to do is
+
+NOTE Confidence: 0.8060080409049988
+
+00:26:13.019 --> 00:26:16.374
+like look at the video and plus merge and that's
+
+NOTE Confidence: 0.8060080409049988
+
+00:26:16.444 --> 00:26:18.960
+all built based on me being annoyed.
+
+NOTE Confidence: 0.8574385643005371
+
+00:26:23.680 --> 00:26:29.379
+The next thing I noticed, like you would, you would
+
+NOTE Confidence: 0.8574385643005371
+
+00:26:29.490 --> 00:26:30.719
+use codecs.
+
+NOTE Confidence: 0.8212906718254089
+
+00:26:30.720 --> 00:26:33.285
+You were like do the prompt and then you would
+
+NOTE Confidence: 0.8212906718254089
+
+00:26:33.341 --> 00:26:36.575
+do slash review because you're like, you're kind of unsure
+
+NOTE Confidence: 0.8212906718254089
+
+00:26:36.631 --> 00:26:38.360
+maybe maybe I should review it.
+
+NOTE Confidence: 0.7826941013336182
+
+00:26:38.800 --> 00:26:41.730
+And then Cortex would find 3 issues and they're like,
+
+NOTE Confidence: 0.7826941013336182
+
+00:26:41.785 --> 00:26:44.439
+yeah, damn, they're like all of them sound real.
+
+NOTE Confidence: 0.7413796782493591
+
+00:26:44.440 --> 00:26:47.782
+So I'll fix it and run off for 1020 minutes,
+
+NOTE Confidence: 0.7413796782493591
+
+00:26:47.858 --> 00:26:51.352
+run all the tests again and you're like, is it
+
+NOTE Confidence: 0.7413796782493591
+
+00:26:51.428 --> 00:26:52.720
+really all fixed?
+
+NOTE Confidence: 0.8614298701286316
+
+00:26:53.200 --> 00:26:54.400
+Let's do slash review again.
+
+NOTE Confidence: 0.7953249216079712
+
+00:26:55.440 --> 00:26:56.560
+It would run for 10 minutes.
+
+NOTE Confidence: 0.7308057546615601
+
+00:26:57.080 --> 00:26:59.958
+It would find 2 new issues because it can't, can't
+
+NOTE Confidence: 0.7308057546615601
+
+00:27:00.015 --> 00:27:01.799
+show me all the issues at once.
+
+NOTE Confidence: 0.4720887839794159
+
+00:27:01.800 --> 00:27:02.120
+Yeah, yeah.
+
+NOTE Confidence: 0.8810881972312927
+
+00:27:02.240 --> 00:27:03.360
+It's just like they can't do it.
+
+NOTE Confidence: 0.7783984541893005
+
+00:27:04.480 --> 00:27:07.299
+You type fix again, you wait 20 minutes, you do
+
+NOTE Confidence: 0.7783984541893005
+
+00:27:07.359 --> 00:27:10.419
+something else, go back and like, yeah, but this is
+
+NOTE Confidence: 0.7783984541893005
+
+00:27:10.479 --> 00:27:12.639
+really fixed the slash review again.
+
+NOTE Confidence: 0.8721688985824585
+
+00:27:12.640 --> 00:27:16.000
+It would run for 20 minutes or 30 minutes.
+
+NOTE Confidence: 0.7485267519950867
+
+00:27:16.000 --> 00:27:17.360
+You would find another issues.
+
+NOTE Confidence: 0.8376480937004089
+
+00:27:17.920 --> 00:27:19.160
+And I don't know, have you done this?
+
+NOTE Confidence: 0.9443629384040833
+
+00:27:20.240 --> 00:27:23.303
+Like I did this and then there was one time
+
+NOTE Confidence: 0.9443629384040833
+
+00:27:23.374 --> 00:27:24.799
+I did this 10 times.
+
+NOTE Confidence: 0.8795403242111206
+
+00:27:25.480 --> 00:27:26.680
+It was the whole day.
+
+NOTE Confidence: 0.7502606511116028
+
+00:27:27.560 --> 00:27:29.640
+Like I I added support for line.
+
+NOTE Confidence: 0.9424912929534912
+
+00:27:29.960 --> 00:27:32.788
+I don't even use line, but like somebody was very
+
+NOTE Confidence: 0.9424912929534912
+
+00:27:32.845 --> 00:27:34.000
+passionate about it.
+
+NOTE Confidence: 0.836496889591217
+
+00:27:34.000 --> 00:27:35.998
+I wanted to get it in and then all day
+
+NOTE Confidence: 0.836496889591217
+
+00:27:36.050 --> 00:27:38.259
+I did this review and that was like, is it
+
+NOTE Confidence: 0.836496889591217
+
+00:27:38.311 --> 00:27:38.680
+enough?
+
+NOTE Confidence: 0.8724080324172974
+
+00:27:38.680 --> 00:27:39.240
+Is enough?
+
+NOTE Confidence: 0.8166395425796509
+
+00:27:40.240 --> 00:27:43.760
+Like I like I feel like I'm the clanker.
+
+NOTE Confidence: 0.8746216893196106
+
+00:27:45.119 --> 00:27:48.462
+So I built auto review and in the beginning I
+
+NOTE Confidence: 0.8746216893196106
+
+00:27:48.537 --> 00:27:51.359
+thought, oh, this is kind of annoying.
+
+NOTE Confidence: 0.7892084717750549
+
+00:27:51.359 --> 00:27:53.356
+I probably need hooks or like maybe I have 4
+
+NOTE Confidence: 0.7892084717750549
+
+00:27:53.402 --> 00:27:56.079
+codecs because codecs open source, I could totally do that.
+
+NOTE Confidence: 0.8532077074050903
+
+00:27:57.400 --> 00:27:59.866
+But that turns out it's actually way easier than that
+
+NOTE Confidence: 0.8532077074050903
+
+00:27:59.912 --> 00:28:02.891
+because agents are really good at following instructions for the
+
+NOTE Confidence: 0.8532077074050903
+
+00:28:02.937 --> 00:28:04.520
+last at least four or five months.
+
+NOTE Confidence: 0.7554575204849243
+
+00:28:05.119 --> 00:28:08.865
+So now there is one line in my agent dot
+
+NOTE Confidence: 0.7554575204849243
+
+00:28:08.958 --> 00:28:13.265
+MD that says before you commit or land APR, if
+
+NOTE Confidence: 0.7554575204849243
+
+00:28:13.359 --> 00:28:17.760
+you haven't done auto view it, run auto review.
+
+NOTE Confidence: 0.936637818813324
+
+00:28:17.760 --> 00:28:21.813
+And again, you know, review, some people say look at
+
+NOTE Confidence: 0.936637818813324
+
+00:28:21.891 --> 00:28:23.839
+the code with fresh eyes.
+
+NOTE Confidence: 0.966261088848114
+
+00:28:24.440 --> 00:28:25.480
+Yeah, good luck with that.
+
+NOTE Confidence: 0.8545947074890137
+
+00:28:25.840 --> 00:28:29.760
+You know, like context doesn't really work that way, but.
+
+NOTE Confidence: 0.9181066751480103
+
+00:28:38.480 --> 00:28:39.960
+But you can just call.
+
+NOTE Confidence: 0.8259018659591675
+
+00:28:41.360 --> 00:28:44.493
+I don't know if you find the when you get
+
+NOTE Confidence: 0.8259018659591675
+
+00:28:44.569 --> 00:28:48.084
+the idea, you can just call the agent that you
+
+NOTE Confidence: 0.8259018659591675
+
+00:28:48.161 --> 00:28:51.600
+use SCLI with the commands that it should do.
+
+NOTE Confidence: 0.7740305662155151
+
+00:28:52.080 --> 00:28:56.123
+So you get a fresh context by just calling like
+
+NOTE Confidence: 0.7740305662155151
+
+00:28:56.209 --> 00:29:00.079
+I Codex calls codex to like run order review.
+
+NOTE Confidence: 0.7555509805679321
+
+00:29:00.240 --> 00:29:02.406
+There was a bug sometimes, Sometimes Codex was calling codex,
+
+NOTE Confidence: 0.7555509805679321
+
+00:29:02.442 --> 00:29:04.359
+calling Codex and calling codex and it took very long.
+
+NOTE Confidence: 0.8834260106086731
+
+00:29:04.720 --> 00:29:10.251
+I fixed that, but now I have a very reliable
+
+NOTE Confidence: 0.8834260106086731
+
+00:29:10.377 --> 00:29:17.668
+system that automatically runs many rounds of review and I
+
+NOTE Confidence: 0.8834260106086731
+
+00:29:17.794 --> 00:29:24.080
+also tuned the skill MD file to explain the agent.
+
+NOTE Confidence: 0.6934925317764282
+
+00:29:24.560 --> 00:29:29.280
+Not every review thing is valid you know.
+
+NOTE Confidence: 0.77633136510849
+
+00:29:29.400 --> 00:29:35.080
+Sometimes they would find very good edge cases.
+
+NOTE Confidence: 0.8773848414421082
+
+00:29:35.480 --> 00:29:39.214
+So it's a little bit up to you to explain
+
+NOTE Confidence: 0.8773848414421082
+
+00:29:39.305 --> 00:29:43.040
+the agent, the, the, the, the conditions.
+
+NOTE Confidence: 0.7904464602470398
+
+00:29:43.520 --> 00:29:45.280
+What do you think is is valid running?
+
+NOTE Confidence: 0.8553844690322876
+
+00:29:45.280 --> 00:29:48.326
+For example, in our case, we don't expect that you
+
+NOTE Confidence: 0.8553844690322876
+
+00:29:48.387 --> 00:29:51.799
+randomly edit plug in files while the system is running.
+
+NOTE Confidence: 0.9375600218772888
+
+00:29:52.200 --> 00:29:53.360
+The agent doesn't know that.
+
+NOTE Confidence: 0.8979750871658325
+
+00:29:53.560 --> 00:29:56.486
+So like by default, it would write very defensive code
+
+NOTE Confidence: 0.8979750871658325
+
+00:29:56.540 --> 00:29:58.599
+to like deal with all of those things.
+
+NOTE Confidence: 0.7902969717979431
+
+00:29:58.840 --> 00:30:01.297
+So, so it's always a good idea to write all
+
+NOTE Confidence: 0.7902969717979431
+
+00:30:01.354 --> 00:30:04.040
+this invariance into your agent sort of D file.
+
+NOTE Confidence: 0.9475322961807251
+
+00:30:05.760 --> 00:30:08.947
+That's a good idea in general because you know that,
+
+NOTE Confidence: 0.9475322961807251
+
+00:30:09.008 --> 00:30:10.480
+but the clanker doesn't.
+
+NOTE Confidence: 0.8910038471221924
+
+00:30:11.400 --> 00:30:14.136
+And every time you start a new session, clanker memory
+
+NOTE Confidence: 0.8910038471221924
+
+00:30:14.186 --> 00:30:15.200
+is pretty much gone.
+
+NOTE Confidence: 0.929656445980072
+
+00:30:16.080 --> 00:30:20.133
+So you, the more you tell it about your project,
+
+NOTE Confidence: 0.929656445980072
+
+00:30:20.217 --> 00:30:22.920
+the better the time you'll have.
+
+NOTE Confidence: 0.7688499093055725
+
+00:30:23.880 --> 00:30:26.412
+I I went all in from very long agent files
+
+NOTE Confidence: 0.7688499093055725
+
+00:30:26.472 --> 00:30:27.919
+to like very short ones.
+
+NOTE Confidence: 0.8909253478050232
+
+00:30:27.920 --> 00:30:31.491
+And now mine are kind of long again, but with
+
+NOTE Confidence: 0.8909253478050232
+
+00:30:31.570 --> 00:30:32.919
+meaningful stuff.
+
+NOTE Confidence: 0.823982298374176
+
+00:30:34.240 --> 00:30:37.901
+Every time you do that, it's also don't, don't write
+
+NOTE Confidence: 0.823982298374176
+
+00:30:37.972 --> 00:30:39.239
+the text yourself.
+
+NOTE Confidence: 0.9026291966438293
+
+00:30:39.400 --> 00:30:41.120
+You know, none of this is written yourself.
+
+NOTE Confidence: 0.8993159532546997
+
+00:30:41.320 --> 00:30:43.040
+You don't know how to write to a clanker.
+
+NOTE Confidence: 0.6897444725036621
+
+00:30:43.040 --> 00:30:44.440
+In a way, the clanker writes to a clanker.
+
+NOTE Confidence: 0.8451601266860962
+
+00:30:45.160 --> 00:30:47.456
+So like you, you're going to explain what you want
+
+NOTE Confidence: 0.8451601266860962
+
+00:30:47.502 --> 00:30:49.614
+from the agent and the agent will write in its
+
+NOTE Confidence: 0.8451601266860962
+
+00:30:49.660 --> 00:30:50.120
+own words.
+
+NOTE Confidence: 0.7785411477088928
+
+00:30:51.000 --> 00:30:52.925
+And then every once in a while go into meta
+
+NOTE Confidence: 0.7785411477088928
+
+00:30:52.970 --> 00:30:55.254
+mode and just ask the agent, hey, is there anything
+
+NOTE Confidence: 0.7785411477088928
+
+00:30:55.299 --> 00:30:57.360
+that's confusing in your agent Solomon D file?
+
+NOTE Confidence: 0.8457143306732178
+
+00:30:58.280 --> 00:31:00.228
+And then they will usually tell you, yeah, well, this
+
+NOTE Confidence: 0.8457143306732178
+
+00:31:00.265 --> 00:31:02.103
+is confusing because here it says this and here it
+
+NOTE Confidence: 0.8457143306732178
+
+00:31:02.140 --> 00:31:03.280
+says this and then clean it up.
+
+NOTE Confidence: 0.7838981747627258
+
+00:31:03.520 --> 00:31:07.364
+Clean up any confusion because that's just token burner and
+
+NOTE Confidence: 0.7838981747627258
+
+00:31:07.429 --> 00:31:09.840
+we'll we'll give you a voice results.
+
+NOTE Confidence: 0.7664875984191895
+
+00:31:11.920 --> 00:31:14.844
+But I think if if you only take about two
+
+NOTE Confidence: 0.7664875984191895
+
+00:31:14.916 --> 00:31:18.483
+ideas from this talk, try auto review and try crap
+
+NOTE Confidence: 0.7664875984191895
+
+00:31:18.554 --> 00:31:18.840
+box.
+
+NOTE Confidence: 0.733501136302948
+
+00:31:18.880 --> 00:31:22.360
+It totally revolutionized how we build software like my.
+
+NOTE Confidence: 0.8492192625999451
+
+00:31:22.360 --> 00:31:27.990
+My trust in in prompting and shipping is much, much
+
+NOTE Confidence: 0.8492192625999451
+
+00:31:28.100 --> 00:31:30.640
+higher with that stuff.
+
+NOTE Confidence: 0.8358933329582214
+
+00:31:38.800 --> 00:31:45.395
+There's another thing when we get PRS, I would love
+
+NOTE Confidence: 0.8358933329582214
+
+00:31:45.524 --> 00:31:51.085
+to know how people came to that PR like the
+
+NOTE Confidence: 0.8358933329582214
+
+00:31:51.215 --> 00:31:55.999
+good and the bad thing with agencies.
+
+NOTE Confidence: 0.8848971724510193
+
+00:31:56.000 --> 00:32:00.239
+Like a one line prompt can create 10 lines, 10/10/10
+
+NOTE Confidence: 0.8848971724510193
+
+00:32:00.321 --> 00:32:04.479
+pages of content and you don't always know how much
+
+NOTE Confidence: 0.8848971724510193
+
+00:32:04.561 --> 00:32:06.599
+how much work was put in.
+
+NOTE Confidence: 0.8718467354774475
+
+00:32:07.880 --> 00:32:11.021
+So very early on in our contributor guidelines, I asked
+
+NOTE Confidence: 0.8718467354774475
+
+00:32:11.078 --> 00:32:14.105
+people to please send me the prompts and nobody would
+
+NOTE Confidence: 0.8718467354774475
+
+00:32:14.162 --> 00:32:16.904
+do it because there was just no good system, you
+
+NOTE Confidence: 0.8718467354774475
+
+00:32:16.961 --> 00:32:20.159
+know, And you, I was fighting against people's laziness.
+
+NOTE Confidence: 0.8370521664619446
+
+00:32:20.400 --> 00:32:21.480
+Of course they will not do it.
+
+NOTE Confidence: 0.9629915952682495
+
+00:32:22.880 --> 00:32:24.680
+That one took me a long time to figure out.
+
+NOTE Confidence: 0.7795007824897766
+
+00:32:25.040 --> 00:32:26.520
+But now I built the skill.
+
+NOTE Confidence: 0.8205788135528564
+
+00:32:27.000 --> 00:32:29.362
+If you use open claw and you contribute, you send
+
+NOTE Confidence: 0.8205788135528564
+
+00:32:29.410 --> 00:32:30.760
+a pull request to open claw.
+
+NOTE Confidence: 0.9164779186248779
+
+00:32:31.120 --> 00:32:34.393
+Your agent will ask you, hey, do you want to
+
+NOTE Confidence: 0.9164779186248779
+
+00:32:34.468 --> 00:32:38.039
+send a a privacy filtered version of the prompt?
+
+NOTE Confidence: 0.9491084218025208
+
+00:32:38.640 --> 00:32:41.339
+If you do that, we will look at your PR
+
+NOTE Confidence: 0.9491084218025208
+
+00:32:41.409 --> 00:32:44.039
+faster and then the user can type yes.
+
+NOTE Confidence: 0.8012011647224426
+
+00:32:44.560 --> 00:32:48.100
+And then the agent will upload, will, will, will look
+
+NOTE Confidence: 0.8012011647224426
+
+00:32:48.167 --> 00:32:51.573
+on the disk, will find its own transcript, will cut
+
+NOTE Confidence: 0.8012011647224426
+
+00:32:51.640 --> 00:32:55.581
+the transcript to the interesting parts, and then we'll add
+
+NOTE Confidence: 0.8012011647224426
+
+00:32:55.648 --> 00:32:58.119
+those transcript to the pull request.
+
+NOTE Confidence: 0.9094938039779663
+
+00:32:59.600 --> 00:33:02.463
+And suddenly I have a much more interesting data point
+
+NOTE Confidence: 0.9094938039779663
+
+00:33:02.516 --> 00:33:05.592
+about how much effort was put in because that's ultimately
+
+NOTE Confidence: 0.9094938039779663
+
+00:33:05.645 --> 00:33:06.599
+what you're after.
+
+NOTE Confidence: 0.8401352167129517
+
+00:33:06.960 --> 00:33:11.517
+Like, again, somebody can say fix issue number and send
+
+NOTE Confidence: 0.8401352167129517
+
+00:33:11.600 --> 00:33:15.080
+PR and it's like 4 words with five tokens.
+
+NOTE Confidence: 0.8984938859939575
+
+00:33:15.800 --> 00:33:18.168
+And, or somebody could actually spend a few hours and
+
+NOTE Confidence: 0.8984938859939575
+
+00:33:18.212 --> 00:33:20.759
+like have an actual discussion and you don't always know.
+
+NOTE Confidence: 0.8145620822906494
+
+00:33:21.000 --> 00:33:24.627
+So this has been extremely helpful in, in, in figuring
+
+NOTE Confidence: 0.8145620822906494
+
+00:33:24.694 --> 00:33:28.120
+out what's total slop and what's kind of good slop.
+
+NOTE Confidence: 0.893892228603363
+
+00:33:29.400 --> 00:33:32.116
+And again, like I could have done this half a
+
+NOTE Confidence: 0.893892228603363
+
+00:33:32.176 --> 00:33:32.720
+year ago.
+
+NOTE Confidence: 0.7880429625511169
+
+00:33:32.720 --> 00:33:36.380
+I just, I just didn't come to mind that actually
+
+NOTE Confidence: 0.7880429625511169
+
+00:33:36.456 --> 00:33:37.600
+it's that easy.
+
+NOTE Confidence: 0.7442254424095154
+
+00:33:37.880 --> 00:33:45.840
+Oftentimes we're not limited anymore by, by intelligence.
+
+NOTE Confidence: 0.870602011680603
+
+00:33:45.840 --> 00:33:47.680
+The models are good enough now.
+
+NOTE Confidence: 0.8173596858978271
+
+00:33:47.680 --> 00:33:50.297
+Everything that, that we are limited off is our own
+
+NOTE Confidence: 0.8173596858978271
+
+00:33:50.349 --> 00:33:52.761
+imagination, how what you do with it and how to
+
+NOTE Confidence: 0.8173596858978271
+
+00:33:52.812 --> 00:33:53.480
+build things.
+
+NOTE Confidence: 0.7919906973838806
+
+00:33:55.360 --> 00:33:57.325
+Now I built all the review and it was like,
+
+NOTE Confidence: 0.7919906973838806
+
+00:33:57.371 --> 00:33:58.239
+oh this is amazing.
+
+NOTE Confidence: 0.962542712688446
+
+00:33:59.040 --> 00:34:00.480
+And it made me really bad.
+
+NOTE Confidence: 0.9082978367805481
+
+00:34:01.120 --> 00:34:03.269
+It felt really bad for all the code that I
+
+NOTE Confidence: 0.9082978367805481
+
+00:34:03.320 --> 00:34:04.599
+committed without review.
+
+NOTE Confidence: 0.7366030812263489
+
+00:34:05.240 --> 00:34:08.539
+Now that I, I, I saw how much stuff the
+
+NOTE Confidence: 0.7366030812263489
+
+00:34:08.623 --> 00:34:12.600
+agent finds each time and ISO 255 five is good.
+
+NOTE Confidence: 0.8729206323623657
+
+00:34:12.880 --> 00:34:14.440
+But and yes it is really good.
+
+NOTE Confidence: 0.7890792489051819
+
+00:34:15.440 --> 00:34:20.211
+But still there's so many Boo boos like the especially
+
+NOTE Confidence: 0.7890792489051819
+
+00:34:20.299 --> 00:34:21.359
+enlargement.
+
+NOTE Confidence: 0.8513283133506775
+
+00:34:21.360 --> 00:34:24.857
+There's just mistakes and, and like difficult things the agent
+
+NOTE Confidence: 0.8513283133506775
+
+00:34:24.913 --> 00:34:27.960
+will only find after doing multiple rounds of reviews.
+
+NOTE Confidence: 0.79036945104599
+
+00:34:28.760 --> 00:34:31.619
+So it got me worried like, oh, I wish I
+
+NOTE Confidence: 0.79036945104599
+
+00:34:31.693 --> 00:34:34.919
+had done this earlier, but you can't really.
+
+NOTE Confidence: 0.8272395730018616
+
+00:34:35.320 --> 00:34:37.429
+There's no slash review for a project that has a
+
+NOTE Confidence: 0.8272395730018616
+
+00:34:37.473 --> 00:34:38.439
+million lines of code.
+
+NOTE Confidence: 0.7139359712600708
+
+00:34:38.880 --> 00:34:39.480
+There's too much.
+
+NOTE Confidence: 0.7905359268188477
+
+00:34:40.400 --> 00:34:42.680
+Like what should the agent focus on?
+
+NOTE Confidence: 0.849751353263855
+
+00:34:42.880 --> 00:34:48.120
+There's too much for, for the context.
+
+NOTE Confidence: 0.900848925113678
+
+00:34:52.760 --> 00:34:53.520
+It annoyed me.
+
+NOTE Confidence: 0.7967524528503418
+
+00:34:54.120 --> 00:34:55.960
+You know what, what I, what happens when I'm annoyed?
+
+NOTE Confidence: 0.5371438264846802
+
+00:34:56.640 --> 00:34:58.320
+So I, I, I built core patch.
+
+NOTE Confidence: 0.8515762090682983
+
+00:35:00.200 --> 00:35:02.803
+The principle is very simple, like, oh, you have a
+
+NOTE Confidence: 0.8515762090682983
+
+00:35:02.855 --> 00:35:03.480
+big project.
+
+NOTE Confidence: 0.7695183753967285
+
+00:35:03.880 --> 00:35:07.326
+Let's take it apart into like 50 little sub things,
+
+NOTE Confidence: 0.7695183753967285
+
+00:35:07.394 --> 00:35:09.759
+subsections by feature or whatever.
+
+NOTE Confidence: 0.8538744449615479
+
+00:35:09.800 --> 00:35:12.783
+However else you can like we can like separate it
+
+NOTE Confidence: 0.8538744449615479
+
+00:35:12.844 --> 00:35:15.949
+and then have the agent review each of those things
+
+NOTE Confidence: 0.8538744449615479
+
+00:35:16.010 --> 00:35:16.679
+separately.
+
+NOTE Confidence: 0.906235933303833
+
+00:35:17.520 --> 00:35:20.055
+And then you can, you can download this, run this
+
+NOTE Confidence: 0.906235933303833
+
+00:35:20.107 --> 00:35:22.642
+on, on your project and I guarantee you'll find a
+
+NOTE Confidence: 0.906235933303833
+
+00:35:22.694 --> 00:35:24.039
+lot of interesting things.
+
+NOTE Confidence: 0.8836066126823425
+
+00:35:27.160 --> 00:35:30.849
+It's not, it's not quite as perfect as pair change
+
+NOTE Confidence: 0.8836066126823425
+
+00:35:30.923 --> 00:35:34.539
+because you would have to probably scale it up to
+
+NOTE Confidence: 0.8836066126823425
+
+00:35:34.613 --> 00:35:36.679
+thousands of codec sessions.
+
+NOTE Confidence: 0.8189232349395752
+
+00:35:38.400 --> 00:35:39.400
+Even with unlimited token.
+
+NOTE Confidence: 0.8045538067817688
+
+00:35:39.400 --> 00:35:40.000
+That's a problem.
+
+NOTE Confidence: 0.8357561826705933
+
+00:35:40.240 --> 00:35:44.000
+But it's really good at like cleaning up code bases.
+
+NOTE Confidence: 0.8396003842353821
+
+00:35:51.430 --> 00:35:56.777
+This is something that's not fully finished yet, but you
+
+NOTE Confidence: 0.8396003842353821
+
+00:35:56.872 --> 00:36:00.309
+know, I got, I was so into crap box.
+
+NOTE Confidence: 0.7870652079582214
+
+00:36:05.640 --> 00:36:08.368
+The more I worked with the team, the more did
+
+NOTE Confidence: 0.7870652079582214
+
+00:36:08.428 --> 00:36:11.460
+you have this where you ask your teammate and your
+
+NOTE Confidence: 0.7870652079582214
+
+00:36:11.521 --> 00:36:14.673
+teammate will pass stuff from your from the agent in
+
+NOTE Confidence: 0.7870652079582214
+
+00:36:14.734 --> 00:36:15.280
+the chat.
+
+NOTE Confidence: 0.8796329498291016
+
+00:36:15.960 --> 00:36:17.875
+And then you would, you would comment on it and
+
+NOTE Confidence: 0.8796329498291016
+
+00:36:17.916 --> 00:36:20.076
+then they would pass stuff into into the coding agent
+
+NOTE Confidence: 0.8796329498291016
+
+00:36:20.117 --> 00:36:22.155
+and they would they would pass stuff back into the
+
+NOTE Confidence: 0.8796329498291016
+
+00:36:22.196 --> 00:36:22.400
+chat.
+
+NOTE Confidence: 0.6890737414360046
+
+00:36:23.120 --> 00:36:29.120
+I'm like, I don't like, like you'll just intermediary.
+
+NOTE Confidence: 0.9035831689834595
+
+00:36:29.120 --> 00:36:30.240
+I want to talk to your clanker.
+
+NOTE Confidence: 0.8222913146018982
+
+00:36:31.640 --> 00:36:35.120
+So, so that's the last thing I built.
+
+NOTE Confidence: 0.7450063824653625
+
+00:36:35.120 --> 00:36:38.341
+This is crap fleet, which is basically we already have
+
+NOTE Confidence: 0.7450063824653625
+
+00:36:38.401 --> 00:36:41.384
+crap box where the tests run couldn't codex run in
+
+NOTE Confidence: 0.7450063824653625
+
+00:36:41.444 --> 00:36:42.279
+there as well?
+
+NOTE Confidence: 0.8651207685470581
+
+00:36:43.680 --> 00:36:44.840
+Turns out yes, it can.
+
+NOTE Confidence: 0.9108134508132935
+
+00:36:46.080 --> 00:36:48.120
+And then you have multiplayer codecs.
+
+NOTE Confidence: 0.8730380535125732
+
+00:36:49.239 --> 00:36:51.791
+So, so, so now if I work on something and
+
+NOTE Confidence: 0.8730380535125732
+
+00:36:51.853 --> 00:36:54.466
+I want a second opinion, I can just send a
+
+NOTE Confidence: 0.8730380535125732
+
+00:36:54.528 --> 00:36:57.266
+link to one of my my maintenance and like he
+
+NOTE Confidence: 0.8730380535125732
+
+00:36:57.328 --> 00:37:00.440
+can look at the session, talk to the session, take
+
+NOTE Confidence: 0.8730380535125732
+
+00:37:00.502 --> 00:37:01.560
+over the session.
+
+NOTE Confidence: 0.7951704263687134
+
+00:37:02.960 --> 00:37:05.160
+It's like multiplayer clanking.
+
+NOTE Confidence: 0.9301759600639343
+
+00:37:11.900 --> 00:37:12.580
+There's more stuff.
+
+NOTE Confidence: 0.8024605512619019
+
+00:37:12.580 --> 00:37:13.620
+We kind of rebuild Slack.
+
+NOTE Confidence: 0.9533709287643433
+
+00:37:16.620 --> 00:37:16.900
+Yeah.
+
+NOTE Confidence: 0.9084465503692627
+
+00:37:16.900 --> 00:37:22.121
+I don't know what happened there, but we went into
+
+NOTE Confidence: 0.9084465503692627
+
+00:37:22.225 --> 00:37:28.073
+this issue where we had all these model message channels
+
+NOTE Confidence: 0.9084465503692627
+
+00:37:28.178 --> 00:37:32.459
+and you often want to test it end to end.
+
+NOTE Confidence: 0.9199538230895996
+
+00:37:32.739 --> 00:37:37.954
+But there was sometimes features are very difficult to understand
+
+NOTE Confidence: 0.9199538230895996
+
+00:37:38.034 --> 00:37:40.040
+with all the complex API.
+
+NOTE Confidence: 0.8286498188972473
+
+00:37:40.040 --> 00:37:42.139
+You kind of want to see, see it in the
+
+NOTE Confidence: 0.8286498188972473
+
+00:37:42.194 --> 00:37:42.360
+UI.
+
+NOTE Confidence: 0.8134311437606812
+
+00:37:43.160 --> 00:37:45.841
+And I built this automation, but man, anytime I logged
+
+NOTE Confidence: 0.8134311437606812
+
+00:37:45.890 --> 00:37:48.174
+in, there was like a cloud flare, a capture or
+
+NOTE Confidence: 0.8134311437606812
+
+00:37:48.224 --> 00:37:51.104
+like like all these, all these companies really don't like
+
+NOTE Confidence: 0.8134311437606812
+
+00:37:51.153 --> 00:37:53.388
+it if you spin up something in the quick box,
+
+NOTE Confidence: 0.8134311437606812
+
+00:37:53.437 --> 00:37:56.416
+especially not if it's Linux based and there's nobody logged
+
+NOTE Confidence: 0.8134311437606812
+
+00:37:56.466 --> 00:37:59.147
+in And it just feels like, feels like someone's trying
+
+NOTE Confidence: 0.8134311437606812
+
+00:37:59.197 --> 00:38:00.240
+to hack their system.
+
+NOTE Confidence: 0.7455978989601135
+
+00:38:00.240 --> 00:38:01.600
+It's just trying to like make it work.
+
+NOTE Confidence: 0.7989826202392578
+
+00:38:01.719 --> 00:38:03.597
+But I can see why people don't like it or
+
+NOTE Confidence: 0.7989826202392578
+
+00:38:03.643 --> 00:38:05.199
+why their systems would freak out.
+
+NOTE Confidence: 0.7718896865844727
+
+00:38:07.480 --> 00:38:10.310
+So we just build our own messaging platform to like,
+
+NOTE Confidence: 0.7718896865844727
+
+00:38:10.365 --> 00:38:12.651
+test to like have real end to end test for
+
+NOTE Confidence: 0.7718896865844727
+
+00:38:12.705 --> 00:38:14.719
+something that we have under control.
+
+NOTE Confidence: 0.8185570240020752
+
+00:38:15.800 --> 00:38:18.102
+And then it got a little bit out of hand
+
+NOTE Confidence: 0.8185570240020752
+
+00:38:18.159 --> 00:38:20.692
+and now we kind of have a backup chat system
+
+NOTE Confidence: 0.8185570240020752
+
+00:38:20.750 --> 00:38:22.879
+that works whenever our team is done.
+
+NOTE Confidence: 0.712400496006012
+
+00:38:23.200 --> 00:38:24.040
+It's called Click Clock.
+
+NOTE Confidence: 0.8333061933517456
+
+00:38:38.000 --> 00:38:38.760
+There's so much more.
+
+NOTE Confidence: 0.8699947595596313
+
+00:38:41.280 --> 00:38:41.920
+Where were we?
+
+NOTE Confidence: 0.8135597109794617
+
+00:38:43.760 --> 00:38:47.122
+I think I showed you I showed you a good
+
+NOTE Confidence: 0.8135597109794617
+
+00:38:47.206 --> 00:38:51.746
+part yes, of course, there's way more crawlers, but my
+
+NOTE Confidence: 0.8135597109794617
+
+00:38:51.830 --> 00:38:55.361
+my big my big take away for this is listen
+
+NOTE Confidence: 0.8135597109794617
+
+00:38:55.445 --> 00:38:57.799
+to your listen to your body.
+
+NOTE Confidence: 0.8736863136291504
+
+00:38:57.800 --> 00:38:58.720
+Listen when you're annoyed.
+
+NOTE Confidence: 0.8329329490661621
+
+00:38:59.080 --> 00:39:02.065
+Annoyance is is an amazing signal for we can automate
+
+NOTE Confidence: 0.8329329490661621
+
+00:39:02.121 --> 00:39:05.614
+this and then anytime you automate something, it compounds all
+
+NOTE Confidence: 0.8329329490661621
+
+00:39:05.670 --> 00:39:08.600
+these little tools, they're working together, right?
+
+NOTE Confidence: 0.7666333913803101
+
+00:39:08.600 --> 00:39:11.578
+I, I can only do the reports because I use
+
+NOTE Confidence: 0.7666333913803101
+
+00:39:11.649 --> 00:39:15.194
+disk crawl and I could only use crab fleet because
+
+NOTE Confidence: 0.7666333913803101
+
+00:39:15.265 --> 00:39:16.399
+I have crab box.
+
+NOTE Confidence: 0.7868374586105347
+
+00:39:16.719 --> 00:39:19.583
+Even though all of these are weird names, they are
+
+NOTE Confidence: 0.7868374586105347
+
+00:39:19.640 --> 00:39:22.905
+incredibly helpful in helping us ship a massive code base
+
+NOTE Confidence: 0.7868374586105347
+
+00:39:22.962 --> 00:39:24.280
+with a very small team.
+
+NOTE Confidence: 0.8939357399940491
+
+00:39:26.239 --> 00:39:28.083
+And with that, I do think we have a few
+
+NOTE Confidence: 0.8939357399940491
+
+00:39:28.130 --> 00:39:28.839
+minutes of Q&A.
+
+NOTE Confidence: 0.8815231919288635
+
+00:39:29.480 --> 00:39:30.920
+There is a microphone.
+
+NOTE Confidence: 0.7601017355918884
+
+00:39:33.360 --> 00:39:37.800
+There's a microphone here, so shoot.
+
+NOTE Confidence: 0.694105863571167
+
+00:39:46.390 --> 00:39:50.870
+As you're building so.
+
+NOTE Confidence: 0.8823322653770447
+
+00:39:54.950 --> 00:39:55.950
+It's making some noise.
+
+NOTE Confidence: 0.9054366946220398
+
+00:39:56.510 --> 00:39:57.030
+Is it working?
+
+NOTE Confidence: 0.6599451899528503
+
+00:39:57.150 --> 00:39:58.110
+Yes, there we go.
+
+NOTE Confidence: 0.8444993495941162
+
+00:39:58.110 --> 00:40:02.201
+Sorry, as you're building this, this ecosystem and it becoming
+
+NOTE Confidence: 0.8444993495941162
+
+00:40:02.267 --> 00:40:05.698
+more like enterprise quote UN quote like do you feel
+
+NOTE Confidence: 0.8444993495941162
+
+00:40:05.764 --> 00:40:07.149
+that there are times?
+
+NOTE Confidence: 0.9526883363723755
+
+00:40:08.000 --> 00:40:13.154
+Where you want to build something but the dependency on
+
+NOTE Confidence: 0.9526883363723755
+
+00:40:13.247 --> 00:40:17.839
+the other things get in the way of you improving.
+
+NOTE Confidence: 0.7191368937492371
+
+00:40:19.840 --> 00:40:21.000
+Hadn't happened so far yet.
+
+NOTE Confidence: 0.23571963608264923
+
+00:40:21.200 --> 00:40:21.520
+Haven't.
+
+NOTE Confidence: 0.799470067024231
+
+00:40:23.560 --> 00:40:27.339
+It's less dependencies, it's more like all those little tools
+
+NOTE Confidence: 0.799470067024231
+
+00:40:27.401 --> 00:40:30.748
+compound and make building new tools faster in in many
+
+NOTE Confidence: 0.799470067024231
+
+00:40:30.810 --> 00:40:31.119
+ways.
+
+NOTE Confidence: 0.8767214417457581
+
+00:40:31.120 --> 00:40:34.485
+Sometimes I use one tools in another tool, many other
+
+NOTE Confidence: 0.8767214417457581
+
+00:40:34.549 --> 00:40:37.851
+times, and that's a general trick when you work with
+
+NOTE Confidence: 0.8767214417457581
+
+00:40:37.915 --> 00:40:38.359
+agents.
+
+NOTE Confidence: 0.7770575881004333
+
+00:40:38.680 --> 00:40:40.841
+If you've sold something once, you can just tell your
+
+NOTE Confidence: 0.7770575881004333
+
+00:40:40.882 --> 00:40:42.800
+agent, look there, I already solved this there.
+
+NOTE Confidence: 0.719473659992218
+
+00:40:42.800 --> 00:40:44.280
+They're really good at pedal matching.
+
+NOTE Confidence: 0.8815338015556335
+
+00:40:44.680 --> 00:40:46.520
+So I would actually say it really compounds.
+
+NOTE Confidence: 0.8833413124084473
+
+00:40:46.520 --> 00:40:49.485
+Sometimes something doesn't work out, but then you learn from
+
+NOTE Confidence: 0.8833413124084473
+
+00:40:49.534 --> 00:40:49.680
+it.
+
+NOTE Confidence: 0.738377034664154
+
+00:40:49.680 --> 00:40:55.000
+Like like the token thing, where was it?
+
+NOTE Confidence: 0.9534463882446289
+
+00:40:57.040 --> 00:40:58.160
+Too many things?
+
+NOTE Confidence: 0.7907196879386902
+
+00:41:00.200 --> 00:41:04.954
+The token thing, the first version I built was just
+
+NOTE Confidence: 0.7907196879386902
+
+00:41:05.047 --> 00:41:09.895
+on my machine that was really awkward with the, the,
+
+NOTE Confidence: 0.7907196879386902
+
+00:41:09.988 --> 00:41:11.760
+the the GitHub app.
+
+NOTE Confidence: 0.7030650973320007
+
+00:41:12.320 --> 00:41:14.012
+So like I iterated a bunch in it and eventually
+
+NOTE Confidence: 0.7030650973320007
+
+00:41:14.048 --> 00:41:15.200
+it was like I ripped it all out.
+
+NOTE Confidence: 0.8820816874504089
+
+00:41:15.680 --> 00:41:18.796
+And I, I just told my agent, remove this feature
+
+NOTE Confidence: 0.8820816874504089
+
+00:41:18.861 --> 00:41:22.238
+here, rebuild this with this new idea, but take that
+
+NOTE Confidence: 0.8820816874504089
+
+00:41:22.303 --> 00:41:25.290
+part from that tool and like push it into your
+
+NOTE Confidence: 0.8820816874504089
+
+00:41:25.355 --> 00:41:25.680
+tool.
+
+NOTE Confidence: 0.8141663074493408
+
+00:41:26.080 --> 00:41:28.880
+And then like basically you save the prompting, right?
+
+NOTE Confidence: 0.8366205096244812
+
+00:41:28.880 --> 00:41:31.053
+Because you already you can just tell the agent look
+
+NOTE Confidence: 0.8366205096244812
+
+00:41:31.094 --> 00:41:33.017
+around this, look at the git history is a very
+
+NOTE Confidence: 0.8366205096244812
+
+00:41:33.059 --> 00:41:34.480
+smart at figuring out the context.
+
+NOTE Confidence: 0.796530544757843
+
+00:41:35.280 --> 00:41:37.963
+Even better if you just press the the the whisper
+
+NOTE Confidence: 0.796530544757843
+
+00:41:38.017 --> 00:41:40.700
+flow button and you just like you just talk about
+
+NOTE Confidence: 0.796530544757843
+
+00:41:40.755 --> 00:41:40.920
+it.
+
+NOTE Confidence: 0.9720587134361267
+
+00:41:41.520 --> 00:41:41.960
+Sometimes.
+
+NOTE Confidence: 0.7951282858848572
+
+00:41:41.960 --> 00:41:44.296
+Sometimes we just talk in the team about it and
+
+NOTE Confidence: 0.7951282858848572
+
+00:41:44.346 --> 00:41:46.931
+I just press the button and codex are just listening
+
+NOTE Confidence: 0.7951282858848572
+
+00:41:46.980 --> 00:41:49.963
+on the conversation and just start building while we've been
+
+NOTE Confidence: 0.7951282858848572
+
+00:41:50.013 --> 00:41:50.559
+discussing.
+
+NOTE Confidence: 0.792975902557373
+
+00:41:50.760 --> 00:41:52.560
+Even though there's like side chatter and blah, blah.
+
+NOTE Confidence: 0.8540868759155273
+
+00:41:52.560 --> 00:41:55.942
+But like it's it's clever enough to understand like this
+
+NOTE Confidence: 0.8540868759155273
+
+00:41:56.003 --> 00:41:58.480
+comment was a joke and this is important.
+
+NOTE Confidence: 0.8143297433853149
+
+00:41:59.000 --> 00:42:02.840
+So he's just like, you can just do stuff.
+
+NOTE Confidence: 0.8804981112480164
+
+00:42:03.080 --> 00:42:03.360
+Thank you.
+
+NOTE Confidence: 0.15622112154960632
+
+00:42:05.480 --> 00:42:05.920
+All right.
+
+NOTE Confidence: 0.6339848637580872
+
+00:42:08.040 --> 00:42:09.440
+Hi, Peter, this is Divya.
+
+NOTE Confidence: 0.9571737051010132
+
+00:42:10.560 --> 00:42:14.510
+My biggest question is, this is awesome, but imagine you
+
+NOTE Confidence: 0.9571737051010132
+
+00:42:14.580 --> 00:42:17.119
+have a billion things on your plate.
+
+NOTE Confidence: 0.9426334500312805
+
+00:42:17.280 --> 00:42:20.900
+Me as a solutions engineer and I love the concept
+
+NOTE Confidence: 0.9426334500312805
+
+00:42:20.974 --> 00:42:24.669
+of building my own agents, but I simply don't have
+
+NOTE Confidence: 0.9426334500312805
+
+00:42:24.743 --> 00:42:28.290
+the time to actually go ahead and build tools to
+
+NOTE Confidence: 0.9426334500312805
+
+00:42:28.364 --> 00:42:31.320
+help me be more efficient and save time.
+
+NOTE Confidence: 0.7781078219413757
+
+00:42:31.560 --> 00:42:34.854
+You notice they notice meme and like Stone Age where
+
+NOTE Confidence: 0.7781078219413757
+
+00:42:34.917 --> 00:42:38.275
+they had this car with rectangular- and then and then
+
+NOTE Confidence: 0.7781078219413757
+
+00:42:38.338 --> 00:42:41.379
+then the guy comes along with like the round one
+
+NOTE Confidence: 0.7781078219413757
+
+00:42:41.442 --> 00:42:44.040
+and they're like, oh, we don't have time.
+
+NOTE Confidence: 0.5569614768028259
+
+00:42:44.040 --> 00:42:45.240
+We're so busy.
+
+NOTE Confidence: 0.8011636734008789
+
+00:42:45.880 --> 00:42:50.290
+So the the beauty is all these tools, they can
+
+NOTE Confidence: 0.8011636734008789
+
+00:42:50.386 --> 00:42:51.920
+be massive slop.
+
+NOTE Confidence: 0.7926583886146545
+
+00:42:52.520 --> 00:42:55.060
+It's like you can literally you can tell the code
+
+NOTE Confidence: 0.7926583886146545
+
+00:42:55.112 --> 00:42:57.496
+is, Hey, look at this session and see the pain
+
+NOTE Confidence: 0.7926583886146545
+
+00:42:57.548 --> 00:42:59.881
+that I had to do building a tool that reduces
+
+NOTE Confidence: 0.7926583886146545
+
+00:42:59.933 --> 00:43:00.399
+the pain.
+
+NOTE Confidence: 0.7084303498268127
+
+00:43:00.400 --> 00:43:01.560
+This is the rough idea.
+
+NOTE Confidence: 0.860855758190155
+
+00:43:01.920 --> 00:43:03.640
+You don't have to give it the programming language.
+
+NOTE Confidence: 0.9421628713607788
+
+00:43:03.640 --> 00:43:05.440
+Nothing matters for like those little tools.
+
+NOTE Confidence: 0.7912706136703491
+
+00:43:05.440 --> 00:43:06.040
+Like I use go.
+
+NOTE Confidence: 0.7992201447486877
+
+00:43:06.040 --> 00:43:07.929
+I don't even like go, but like, I know, I
+
+NOTE Confidence: 0.7992201447486877
+
+00:43:07.975 --> 00:43:09.957
+know that my agents are fast and go, so who
+
+NOTE Confidence: 0.7992201447486877
+
+00:43:10.003 --> 00:43:10.280
+cares?
+
+NOTE Confidence: 0.8653009533882141
+
+00:43:10.920 --> 00:43:12.583
+And then just like do it on the side, you
+
+NOTE Confidence: 0.8653009533882141
+
+00:43:12.623 --> 00:43:15.057
+know, it's like there's always space somewhere in the corner
+
+NOTE Confidence: 0.8653009533882141
+
+00:43:15.098 --> 00:43:16.679
+for little window for like experiments.
+
+NOTE Confidence: 0.7904931306838989
+
+00:43:17.840 --> 00:43:21.629
+And it also takes a fun a little bit back
+
+NOTE Confidence: 0.7904931306838989
+
+00:43:21.722 --> 00:43:24.679
+and then it it really compounds.
+

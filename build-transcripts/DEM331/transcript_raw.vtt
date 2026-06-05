@@ -1,0 +1,1695 @@
+WEBVTT
+
+NOTE
+language:en-US
+
+NOTE Confidence: 0.854330837726593
+
+00:01:08.000 --> 00:01:10.000
+Pools run into real world content.
+
+NOTE Confidence: 0.7272387146949768
+
+00:01:10.600 --> 00:01:14.800
+This content doesn't come from clean APIs and structured data.
+
+NOTE Confidence: 0.9032415151596069
+
+00:01:15.240 --> 00:01:20.163
+You get poor quality scan PDFs, long emails, office documents
+
+NOTE Confidence: 0.9032415151596069
+
+00:01:20.243 --> 00:01:24.360
+with complex tables, images, audio and video files.
+
+NOTE Confidence: 0.9587283730506897
+
+00:01:24.960 --> 00:01:26.840
+This is where agents often break.
+
+NOTE Confidence: 0.9123520255088806
+
+00:01:27.280 --> 00:01:29.600
+They can reason, but they cannot really read.
+
+NOTE Confidence: 0.8723506331443787
+
+00:01:30.360 --> 00:01:34.041
+So by throwing raw content to your LLMS, agents scramble
+
+NOTE Confidence: 0.8723506331443787
+
+00:01:34.107 --> 00:01:36.079
+with every file that comes in.
+
+NOTE Confidence: 0.869377851486206
+
+00:01:36.080 --> 00:01:40.686
+It writes custom code, uploads images to models, mysteries, tables,
+
+NOTE Confidence: 0.869377851486206
+
+00:01:40.755 --> 00:01:44.743
+skip figures and as a result quality and reliability drops
+
+NOTE Confidence: 0.869377851486206
+
+00:01:44.812 --> 00:01:46.599
+and your LLM bill goes up.
+
+NOTE Confidence: 0.9498806595802307
+
+00:01:47.240 --> 00:01:49.960
+This is exactly where content understanding comes in.
+
+NOTE Confidence: 0.7203608155250549
+
+00:01:51.240 --> 00:01:54.629
+Counter understanding takes a messy multimodal content and turn it
+
+NOTE Confidence: 0.7203608155250549
+
+00:01:54.681 --> 00:01:55.759
+into clean structure.
+
+NOTE Confidence: 0.8127016425132751
+
+00:01:55.760 --> 00:02:00.429
+Agent ready output with a single pipeline parse classified and
+
+NOTE Confidence: 0.8127016425132751
+
+00:02:00.504 --> 00:02:05.399
+extract with built in grounding, confidence score and governance.
+
+NOTE Confidence: 0.8124532699584961
+
+00:02:06.240 --> 00:02:09.907
+The output is well formatted Markdown a Jason files with
+
+NOTE Confidence: 0.8124532699584961
+
+00:02:09.972 --> 00:02:13.116
+key value pairs that give you agent ready to act
+
+NOTE Confidence: 0.8124532699584961
+
+00:02:13.181 --> 00:02:13.639
+inputs.
+
+NOTE Confidence: 0.9450693726539612
+
+00:02:14.480 --> 00:02:17.080
+Now let's see it in action.
+
+NOTE Confidence: 0.7240833044052124
+
+00:02:21.240 --> 00:02:22.400
+So imagine this scenario.
+
+NOTE Confidence: 0.9195759892463684
+
+00:02:22.560 --> 00:02:27.347
+6:47 AM alert goes off, there's a signal degradation on
+
+NOTE Confidence: 0.9195759892463684
+
+00:02:27.434 --> 00:02:31.960
+Tower Ridge corridor and 42 customers at risk today.
+
+NOTE Confidence: 0.8260977864265442
+
+00:02:31.960 --> 00:02:35.762
+An on call engineer need to search 9 documents, media
+
+NOTE Confidence: 0.8260977864265442
+
+00:02:35.834 --> 00:02:41.000
+files and attachments and manually investigate and correlate everything.
+
+NOTE Confidence: 0.9329040050506592
+
+00:02:41.320 --> 00:02:44.466
+And this is the exact workflow we're going to try
+
+NOTE Confidence: 0.9329040050506592
+
+00:02:44.530 --> 00:02:46.199
+to automate for this demo.
+
+NOTE Confidence: 0.8195659518241882
+
+00:02:46.440 --> 00:02:50.411
+We will show counter understanding, turning each of the document
+
+NOTE Confidence: 0.8195659518241882
+
+00:02:50.473 --> 00:02:54.507
+pulled by the alert incident into structure data including layout
+
+NOTE Confidence: 0.8195659518241882
+
+00:02:54.569 --> 00:02:59.161
+tables, figures, barcodes, custom fields you define and classification and
+
+NOTE Confidence: 0.8195659518241882
+
+00:02:59.223 --> 00:02:59.720
+routing.
+
+NOTE Confidence: 0.8340510725975037
+
+00:03:00.240 --> 00:03:03.379
+We send that information to an agent first via just
+
+NOTE Confidence: 0.8340510725975037
+
+00:03:03.440 --> 00:03:06.518
+direct call to a G PT41 for diagnose, identify and
+
+NOTE Confidence: 0.8340510725975037
+
+00:03:06.579 --> 00:03:09.472
+dispatch a plan and the final act will show all
+
+NOTE Confidence: 0.8340510725975037
+
+00:03:09.534 --> 00:03:13.720
+of that can be integrated seamlessly with Microsoft Agent framework.
+
+NOTE Confidence: 0.7726481556892395
+
+00:03:17.600 --> 00:03:21.664
+So first step, we initialize the Contra ownership in client
+
+NOTE Confidence: 0.7726481556892395
+
+00:03:21.733 --> 00:03:22.560
+very simple.
+
+NOTE Confidence: 0.8816310167312622
+
+00:03:22.560 --> 00:03:27.062
+You use the same endpoint as your Azure Foundry resource
+
+NOTE Confidence: 0.8816310167312622
+
+00:03:27.142 --> 00:03:32.127
+by initiating with endpoint credentials and then using the SDK
+
+NOTE Confidence: 0.8816310167312622
+
+00:03:32.207 --> 00:03:36.549
+in our Python, you can make a simple prebuilt analyzer
+
+NOTE Confidence: 0.8816310167312622
+
+00:03:36.629 --> 00:03:38.719
+call with document search.
+
+NOTE Confidence: 0.779483437538147
+
+00:03:39.720 --> 00:03:42.983
+Document search is one of the many prebuilt analyzers we
+
+NOTE Confidence: 0.779483437538147
+
+00:03:43.041 --> 00:03:44.440
+have in Konona Shanning.
+
+NOTE Confidence: 0.853472113609314
+
+00:03:45.280 --> 00:03:52.241
+It was a oh, how do I thank you for
+
+NOTE Confidence: 0.853472113609314
+
+00:03:52.440 --> 00:04:02.386
+all right, I think the extension did not work, but
+
+NOTE Confidence: 0.853472113609314
+
+00:04:02.585 --> 00:04:07.160
+we'll do this together.
+
+NOTE Confidence: 0.9365884065628052
+
+00:04:07.160 --> 00:04:10.080
+OK, so that's the scenario.
+
+NOTE Confidence: 0.933397114276886
+
+00:04:11.440 --> 00:04:13.240
+And this is the flow that we just walked through.
+
+NOTE Confidence: 0.8276855945587158
+
+00:04:15.040 --> 00:04:17.200
+And this is how you initiate the client.
+
+NOTE Confidence: 0.867698073387146
+
+00:04:17.800 --> 00:04:22.801
+So we just talked about using the Agile resource endpoint,
+
+NOTE Confidence: 0.867698073387146
+
+00:04:22.887 --> 00:04:26.854
+you can make a simple SDK call to the prebuilt
+
+NOTE Confidence: 0.867698073387146
+
+00:04:26.940 --> 00:04:28.319
+document search.
+
+NOTE Confidence: 0.9060415029525757
+
+00:04:28.960 --> 00:04:32.726
+So document search is optimized for extracting document layout and
+
+NOTE Confidence: 0.9060415029525757
+
+00:04:32.783 --> 00:04:37.692
+embedded elements, including tables, figures, selection marks, barcode and signatures,
+
+NOTE Confidence: 0.9060415029525757
+
+00:04:37.749 --> 00:04:38.319
+and so on.
+
+NOTE Confidence: 0.910169780254364
+
+00:04:39.200 --> 00:04:42.545
+It generates rich information that you can send to downstream
+
+NOTE Confidence: 0.910169780254364
+
+00:04:42.600 --> 00:04:44.520
+applications like RAG or AI Search.
+
+NOTE Confidence: 0.878745973110199
+
+00:04:47.880 --> 00:04:50.500
+All right, so we're going to run this code to
+
+NOTE Confidence: 0.878745973110199
+
+00:04:50.558 --> 00:04:52.479
+analyze the site maintenance log.
+
+NOTE Confidence: 0.862061619758606
+
+00:04:53.400 --> 00:04:56.911
+As you can see, it has two embedded tables, a
+
+NOTE Confidence: 0.862061619758606
+
+00:04:56.989 --> 00:05:01.514
+lot of information formatted in a way that's not intuitive
+
+NOTE Confidence: 0.862061619758606
+
+00:05:01.592 --> 00:05:06.196
+for LLM agent to directly extract selection marks, QR codes
+
+NOTE Confidence: 0.862061619758606
+
+00:05:06.274 --> 00:05:10.097
+and within a few seconds you will see the counter
+
+NOTE Confidence: 0.862061619758606
+
+00:05:10.175 --> 00:05:12.360
+understanding track results.
+
+NOTE Confidence: 0.9088667035102844
+
+00:05:12.360 --> 00:05:16.712
+We have two tables output preserved with a row and
+
+NOTE Confidence: 0.9088667035102844
+
+00:05:16.799 --> 00:05:22.021
+column structure, one barcode QR code decoded, 2 checked and
+
+NOTE Confidence: 0.9088667035102844
+
+00:05:22.108 --> 00:05:24.720
+one unchecked selection marks.
+
+NOTE Confidence: 0.9116632342338562
+
+00:05:25.680 --> 00:05:28.569
+And then we further send that information to your LLM
+
+NOTE Confidence: 0.9116632342338562
+
+00:05:28.623 --> 00:05:31.240
+to reason and track that as a piece of evidence.
+
+NOTE Confidence: 0.9083919525146484
+
+00:05:32.440 --> 00:05:35.605
+For simple comparison, we send the same document to a
+
+NOTE Confidence: 0.9083919525146484
+
+00:05:35.664 --> 00:05:36.679
+local PDF parser.
+
+NOTE Confidence: 0.8290724754333496
+
+00:05:37.640 --> 00:05:41.295
+While there's not a lot of challenge with OCR, because
+
+NOTE Confidence: 0.8290724754333496
+
+00:05:41.363 --> 00:05:44.273
+it's a typed PDF file, you will see that it
+
+NOTE Confidence: 0.8290724754333496
+
+00:05:44.341 --> 00:05:48.335
+completely loose the table structure, raw bytes and it also
+
+NOTE Confidence: 0.8290724754333496
+
+00:05:48.403 --> 00:05:52.600
+completely miss the QR code in the selection mark information.
+
+NOTE Confidence: 0.9549108743667603
+
+00:05:53.880 --> 00:05:56.681
+So as a result, this is a comparison between the
+
+NOTE Confidence: 0.9549108743667603
+
+00:05:56.739 --> 00:05:57.440
+two outputs.
+
+NOTE Confidence: 0.9562526941299438
+
+00:05:58.240 --> 00:06:02.564
+With a local parser, your agent has incomplete information and
+
+NOTE Confidence: 0.9562526941299438
+
+00:06:02.634 --> 00:06:05.633
+also have to do a lot of guessing about the
+
+NOTE Confidence: 0.9562526941299438
+
+00:06:05.703 --> 00:06:09.399
+structure of the element and what each element means.
+
+NOTE Confidence: 0.7707974910736084
+
+00:06:10.720 --> 00:06:14.857
+Contra understanding turns that into an LLM readable state and
+
+NOTE Confidence: 0.7707974910736084
+
+00:06:14.924 --> 00:06:18.194
+then sent to agent to reason through A2 LLM input
+
+NOTE Confidence: 0.7707974910736084
+
+00:06:18.261 --> 00:06:22.799
+formatting helper function, which we'll detail in the later section.
+
+NOTE Confidence: 0.8780570030212402
+
+00:06:25.440 --> 00:06:27.701
+In the next act, I want to show you some
+
+NOTE Confidence: 0.8780570030212402
+
+00:06:27.758 --> 00:06:31.320
+of the preview analyzer that's able to handle multimodal input.
+
+NOTE Confidence: 0.9083993434906006
+
+00:06:32.680 --> 00:06:34.836
+And before we dive back into the code, I'm going
+
+NOTE Confidence: 0.9083993434906006
+
+00:06:34.881 --> 00:06:35.959
+to get it start running.
+
+NOTE Confidence: 0.8269942402839661
+
+00:06:37.040 --> 00:06:39.173
+I want to show you how you can use also
+
+NOTE Confidence: 0.8269942402839661
+
+00:06:39.228 --> 00:06:41.799
+local Noco interface for content understanding.
+
+NOTE Confidence: 0.8703953623771667
+
+00:06:42.480 --> 00:06:44.480
+Starting with our Foundry portal.
+
+NOTE Confidence: 0.8444691300392151
+
+00:06:44.960 --> 00:06:47.680
+When you go to deployments and AI services, you will
+
+NOTE Confidence: 0.8444691300392151
+
+00:06:47.732 --> 00:06:51.080
+be able to find content understanding playgrounds at the bottom.
+
+NOTE Confidence: 0.6918574571609497
+
+00:06:52.120 --> 00:06:54.280
+So we'll go into Contour understanding playground.
+
+NOTE Confidence: 0.8451728224754333
+
+00:06:55.560 --> 00:06:58.887
+We have a set of prebuilt analyzers you can use
+
+NOTE Confidence: 0.8451728224754333
+
+00:06:58.958 --> 00:07:01.720
+for document, for example, for invoice.
+
+NOTE Confidence: 0.8907249569892883
+
+00:07:02.560 --> 00:07:06.385
+By running this document, you'll be able to extract critical
+
+NOTE Confidence: 0.8907249569892883
+
+00:07:06.449 --> 00:07:09.701
+fields values, and in the Jason output, you will be
+
+NOTE Confidence: 0.8907249569892883
+
+00:07:09.765 --> 00:07:12.825
+able to see also for every text piece and value,
+
+NOTE Confidence: 0.8907249569892883
+
+00:07:12.889 --> 00:07:16.332
+the offset and length, Also bounding boxes of where it
+
+NOTE Confidence: 0.8907249569892883
+
+00:07:16.396 --> 00:07:19.202
+is in the documents, you can trace back to a
+
+NOTE Confidence: 0.8907249569892883
+
+00:07:19.266 --> 00:07:19.839
+citation.
+
+NOTE Confidence: 0.8719854354858398
+
+00:07:21.440 --> 00:07:23.945
+There's a long list of prebuilt feel free to check
+
+NOTE Confidence: 0.8719854354858398
+
+00:07:23.995 --> 00:07:26.199
+out after the session and our documentation.
+
+NOTE Confidence: 0.8683533072471619
+
+00:07:26.600 --> 00:07:30.465
+But here I want to show, let's say we have
+
+NOTE Confidence: 0.8683533072471619
+
+00:07:30.557 --> 00:07:36.447
+an audio file that comes from crew members analyzing, inspecting
+
+NOTE Confidence: 0.8683533072471619
+
+00:07:36.539 --> 00:07:38.839
+the fiber cuts situation.
+
+NOTE Confidence: 0.8624931573867798
+
+00:07:39.560 --> 00:07:42.760
+So we'll send that to our audio prebuilt analyzer.
+
+NOTE Confidence: 0.8711346983909607
+
+00:07:44.400 --> 00:07:49.400
+So this analyzer is able to pull out time stamps.
+
+NOTE Confidence: 0.8702351450920105
+
+00:07:50.400 --> 00:07:52.760
+I am looking to transfer money to my checking account.
+
+NOTE Confidence: 0.767359733581543
+
+00:07:53.760 --> 00:07:56.887
+I have a $1000 certificate of deposit that matured last
+
+NOTE Confidence: 0.767359733581543
+
+00:07:56.944 --> 00:07:58.480
+month and I have to use it.
+
+NOTE Confidence: 0.6934229135513306
+
+00:07:58.480 --> 00:08:01.850
+Sent and summarized to your LLM and agent so I
+
+NOTE Confidence: 0.6934229135513306
+
+00:08:01.923 --> 00:08:05.440
+don't know if you can hear this one approaching.
+
+NOTE Confidence: 0.7422153949737549
+
+00:08:05.480 --> 00:08:08.040
+Vault TV 3 visuals on the condo.
+
+NOTE Confidence: 0.7582813501358032
+
+00:08:08.080 --> 00:08:08.600
+Entry.
+
+NOTE Confidence: 0.35536277294158936
+
+00:08:10.000 --> 00:08:10.520
+Yeah, basically.
+
+NOTE Confidence: 0.6828919053077698
+
+00:08:10.560 --> 00:08:14.258
+2 crew members exchanging information about they're approaching Vault TV
+
+NOTE Confidence: 0.6828919053077698
+
+00:08:14.310 --> 00:08:15.800
+3 and then the Conduit entry.
+
+NOTE Confidence: 0.5443382859230042
+
+00:08:15.800 --> 00:08:16.440
+And what?
+
+NOTE Confidence: 0.6742393970489502
+
+00:08:16.640 --> 00:08:19.840
+Describe the situation with a crack and fiber bent.
+
+NOTE Confidence: 0.8274585604667664
+
+00:08:20.000 --> 00:08:22.000
+The protective sleeve is completely off.
+
+NOTE Confidence: 0.8843518495559692
+
+00:08:23.280 --> 00:08:26.872
+Now for other scenarios, you can also click this button
+
+NOTE Confidence: 0.8843518495559692
+
+00:08:26.937 --> 00:08:28.439
+to go to our CU Studio.
+
+NOTE Confidence: 0.8265812993049622
+
+00:08:30.000 --> 00:08:33.743
+In CU Studio, in the Discover tab, you can see
+
+NOTE Confidence: 0.8265812993049622
+
+00:08:33.825 --> 00:08:37.976
+the list of prebuilt models you can use across tax,
+
+NOTE Confidence: 0.8265812993049622
+
+00:08:38.057 --> 00:08:41.720
+legal, identity, payment, mortgage, etcetera.
+
+NOTE Confidence: 0.9343571662902832
+
+00:08:42.680 --> 00:08:44.240
+Now let's go to video search.
+
+NOTE Confidence: 0.9394994974136353
+
+00:08:46.760 --> 00:08:49.750
+We also have a short inspection video file that we
+
+NOTE Confidence: 0.9394994974136353
+
+00:08:49.810 --> 00:08:52.741
+want to analyze before we send it to the document
+
+NOTE Confidence: 0.9394994974136353
+
+00:08:52.801 --> 00:08:53.400
+analyzers.
+
+NOTE Confidence: 0.78653883934021
+
+00:08:57.880 --> 00:09:00.617
+When it comes to the neural TTS, in order to
+
+NOTE Confidence: 0.78653883934021
+
+00:09:00.679 --> 00:09:03.604
+get a good voice, it's better to have good data
+
+NOTE Confidence: 0.78653883934021
+
+00:09:03.666 --> 00:09:06.839
+to achieve life, to build a universal data, so that
+
+NOTE Confidence: 0.78653883934021
+
+00:09:06.902 --> 00:09:10.199
+this universal model is able to capture the nuance of
+
+NOTE Confidence: 0.78653883934021
+
+00:09:10.262 --> 00:09:13.435
+the audio and generate a more natural voice for the
+
+NOTE Confidence: 0.78653883934021
+
+00:09:13.497 --> 00:09:14.119
+algorithm.
+
+NOTE Confidence: 0.9292743802070618
+
+00:09:14.480 --> 00:09:18.156
+What we liked about cognitive Services offerings were that they
+
+NOTE Confidence: 0.9292743802070618
+
+00:09:18.214 --> 00:09:21.074
+had a much higher fidelity and they sounded a lot
+
+NOTE Confidence: 0.9292743802070618
+
+00:09:21.132 --> 00:09:22.999
+more like an actual human voice.
+
+NOTE Confidence: 0.2877311110496521
+
+00:09:23.000 --> 00:09:23.240
+Finished.
+
+NOTE Confidence: 0.5222319960594177
+
+00:09:25.720 --> 00:09:26.800
+Let's see, it's a very short.
+
+NOTE Confidence: 0.8891215920448303
+
+00:09:26.800 --> 00:09:29.233
+Clip We've got a fiber strike in this excavation, but
+
+NOTE Confidence: 0.8891215920448303
+
+00:09:29.279 --> 00:09:31.621
+before the repair crew can work, we need to address
+
+NOTE Confidence: 0.8891215920448303
+
+00:09:31.667 --> 00:09:33.320
+the condition around the line first.
+
+NOTE Confidence: 0.8749201893806458
+
+00:09:33.400 --> 00:09:36.258
+We get a nice summary that can be sent to
+
+NOTE Confidence: 0.8749201893806458
+
+00:09:36.328 --> 00:09:38.280
+the LLM for follow analysis.
+
+NOTE Confidence: 0.845081090927124
+
+00:09:40.120 --> 00:09:41.360
+All right, now let's circle back.
+
+NOTE Confidence: 0.871575117111206
+
+00:09:42.000 --> 00:09:45.373
+So basically I took the transcripts from audio and video,
+
+NOTE Confidence: 0.871575117111206
+
+00:09:45.432 --> 00:09:46.320
+send it to LLM.
+
+NOTE Confidence: 0.8947569727897644
+
+00:09:46.960 --> 00:09:50.240
+Also a document file that has 6 embedded images.
+
+NOTE Confidence: 0.8245806694030762
+
+00:09:51.360 --> 00:09:55.062
+After we send that to document search analyzer, as you
+
+NOTE Confidence: 0.8245806694030762
+
+00:09:55.131 --> 00:09:58.080
+can see it was able to OCR all the detailed
+
+NOTE Confidence: 0.8245806694030762
+
+00:09:58.148 --> 00:10:01.851
+text in the document, preserve its location as well as
+
+NOTE Confidence: 0.8245806694030762
+
+00:10:01.920 --> 00:10:03.840
+in a text within doc images.
+
+NOTE Confidence: 0.9436073303222656
+
+00:10:04.280 --> 00:10:09.438
+But more importantly, it generates a description with about that
+
+NOTE Confidence: 0.9436073303222656
+
+00:10:09.519 --> 00:10:13.387
+image across all six photos and was able to send
+
+NOTE Confidence: 0.9436073303222656
+
+00:10:13.468 --> 00:10:15.000
+to agent to reason.
+
+NOTE Confidence: 0.8849756121635437
+
+00:10:15.760 --> 00:10:18.320
+Similarly, you will see that for audio and reasoning.
+
+NOTE Confidence: 0.8614323735237122
+
+00:10:18.320 --> 00:10:21.883
+So LLM was able to identify the three CM 3
+
+NOTE Confidence: 0.8614323735237122
+
+00:10:21.968 --> 00:10:28.076
+centimeter displacement and then also conclude by correlating up between
+
+NOTE Confidence: 0.8614323735237122
+
+00:10:28.161 --> 00:10:28.840
+the two.
+
+NOTE Confidence: 0.6972878575325012
+
+00:10:28.840 --> 00:10:34.080
+The root cause is around TV Vault 3.
+
+NOTE Confidence: 0.7798187732696533
+
+00:10:37.840 --> 00:10:38.080
+All right.
+
+NOTE Confidence: 0.8890999555587769
+
+00:10:38.080 --> 00:10:42.027
+So, so far we've talked about prebuilt analyzers, but other
+
+NOTE Confidence: 0.8890999555587769
+
+00:10:42.094 --> 00:10:46.443
+scenarios agents may benefit from decision ready fields and other
+
+NOTE Confidence: 0.8890999555587769
+
+00:10:46.510 --> 00:10:49.989
+times you may want to customize the field to extract
+
+NOTE Confidence: 0.8890999555587769
+
+00:10:50.056 --> 00:10:52.800
+insight that's specific to your business.
+
+NOTE Confidence: 0.8397195935249329
+
+00:10:53.600 --> 00:10:56.509
+So we not only allow you custom analyzers and kind
+
+NOTE Confidence: 0.8397195935249329
+
+00:10:56.567 --> 00:10:59.941
+of understanding that only allows you to extract, but also
+
+NOTE Confidence: 0.8397195935249329
+
+00:10:59.999 --> 00:11:03.839
+reason and infer and generate fields by calculating and reasoning.
+
+NOTE Confidence: 0.9093170166015625
+
+00:11:06.160 --> 00:11:09.004
+So let's assume we have 6 different types of input
+
+NOTE Confidence: 0.9093170166015625
+
+00:11:09.061 --> 00:11:11.905
+for this scenario of documents and we want to know
+
+NOTE Confidence: 0.9093170166015625
+
+00:11:11.962 --> 00:11:15.090
+exactly, we want to build analyzers for each to extract
+
+NOTE Confidence: 0.9093170166015625
+
+00:11:15.147 --> 00:11:17.480
+only the fields that we're interested in.
+
+NOTE Confidence: 0.9298721551895142
+
+00:11:18.800 --> 00:11:21.972
+So to do so, you can simply define by identifying
+
+NOTE Confidence: 0.9298721551895142
+
+00:11:22.036 --> 00:11:25.209
+your schema and then for each field the name, the
+
+NOTE Confidence: 0.9298721551895142
+
+00:11:25.273 --> 00:11:29.999
+definition including the type, method and a natural language description.
+
+NOTE Confidence: 0.8315201997756958
+
+00:11:31.200 --> 00:11:34.193
+Using the SDK you can deploy all of these custom
+
+NOTE Confidence: 0.8315201997756958
+
+00:11:34.256 --> 00:11:34.880
+analyzers.
+
+NOTE Confidence: 0.7168558239936829
+
+00:11:37.240 --> 00:11:40.806
+Another very useful type of class analyzer is called Classic
+
+NOTE Confidence: 0.7168558239936829
+
+00:11:40.866 --> 00:11:41.520
+Classifier.
+
+NOTE Confidence: 0.933107852935791
+
+00:11:42.640 --> 00:11:46.527
+Similarly, you can identify categories and what they are for
+
+NOTE Confidence: 0.933107852935791
+
+00:11:46.592 --> 00:11:49.119
+any unknown document that gets sent in.
+
+NOTE Confidence: 0.8349905610084534
+
+00:11:49.720 --> 00:11:53.690
+And he has the option of automatically routing any unknown
+
+NOTE Confidence: 0.8349905610084534
+
+00:11:53.759 --> 00:11:57.593
+document that comes in to analyzer prebuilt or custom to
+
+NOTE Confidence: 0.8349905610084534
+
+00:11:57.661 --> 00:12:00.399
+perform the purpose designed extraction.
+
+NOTE Confidence: 0.924340009689331
+
+00:12:02.120 --> 00:12:04.392
+So here we're going to do that and send the
+
+NOTE Confidence: 0.924340009689331
+
+00:12:04.445 --> 00:12:05.080
+document in.
+
+NOTE Confidence: 0.8258724212646484
+
+00:12:05.080 --> 00:12:08.360
+I'm going to have it keep running.
+
+NOTE Confidence: 0.84132319688797
+
+00:12:08.800 --> 00:12:11.835
+So this is the code we said we just walked
+
+NOTE Confidence: 0.84132319688797
+
+00:12:11.908 --> 00:12:16.461
+through for the six document types, custom analyzers, we deploy
+
+NOTE Confidence: 0.84132319688797
+
+00:12:16.534 --> 00:12:20.798
+that and also creates the classifier for the six categories
+
+NOTE Confidence: 0.84132319688797
+
+00:12:20.870 --> 00:12:23.978
+and send the document one at a time to this
+
+NOTE Confidence: 0.84132319688797
+
+00:12:24.051 --> 00:12:25.279
+to this pipeline.
+
+NOTE Confidence: 0.8762295842170715
+
+00:12:26.160 --> 00:12:28.560
+So this can take a minute or so to process.
+
+NOTE Confidence: 0.8241050839424133
+
+00:12:28.720 --> 00:12:30.640
+We'll circle back after.
+
+NOTE Confidence: 0.7520082592964172
+
+00:12:31.160 --> 00:12:33.760
+Let's review my preprocess result first.
+
+NOTE Confidence: 0.9051329493522644
+
+00:12:34.240 --> 00:12:36.730
+So this is the kind of result you're going to
+
+NOTE Confidence: 0.9051329493522644
+
+00:12:36.786 --> 00:12:38.999
+expect to see for each type of document.
+
+NOTE Confidence: 0.9157446026802063
+
+00:12:39.760 --> 00:12:43.216
+The custom analyzer is able to return your custom defined
+
+NOTE Confidence: 0.9157446026802063
+
+00:12:43.276 --> 00:12:46.247
+fields and know that some of these fields are not
+
+NOTE Confidence: 0.9157446026802063
+
+00:12:46.308 --> 00:12:47.400
+found in document.
+
+NOTE Confidence: 0.8776780962944031
+
+00:12:47.720 --> 00:12:51.856
+It actually requires reasoning and corroboration for the LLM to
+
+NOTE Confidence: 0.8776780962944031
+
+00:12:51.921 --> 00:12:53.759
+do to generate the response.
+
+NOTE Confidence: 0.8854624629020691
+
+00:12:54.760 --> 00:12:58.476
+An agent can additionally collect the evidence and reason for
+
+NOTE Confidence: 0.8854624629020691
+
+00:12:58.537 --> 00:12:59.999
+the next action to take.
+
+NOTE Confidence: 0.933117151260376
+
+00:13:01.280 --> 00:13:05.068
+Also for classification, you can see all six files are
+
+NOTE Confidence: 0.933117151260376
+
+00:13:05.139 --> 00:13:09.839
+correctly identified and then routed for their respective analyzer.
+
+NOTE Confidence: 0.9000411033630371
+
+00:13:12.960 --> 00:13:15.360
+So here's a quick view of the custom extraction results.
+
+NOTE Confidence: 0.7586143016815186
+
+00:13:18.560 --> 00:13:19.760
+Now let's about midpoint.
+
+NOTE Confidence: 0.9428606033325195
+
+00:13:19.760 --> 00:13:21.280
+Let's recap what we've seen.
+
+NOTE Confidence: 0.841141402721405
+
+00:13:22.360 --> 00:13:27.231
+Content understanding is able to take multimodal content and turn
+
+NOTE Confidence: 0.841141402721405
+
+00:13:27.306 --> 00:13:31.728
+them into text representations that can be further sent for
+
+NOTE Confidence: 0.841141402721405
+
+00:13:31.803 --> 00:13:36.824
+classification and routing to either pre build for custom analyzers
+
+NOTE Confidence: 0.841141402721405
+
+00:13:36.899 --> 00:13:41.321
+to extract fields and also infer fields and insights that's
+
+NOTE Confidence: 0.841141402721405
+
+00:13:41.396 --> 00:13:43.120
+unique to the scenario.
+
+NOTE Confidence: 0.8525806665420532
+
+00:13:44.240 --> 00:13:47.362
+The next two acts want to show how an agent
+
+NOTE Confidence: 0.8525806665420532
+
+00:13:47.435 --> 00:13:52.227
+can leverage all that information to perform reasoning to diagnose
+
+NOTE Confidence: 0.8525806665420532
+
+00:13:52.300 --> 00:13:57.092
+the root cause, identify material, plan within budget and dispatch
+
+NOTE Confidence: 0.8525806665420532
+
+00:13:57.165 --> 00:13:58.399
+what to act next.
+
+NOTE Confidence: 0.9416684508323669
+
+00:14:03.559 --> 00:14:06.388
+So in this one, we're going to show a four
+
+NOTE Confidence: 0.9416684508323669
+
+00:14:06.455 --> 00:14:08.879
+step agent thinking scenario, right?
+
+NOTE Confidence: 0.7810205221176147
+
+00:14:08.880 --> 00:14:12.152
+So first assemble all the output from what we saw
+
+NOTE Confidence: 0.7810205221176147
+
+00:14:12.219 --> 00:14:15.892
+so far from content understanding and using the two LLM
+
+NOTE Confidence: 0.7810205221176147
+
+00:14:15.959 --> 00:14:16.360
+input.
+
+NOTE Confidence: 0.8000632524490356
+
+00:14:16.600 --> 00:14:20.720
+It's a formatter from our SDK to the LLM.
+
+NOTE Confidence: 0.8204362392425537
+
+00:14:22.760 --> 00:14:24.160
+And then it will diagnose.
+
+NOTE Confidence: 0.8794792294502258
+
+00:14:24.160 --> 00:14:28.263
+We're going to send a request to diagnose the root
+
+NOTE Confidence: 0.8794792294502258
+
+00:14:28.345 --> 00:14:33.188
+cause, identify the material and build plan and dispatch an
+
+NOTE Confidence: 0.8794792294502258
+
+00:14:33.270 --> 00:14:36.800
+action to the recruit pair the repair crew.
+
+NOTE Confidence: 0.7807279825210571
+
+00:14:40.160 --> 00:14:42.520
+So here's the results you should expect to to receive.
+
+NOTE Confidence: 0.8005321025848389
+
+00:14:43.640 --> 00:14:47.118
+In the root cause analysis, we were able to identify
+
+NOTE Confidence: 0.8005321025848389
+
+00:14:47.185 --> 00:14:51.399
+mechanical failure of the sheer underground conduit at Vault TV
+
+NOTE Confidence: 0.8005321025848389
+
+00:14:51.466 --> 00:14:54.410
+3 caused by a microbend and a lot of details
+
+NOTE Confidence: 0.8005321025848389
+
+00:14:54.477 --> 00:14:55.279
+around that.
+
+NOTE Confidence: 0.887018084526062
+
+00:14:56.840 --> 00:15:01.335
+The evidence chain is attached based on all the document
+
+NOTE Confidence: 0.887018084526062
+
+00:15:01.416 --> 00:15:05.831
+evidence we collected along the way and a final verdict
+
+NOTE Confidence: 0.887018084526062
+
+00:15:05.911 --> 00:15:08.240
+for the material plan, right.
+
+NOTE Confidence: 0.9353621602058411
+
+00:15:08.240 --> 00:15:12.310
+We have information about the budget cap that it's approved
+
+NOTE Confidence: 0.9353621602058411
+
+00:15:12.379 --> 00:15:15.828
+by a personnel and was able to build the materials
+
+NOTE Confidence: 0.9353621602058411
+
+00:15:15.897 --> 00:15:17.759
+table to move forward with.
+
+NOTE Confidence: 0.9413869976997375
+
+00:15:18.520 --> 00:15:22.405
+And finally, in the dispatch e-mail, it was able to
+
+NOTE Confidence: 0.9413869976997375
+
+00:15:22.481 --> 00:15:27.281
+identify key personnel from the raw data collection process and
+
+NOTE Confidence: 0.9413869976997375
+
+00:15:27.358 --> 00:15:31.700
+then send all but only the necessary information for them
+
+NOTE Confidence: 0.9413869976997375
+
+00:15:31.777 --> 00:15:32.920
+to act on next.
+
+NOTE Confidence: 0.8110305666923523
+
+00:15:38.760 --> 00:15:41.201
+All right, now it leads us to the final act
+
+NOTE Confidence: 0.8110305666923523
+
+00:15:41.258 --> 00:15:45.120
+of content understanding integration with Microsoft Agent Framework.
+
+NOTE Confidence: 0.902004599571228
+
+00:15:49.360 --> 00:15:53.440
+So that entire process can actually be orchestrated using content
+
+NOTE Confidence: 0.902004599571228
+
+00:15:53.502 --> 00:15:57.520
+understanding context provider within Microsoft Agent Framework.
+
+NOTE Confidence: 0.8521605134010315
+
+00:15:58.840 --> 00:16:02.642
+The context provider is a primitive in the agent framework
+
+NOTE Confidence: 0.8521605134010315
+
+00:16:02.708 --> 00:16:05.199
+that hooks into your agent round loop.
+
+NOTE Confidence: 0.9230800271034241
+
+00:16:06.320 --> 00:16:11.540
+It's able to basically see and detect messages before they
+
+NOTE Confidence: 0.9230800271034241
+
+00:16:11.630 --> 00:16:14.240
+reach your LLM and act on it.
+
+NOTE Confidence: 0.9112026691436768
+
+00:16:14.400 --> 00:16:18.133
+For example, it can detect attachments, process it, and then
+
+NOTE Confidence: 0.9112026691436768
+
+00:16:18.195 --> 00:16:21.679
+send the structure output back to the conversation loop.
+
+NOTE Confidence: 0.9241469502449036
+
+00:16:25.680 --> 00:16:29.320
+So here's how we can do it with agent framework.
+
+NOTE Confidence: 0.7933090329170227
+
+00:16:32.760 --> 00:16:35.985
+First, in the setup, what you need to do is
+
+NOTE Confidence: 0.7933090329170227
+
+00:16:36.060 --> 00:16:41.760
+define the context provider with content understanding, endpoint credential.
+
+NOTE Confidence: 0.9326283931732178
+
+00:16:41.840 --> 00:16:44.562
+And here we're going to show the analyzer ID again
+
+NOTE Confidence: 0.9326283931732178
+
+00:16:44.616 --> 00:16:45.760
+with document search.
+
+NOTE Confidence: 0.7915804982185364
+
+00:16:46.960 --> 00:16:50.791
+We're also using Agent frameworks, Foundry chat client for this
+
+NOTE Confidence: 0.7915804982185364
+
+00:16:50.852 --> 00:16:51.400
+scenario.
+
+NOTE Confidence: 0.8406315445899963
+
+00:16:54.960 --> 00:16:59.294
+For the agent run, you can construct your agent by
+
+NOTE Confidence: 0.8406315445899963
+
+00:16:59.381 --> 00:17:04.929
+identifying by providing the instructions as well as the context
+
+NOTE Confidence: 0.8406315445899963
+
+00:17:05.016 --> 00:17:10.651
+provider being content understanding and you build the message by
+
+NOTE Confidence: 0.8406315445899963
+
+00:17:10.738 --> 00:17:15.593
+using this simple prompt and also 9 attachments from the
+
+NOTE Confidence: 0.8406315445899963
+
+00:17:15.679 --> 00:17:16.199
+PD FS.
+
+NOTE Confidence: 0.7757565379142761
+
+00:17:19.840 --> 00:17:22.601
+We also going to try ask a follow up question
+
+NOTE Confidence: 0.7757565379142761
+
+00:17:22.662 --> 00:17:25.731
+after we finish the first round of a diagnosis and
+
+NOTE Confidence: 0.7757565379142761
+
+00:17:25.792 --> 00:17:29.106
+see how using agent framework you can use cash results
+
+NOTE Confidence: 0.7757565379142761
+
+00:17:29.167 --> 00:17:32.911
+from contract and training context provider and not having to
+
+NOTE Confidence: 0.7757565379142761
+
+00:17:32.972 --> 00:17:34.200
+repeat that process.
+
+NOTE Confidence: 0.8027613162994385
+
+00:17:36.840 --> 00:17:39.470
+All right, we'll circle back to all the wrong results
+
+NOTE Confidence: 0.8027613162994385
+
+00:17:39.520 --> 00:17:42.200
+as they're they're going for this final output, right.
+
+NOTE Confidence: 0.8685057759284973
+
+00:17:42.200 --> 00:17:46.152
+You're able to see very similar result that you got
+
+NOTE Confidence: 0.8685057759284973
+
+00:17:46.230 --> 00:17:50.105
+by doing the SDK pipeline manually in kind of like
+
+NOTE Confidence: 0.8685057759284973
+
+00:17:50.182 --> 00:17:50.880
+one step.
+
+NOTE Confidence: 0.8789699077606201
+
+00:17:52.200 --> 00:17:55.098
+And in the follow up question, the agent was able
+
+NOTE Confidence: 0.8789699077606201
+
+00:17:55.158 --> 00:17:58.234
+to answer the question by using the same session and
+
+NOTE Confidence: 0.8789699077606201
+
+00:17:58.293 --> 00:18:02.079
+context provider without making new content understanding calls.
+
+NOTE Confidence: 0.8183230757713318
+
+00:18:07.820 --> 00:18:10.842
+So quick comparison between what we show in Act one
+
+NOTE Confidence: 0.8183230757713318
+
+00:18:10.901 --> 00:18:14.220
+through 4 SDK pipeline versus Microsoft Agent Framework.
+
+NOTE Confidence: 0.8465955853462219
+
+00:18:16.180 --> 00:18:19.316
+Basically it's the same underlying service for content understanding but
+
+NOTE Confidence: 0.8465955853462219
+
+00:18:19.360 --> 00:18:20.579
+different integration shape.
+
+NOTE Confidence: 0.8875773549079895
+
+00:18:21.140 --> 00:18:26.282
+It does provide with Microsoft Agent Framework auto analysis on
+
+NOTE Confidence: 0.8875773549079895
+
+00:18:26.364 --> 00:18:32.405
+attachments, automated included formatting code and multi turn caching and
+
+NOTE Confidence: 0.8875773549079895
+
+00:18:32.486 --> 00:18:36.160
+also just one provider for any type of agent.
+
+NOTE Confidence: 0.8388956189155579
+
+00:18:39.480 --> 00:18:43.710
+So going back, I think our Act 3 result came
+
+NOTE Confidence: 0.8388956189155579
+
+00:18:43.806 --> 00:18:48.903
+back again very similar results that we've seen Act 4
+
+NOTE Confidence: 0.8388956189155579
+
+00:18:48.999 --> 00:18:49.479
+same.
+
+NOTE Confidence: 0.7869004011154175
+
+00:18:50.280 --> 00:18:52.960
+We were able to see the diagnosis material dispatch.
+
+NOTE Confidence: 0.8295178413391113
+
+00:18:57.040 --> 00:18:59.546
+So a couple of takeaways from the from the live
+
+NOTE Confidence: 0.8295178413391113
+
+00:18:59.599 --> 00:19:02.639
+demo I want to share, right, start with prebuild document
+
+NOTE Confidence: 0.8295178413391113
+
+00:19:02.693 --> 00:19:04.079
+search or other prebuilds.
+
+NOTE Confidence: 0.8853895664215088
+
+00:19:04.600 --> 00:19:08.590
+When you don't know the particular document type you're analyzing
+
+NOTE Confidence: 0.8853895664215088
+
+00:19:08.651 --> 00:19:11.905
+or you need to send enriched information to our lemon
+
+NOTE Confidence: 0.8853895664215088
+
+00:19:11.966 --> 00:19:13.439
+agent to reason through.
+
+NOTE Confidence: 0.8983979225158691
+
+00:19:13.560 --> 00:19:16.600
+For example, for RAG and AI search type of scenarios.
+
+NOTE Confidence: 0.8293712139129639
+
+00:19:17.520 --> 00:19:21.619
+For other types, custom analyzer may be beneficial for you
+
+NOTE Confidence: 0.8293712139129639
+
+00:19:21.690 --> 00:19:26.426
+to pull out specific fields like dispatch, urgency, budget, verdict
+
+NOTE Confidence: 0.8293712139129639
+
+00:19:26.497 --> 00:19:31.587
+that are actually more reason through using counter understanding custom
+
+NOTE Confidence: 0.8293712139129639
+
+00:19:31.657 --> 00:19:33.919
+analyzers and the in production.
+
+NOTE Confidence: 0.8234065175056458
+
+00:19:34.119 --> 00:19:37.005
+Often times you will get payloads or a document that
+
+NOTE Confidence: 0.8234065175056458
+
+00:19:37.061 --> 00:19:39.836
+you don't know the type and which analyzer to send
+
+NOTE Confidence: 0.8234065175056458
+
+00:19:39.891 --> 00:19:40.280
+to you.
+
+NOTE Confidence: 0.8633800745010376
+
+00:19:41.000 --> 00:19:46.720
+Use our classification and routing process for production workloads.
+
+NOTE Confidence: 0.8587360978126526
+
+00:19:47.160 --> 00:19:50.581
+A single call classifieds routes and extracts and it minimizes
+
+NOTE Confidence: 0.8587360978126526
+
+00:19:50.636 --> 00:19:53.119
+the branching logic in your application code.
+
+NOTE Confidence: 0.8744807839393616
+
+00:19:55.440 --> 00:19:58.016
+And one thing to call out is that repeated use
+
+NOTE Confidence: 0.8744807839393616
+
+00:19:58.072 --> 00:19:59.920
+of two LLM input helper function.
+
+NOTE Confidence: 0.7259879112243652
+
+00:20:00.720 --> 00:20:05.820
+It's an SDK function that formats contract understanding output markdown
+
+NOTE Confidence: 0.7259879112243652
+
+00:20:05.891 --> 00:20:09.858
+specifically with YAML front matter so that it's easy to
+
+NOTE Confidence: 0.7259879112243652
+
+00:20:09.928 --> 00:20:13.399
+send structure information to agents to leverage.
+
+NOTE Confidence: 0.847173810005188
+
+00:20:14.440 --> 00:20:17.713
+It also has the option of choosing you send the
+
+NOTE Confidence: 0.847173810005188
+
+00:20:17.783 --> 00:20:21.335
+full document or fields only and it could result in
+
+NOTE Confidence: 0.847173810005188
+
+00:20:21.405 --> 00:20:24.400
+an arsenic or actually 85% token reduction.
+
+NOTE Confidence: 0.7593685388565063
+
+00:20:26.080 --> 00:20:28.891
+There are different ways to send your current understanding output
+
+NOTE Confidence: 0.7593685388565063
+
+00:20:28.934 --> 00:20:29.360
+to agents.
+
+NOTE Confidence: 0.7870857119560242
+
+00:20:29.600 --> 00:20:32.040
+Agent framework simplifies the process.
+
+NOTE Confidence: 0.8670064210891724
+
+00:20:32.400 --> 00:20:37.142
+We also provide direct integration with frameworks like Link chain
+
+NOTE Confidence: 0.8670064210891724
+
+00:20:37.214 --> 00:20:40.519
+and mark it down so you can leverage directly.
+
+NOTE Confidence: 0.870047926902771
+
+00:20:43.760 --> 00:20:47.804
+All right, so going back to our slide very quick
+
+NOTE Confidence: 0.870047926902771
+
+00:20:47.889 --> 00:20:50.080
+to wrap up, I can find it.
+
+NOTE Confidence: 0.6611437797546387
+
+00:20:50.200 --> 00:21:00.830
+OK, Yeah, I'll minimize that.
+
+NOTE Confidence: 0.7951905131340027
+
+00:21:01.230 --> 00:21:01.550
+OK.
+
+NOTE Confidence: 0.6596270203590393
+
+00:21:05.110 --> 00:21:05.430
+All right.
+
+NOTE Confidence: 0.8967130184173584
+
+00:21:05.430 --> 00:21:11.710
+So are we presenting?
+
+NOTE Confidence: 0.8607048988342285
+
+00:21:17.480 --> 00:21:19.200
+All right, so there's a lot of material.
+
+NOTE Confidence: 0.9202314615249634
+
+00:21:19.480 --> 00:21:22.345
+And by the way, all this code, including the demo
+
+NOTE Confidence: 0.9202314615249634
+
+00:21:22.403 --> 00:21:25.678
+app and a detailed tutorial notebook is available in the
+
+NOTE Confidence: 0.9202314615249634
+
+00:21:25.737 --> 00:21:28.660
+GitHub for this demo session, and we have AQR code
+
+NOTE Confidence: 0.9202314615249634
+
+00:21:28.719 --> 00:21:30.999
+for that if you want to give it a shot.
+
+NOTE Confidence: 0.8428764343261719
+
+00:21:31.600 --> 00:21:34.815
+And then please check out our breakout session 242 this
+
+NOTE Confidence: 0.8428764343261719
+
+00:21:34.873 --> 00:21:38.030
+afternoon at 4:00 PM to learn more about what's coming
+
+NOTE Confidence: 0.8428764343261719
+
+00:21:38.089 --> 00:21:41.947
+in contradiction, including a Genentech mode that's able to handle
+
+NOTE Confidence: 0.8428764343261719
+
+00:21:42.006 --> 00:21:45.396
+even more complex document scenarios and how it works with
+
+NOTE Confidence: 0.8428764343261719
+
+00:21:45.455 --> 00:21:46.800
+tool boxes and Foundry.
+
+NOTE Confidence: 0.8377028703689575
+
+00:21:47.560 --> 00:21:48.000
+Thank you all.
+

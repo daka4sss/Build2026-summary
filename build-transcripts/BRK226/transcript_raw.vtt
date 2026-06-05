@@ -1,0 +1,4605 @@
+WEBVTT
+
+NOTE
+language:en-US
+
+NOTE Confidence: 0.9428441524505615
+
+00:00:01.280 --> 00:00:02.000
+Let's try that again.
+
+NOTE Confidence: 0.9641669392585754
+
+00:00:02.000 --> 00:00:02.920
+Good morning everybody.
+
+NOTE Confidence: 0.7245517373085022
+
+00:00:04.240 --> 00:00:05.080
+How's Bill going?
+
+NOTE Confidence: 0.8897630572319031
+
+00:00:05.760 --> 00:00:06.120
+Good.
+
+NOTE Confidence: 0.8912335634231567
+
+00:00:07.200 --> 00:00:11.200
+Well, welcome to Inside Azure Innovations.
+
+NOTE Confidence: 0.7579334378242493
+
+00:00:11.200 --> 00:00:13.688
+My name is Marcus Innovations, I'm the CTO and Deputy
+
+NOTE Confidence: 0.7579334378242493
+
+00:00:13.735 --> 00:00:14.439
+CISA for Azure.
+
+NOTE Confidence: 0.9634406566619873
+
+00:00:14.640 --> 00:00:17.920
+How many people have been to a previous innovations talk?
+
+NOTE Confidence: 0.93198162317276
+
+00:00:18.120 --> 00:00:19.080
+So quite a few of you.
+
+NOTE Confidence: 0.9399569034576416
+
+00:00:19.080 --> 00:00:19.960
+It's great to see you back.
+
+NOTE Confidence: 0.883292019367218
+
+00:00:20.800 --> 00:00:23.831
+For those of you that haven't come, this is a
+
+NOTE Confidence: 0.883292019367218
+
+00:00:23.898 --> 00:00:28.209
+talk where I cover innovations across the spectrum of everything
+
+NOTE Confidence: 0.883292019367218
+
+00:00:28.276 --> 00:00:32.116
+in the Azure infrastructure from data centers all the way
+
+NOTE Confidence: 0.883292019367218
+
+00:00:32.183 --> 00:00:36.158
+to cybersecurity and the cyber systems that we've got under
+
+NOTE Confidence: 0.883292019367218
+
+00:00:36.225 --> 00:00:37.640
+development in Azure.
+
+NOTE Confidence: 0.8976306319236755
+
+00:00:38.080 --> 00:00:40.146
+One of the notes that I make about this is
+
+NOTE Confidence: 0.8976306319236755
+
+00:00:40.195 --> 00:00:42.852
+that I'm showing you things in some cases that haven't
+
+NOTE Confidence: 0.8976306319236755
+
+00:00:42.901 --> 00:00:45.804
+shipped yet, some things that we're working on, some things
+
+NOTE Confidence: 0.8976306319236755
+
+00:00:45.853 --> 00:00:47.279
+that maybe have just shipped.
+
+NOTE Confidence: 0.8027787804603577
+
+00:00:47.640 --> 00:00:50.964
+For things that haven't shipped, we they might not necessarily
+
+NOTE Confidence: 0.8027787804603577
+
+00:00:51.017 --> 00:00:53.162
+ever ship or or ship in the same kind of
+
+NOTE Confidence: 0.8027787804603577
+
+00:00:53.216 --> 00:00:55.199
+view that you see me present them at.
+
+NOTE Confidence: 0.8785515427589417
+
+00:00:55.200 --> 00:00:57.424
+So that's just a caveat and take away, but I
+
+NOTE Confidence: 0.8785515427589417
+
+00:00:57.474 --> 00:00:59.800
+thought it's fun to give you an under the hood
+
+NOTE Confidence: 0.8785515427589417
+
+00:00:59.850 --> 00:01:02.832
+look at what we're doing and what powers the infrastructure
+
+NOTE Confidence: 0.8785515427589417
+
+00:01:02.883 --> 00:01:04.400
+of Azure and Azure innovation.
+
+NOTE Confidence: 0.958838939666748
+
+00:01:04.400 --> 00:01:06.160
+So let's start with infrastructure.
+
+NOTE Confidence: 0.8035969734191895
+
+00:01:06.160 --> 00:01:09.771
+And you've seen these pictures of the Fairwater data centers
+
+NOTE Confidence: 0.8035969734191895
+
+00:01:09.831 --> 00:01:12.119
+one and, and this is kind of sets a, a
+
+NOTE Confidence: 0.8035969734191895
+
+00:01:12.179 --> 00:01:15.189
+framework for a lot of the innovation that I'll be
+
+NOTE Confidence: 0.8035969734191895
+
+00:01:15.249 --> 00:01:19.222
+showing here, which is innovation powering AI, specifically the Co
+
+NOTE Confidence: 0.8035969734191895
+
+00:01:19.282 --> 00:01:22.773
+design of AI data centers, the core infrastructure and the
+
+NOTE Confidence: 0.8035969734191895
+
+00:01:22.833 --> 00:01:24.760
+software that runs on top of it.
+
+NOTE Confidence: 0.9655535817146301
+
+00:01:25.400 --> 00:01:28.240
+I had a really awesome experience in November.
+
+NOTE Confidence: 0.9259083867073059
+
+00:01:28.240 --> 00:01:30.880
+I got to go visit Fairwater in Atlanta.
+
+NOTE Confidence: 0.7273840308189392
+
+00:01:30.880 --> 00:01:33.280
+These are Fairwater in Wisconsin, Fairwater Atlanta.
+
+NOTE Confidence: 0.9361659288406372
+
+00:01:33.400 --> 00:01:36.128
+The Atlanta site is on the right and I got
+
+NOTE Confidence: 0.9361659288406372
+
+00:01:36.193 --> 00:01:38.791
+to go into it and I thought I'd show you
+
+NOTE Confidence: 0.9361659288406372
+
+00:01:38.856 --> 00:01:40.479
+a quick video tour of it.
+
+NOTE Confidence: 0.9525212049484253
+
+00:01:40.480 --> 00:01:43.520
+Just a few seconds of me walking through it.
+
+NOTE Confidence: 0.9212010502815247
+
+00:01:43.640 --> 00:01:44.920
+And I don't know why that didn't play.
+
+NOTE Confidence: 0.9205363988876343
+
+00:01:45.040 --> 00:01:49.040
+Maybe I need to hit the play button up here.
+
+NOTE Confidence: 0.8750208616256714
+
+00:01:50.760 --> 00:01:53.320
+So this is me looking like Builder Bob walking through.
+
+NOTE Confidence: 0.9035579562187195
+
+00:01:53.320 --> 00:01:55.120
+That's because it's under construction.
+
+NOTE Confidence: 0.8936176896095276
+
+00:01:55.200 --> 00:01:57.120
+It's kind of continuously under construction.
+
+NOTE Confidence: 0.9033030867576599
+
+00:01:57.200 --> 00:02:00.036
+This is the network cabling that connects the top floor
+
+NOTE Confidence: 0.9033030867576599
+
+00:02:00.087 --> 00:02:03.027
+servers and the bottom floor servers that goes up through
+
+NOTE Confidence: 0.9033030867576599
+
+00:02:03.079 --> 00:02:03.439
+trunks.
+
+NOTE Confidence: 0.9649934768676758
+
+00:02:03.440 --> 00:02:03.720
+There.
+
+NOTE Confidence: 0.9298688173294067
+
+00:02:03.720 --> 00:02:06.449
+You can see there's enough cabling to wrap the earth
+
+NOTE Confidence: 0.9298688173294067
+
+00:02:06.502 --> 00:02:07.919
+four times in one of these.
+
+NOTE Confidence: 0.906330943107605
+
+00:02:08.560 --> 00:02:12.889
+Those are liquid cooling cables being laid there initially so
+
+NOTE Confidence: 0.906330943107605
+
+00:02:12.959 --> 00:02:15.159
+that servers can be dropped in.
+
+NOTE Confidence: 0.8765490055084229
+
+00:02:15.160 --> 00:02:16.941
+And you can see we got to see one of
+
+NOTE Confidence: 0.8765490055084229
+
+00:02:16.990 --> 00:02:18.920
+these servers on the sled being racked.
+
+NOTE Confidence: 0.8874971866607666
+
+00:02:18.919 --> 00:02:21.120
+These are the cables on the back, the InfiniBand and
+
+NOTE Confidence: 0.8874971866607666
+
+00:02:21.162 --> 00:02:21.839
+Ethernet cables.
+
+NOTE Confidence: 0.9031758308410645
+
+00:02:22.639 --> 00:02:24.291
+And then you can see this is a brake fix
+
+NOTE Confidence: 0.9031758308410645
+
+00:02:24.332 --> 00:02:25.199
+that we got to watch.
+
+NOTE Confidence: 0.8641815185546875
+
+00:02:25.200 --> 00:02:27.338
+This is the liquid cooling plugged into the back of
+
+NOTE Confidence: 0.8641815185546875
+
+00:02:27.380 --> 00:02:27.799
+the racks.
+
+NOTE Confidence: 0.9206467270851135
+
+00:02:27.800 --> 00:02:29.280
+And then I saw this on the tour.
+
+NOTE Confidence: 0.8050379753112793
+
+00:02:29.280 --> 00:02:30.600
+That group had gone ahead of me.
+
+NOTE Confidence: 0.8838937282562256
+
+00:02:31.440 --> 00:02:34.505
+I saw a plug and I plugged it in because
+
+NOTE Confidence: 0.8838937282562256
+
+00:02:34.581 --> 00:02:38.720
+it's like, what's this shouldn't be hanging like that?
+
+NOTE Confidence: 0.8642146587371826
+
+00:02:38.720 --> 00:02:41.590
+And Scott Guthrie got a text literally a few minutes
+
+NOTE Confidence: 0.8642146587371826
+
+00:02:41.645 --> 00:02:44.846
+later saying we've, it looks like we've already powered on
+
+NOTE Confidence: 0.8642146587371826
+
+00:02:44.901 --> 00:02:45.839
+power cell three.
+
+NOTE Confidence: 0.9623795747756958
+
+00:02:46.040 --> 00:02:47.040
+We didn't expect that.
+
+NOTE Confidence: 0.9328416585922241
+
+00:02:48.360 --> 00:02:50.277
+I wanted to take credit, but I thought maybe I
+
+NOTE Confidence: 0.9328416585922241
+
+00:02:50.319 --> 00:02:51.320
+best shouldn't for that.
+
+NOTE Confidence: 0.8630922436714172
+
+00:02:53.760 --> 00:02:56.477
+But inside the data centers themselves, we've got the servers,
+
+NOTE Confidence: 0.8630922436714172
+
+00:02:56.521 --> 00:02:56.959
+of course.
+
+NOTE Confidence: 0.8648656606674194
+
+00:02:56.960 --> 00:02:59.244
+And one of the innovations that we've been developing in
+
+NOTE Confidence: 0.8648656606674194
+
+00:02:59.285 --> 00:03:01.080
+our servers is something called Azure Boost.
+
+NOTE Confidence: 0.8292999863624573
+
+00:03:01.080 --> 00:03:04.744
+Azure Boost is aimed at offloading a lot of the
+
+NOTE Confidence: 0.8292999863624573
+
+00:03:04.822 --> 00:03:08.955
+processing of the data paths for data for storage and
+
+NOTE Confidence: 0.8292999863624573
+
+00:03:09.033 --> 00:03:11.840
+networking off the main server CPUs.
+
+NOTE Confidence: 0.8918759822845459
+
+00:03:12.400 --> 00:03:14.360
+And it does this with an offload card.
+
+NOTE Confidence: 0.6783495545387268
+
+00:03:14.800 --> 00:03:18.376
+We move the data planes off onto that offload card,
+
+NOTE Confidence: 0.6783495545387268
+
+00:03:18.446 --> 00:03:20.200
+We power them with DPU's.
+
+NOTE Confidence: 0.8569070100784302
+
+00:03:20.520 --> 00:03:23.313
+We've got cores on there as well where we put
+
+NOTE Confidence: 0.8569070100784302
+
+00:03:23.375 --> 00:03:24.120
+our agentry.
+
+NOTE Confidence: 0.912553071975708
+
+00:03:24.120 --> 00:03:26.640
+So we get the agents off the server as well.
+
+NOTE Confidence: 0.9006699323654175
+
+00:03:26.639 --> 00:03:29.875
+And this lets the workload have most of the control
+
+NOTE Confidence: 0.9006699323654175
+
+00:03:29.939 --> 00:03:32.160
+over what's going on on the server.
+
+NOTE Confidence: 0.7766017913818359
+
+00:03:32.800 --> 00:03:34.480
+This Azure Boost Card looks like this.
+
+NOTE Confidence: 0.7622092962265015
+
+00:03:34.480 --> 00:03:36.572
+This is the latest generation of Azure Boost Card that
+
+NOTE Confidence: 0.7622092962265015
+
+00:03:36.611 --> 00:03:38.199
+we've started deploying our data centers.
+
+NOTE Confidence: 0.8910267353057861
+
+00:03:38.200 --> 00:03:41.520
+Here's an actual version of it right here.
+
+NOTE Confidence: 0.7869295477867126
+
+00:03:41.600 --> 00:03:44.604
+And what you can see there, there's little black squares
+
+NOTE Confidence: 0.7869295477867126
+
+00:03:44.658 --> 00:03:47.394
+around the middle, our DRAM, and then the middle is
+
+NOTE Confidence: 0.7869295477867126
+
+00:03:47.447 --> 00:03:48.360
+where the SoC is.
+
+NOTE Confidence: 0.8162593841552734
+
+00:03:48.360 --> 00:03:51.806
+That's where the ARM cores and the DPU and FPGA
+
+NOTE Confidence: 0.8162593841552734
+
+00:03:51.879 --> 00:03:52.759
+are located.
+
+NOTE Confidence: 0.782347559928894
+
+00:03:53.000 --> 00:03:55.684
+That's where the data plane gets processed and the agents
+
+NOTE Confidence: 0.782347559928894
+
+00:03:55.731 --> 00:03:55.920
+run.
+
+NOTE Confidence: 0.8701542615890503
+
+00:03:57.200 --> 00:03:59.609
+Now, some of the stats for Azure Boost are pretty
+
+NOTE Confidence: 0.8701542615890503
+
+00:03:59.659 --> 00:04:00.199
+staggering.
+
+NOTE Confidence: 0.8372290134429932
+
+00:04:00.480 --> 00:04:03.460
+You can see here that just in last year, since
+
+NOTE Confidence: 0.8372290134429932
+
+00:04:03.525 --> 00:04:07.089
+the previous generation of Azure Boost that I showed at
+
+NOTE Confidence: 0.8372290134429932
+
+00:04:07.153 --> 00:04:10.523
+last build, we've gone to 20 gigabytes per second of
+
+NOTE Confidence: 0.8372290134429932
+
+00:04:10.588 --> 00:04:11.560
+remote storage.
+
+NOTE Confidence: 0.9134905934333801
+
+00:04:11.720 --> 00:04:15.280
+And that's an increase you can see there of 1.4.
+
+NOTE Confidence: 0.8444792628288269
+
+00:04:15.520 --> 00:04:18.643
+We've gone to 1,000,000 IOPS for remote storage and a
+
+NOTE Confidence: 0.8444792628288269
+
+00:04:18.701 --> 00:04:21.000
+local storage, 36 gigabytes per second.
+
+NOTE Confidence: 0.7252806425094604
+
+00:04:21.040 --> 00:04:24.978
+This is to local NVME and 6.6 million IOPS through
+
+NOTE Confidence: 0.7252806425094604
+
+00:04:25.056 --> 00:04:28.679
+Azure Boost NVME offload storage acceleration.
+
+NOTE Confidence: 0.7993320822715759
+
+00:04:29.480 --> 00:04:32.423
+And then for networking, we've gone to 400 gigabits from
+
+NOTE Confidence: 0.7993320822715759
+
+00:04:32.476 --> 00:04:33.159
+200 gigabits.
+
+NOTE Confidence: 0.8766465783119202
+
+00:04:33.240 --> 00:04:36.203
+So there was 2 network ports that you saw there
+
+NOTE Confidence: 0.8766465783119202
+
+00:04:36.267 --> 00:04:39.735
+on the card, 200 gigabits each and 400K connections per
+
+NOTE Confidence: 0.8766465783119202
+
+00:04:39.798 --> 00:04:40.239
+second.
+
+NOTE Confidence: 0.5311468839645386
+
+00:04:40.240 --> 00:04:40.920
+It supports.
+
+NOTE Confidence: 0.7977027893066406
+
+00:04:41.920 --> 00:04:44.403
+Those two ports mean that they can go to two
+
+NOTE Confidence: 0.7977027893066406
+
+00:04:44.459 --> 00:04:46.040
+top of rack router switches.
+
+NOTE Confidence: 0.8246011137962341
+
+00:04:46.120 --> 00:04:48.175
+So that means that we can service top of rack
+
+NOTE Confidence: 0.8246011137962341
+
+00:04:48.220 --> 00:04:50.550
+routers or if one fails the complete, we don't lose
+
+NOTE Confidence: 0.8246011137962341
+
+00:04:50.595 --> 00:04:52.240
+complete connectivity to the server.
+
+NOTE Confidence: 0.795320987701416
+
+00:04:52.760 --> 00:04:55.918
+And it also means that sub second servicing is possible
+
+NOTE Confidence: 0.795320987701416
+
+00:04:55.975 --> 00:04:58.617
+now on those tours with a sub second impact to
+
+NOTE Confidence: 0.795320987701416
+
+00:04:58.675 --> 00:05:00.799
+the workloads running on the servers.
+
+NOTE Confidence: 0.8359050154685974
+
+00:05:01.440 --> 00:05:04.418
+We've been deploying this for several years now and we're
+
+NOTE Confidence: 0.8359050154685974
+
+00:05:04.470 --> 00:05:06.769
+over 30% of the fleet is now has Azure Boost
+
+NOTE Confidence: 0.8359050154685974
+
+00:05:06.821 --> 00:05:07.239
+enabled.
+
+NOTE Confidence: 0.8610725998878479
+
+00:05:07.240 --> 00:05:08.920
+Every single server gets an Azure Boost in it.
+
+NOTE Confidence: 0.9095718860626221
+
+00:05:09.720 --> 00:05:12.365
+And then one of the cool innovations that I'll show
+
+NOTE Confidence: 0.9095718860626221
+
+00:05:12.416 --> 00:05:14.698
+you in a little bit is that we support guest
+
+NOTE Confidence: 0.9095718860626221
+
+00:05:14.750 --> 00:05:15.839
+virtual machine RDMA.
+
+NOTE Confidence: 0.8920262455940247
+
+00:05:15.880 --> 00:05:19.881
+So this is basically memory to memory transfers, bypassing the
+
+NOTE Confidence: 0.8920262455940247
+
+00:05:19.946 --> 00:05:24.399
+networking stacks because Azure Boost is facilitating that transport.
+
+NOTE Confidence: 0.9064881801605225
+
+00:05:25.880 --> 00:05:28.586
+Now one of the things that I mentioned is we
+
+NOTE Confidence: 0.9064881801605225
+
+00:05:28.648 --> 00:05:31.909
+get the management services off the server and we put
+
+NOTE Confidence: 0.9064881801605225
+
+00:05:31.970 --> 00:05:34.738
+them on the Azure Boost card and that lets us
+
+NOTE Confidence: 0.9064881801605225
+
+00:05:34.800 --> 00:05:36.400
+have bare metal instances.
+
+NOTE Confidence: 0.7456605434417725
+
+00:05:36.880 --> 00:05:41.849
+We've introduced bare metal instances to in limited access specifically
+
+NOTE Confidence: 0.7456605434417725
+
+00:05:41.919 --> 00:05:44.509
+for open AI and open a is use of that
+
+NOTE Confidence: 0.7456605434417725
+
+00:05:44.579 --> 00:05:46.119
+Fairwater data center.
+
+NOTE Confidence: 0.8053389191627502
+
+00:05:46.120 --> 00:05:49.389
+So the servers and data center, the GPU servers are
+
+NOTE Confidence: 0.8053389191627502
+
+00:05:49.453 --> 00:05:50.799
+bare metal instances.
+
+NOTE Confidence: 0.8522107601165771
+
+00:05:50.800 --> 00:05:52.836
+And I thought I'd show you just a quick demo
+
+NOTE Confidence: 0.8522107601165771
+
+00:05:52.883 --> 00:05:55.290
+of bare metal instances which are going to be coming
+
+NOTE Confidence: 0.8522107601165771
+
+00:05:55.336 --> 00:05:57.789
+as a general purpose offering in sometime in the near
+
+NOTE Confidence: 0.8522107601165771
+
+00:05:57.835 --> 00:05:58.159
+future.
+
+NOTE Confidence: 0.8805007934570312
+
+00:05:58.720 --> 00:06:02.795
+But here you can see we've got a metal instance,
+
+NOTE Confidence: 0.8805007934570312
+
+00:06:02.880 --> 00:06:03.560
+ND144V6.
+
+NOTE Confidence: 0.9233272671699524
+
+00:06:04.440 --> 00:06:06.930
+You can see here we're going to get the IP
+
+NOTE Confidence: 0.9233272671699524
+
+00:06:06.989 --> 00:06:09.835
+address, and then we're going to SSH into it and
+
+NOTE Confidence: 0.9233272671699524
+
+00:06:09.894 --> 00:06:12.918
+actually see that it is a bare metal server because
+
+NOTE Confidence: 0.9233272671699524
+
+00:06:12.978 --> 00:06:16.357
+we're going to look to see if virtualization services are
+
+NOTE Confidence: 0.9233272671699524
+
+00:06:16.416 --> 00:06:17.840
+running and they're not.
+
+NOTE Confidence: 0.8869920969009399
+
+00:06:19.040 --> 00:06:22.099
+And then we're going to look at the PCI bus
+
+NOTE Confidence: 0.8869920969009399
+
+00:06:22.170 --> 00:06:25.159
+using LSPCI and you can see we get lots of
+
+NOTE Confidence: 0.8869920969009399
+
+00:06:25.230 --> 00:06:25.799
+devices.
+
+NOTE Confidence: 0.8752360939979553
+
+00:06:25.800 --> 00:06:28.289
+We're going to scroll to the top and you can
+
+NOTE Confidence: 0.8752360939979553
+
+00:06:28.345 --> 00:06:29.760
+see there's a PCI bridge.
+
+NOTE Confidence: 0.8676483631134033
+
+00:06:29.760 --> 00:06:33.298
+And then you can see the 8 Ethernet controllers that
+
+NOTE Confidence: 0.8676483631134033
+
+00:06:33.367 --> 00:06:37.586
+are connected to the Mellanox in RDMA capable network adapters
+
+NOTE Confidence: 0.8676483631134033
+
+00:06:37.654 --> 00:06:41.057
+that are attached to that for the back end network
+
+NOTE Confidence: 0.8676483631134033
+
+00:06:41.125 --> 00:06:44.119
+that those GPU's talk through to each other.
+
+NOTE Confidence: 0.9239184856414795
+
+00:06:45.320 --> 00:06:48.080
+Now what do they talk, what transport do they talk?
+
+NOTE Confidence: 0.8255870938301086
+
+00:06:48.240 --> 00:06:52.144
+We switched to Ethernet from InfiniBand actually in those Fairwater
+
+NOTE Confidence: 0.8255870938301086
+
+00:06:52.202 --> 00:06:52.960
+data centers.
+
+NOTE Confidence: 0.8434760570526123
+
+00:06:53.279 --> 00:06:56.662
+And instead of using Rocky, which is RDMA over converged
+
+NOTE Confidence: 0.8434760570526123
+
+00:06:56.723 --> 00:07:00.106
+Ethernet, we've developed with Open AI and now a growing
+
+NOTE Confidence: 0.8434760570526123
+
+00:07:00.166 --> 00:07:03.730
+consortium of partners that are collaborating with us a new
+
+NOTE Confidence: 0.8434760570526123
+
+00:07:03.791 --> 00:07:08.080
+networking protocol called Multi Multi Path Reliable Connection or MRC.
+
+NOTE Confidence: 0.8533923029899597
+
+00:07:09.080 --> 00:07:12.353
+And the reason that we developed MRC is that when
+
+NOTE Confidence: 0.8533923029899597
+
+00:07:12.419 --> 00:07:17.095
+you talk about connecting 100,000 GPU's together, that's an incredible
+
+NOTE Confidence: 0.8533923029899597
+
+00:07:17.162 --> 00:07:21.170
+amount of network fabric that those packets are going across
+
+NOTE Confidence: 0.8533923029899597
+
+00:07:21.236 --> 00:07:22.840
+from all of those GPU's.
+
+NOTE Confidence: 0.9337570071220398
+
+00:07:23.200 --> 00:07:26.089
+If you have any congestion or any failure on a
+
+NOTE Confidence: 0.9337570071220398
+
+00:07:26.152 --> 00:07:29.857
+synchronous training job of that size, you're going to lose
+
+NOTE Confidence: 0.9337570071220398
+
+00:07:29.920 --> 00:07:30.799
+a ton of work.
+
+NOTE Confidence: 0.7906819581985474
+
+00:07:30.800 --> 00:07:33.412
+You're going to have to go back to a checkpoint,
+
+NOTE Confidence: 0.7906819581985474
+
+00:07:33.467 --> 00:07:36.080
+restart the training job from where it loft off.
+
+NOTE Confidence: 0.8848188519477844
+
+00:07:36.640 --> 00:07:39.517
+So MRC is designed to be resilient in the face
+
+NOTE Confidence: 0.8848188519477844
+
+00:07:39.579 --> 00:07:43.332
+of these congestion issues or failures because it sprays the
+
+NOTE Confidence: 0.8848188519477844
+
+00:07:43.394 --> 00:07:46.959
+packets across independent network domains called planes.
+
+NOTE Confidence: 0.7689383625984192
+
+00:07:47.680 --> 00:07:50.945
+And therefore when a link gets dropped, it can the
+
+NOTE Confidence: 0.7689383625984192
+
+00:07:51.010 --> 00:07:54.864
+the spraying just happens and rebalances to the planes that
+
+NOTE Confidence: 0.7689383625984192
+
+00:07:54.929 --> 00:07:56.040
+remain available.
+
+NOTE Confidence: 0.9603038430213928
+
+00:07:56.480 --> 00:07:59.474
+And I'll show you a quick demo of that in
+
+NOTE Confidence: 0.9603038430213928
+
+00:07:59.547 --> 00:08:01.519
+action by showing you here.
+
+NOTE Confidence: 0.9291346669197083
+
+00:08:04.520 --> 00:08:07.804
+What we're going to see is that I've got 2
+
+NOTE Confidence: 0.9291346669197083
+
+00:08:07.882 --> 00:08:11.480
+servers talking to each other over 4 switches.
+
+NOTE Confidence: 0.8915148377418518
+
+00:08:11.920 --> 00:08:16.560
+They're sending 4 gigabyte payloads to each other.
+
+NOTE Confidence: 0.8551533222198486
+
+00:08:17.120 --> 00:08:20.245
+This is 4 gigabytes are going to be packet sprayed
+
+NOTE Confidence: 0.8551533222198486
+
+00:08:20.307 --> 00:08:21.120
+across these.
+
+NOTE Confidence: 0.8371942043304443
+
+00:08:21.560 --> 00:08:25.279
+You can see we're getting roughly 95 gigabytes per second
+
+NOTE Confidence: 0.8371942043304443
+
+00:08:25.345 --> 00:08:28.999
+and that's because we are spraying these across 8 planes
+
+NOTE Confidence: 0.8371942043304443
+
+00:08:29.065 --> 00:08:30.239
+with 12 gigabytes.
+
+NOTE Confidence: 0.8602033853530884
+
+00:08:30.240 --> 00:08:33.040
+So that comes out to 12 gigabytes per plane.
+
+NOTE Confidence: 0.9273450970649719
+
+00:08:33.679 --> 00:08:37.389
+And this is the aggregate bandwidth that we're seeing, which
+
+NOTE Confidence: 0.9273450970649719
+
+00:08:37.450 --> 00:08:39.119
+is 95 gigabytes per second.
+
+NOTE Confidence: 0.8145095109939575
+
+00:08:39.400 --> 00:08:42.034
+This is what we're going to watch because we want
+
+NOTE Confidence: 0.8145095109939575
+
+00:08:42.088 --> 00:08:44.938
+to maintain 95 bits GB or gigabytes per second there,
+
+NOTE Confidence: 0.8145095109939575
+
+00:08:44.992 --> 00:08:45.960
+which is our goal.
+
+NOTE Confidence: 0.5589431524276733
+
+00:08:47.200 --> 00:08:48.440
+We're seeing 4 switches.
+
+NOTE Confidence: 0.9579095840454102
+
+00:08:48.480 --> 00:08:51.485
+You can see how much bandwidth is being spread across
+
+NOTE Confidence: 0.9579095840454102
+
+00:08:51.542 --> 00:08:52.280
+the switches.
+
+NOTE Confidence: 0.9555227756500244
+
+00:08:52.280 --> 00:08:55.078
+There's actually 2 switches at this bandwidth here that you
+
+NOTE Confidence: 0.9555227756500244
+
+00:08:55.125 --> 00:08:55.599
+don't see.
+
+NOTE Confidence: 0.86063551902771
+
+00:08:56.040 --> 00:08:59.309
+So this is 12/2/20 fours and 136 adding up to
+
+NOTE Confidence: 0.86063551902771
+
+00:08:59.382 --> 00:08:59.600
+95.
+
+NOTE Confidence: 0.9237108826637268
+
+00:09:00.520 --> 00:09:02.272
+And now we're going to go kill one of those
+
+NOTE Confidence: 0.9237108826637268
+
+00:09:02.313 --> 00:09:02.680
+switches.
+
+NOTE Confidence: 0.8881559371948242
+
+00:09:02.680 --> 00:09:07.160
+We're going to drop it off of the sending server.
+
+NOTE Confidence: 0.8834782242774963
+
+00:09:07.200 --> 00:09:09.899
+So what it's going to do is now re balance
+
+NOTE Confidence: 0.8834782242774963
+
+00:09:09.963 --> 00:09:13.627
+the spraying across the remaining 3 switches and our goal
+
+NOTE Confidence: 0.8834782242774963
+
+00:09:13.691 --> 00:09:16.519
+is to not see any drop in network bandwidth.
+
+NOTE Confidence: 0.9148666262626648
+
+00:09:16.520 --> 00:09:18.760
+And of course that's exactly what we get.
+
+NOTE Confidence: 0.9079413414001465
+
+00:09:18.760 --> 00:09:21.361
+You can see 95 ish gigabits per second and if
+
+NOTE Confidence: 0.9079413414001465
+
+00:09:21.419 --> 00:09:23.790
+we go take a look at the traffic over the
+
+NOTE Confidence: 0.9079413414001465
+
+00:09:23.848 --> 00:09:26.507
+switches, you can see that one of them went to
+
+NOTE Confidence: 0.9079413414001465
+
+00:09:26.565 --> 00:09:28.936
+zero and then the other one went up to 36
+
+NOTE Confidence: 0.9079413414001465
+
+00:09:28.993 --> 00:09:31.480
+gigabits per second to compensate for that.
+
+NOTE Confidence: 0.8819412589073181
+
+00:09:31.840 --> 00:09:35.356
+So MRC is what allows us to run these massive
+
+NOTE Confidence: 0.8819412589073181
+
+00:09:35.435 --> 00:09:39.968
+training jobs and has now become the industry standard for
+
+NOTE Confidence: 0.8819412589073181
+
+00:09:40.046 --> 00:09:42.000
+large network topologies.
+
+NOTE Confidence: 0.7782241702079773
+
+00:09:44.880 --> 00:09:48.829
+Now I mentioned RDMAA few times and what I was
+
+NOTE Confidence: 0.7782241702079773
+
+00:09:48.915 --> 00:09:52.864
+showing you was MRC, which is the what Open AI
+
+NOTE Confidence: 0.7782241702079773
+
+00:09:52.950 --> 00:09:55.440
+uses for their training jobs.
+
+NOTE Confidence: 0.7830415964126587
+
+00:09:56.120 --> 00:09:58.985
+And they're doing RDMA of course between the servers in
+
+NOTE Confidence: 0.7830415964126587
+
+00:09:59.037 --> 00:10:00.079
+those training jobs.
+
+NOTE Confidence: 0.793118953704834
+
+00:10:00.559 --> 00:10:03.361
+But what we want to introduce is to more general
+
+NOTE Confidence: 0.793118953704834
+
+00:10:03.420 --> 00:10:06.280
+purpose workloads, RDMA through virtual machines.
+
+NOTE Confidence: 0.8815117478370667
+
+00:10:06.960 --> 00:10:10.507
+Now, when you talk between one VM and another VM
+
+NOTE Confidence: 0.8815117478370667
+
+00:10:10.581 --> 00:10:14.719
+through Azure Boost, they could be on different servers.
+
+NOTE Confidence: 0.8756637573242188
+
+00:10:15.120 --> 00:10:16.840
+You're going through these networking stacks.
+
+NOTE Confidence: 0.7951213121414185
+
+00:10:16.840 --> 00:10:19.892
+The application talks to TCIP, which talks to our Mana
+
+NOTE Confidence: 0.7951213121414185
+
+00:10:19.948 --> 00:10:23.905
+driver, the Microsoft Accelerated Network Adapter driver, which is the
+
+NOTE Confidence: 0.7951213121414185
+
+00:10:23.962 --> 00:10:26.279
+Boost Azure Boost network adapter driver.
+
+NOTE Confidence: 0.9251464009284973
+
+00:10:26.880 --> 00:10:28.893
+And then it goes back up and there's a lot
+
+NOTE Confidence: 0.9251464009284973
+
+00:10:28.941 --> 00:10:32.008
+of memory copy operations and a lot of synchronization happening
+
+NOTE Confidence: 0.9251464009284973
+
+00:10:32.056 --> 00:10:32.680
+through that.
+
+NOTE Confidence: 0.7638868689537048
+
+00:10:33.120 --> 00:10:35.360
+With RDMA, you bypass all that.
+
+NOTE Confidence: 0.8609933853149414
+
+00:10:35.679 --> 00:10:40.476
+So the application maps memories basically in the remote system
+
+NOTE Confidence: 0.8609933853149414
+
+00:10:40.552 --> 00:10:44.663
+can drop data right into its own local presentation of
+
+NOTE Confidence: 0.8609933853149414
+
+00:10:44.739 --> 00:10:45.120
+that.
+
+NOTE Confidence: 0.8420234322547913
+
+00:10:45.559 --> 00:10:48.195
+And Azure Boost takes care of sending that and dropping
+
+NOTE Confidence: 0.8420234322547913
+
+00:10:48.243 --> 00:10:49.920
+it in the memory on the other side.
+
+NOTE Confidence: 0.8519095182418823
+
+00:10:50.440 --> 00:10:53.930
+And this completely eliminates a lot of that synchronization as
+
+NOTE Confidence: 0.8519095182418823
+
+00:10:53.985 --> 00:10:56.866
+well as the memory copies and all that software path
+
+NOTE Confidence: 0.8519095182418823
+
+00:10:56.922 --> 00:10:59.359
+that you got through those networking stack.
+
+NOTE Confidence: 0.8163402676582336
+
+00:11:00.520 --> 00:11:03.313
+So I'm going to show you a demo of virtual
+
+NOTE Confidence: 0.8163402676582336
+
+00:11:03.380 --> 00:11:06.639
+machine to Virtual machine RDMA over Azure Boost.
+
+NOTE Confidence: 0.8363322615623474
+
+00:11:07.040 --> 00:11:10.843
+The scenario here is common in AI workloads where you're
+
+NOTE Confidence: 0.8363322615623474
+
+00:11:10.911 --> 00:11:14.646
+doing inference and inference you can break up into two
+
+NOTE Confidence: 0.8363322615623474
+
+00:11:14.714 --> 00:11:16.480
+parts, prefill and decode.
+
+NOTE Confidence: 0.8492076992988586
+
+00:11:17.040 --> 00:11:20.468
+Prefill is taking your prompt and then getting the tokens
+
+NOTE Confidence: 0.8492076992988586
+
+00:11:20.528 --> 00:11:23.115
+from that prompt in the way in the KV cache
+
+NOTE Confidence: 0.8492076992988586
+
+00:11:23.175 --> 00:11:24.800
+populated from that prompt.
+
+NOTE Confidence: 0.8400462865829468
+
+00:11:25.240 --> 00:11:28.028
+And then decode starts to generate new tokens based off
+
+NOTE Confidence: 0.8400462865829468
+
+00:11:28.079 --> 00:11:29.600
+of that system of that prompt.
+
+NOTE Confidence: 0.8857597708702087
+
+00:11:30.760 --> 00:11:34.055
+So it's efficient and now common to split those into
+
+NOTE Confidence: 0.8857597708702087
+
+00:11:34.118 --> 00:11:35.639
+different servers pools.
+
+NOTE Confidence: 0.8954052925109863
+
+00:11:35.640 --> 00:11:38.301
+So one pool for prefill, 1 pool for decode because
+
+NOTE Confidence: 0.8954052925109863
+
+00:11:38.354 --> 00:11:41.548
+they both have different constraints when it comes to memory
+
+NOTE Confidence: 0.8954052925109863
+
+00:11:41.601 --> 00:11:42.239
+and compute.
+
+NOTE Confidence: 0.8894732594490051
+
+00:11:43.960 --> 00:11:52.520
+So here we're going to start this demo of RDMA.
+
+NOTE Confidence: 0.8401575684547424
+
+00:11:53.120 --> 00:11:55.853
+So first we're going to look at the performance over
+
+NOTE Confidence: 0.8401575684547424
+
+00:11:55.906 --> 00:11:56.800
+the TCP IP stack.
+
+NOTE Confidence: 0.7340209484100342
+
+00:11:56.800 --> 00:12:01.000
+So here's the prefiller server using TCPIP.
+
+NOTE Confidence: 0.8822997212409973
+
+00:12:01.000 --> 00:12:04.840
+Here's the decoder server also using TCPIP the way we're
+
+NOTE Confidence: 0.8822997212409973
+
+00:12:04.908 --> 00:12:05.800
+launching it.
+
+NOTE Confidence: 0.8545095920562744
+
+00:12:05.800 --> 00:12:09.782
+And then we're going to go run this VLLM benchmark
+
+NOTE Confidence: 0.8545095920562744
+
+00:12:09.862 --> 00:12:14.880
+that does this prefilled decode load between those two servers.
+
+NOTE Confidence: 0.843903660774231
+
+00:12:17.240 --> 00:12:18.919
+And then we're going to go take a look at
+
+NOTE Confidence: 0.843903660774231
+
+00:12:18.959 --> 00:12:20.679
+our RDMA stats, which in the bottom right.
+
+NOTE Confidence: 0.8782600164413452
+
+00:12:21.120 --> 00:12:22.994
+And you're going to see that they don't change as
+
+NOTE Confidence: 0.8782600164413452
+
+00:12:23.033 --> 00:12:23.759
+this workload runs.
+
+NOTE Confidence: 0.8129277229309082
+
+00:12:23.760 --> 00:12:25.440
+There's 460 send requests.
+
+NOTE Confidence: 0.9621326327323914
+
+00:12:25.440 --> 00:12:26.560
+Just keep your eye on that one.
+
+NOTE Confidence: 0.947150468826294
+
+00:12:27.920 --> 00:12:30.598
+But then if you take a look at the performance,
+
+NOTE Confidence: 0.947150468826294
+
+00:12:30.655 --> 00:12:33.676
+the token throughput, which is what we really want is
+
+NOTE Confidence: 0.947150468826294
+
+00:12:33.733 --> 00:12:34.360
+about 3400.
+
+NOTE Confidence: 0.8574638962745667
+
+00:12:34.760 --> 00:12:38.387
+The median time to 1st token, which is another important
+
+NOTE Confidence: 0.8574638962745667
+
+00:12:38.452 --> 00:12:40.719
+stat for inference is 123 thousand.
+
+NOTE Confidence: 0.8722323179244995
+
+00:12:41.559 --> 00:12:44.538
+But when we switch over to RDMA and use the
+
+NOTE Confidence: 0.8722323179244995
+
+00:12:44.608 --> 00:12:47.795
+MANA link for that, you can see there's the F1
+
+NOTE Confidence: 0.8722323179244995
+
+00:12:47.864 --> 00:12:48.279
+verbs.
+
+NOTE Confidence: 0.7166053652763367
+
+00:12:48.280 --> 00:12:49.600
+Device name is MANA 0.
+
+NOTE Confidence: 0.792905867099762
+
+00:12:51.520 --> 00:12:54.933
+We do the same thing on the D code server
+
+NOTE Confidence: 0.792905867099762
+
+00:12:55.017 --> 00:12:55.600
+MANA 0.
+
+NOTE Confidence: 0.8598269820213318
+
+00:12:57.360 --> 00:12:59.438
+And then let's go take a look at the stats
+
+NOTE Confidence: 0.8598269820213318
+
+00:12:59.488 --> 00:13:01.517
+and you can see 460, but this is going to
+
+NOTE Confidence: 0.8598269820213318
+
+00:13:01.566 --> 00:13:04.189
+change now because we're running the RDMA test and it
+
+NOTE Confidence: 0.8598269820213318
+
+00:13:04.238 --> 00:13:06.366
+changed to five O 6 because we sent a whole
+
+NOTE Confidence: 0.8598269820213318
+
+00:13:06.416 --> 00:13:08.000
+lot of packets now over to RDMA.
+
+NOTE Confidence: 0.9324948787689209
+
+00:13:08.680 --> 00:13:12.480
+And then we've almost doubled the throughput to 7637.
+
+NOTE Confidence: 0.8725190162658691
+
+00:13:12.840 --> 00:13:15.970
+And then you can see our meantime to 1st token
+
+NOTE Confidence: 0.8725190162658691
+
+00:13:16.038 --> 00:13:18.759
+has dropped to just 47,000 milliseconds.
+
+NOTE Confidence: 0.8076152205467224
+
+00:13:19.440 --> 00:13:23.494
+So that's the performance benefit of RDMA that we're deploying
+
+NOTE Confidence: 0.8076152205467224
+
+00:13:23.560 --> 00:13:27.549
+and using in our inference clusters behind Foundry powered by
+
+NOTE Confidence: 0.8076152205467224
+
+00:13:27.615 --> 00:13:28.399
+Azure Boost.
+
+NOTE Confidence: 0.9207747578620911
+
+00:13:29.680 --> 00:13:31.960
+OK, so let's take a look at our core now.
+
+NOTE Confidence: 0.8852260708808899
+
+00:13:32.080 --> 00:13:35.096
+So that's kind of Fairwater infrastructure and some of the
+
+NOTE Confidence: 0.8852260708808899
+
+00:13:35.148 --> 00:13:36.240
+networking behind it.
+
+NOTE Confidence: 0.964921236038208
+
+00:13:36.560 --> 00:13:37.960
+Let's go take a look at the core.
+
+NOTE Confidence: 0.9057643413543701
+
+00:13:38.559 --> 00:13:40.823
+And I'm this is one of the sections that I
+
+NOTE Confidence: 0.9057643413543701
+
+00:13:40.877 --> 00:13:44.057
+get very excited about because the future is serverless and
+
+NOTE Confidence: 0.9057643413543701
+
+00:13:44.111 --> 00:13:46.160
+I've been saying this for a long time.
+
+NOTE Confidence: 0.7996618151664734
+
+00:13:46.160 --> 00:13:49.325
+If you come to previous Inside Azure innovation talks, even
+
+NOTE Confidence: 0.7996618151664734
+
+00:13:49.379 --> 00:13:52.330
+going back 10 years, I've been saying serverless is the
+
+NOTE Confidence: 0.7996618151664734
+
+00:13:52.384 --> 00:13:52.759
+future.
+
+NOTE Confidence: 0.8410311341285706
+
+00:13:52.760 --> 00:13:56.676
+Will serverless as the future is really arriving now with
+
+NOTE Confidence: 0.8410311341285706
+
+00:13:56.745 --> 00:14:00.799
+Azure container instances, which Azure container instances.
+
+NOTE Confidence: 0.9237711429595947
+
+00:14:00.800 --> 00:14:03.296
+The idea here is that we've got typically when it
+
+NOTE Confidence: 0.9237711429595947
+
+00:14:03.347 --> 00:14:06.405
+comes to containers, you think about containers the way they
+
+NOTE Confidence: 0.9237711429595947
+
+00:14:06.456 --> 00:14:08.799
+started, which is process isolated containers.
+
+NOTE Confidence: 0.9005424976348877
+
+00:14:09.559 --> 00:14:11.682
+So they're using the operating system primitives to try to
+
+NOTE Confidence: 0.9005424976348877
+
+00:14:11.719 --> 00:14:13.000
+keep them separate from each other.
+
+NOTE Confidence: 0.8675478100776672
+
+00:14:13.480 --> 00:14:15.000
+But there's a problem with that.
+
+NOTE Confidence: 0.9330083131790161
+
+00:14:15.200 --> 00:14:19.025
+We don't consider a process or user mode kernel as
+
+NOTE Confidence: 0.9330083131790161
+
+00:14:19.101 --> 00:14:21.320
+a security boundary in Azure.
+
+NOTE Confidence: 0.9248784184455872
+
+00:14:21.400 --> 00:14:26.545
+We only consider virtualization with a very tight connection between
+
+NOTE Confidence: 0.9248784184455872
+
+00:14:26.621 --> 00:14:30.782
+small connection between the server and the the host to
+
+NOTE Confidence: 0.9248784184455872
+
+00:14:30.858 --> 00:14:33.279
+be a security boundary in Azure.
+
+NOTE Confidence: 0.8881539106369019
+
+00:14:33.640 --> 00:14:38.358
+So with Azure Container Instances, we isolate those containers with
+
+NOTE Confidence: 0.8881539106369019
+
+00:14:38.429 --> 00:14:42.514
+Hyper V, and this is nested hypervisor here inside virtual
+
+NOTE Confidence: 0.8881539106369019
+
+00:14:42.584 --> 00:14:45.120
+machine with the containers on them.
+
+NOTE Confidence: 0.895246684551239
+
+00:14:45.560 --> 00:14:47.084
+One of the things I'm going to show you in
+
+NOTE Confidence: 0.895246684551239
+
+00:14:47.121 --> 00:14:48.936
+a little bit is where we're going with this, which
+
+NOTE Confidence: 0.895246684551239
+
+00:14:48.972 --> 00:14:49.880
+is direct virtualization.
+
+NOTE Confidence: 0.871189296245575
+
+00:14:49.880 --> 00:14:51.640
+So I'll save a description of that.
+
+NOTE Confidence: 0.8387171030044556
+
+00:14:52.120 --> 00:14:54.387
+But what I want to show you is we're making
+
+NOTE Confidence: 0.8387171030044556
+
+00:14:54.440 --> 00:14:57.921
+a ton of progress in adopting Azure Container Instances throughout
+
+NOTE Confidence: 0.8387171030044556
+
+00:14:57.974 --> 00:15:00.400
+all of not just Azure, but Microsoft Services.
+
+NOTE Confidence: 0.9008309245109558
+
+00:15:01.480 --> 00:15:03.044
+I'm sure that if you take a look at this,
+
+NOTE Confidence: 0.9008309245109558
+
+00:15:03.083 --> 00:15:05.144
+you can see some service that you've been using, which
+
+NOTE Confidence: 0.9008309245109558
+
+00:15:05.182 --> 00:15:07.320
+means you're indirectly using Azure Container Instances.
+
+NOTE Confidence: 0.8411909937858582
+
+00:15:07.320 --> 00:15:10.741
+Whether for example, GitHub Actions is now running on Azure
+
+NOTE Confidence: 0.8411909937858582
+
+00:15:10.799 --> 00:15:11.959
+Container Instances.
+
+NOTE Confidence: 0.8212094306945801
+
+00:15:12.400 --> 00:15:15.286
+You can see Python And Excel running on Azure Container
+
+NOTE Confidence: 0.8212094306945801
+
+00:15:15.339 --> 00:15:18.435
+Instances Horizon DB, which you might have gone to sessions
+
+NOTE Confidence: 0.8212094306945801
+
+00:15:18.488 --> 00:15:21.479
+about here at Build running on Azure Container Instances.
+
+NOTE Confidence: 0.9385940432548523
+
+00:15:22.800 --> 00:15:25.398
+So one of the things that we've been doing is
+
+NOTE Confidence: 0.9385940432548523
+
+00:15:25.456 --> 00:15:29.268
+trying to make container instances more efficient and also support
+
+NOTE Confidence: 0.9385940432548523
+
+00:15:29.326 --> 00:15:32.156
+more scenarios and make it so that you never need
+
+NOTE Confidence: 0.9385940432548523
+
+00:15:32.213 --> 00:15:33.599
+to do process isolation.
+
+NOTE Confidence: 0.949752151966095
+
+00:15:34.480 --> 00:15:37.720
+One of those is taking out the virtualization overhead.
+
+NOTE Confidence: 0.9048767685890198
+
+00:15:37.920 --> 00:15:40.040
+And this is what we call direct virtualization.
+
+NOTE Confidence: 0.777504026889801
+
+00:15:40.040 --> 00:15:44.371
+It's putting the containers right on the the servers as
+
+NOTE Confidence: 0.777504026889801
+
+00:15:44.450 --> 00:15:47.600
+peers to the management virtual machine.
+
+NOTE Confidence: 0.9321252703666687
+
+00:15:48.480 --> 00:15:52.340
+We call this the parent partition or layer one virtualization
+
+NOTE Confidence: 0.9321252703666687
+
+00:15:52.403 --> 00:15:52.719
+host.
+
+NOTE Confidence: 0.8395984172821045
+
+00:15:53.000 --> 00:15:57.141
+And these are layer 2 virtualization host or child VMS
+
+NOTE Confidence: 0.8395984172821045
+
+00:15:57.218 --> 00:16:01.359
+that are simply hosting individual containers or pods.
+
+NOTE Confidence: 0.8578107953071594
+
+00:16:02.320 --> 00:16:05.792
+And this gives us that strong hostile multi tenant isolation
+
+NOTE Confidence: 0.8578107953071594
+
+00:16:05.850 --> 00:16:07.240
+for container instances.
+
+NOTE Confidence: 0.7566242814064026
+
+00:16:08.800 --> 00:16:13.304
+Now one of the other Azure container instances of cells
+
+NOTE Confidence: 0.7566242814064026
+
+00:16:13.386 --> 00:16:17.809
+now runs on top of direct 1L1 virtualization or direct
+
+NOTE Confidence: 0.7566242814064026
+
+00:16:17.891 --> 00:16:19.119
+virtualization.
+
+NOTE Confidence: 0.8568910956382751
+
+00:16:19.120 --> 00:16:23.440
+We're we're migrating our entire fleet over to direct virtualization.
+
+NOTE Confidence: 0.9043008685112
+
+00:16:23.720 --> 00:16:26.038
+This will probably take a year or two to migrate
+
+NOTE Confidence: 0.9043008685112
+
+00:16:26.086 --> 00:16:28.646
+the whole fleet, but this is something that was going
+
+NOTE Confidence: 0.9043008685112
+
+00:16:28.695 --> 00:16:31.400
+to give us a lot of performance and efficiency benefits.
+
+NOTE Confidence: 0.9342659711837769
+
+00:16:32.800 --> 00:16:35.711
+Now we want to make containers have all of the
+
+NOTE Confidence: 0.9342659711837769
+
+00:16:35.774 --> 00:16:39.825
+same capabilities of virtual machines, all of the same abilities
+
+NOTE Confidence: 0.9342659711837769
+
+00:16:39.888 --> 00:16:42.799
+to attach network devices and storage devices.
+
+NOTE Confidence: 0.8384107351303101
+
+00:16:43.400 --> 00:16:45.997
+One of the benefits you get out of a virtual
+
+NOTE Confidence: 0.8384107351303101
+
+00:16:46.056 --> 00:16:49.597
+machine today on any hyper scaler including Azure is minimal
+
+NOTE Confidence: 0.8384107351303101
+
+00:16:49.656 --> 00:16:52.726
+downtime when the server needs to be serviced or the
+
+NOTE Confidence: 0.8384107351303101
+
+00:16:52.785 --> 00:16:54.319
+server is going unhealthy.
+
+NOTE Confidence: 0.9489453434944153
+
+00:16:54.920 --> 00:16:57.491
+And we recognize that ahead of time and that is
+
+NOTE Confidence: 0.9489453434944153
+
+00:16:57.545 --> 00:16:58.639
+with live migration.
+
+NOTE Confidence: 0.8806582689285278
+
+00:16:59.640 --> 00:17:03.320
+What's been missing with containers is support for live migration.
+
+NOTE Confidence: 0.932023823261261
+
+00:17:03.320 --> 00:17:06.256
+So I want to show you the first public demo
+
+NOTE Confidence: 0.932023823261261
+
+00:17:06.324 --> 00:17:10.080
+of container live migration in Azure here, where we can
+
+NOTE Confidence: 0.932023823261261
+
+00:17:10.148 --> 00:17:13.563
+take a bunch of containers and move them from 1:00
+
+NOTE Confidence: 0.932023823261261
+
+00:17:13.631 --> 00:17:15.680
+server over to another server.
+
+NOTE Confidence: 0.9060283303260803
+
+00:17:20.680 --> 00:17:24.244
+So here I've got a container that's running on one
+
+NOTE Confidence: 0.9060283303260803
+
+00:17:24.315 --> 00:17:28.308
+pool of servers, and here's another pool of servers over
+
+NOTE Confidence: 0.9060283303260803
+
+00:17:28.379 --> 00:17:31.160
+here that we're going to migrate it to.
+
+NOTE Confidence: 0.9366514682769775
+
+00:17:31.760 --> 00:17:34.320
+So this is our live migration for container instances.
+
+NOTE Confidence: 0.8929566144943237
+
+00:17:35.480 --> 00:17:37.577
+You can see this is still under development, which is
+
+NOTE Confidence: 0.8929566144943237
+
+00:17:37.617 --> 00:17:39.240
+why we're using these command lines here.
+
+NOTE Confidence: 0.8629235029220581
+
+00:17:41.080 --> 00:17:44.331
+And we've got this running over on dev box 6,
+
+NOTE Confidence: 0.8629235029220581
+
+00:17:44.403 --> 00:17:48.159
+server dev 6, and we've got this container workload.
+
+NOTE Confidence: 0.7177006602287292
+
+00:17:48.160 --> 00:17:51.040
+It's simply spitting out a tick every second.
+
+NOTE Confidence: 0.8711011409759521
+
+00:17:51.080 --> 00:17:53.103
+You can see we're up to tick 695 and the
+
+NOTE Confidence: 0.8711011409759521
+
+00:17:53.154 --> 00:17:55.785
+migration now has kicked in and that container is no
+
+NOTE Confidence: 0.8711011409759521
+
+00:17:55.836 --> 00:17:58.719
+longer running on that server, which is why that stopped.
+
+NOTE Confidence: 0.8963470458984375
+
+00:18:00.200 --> 00:18:02.852
+Now if we go over and take a look at
+
+NOTE Confidence: 0.8963470458984375
+
+00:18:02.926 --> 00:18:06.389
+the other server, it's migrated to dev 1 and we
+
+NOTE Confidence: 0.8963470458984375
+
+00:18:06.463 --> 00:18:08.600
+look at what's running in it.
+
+NOTE Confidence: 0.8910017013549805
+
+00:18:08.600 --> 00:18:11.599
+You can see that there's our hello world there and
+
+NOTE Confidence: 0.8910017013549805
+
+00:18:11.659 --> 00:18:14.539
+if we could take a look at what's running inside
+
+NOTE Confidence: 0.8910017013549805
+
+00:18:14.599 --> 00:18:17.179
+of that, you can see there is the file that
+
+NOTE Confidence: 0.8910017013549805
+
+00:18:17.239 --> 00:18:19.399
+it's been dropping those ticks into.
+
+NOTE Confidence: 0.6938973665237427
+
+00:18:19.800 --> 00:18:21.680
+We're all already way up to 7055.
+
+NOTE Confidence: 0.9357839822769165
+
+00:18:21.960 --> 00:18:24.188
+So let's go take a look and make sure that
+
+NOTE Confidence: 0.9357839822769165
+
+00:18:24.241 --> 00:18:26.575
+695 was in there and we didn't have any kind
+
+NOTE Confidence: 0.9357839822769165
+
+00:18:26.628 --> 00:18:27.000
+of gap.
+
+NOTE Confidence: 0.8745339512825012
+
+00:18:28.080 --> 00:18:32.359
+So we're going to go to a cat and scroll
+
+NOTE Confidence: 0.8745339512825012
+
+00:18:32.466 --> 00:18:36.960
+back up and there's it is 695 right there.
+
+NOTE Confidence: 0.9520650506019592
+
+00:18:36.960 --> 00:18:38.760
+So no gap at all.
+
+NOTE Confidence: 0.8821923732757568
+
+00:18:39.400 --> 00:18:42.714
+So container live migrating from 1:00 server to another on
+
+NOTE Confidence: 0.8821923732757568
+
+00:18:42.771 --> 00:18:44.600
+top of Azure container instance.
+
+NOTE Confidence: 0.7380448579788208
+
+00:18:44.800 --> 00:18:46.520
+By the way, feel free to clap at any time.
+
+NOTE Confidence: 0.82058185338974
+
+00:18:51.720 --> 00:18:54.135
+All right, let's switch over to talking a little bit
+
+NOTE Confidence: 0.82058185338974
+
+00:18:54.181 --> 00:18:54.599
+about AI.
+
+NOTE Confidence: 0.8882097005844116
+
+00:18:54.880 --> 00:18:56.962
+I know that there's AI fatigue, but I think we're
+
+NOTE Confidence: 0.8882097005844116
+
+00:18:57.005 --> 00:18:58.960
+doing some cool stuff with AI that I'd like to
+
+NOTE Confidence: 0.8882097005844116
+
+00:18:59.002 --> 00:18:59.640
+share with you.
+
+NOTE Confidence: 0.8879331350326538
+
+00:18:59.640 --> 00:19:02.349
+And one of those is talking a little bit about
+
+NOTE Confidence: 0.8879331350326538
+
+00:19:02.408 --> 00:19:06.060
+what powers all of Microsoft's own inference and own training,
+
+NOTE Confidence: 0.8879331350326538
+
+00:19:06.119 --> 00:19:08.240
+and that's a system called Manifold.
+
+NOTE Confidence: 0.8238157629966736
+
+00:19:09.080 --> 00:19:12.500
+Manifold's idea is to treat all our pool of GPU's
+
+NOTE Confidence: 0.8238157629966736
+
+00:19:12.570 --> 00:19:16.619
+as one pool to do priority based deployments of workloads,
+
+NOTE Confidence: 0.8238157629966736
+
+00:19:16.689 --> 00:19:21.087
+to understand the topologies of AI based inference and training
+
+NOTE Confidence: 0.8238157629966736
+
+00:19:21.157 --> 00:19:25.346
+workloads to most efficiently use that GPU capacity and also
+
+NOTE Confidence: 0.8238157629966736
+
+00:19:25.416 --> 00:19:27.720
+abstract the underlying hardware.
+
+NOTE Confidence: 0.7393317818641663
+
+00:19:27.720 --> 00:19:31.309
+You can see that it supports ASICS, it supports GPUs,
+
+NOTE Confidence: 0.7393317818641663
+
+00:19:31.377 --> 00:19:32.799
+Fpgas, and even CPUs.
+
+NOTE Confidence: 0.9206023216247559
+
+00:19:33.119 --> 00:19:36.505
+And more and more we have models that consist of
+
+NOTE Confidence: 0.9206023216247559
+
+00:19:36.576 --> 00:19:40.032
+CPU portions of the model and GPU portions of the
+
+NOTE Confidence: 0.9206023216247559
+
+00:19:40.102 --> 00:19:44.616
+model, including models that actually have mini models inside of
+
+NOTE Confidence: 0.9206023216247559
+
+00:19:44.687 --> 00:19:45.039
+them.
+
+NOTE Confidence: 0.7777119874954224
+
+00:19:45.240 --> 00:19:48.406
+Like they might have an embedding model embedded in them,
+
+NOTE Confidence: 0.7777119874954224
+
+00:19:48.462 --> 00:19:51.962
+they might have a virtual large language, visual large language
+
+NOTE Confidence: 0.7777119874954224
+
+00:19:52.017 --> 00:19:55.240
+model embedded within them if they're a multi modal model.
+
+NOTE Confidence: 0.9119386672973633
+
+00:19:55.840 --> 00:19:58.000
+And so these topologies are getting more complicated.
+
+NOTE Confidence: 0.8997321128845215
+
+00:19:59.040 --> 00:20:02.137
+Now what we want to do is bring this power
+
+NOTE Confidence: 0.8997321128845215
+
+00:20:02.211 --> 00:20:06.930
+of Azure container instances in this isolation to workloads like
+
+NOTE Confidence: 0.8997321128845215
+
+00:20:07.004 --> 00:20:10.913
+this on top of direct virtualization where we can put
+
+NOTE Confidence: 0.8997321128845215
+
+00:20:10.986 --> 00:20:15.337
+CPU containers inside of its own Hyper V isolated container
+
+NOTE Confidence: 0.8997321128845215
+
+00:20:15.411 --> 00:20:19.615
+and the AI model components those containers in their own
+
+NOTE Confidence: 0.8997321128845215
+
+00:20:19.688 --> 00:20:24.039
+separate ones too, so they don't interfere with each other.
+
+NOTE Confidence: 0.941515326499939
+
+00:20:24.720 --> 00:20:27.291
+And they get direct access to hardware at the same
+
+NOTE Confidence: 0.941515326499939
+
+00:20:27.342 --> 00:20:27.599
+time.
+
+NOTE Confidence: 0.8384499549865723
+
+00:20:27.720 --> 00:20:31.438
+And this is a benefit of direct L1 direct virtualization
+
+NOTE Confidence: 0.8384499549865723
+
+00:20:31.505 --> 00:20:34.560
+is we can assign the GPU to a virtual machine.
+
+NOTE Confidence: 0.8998978734016418
+
+00:20:34.680 --> 00:20:38.471
+That virtual machine can then create a sub virtual machine,
+
+NOTE Confidence: 0.8998978734016418
+
+00:20:38.535 --> 00:20:41.298
+one of these L twos and then give the GPU's
+
+NOTE Confidence: 0.8998978734016418
+
+00:20:41.362 --> 00:20:44.446
+that it's got over to that container and then it
+
+NOTE Confidence: 0.8998978734016418
+
+00:20:44.511 --> 00:20:46.760
+has direct access to that hardware.
+
+NOTE Confidence: 0.7907842397689819
+
+00:20:47.120 --> 00:20:51.480
+So let me show you this demo of Manifold.
+
+NOTE Confidence: 0.9393340349197388
+
+00:20:55.680 --> 00:20:57.949
+And what we're going to see here is if I
+
+NOTE Confidence: 0.9393340349197388
+
+00:20:58.006 --> 00:21:00.729
+get the nodes in this cluster, we're going to go
+
+NOTE Confidence: 0.9393340349197388
+
+00:21:00.785 --> 00:21:03.111
+take a look at one of those nodes and get
+
+NOTE Confidence: 0.9393340349197388
+
+00:21:03.168 --> 00:21:04.360
+the pods in the node.
+
+NOTE Confidence: 0.7697556018829346
+
+00:21:05.440 --> 00:21:11.232
+And there's one pod in there which is a Llama
+
+NOTE Confidence: 0.7697556018829346
+
+00:21:11.361 --> 00:21:12.519
+4 server.
+
+NOTE Confidence: 0.9047204852104187
+
+00:21:12.520 --> 00:21:14.480
+And there's another one which is a metrics server.
+
+NOTE Confidence: 0.6862226724624634
+
+00:21:14.480 --> 00:21:16.428
+One of them is a GPU based 11 is the
+
+NOTE Confidence: 0.6862226724624634
+
+00:21:16.482 --> 00:21:17.239
+CPU based one.
+
+NOTE Confidence: 0.8833004236221313
+
+00:21:17.800 --> 00:21:20.128
+When we go take a look inside the pod that's
+
+NOTE Confidence: 0.8833004236221313
+
+00:21:20.181 --> 00:21:22.456
+got the GPU, the llama model in it, you can
+
+NOTE Confidence: 0.8833004236221313
+
+00:21:22.509 --> 00:21:24.519
+see it's got the GPU is visible to it.
+
+NOTE Confidence: 0.8848458528518677
+
+00:21:25.000 --> 00:21:27.514
+It's got a whole bunch of RAM visible to it
+
+NOTE Confidence: 0.8848458528518677
+
+00:21:27.572 --> 00:21:30.613
+and it's got a whole bunch of processors assigned to
+
+NOTE Confidence: 0.8848458528518677
+
+00:21:30.672 --> 00:21:33.420
+it and you can see the NVIDIA SMI command shows
+
+NOTE Confidence: 0.8848458528518677
+
+00:21:33.479 --> 00:21:36.519
+us that it actually has those GPU's available to it.
+
+NOTE Confidence: 0.9370718598365784
+
+00:21:36.960 --> 00:21:39.015
+When we go take a look at the CPU pod
+
+NOTE Confidence: 0.9370718598365784
+
+00:21:39.071 --> 00:21:41.737
+sitting right next to it on the same server, you
+
+NOTE Confidence: 0.9370718598365784
+
+00:21:41.793 --> 00:21:43.960
+can see that it's got almost no memory.
+
+NOTE Confidence: 0.8512080311775208
+
+00:21:44.000 --> 00:21:47.149
+It's only got 2 processors and it's got no GPU's
+
+NOTE Confidence: 0.8512080311775208
+
+00:21:47.215 --> 00:21:48.199
+attached to it.
+
+NOTE Confidence: 0.8193261623382568
+
+00:21:49.200 --> 00:21:52.045
+And just to prove to you it works, we're going
+
+NOTE Confidence: 0.8193261623382568
+
+00:21:52.107 --> 00:21:54.520
+to go take a look at this cat video and
+
+NOTE Confidence: 0.8193261623382568
+
+00:21:54.582 --> 00:21:57.860
+send this for inference to that GPU pod sitting there
+
+NOTE Confidence: 0.8193261623382568
+
+00:21:57.922 --> 00:22:01.325
+with direct access to GPU's, the Llama 4 Maverick model
+
+NOTE Confidence: 0.8193261623382568
+
+00:22:01.386 --> 00:22:04.480
+there and then successfully do an inference there.
+
+NOTE Confidence: 0.8770954012870789
+
+00:22:06.160 --> 00:22:09.477
+The the point being proven here that we've got CPU
+
+NOTE Confidence: 0.8770954012870789
+
+00:22:09.544 --> 00:22:13.724
+pods completely isolated from GPU pods directly attached to the
+
+NOTE Confidence: 0.8770954012870789
+
+00:22:13.791 --> 00:22:17.639
+physical server hardware because of direct virtualization.
+
+NOTE Confidence: 0.8365129232406616
+
+00:22:25.070 --> 00:22:28.936
+Now we're also not just optimizing the compute, we're also
+
+NOTE Confidence: 0.8365129232406616
+
+00:22:29.003 --> 00:22:32.603
+optimizing the way that inference works in terms of KV
+
+NOTE Confidence: 0.8365129232406616
+
+00:22:32.669 --> 00:22:36.269
+caches, which is the KV cache is effectively the state
+
+NOTE Confidence: 0.8365129232406616
+
+00:22:36.336 --> 00:22:37.069
+of the LLM.
+
+NOTE Confidence: 0.846448540687561
+
+00:22:37.910 --> 00:22:41.463
+And you can't do decoding without efficiently without having a
+
+NOTE Confidence: 0.846448540687561
+
+00:22:41.520 --> 00:22:44.902
+KV cache of the process, which it represents the processing
+
+NOTE Confidence: 0.846448540687561
+
+00:22:44.959 --> 00:22:47.309
+of all the previous tokens in the prompt.
+
+NOTE Confidence: 0.9064037799835205
+
+00:22:48.040 --> 00:22:50.833
+When you interact with an LLM, you do so typically
+
+NOTE Confidence: 0.9064037799835205
+
+00:22:50.889 --> 00:22:51.559
+using turns.
+
+NOTE Confidence: 0.9095445275306702
+
+00:22:51.960 --> 00:22:53.547
+And so you might have turn 1 where you just
+
+NOTE Confidence: 0.9095445275306702
+
+00:22:53.584 --> 00:22:54.360
+have a system prompt.
+
+NOTE Confidence: 0.7011023759841919
+
+00:22:54.760 --> 00:22:58.104
+Let's say you're doing a PR diff because you're doing
+
+NOTE Confidence: 0.7011023759841919
+
+00:22:58.167 --> 00:23:02.142
+development and you interrupt and engage in an interaction with
+
+NOTE Confidence: 0.7011023759841919
+
+00:23:02.205 --> 00:23:03.720
+copilot on that PR diff.
+
+NOTE Confidence: 0.8733398914337158
+
+00:23:04.359 --> 00:23:08.216
+And what that means is that you're extending the prompt
+
+NOTE Confidence: 0.8733398914337158
+
+00:23:08.286 --> 00:23:10.600
+effectively your specific prompt.
+
+NOTE Confidence: 0.821527898311615
+
+00:23:11.320 --> 00:23:13.204
+In an ideal case, you don't just want to cash
+
+NOTE Confidence: 0.821527898311615
+
+00:23:13.246 --> 00:23:13.999
+the system prompt.
+
+NOTE Confidence: 0.8475834727287292
+
+00:23:14.000 --> 00:23:16.211
+And this is what a lot of AI frameworks let
+
+NOTE Confidence: 0.8475834727287292
+
+00:23:16.262 --> 00:23:18.371
+you do is they say, hey, cash this for me
+
+NOTE Confidence: 0.8475834727287292
+
+00:23:18.422 --> 00:23:20.531
+and then I'm not going to have to pay the
+
+NOTE Confidence: 0.8475834727287292
+
+00:23:20.582 --> 00:23:22.999
+cost for decoding this again or pre filling it.
+
+NOTE Confidence: 0.882718563079834
+
+00:23:23.800 --> 00:23:26.202
+But what you really want is the whole thing to
+
+NOTE Confidence: 0.882718563079834
+
+00:23:26.254 --> 00:23:29.179
+be cashed so that if your workload moves, your inference
+
+NOTE Confidence: 0.882718563079834
+
+00:23:29.231 --> 00:23:31.947
+moves from one GP to another, one server to another,
+
+NOTE Confidence: 0.882718563079834
+
+00:23:31.999 --> 00:23:33.880
+that you're not repaying this price.
+
+NOTE Confidence: 0.892982006072998
+
+00:23:35.119 --> 00:23:38.077
+And we can only do this if we've got a
+
+NOTE Confidence: 0.892982006072998
+
+00:23:38.155 --> 00:23:41.579
+cash that sits all the way behind all of the
+
+NOTE Confidence: 0.892982006072998
+
+00:23:41.657 --> 00:23:42.279
+servers.
+
+NOTE Confidence: 0.8548730611801147
+
+00:23:42.800 --> 00:23:44.958
+So this is something that we've got coming out in
+
+NOTE Confidence: 0.8548730611801147
+
+00:23:45.002 --> 00:23:46.719
+preview now called Azure Context Cache.
+
+NOTE Confidence: 0.8559263348579407
+
+00:23:46.720 --> 00:23:50.344
+The idea here is that Azure Context Cache behind it
+
+NOTE Confidence: 0.8559263348579407
+
+00:23:50.415 --> 00:23:54.394
+has a storage account, and that storage account is where
+
+NOTE Confidence: 0.8559263348579407
+
+00:23:54.465 --> 00:23:58.089
+we're caching the KV state for all of the inference
+
+NOTE Confidence: 0.8559263348579407
+
+00:23:58.160 --> 00:23:58.800
+requests.
+
+NOTE Confidence: 0.8144544959068298
+
+00:23:58.840 --> 00:24:02.317
+So regardless of what server they go to, if they're
+
+NOTE Confidence: 0.8144544959068298
+
+00:24:02.385 --> 00:24:05.999
+the cache, the prompts not there, the KV isn't there.
+
+NOTE Confidence: 0.898335874080658
+
+00:24:06.119 --> 00:24:08.335
+We can look it up in the cache and fetch
+
+NOTE Confidence: 0.898335874080658
+
+00:24:08.390 --> 00:24:10.993
+it in and not have to decode that again, saving
+
+NOTE Confidence: 0.898335874080658
+
+00:24:11.049 --> 00:24:11.879
+time and money.
+
+NOTE Confidence: 0.7290029525756836
+
+00:24:13.359 --> 00:24:15.041
+So let's go take a look at that as your
+
+NOTE Confidence: 0.7290029525756836
+
+00:24:15.084 --> 00:24:16.119
+context cache in action.
+
+NOTE Confidence: 0.8608217239379883
+
+00:24:19.560 --> 00:24:24.360
+So here we're sending concurrency level 1.
+
+NOTE Confidence: 0.936299741268158
+
+00:24:24.359 --> 00:24:27.126
+We're sending a bunch of queries into the system, all
+
+NOTE Confidence: 0.936299741268158
+
+00:24:27.178 --> 00:24:28.639
+with the same system prompt.
+
+NOTE Confidence: 0.9125401377677917
+
+00:24:28.640 --> 00:24:30.506
+And you can see that we had all of those
+
+NOTE Confidence: 0.9125401377677917
+
+00:24:30.553 --> 00:24:30.880
+cached.
+
+NOTE Confidence: 0.8331968784332275
+
+00:24:31.119 --> 00:24:33.778
+The cache hit rate was 81% because after the first
+
+NOTE Confidence: 0.8331968784332275
+
+00:24:33.831 --> 00:24:36.755
+request goes to the server, the next one's likely going
+
+NOTE Confidence: 0.8331968784332275
+
+00:24:36.808 --> 00:24:39.359
+to have that system prompt already cached in it.
+
+NOTE Confidence: 0.8604642748832703
+
+00:24:40.080 --> 00:24:42.151
+But when we do a concurrency level of 10, they're
+
+NOTE Confidence: 0.8604642748832703
+
+00:24:42.193 --> 00:24:44.434
+going to get sprayed across servers and our cache hit
+
+NOTE Confidence: 0.8604642748832703
+
+00:24:44.476 --> 00:24:47.013
+rate actually goes down because now sometimes the request is
+
+NOTE Confidence: 0.8604642748832703
+
+00:24:47.055 --> 00:24:48.999
+landing on a server without the system prompt.
+
+NOTE Confidence: 0.8678934574127197
+
+00:24:50.080 --> 00:24:52.445
+So a lot of systems have you set this cache
+
+NOTE Confidence: 0.8678934574127197
+
+00:24:52.500 --> 00:24:54.920
+key unique to try to pin a conversation on a
+
+NOTE Confidence: 0.8678934574127197
+
+00:24:54.975 --> 00:24:56.680
+particular server, an endpoint.
+
+NOTE Confidence: 0.8973795175552368
+
+00:24:57.720 --> 00:25:01.155
+The kit rate actually drops there because every conversation gets
+
+NOTE Confidence: 0.8973795175552368
+
+00:25:01.207 --> 00:25:04.695
+mapped to a different server intentionally where the system prompt
+
+NOTE Confidence: 0.8973795175552368
+
+00:25:04.748 --> 00:25:06.439
+might not have already shown up.
+
+NOTE Confidence: 0.7964522838592529
+
+00:25:06.440 --> 00:25:09.120
+So the first hit there is always the first query.
+
+NOTE Confidence: 0.7780076861381531
+
+00:25:09.120 --> 00:25:10.120
+There is always going to be a miss.
+
+NOTE Confidence: 0.7855679392814636
+
+00:25:11.000 --> 00:25:15.133
+But when we set the set the prompt cache, you
+
+NOTE Confidence: 0.7855679392814636
+
+00:25:15.225 --> 00:25:19.450
+can see that the prompt cache rate hit rate is
+
+NOTE Confidence: 0.7855679392814636
+
+00:25:19.542 --> 00:25:20.919
+going to go up.
+
+NOTE Confidence: 0.9204495549201965
+
+00:25:21.000 --> 00:25:21.280
+Where?
+
+NOTE Confidence: 0.730988621711731
+
+00:25:21.360 --> 00:25:22.440
+Where did the demo go here?
+
+NOTE Confidence: 0.8655778169631958
+
+00:25:23.360 --> 00:25:25.840
+Went up to 96% with the remote cache here.
+
+NOTE Confidence: 0.923125147819519
+
+00:25:26.280 --> 00:25:28.280
+96.2% is the hit rate here.
+
+NOTE Confidence: 0.8548919558525085
+
+00:25:28.720 --> 00:25:32.664
+And that's because no matter what server the query lands
+
+NOTE Confidence: 0.8548919558525085
+
+00:25:32.734 --> 00:25:35.903
+on the prompt is the KV cache for that prompt
+
+NOTE Confidence: 0.8548919558525085
+
+00:25:35.974 --> 00:25:39.213
+is going to be fetched from remote cache if it
+
+NOTE Confidence: 0.8548919558525085
+
+00:25:39.284 --> 00:25:40.200
+wasn't there.
+
+NOTE Confidence: 0.8364375829696655
+
+00:25:40.720 --> 00:25:44.310
+So transparently behind the scenes, this prompt cache using Azure
+
+NOTE Confidence: 0.8364375829696655
+
+00:25:44.365 --> 00:25:47.016
+storage to go and spread out the KV cache across
+
+NOTE Confidence: 0.8364375829696655
+
+00:25:47.071 --> 00:25:50.441
+the servers, effectively making the servers have a pool cache
+
+NOTE Confidence: 0.8364375829696655
+
+00:25:50.496 --> 00:25:53.865
+rather than individual server based caches, which is going to
+
+NOTE Confidence: 0.8364375829696655
+
+00:25:53.920 --> 00:25:56.627
+improve hit rate, which is going to save money so
+
+NOTE Confidence: 0.8364375829696655
+
+00:25:56.682 --> 00:25:59.333
+you're not having to pay for the the the prefill
+
+NOTE Confidence: 0.8364375829696655
+
+00:25:59.388 --> 00:26:02.040
+on the system caches every time you have a mess.
+
+NOTE Confidence: 0.8437848091125488
+
+00:26:03.800 --> 00:26:06.728
+All right, so let's take a look at the next
+
+NOTE Confidence: 0.8437848091125488
+
+00:26:06.796 --> 00:26:10.133
+cool innovation with and I've got a, it's like an
+
+NOTE Confidence: 0.8437848091125488
+
+00:26:10.201 --> 00:26:13.334
+ACI theme talk because this is one of the cool
+
+NOTE Confidence: 0.8437848091125488
+
+00:26:13.402 --> 00:26:14.560
+things about ACI.
+
+NOTE Confidence: 0.9433144330978394
+
+00:26:15.200 --> 00:26:18.713
+When you talk about containers, you're talking about layers and
+
+NOTE Confidence: 0.9433144330978394
+
+00:26:18.769 --> 00:26:19.160
+images.
+
+NOTE Confidence: 0.9262741804122925
+
+00:26:19.760 --> 00:26:22.605
+When you talk about virtual machines, you're talking about full
+
+NOTE Confidence: 0.9262741804122925
+
+00:26:22.650 --> 00:26:23.959
+blown virtual machine images.
+
+NOTE Confidence: 0.898294985294342
+
+00:26:24.760 --> 00:26:28.564
+Now when you talk about container sandboxes, you're typically talking
+
+NOTE Confidence: 0.898294985294342
+
+00:26:28.619 --> 00:26:31.597
+about something that is very bespoke, kind of a custom
+
+NOTE Confidence: 0.898294985294342
+
+00:26:31.652 --> 00:26:34.574
+image and it's very small and lightweight and this is
+
+NOTE Confidence: 0.898294985294342
+
+00:26:34.630 --> 00:26:36.559
+what you want to be extremely fast.
+
+NOTE Confidence: 0.8764521479606628
+
+00:26:37.160 --> 00:26:39.396
+Now one of the ways to get a fast startup
+
+NOTE Confidence: 0.8764521479606628
+
+00:26:39.450 --> 00:26:42.287
+for a container image, which you want with these for
+
+NOTE Confidence: 0.8764521479606628
+
+00:26:42.341 --> 00:26:44.741
+these agents to be able to say, I'm going to
+
+NOTE Confidence: 0.8764521479606628
+
+00:26:44.796 --> 00:26:46.759
+go write a Python script and run it.
+
+NOTE Confidence: 0.854232668876648
+
+00:26:46.760 --> 00:26:49.688
+I'm going to go create a little HTML site and
+
+NOTE Confidence: 0.854232668876648
+
+00:26:49.753 --> 00:26:52.746
+and integrate on it is you want the startup to
+
+NOTE Confidence: 0.854232668876648
+
+00:26:52.811 --> 00:26:56.520
+be in close to instantaneous when it comes to containers.
+
+NOTE Confidence: 0.8965287208557129
+
+00:26:56.520 --> 00:27:00.294
+You can get startup times in the 522nd range depending
+
+NOTE Confidence: 0.8965287208557129
+
+00:27:00.364 --> 00:27:03.860
+on what the OS is, but we want literally thousands
+
+NOTE Confidence: 0.8965287208557129
+
+00:27:03.929 --> 00:27:07.704
+of these things to be able to start simultaneously and
+
+NOTE Confidence: 0.8965287208557129
+
+00:27:07.774 --> 00:27:11.200
+to start very quickly off of the same base image.
+
+NOTE Confidence: 0.9435828924179077
+
+00:27:11.520 --> 00:27:13.520
+The way we do that is with memory snapshotting.
+
+NOTE Confidence: 0.8766039609909058
+
+00:27:14.000 --> 00:27:17.340
+So we actually start the container, snapshot its memory, and
+
+NOTE Confidence: 0.8766039609909058
+
+00:27:17.395 --> 00:27:20.123
+then if you get a request for the same container,
+
+NOTE Confidence: 0.8766039609909058
+
+00:27:20.179 --> 00:27:22.628
+we simply map the memory and we skip all the
+
+NOTE Confidence: 0.8766039609909058
+
+00:27:22.684 --> 00:27:26.080
+initialization and map it right into a running container box.
+
+NOTE Confidence: 0.8983004093170166
+
+00:27:26.920 --> 00:27:29.846
+So let me show you one of the, I think
+
+NOTE Confidence: 0.8983004093170166
+
+00:27:29.923 --> 00:27:33.620
+my favorite demo of this, which is how would you
+
+NOTE Confidence: 0.8983004093170166
+
+00:27:33.697 --> 00:27:37.239
+like to see 10,000 container sandboxes launch?
+
+NOTE Confidence: 0.8290611505508423
+
+00:27:39.560 --> 00:27:42.625
+OK, because, because if the answer is yes, that's the
+
+NOTE Confidence: 0.8290611505508423
+
+00:27:42.683 --> 00:27:43.840
+rest of the session.
+
+NOTE Confidence: 0.7390670776367188
+
+00:27:44.600 --> 00:27:45.080
+I'm just kidding.
+
+NOTE Confidence: 0.8609256148338318
+
+00:27:45.640 --> 00:27:46.320
+No, I'm just kidding.
+
+NOTE Confidence: 0.859390377998352
+
+00:27:47.280 --> 00:27:49.709
+What I'm going to show you is that that we
+
+NOTE Confidence: 0.859390377998352
+
+00:27:49.767 --> 00:27:51.560
+can do this incredibly quickly.
+
+NOTE Confidence: 0.9123907089233398
+
+00:27:51.600 --> 00:27:55.570
+So I've got 10 workers launching 1000 of these container
+
+NOTE Confidence: 0.9123907089233398
+
+00:27:55.641 --> 00:27:59.612
+sandboxes each, and we've got a little animation to show
+
+NOTE Confidence: 0.9123907089233398
+
+00:27:59.683 --> 00:28:02.519
+you the progress of those launches here.
+
+NOTE Confidence: 0.8088758587837219
+
+00:28:02.680 --> 00:28:05.240
+So here we go, create 10 worker pods.
+
+NOTE Confidence: 0.9756157994270325
+
+00:28:10.630 --> 00:28:11.310
+Here we go.
+
+NOTE Confidence: 0.7579914927482605
+
+00:28:12.910 --> 00:28:14.710
+So each one is going to add 1000.
+
+NOTE Confidence: 0.9568720459938049
+
+00:28:15.230 --> 00:28:16.510
+This represents 1000.
+
+NOTE Confidence: 0.8747385740280151
+
+00:28:17.470 --> 00:28:21.430
+You can see them launching few down here.
+
+NOTE Confidence: 0.7221106290817261
+
+00:28:21.430 --> 00:28:21.790
+Left.
+
+NOTE Confidence: 0.8332324028015137
+
+00:28:23.350 --> 00:28:24.870
+Boom, done.
+
+NOTE Confidence: 0.8010201454162598
+
+00:28:25.150 --> 00:28:34.712
+10,000 container sandboxes, 2 average container sandbox launch time 2
+
+NOTE Confidence: 0.8010201454162598
+
+00:28:34.851 --> 00:28:35.960
+seconds.
+
+NOTE Confidence: 0.9585391879081726
+
+00:28:37.120 --> 00:28:40.360
+So not just speed but scale at the same time.
+
+NOTE Confidence: 0.9465035796165466
+
+00:28:40.360 --> 00:28:42.693
+So this is, like I said, one of the really
+
+NOTE Confidence: 0.9465035796165466
+
+00:28:42.748 --> 00:28:43.360
+cool demos.
+
+NOTE Confidence: 0.8361651301383972
+
+00:28:43.360 --> 00:28:47.148
+And so you're going to see the agent agent sandboxing
+
+NOTE Confidence: 0.8361651301383972
+
+00:28:47.220 --> 00:28:50.079
+land on top of Azure container instance.
+
+NOTE Confidence: 0.8321313261985779
+
+00:28:51.800 --> 00:28:54.060
+All right, let's go into our last section now and
+
+NOTE Confidence: 0.8321313261985779
+
+00:28:54.106 --> 00:28:56.274
+talk about or second to last section and talk a
+
+NOTE Confidence: 0.8321313261985779
+
+00:28:56.320 --> 00:28:57.519
+little bit about security.
+
+NOTE Confidence: 0.9585346579551697
+
+00:28:58.400 --> 00:29:01.970
+And one of the exciting things for me about security
+
+NOTE Confidence: 0.9585346579551697
+
+00:29:02.039 --> 00:29:06.160
+is the evolution of something called confidential computing.
+
+NOTE Confidence: 0.9052695631980896
+
+00:29:07.120 --> 00:29:08.840
+How many people have heard of confidential computing?
+
+NOTE Confidence: 0.889847457408905
+
+00:29:08.840 --> 00:29:10.822
+Just so quite a few of you, For those of
+
+NOTE Confidence: 0.889847457408905
+
+00:29:10.871 --> 00:29:14.142
+you that haven't heard of confidential computing, it's the easiest
+
+NOTE Confidence: 0.889847457408905
+
+00:29:14.192 --> 00:29:16.273
+way to think about it is in the context of
+
+NOTE Confidence: 0.889847457408905
+
+00:29:16.322 --> 00:29:17.760
+how your data gets protected.
+
+NOTE Confidence: 0.9486638903617859
+
+00:29:18.560 --> 00:29:23.845
+And for a long time now, everybody encrypts their network
+
+NOTE Confidence: 0.9486638903617859
+
+00:29:23.938 --> 00:29:24.679
+traffic.
+
+NOTE Confidence: 0.8947260975837708
+
+00:29:26.200 --> 00:29:28.399
+Over the last 20 years or so, it went from
+
+NOTE Confidence: 0.8947260975837708
+
+00:29:28.451 --> 00:29:31.069
+every, you know, every now and then you'd run into
+
+NOTE Confidence: 0.8947260975837708
+
+00:29:31.122 --> 00:29:31.960
+a site with SSL.
+
+NOTE Confidence: 0.9367990493774414
+
+00:29:32.040 --> 00:29:35.285
+And now every single site, every single network connection has
+
+NOTE Confidence: 0.9367990493774414
+
+00:29:35.337 --> 00:29:36.280
+to have TLS on it.
+
+NOTE Confidence: 0.8369033932685852
+
+00:29:37.800 --> 00:29:41.193
+Then the other part of protecting is while it's at
+
+NOTE Confidence: 0.8369033932685852
+
+00:29:41.261 --> 00:29:44.519
+rest, and this is where it's stored on, on disk.
+
+NOTE Confidence: 0.9056591391563416
+
+00:29:44.560 --> 00:29:46.040
+You want to have that encrypted too.
+
+NOTE Confidence: 0.8335227370262146
+
+00:29:46.040 --> 00:29:49.501
+So if the storage it's accessed outside of the protection
+
+NOTE Confidence: 0.8335227370262146
+
+00:29:49.561 --> 00:29:52.719
+of the logical protections of the workload on top of
+
+NOTE Confidence: 0.8335227370262146
+
+00:29:52.779 --> 00:29:54.479
+it that the data is useless.
+
+NOTE Confidence: 0.86128169298172
+
+00:29:55.200 --> 00:29:57.340
+And we not only have now in cloud, we didn't,
+
+NOTE Confidence: 0.86128169298172
+
+00:29:57.388 --> 00:29:59.862
+we started with node data encryption at rest and now
+
+NOTE Confidence: 0.86128169298172
+
+00:29:59.909 --> 00:30:01.479
+we've got server side encryption.
+
+NOTE Confidence: 0.7691616415977478
+
+00:30:01.480 --> 00:30:03.355
+We also have customer manage key where you can bring
+
+NOTE Confidence: 0.7691616415977478
+
+00:30:03.391 --> 00:30:05.555
+your own encryption and have double layer encryption of data
+
+NOTE Confidence: 0.7691616415977478
+
+00:30:05.591 --> 00:30:05.879
+at rest.
+
+NOTE Confidence: 0.8708282113075256
+
+00:30:05.880 --> 00:30:09.488
+But what's been missing largely is protecting the data while
+
+NOTE Confidence: 0.8708282113075256
+
+00:30:09.548 --> 00:30:12.736
+it's in use, because when that data gets decrypted on
+
+NOTE Confidence: 0.8708282113075256
+
+00:30:12.796 --> 00:30:15.683
+the server or pulled off the disk in clear text,
+
+NOTE Confidence: 0.8708282113075256
+
+00:30:15.744 --> 00:30:18.871
+it's sitting in there on the server, maybe inside of
+
+NOTE Confidence: 0.8708282113075256
+
+00:30:18.931 --> 00:30:22.240
+a virtual machine, but still in the server environment.
+
+NOTE Confidence: 0.9053850769996643
+
+00:30:22.840 --> 00:30:26.577
+And what can access that data includes everything from the
+
+NOTE Confidence: 0.9053850769996643
+
+00:30:26.641 --> 00:30:29.862
+hypervisor to the admins to the host software to a
+
+NOTE Confidence: 0.9053850769996643
+
+00:30:29.927 --> 00:30:33.600
+malicious hacker that might penetrate the infrastructure.
+
+NOTE Confidence: 0.9759321212768555
+
+00:30:34.160 --> 00:30:35.600
+All of those can get access.
+
+NOTE Confidence: 0.887429416179657
+
+00:30:36.040 --> 00:30:38.991
+And even in your own applications, you want to keep
+
+NOTE Confidence: 0.887429416179657
+
+00:30:39.049 --> 00:30:42.116
+maybe your own operators away from that data and only
+
+NOTE Confidence: 0.887429416179657
+
+00:30:42.174 --> 00:30:45.068
+have the compute that needs to have access to that
+
+NOTE Confidence: 0.887429416179657
+
+00:30:45.125 --> 00:30:46.920
+data, have access to that data.
+
+NOTE Confidence: 0.9403473734855652
+
+00:30:48.000 --> 00:30:49.280
+That is confidential computing.
+
+NOTE Confidence: 0.9008976817131042
+
+00:30:49.360 --> 00:30:53.028
+Now one aspect of confidential computing that is not just
+
+NOTE Confidence: 0.9008976817131042
+
+00:30:53.092 --> 00:30:56.503
+this protection of of that data in a hardware enclave
+
+NOTE Confidence: 0.9008976817131042
+
+00:30:56.567 --> 00:30:59.656
+where none of those things can get inside of it,
+
+NOTE Confidence: 0.9008976817131042
+
+00:30:59.721 --> 00:31:03.260
+is that the hardware also can measure what's inside the
+
+NOTE Confidence: 0.9008976817131042
+
+00:31:03.325 --> 00:31:03.839
+enclave.
+
+NOTE Confidence: 0.8434653878211975
+
+00:31:04.360 --> 00:31:06.240
+And that measurement is called an attestation.
+
+NOTE Confidence: 0.8491978645324707
+
+00:31:06.680 --> 00:31:09.633
+And some a code inside that enclave can get asked
+
+NOTE Confidence: 0.8491978645324707
+
+00:31:09.693 --> 00:31:11.200
+the hardware for a quote.
+
+NOTE Confidence: 0.8851061463356018
+
+00:31:11.360 --> 00:31:15.266
+What is the attestation presented to A relying party, which
+
+NOTE Confidence: 0.8851061463356018
+
+00:31:15.332 --> 00:31:18.973
+is typically a key management service that has a policy
+
+NOTE Confidence: 0.8851061463356018
+
+00:31:19.039 --> 00:31:21.886
+on it that says only release this key to an
+
+NOTE Confidence: 0.8851061463356018
+
+00:31:21.953 --> 00:31:26.057
+enclave of this hardware type with the security version number
+
+NOTE Confidence: 0.8851061463356018
+
+00:31:26.124 --> 00:31:28.639
+on it with this configuration of code.
+
+NOTE Confidence: 0.8306193351745605
+
+00:31:29.280 --> 00:31:32.088
+And at that point the key gets released, it's encrypted
+
+NOTE Confidence: 0.8306193351745605
+
+00:31:32.139 --> 00:31:34.897
+to the enclave, the coding the enclave, the coding the
+
+NOTE Confidence: 0.8306193351745605
+
+00:31:34.948 --> 00:31:37.705
+enclave decrypts the key and then can start to process
+
+NOTE Confidence: 0.8306193351745605
+
+00:31:37.756 --> 00:31:38.879
+the data in the clear.
+
+NOTE Confidence: 0.930324375629425
+
+00:31:39.640 --> 00:31:42.948
+And everybody knows that it's being protected with that hardware
+
+NOTE Confidence: 0.930324375629425
+
+00:31:43.000 --> 00:31:45.119
+isolation that is confidential computing.
+
+NOTE Confidence: 0.8728687763214111
+
+00:31:45.640 --> 00:31:50.308
+We've been working on enabling confidential computing in Azure for
+
+NOTE Confidence: 0.8728687763214111
+
+00:31:50.379 --> 00:31:54.128
+over a decade, starting with Intel SGX servers in the
+
+NOTE Confidence: 0.8728687763214111
+
+00:31:54.199 --> 00:31:57.877
+in the data center and now virtual machines from AMD
+
+NOTE Confidence: 0.8728687763214111
+
+00:31:57.948 --> 00:32:00.000
+and Intel in the data center.
+
+NOTE Confidence: 0.8480598330497742
+
+00:32:00.600 --> 00:32:03.317
+And our portfolio is the largest of any hyper scaler
+
+NOTE Confidence: 0.8480598330497742
+
+00:32:03.369 --> 00:32:07.654
+when it comes to confidential computing services, confidential computing container
+
+NOTE Confidence: 0.8480598330497742
+
+00:32:07.706 --> 00:32:10.842
+offerings like confidential containers on ACI as well as the
+
+NOTE Confidence: 0.8480598330497742
+
+00:32:10.894 --> 00:32:12.880
+hardware infrastructure underneath it.
+
+NOTE Confidence: 0.9061086177825928
+
+00:32:14.920 --> 00:32:17.842
+Now one of the, and I talked before about live
+
+NOTE Confidence: 0.9061086177825928
+
+00:32:17.905 --> 00:32:21.463
+migration and live migration is one of those things that
+
+NOTE Confidence: 0.9061086177825928
+
+00:32:21.527 --> 00:32:24.894
+allows us to run the fleet efficiently because we can
+
+NOTE Confidence: 0.9061086177825928
+
+00:32:24.957 --> 00:32:27.879
+move workloads around to reduce fragmentation.
+
+NOTE Confidence: 0.8837371468544006
+
+00:32:28.520 --> 00:32:31.395
+We can also make customer workloads more reliable because we
+
+NOTE Confidence: 0.8837371468544006
+
+00:32:31.443 --> 00:32:33.408
+can move them if we see a server is going
+
+NOTE Confidence: 0.8837371468544006
+
+00:32:33.456 --> 00:32:33.840
+to fail.
+
+NOTE Confidence: 0.8551930785179138
+
+00:32:34.160 --> 00:32:36.535
+We can also move them around if we need to
+
+NOTE Confidence: 0.8551930785179138
+
+00:32:36.592 --> 00:32:39.364
+service a host in an impactful way and that means
+
+NOTE Confidence: 0.8551930785179138
+
+00:32:39.420 --> 00:32:42.532
+that the customer's workload is not as impacted by that
+
+NOTE Confidence: 0.8551930785179138
+
+00:32:42.588 --> 00:32:43.720
+servicing operation.
+
+NOTE Confidence: 0.8685234785079956
+
+00:32:44.640 --> 00:32:47.963
+It is a fundamental requirement of a hyper scale cloud
+
+NOTE Confidence: 0.8685234785079956
+
+00:32:48.024 --> 00:32:51.532
+to have live migration and this is unfortunately been one
+
+NOTE Confidence: 0.8685234785079956
+
+00:32:51.593 --> 00:32:55.470
+of the missing gaps in confidential computing offerings is lack
+
+NOTE Confidence: 0.8685234785079956
+
+00:32:55.532 --> 00:32:56.640
+of live migration.
+
+NOTE Confidence: 0.9429174661636353
+
+00:32:57.360 --> 00:33:01.957
+So we've been working deeply with Intel on confidential live
+
+NOTE Confidence: 0.9429174661636353
+
+00:33:02.033 --> 00:33:02.799
+migration.
+
+NOTE Confidence: 0.8681896924972534
+
+00:33:03.880 --> 00:33:07.303
+And the way that works is you have a confidential
+
+NOTE Confidence: 0.8681896924972534
+
+00:33:07.373 --> 00:33:11.705
+virtual machine here on one server, we've got something called
+
+NOTE Confidence: 0.8681896924972534
+
+00:33:11.774 --> 00:33:14.360
+a migration TD, which is a partition.
+
+NOTE Confidence: 0.8973340392112732
+
+00:33:14.360 --> 00:33:17.499
+Effectively think of it as a confidential partition that is
+
+NOTE Confidence: 0.8973340392112732
+
+00:33:17.553 --> 00:33:20.639
+also measured as part of the virtual machines measurement.
+
+NOTE Confidence: 0.8737640380859375
+
+00:33:21.080 --> 00:33:24.208
+And that the receiving side has a policy that's and
+
+NOTE Confidence: 0.8737640380859375
+
+00:33:24.269 --> 00:33:27.091
+the sending side has a policy that says I will
+
+NOTE Confidence: 0.8737640380859375
+
+00:33:27.153 --> 00:33:30.833
+only migrate the contents of this virtual machine to another
+
+NOTE Confidence: 0.8737640380859375
+
+00:33:30.895 --> 00:33:33.717
+server with a MIG TD that is approved for this
+
+NOTE Confidence: 0.8737640380859375
+
+00:33:33.778 --> 00:33:34.759
+virtual machine.
+
+NOTE Confidence: 0.8606648445129395
+
+00:33:35.400 --> 00:33:40.532
+So effectively extending the confidential trust boundary between 2 servers,
+
+NOTE Confidence: 0.8606648445129395
+
+00:33:40.600 --> 00:33:44.911
+adhering to policy that is being enforced with the confidential
+
+NOTE Confidence: 0.8606648445129395
+
+00:33:44.979 --> 00:33:46.280
+computing hardware.
+
+NOTE Confidence: 0.9317229986190796
+
+00:33:46.840 --> 00:33:49.366
+I'm going to show you for the first time ever,
+
+NOTE Confidence: 0.9317229986190796
+
+00:33:49.421 --> 00:33:53.100
+a confidential virtual machine being live migrated from 1:00 server
+
+NOTE Confidence: 0.9317229986190796
+
+00:33:53.155 --> 00:33:53.759
+to another.
+
+NOTE Confidence: 0.9074142575263977
+
+00:33:53.760 --> 00:33:56.431
+This is the first time ever this has been shown
+
+NOTE Confidence: 0.9074142575263977
+
+00:33:56.488 --> 00:33:56.999
+publicly.
+
+NOTE Confidence: 0.8908657431602478
+
+00:34:00.040 --> 00:34:02.920
+So here we have one server here, Hyper V Manager.
+
+NOTE Confidence: 0.8398485779762268
+
+00:34:02.920 --> 00:34:04.240
+You can see a lot of you familiar with it.
+
+NOTE Confidence: 0.8617032170295715
+
+00:34:04.240 --> 00:34:08.213
+There's our CVM, here's the other server manager on the
+
+NOTE Confidence: 0.8617032170295715
+
+00:34:08.285 --> 00:34:09.079
+other side.
+
+NOTE Confidence: 0.9186814427375793
+
+00:34:09.280 --> 00:34:10.760
+You can see no virtual machines there.
+
+NOTE Confidence: 0.8938243389129639
+
+00:34:11.239 --> 00:34:13.894
+You can see there's our MIG TD that we have
+
+NOTE Confidence: 0.8938243389129639
+
+00:34:13.956 --> 00:34:17.290
+in this virtual machine, and here we're looking at the
+
+NOTE Confidence: 0.8938243389129639
+
+00:34:17.352 --> 00:34:20.562
+output of RDP into that virtual machine on Server 1,
+
+NOTE Confidence: 0.8938243389129639
+
+00:34:20.624 --> 00:34:23.834
+and you can see it's pinging every second as typical
+
+NOTE Confidence: 0.8938243389129639
+
+00:34:23.896 --> 00:34:25.440
+in a live migration demo.
+
+NOTE Confidence: 0.7582642436027527
+
+00:34:26.280 --> 00:34:28.080
+Now we started migrating this virtual machine.
+
+NOTE Confidence: 0.8910542726516724
+
+00:34:28.080 --> 00:34:29.978
+You can see this is going to take a while,
+
+NOTE Confidence: 0.8910542726516724
+
+00:34:30.023 --> 00:34:31.921
+so we're going to speed it up a little bit
+
+NOTE Confidence: 0.8910542726516724
+
+00:34:31.966 --> 00:34:34.678
+because there's a large virtual machine with a few gigabytes
+
+NOTE Confidence: 0.8910542726516724
+
+00:34:34.723 --> 00:34:35.040
+of RAM.
+
+NOTE Confidence: 0.816825270652771
+
+00:34:36.680 --> 00:34:39.356
+You can see this, the TD info attestations that are
+
+NOTE Confidence: 0.816825270652771
+
+00:34:39.408 --> 00:34:42.399
+happening that we've got printed out and then boom, this.
+
+NOTE Confidence: 0.8610733151435852
+
+00:34:42.680 --> 00:34:45.332
+The CVM just moved and it's on the other side,
+
+NOTE Confidence: 0.8610733151435852
+
+00:34:45.390 --> 00:34:48.331
+which is why we saw that RDP connection die because
+
+NOTE Confidence: 0.8610733151435852
+
+00:34:48.389 --> 00:34:51.214
+it's connected to the IP address and that on that
+
+NOTE Confidence: 0.8610733151435852
+
+00:34:51.272 --> 00:34:52.079
+first machine.
+
+NOTE Confidence: 0.9481201767921448
+
+00:34:52.560 --> 00:34:55.719
+But that right there, first time ever and it's not
+
+NOTE Confidence: 0.9481201767921448
+
+00:34:55.782 --> 00:34:56.919
+in production yet.
+
+NOTE Confidence: 0.9418249726295471
+
+00:34:57.080 --> 00:35:00.047
+But you can see that we just literally achieved this
+
+NOTE Confidence: 0.9418249726295471
+
+00:35:00.104 --> 00:35:01.360
+in the last few weeks.
+
+NOTE Confidence: 0.8927590250968933
+
+00:35:01.640 --> 00:35:04.520
+The first confidential virtual machine live migration anywhere.
+
+NOTE Confidence: 0.8959922790527344
+
+00:35:11.040 --> 00:35:12.506
+Now the next thing I'm going to show you is
+
+NOTE Confidence: 0.8959922790527344
+
+00:35:12.540 --> 00:35:14.280
+something that I also think is really, really cool.
+
+NOTE Confidence: 0.9276903867721558
+
+00:35:16.520 --> 00:35:18.680
+And this is something else that Microsoft has pioneered.
+
+NOTE Confidence: 0.8159367442131042
+
+00:35:20.080 --> 00:35:23.707
+We've been working on hardware, hardware based roots of trust
+
+NOTE Confidence: 0.8159367442131042
+
+00:35:23.766 --> 00:35:24.480
+for a while.
+
+NOTE Confidence: 0.6800690293312073
+
+00:35:24.480 --> 00:35:26.597
+We've got something called Calyptra that we donated to the
+
+NOTE Confidence: 0.6800690293312073
+
+00:35:26.633 --> 00:35:27.400
+Open Compute Project.
+
+NOTE Confidence: 0.8376758098602295
+
+00:35:27.800 --> 00:35:29.836
+It is our root of trust that we deploy in
+
+NOTE Confidence: 0.8376758098602295
+
+00:35:29.886 --> 00:35:30.879
+every single server.
+
+NOTE Confidence: 0.842425525188446
+
+00:35:31.760 --> 00:35:36.097
+But when I was working with the architects, security hardware
+
+NOTE Confidence: 0.842425525188446
+
+00:35:36.168 --> 00:35:40.648
+security architects in Azure and thinking, you know, what we're
+
+NOTE Confidence: 0.842425525188446
+
+00:35:40.719 --> 00:35:43.777
+missing is not just a root of trust, but we
+
+NOTE Confidence: 0.842425525188446
+
+00:35:43.848 --> 00:35:47.688
+need key management inside of our hardware that we put
+
+NOTE Confidence: 0.842425525188446
+
+00:35:47.759 --> 00:35:49.039
+into every server.
+
+NOTE Confidence: 0.9161459803581238
+
+00:35:49.880 --> 00:35:53.015
+Because what that will allow us to do is keep
+
+NOTE Confidence: 0.9161459803581238
+
+00:35:53.085 --> 00:35:57.893
+keys protected with hardware throughout their whole life cycle, never
+
+NOTE Confidence: 0.9161459803581238
+
+00:35:57.963 --> 00:36:00.960
+have them exit the hardware trust boundary.
+
+NOTE Confidence: 0.8090426325798035
+
+00:36:01.480 --> 00:36:06.437
+And so we developed something internally called Manacor, but publicly
+
+NOTE Confidence: 0.8090426325798035
+
+00:36:06.509 --> 00:36:10.460
+we announced it last late last year as Azure integrated
+
+NOTE Confidence: 0.8090426325798035
+
+00:36:10.532 --> 00:36:14.771
+HSM because it's effectively an HSM sitting there inside of
+
+NOTE Confidence: 0.8090426325798035
+
+00:36:14.843 --> 00:36:16.279
+every single server.
+
+NOTE Confidence: 0.9242846369743347
+
+00:36:16.440 --> 00:36:19.655
+And we've been deploying these now into every single server
+
+NOTE Confidence: 0.9242846369743347
+
+00:36:19.709 --> 00:36:20.199
+in Azure.
+
+NOTE Confidence: 0.950884222984314
+
+00:36:21.560 --> 00:36:26.409
+What this allows is a key to be released with
+
+NOTE Confidence: 0.950884222984314
+
+00:36:26.517 --> 00:36:29.319
+policy from an actual HSM.
+
+NOTE Confidence: 0.8370059728622437
+
+00:36:29.880 --> 00:36:33.624
+So like Azure Manage HSM or Azure Key Vault can
+
+NOTE Confidence: 0.8370059728622437
+
+00:36:33.704 --> 00:36:37.369
+have a policy on it that will release the keys
+
+NOTE Confidence: 0.8370059728622437
+
+00:36:37.448 --> 00:36:39.600
+into Azure integrated HSMS.
+
+NOTE Confidence: 0.7517523169517517
+
+00:36:39.600 --> 00:36:43.713
+And Azure integrated HSMS are FIPS 140 Level 3, FIPS
+
+NOTE Confidence: 0.7517523169517517
+
+00:36:43.792 --> 00:36:48.222
+143 Level 3 certified, just like the HSMS behind Managed
+
+NOTE Confidence: 0.7517523169517517
+
+00:36:48.301 --> 00:36:50.200
+HSM and Azure Key Vault.
+
+NOTE Confidence: 0.8954633474349976
+
+00:36:51.120 --> 00:36:54.398
+And so that means that the key remains inside of
+
+NOTE Confidence: 0.8954633474349976
+
+00:36:54.466 --> 00:36:57.404
+a FIPS 143 Level 3 boundary from the HSM to
+
+NOTE Confidence: 0.8954633474349976
+
+00:36:57.472 --> 00:37:01.502
+the server and they can be accessed for operations directly
+
+NOTE Confidence: 0.8954633474349976
+
+00:37:01.570 --> 00:37:05.464
+from that virtual machine because we map it that hardware
+
+NOTE Confidence: 0.8954633474349976
+
+00:37:05.532 --> 00:37:07.239
+into the virtual machine.
+
+NOTE Confidence: 0.911839485168457
+
+00:37:09.320 --> 00:37:13.223
+Let's go see a demo of that and the benefits
+
+NOTE Confidence: 0.911839485168457
+
+00:37:13.312 --> 00:37:17.659
+that you get out of that using a simple scenario,
+
+NOTE Confidence: 0.911839485168457
+
+00:37:17.748 --> 00:37:21.563
+which is I want to sign a bunch of payloads
+
+NOTE Confidence: 0.911839485168457
+
+00:37:21.651 --> 00:37:23.160
+using my AKV key.
+
+NOTE Confidence: 0.9312964677810669
+
+00:37:23.920 --> 00:37:27.174
+So what I've got here is a policy that allows
+
+NOTE Confidence: 0.9312964677810669
+
+00:37:27.246 --> 00:37:31.079
+that key to be transported into Azure integrated HSM.
+
+NOTE Confidence: 0.8414886593818665
+
+00:37:31.360 --> 00:37:35.076
+What I'm going to do first is sign 5000 *
+
+NOTE Confidence: 0.8414886593818665
+
+00:37:35.167 --> 00:37:39.518
+/ 32 threads A payload using Azure AKV where the
+
+NOTE Confidence: 0.8414886593818665
+
+00:37:39.608 --> 00:37:42.600
+key never released exits the HSM.
+
+NOTE Confidence: 0.940832257270813
+
+00:37:42.600 --> 00:37:45.763
+And you can see because we're sending all these operations
+
+NOTE Confidence: 0.940832257270813
+
+00:37:45.818 --> 00:37:48.599
+to the HSM, we get about 640 operations per second.
+
+NOTE Confidence: 0.8148737549781799
+
+00:37:49.520 --> 00:37:53.155
+Now we released that key into the local Azure integrated
+
+NOTE Confidence: 0.8148737549781799
+
+00:37:53.220 --> 00:37:53.479
+HSM.
+
+NOTE Confidence: 0.9218891859054565
+
+00:37:53.880 --> 00:37:56.160
+We can perform those operations directly on it.
+
+NOTE Confidence: 0.9173745512962341
+
+00:37:56.239 --> 00:38:00.090
+And you can see that our throughput went to 18,800
+
+NOTE Confidence: 0.9173745512962341
+
+00:38:00.167 --> 00:38:04.479
+signing operations per second and we lost no security in
+
+NOTE Confidence: 0.9173745512962341
+
+00:38:04.556 --> 00:38:05.480
+the process.
+
+NOTE Confidence: 0.9045654535293579
+
+00:38:06.520 --> 00:38:10.976
+And so this is the future of data center infrastructure
+
+NOTE Confidence: 0.9045654535293579
+
+00:38:11.057 --> 00:38:12.839
+and security for keys.
+
+NOTE Confidence: 0.8059358596801758
+
+00:38:13.200 --> 00:38:17.169
+The future we're moving to is one with confidential computing
+
+NOTE Confidence: 0.8059358596801758
+
+00:38:17.234 --> 00:38:20.422
+where keys, and that's going to end up being keys
+
+NOTE Confidence: 0.8059358596801758
+
+00:38:20.487 --> 00:38:22.440
+for everything, keys for your.
+
+NOTE Confidence: 0.8985089063644409
+
+00:38:22.520 --> 00:38:25.278
+Any of these services, including the services that agents are
+
+NOTE Confidence: 0.8985089063644409
+
+00:38:25.324 --> 00:38:28.082
+talking to are going to be protected with hardware throughout
+
+NOTE Confidence: 0.8985089063644409
+
+00:38:28.128 --> 00:38:30.479
+their entire life cycle so they can never be stolen.
+
+NOTE Confidence: 0.7015482783317566
+
+00:38:31.520 --> 00:38:33.080
+And that's a very exciting future.
+
+NOTE Confidence: 0.9106058478355408
+
+00:38:39.640 --> 00:38:42.356
+All right, we've got one last thing to show and
+
+NOTE Confidence: 0.9106058478355408
+
+00:38:42.414 --> 00:38:45.305
+this is very experimental, but I like to end with,
+
+NOTE Confidence: 0.9106058478355408
+
+00:38:45.363 --> 00:38:48.080
+hey, this is where we're looking speculatively.
+
+NOTE Confidence: 0.9054636359214783
+
+00:38:48.520 --> 00:38:52.184
+This is Microsoft Research work that is happening may or
+
+NOTE Confidence: 0.9054636359214783
+
+00:38:52.249 --> 00:38:56.045
+may not be ever productized, but it looks really promising
+
+NOTE Confidence: 0.9054636359214783
+
+00:38:56.110 --> 00:38:58.858
+and it's really would be a huge if we were
+
+NOTE Confidence: 0.9054636359214783
+
+00:38:58.924 --> 00:39:00.560
+able to make this happen.
+
+NOTE Confidence: 0.8880705237388611
+
+00:39:01.280 --> 00:39:03.999
+And the idea here is that if you take a
+
+NOTE Confidence: 0.8880705237388611
+
+00:39:04.069 --> 00:39:08.741
+look at network communications, network networking inside of a data
+
+NOTE Confidence: 0.8880705237388611
+
+00:39:08.810 --> 00:39:11.599
+center, it's typically been over copper.
+
+NOTE Confidence: 0.7742013931274414
+
+00:39:12.040 --> 00:39:15.945
+And the problem with copper is very lightweight, it's very
+
+NOTE Confidence: 0.7742013931274414
+
+00:39:16.013 --> 00:39:19.784
+cheap, very reliable, but the maximum distance is it can
+
+NOTE Confidence: 0.7742013931274414
+
+00:39:19.851 --> 00:39:23.151
+you can talk to over copper without loss is about
+
+NOTE Confidence: 0.7742013931274414
+
+00:39:23.219 --> 00:39:23.959
+two meters.
+
+NOTE Confidence: 0.9078144431114197
+
+00:39:24.640 --> 00:39:27.048
+And of course, 2 meters is not much distance in
+
+NOTE Confidence: 0.9078144431114197
+
+00:39:27.099 --> 00:39:27.919
+the data center.
+
+NOTE Confidence: 0.8911508917808533
+
+00:39:27.920 --> 00:39:31.390
+You really want to connect, especially if you move towards
+
+NOTE Confidence: 0.8911508917808533
+
+00:39:31.450 --> 00:39:35.340
+disaggregated devices and computing where you want GPUs over here
+
+NOTE Confidence: 0.8911508917808533
+
+00:39:35.400 --> 00:39:38.212
+and you want servers over here is that you want
+
+NOTE Confidence: 0.8911508917808533
+
+00:39:38.272 --> 00:39:42.281
+a very high speed, high bandwidth interconnect and that's typically
+
+NOTE Confidence: 0.8911508917808533
+
+00:39:42.341 --> 00:39:43.000
+not copper.
+
+NOTE Confidence: 0.8850263357162476
+
+00:39:43.000 --> 00:39:45.771
+Now what a lot of people are moving towards is
+
+NOTE Confidence: 0.8850263357162476
+
+00:39:45.832 --> 00:39:47.640
+optics and optics with lasers.
+
+NOTE Confidence: 0.8422882556915283
+
+00:39:47.640 --> 00:39:50.734
+The problem with lasers is that they're very high-powered, so
+
+NOTE Confidence: 0.8422882556915283
+
+00:39:50.785 --> 00:39:53.321
+they generate a lot of heat, which makes them very
+
+NOTE Confidence: 0.8422882556915283
+
+00:39:53.372 --> 00:39:53.879
+expensive.
+
+NOTE Confidence: 0.9435770511627197
+
+00:39:55.120 --> 00:40:00.760
+So what we've been exploring is something called Project Mosaic.
+
+NOTE Confidence: 0.8439862728118896
+
+00:40:01.880 --> 00:40:04.610
+Now, one of the things with this mechanisms that I
+
+NOTE Confidence: 0.8439862728118896
+
+00:40:04.664 --> 00:40:07.285
+just showed you is that there's lots of fiber or
+
+NOTE Confidence: 0.8439862728118896
+
+00:40:07.340 --> 00:40:08.759
+there's just a few fibers.
+
+NOTE Confidence: 0.8696237802505493
+
+00:40:08.760 --> 00:40:10.960
+They're all very high bandwidth and high speed.
+
+NOTE Confidence: 0.8253678679466248
+
+00:40:11.760 --> 00:40:16.285
+What we're trying is using many channels, operating at low
+
+NOTE Confidence: 0.8253678679466248
+
+00:40:16.363 --> 00:40:20.889
+speed using standard LED technology, micro LE DS, the kind
+
+NOTE Confidence: 0.8253678679466248
+
+00:40:20.967 --> 00:40:22.839
+of LE DS that are being.
+
+NOTE Confidence: 0.8634157776832581
+
+00:40:23.360 --> 00:40:28.048
+Product ties right now for next generation VR glasses, for
+
+NOTE Confidence: 0.8634157776832581
+
+00:40:28.129 --> 00:40:31.039
+example, goggles as well as cameras.
+
+NOTE Confidence: 0.84714275598526
+
+00:40:31.719 --> 00:40:36.750
+These things projecting those LED lights over fibers inside of
+
+NOTE Confidence: 0.84714275598526
+
+00:40:36.831 --> 00:40:41.294
+a cable and then having them read with standard silicon
+
+NOTE Confidence: 0.84714275598526
+
+00:40:41.375 --> 00:40:43.079
+camera sensor arrays.
+
+NOTE Confidence: 0.9373598098754883
+
+00:40:43.880 --> 00:40:46.775
+So the beauty of this approach is that these are
+
+NOTE Confidence: 0.9373598098754883
+
+00:40:46.835 --> 00:40:51.419
+basically commercial technologies that are scaling because of other economic
+
+NOTE Confidence: 0.9373598098754883
+
+00:40:51.480 --> 00:40:54.616
+factors outside of what we want to take advantage of
+
+NOTE Confidence: 0.9373598098754883
+
+00:40:54.676 --> 00:40:55.280
+it for it.
+
+NOTE Confidence: 0.7930701971054077
+
+00:40:55.280 --> 00:40:56.979
+So we kind of kind of ride on the back
+
+NOTE Confidence: 0.7930701971054077
+
+00:40:57.024 --> 00:40:59.439
+of this technology, but deploy it in our data centers.
+
+NOTE Confidence: 0.9133166670799255
+
+00:40:59.800 --> 00:41:02.976
+So I'm going to show you for the first time
+
+NOTE Confidence: 0.9133166670799255
+
+00:41:03.050 --> 00:41:07.408
+ever with a live feed from our Microsoft Research Cambridge
+
+NOTE Confidence: 0.9133166670799255
+
+00:41:07.482 --> 00:41:10.879
+lab transmission over one of these LED cables.
+
+NOTE Confidence: 0.9201639294624329
+
+00:41:11.480 --> 00:41:19.996
+So let's go and switch here to Microsoft, Cambridge and
+
+NOTE Confidence: 0.9201639294624329
+
+00:41:20.150 --> 00:41:21.079
+Qatar.
+
+NOTE Confidence: 0.9265128374099731
+
+00:41:21.600 --> 00:41:22.120
+Good to see you.
+
+NOTE Confidence: 0.444227010011673
+
+00:41:22.120 --> 00:41:22.200
+Hi.
+
+NOTE Confidence: 0.6858304738998413
+
+00:41:22.200 --> 00:41:22.520
+Hello, Mark.
+
+NOTE Confidence: 0.874758243560791
+
+00:41:23.320 --> 00:41:23.840
+Good to see you.
+
+NOTE Confidence: 0.8752787709236145
+
+00:41:23.880 --> 00:41:24.720
+Hello everyone.
+
+NOTE Confidence: 0.7366194725036621
+
+00:41:24.800 --> 00:41:25.560
+Actually I'm Qatar.
+
+NOTE Confidence: 0.8398465514183044
+
+00:41:25.800 --> 00:41:27.840
+I'm from Microsoft Research Cambridge.
+
+NOTE Confidence: 0.7363501787185669
+
+00:41:28.160 --> 00:41:31.635
+I'm here in the lab holding one of those tables
+
+NOTE Confidence: 0.7363501787185669
+
+00:41:31.709 --> 00:41:33.039
+with mine for LED.
+
+NOTE Confidence: 0.8179528713226318
+
+00:41:33.200 --> 00:41:36.120
+Then what I want to show you exactly is what
+
+NOTE Confidence: 0.8179528713226318
+
+00:41:36.186 --> 00:41:39.173
+is inside and how this is being tested in the
+
+NOTE Confidence: 0.8179528713226318
+
+00:41:39.240 --> 00:41:42.359
+lab before it goes into Microsoft data centers.
+
+NOTE Confidence: 0.8211499452590942
+
+00:41:42.960 --> 00:41:46.380
+So if you open this app, this is what you're
+
+NOTE Confidence: 0.8211499452590942
+
+00:41:46.458 --> 00:41:50.034
+going to see, a small PCB with the yellow area
+
+NOTE Confidence: 0.8211499452590942
+
+00:41:50.112 --> 00:41:52.600
+here, which we call the package.
+
+NOTE Confidence: 0.8435935378074646
+
+00:41:52.920 --> 00:41:56.235
+And on top of that we have the tiny array
+
+NOTE Confidence: 0.8435935378074646
+
+00:41:56.316 --> 00:42:01.168
+of micro LEDs and photodetectors, and underneath we have the
+
+NOTE Confidence: 0.8435935378074646
+
+00:42:01.249 --> 00:42:04.079
+CMOS chip that controls everything.
+
+NOTE Confidence: 0.9173598885536194
+
+00:42:04.560 --> 00:42:07.748
+And actually this small PCB is being tested here in
+
+NOTE Confidence: 0.9173598885536194
+
+00:42:07.811 --> 00:42:09.999
+the lab using the evaluation board.
+
+NOTE Confidence: 0.7972530126571655
+
+00:42:10.320 --> 00:42:13.496
+The big PCB that you see there and the green
+
+NOTE Confidence: 0.7972530126571655
+
+00:42:13.568 --> 00:42:17.683
+light coming up is actually coming from hundreds of micro
+
+NOTE Confidence: 0.7972530126571655
+
+00:42:17.755 --> 00:42:21.942
+LEDs and couplet to this imagined fiber using this optical
+
+NOTE Confidence: 0.7972530126571655
+
+00:42:22.014 --> 00:42:22.519
+Kepler.
+
+NOTE Confidence: 0.8357824683189392
+
+00:42:23.600 --> 00:42:28.890
+Actually after 10s of meters of transmission over this imagined
+
+NOTE Confidence: 0.8357824683189392
+
+00:42:28.974 --> 00:42:32.921
+fiber, here we are at the receiver side and the
+
+NOTE Confidence: 0.8357824683189392
+
+00:42:33.005 --> 00:42:37.119
+screen here shows the output spaces of the fiber.
+
+NOTE Confidence: 0.8100990056991577
+
+00:42:37.480 --> 00:42:41.432
+And actually this fiber itself has more than thousands of
+
+NOTE Confidence: 0.8100990056991577
+
+00:42:41.501 --> 00:42:45.314
+cores and each of these micro LED's actually is coupled
+
+NOTE Confidence: 0.8100990056991577
+
+00:42:45.384 --> 00:42:49.058
+to more than one core, which makes the alignment much
+
+NOTE Confidence: 0.8100990056991577
+
+00:42:49.128 --> 00:42:49.960
+more easier.
+
+NOTE Confidence: 0.8180012702941895
+
+00:42:50.520 --> 00:42:54.924
+And actually in a real operation world, all this micro
+
+NOTE Confidence: 0.8180012702941895
+
+00:42:55.006 --> 00:42:59.085
+LED will be on and flashing at high speed billions
+
+NOTE Confidence: 0.8180012702941895
+
+00:42:59.166 --> 00:43:02.919
+time per second, and the human eye will not be
+
+NOTE Confidence: 0.8180012702941895
+
+00:43:03.000 --> 00:43:05.040
+able to distinguish this.
+
+NOTE Confidence: 0.7884687781333923
+
+00:43:05.480 --> 00:43:08.804
+So basically to make it concrete and to show you
+
+NOTE Confidence: 0.7884687781333923
+
+00:43:08.873 --> 00:43:12.890
+that we can individually control each of these micro LEDs,
+
+NOTE Confidence: 0.7884687781333923
+
+00:43:12.959 --> 00:43:16.006
+I'm going to ask you Mark to pick any letter
+
+NOTE Confidence: 0.7884687781333923
+
+00:43:16.075 --> 00:43:18.568
+or a number from zero to 9 and I can
+
+NOTE Confidence: 0.7884687781333923
+
+00:43:18.638 --> 00:43:19.400
+display it.
+
+NOTE Confidence: 0.7449451684951782
+
+00:43:19.520 --> 00:43:21.683
+Through you OK, awesome to this kind of prove that
+
+NOTE Confidence: 0.7449451684951782
+
+00:43:21.727 --> 00:43:22.159
+it's live.
+
+NOTE Confidence: 0.9551170468330383
+
+00:43:22.440 --> 00:43:23.080
+How about a letter?
+
+NOTE Confidence: 0.729255199432373
+
+00:43:23.080 --> 00:43:26.029
+Somebody shout out a letter that we want to see
+
+NOTE Confidence: 0.729255199432373
+
+00:43:26.091 --> 00:43:26.279
+ZZ.
+
+NOTE Confidence: 0.7338390350341797
+
+00:43:26.280 --> 00:43:27.160
+All right, let's do ZZ.
+
+NOTE Confidence: 0.7912347912788391
+
+00:43:29.360 --> 00:43:32.824
+OK, OK, so here you can see that we are
+
+NOTE Confidence: 0.7912347912788391
+
+00:43:32.913 --> 00:43:37.177
+switching off some of the micro LEDs and each of
+
+NOTE Confidence: 0.7912347912788391
+
+00:43:37.266 --> 00:43:41.530
+these flowers here are one micro LED that can be
+
+NOTE Confidence: 0.7912347912788391
+
+00:43:41.619 --> 00:43:44.639
+modulated as Gigabit per sentence.
+
+NOTE Confidence: 0.849937915802002
+
+00:43:45.280 --> 00:43:48.480
+So let's wait for the letter Z to show.
+
+NOTE Confidence: 0.2547823190689087
+
+00:43:52.480 --> 00:43:52.680
+Yeah.
+
+NOTE Confidence: 0.2982914447784424
+
+00:43:55.320 --> 00:43:55.720
+Z Demo.
+
+NOTE Confidence: 0.6747049689292908
+
+00:43:58.000 --> 00:44:03.490
+And I'm going to hand it back to.
+
+NOTE Confidence: 0.7068107724189758
+
+00:44:03.530 --> 00:44:04.210
+You all right, Thanks.
+
+NOTE Confidence: 0.9579305052757263
+
+00:44:04.210 --> 00:44:04.770
+That was awesome.
+
+NOTE Confidence: 0.7139675617218018
+
+00:44:04.770 --> 00:44:05.530
+Thanks for Qatar.
+
+NOTE Confidence: 0.7651655077934265
+
+00:44:05.850 --> 00:44:06.290
+Thank you.
+
+NOTE Confidence: 0.5614187121391296
+
+00:44:09.320 --> 00:44:09.480
+OK.
+
+NOTE Confidence: 0.9282170534133911
+
+00:44:09.480 --> 00:44:12.720
+Well, that brings us to the conclusion of the session.
+
+NOTE Confidence: 0.8011487126350403
+
+00:44:13.719 --> 00:44:15.895
+And what I hope you saw was a lot of
+
+NOTE Confidence: 0.8011487126350403
+
+00:44:15.955 --> 00:44:19.339
+innovation happening at all layers of the the stack from
+
+NOTE Confidence: 0.8011487126350403
+
+00:44:19.399 --> 00:44:23.024
+the hardware to the data centers to the serverless offerings
+
+NOTE Confidence: 0.8011487126350403
+
+00:44:23.085 --> 00:44:26.528
+to GPU's, prompt prefetching inference and then a look at
+
+NOTE Confidence: 0.8011487126350403
+
+00:44:26.589 --> 00:44:29.972
+the future and what we were going with networking inside
+
+NOTE Confidence: 0.8011487126350403
+
+00:44:30.033 --> 00:44:30.999
+the data center.
+
+NOTE Confidence: 0.9236171245574951
+
+00:44:31.560 --> 00:44:34.360
+If you like this, please fill out an evaluation form.
+
+NOTE Confidence: 0.9561105966567993
+
+00:44:34.360 --> 00:44:36.168
+Let me know if you didn't, you can go ahead
+
+NOTE Confidence: 0.9561105966567993
+
+00:44:36.211 --> 00:44:36.799
+and skip that.
+
+NOTE Confidence: 0.9183432459831238
+
+00:44:36.840 --> 00:44:39.196
+And I hope you, I hope you have a great
+
+NOTE Confidence: 0.9183432459831238
+
+00:44:39.257 --> 00:44:42.097
+build and I hope to see you this afternoon with
+
+NOTE Confidence: 0.9183432459831238
+
+00:44:42.157 --> 00:44:42.520
+Scott.
+
+NOTE Confidence: 0.8372596502304077
+
+00:44:42.520 --> 00:44:44.635
+We're going to have a fun session on the future
+
+NOTE Confidence: 0.8372596502304077
+
+00:44:44.680 --> 00:44:45.760
+of software engineering.
+
+NOTE Confidence: 0.8120518326759338
+
+00:44:45.760 --> 00:44:46.320
+So I'll see you then.
+

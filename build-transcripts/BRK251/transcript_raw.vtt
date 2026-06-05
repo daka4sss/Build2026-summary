@@ -1,0 +1,4775 @@
+WEBVTT
+
+NOTE
+language:en-US
+
+NOTE Confidence: 0.8220660090446472
+
+00:00:00.360 --> 00:00:03.240
+Hello everybody, thank you for joining us session.
+
+NOTE Confidence: 0.5909676551818848
+
+00:00:03.640 --> 00:00:04.160
+I'm Neda.
+
+NOTE Confidence: 0.8798784613609314
+
+00:00:04.320 --> 00:00:06.869
+I recommend you put your headphones on because it's going
+
+NOTE Confidence: 0.8798784613609314
+
+00:00:06.914 --> 00:00:08.703
+to be much easier to to hear us with the
+
+NOTE Confidence: 0.8798784613609314
+
+00:00:08.748 --> 00:00:09.240
+headphones.
+
+NOTE Confidence: 0.9673444628715515
+
+00:00:09.440 --> 00:00:10.960
+So please put your headphones on.
+
+NOTE Confidence: 0.8688356280326843
+
+00:00:11.520 --> 00:00:14.104
+So I'm Neda, together with me are a set of
+
+NOTE Confidence: 0.8688356280326843
+
+00:00:14.166 --> 00:00:17.427
+speakers and we're going to together show you how you
+
+NOTE Confidence: 0.8688356280326843
+
+00:00:17.489 --> 00:00:21.119
+can build secure and enterprise ready agent with Agent 365.
+
+NOTE Confidence: 0.9102291464805603
+
+00:00:21.360 --> 00:00:23.860
+S Before we get started, raise your hand if you're
+
+NOTE Confidence: 0.9102291464805603
+
+00:00:23.910 --> 00:00:27.160
+building agents today or using agents today in your organization.
+
+NOTE Confidence: 0.9374397993087769
+
+00:00:27.560 --> 00:00:29.000
+OK, look around.
+
+NOTE Confidence: 0.9402139782905579
+
+00:00:29.000 --> 00:00:30.880
+I think it's everybody, almost everybody.
+
+NOTE Confidence: 0.8469514846801758
+
+00:00:31.160 --> 00:00:33.746
+Now raise your hand if you think your agents are
+
+NOTE Confidence: 0.8469514846801758
+
+00:00:33.800 --> 00:00:36.440
+enterprise ready, observed, secure, and governed.
+
+NOTE Confidence: 0.9508984088897705
+
+00:00:37.720 --> 00:00:38.720
+OK, I have one.
+
+NOTE Confidence: 0.9444849491119385
+
+00:00:39.080 --> 00:00:39.760
+OK, great.
+
+NOTE Confidence: 0.8707062602043152
+
+00:00:39.760 --> 00:00:42.572
+So you're in the right place because today here we're
+
+NOTE Confidence: 0.8707062602043152
+
+00:00:42.625 --> 00:00:45.649
+going to learn how you can build enterprise ready, secure
+
+NOTE Confidence: 0.8707062602043152
+
+00:00:45.702 --> 00:00:47.559
+and governed agents with Agent 365.
+
+NOTE Confidence: 0.7469905018806458
+
+00:00:47.960 --> 00:00:49.360
+So let's get started.
+
+NOTE Confidence: 0.9288793206214905
+
+00:00:49.360 --> 00:00:50.720
+We saw that agents are here.
+
+NOTE Confidence: 0.8752304315567017
+
+00:00:50.720 --> 00:00:52.400
+Almost all of us raised our hands.
+
+NOTE Confidence: 0.8753620982170105
+
+00:00:52.400 --> 00:00:56.006
+All of us are using agent in our organization and
+
+NOTE Confidence: 0.8753620982170105
+
+00:00:56.079 --> 00:00:59.833
+IDC predicts that by 2028 there will be 1.3 billion
+
+NOTE Confidence: 0.8753620982170105
+
+00:00:59.907 --> 00:01:01.599
+agents in organization.
+
+NOTE Confidence: 0.8851190805435181
+
+00:01:01.800 --> 00:01:04.024
+That's a huge number, most of more than most of
+
+NOTE Confidence: 0.8851190805435181
+
+00:01:04.071 --> 00:01:05.159
+countries in the world.
+
+NOTE Confidence: 0.8783941864967346
+
+00:01:06.080 --> 00:01:08.240
+And there's different types of agents that we talked about.
+
+NOTE Confidence: 0.7319848537445068
+
+00:01:08.280 --> 00:01:09.840
+One are the SAS agent.
+
+NOTE Confidence: 0.9150950908660889
+
+00:01:10.120 --> 00:01:12.344
+Those are agents that are pre built, they come built
+
+NOTE Confidence: 0.9150950908660889
+
+00:01:12.387 --> 00:01:13.199
+in the application.
+
+NOTE Confidence: 0.8124712705612183
+
+00:01:13.200 --> 00:01:15.540
+They come built pre built on webs that we kind
+
+NOTE Confidence: 0.8124712705612183
+
+00:01:15.590 --> 00:01:17.880
+of start using and using in the organization.
+
+NOTE Confidence: 0.8565817475318909
+
+00:01:18.160 --> 00:01:20.320
+Then there's the endpoint agent that we are building.
+
+NOTE Confidence: 0.7319610118865967
+
+00:01:20.480 --> 00:01:21.920
+These can be the open cloud agent.
+
+NOTE Confidence: 0.8614484667778015
+
+00:01:21.920 --> 00:01:25.298
+These will be agents building with CLI and other agents
+
+NOTE Confidence: 0.8614484667778015
+
+00:01:25.360 --> 00:01:27.080
+and we have the cloud agent.
+
+NOTE Confidence: 0.8860323429107666
+
+00:01:27.240 --> 00:01:29.862
+These are the agent that we're building on different clouds
+
+NOTE Confidence: 0.8860323429107666
+
+00:01:29.906 --> 00:01:32.040
+on different platforms and different frameworks.
+
+NOTE Confidence: 0.8159875273704529
+
+00:01:33.240 --> 00:01:36.274
+But the questions come is can we, our organization discover
+
+NOTE Confidence: 0.8159875273704529
+
+00:01:36.325 --> 00:01:37.200
+all these agents?
+
+NOTE Confidence: 0.9266012907028198
+
+00:01:37.200 --> 00:01:38.200
+Can they manage them?
+
+NOTE Confidence: 0.9581560492515564
+
+00:01:38.400 --> 00:01:39.680
+Are they behaving properly?
+
+NOTE Confidence: 0.8679404258728027
+
+00:01:39.680 --> 00:01:42.024
+Is my agent behaving based on the intent I wanted
+
+NOTE Confidence: 0.8679404258728027
+
+00:01:42.072 --> 00:01:42.359
+to do?
+
+NOTE Confidence: 0.7420562505722046
+
+00:01:42.520 --> 00:01:43.840
+Is it breaking with the intent?
+
+NOTE Confidence: 0.7811218500137329
+
+00:01:43.960 --> 00:01:46.160
+Is it misusing the tools I connected to it?
+
+NOTE Confidence: 0.7842800617218018
+
+00:01:46.360 --> 00:01:49.720
+Is it over sharing data or the leaking data?
+
+NOTE Confidence: 0.9140691161155701
+
+00:01:49.920 --> 00:01:51.890
+And can it be governed and audit At the end
+
+NOTE Confidence: 0.9140691161155701
+
+00:01:51.935 --> 00:01:52.439
+of the day?
+
+NOTE Confidence: 0.8159279227256775
+
+00:01:52.640 --> 00:01:55.334
+And usually as developer and stuff like that, we take
+
+NOTE Confidence: 0.8159279227256775
+
+00:01:55.385 --> 00:01:58.639
+different frameworks and different products to make that happen.
+
+NOTE Confidence: 0.9272007346153259
+
+00:01:59.440 --> 00:02:01.507
+And we want our agents first of all, to be
+
+NOTE Confidence: 0.9272007346153259
+
+00:02:01.556 --> 00:02:02.640
+able to be observable.
+
+NOTE Confidence: 0.8391624093055725
+
+00:02:02.760 --> 00:02:05.394
+So to be registered in an inventory and registry and
+
+NOTE Confidence: 0.8391624093055725
+
+00:02:05.445 --> 00:02:07.573
+to be observable, we want it to be have an
+
+NOTE Confidence: 0.8391624093055725
+
+00:02:07.624 --> 00:02:08.080
+identity.
+
+NOTE Confidence: 0.9664016962051392
+
+00:02:08.080 --> 00:02:10.357
+We want to be able to identify that this action
+
+NOTE Confidence: 0.9664016962051392
+
+00:02:10.405 --> 00:02:11.520
+was made by this agent.
+
+NOTE Confidence: 0.7581888437271118
+
+00:02:11.800 --> 00:02:13.240
+We want to have threat protection.
+
+NOTE Confidence: 0.7977676391601562
+
+00:02:13.400 --> 00:02:16.076
+There's a lot of new generative AI risk coming in
+
+NOTE Confidence: 0.7977676391601562
+
+00:02:16.130 --> 00:02:19.079
+like prompt injection, intent breaking, tools misused.
+
+NOTE Confidence: 0.8430389165878296
+
+00:02:19.080 --> 00:02:20.440
+We wanted to have threat protection.
+
+NOTE Confidence: 0.7933238744735718
+
+00:02:20.560 --> 00:02:22.753
+We want to have data security, not to over leak
+
+NOTE Confidence: 0.7933238744735718
+
+00:02:22.799 --> 00:02:23.919
+data or over share data.
+
+NOTE Confidence: 0.8516272306442261
+
+00:02:24.160 --> 00:02:27.040
+And we wanted to be in governance and in compliance.
+
+NOTE Confidence: 0.8737716674804688
+
+00:02:27.480 --> 00:02:30.480
+And for all that, that's where Agent 365 comes in.
+
+NOTE Confidence: 0.8614639639854431
+
+00:02:30.639 --> 00:02:33.507
+It's the control plane for any agent that you're building,
+
+NOTE Confidence: 0.8614639639854431
+
+00:02:33.556 --> 00:02:35.039
+any agent in the organization.
+
+NOTE Confidence: 0.9545668959617615
+
+00:02:35.240 --> 00:02:37.945
+And I'd like to invite Kendra to share with us
+
+NOTE Confidence: 0.9545668959617615
+
+00:02:38.004 --> 00:02:39.240
+more about Agent 365.
+
+NOTE Confidence: 0.9665873050689697
+
+00:02:39.520 --> 00:02:40.240
+Thank you, Kendra.
+
+NOTE Confidence: 0.9678233861923218
+
+00:02:40.440 --> 00:02:41.320
+Thank you so much.
+
+NOTE Confidence: 0.09292002022266388
+
+00:02:41.320 --> 00:02:41.760
+Nada.
+
+NOTE Confidence: 0.8959128260612488
+
+00:02:42.240 --> 00:02:42.960
+Hi everyone.
+
+NOTE Confidence: 0.9679566025733948
+
+00:02:42.960 --> 00:02:45.360
+Thank you so much for being here with us.
+
+NOTE Confidence: 0.9681262969970703
+
+00:02:45.680 --> 00:02:48.535
+We are going to take you through over the next
+
+NOTE Confidence: 0.9681262969970703
+
+00:02:48.597 --> 00:02:49.280
+few slides.
+
+NOTE Confidence: 0.9504010677337646
+
+00:02:49.600 --> 00:02:51.720
+Why you need Agent 365?
+
+NOTE Confidence: 0.9703397750854492
+
+00:02:51.720 --> 00:02:54.200
+What is the value that you're going to get?
+
+NOTE Confidence: 0.9504312872886658
+
+00:02:54.960 --> 00:02:58.113
+And the big thing here, if you leave here with
+
+NOTE Confidence: 0.9504312872886658
+
+00:02:58.181 --> 00:03:02.774
+nothing, understand this Agent 365 provides all of the capabilities
+
+NOTE Confidence: 0.9504312872886658
+
+00:03:02.842 --> 00:03:06.749
+we're going to go through, not only for Microsoft agents,
+
+NOTE Confidence: 0.9504312872886658
+
+00:03:06.818 --> 00:03:10.520
+but also for 3rd party custom external agents as well.
+
+NOTE Confidence: 0.9283226728439331
+
+00:03:11.160 --> 00:03:14.250
+And from this slide, you can see we've broken down
+
+NOTE Confidence: 0.9283226728439331
+
+00:03:14.312 --> 00:03:17.589
+the value of agents into these three key pillars that
+
+NOTE Confidence: 0.9283226728439331
+
+00:03:17.650 --> 00:03:20.247
+we think align to the core jobs to be done
+
+NOTE Confidence: 0.9283226728439331
+
+00:03:20.309 --> 00:03:23.647
+when it comes to managing and governing your agents at
+
+NOTE Confidence: 0.9283226728439331
+
+00:03:23.709 --> 00:03:24.080
+scale.
+
+NOTE Confidence: 0.9189674854278564
+
+00:03:24.639 --> 00:03:29.114
+The first is observed because very simply, you cannot govern
+
+NOTE Confidence: 0.9189674854278564
+
+00:03:29.188 --> 00:03:30.679
+what you cannot see.
+
+NOTE Confidence: 0.9575557708740234
+
+00:03:30.760 --> 00:03:34.518
+You also cannot trust and feel confident that you're adequately
+
+NOTE Confidence: 0.9575557708740234
+
+00:03:34.578 --> 00:03:37.799
+protected if you don't know what agents are out there.
+
+NOTE Confidence: 0.9472848773002625
+
+00:03:38.040 --> 00:03:41.461
+So all of the features that we have available that
+
+NOTE Confidence: 0.9472848773002625
+
+00:03:41.529 --> 00:03:44.540
+allow you to not only see all of your agents
+
+NOTE Confidence: 0.9472848773002625
+
+00:03:44.608 --> 00:03:49.124
+across all of your different platforms, but also understand really
+
+NOTE Confidence: 0.9472848773002625
+
+00:03:49.193 --> 00:03:54.051
+important adoption trends, usage trends, trends for what platforms your
+
+NOTE Confidence: 0.9472848773002625
+
+00:03:54.119 --> 00:03:56.719
+agents are built on, and so much more.
+
+NOTE Confidence: 0.9451702237129211
+
+00:03:56.760 --> 00:04:00.236
+In addition to actions that you need to take to
+
+NOTE Confidence: 0.9451702237129211
+
+00:04:00.310 --> 00:04:05.118
+successfully mitigate and keep your agent ecosystem safe, then we
+
+NOTE Confidence: 0.9451702237129211
+
+00:04:05.192 --> 00:04:06.079
+have govern.
+
+NOTE Confidence: 0.8945608139038086
+
+00:04:06.600 --> 00:04:09.883
+Now govern can be a scary word for some depending
+
+NOTE Confidence: 0.8945608139038086
+
+00:04:09.950 --> 00:04:11.760
+on your audience right now.
+
+NOTE Confidence: 0.8916216492652893
+
+00:04:11.760 --> 00:04:14.846
+I want to assure you here, when we say governance,
+
+NOTE Confidence: 0.8916216492652893
+
+00:04:14.908 --> 00:04:18.180
+this is not intended to put the brakes on innovation,
+
+NOTE Confidence: 0.8916216492652893
+
+00:04:18.242 --> 00:04:20.279
+put the brakes on agent adoption.
+
+NOTE Confidence: 0.957111120223999
+
+00:04:20.760 --> 00:04:23.834
+This is intended to actually speed up the pace of
+
+NOTE Confidence: 0.957111120223999
+
+00:04:23.896 --> 00:04:26.720
+adoption and speed up the pace of innovation.
+
+NOTE Confidence: 0.9310441017150879
+
+00:04:26.920 --> 00:04:31.528
+Because governance is all about implementing guardrails so that you
+
+NOTE Confidence: 0.9310441017150879
+
+00:04:31.597 --> 00:04:34.968
+know no matter how your agent is built, no matter
+
+NOTE Confidence: 0.9310441017150879
+
+00:04:35.036 --> 00:04:38.957
+who built that agent, there are the proper protections in
+
+NOTE Confidence: 0.9310441017150879
+
+00:04:39.026 --> 00:04:42.465
+place every single time for the agent based on its
+
+NOTE Confidence: 0.9310441017150879
+
+00:04:42.534 --> 00:04:43.359
+risk factor.
+
+NOTE Confidence: 0.9384398460388184
+
+00:04:44.040 --> 00:04:47.587
+And then with security, just like you would secure any
+
+NOTE Confidence: 0.9384398460388184
+
+00:04:47.653 --> 00:04:51.726
+other employee in your organization, any other data asset app,
+
+NOTE Confidence: 0.9384398460388184
+
+00:04:51.792 --> 00:04:55.077
+you name it, right across your tenant, you need to
+
+NOTE Confidence: 0.9384398460388184
+
+00:04:55.143 --> 00:04:57.640
+adequately secure your agents as well.
+
+NOTE Confidence: 0.9267525672912598
+
+00:04:58.080 --> 00:05:01.735
+And so with Defender and Purview and Dentra, right, you
+
+NOTE Confidence: 0.9267525672912598
+
+00:05:01.801 --> 00:05:05.191
+have all the tools that you need to be sufficiently
+
+NOTE Confidence: 0.9267525672912598
+
+00:05:05.257 --> 00:05:08.979
+protected, not only to block these threats in real time,
+
+NOTE Confidence: 0.9267525672912598
+
+00:05:09.045 --> 00:05:10.840
+but take it a step further.
+
+NOTE Confidence: 0.8709836602210999
+
+00:05:11.160 --> 00:05:15.689
+Do things like deep hunting and investigation to understand what
+
+NOTE Confidence: 0.8709836602210999
+
+00:05:15.760 --> 00:05:17.600
+caused these risks, right?
+
+NOTE Confidence: 0.8776283264160156
+
+00:05:17.600 --> 00:05:20.989
+To see full logs inside of Purview so you know
+
+NOTE Confidence: 0.8776283264160156
+
+00:05:21.063 --> 00:05:25.263
+every single step that that agent took when that incident
+
+NOTE Confidence: 0.8776283264160156
+
+00:05:25.336 --> 00:05:26.000
+occurred.
+
+NOTE Confidence: 0.9555535912513733
+
+00:05:26.080 --> 00:05:29.387
+And taking it a step even further, being able to
+
+NOTE Confidence: 0.9555535912513733
+
+00:05:29.456 --> 00:05:34.487
+identify other agents in your ecosystem that have similar vulnerabilities
+
+NOTE Confidence: 0.9555535912513733
+
+00:05:34.556 --> 00:05:38.759
+so that you can mitigate those agents before incidents occur.
+
+NOTE Confidence: 0.935055673122406
+
+00:05:39.560 --> 00:05:42.960
+Now again, I want to do a little quiz.
+
+NOTE Confidence: 0.9272422194480896
+
+00:05:43.320 --> 00:05:44.440
+Raise your hand.
+
+NOTE Confidence: 0.8624175190925598
+
+00:05:44.520 --> 00:05:50.200
+Does Microsoft Agent 365 support all agents?
+
+NOTE Confidence: 0.818459689617157
+
+00:05:50.800 --> 00:05:53.080
+Raise your hand if the answer is yes.
+
+NOTE Confidence: 0.9363998770713806
+
+00:05:54.440 --> 00:05:55.000
+Excellent.
+
+NOTE Confidence: 0.9296826720237732
+
+00:05:55.000 --> 00:05:56.880
+About 50% of you are listening.
+
+NOTE Confidence: 0.7888606190681458
+
+00:05:56.880 --> 00:05:58.924
+OK, for those of you that didn't raise your head,
+
+NOTE Confidence: 0.7888606190681458
+
+00:05:58.965 --> 00:05:59.800
+keep keep listening.
+
+NOTE Confidence: 0.6947157979011536
+
+00:05:59.800 --> 00:06:01.160
+We're going to keep in grading that one.
+
+NOTE Confidence: 0.9573063254356384
+
+00:06:02.320 --> 00:06:05.560
+But how do we do this?
+
+NOTE Confidence: 0.9696252346038818
+
+00:06:05.720 --> 00:06:08.874
+How do we enable these agents that are not built
+
+NOTE Confidence: 0.9696252346038818
+
+00:06:08.940 --> 00:06:10.320
+outside of Microsoft?
+
+NOTE Confidence: 0.9040645360946655
+
+00:06:10.760 --> 00:06:14.200
+The key here is our Agent 365 SDK.
+
+NOTE Confidence: 0.8821726441383362
+
+00:06:14.760 --> 00:06:19.200
+Now, this SDK is not an agent building SDK.
+
+NOTE Confidence: 0.9462276697158813
+
+00:06:19.320 --> 00:06:21.600
+It is not going to host your agent.
+
+NOTE Confidence: 0.8730500340461731
+
+00:06:21.960 --> 00:06:25.939
+It's purely an SDK to wrap your agent and make
+
+NOTE Confidence: 0.8730500340461731
+
+00:06:26.025 --> 00:06:28.880
+it discoverable within Agent 365.
+
+NOTE Confidence: 0.9146934747695923
+
+00:06:29.200 --> 00:06:32.256
+You can provide an agent ID to your agent, you
+
+NOTE Confidence: 0.9146934747695923
+
+00:06:32.322 --> 00:06:36.840
+can enable full observability, you can enable full security policies
+
+NOTE Confidence: 0.9146934747695923
+
+00:06:36.906 --> 00:06:40.029
+to be applied to those agents, and you can take
+
+NOTE Confidence: 0.9146934747695923
+
+00:06:40.095 --> 00:06:44.680
+advantage of our productivity capabilities through our Tools gateway.
+
+NOTE Confidence: 0.9632803797721863
+
+00:06:46.320 --> 00:06:47.720
+But how does this work?
+
+NOTE Confidence: 0.9016070365905762
+
+00:06:47.920 --> 00:06:51.304
+How are we able to not only cover Microsoft agents,
+
+NOTE Confidence: 0.9016070365905762
+
+00:06:51.370 --> 00:06:54.887
+but also these third party agents and common pre bill
+
+NOTE Confidence: 0.9016070365905762
+
+00:06:54.953 --> 00:06:58.006
+agents that we know you are all are using from
+
+NOTE Confidence: 0.9016070365905762
+
+00:06:58.072 --> 00:06:59.400
+different providers?
+
+NOTE Confidence: 0.951725959777832
+
+00:06:59.880 --> 00:07:02.720
+So very simply, it starts at the bottom.
+
+NOTE Confidence: 0.9065399765968323
+
+00:07:03.160 --> 00:07:08.248
+Foundationally, Agent 365 is that end to end governance platform
+
+NOTE Confidence: 0.9065399765968323
+
+00:07:08.328 --> 00:07:13.496
+that allows you to scale and operationalize your agent governance
+
+NOTE Confidence: 0.9065399765968323
+
+00:07:13.575 --> 00:07:16.120
+and management processes, right.
+
+NOTE Confidence: 0.8822516202926636
+
+00:07:16.600 --> 00:07:20.017
+But if you think about Agent 365 as a stool,
+
+NOTE Confidence: 0.8822516202926636
+
+00:07:20.094 --> 00:07:23.511
+the legs of the stool that hold Agent 365 up
+
+NOTE Confidence: 0.8822516202926636
+
+00:07:23.589 --> 00:07:28.559
+are are those trusted security solutions at an enterprise level.
+
+NOTE Confidence: 0.8758124113082886
+
+00:07:28.800 --> 00:07:34.010
+Microsoft Entra for identity management, Defender for risk assessment and
+
+NOTE Confidence: 0.8758124113082886
+
+00:07:34.081 --> 00:07:38.292
+real time threat detection and blocking, as well as Purview
+
+NOTE Confidence: 0.8758124113082886
+
+00:07:38.363 --> 00:07:42.574
+for data governance and then Microsoft Intune for shadow AI
+
+NOTE Confidence: 0.8758124113082886
+
+00:07:42.646 --> 00:07:43.359
+detection.
+
+NOTE Confidence: 0.8988666534423828
+
+00:07:44.600 --> 00:07:48.675
+Now again, we have a plethora of agent solutions available
+
+NOTE Confidence: 0.8988666534423828
+
+00:07:48.745 --> 00:07:52.539
+to you both across Microsoft from all of our different
+
+NOTE Confidence: 0.8988666534423828
+
+00:07:52.610 --> 00:07:56.826
+agent building platforms to the pre build agents like cowork
+
+NOTE Confidence: 0.8988666534423828
+
+00:07:56.896 --> 00:07:57.879
+or researcher.
+
+NOTE Confidence: 0.9546446800231934
+
+00:07:58.320 --> 00:08:02.575
+We also have common really valuable agent solutions that we
+
+NOTE Confidence: 0.9546446800231934
+
+00:08:02.647 --> 00:08:06.975
+know that you all are leveraging from third party providers,
+
+NOTE Confidence: 0.9546446800231934
+
+00:08:07.047 --> 00:08:07.479
+right?
+
+NOTE Confidence: 0.9178907871246338
+
+00:08:07.720 --> 00:08:10.871
+We know our customers have a very heterogeneous mix of
+
+NOTE Confidence: 0.9178907871246338
+
+00:08:10.929 --> 00:08:12.679
+agents that you're leveraging.
+
+NOTE Confidence: 0.9086332321166992
+
+00:08:13.240 --> 00:08:16.642
+We also know that where you can't find a solution
+
+NOTE Confidence: 0.9086332321166992
+
+00:08:16.712 --> 00:08:21.434
+immediately, you're building your own custom agents on the platforms
+
+NOTE Confidence: 0.9086332321166992
+
+00:08:21.504 --> 00:08:26.296
+of your choice across different clouds and across different solutions
+
+NOTE Confidence: 0.9086332321166992
+
+00:08:26.365 --> 00:08:30.879
+like Lang chain agents, you're building on AWS, Gemini, etcetera.
+
+NOTE Confidence: 0.9650084376335144
+
+00:08:31.960 --> 00:08:35.215
+And then lastly, we know that there are really common
+
+NOTE Confidence: 0.9650084376335144
+
+00:08:35.276 --> 00:08:38.101
+platforms that it would be great to be able to
+
+NOTE Confidence: 0.9650084376335144
+
+00:08:38.163 --> 00:08:41.479
+automate and ingest the agents across these platforms.
+
+NOTE Confidence: 0.9465997815132141
+
+00:08:42.040 --> 00:08:45.172
+So lots of agents we need to cover with Agent
+
+NOTE Confidence: 0.9465997815132141
+
+00:08:45.242 --> 00:08:47.399
+365 and we are able to do that.
+
+NOTE Confidence: 0.9181895852088928
+
+00:08:48.480 --> 00:08:51.943
+So within Microsoft, all of the agents built on Microsoft
+
+NOTE Confidence: 0.9181895852088928
+
+00:08:52.004 --> 00:08:55.164
+have a native experience inside of Agent 365 S right
+
+NOTE Confidence: 0.9181895852088928
+
+00:08:55.225 --> 00:08:59.357
+out-of-the-box, you're going to see every single agent, whether it's
+
+NOTE Confidence: 0.9181895852088928
+
+00:08:59.417 --> 00:09:02.760
+in a draft state or it's fully produced into production
+
+NOTE Confidence: 0.9181895852088928
+
+00:09:02.820 --> 00:09:05.920
+and whether changes are occurring real time, right?
+
+NOTE Confidence: 0.9028041362762451
+
+00:09:05.920 --> 00:09:08.591
+You're going to have access to all of that data,
+
+NOTE Confidence: 0.9028041362762451
+
+00:09:08.647 --> 00:09:11.708
+all of that observability data, you're going to be able
+
+NOTE Confidence: 0.9028041362762451
+
+00:09:11.764 --> 00:09:15.771
+to apply those policy templates, those security guardrails, You're going
+
+NOTE Confidence: 0.9028041362762451
+
+00:09:15.827 --> 00:09:18.387
+to be able to take action, right, All of those
+
+NOTE Confidence: 0.9028041362762451
+
+00:09:18.443 --> 00:09:20.280
+pieces with no additional effort.
+
+NOTE Confidence: 0.9585673809051514
+
+00:09:20.960 --> 00:09:23.709
+You're going to be able to do the same for
+
+NOTE Confidence: 0.9585673809051514
+
+00:09:23.774 --> 00:09:27.440
+some of our third party partner agent solutions as well.
+
+NOTE Confidence: 0.9154998064041138
+
+00:09:28.000 --> 00:09:32.005
+We are building an agent ecosystem with these partners to
+
+NOTE Confidence: 0.9154998064041138
+
+00:09:32.075 --> 00:09:36.010
+proactively extend our SDK and enable an agent ID within
+
+NOTE Confidence: 0.9154998064041138
+
+00:09:36.081 --> 00:09:41.000
+those agents and enable that observability capabilities and much more.
+
+NOTE Confidence: 0.9026256799697876
+
+00:09:41.000 --> 00:09:43.176
+And you're going to hear from one of such of
+
+NOTE Confidence: 0.9026256799697876
+
+00:09:43.225 --> 00:09:45.599
+our partners at the end of this session as well.
+
+NOTE Confidence: 0.8737748265266418
+
+00:09:46.800 --> 00:09:50.300
+Now for those custom agents, right, the agents that you
+
+NOTE Confidence: 0.8737748265266418
+
+00:09:50.364 --> 00:09:54.247
+are building on link chain, as I mentioned, you're leveraging
+
+NOTE Confidence: 0.8737748265266418
+
+00:09:54.310 --> 00:09:55.520
+another SDK, right?
+
+NOTE Confidence: 0.8657371401786804
+
+00:09:55.520 --> 00:09:58.240
+You're leveraging an AWS cloud solution.
+
+NOTE Confidence: 0.834780216217041
+
+00:09:58.600 --> 00:10:02.205
+You can onboard these agents with an Agent 365 with
+
+NOTE Confidence: 0.834780216217041
+
+00:10:02.276 --> 00:10:04.680
+that SDK that I mentioned earlier.
+
+NOTE Confidence: 0.9011812210083008
+
+00:10:06.160 --> 00:10:09.934
+And with this SDK you're going to get things like
+
+NOTE Confidence: 0.9011812210083008
+
+00:10:10.011 --> 00:10:16.404
+identity, observability tools, messaging, threat protection, governance, as well as
+
+NOTE Confidence: 0.9011812210083008
+
+00:10:16.481 --> 00:10:17.560
+data security.
+
+NOTE Confidence: 0.9309535622596741
+
+00:10:17.559 --> 00:10:21.528
+So it is a comprehensive SDK that gives you everything
+
+NOTE Confidence: 0.9309535622596741
+
+00:10:21.602 --> 00:10:25.497
+you need, but also the flexibility to onboard only to
+
+NOTE Confidence: 0.9309535622596741
+
+00:10:25.571 --> 00:10:26.600
+what you want.
+
+NOTE Confidence: 0.9441797733306885
+
+00:10:28.280 --> 00:10:31.359
+And then this last piece here, within our connected agent
+
+NOTE Confidence: 0.9441797733306885
+
+00:10:31.413 --> 00:10:34.546
+platforms, you're able to do this through a feature called
+
+NOTE Confidence: 0.9441797733306885
+
+00:10:34.600 --> 00:10:37.355
+Registry Sync, which I will take you through in the
+
+NOTE Confidence: 0.9441797733306885
+
+00:10:37.409 --> 00:10:37.679
+demo.
+
+NOTE Confidence: 0.9023322463035583
+
+00:10:38.160 --> 00:10:43.235
+Registry Sync essentially allows us to take your permissions, your
+
+NOTE Confidence: 0.9023322463035583
+
+00:10:43.311 --> 00:10:48.848
+credentials across these platforms like Amazon Bedrock and Google Vertex
+
+NOTE Confidence: 0.9023322463035583
+
+00:10:48.925 --> 00:10:53.077
+AI and ingest those agents into the registry, but only
+
+NOTE Confidence: 0.9023322463035583
+
+00:10:53.154 --> 00:10:55.000
+for visibility purposes.
+
+NOTE Confidence: 0.9041619300842285
+
+00:10:55.240 --> 00:10:59.356
+And then any governance capabilities or permissions that you have
+
+NOTE Confidence: 0.9041619300842285
+
+00:10:59.420 --> 00:11:03.726
+across these platforms, you will also have those capabilities inside
+
+NOTE Confidence: 0.9041619300842285
+
+00:11:03.790 --> 00:11:05.120
+of Agent 365 as well.
+
+NOTE Confidence: 0.9576964378356934
+
+00:11:06.880 --> 00:11:09.785
+And I know as much as you guys really love
+
+NOTE Confidence: 0.9576964378356934
+
+00:11:09.855 --> 00:11:12.899
+slides, I'm going to have to bore you with a
+
+NOTE Confidence: 0.9576964378356934
+
+00:11:12.968 --> 00:11:14.559
+really incredible demo.
+
+NOTE Confidence: 0.9617529511451721
+
+00:11:15.080 --> 00:11:17.748
+But before we get to that demo, I do want
+
+NOTE Confidence: 0.9617529511451721
+
+00:11:17.813 --> 00:11:20.807
+to give you some terms that are new terms, but
+
+NOTE Confidence: 0.9617529511451721
+
+00:11:20.872 --> 00:11:25.038
+really fundamental for your understanding and setting you up for
+
+NOTE Confidence: 0.9617529511451721
+
+00:11:25.103 --> 00:11:26.079
+success, right?
+
+NOTE Confidence: 0.9517490267753601
+
+00:11:26.400 --> 00:11:28.320
+So the first term is an agent blueprint.
+
+NOTE Confidence: 0.9144793748855591
+
+00:11:28.520 --> 00:11:31.944
+Now, the best way to think about an agent blueprint
+
+NOTE Confidence: 0.9144793748855591
+
+00:11:32.011 --> 00:11:35.436
+is a reusable instruction for an agent that lets it
+
+NOTE Confidence: 0.9144793748855591
+
+00:11:35.503 --> 00:11:39.196
+know what tools, what data it can leverage, what rules,
+
+NOTE Confidence: 0.9144793748855591
+
+00:11:39.264 --> 00:11:41.480
+and what guardrails are in place.
+
+NOTE Confidence: 0.9628989696502686
+
+00:11:41.480 --> 00:11:44.880
+Think about this similar to an agent recipe, right?
+
+NOTE Confidence: 0.9241212010383606
+
+00:11:45.120 --> 00:11:48.760
+That other agents and agent identities can be created from.
+
+NOTE Confidence: 0.9136332273483276
+
+00:11:49.480 --> 00:11:54.383
+Now an agent identity is simply taking an agent identity
+
+NOTE Confidence: 0.9136332273483276
+
+00:11:54.470 --> 00:11:59.286
+and up leveling it from a service principal identity so
+
+NOTE Confidence: 0.9136332273483276
+
+00:11:59.374 --> 00:12:03.227
+that it is more in line with a user identity
+
+NOTE Confidence: 0.9136332273483276
+
+00:12:03.314 --> 00:12:03.840
+level.
+
+NOTE Confidence: 0.977912187576294
+
+00:12:03.880 --> 00:12:04.200
+Right?
+
+NOTE Confidence: 0.9590454697608948
+
+00:12:04.200 --> 00:12:07.760
+Because agents are unique, they are essentially apps.
+
+NOTE Confidence: 0.8902766704559326
+
+00:12:07.760 --> 00:12:11.093
+They're built like apps, but the caveat here is they
+
+NOTE Confidence: 0.8902766704559326
+
+00:12:11.157 --> 00:12:12.439
+function like users.
+
+NOTE Confidence: 0.958824098110199
+
+00:12:12.679 --> 00:12:16.606
+So you need to have an identity that is appropriate
+
+NOTE Confidence: 0.958824098110199
+
+00:12:16.683 --> 00:12:19.840
+for their function within your ecosystem.
+
+NOTE Confidence: 0.872749924659729
+
+00:12:19.840 --> 00:12:24.660
+And agent identity is specifically created to support agents in
+
+NOTE Confidence: 0.872749924659729
+
+00:12:24.737 --> 00:12:25.119
+this.
+
+NOTE Confidence: 0.9337118268013
+
+00:12:25.960 --> 00:12:29.683
+Now these agent identities can be authenticated in two different
+
+NOTE Confidence: 0.9337118268013
+
+00:12:29.741 --> 00:12:30.439
+ways, right?
+
+NOTE Confidence: 0.9582487344741821
+
+00:12:30.840 --> 00:12:33.600
+We have agents that work on behalf of the users.
+
+NOTE Confidence: 0.8667628169059753
+
+00:12:33.679 --> 00:12:37.700
+So essentially when a user invokes that agent, that agent
+
+NOTE Confidence: 0.8667628169059753
+
+00:12:37.770 --> 00:12:42.354
+assumes that users credentials passes that credential as the auth
+
+NOTE Confidence: 0.8667628169059753
+
+00:12:42.425 --> 00:12:46.586
+token and the appropriate permissions of that user as well,
+
+NOTE Confidence: 0.8667628169059753
+
+00:12:46.656 --> 00:12:47.080
+right?
+
+NOTE Confidence: 0.9205154776573181
+
+00:12:47.080 --> 00:12:50.520
+When it comes to information retrieval or task completion.
+
+NOTE Confidence: 0.9293804168701172
+
+00:12:51.160 --> 00:12:54.575
+But we also have another way that agents can maintain
+
+NOTE Confidence: 0.9293804168701172
+
+00:12:54.640 --> 00:12:58.828
+their identity, and that's by leveraging their own user identity,
+
+NOTE Confidence: 0.9293804168701172
+
+00:12:58.893 --> 00:12:59.280
+right?
+
+NOTE Confidence: 0.5839436650276184
+
+00:12:59.280 --> 00:13:01.640
+And agent user identity.
+
+NOTE Confidence: 0.9288328289985657
+
+00:13:02.280 --> 00:13:06.446
+What happens here is that agent maintains their own identity
+
+NOTE Confidence: 0.9288328289985657
+
+00:13:06.516 --> 00:13:10.544
+and their own permissions, and they pass that identity for
+
+NOTE Confidence: 0.9288328289985657
+
+00:13:10.613 --> 00:13:15.127
+authentication, and they're able to function on their own without
+
+NOTE Confidence: 0.9288328289985657
+
+00:13:15.197 --> 00:13:18.599
+working on behalf of a user, if that makes sense.
+
+NOTE Confidence: 0.92960524559021
+
+00:13:19.559 --> 00:13:23.685
+OK, with those two terms in your back pocket, we
+
+NOTE Confidence: 0.92960524559021
+
+00:13:23.771 --> 00:13:25.919
+will now get to the demo.
+
+NOTE Confidence: 0.8700008392333984
+
+00:13:25.920 --> 00:13:28.684
+Aarthi, I would love to invite you on stage to
+
+NOTE Confidence: 0.8700008392333984
+
+00:13:28.744 --> 00:13:32.050
+take us through an incredible demo where we're going to
+
+NOTE Confidence: 0.8700008392333984
+
+00:13:32.110 --> 00:13:34.514
+take you end to end to see your agent in
+
+NOTE Confidence: 0.8700008392333984
+
+00:13:34.574 --> 00:13:37.520
+action on board, an agent with our SDK, and more.
+
+NOTE Confidence: 0.9587351679801941
+
+00:13:40.400 --> 00:13:42.480
+Hello everyone, let's get started.
+
+NOTE Confidence: 0.935137152671814
+
+00:13:42.720 --> 00:13:45.112
+You have to listen closely because I'm going to wear
+
+NOTE Confidence: 0.935137152671814
+
+00:13:45.158 --> 00:13:46.400
+quite a few different hats.
+
+NOTE Confidence: 0.8197205066680908
+
+00:13:46.760 --> 00:13:49.840
+I'm starting out as an agent developer.
+
+NOTE Confidence: 0.863655686378479
+
+00:13:49.840 --> 00:13:53.680
+I am in my favorite code editor.
+
+NOTE Confidence: 0.7740740776062012
+
+00:13:53.680 --> 00:13:54.600
+I am in VS Code.
+
+NOTE Confidence: 0.9383341670036316
+
+00:13:54.760 --> 00:13:56.360
+This is a travel agent.
+
+NOTE Confidence: 0.7232295274734497
+
+00:13:56.360 --> 00:13:59.445
+Its built on Lang chain using node JS like Kendra
+
+NOTE Confidence: 0.7232295274734497
+
+00:13:59.508 --> 00:13:59.759
+did.
+
+NOTE Confidence: 0.7785683870315552
+
+00:13:59.760 --> 00:14:02.541
+Agent 365 is more than more for just just in
+
+NOTE Confidence: 0.7785683870315552
+
+00:14:02.604 --> 00:14:06.650
+Microsoft built agents and that's why we specifically chose Lang
+
+NOTE Confidence: 0.7785683870315552
+
+00:14:06.713 --> 00:14:08.800
+chain as an example for the stem.
+
+NOTE Confidence: 0.8953224420547485
+
+00:14:09.280 --> 00:14:11.880
+This travel agent is helpful.
+
+NOTE Confidence: 0.7441251873970032
+
+00:14:12.200 --> 00:14:15.880
+It given a source and a destination and travel dates.
+
+NOTE Confidence: 0.918333113193512
+
+00:14:15.880 --> 00:14:19.570
+It gives me 3 suggestions for hotels, 3 suggestions for
+
+NOTE Confidence: 0.918333113193512
+
+00:14:19.637 --> 00:14:22.120
+flights and maybe restaurants, right?
+
+NOTE Confidence: 0.9057591557502747
+
+00:14:22.680 --> 00:14:25.863
+I have tested this agent here and if you see,
+
+NOTE Confidence: 0.9057591557502747
+
+00:14:25.933 --> 00:14:29.399
+I invoked this agent and I got some results here.
+
+NOTE Confidence: 0.8839746117591858
+
+00:14:29.400 --> 00:14:31.600
+Let me just scroll this up so you can see.
+
+NOTE Confidence: 0.8446480631828308
+
+00:14:32.000 --> 00:14:34.794
+Yeah, I got 3 airlines from Seattle, so San Francisco
+
+NOTE Confidence: 0.8446480631828308
+
+00:14:34.847 --> 00:14:36.639
+for build, and I have hotels here.
+
+NOTE Confidence: 0.8860385417938232
+
+00:14:37.120 --> 00:14:41.124
+Now you're asked to make this agent ready for Agent
+
+NOTE Confidence: 0.8860385417938232
+
+00:14:41.202 --> 00:14:43.480
+365 configured for Agent 365.
+
+NOTE Confidence: 0.8347419500350952
+
+00:14:43.480 --> 00:14:44.400
+What does that entail?
+
+NOTE Confidence: 0.8807685971260071
+
+00:14:45.080 --> 00:14:48.144
+Now, Kendra introduced quite a few concepts, and if you
+
+NOTE Confidence: 0.8807685971260071
+
+00:14:48.200 --> 00:14:50.818
+had to stitch together all of this on your own,
+
+NOTE Confidence: 0.8807685971260071
+
+00:14:50.874 --> 00:14:51.320
+you can.
+
+NOTE Confidence: 0.7256906628608704
+
+00:14:51.320 --> 00:14:52.800
+We have excellent learned dogs.
+
+NOTE Confidence: 0.8769832253456116
+
+00:14:52.800 --> 00:14:54.675
+We have samples out there that you can do this
+
+NOTE Confidence: 0.8769832253456116
+
+00:14:54.716 --> 00:14:54.919
+with.
+
+NOTE Confidence: 0.9623597860336304
+
+00:14:55.320 --> 00:14:58.773
+But all of you have probably heard about skills and
+
+NOTE Confidence: 0.9623597860336304
+
+00:14:58.841 --> 00:15:01.889
+how coding agents can do some of our jobs for
+
+NOTE Confidence: 0.9623597860336304
+
+00:15:01.956 --> 00:15:02.159
+us.
+
+NOTE Confidence: 0.8658926486968994
+
+00:15:02.160 --> 00:15:05.160
+And so we decided that we will ship some very
+
+NOTE Confidence: 0.8658926486968994
+
+00:15:05.226 --> 00:15:06.960
+specific Agent 365 skills.
+
+NOTE Confidence: 0.8878434300422668
+
+00:15:07.640 --> 00:15:10.527
+I'm going to show you how you can maybe invoke
+
+NOTE Confidence: 0.8878434300422668
+
+00:15:10.590 --> 00:15:12.160
+them from VS Code, right?
+
+NOTE Confidence: 0.840806782245636
+
+00:15:12.160 --> 00:15:16.720
+I'm doing slash skills and I'm doing agent 365.
+
+NOTE Confidence: 0.8798912167549133
+
+00:15:16.840 --> 00:15:19.014
+And I see, oh, OK, there are a few skills,
+
+NOTE Confidence: 0.8798912167549133
+
+00:15:19.066 --> 00:15:21.552
+but the rest of this execution I'm going to show
+
+NOTE Confidence: 0.8798912167549133
+
+00:15:21.603 --> 00:15:24.399
+you just because it takes, we are making code changes.
+
+NOTE Confidence: 0.825146496295929
+
+00:15:24.400 --> 00:15:26.794
+It takes about 10 minutes to run and I'll consume
+
+NOTE Confidence: 0.825146496295929
+
+00:15:26.842 --> 00:15:29.285
+the rest of your demo and still the developer, but
+
+NOTE Confidence: 0.825146496295929
+
+00:15:29.334 --> 00:15:31.240
+I just switched to GitHub copilot here.
+
+NOTE Confidence: 0.7575112581253052
+
+00:15:31.480 --> 00:15:32.560
+You can use cloud code.
+
+NOTE Confidence: 0.9543370604515076
+
+00:15:32.560 --> 00:15:34.880
+You can use your favorite coding agent of choice.
+
+NOTE Confidence: 0.844744861125946
+
+00:15:34.880 --> 00:15:35.680
+Does not matter.
+
+NOTE Confidence: 0.835465133190155
+
+00:15:36.280 --> 00:15:37.800
+Let's look through what are these skills.
+
+NOTE Confidence: 0.7411185503005981
+
+00:15:38.200 --> 00:15:40.314
+OK, there seem to be like 6 skills that we
+
+NOTE Confidence: 0.7411185503005981
+
+00:15:40.364 --> 00:15:42.679
+should, we are keep constantly adding to this.
+
+NOTE Confidence: 0.907307505607605
+
+00:15:42.680 --> 00:15:44.800
+So keep an eye out right?
+
+NOTE Confidence: 0.9122401475906372
+
+00:15:45.120 --> 00:15:48.080
+There are these two make skills which are really interesting.
+
+NOTE Confidence: 0.9115217924118042
+
+00:15:48.160 --> 00:15:49.920
+The other skills are kind of piece meal.
+
+NOTE Confidence: 0.8844043016433716
+
+00:15:50.120 --> 00:15:51.360
+You can just do the setup.
+
+NOTE Confidence: 0.8813296556472778
+
+00:15:51.360 --> 00:15:53.280
+Why you get an identity for your agent.
+
+NOTE Confidence: 0.7655426859855652
+
+00:15:53.720 --> 00:15:57.155
+You can just instrument observability, which let's your agents emit
+
+NOTE Confidence: 0.7655426859855652
+
+00:15:57.207 --> 00:15:57.720
+telemetry.
+
+NOTE Confidence: 0.892208993434906
+
+00:15:58.240 --> 00:16:01.080
+You can also optionally add like work IQ servers.
+
+NOTE Confidence: 0.8678564429283142
+
+00:16:01.080 --> 00:16:03.886
+What this lets you do is have your agent interact
+
+NOTE Confidence: 0.8678564429283142
+
+00:16:03.944 --> 00:16:05.720
+with your productivity surface.
+
+NOTE Confidence: 0.9513580203056335
+
+00:16:05.840 --> 00:16:08.240
+Like your agent can create a document.
+
+NOTE Confidence: 0.8730618357658386
+
+00:16:08.240 --> 00:16:11.478
+Your agent can like have its own calendar that it
+
+NOTE Confidence: 0.8730618357658386
+
+00:16:11.544 --> 00:16:12.800
+accesses and so on.
+
+NOTE Confidence: 0.8484492897987366
+
+00:16:13.200 --> 00:16:15.896
+You can test locally, but the path that I'm going
+
+NOTE Confidence: 0.8484492897987366
+
+00:16:15.951 --> 00:16:18.151
+to show you for the rest of this demo is
+
+NOTE Confidence: 0.8484492897987366
+
+00:16:18.206 --> 00:16:20.903
+going to be how we make this agent essentially an
+
+NOTE Confidence: 0.8484492897987366
+
+00:16:20.958 --> 00:16:24.314
+employee in your organization have its own user identity like
+
+NOTE Confidence: 0.8484492897987366
+
+00:16:24.369 --> 00:16:25.799
+Kendra talk about without.
+
+NOTE Confidence: 0.8542841076850891
+
+00:16:25.800 --> 00:16:28.575
+Let's take a look now the skill starts out by
+
+NOTE Confidence: 0.8542841076850891
+
+00:16:28.637 --> 00:16:30.919
+determining what your agent stack is.
+
+NOTE Confidence: 0.9416065812110901
+
+00:16:30.920 --> 00:16:33.901
+You don't provide much of an input except starting from
+
+NOTE Confidence: 0.9416065812110901
+
+00:16:33.956 --> 00:16:36.883
+your agent folder and saying make this agent ready for
+
+NOTE Confidence: 0.9416065812110901
+
+00:16:36.937 --> 00:16:37.479
+agent 365.
+
+NOTE Confidence: 0.852280855178833
+
+00:16:37.800 --> 00:16:39.480
+We determined that this is your stack.
+
+NOTE Confidence: 0.6055521965026855
+
+00:16:39.640 --> 00:16:41.240
+No JS LAN chain looks great.
+
+NOTE Confidence: 0.6851193904876709
+
+00:16:41.440 --> 00:16:42.960
+It is a TypeScript agent.
+
+NOTE Confidence: 0.7298200130462646
+
+00:16:43.160 --> 00:16:45.253
+It even determines because this is the coding agent and
+
+NOTE Confidence: 0.7298200130462646
+
+00:16:45.292 --> 00:16:46.319
+attach access to your code.
+
+NOTE Confidence: 0.8772962093353271
+
+00:16:46.320 --> 00:16:48.240
+It knows what it does, right?
+
+NOTE Confidence: 0.7087483406066895
+
+00:16:48.400 --> 00:16:50.136
+But then it determines, oh, you, this is the first
+
+NOTE Confidence: 0.7087483406066895
+
+00:16:50.171 --> 00:16:51.040
+time you're running this.
+
+NOTE Confidence: 0.8641528487205505
+
+00:16:52.120 --> 00:16:54.389
+I'm going to scroll a little bit just because this
+
+NOTE Confidence: 0.8641528487205505
+
+00:16:54.434 --> 00:16:56.431
+is a lot of like coding agent output so bare
+
+NOTE Confidence: 0.8641528487205505
+
+00:16:56.476 --> 00:16:56.839
+with me.
+
+NOTE Confidence: 0.8540520668029785
+
+00:16:57.240 --> 00:16:59.920
+And the first thing we checked for is prerequisites right?
+
+NOTE Confidence: 0.9613586664199829
+
+00:17:00.080 --> 00:17:01.960
+We have all done this in the past.
+
+NOTE Confidence: 0.5803735256195068
+
+00:17:02.280 --> 00:17:03.080
+That's a package.
+
+NOTE Confidence: 0.9070978164672852
+
+00:17:03.080 --> 00:17:05.160
+You need to download the package.
+
+NOTE Confidence: 0.8653210997581482
+
+00:17:05.200 --> 00:17:08.480
+All the dependencies have your machine set up exactly right.
+
+NOTE Confidence: 0.9612510204315186
+
+00:17:08.480 --> 00:17:08.920
+Good to go.
+
+NOTE Confidence: 0.79100102186203
+
+00:17:09.320 --> 00:17:09.760
+Its good.
+
+NOTE Confidence: 0.8075029253959656
+
+00:17:09.760 --> 00:17:13.400
+Looks like some developers updated our Agent 365 CLI.
+
+NOTE Confidence: 0.896722674369812
+
+00:17:13.400 --> 00:17:16.652
+So my coding agent picked the latest version here and
+
+NOTE Confidence: 0.896722674369812
+
+00:17:16.713 --> 00:17:17.879
+this is my account.
+
+NOTE Confidence: 0.7865941524505615
+
+00:17:17.880 --> 00:17:20.600
+This is I've already logged in through Azure CLI.
+
+NOTE Confidence: 0.9325015544891357
+
+00:17:20.600 --> 00:17:23.468
+This is the target tenant to which your agent is
+
+NOTE Confidence: 0.9325015544891357
+
+00:17:23.528 --> 00:17:25.560
+going to be enabled for Agent 365.
+
+NOTE Confidence: 0.9366811513900757
+
+00:17:25.880 --> 00:17:27.040
+Great, all this looks great.
+
+NOTE Confidence: 0.9398589134216309
+
+00:17:27.480 --> 00:17:29.789
+The coding agent has come up with a detailed plan
+
+NOTE Confidence: 0.9398589134216309
+
+00:17:29.836 --> 00:17:30.919
+on what it needs to do.
+
+NOTE Confidence: 0.955051064491272
+
+00:17:31.320 --> 00:17:32.440
+So let's see what it does.
+
+NOTE Confidence: 0.8972253799438477
+
+00:17:32.760 --> 00:17:36.120
+OK, it says it needs to install required agent packages.
+
+NOTE Confidence: 0.7661430239677429
+
+00:17:36.320 --> 00:17:38.687
+It's going to add a valid build and then it's
+
+NOTE Confidence: 0.7661430239677429
+
+00:17:38.740 --> 00:17:42.160
+going to add observability work, IQ register, publish and deploy.
+
+NOTE Confidence: 0.9407027959823608
+
+00:17:42.240 --> 00:17:43.320
+That looks pretty good to me.
+
+NOTE Confidence: 0.9177207350730896
+
+00:17:43.720 --> 00:17:46.320
+So let's see what it ended up doing, right?
+
+NOTE Confidence: 0.740919291973114
+
+00:17:47.080 --> 00:17:50.413
+This ran for about 10:00-ish minutes when I ran it
+
+NOTE Confidence: 0.740919291973114
+
+00:17:50.479 --> 00:17:52.479
+outside, outside of this demo.
+
+NOTE Confidence: 0.8991832137107849
+
+00:17:52.840 --> 00:17:56.285
+And at the end I had like a fully extended
+
+NOTE Confidence: 0.8991832137107849
+
+00:17:56.367 --> 00:17:57.680
+Agent 365 agent.
+
+NOTE Confidence: 0.9283221364021301
+
+00:17:57.880 --> 00:17:58.760
+Its ready to go.
+
+NOTE Confidence: 0.9712963104248047
+
+00:17:59.120 --> 00:17:59.560
+Of course.
+
+NOTE Confidence: 0.9011101722717285
+
+00:17:59.560 --> 00:18:01.504
+I mean, as a developer, you're going to test this
+
+NOTE Confidence: 0.9011101722717285
+
+00:18:01.544 --> 00:18:04.163
+locally, you're going to make some tweaks because nothing, nothing
+
+NOTE Confidence: 0.9011101722717285
+
+00:18:04.203 --> 00:18:04.639
+is perfect.
+
+NOTE Confidence: 0.8965792655944824
+
+00:18:04.880 --> 00:18:06.600
+But you see all the steps that it did.
+
+NOTE Confidence: 0.9372400045394897
+
+00:18:06.680 --> 00:18:09.671
+It created a blueprint, which is what Kendra was introducing
+
+NOTE Confidence: 0.9372400045394897
+
+00:18:09.721 --> 00:18:10.119
+earlier.
+
+NOTE Confidence: 0.9078165292739868
+
+00:18:10.359 --> 00:18:13.740
+The actual agent identity gets created when your agent gets
+
+NOTE Confidence: 0.9078165292739868
+
+00:18:13.797 --> 00:18:16.719
+activated by your admin and Microsoft Admin Center.
+
+NOTE Confidence: 0.9049643278121948
+
+00:18:17.080 --> 00:18:21.280
+It configured the observability work IQ.
+
+NOTE Confidence: 0.8417551517486572
+
+00:18:21.280 --> 00:18:23.838
+I made a choice that I want Word and OneDrive,
+
+NOTE Confidence: 0.8417551517486572
+
+00:18:23.893 --> 00:18:26.840
+so it configured those MCP servers for me and there's
+
+NOTE Confidence: 0.8417551517486572
+
+00:18:26.896 --> 00:18:28.119
+a manifest good to go.
+
+NOTE Confidence: 0.9550276398658752
+
+00:18:28.600 --> 00:18:31.325
+Now I would hand this off to my admin and
+
+NOTE Confidence: 0.9550276398658752
+
+00:18:31.392 --> 00:18:33.519
+say OK, I want this agent ready.
+
+NOTE Confidence: 0.8728808164596558
+
+00:18:33.520 --> 00:18:37.257
+In this tenant, you choose whether this agent is shared
+
+NOTE Confidence: 0.8728808164596558
+
+00:18:37.325 --> 00:18:40.246
+with a subset of users or all users and you
+
+NOTE Confidence: 0.8728808164596558
+
+00:18:40.314 --> 00:18:43.644
+assign and at that point you, your agent is ready
+
+NOTE Confidence: 0.8728808164596558
+
+00:18:43.712 --> 00:18:44.119
+to go.
+
+NOTE Confidence: 0.8246987462043762
+
+00:18:44.480 --> 00:18:47.240
+Now I'm shifting personas a little.
+
+NOTE Confidence: 0.7901772260665894
+
+00:18:47.680 --> 00:18:50.600
+So now I am an agent user, right?
+
+NOTE Confidence: 0.9637043476104736
+
+00:18:50.760 --> 00:18:51.840
+This is my tenant.
+
+NOTE Confidence: 0.9447975158691406
+
+00:18:51.880 --> 00:18:55.141
+I am using Teams within my tenant and I can
+
+NOTE Confidence: 0.9447975158691406
+
+00:18:55.217 --> 00:18:58.403
+go to the list of apps available and I can
+
+NOTE Confidence: 0.9447975158691406
+
+00:18:58.478 --> 00:18:59.920
+create an instance.
+
+NOTE Confidence: 0.948265016078949
+
+00:18:59.960 --> 00:19:04.202
+This is what creates my own version of this agent
+
+NOTE Confidence: 0.948265016078949
+
+00:19:04.289 --> 00:19:07.320
+which is reporting up to me, right?
+
+NOTE Confidence: 0.9526817202568054
+
+00:19:07.880 --> 00:19:10.343
+So you would have seen agents being used from Teams
+
+NOTE Confidence: 0.9526817202568054
+
+00:19:10.391 --> 00:19:12.710
+before, and this agent can be used from Teams as
+
+NOTE Confidence: 0.9526817202568054
+
+00:19:12.758 --> 00:19:12.999
+well.
+
+NOTE Confidence: 0.8847805857658386
+
+00:19:13.000 --> 00:19:16.128
+Let me just copy over my prom so you can
+
+NOTE Confidence: 0.8847805857658386
+
+00:19:16.206 --> 00:19:18.239
+see what I'm trying to do.
+
+NOTE Confidence: 0.8681294918060303
+
+00:19:18.680 --> 00:19:20.554
+And remember when I asked it to plan a trip
+
+NOTE Confidence: 0.8681294918060303
+
+00:19:20.597 --> 00:19:22.080
+right after Bill for me to Austin.
+
+NOTE Confidence: 0.845409095287323
+
+00:19:22.080 --> 00:19:25.200
+Now I'm doing this here from within Teams.
+
+NOTE Confidence: 0.873119056224823
+
+00:19:26.440 --> 00:19:28.486
+I'll scroll up so you don't need to keep waiting
+
+NOTE Confidence: 0.873119056224823
+
+00:19:28.529 --> 00:19:30.490
+for the agent to reply, but I'll also show you
+
+NOTE Confidence: 0.873119056224823
+
+00:19:30.533 --> 00:19:30.959
+its reply.
+
+NOTE Confidence: 0.8955462574958801
+
+00:19:31.400 --> 00:19:34.619
+I've intentionally asked this agent to provide a response and
+
+NOTE Confidence: 0.8955462574958801
+
+00:19:34.672 --> 00:19:36.519
+also create a Word document for me.
+
+NOTE Confidence: 0.9654921889305115
+
+00:19:36.800 --> 00:19:38.896
+And that's because I want to show you how I
+
+NOTE Confidence: 0.9654921889305115
+
+00:19:38.945 --> 00:19:40.360
+can interact with this agent.
+
+NOTE Confidence: 0.9283173084259033
+
+00:19:40.600 --> 00:19:42.440
+You all interact with your colleagues.
+
+NOTE Confidence: 0.9415221214294434
+
+00:19:42.680 --> 00:19:45.432
+You don't always interact with them just over Teams or
+
+NOTE Confidence: 0.9415221214294434
+
+00:19:45.483 --> 00:19:45.839
+e-mail.
+
+NOTE Confidence: 0.8193616271018982
+
+00:19:46.000 --> 00:19:48.772
+Sometimes you're working collaborating on a document and you at
+
+NOTE Confidence: 0.8193616271018982
+
+00:19:48.816 --> 00:19:51.280
+mentioned your colleague because that's just contextual.
+
+NOTE Confidence: 0.8488011360168457
+
+00:19:51.280 --> 00:19:54.085
+It will be kind of weird to switch to Teams
+
+NOTE Confidence: 0.8488011360168457
+
+00:19:54.150 --> 00:19:56.760
+and ask your teammate how to to respond.
+
+NOTE Confidence: 0.8446986675262451
+
+00:19:57.080 --> 00:19:59.120
+So here, OK, this looks pretty good.
+
+NOTE Confidence: 0.8940010666847229
+
+00:19:59.200 --> 00:20:02.976
+I'll probably take the Southwest and maybe the Marriott looks
+
+NOTE Confidence: 0.8940010666847229
+
+00:20:03.038 --> 00:20:07.000
+very good and there are some restaurants which look interesting.
+
+NOTE Confidence: 0.9203022122383118
+
+00:20:07.359 --> 00:20:10.008
+So yeah, I got almost the same reply and it
+
+NOTE Confidence: 0.9203022122383118
+
+00:20:10.070 --> 00:20:13.273
+has created an editable Word document for us to work
+
+NOTE Confidence: 0.9203022122383118
+
+00:20:13.335 --> 00:20:13.519
+on.
+
+NOTE Confidence: 0.947563886642456
+
+00:20:13.720 --> 00:20:16.120
+So let me switch over to the Word document.
+
+NOTE Confidence: 0.8234877586364746
+
+00:20:16.520 --> 00:20:19.544
+Now you have, as you see, I've interacted with this
+
+NOTE Confidence: 0.8234877586364746
+
+00:20:19.603 --> 00:20:22.390
+agent a few times before, but the cool thing is
+
+NOTE Confidence: 0.8234877586364746
+
+00:20:22.449 --> 00:20:23.279
+now I can say.
+
+NOTE Confidence: 0.6759738326072693
+
+00:20:24.400 --> 00:20:25.640
+Build demo travel agent.
+
+NOTE Confidence: 0.9564607739448547
+
+00:20:25.760 --> 00:20:27.320
+This is the agent that I just hired.
+
+NOTE Confidence: 0.8546794652938843
+
+00:20:27.320 --> 00:20:29.842
+I'm at mentioning it just like I would an employee
+
+NOTE Confidence: 0.8546794652938843
+
+00:20:29.893 --> 00:20:31.760
+or someone else in your organization.
+
+NOTE Confidence: 0.948614776134491
+
+00:20:31.760 --> 00:20:38.508
+And I can say can I get some coffee places
+
+NOTE Confidence: 0.948614776134491
+
+00:20:38.669 --> 00:20:41.080
+as well please?
+
+NOTE Confidence: 0.8812555074691772
+
+00:20:42.840 --> 00:20:45.448
+Its going to take a few minutes because remember as
+
+NOTE Confidence: 0.8812555074691772
+
+00:20:45.499 --> 00:20:48.005
+part of like setting up your agent for agent 365,
+
+NOTE Confidence: 0.8812555074691772
+
+00:20:48.057 --> 00:20:50.358
+one of the important parts that we set up was
+
+NOTE Confidence: 0.8812555074691772
+
+00:20:50.409 --> 00:20:52.199
+created an endpoint for your agent.
+
+NOTE Confidence: 0.8913334012031555
+
+00:20:52.840 --> 00:20:56.197
+Your agent is now able to respond to notifications, not
+
+NOTE Confidence: 0.8913334012031555
+
+00:20:56.258 --> 00:20:59.798
+just over teams, but over at mentions from word documents,
+
+NOTE Confidence: 0.8913334012031555
+
+00:20:59.859 --> 00:21:02.240
+emails that you can send to your agent.
+
+NOTE Confidence: 0.9249181151390076
+
+00:21:02.480 --> 00:21:04.876
+So as part of running through the skill that I
+
+NOTE Confidence: 0.9249181151390076
+
+00:21:04.928 --> 00:21:06.959
+showed you before, your agent is ready.
+
+NOTE Confidence: 0.9529027938842773
+
+00:21:07.160 --> 00:21:09.840
+Now this agent can be hosted anywhere for test purposes.
+
+NOTE Confidence: 0.8637662529945374
+
+00:21:09.840 --> 00:21:12.720
+We hosted this in Azure, but this LAN chain agent
+
+NOTE Confidence: 0.8637662529945374
+
+00:21:12.779 --> 00:21:15.072
+could be in GCP, it could be in AWS, it
+
+NOTE Confidence: 0.8637662529945374
+
+00:21:15.130 --> 00:21:17.599
+could be in your cloud provider of choice.
+
+NOTE Confidence: 0.8231287598609924
+
+00:21:17.600 --> 00:21:19.320
+It does not matter right?
+
+NOTE Confidence: 0.8951404094696045
+
+00:21:19.320 --> 00:21:22.362
+While this is happening, my agent will respond here when
+
+NOTE Confidence: 0.8951404094696045
+
+00:21:22.416 --> 00:21:22.960
+its ready.
+
+NOTE Confidence: 0.9254431128501892
+
+00:21:22.960 --> 00:21:25.440
+But we can also look through a comment here.
+
+NOTE Confidence: 0.8400177359580994
+
+00:21:25.520 --> 00:21:28.368
+I had asked for a good Italian place and it
+
+NOTE Confidence: 0.8400177359580994
+
+00:21:28.434 --> 00:21:32.276
+said OK try Laurel because its popular with excellent food
+
+NOTE Confidence: 0.8400177359580994
+
+00:21:32.342 --> 00:21:33.800
+and a nice atmosphere.
+
+NOTE Confidence: 0.8551582098007202
+
+00:21:34.000 --> 00:21:35.845
+Great, I'm going to try that as well as this
+
+NOTE Confidence: 0.8551582098007202
+
+00:21:35.887 --> 00:21:37.439
+coffee place that I asked for before.
+
+NOTE Confidence: 0.7991904616355896
+
+00:21:38.040 --> 00:21:41.102
+Now I asked talk to Kendra, talked about observability and
+
+NOTE Confidence: 0.7991904616355896
+
+00:21:41.155 --> 00:21:43.319
+we wired up your agent for observability.
+
+NOTE Confidence: 0.7569069266319275
+
+00:21:43.680 --> 00:21:46.600
+But where exactly does this observe observability get used?
+
+NOTE Confidence: 0.9446092844009399
+
+00:21:47.160 --> 00:21:49.320
+Now, observability is kind of an interesting thing.
+
+NOTE Confidence: 0.9100255370140076
+
+00:21:49.680 --> 00:21:51.640
+Developers want to know what their agents are up to.
+
+NOTE Confidence: 0.9527232050895691
+
+00:21:51.640 --> 00:21:53.000
+Who uses your agents?
+
+NOTE Confidence: 0.916546642780304
+
+00:21:53.320 --> 00:21:56.297
+But it's also interesting from an end user, because this
+
+NOTE Confidence: 0.916546642780304
+
+00:21:56.350 --> 00:21:57.519
+is my employee, right?
+
+NOTE Confidence: 0.9446019530296326
+
+00:21:57.520 --> 00:22:00.595
+I want to know how my interaction with this agent
+
+NOTE Confidence: 0.9446019530296326
+
+00:22:00.657 --> 00:22:01.160
+was now.
+
+NOTE Confidence: 0.945925235748291
+
+00:22:01.680 --> 00:22:03.875
+So you can see that there are chats which happened
+
+NOTE Confidence: 0.945925235748291
+
+00:22:03.919 --> 00:22:05.720
+today when I was testing my agent, right?
+
+NOTE Confidence: 0.7643318176269531
+
+00:22:05.720 --> 00:22:07.550
+If I refresh it, you will also see the recent
+
+NOTE Confidence: 0.7643318176269531
+
+00:22:07.591 --> 00:22:08.119
+chat show up.
+
+NOTE Confidence: 0.9124781489372253
+
+00:22:08.440 --> 00:22:10.514
+There were a couple of failures as well when the
+
+NOTE Confidence: 0.9124781489372253
+
+00:22:10.557 --> 00:22:12.200
+agent did not carry out what I wanted.
+
+NOTE Confidence: 0.9239973425865173
+
+00:22:12.440 --> 00:22:14.640
+So even as an end user, I kind of get
+
+NOTE Confidence: 0.9239973425865173
+
+00:22:14.700 --> 00:22:16.960
+visibility on what my agent was up to.
+
+NOTE Confidence: 0.924615740776062
+
+00:22:17.280 --> 00:22:19.120
+What was the prompt that I gave it?
+
+NOTE Confidence: 0.8139324188232422
+
+00:22:19.120 --> 00:22:21.080
+Did it carry out the task that it needed?
+
+NOTE Confidence: 0.9580525755882263
+
+00:22:21.520 --> 00:22:22.320
+That is great.
+
+NOTE Confidence: 0.834531307220459
+
+00:22:22.320 --> 00:22:26.520
+So developers have observability and users can use this observability.
+
+NOTE Confidence: 0.8609829545021057
+
+00:22:26.800 --> 00:22:30.426
+But then remember, your IT admins definitely want to know
+
+NOTE Confidence: 0.8609829545021057
+
+00:22:30.489 --> 00:22:32.080
+what your agent is up to.
+
+NOTE Confidence: 0.9442880749702454
+
+00:22:32.080 --> 00:22:34.640
+I just want to go a couple of lines back
+
+NOTE Confidence: 0.9442880749702454
+
+00:22:34.704 --> 00:22:34.960
+now.
+
+NOTE Confidence: 0.942855954170227
+
+00:22:35.200 --> 00:22:37.080
+Remember the blueprint Kendra was talking about?
+
+NOTE Confidence: 0.9700281620025635
+
+00:22:37.080 --> 00:22:38.680
+This is the blueprint right here.
+
+NOTE Confidence: 0.9235796928405762
+
+00:22:38.960 --> 00:22:41.960
+And there are multiple instances of your blueprint, right?
+
+NOTE Confidence: 0.8752961158752441
+
+00:22:41.960 --> 00:22:45.551
+Different people could hire, could essentially have your agent reporting
+
+NOTE Confidence: 0.8752961158752441
+
+00:22:45.600 --> 00:22:46.000
+to them.
+
+NOTE Confidence: 0.8913325667381287
+
+00:22:46.000 --> 00:22:48.561
+In this case, that is some of my colleagues, Pooja
+
+NOTE Confidence: 0.8913325667381287
+
+00:22:48.613 --> 00:22:51.533
+and Alasta have multiple instances of this agent and this
+
+NOTE Confidence: 0.8913325667381287
+
+00:22:51.585 --> 00:22:52.199
+one is mine.
+
+NOTE Confidence: 0.9460020661354065
+
+00:22:52.600 --> 00:22:55.239
+So let's see as an admin, I can see activity
+
+NOTE Confidence: 0.9460020661354065
+
+00:22:55.299 --> 00:22:56.799
+across all the instances.
+
+NOTE Confidence: 0.8909478187561035
+
+00:22:57.160 --> 00:22:59.201
+But in this case, it looks like Aarti is using
+
+NOTE Confidence: 0.8909478187561035
+
+00:22:59.245 --> 00:22:59.999
+this agent a lot.
+
+NOTE Confidence: 0.8801277875900269
+
+00:23:00.000 --> 00:23:01.760
+So let's see what its up to.
+
+NOTE Confidence: 0.8545251488685608
+
+00:23:02.520 --> 00:23:05.057
+I can see both the activity view here as well
+
+NOTE Confidence: 0.8545251488685608
+
+00:23:05.114 --> 00:23:07.821
+as exactly who are the users of this agent right
+
+NOTE Confidence: 0.8545251488685608
+
+00:23:07.877 --> 00:23:08.159
+here.
+
+NOTE Confidence: 0.7615863680839539
+
+00:23:08.680 --> 00:23:12.289
+Now to recap, I started with a basic LAN chain
+
+NOTE Confidence: 0.7615863680839539
+
+00:23:12.368 --> 00:23:16.135
+agent written in Note JS which I'm going to host
+
+NOTE Confidence: 0.7615863680839539
+
+00:23:16.213 --> 00:23:16.920
+in Azure.
+
+NOTE Confidence: 0.6674038767814636
+
+00:23:17.000 --> 00:23:19.280
+Does not matter where I host it right?
+
+NOTE Confidence: 0.8274809718132019
+
+00:23:19.359 --> 00:23:22.922
+I use skills to get this agent ready for Agent
+
+NOTE Confidence: 0.8274809718132019
+
+00:23:23.000 --> 00:23:27.880
+365 had configurations for ENTRA where I blueprint was created.
+
+NOTE Confidence: 0.826604962348938
+
+00:23:28.200 --> 00:23:32.236
+I configurations for observability where we wired up open telemetry
+
+NOTE Confidence: 0.826604962348938
+
+00:23:32.296 --> 00:23:33.200
+for your agent.
+
+NOTE Confidence: 0.8403902649879456
+
+00:23:33.520 --> 00:23:36.729
+I optionally chose Word and OneDrive MCP servers because that's
+
+NOTE Confidence: 0.8403902649879456
+
+00:23:36.780 --> 00:23:38.359
+where the document was created.
+
+NOTE Confidence: 0.8476788401603699
+
+00:23:38.840 --> 00:23:41.611
+I also have this agent set up for notifications so
+
+NOTE Confidence: 0.8476788401603699
+
+00:23:41.666 --> 00:23:44.437
+that the agent can get messages over Teams as well
+
+NOTE Confidence: 0.8476788401603699
+
+00:23:44.493 --> 00:23:47.320
+as notifications when its at mentioned in comments.
+
+NOTE Confidence: 0.8337928056716919
+
+00:23:47.800 --> 00:23:50.750
+With that like your agent is ready, its configured, its
+
+NOTE Confidence: 0.8337928056716919
+
+00:23:50.804 --> 00:23:53.379
+ready in your tenant for and ready to unlock all
+
+NOTE Confidence: 0.8337928056716919
+
+00:23:53.433 --> 00:23:56.169
+the features of Agent 365 that Kendra will show you
+
+NOTE Confidence: 0.8337928056716919
+
+00:23:56.223 --> 00:23:56.759
+in detail.
+
+NOTE Confidence: 0.6868554353713989
+
+00:24:06.200 --> 00:24:06.560
+Awesome.
+
+NOTE Confidence: 0.8165028095245361
+
+00:24:06.560 --> 00:24:07.920
+Thank you so much, Aarthy.
+
+NOTE Confidence: 0.9512220621109009
+
+00:24:08.240 --> 00:24:10.794
+OK, that was a great demo, but that was a
+
+NOTE Confidence: 0.9512220621109009
+
+00:24:10.856 --> 00:24:11.480
+long demo.
+
+NOTE Confidence: 0.921618640422821
+
+00:24:11.680 --> 00:24:15.000
+So just reiterate everything that we saw here, right?
+
+NOTE Confidence: 0.8178539872169495
+
+00:24:15.320 --> 00:24:17.320
+She started out with that Lang chain agent.
+
+NOTE Confidence: 0.8592115640640259
+
+00:24:17.640 --> 00:24:20.640
+She was able to fully onboard it with our SDK.
+
+NOTE Confidence: 0.9198876619338989
+
+00:24:20.640 --> 00:24:23.360
+So she did things like give it that agent identity.
+
+NOTE Confidence: 0.9025808572769165
+
+00:24:23.680 --> 00:24:25.560
+She enabled full observability.
+
+NOTE Confidence: 0.841124415397644
+
+00:24:26.200 --> 00:24:30.846
+She also took advantage of our tools capabilities and leverage
+
+NOTE Confidence: 0.841124415397644
+
+00:24:30.921 --> 00:24:32.719
+some of the MCPS, right?
+
+NOTE Confidence: 0.8750425577163696
+
+00:24:33.040 --> 00:24:35.585
+And then she pivoted to show you the end user
+
+NOTE Confidence: 0.8750425577163696
+
+00:24:35.642 --> 00:24:38.923
+experience experience, how she was able to hire that agent
+
+NOTE Confidence: 0.8750425577163696
+
+00:24:38.979 --> 00:24:42.260
+instance and leverage that agent instance to plan her next
+
+NOTE Confidence: 0.8750425577163696
+
+00:24:42.317 --> 00:24:42.600
+trip.
+
+NOTE Confidence: 0.9539077877998352
+
+00:24:42.600 --> 00:24:46.193
+And then collaborate with that agent, go back and forth
+
+NOTE Confidence: 0.9539077877998352
+
+00:24:46.259 --> 00:24:49.526
+just like she would any other employee to find and
+
+NOTE Confidence: 0.9539077877998352
+
+00:24:49.591 --> 00:24:51.160
+track additional things.
+
+NOTE Confidence: 0.9508821368217468
+
+00:24:51.400 --> 00:24:54.629
+And then she was also able to access that activity
+
+NOTE Confidence: 0.9508821368217468
+
+00:24:54.693 --> 00:24:57.987
+and observe that agent and every step that it took,
+
+NOTE Confidence: 0.9508821368217468
+
+00:24:58.052 --> 00:24:58.440
+right?
+
+NOTE Confidence: 0.9569827318191528
+
+00:24:58.840 --> 00:25:00.080
+Really powerful.
+
+NOTE Confidence: 0.9652755260467529
+
+00:25:00.360 --> 00:25:01.400
+Thank you so much.
+
+NOTE Confidence: 0.9505188465118408
+
+00:25:01.600 --> 00:25:02.280
+Great demo.
+
+NOTE Confidence: 0.9024018049240112
+
+00:25:03.240 --> 00:25:09.332
+Now let's switch gears here and show you what that
+
+NOTE Confidence: 0.9024018049240112
+
+00:25:09.454 --> 00:25:11.160
+experience is.
+
+NOTE Confidence: 0.45466330647468567
+
+00:25:12.720 --> 00:25:26.410
+I login tech support.
+
+NOTE Confidence: 0.6969525218009949
+
+00:25:26.610 --> 00:25:27.570
+Oh, there we go.
+
+NOTE Confidence: 0.897415280342102
+
+00:25:27.730 --> 00:25:28.290
+Wrong button.
+
+NOTE Confidence: 0.8424217104911804
+
+00:25:28.490 --> 00:25:29.530
+OK, here we go.
+
+NOTE Confidence: 0.911592960357666
+
+00:25:30.800 --> 00:25:34.604
+So let's take a look at the admin experience inside
+
+NOTE Confidence: 0.911592960357666
+
+00:25:34.679 --> 00:25:37.439
+of Microsoft 365 Admin Center, right?
+
+NOTE Confidence: 0.9523539543151855
+
+00:25:37.800 --> 00:25:41.678
+So this is where you're going to see full observability
+
+NOTE Confidence: 0.9523539543151855
+
+00:25:41.748 --> 00:25:44.639
+of all of your agents across your tenant.
+
+NOTE Confidence: 0.930269181728363
+
+00:25:45.080 --> 00:25:48.240
+One thing we are working on is multi tenant capabilities.
+
+NOTE Confidence: 0.9675521850585938
+
+00:25:48.359 --> 00:25:50.855
+Today you'll see all of your agents in a single
+
+NOTE Confidence: 0.9675521850585938
+
+00:25:50.908 --> 00:25:51.280
+tenant.
+
+NOTE Confidence: 0.9496477842330933
+
+00:25:51.840 --> 00:25:56.118
+Here in the overview page, you see high level analytics
+
+NOTE Confidence: 0.9496477842330933
+
+00:25:56.196 --> 00:26:00.320
+around total number of agents, total number of users.
+
+NOTE Confidence: 0.9036245346069336
+
+00:26:00.720 --> 00:26:04.535
+These are your employee, human employee users, not your agentic
+
+NOTE Confidence: 0.9036245346069336
+
+00:26:04.596 --> 00:26:04.959
+users.
+
+NOTE Confidence: 0.9458567500114441
+
+00:26:05.280 --> 00:26:08.560
+You also see total runtime hours as well.
+
+NOTE Confidence: 0.8800888657569885
+
+00:26:08.800 --> 00:26:10.560
+And then we have our registry sync.
+
+NOTE Confidence: 0.9706118106842041
+
+00:26:10.560 --> 00:26:13.240
+I'm going to come back here down below.
+
+NOTE Confidence: 0.9504308700561523
+
+00:26:13.240 --> 00:26:17.000
+Here you also have your calls to action, right?
+
+NOTE Confidence: 0.8926364183425903
+
+00:26:17.000 --> 00:26:20.408
+So showing you analytics and data is great, but also
+
+NOTE Confidence: 0.8926364183425903
+
+00:26:20.474 --> 00:26:23.358
+where do you need to late lean in, take some
+
+NOTE Confidence: 0.8926364183425903
+
+00:26:23.424 --> 00:26:26.440
+action to resolve some of the issues you have.
+
+NOTE Confidence: 0.8267956376075745
+
+00:26:26.440 --> 00:26:29.683
+Those pending requests for your agents here, similar to what
+
+NOTE Confidence: 0.8267956376075745
+
+00:26:29.737 --> 00:26:32.873
+Aarthy was talking about where we were approving her agent
+
+NOTE Confidence: 0.8267956376075745
+
+00:26:32.927 --> 00:26:33.360
+incense.
+
+NOTE Confidence: 0.8991947174072266
+
+00:26:33.640 --> 00:26:34.720
+We'll take you through that.
+
+NOTE Confidence: 0.8827215433120728
+
+00:26:35.080 --> 00:26:38.760
+Also, identifying anywhere where agent risks have been seen.
+
+NOTE Confidence: 0.9547206163406372
+
+00:26:39.120 --> 00:26:42.240
+Agents without owners, This is a big one, right?
+
+NOTE Confidence: 0.8648152947425842
+
+00:26:42.240 --> 00:26:45.924
+Making sure that your agent's sprawl stays under control and
+
+NOTE Confidence: 0.8648152947425842
+
+00:26:45.986 --> 00:26:48.320
+your agent ecosystem has good hygiene.
+
+NOTE Confidence: 0.8607905507087708
+
+00:26:49.040 --> 00:26:51.040
+And then any agents with exceptions.
+
+NOTE Confidence: 0.8501760959625244
+
+00:26:51.040 --> 00:26:54.535
+Now, exceptions are anytime where there's an error in your
+
+NOTE Confidence: 0.8501760959625244
+
+00:26:54.596 --> 00:26:55.440
+agent runtime.
+
+NOTE Confidence: 0.9655768275260925
+
+00:26:55.440 --> 00:26:57.920
+This is going to surface as an exception.
+
+NOTE Confidence: 0.9423547983169556
+
+00:26:58.600 --> 00:27:01.857
+Down below, you have some more granular analytics, so you
+
+NOTE Confidence: 0.9423547983169556
+
+00:27:01.914 --> 00:27:05.057
+can see how many agents were built by your organization
+
+NOTE Confidence: 0.9423547983169556
+
+00:27:05.114 --> 00:27:08.485
+versus how many agents were built by third party providers,
+
+NOTE Confidence: 0.9423547983169556
+
+00:27:08.542 --> 00:27:11.971
+and of course, how many agents you're leveraging from across
+
+NOTE Confidence: 0.9423547983169556
+
+00:27:12.028 --> 00:27:12.600
+Microsoft.
+
+NOTE Confidence: 0.9518845081329346
+
+00:27:13.920 --> 00:27:17.024
+You also see your top platforms that your agents are
+
+NOTE Confidence: 0.9518845081329346
+
+00:27:17.084 --> 00:27:18.039
+built on, right?
+
+NOTE Confidence: 0.9390270709991455
+
+00:27:18.040 --> 00:27:22.222
+So you can understand which teams, which platforms are most
+
+NOTE Confidence: 0.9390270709991455
+
+00:27:22.293 --> 00:27:23.640
+heavily being used.
+
+NOTE Confidence: 0.8076848387718201
+
+00:27:23.920 --> 00:27:26.760
+You can see your agent adoption over time.
+
+NOTE Confidence: 0.9245187044143677
+
+00:27:27.000 --> 00:27:30.390
+This can be really valuable if you're working on any
+
+NOTE Confidence: 0.9245187044143677
+
+00:27:30.455 --> 00:27:34.497
+sort of adoption campaigns, if you're releasing any big highly
+
+NOTE Confidence: 0.9245187044143677
+
+00:27:34.562 --> 00:27:38.343
+anticipated agents like an IT support or a benefits agent,
+
+NOTE Confidence: 0.9245187044143677
+
+00:27:38.408 --> 00:27:38.800
+right?
+
+NOTE Confidence: 0.7506515979766846
+
+00:27:39.280 --> 00:27:42.320
+And then you also can see your trending agent.
+
+NOTE Confidence: 0.9280316829681396
+
+00:27:42.320 --> 00:27:44.704
+So these are the agents that are being used heavily
+
+NOTE Confidence: 0.9280316829681396
+
+00:27:44.751 --> 00:27:45.920
+across your organization.
+
+NOTE Confidence: 0.9348494410514832
+
+00:27:46.640 --> 00:27:50.178
+Now, if we go into the agent registry, this is
+
+NOTE Confidence: 0.9348494410514832
+
+00:27:50.255 --> 00:27:53.640
+where, let me close this zoom in a tiny bit.
+
+NOTE Confidence: 0.9303048849105835
+
+00:27:54.080 --> 00:27:57.259
+This is where this is where you're going to be
+
+NOTE Confidence: 0.9303048849105835
+
+00:27:57.328 --> 00:28:00.369
+able to see all of your agents across all of
+
+NOTE Confidence: 0.9303048849105835
+
+00:28:00.439 --> 00:28:02.720
+those different platforms, right?
+
+NOTE Confidence: 0.9318975806236267
+
+00:28:02.720 --> 00:28:05.526
+So you'll notice as I'm scrolling, these are not just
+
+NOTE Confidence: 0.9318975806236267
+
+00:28:05.579 --> 00:28:06.479
+Microsoft agents.
+
+NOTE Confidence: 0.9073728322982788
+
+00:28:06.480 --> 00:28:08.240
+We have work day in here.
+
+NOTE Confidence: 0.8892634510993958
+
+00:28:08.440 --> 00:28:11.680
+We have some of our partner agents, Genspark, right?
+
+NOTE Confidence: 0.9576656818389893
+
+00:28:12.000 --> 00:28:16.529
+And you can customize and slice and dice this list
+
+NOTE Confidence: 0.9576656818389893
+
+00:28:16.619 --> 00:28:18.159
+as needed, right?
+
+NOTE Confidence: 0.9193540811538696
+
+00:28:18.160 --> 00:28:21.522
+So that you can more successfully manage this large number
+
+NOTE Confidence: 0.9193540811538696
+
+00:28:21.580 --> 00:28:22.159
+of agents.
+
+NOTE Confidence: 0.8722401261329651
+
+00:28:22.680 --> 00:28:25.166
+Now, if I go into an agent itself, here I
+
+NOTE Confidence: 0.8722401261329651
+
+00:28:25.227 --> 00:28:28.139
+am in my Zava procurement agent, I'm able to see
+
+NOTE Confidence: 0.8722401261329651
+
+00:28:28.199 --> 00:28:30.080
+really valuable agent metadata.
+
+NOTE Confidence: 0.9457486867904663
+
+00:28:30.080 --> 00:28:32.400
+So I know exactly what this agent does.
+
+NOTE Confidence: 0.9089210629463196
+
+00:28:32.760 --> 00:28:37.068
+I see metadata around when it was published, when it
+
+NOTE Confidence: 0.9089210629463196
+
+00:28:37.151 --> 00:28:38.560
+was last updated.
+
+NOTE Confidence: 0.9408779740333557
+
+00:28:38.560 --> 00:28:41.960
+You see the publisher, the owner, you see that agent
+
+NOTE Confidence: 0.9408779740333557
+
+00:28:42.026 --> 00:28:42.680
+ID, right?
+
+NOTE Confidence: 0.9187146425247192
+
+00:28:43.360 --> 00:28:47.442
+But really valuable here, you also see the agent instructions
+
+NOTE Confidence: 0.9187146425247192
+
+00:28:47.509 --> 00:28:50.588
+so that you can see exactly what that agent is
+
+NOTE Confidence: 0.9187146425247192
+
+00:28:50.655 --> 00:28:53.399
+doing, what the purpose of that agent is.
+
+NOTE Confidence: 0.943983256816864
+
+00:28:53.760 --> 00:28:56.868
+And then you also see the full identity history for
+
+NOTE Confidence: 0.943983256816864
+
+00:28:56.929 --> 00:28:57.599
+this agent.
+
+NOTE Confidence: 0.9487037062644958
+
+00:28:57.600 --> 00:28:59.999
+So not only the bot ID, but you see that
+
+NOTE Confidence: 0.9487037062644958
+
+00:29:00.059 --> 00:29:00.839
+blueprint ID.
+
+NOTE Confidence: 0.8511670231819153
+
+00:29:01.080 --> 00:29:03.840
+You also see that entry agent ID as well.
+
+NOTE Confidence: 0.8792717456817627
+
+00:29:04.480 --> 00:29:07.328
+If this was a copilot studio agent, you would see
+
+NOTE Confidence: 0.8792717456817627
+
+00:29:07.386 --> 00:29:09.480
+all of the environment details here.
+
+NOTE Confidence: 0.9377619028091431
+
+00:29:09.760 --> 00:29:13.078
+But because it's a Foundry agent, we're going to go
+
+NOTE Confidence: 0.9377619028091431
+
+00:29:13.143 --> 00:29:16.396
+ahead and see all of those platform details and be
+
+NOTE Confidence: 0.9377619028091431
+
+00:29:16.461 --> 00:29:19.520
+able to link out directly to that agent itself.
+
+NOTE Confidence: 0.9746353626251221
+
+00:29:20.720 --> 00:29:22.080
+But I can see more here.
+
+NOTE Confidence: 0.9724786281585693
+
+00:29:22.160 --> 00:29:25.257
+I can also see all of the users that this
+
+NOTE Confidence: 0.9724786281585693
+
+00:29:25.333 --> 00:29:26.920
+agent is shared with.
+
+NOTE Confidence: 0.9226335883140564
+
+00:29:27.440 --> 00:29:30.195
+I'm going to come back to Data and tools, so
+
+NOTE Confidence: 0.9226335883140564
+
+00:29:30.258 --> 00:29:33.702
+pause on that one, But from a security perspective, you
+
+NOTE Confidence: 0.9226335883140564
+
+00:29:33.765 --> 00:29:37.146
+can also see all the different policies that have been
+
+NOTE Confidence: 0.9226335883140564
+
+00:29:37.209 --> 00:29:41.279
+applied to this agent during that onboarding or approval process.
+
+NOTE Confidence: 0.9256249666213989
+
+00:29:41.320 --> 00:29:44.443
+And I can drill into Purview or ENTRA to learn
+
+NOTE Confidence: 0.9256249666213989
+
+00:29:44.511 --> 00:29:46.480
+more and investigate further.
+
+NOTE Confidence: 0.9367822408676147
+
+00:29:47.080 --> 00:29:49.457
+Along with that, I see all the permissions that this
+
+NOTE Confidence: 0.9367822408676147
+
+00:29:49.502 --> 00:29:49.959
+agent has.
+
+NOTE Confidence: 0.9607032537460327
+
+00:29:49.960 --> 00:29:53.411
+And then for me, one of my favorite features, because
+
+NOTE Confidence: 0.9607032537460327
+
+00:29:53.476 --> 00:29:56.666
+I come from the agent building space, I love that
+
+NOTE Confidence: 0.9607032537460327
+
+00:29:56.732 --> 00:30:00.053
+we now have a unified view into the activity across
+
+NOTE Confidence: 0.9607032537460327
+
+00:30:00.118 --> 00:30:01.160
+all agent types.
+
+NOTE Confidence: 0.8987573385238647
+
+00:30:01.600 --> 00:30:06.061
+So now you know total users, total sessions, exceptions, you
+
+NOTE Confidence: 0.8987573385238647
+
+00:30:06.135 --> 00:30:07.919
+know your runtime hours.
+
+NOTE Confidence: 0.9312354326248169
+
+00:30:08.400 --> 00:30:11.880
+You can also track successful sessions, right?
+
+NOTE Confidence: 0.9535524249076843
+
+00:30:11.880 --> 00:30:14.554
+So that you know how your agent is performing, how
+
+NOTE Confidence: 0.9535524249076843
+
+00:30:14.608 --> 00:30:16.320
+it's able to support your users.
+
+NOTE Confidence: 0.8979053497314453
+
+00:30:16.640 --> 00:30:19.467
+And you can also monitor any of those errors or
+
+NOTE Confidence: 0.8979053497314453
+
+00:30:19.527 --> 00:30:23.257
+exceptions, look for spikes in those exceptions, and then lean
+
+NOTE Confidence: 0.8979053497314453
+
+00:30:23.317 --> 00:30:24.279
+in if necessary.
+
+NOTE Confidence: 0.9512121677398682
+
+00:30:25.160 --> 00:30:27.776
+And then down below, you're going to see all of
+
+NOTE Confidence: 0.9512121677398682
+
+00:30:27.832 --> 00:30:30.559
+the users that are driving traffic to your agent.
+
+NOTE Confidence: 0.9187275767326355
+
+00:30:30.800 --> 00:30:34.447
+You understand their total sessions, their last activity date, and
+
+NOTE Confidence: 0.9187275767326355
+
+00:30:34.502 --> 00:30:36.160
+all of those different pieces.
+
+NOTE Confidence: 0.8611065149307251
+
+00:30:36.720 --> 00:30:39.280
+Now, this is a list view, and that's great.
+
+NOTE Confidence: 0.92603999376297
+
+00:30:39.280 --> 00:30:42.920
+We also give you a more visual representation, right?
+
+NOTE Confidence: 0.8945085406303406
+
+00:30:42.920 --> 00:30:47.265
+So you can understand where your agents are working with
+
+NOTE Confidence: 0.8945085406303406
+
+00:30:47.342 --> 00:30:52.464
+other agents, they're aggregated by the platforms these agents are
+
+NOTE Confidence: 0.8945085406303406
+
+00:30:52.541 --> 00:30:53.240
+built on.
+
+NOTE Confidence: 0.8878404498100281
+
+00:30:53.560 --> 00:30:56.935
+And if you hover over your agents where there are
+
+NOTE Confidence: 0.8878404498100281
+
+00:30:57.004 --> 00:31:01.137
+multi agent solutions, you're able to see which agents these
+
+NOTE Confidence: 0.8878404498100281
+
+00:31:01.206 --> 00:31:02.240
+are leveraging.
+
+NOTE Confidence: 0.9410234093666077
+
+00:31:02.240 --> 00:31:04.156
+Let me zoom out so you can see that a
+
+NOTE Confidence: 0.9410234093666077
+
+00:31:04.208 --> 00:31:07.160
+little bit easier even across different platforms, right?
+
+NOTE Confidence: 0.9710828065872192
+
+00:31:07.800 --> 00:31:09.992
+And if you want to drill in and see more
+
+NOTE Confidence: 0.9710828065872192
+
+00:31:10.047 --> 00:31:12.349
+details and you want to see a list view of
+
+NOTE Confidence: 0.9710828065872192
+
+00:31:12.404 --> 00:31:15.199
+these connected platforms, you also have that here.
+
+NOTE Confidence: 0.9555832147598267
+
+00:31:15.200 --> 00:31:17.282
+So I can see all of the agents that my
+
+NOTE Confidence: 0.9555832147598267
+
+00:31:17.337 --> 00:31:21.009
+researcher agent is using, whether they're all available or whether
+
+NOTE Confidence: 0.9555832147598267
+
+00:31:21.063 --> 00:31:22.159
+ones blocked, right?
+
+NOTE Confidence: 0.9317256212234497
+
+00:31:22.160 --> 00:31:27.258
+So really valuable information, not only to understand different combinations
+
+NOTE Confidence: 0.9317256212234497
+
+00:31:27.325 --> 00:31:31.298
+and different dependencies that your agents have, but if you
+
+NOTE Confidence: 0.9317256212234497
+
+00:31:31.364 --> 00:31:34.278
+need to lean in and block an agent, you want
+
+NOTE Confidence: 0.9317256212234497
+
+00:31:34.344 --> 00:31:36.000
+to know the blast radius.
+
+NOTE Confidence: 0.9145820140838623
+
+00:31:36.000 --> 00:31:38.367
+If I block this agent, what else does it break,
+
+NOTE Confidence: 0.9145820140838623
+
+00:31:38.417 --> 00:31:38.719
+right?
+
+NOTE Confidence: 0.9331135749816895
+
+00:31:39.120 --> 00:31:41.560
+So all this information can be found here.
+
+NOTE Confidence: 0.936642050743103
+
+00:31:42.760 --> 00:31:45.451
+Now, if I come back to my registry, I want
+
+NOTE Confidence: 0.936642050743103
+
+00:31:45.515 --> 00:31:48.719
+to go ahead and drill into agents that have risks.
+
+NOTE Confidence: 0.9100355505943298
+
+00:31:49.240 --> 00:31:52.352
+So here, if I click on the risks themselves, we
+
+NOTE Confidence: 0.9100355505943298
+
+00:31:52.418 --> 00:31:55.464
+take you directly to the agent and we show you
+
+NOTE Confidence: 0.9100355505943298
+
+00:31:55.530 --> 00:31:57.120
+the source of the risks.
+
+NOTE Confidence: 0.9178619384765625
+
+00:31:57.360 --> 00:32:00.959
+If I had more time, maybe another session, I would
+
+NOTE Confidence: 0.9178619384765625
+
+00:32:01.031 --> 00:32:04.703
+go ahead and drill into ENTRA or drill into Purview
+
+NOTE Confidence: 0.9178619384765625
+
+00:32:04.775 --> 00:32:08.087
+so you can see just how granularly you can see
+
+NOTE Confidence: 0.9178619384765625
+
+00:32:08.159 --> 00:32:11.399
+these incidents, what caused them in Purview.
+
+NOTE Confidence: 0.9286323189735413
+
+00:32:11.400 --> 00:32:14.382
+Again, you have full access to those logs and you're
+
+NOTE Confidence: 0.9286323189735413
+
+00:32:14.439 --> 00:32:17.307
+actually able to get down to the document layer or
+
+NOTE Confidence: 0.9286323189735413
+
+00:32:17.364 --> 00:32:20.060
+the the data source layer that was trying to be
+
+NOTE Confidence: 0.9286323189735413
+
+00:32:20.117 --> 00:32:23.959
+accessed that actually initiated this risk that was blocked, right.
+
+NOTE Confidence: 0.9252482652664185
+
+00:32:24.400 --> 00:32:26.702
+And here what I can do, I can go ahead
+
+NOTE Confidence: 0.9252482652664185
+
+00:32:26.762 --> 00:32:29.549
+and block this agent, and then I can work with
+
+NOTE Confidence: 0.9252482652664185
+
+00:32:29.610 --> 00:32:32.276
+my SEC OPS team to go and do some additional
+
+NOTE Confidence: 0.9252482652664185
+
+00:32:32.336 --> 00:32:34.759
+investigation and additional mitigation.
+
+NOTE Confidence: 0.9088688492774963
+
+00:32:36.120 --> 00:32:40.350
+Now moving into agents without owners, I'm able to easily
+
+NOTE Confidence: 0.9088688492774963
+
+00:32:40.424 --> 00:32:42.280
+reassign an owner, right?
+
+NOTE Confidence: 0.9390828609466553
+
+00:32:42.440 --> 00:32:45.060
+I can go ahead and say, hey, Aarthy, I'm going
+
+NOTE Confidence: 0.9390828609466553
+
+00:32:45.117 --> 00:32:47.452
+to give you a bit more work and I'm going
+
+NOTE Confidence: 0.9390828609466553
+
+00:32:47.509 --> 00:32:49.559
+to make you the owner of this agent.
+
+NOTE Confidence: 0.9603491425514221
+
+00:32:50.040 --> 00:32:53.041
+But as you can see here, this process is pretty
+
+NOTE Confidence: 0.9603491425514221
+
+00:32:53.105 --> 00:32:54.000
+manual, right?
+
+NOTE Confidence: 0.9657276272773743
+
+00:32:54.240 --> 00:32:56.773
+So it would be great to have a way to
+
+NOTE Confidence: 0.9657276272773743
+
+00:32:56.841 --> 00:32:57.800
+automate this.
+
+NOTE Confidence: 0.962174654006958
+
+00:32:58.120 --> 00:32:59.880
+That's where rules come in.
+
+NOTE Confidence: 0.9051143527030945
+
+00:33:00.480 --> 00:33:03.801
+So rules inside of Agent 365 give you a very
+
+NOTE Confidence: 0.9051143527030945
+
+00:33:03.877 --> 00:33:07.576
+simple way to set up automation for some of these
+
+NOTE Confidence: 0.9051143527030945
+
+00:33:07.652 --> 00:33:11.879
+kind of life cycle management actions across your agent.
+
+NOTE Confidence: 0.8619019389152527
+
+00:33:11.880 --> 00:33:15.298
+So you can do things like agent reassignment when an
+
+NOTE Confidence: 0.8619019389152527
+
+00:33:15.363 --> 00:33:19.636
+individual leaves an organization for those agents built in agent
+
+NOTE Confidence: 0.8619019389152527
+
+00:33:19.701 --> 00:33:23.120
+builder, automatically reassign it to their manager.
+
+NOTE Confidence: 0.9082205891609192
+
+00:33:23.400 --> 00:33:26.672
+You also can do things like where risk is identified,
+
+NOTE Confidence: 0.9082205891609192
+
+00:33:26.733 --> 00:33:29.079
+automatically block that agent, right?
+
+NOTE Confidence: 0.9674093127250671
+
+00:33:29.080 --> 00:33:31.516
+So you don't actually have to come in here and
+
+NOTE Confidence: 0.9674093127250671
+
+00:33:31.569 --> 00:33:33.000
+manually block it yourself.
+
+NOTE Confidence: 0.8933590650558472
+
+00:33:33.280 --> 00:33:36.141
+We are investing heavily in risk to make this as
+
+NOTE Confidence: 0.8933590650558472
+
+00:33:36.200 --> 00:33:39.181
+scalable and as easy as possible and give you more
+
+NOTE Confidence: 0.8933590650558472
+
+00:33:39.240 --> 00:33:42.399
+and more functionality over the next couple quarters.
+
+NOTE Confidence: 0.9110662341117859
+
+00:33:43.720 --> 00:33:46.500
+The other piece I want to show you here within
+
+NOTE Confidence: 0.9110662341117859
+
+00:33:46.560 --> 00:33:49.280
+settings, if we come back here are templates.
+
+NOTE Confidence: 0.9600014090538025
+
+00:33:49.560 --> 00:33:52.525
+Now templates I would say is one of our hero
+
+NOTE Confidence: 0.9600014090538025
+
+00:33:52.593 --> 00:33:53.200
+features.
+
+NOTE Confidence: 0.8981298208236694
+
+00:33:53.560 --> 00:33:57.456
+What templates do is they aggregate all of those custom
+
+NOTE Confidence: 0.8981298208236694
+
+00:33:57.526 --> 00:34:02.556
+policies from across ENTRA, Defender, Purview, and even SharePoint into
+
+NOTE Confidence: 0.8981298208236694
+
+00:34:02.627 --> 00:34:06.381
+one reusable template that then you can apply to your
+
+NOTE Confidence: 0.8981298208236694
+
+00:34:06.452 --> 00:34:09.640
+agents in a consistent and comprehensive way.
+
+NOTE Confidence: 0.9450029730796814
+
+00:34:10.080 --> 00:34:12.304
+And so if I go into this template, this is
+
+NOTE Confidence: 0.9450029730796814
+
+00:34:12.357 --> 00:34:13.999
+a custom one that I've created.
+
+NOTE Confidence: 0.9186044931411743
+
+00:34:14.000 --> 00:34:15.200
+We have default ones.
+
+NOTE Confidence: 0.9307528734207153
+
+00:34:15.200 --> 00:34:18.200
+You can easily create another, but you'll see here and
+
+NOTE Confidence: 0.9307528734207153
+
+00:34:18.255 --> 00:34:21.200
+I'll zoom in, it's probably quite little in the back.
+
+NOTE Confidence: 0.8949152231216431
+
+00:34:21.480 --> 00:34:24.491
+I've set up things like different access packages and I
+
+NOTE Confidence: 0.8949152231216431
+
+00:34:24.546 --> 00:34:27.448
+have a number of different access packages that I can
+
+NOTE Confidence: 0.8949152231216431
+
+00:34:27.502 --> 00:34:28.160
+select from.
+
+NOTE Confidence: 0.882171094417572
+
+00:34:28.640 --> 00:34:30.960
+I also have conditional access.
+
+NOTE Confidence: 0.8926352858543396
+
+00:34:31.280 --> 00:34:34.956
+I also have a myriad of different options down below
+
+NOTE Confidence: 0.8926352858543396
+
+00:34:35.027 --> 00:34:38.280
+that are kind of our default policies as well.
+
+NOTE Confidence: 0.823106586933136
+
+00:34:38.280 --> 00:34:43.080
+Things like DLP protection, life cycle management protections, etcetera.
+
+NOTE Confidence: 0.911087691783905
+
+00:34:43.480 --> 00:34:47.051
+So I can go ahead now that I've created this
+
+NOTE Confidence: 0.911087691783905
+
+00:34:47.132 --> 00:34:50.459
+agent and I will leverage it as a part of
+
+NOTE Confidence: 0.911087691783905
+
+00:34:50.540 --> 00:34:54.680
+that agent approval flow that Aarti was mentioning.
+
+NOTE Confidence: 0.8820075988769531
+
+00:34:55.520 --> 00:34:57.600
+So here I have a staffing agent.
+
+NOTE Confidence: 0.8455911874771118
+
+00:34:58.000 --> 00:35:02.000
+I, I want to publish this agent across my organization.
+
+NOTE Confidence: 0.9349134564399719
+
+00:35:02.320 --> 00:35:05.010
+Now, before I do this, my IT admin team needs
+
+NOTE Confidence: 0.9349134564399719
+
+00:35:05.070 --> 00:35:08.119
+to approve this and apply the appropriate template.
+
+NOTE Confidence: 0.9230292439460754
+
+00:35:08.640 --> 00:35:10.719
+This is where I'm going to come back to data
+
+NOTE Confidence: 0.9230292439460754
+
+00:35:10.767 --> 00:35:11.239
+and tools.
+
+NOTE Confidence: 0.946746289730072
+
+00:35:11.680 --> 00:35:14.062
+As you can see here, in order to make the
+
+NOTE Confidence: 0.946746289730072
+
+00:35:14.121 --> 00:35:17.375
+most informed decision, you want to know what your agent
+
+NOTE Confidence: 0.946746289730072
+
+00:35:17.433 --> 00:35:18.480
+is made of, right?
+
+NOTE Confidence: 0.9218500256538391
+
+00:35:18.480 --> 00:35:20.120
+What data does it have access to?
+
+NOTE Confidence: 0.9140192866325378
+
+00:35:20.120 --> 00:35:21.960
+What tools does it have access to?
+
+NOTE Confidence: 0.9694360494613647
+
+00:35:22.320 --> 00:35:25.441
+This is really where you understand the risk level of
+
+NOTE Confidence: 0.9694360494613647
+
+00:35:25.499 --> 00:35:26.559
+this agent, right?
+
+NOTE Confidence: 0.9313538670539856
+
+00:35:27.120 --> 00:35:29.395
+And so here I can go ahead and kick off
+
+NOTE Confidence: 0.9313538670539856
+
+00:35:29.453 --> 00:35:31.320
+the publish flow for this agent.
+
+NOTE Confidence: 0.9294280409812927
+
+00:35:31.600 --> 00:35:34.330
+I can select the users that have access to it,
+
+NOTE Confidence: 0.9294280409812927
+
+00:35:34.389 --> 00:35:36.882
+I can pre install it for all users or just
+
+NOTE Confidence: 0.9294280409812927
+
+00:35:36.941 --> 00:35:38.959
+make it discoverable in the store.
+
+NOTE Confidence: 0.9759148359298706
+
+00:35:39.640 --> 00:35:41.800
+And then now the magic happens.
+
+NOTE Confidence: 0.913984477519989
+
+00:35:42.080 --> 00:35:46.060
+We start with the default template because we believe baseline
+
+NOTE Confidence: 0.913984477519989
+
+00:35:46.124 --> 00:35:49.720
+all agents should have some level of protections, right?
+
+NOTE Confidence: 0.9220513105392456
+
+00:35:50.320 --> 00:35:52.873
+But I want to go ahead and use that DevOps
+
+NOTE Confidence: 0.9220513105392456
+
+00:35:52.934 --> 00:35:56.400
+template that I created custom for this particular agent.
+
+NOTE Confidence: 0.94275963306427
+
+00:35:56.760 --> 00:35:59.784
+You'll see here all of those policies that you saw
+
+NOTE Confidence: 0.94275963306427
+
+00:35:59.844 --> 00:36:03.413
+in templates are now being applied and also the appropriate
+
+NOTE Confidence: 0.94275963306427
+
+00:36:03.474 --> 00:36:04.199
+permissions.
+
+NOTE Confidence: 0.9633457660675049
+
+00:36:04.440 --> 00:36:08.059
+I can go ahead and look through, review those permissions,
+
+NOTE Confidence: 0.9633457660675049
+
+00:36:08.121 --> 00:36:11.366
+approve them, and now this agent is available for my
+
+NOTE Confidence: 0.9633457660675049
+
+00:36:11.428 --> 00:36:12.239
+organization.
+
+NOTE Confidence: 0.8690974712371826
+
+00:36:12.680 --> 00:36:14.930
+If I had more time, I could take you through
+
+NOTE Confidence: 0.8690974712371826
+
+00:36:14.981 --> 00:36:17.999
+that agent instant flow as well that Aarthy was mentioning.
+
+NOTE Confidence: 0.8886789679527283
+
+00:36:18.520 --> 00:36:21.859
+But where I really want to leave off here, I'm
+
+NOTE Confidence: 0.8886789679527283
+
+00:36:21.931 --> 00:36:25.198
+going to come back to the registry and I want
+
+NOTE Confidence: 0.8886789679527283
+
+00:36:25.271 --> 00:36:28.320
+to show you that registry sync capability.
+
+NOTE Confidence: 0.7223495841026306
+
+00:36:28.480 --> 00:36:30.920
+Let me make sure I'm right on time, OK?
+
+NOTE Confidence: 0.9348182082176208
+
+00:36:31.320 --> 00:36:35.777
+Registry sync again, is that ability to ingest those agents
+
+NOTE Confidence: 0.9348182082176208
+
+00:36:35.853 --> 00:36:40.235
+from some of your common third party platforms like Amazon
+
+NOTE Confidence: 0.9348182082176208
+
+00:36:40.311 --> 00:36:42.880
+Bedrock, Google, Vertex AI, right?
+
+NOTE Confidence: 0.9427081942558289
+
+00:36:42.880 --> 00:36:47.040
+So here I've configured my access to those platforms.
+
+NOTE Confidence: 0.971534252166748
+
+00:36:47.320 --> 00:36:50.344
+And if I click into Google, I can see that
+
+NOTE Confidence: 0.971534252166748
+
+00:36:50.416 --> 00:36:52.000
+I have one agent here.
+
+NOTE Confidence: 0.8924143314361572
+
+00:36:52.320 --> 00:36:54.980
+And you'll see here, I can't see all of the
+
+NOTE Confidence: 0.8924143314361572
+
+00:36:55.042 --> 00:36:58.630
+observability data that I could had I onboarded this agent
+
+NOTE Confidence: 0.8924143314361572
+
+00:36:58.692 --> 00:37:01.353
+with the SDK, but I'm at least aware of all
+
+NOTE Confidence: 0.8924143314361572
+
+00:37:01.415 --> 00:37:04.879
+of the agents that I have deployed across this platform.
+
+NOTE Confidence: 0.936211884021759
+
+00:37:05.239 --> 00:37:09.200
+And because in Google I also have permissions to delete
+
+NOTE Confidence: 0.936211884021759
+
+00:37:09.272 --> 00:37:13.376
+agents, you'll notice that I also have that permission to
+
+NOTE Confidence: 0.936211884021759
+
+00:37:13.448 --> 00:37:16.400
+delete this agent if I wanted to as well.
+
+NOTE Confidence: 0.969485878944397
+
+00:37:17.560 --> 00:37:19.400
+Now there's so much more here.
+
+NOTE Confidence: 0.9629391431808472
+
+00:37:19.960 --> 00:37:24.443
+We allow you to identify and bring shadow agents under
+
+NOTE Confidence: 0.9629391431808472
+
+00:37:24.526 --> 00:37:25.439
+management.
+
+NOTE Confidence: 0.8808667659759521
+
+00:37:25.640 --> 00:37:30.070
+We're expanding this outside of Open Claw to leverage the
+
+NOTE Confidence: 0.8808667659759521
+
+00:37:30.147 --> 00:37:34.500
+Fender to identify 22 plus give or take additional local
+
+NOTE Confidence: 0.8808667659759521
+
+00:37:34.577 --> 00:37:38.696
+platforms so that you can either block or bring those
+
+NOTE Confidence: 0.8808667659759521
+
+00:37:38.774 --> 00:37:40.640
+under management, right.
+
+NOTE Confidence: 0.9719650745391846
+
+00:37:40.920 --> 00:37:43.725
+We also allow you to govern and manage all of
+
+NOTE Confidence: 0.9719650745391846
+
+00:37:43.788 --> 00:37:45.159
+your tools right here.
+
+NOTE Confidence: 0.7596312165260315
+
+00:37:45.160 --> 00:37:49.120
+But I'm getting the the speed up signal.
+
+NOTE Confidence: 0.9447198510169983
+
+00:37:49.120 --> 00:37:52.185
+So I'm going to go back to my PowerPoint and
+
+NOTE Confidence: 0.9447198510169983
+
+00:37:52.255 --> 00:37:56.783
+finish out here with some really exciting details around customer
+
+NOTE Confidence: 0.9447198510169983
+
+00:37:56.853 --> 00:37:57.480
+momentum.
+
+NOTE Confidence: 0.9629770517349243
+
+00:37:57.920 --> 00:38:00.982
+So as you can see here, we have a ton
+
+NOTE Confidence: 0.9629770517349243
+
+00:38:01.065 --> 00:38:05.287
+of value and we have really enjoyed getting to work
+
+NOTE Confidence: 0.9629770517349243
+
+00:38:05.370 --> 00:38:07.440
+with some early adopters.
+
+NOTE Confidence: 0.718830406665802
+
+00:38:07.720 --> 00:38:10.280
+One such early adopter is EY.
+
+NOTE Confidence: 0.8750591278076172
+
+00:38:11.480 --> 00:38:16.153
+So with EY, they have found that for mission critical
+
+NOTE Confidence: 0.8750591278076172
+
+00:38:16.241 --> 00:38:19.679
+agents, Agent 365 is really key, right?
+
+NOTE Confidence: 0.9584851861000061
+
+00:38:19.680 --> 00:38:22.327
+It gives them the trust to be able to unlock
+
+NOTE Confidence: 0.9584851861000061
+
+00:38:22.387 --> 00:38:25.877
+these agents and to feel good about leveraging them across
+
+NOTE Confidence: 0.9584851861000061
+
+00:38:25.937 --> 00:38:26.959
+the organization.
+
+NOTE Confidence: 0.9337106943130493
+
+00:38:27.560 --> 00:38:30.791
+The next is Genspark, and lucky enough I don't have
+
+NOTE Confidence: 0.9337106943130493
+
+00:38:30.855 --> 00:38:33.706
+to speak for them because we have Ray here to
+
+NOTE Confidence: 0.9337106943130493
+
+00:38:33.770 --> 00:38:36.431
+come up on stage and tell us all about our
+
+NOTE Confidence: 0.9337106943130493
+
+00:38:36.494 --> 00:38:39.599
+partnership and what they've done with Agent 365.
+
+NOTE Confidence: 0.838960587978363
+
+00:38:39.600 --> 00:38:42.080
+Thank you so much, Ray.
+
+NOTE Confidence: 0.767146110534668
+
+00:38:44.560 --> 00:38:45.520
+Good morning everyone.
+
+NOTE Confidence: 0.8014663457870483
+
+00:38:45.800 --> 00:38:49.485
+I'm Ray Co Founder of Genspark and I'm very pleased
+
+NOTE Confidence: 0.8014663457870483
+
+00:38:49.557 --> 00:38:52.447
+to be on the stage and luck and happy to
+
+NOTE Confidence: 0.8014663457870483
+
+00:38:52.519 --> 00:38:56.638
+share with you guys of how Genspark integrated with Agent
+
+NOTE Confidence: 0.8014663457870483
+
+00:38:56.710 --> 00:38:56.999
+365.
+
+NOTE Confidence: 0.7627086639404297
+
+00:38:57.719 --> 00:39:03.119
+So so Jasma is a unified AI workspace for the
+
+NOTE Confidence: 0.7627086639404297
+
+00:39:03.239 --> 00:39:05.279
+knowledge people.
+
+NOTE Confidence: 0.7397682070732117
+
+00:39:05.680 --> 00:39:10.488
+And when we have more than 2000 organizations has already
+
+NOTE Confidence: 0.7397682070732117
+
+00:39:10.573 --> 00:39:14.960
+vegged Jasma as their daily work, daily work choose.
+
+NOTE Confidence: 0.8455580472946167
+
+00:39:15.160 --> 00:39:19.280
+So when combined with Agent 365, magic happens.
+
+NOTE Confidence: 0.7213740944862366
+
+00:39:19.760 --> 00:39:24.318
+So when we observe from the modern jobs, we found
+
+NOTE Confidence: 0.7213740944862366
+
+00:39:24.411 --> 00:39:27.759
+that there's kinds of types of jobs.
+
+NOTE Confidence: 0.6722042560577393
+
+00:39:28.000 --> 00:39:32.996
+For example, Sarah from the finance department, they should need
+
+NOTE Confidence: 0.6722042560577393
+
+00:39:33.074 --> 00:39:36.119
+to queue free the board deck by Friday.
+
+NOTE Confidence: 0.825028121471405
+
+00:39:36.760 --> 00:39:39.641
+So she need to do some summarize and make some
+
+NOTE Confidence: 0.825028121471405
+
+00:39:39.704 --> 00:39:40.079
+slice.
+
+NOTE Confidence: 0.8423914909362793
+
+00:39:40.680 --> 00:39:45.893
+And Tom, she he has more than 200 megabytes CSV
+
+NOTE Confidence: 0.8423914909362793
+
+00:39:46.004 --> 00:39:51.439
+to to run over some to need some powerful compute
+
+NOTE Confidence: 0.8423914909362793
+
+00:39:51.550 --> 00:39:56.320
+to do some calculations and summarizations.
+
+NOTE Confidence: 0.7205997109413147
+
+00:39:56.560 --> 00:39:59.714
+So those two kinds of work need two kinds of
+
+NOTE Confidence: 0.7205997109413147
+
+00:39:59.786 --> 00:40:00.360
+the AIS.
+
+NOTE Confidence: 0.7164377570152283
+
+00:40:00.800 --> 00:40:04.879
+For Sarah, maybe she just need some simple AI tools
+
+NOTE Confidence: 0.7164377570152283
+
+00:40:04.959 --> 00:40:07.120
+just like chat based tools.
+
+NOTE Confidence: 0.8170310854911804
+
+00:40:07.520 --> 00:40:10.960
+But for Tom, he needs a dedicated virtual machines.
+
+NOTE Confidence: 0.6571001410484314
+
+00:40:12.480 --> 00:40:17.040
+With Agent 365 it actually provided developers.
+
+NOTE Confidence: 0.799304723739624
+
+00:40:18.880 --> 00:40:24.633
+Like us the flexibility to combine with the different types
+
+NOTE Confidence: 0.799304723739624
+
+00:40:24.730 --> 00:40:30.289
+of the AI back end infrastructure to integrate with Agent
+
+NOTE Confidence: 0.799304723739624
+
+00:40:30.386 --> 00:40:34.189
+365 S to me Agent 365 is actually has a
+
+NOTE Confidence: 0.799304723739624
+
+00:40:34.287 --> 00:40:36.920
+three primitives platforms.
+
+NOTE Confidence: 0.8331690430641174
+
+00:40:37.240 --> 00:40:41.880
+1 is the identity with the federal identity credentials.
+
+NOTE Confidence: 0.7173604369163513
+
+00:40:42.280 --> 00:40:48.359
+The second one is the unified UIUX interface, for example,
+
+NOTE Confidence: 0.7173604369163513
+
+00:40:48.464 --> 00:40:54.648
+like the all the Michael M365 software suites, for example,
+
+NOTE Confidence: 0.7173604369163513
+
+00:40:54.753 --> 00:40:59.680
+teams, Outlooks works, document work, etcetera.
+
+NOTE Confidence: 0.7291248440742493
+
+00:41:00.040 --> 00:41:04.698
+And the third is the observability preview audit and plus
+
+NOTE Confidence: 0.7291248440742493
+
+00:41:04.779 --> 00:41:07.639
+all the lifestyle cycle management.
+
+NOTE Confidence: 0.6793472170829773
+
+00:41:08.440 --> 00:41:09.800
+Here is the architect.
+
+NOTE Confidence: 0.3752800226211548
+
+00:41:09.880 --> 00:41:11.840
+How transparent?
+
+NOTE Confidence: 0.8204601407051086
+
+00:41:11.840 --> 00:41:16.785
+Integrate with Agent 365 and build on top of Agent
+
+NOTE Confidence: 0.8204601407051086
+
+00:41:16.884 --> 00:41:17.280
+365.
+
+NOTE Confidence: 0.7464370131492615
+
+00:41:17.960 --> 00:41:23.859
+So at the top level, there's Microsoft software suite which
+
+NOTE Confidence: 0.7464370131492615
+
+00:41:23.959 --> 00:41:27.959
+has a Teams, Outlook and Word structure.
+
+NOTE Confidence: 0.7871278524398804
+
+00:41:28.440 --> 00:41:33.431
+And the middle layer is a very thin layer which
+
+NOTE Confidence: 0.7871278524398804
+
+00:41:33.537 --> 00:41:38.953
+we integrated as a Python SDK from Agent 365, which
+
+NOTE Confidence: 0.7871278524398804
+
+00:41:39.059 --> 00:41:45.538
+provide us the identity streaming MCP 2 course over Microsoft
+
+NOTE Confidence: 0.7871278524398804
+
+00:41:45.644 --> 00:41:46.600
+software.
+
+NOTE Confidence: 0.7974003553390503
+
+00:41:47.080 --> 00:41:51.188
+And the third one is the observability purview and the
+
+NOTE Confidence: 0.7974003553390503
+
+00:41:51.264 --> 00:41:54.079
+life cycle management under the hood.
+
+NOTE Confidence: 0.8314040899276733
+
+00:41:54.080 --> 00:41:58.520
+The third layer is actually the flexible back end.
+
+NOTE Confidence: 0.7182563543319702
+
+00:41:58.520 --> 00:42:05.170
+We provided, for example, the lightweight AI twos, transmarked chat
+
+NOTE Confidence: 0.7182563543319702
+
+00:42:05.269 --> 00:42:11.125
+based AI twos and the heavy weighted compute resources like
+
+NOTE Confidence: 0.7182563543319702
+
+00:42:11.225 --> 00:42:17.379
+Transmark crawl, a dedicated VM provided we've done and here's
+
+NOTE Confidence: 0.7182563543319702
+
+00:42:17.478 --> 00:42:22.640
+how we integrate and how we integrate the Agent 365.
+
+NOTE Confidence: 0.8400982618331909
+
+00:42:22.920 --> 00:42:29.298
+For example, for the identity, we just, we, we authenticate
+
+NOTE Confidence: 0.8400982618331909
+
+00:42:29.406 --> 00:42:34.919
+each request from teams and through our back hands.
+
+NOTE Confidence: 0.8764497637748718
+
+00:42:35.320 --> 00:42:38.939
+We did not just do the single authentication at the
+
+NOTE Confidence: 0.8764497637748718
+
+00:42:39.010 --> 00:42:39.719
+beginning.
+
+NOTE Confidence: 0.8382524251937866
+
+00:42:39.920 --> 00:42:44.562
+We just we authenticate every message so that we can
+
+NOTE Confidence: 0.8382524251937866
+
+00:42:44.651 --> 00:42:46.080
+ensure security.
+
+NOTE Confidence: 0.8040041923522949
+
+00:42:46.080 --> 00:42:50.935
+For example, someone from the Teams group chat mentioned your
+
+NOTE Confidence: 0.8040041923522949
+
+00:42:51.014 --> 00:42:55.471
+agent to asking for some private message from your agent
+
+NOTE Confidence: 0.8040041923522949
+
+00:42:55.551 --> 00:42:59.292
+and the agent can itself at that message and at
+
+NOTE Confidence: 0.8040041923522949
+
+00:42:59.371 --> 00:43:03.828
+that session can be authenticated that it found that the
+
+NOTE Confidence: 0.8040041923522949
+
+00:43:03.908 --> 00:43:07.410
+user is not from your agents AAD and then we
+
+NOTE Confidence: 0.8040041923522949
+
+00:43:07.490 --> 00:43:09.480
+just refuse that request.
+
+NOTE Confidence: 0.8470183610916138
+
+00:43:09.920 --> 00:43:13.863
+So with agent 365 we did not need to build
+
+NOTE Confidence: 0.8470183610916138
+
+00:43:13.957 --> 00:43:16.680
+another authentication layer.
+
+NOTE Confidence: 0.7550318837165833
+
+00:43:16.880 --> 00:43:20.980
+We just we use all of the capability provided by
+
+NOTE Confidence: 0.7550318837165833
+
+00:43:21.065 --> 00:43:21.920
+Microsoft.
+
+NOTE Confidence: 0.8455252647399902
+
+00:43:23.200 --> 00:43:25.701
+And the second one is the MCP, which is the
+
+NOTE Confidence: 0.8455252647399902
+
+00:43:25.759 --> 00:43:27.679
+great things we experience a lot.
+
+NOTE Confidence: 0.7109180688858032
+
+00:43:28.120 --> 00:43:35.298
+And because Agent 365 already has already provide powerful MCP's,
+
+NOTE Confidence: 0.7109180688858032
+
+00:43:35.408 --> 00:43:43.359
+for example, connecting with PowerPoints, Outlooks or Word, for example.
+
+NOTE Confidence: 0.7162567973136902
+
+00:43:43.680 --> 00:43:48.212
+And then each request comes through jenspart, we can just,
+
+NOTE Confidence: 0.7162567973136902
+
+00:43:48.291 --> 00:43:52.198
+we can generate a PowerPoint on the flight or Word
+
+NOTE Confidence: 0.7162567973136902
+
+00:43:52.276 --> 00:43:55.950
+document on the fly and why back into the users
+
+NOTE Confidence: 0.7162567973136902
+
+00:43:56.028 --> 00:43:58.919
+or the agents OneDrive using the MCP.
+
+NOTE Confidence: 0.8471488952636719
+
+00:43:59.080 --> 00:44:03.111
+In that way, we don't need to build another storage
+
+NOTE Confidence: 0.8471488952636719
+
+00:44:03.190 --> 00:44:05.720
+layer for the for for our users.
+
+NOTE Confidence: 0.8050856590270996
+
+00:44:06.360 --> 00:44:10.274
+And the third one, third one, the last, not the
+
+NOTE Confidence: 0.8050856590270996
+
+00:44:10.357 --> 00:44:14.855
+least is the most amazing part of Microsoft to provide
+
+NOTE Confidence: 0.8050856590270996
+
+00:44:14.938 --> 00:44:19.519
+is the observability and the secure and the governance.
+
+NOTE Confidence: 0.6393542289733887
+
+00:44:20.040 --> 00:44:27.330
+So for the observability, every agency locations inference and all
+
+NOTE Confidence: 0.6393542289733887
+
+00:44:27.440 --> 00:44:34.400
+the activities, they are already logged into Microsoft preview.
+
+NOTE Confidence: 0.7422540783882141
+
+00:44:34.719 --> 00:44:38.749
+So, so that the tenants, I mean in the dashboard
+
+NOTE Confidence: 0.7422540783882141
+
+00:44:38.833 --> 00:44:43.366
+that they can monitor all the activities and that it's
+
+NOTE Confidence: 0.7422540783882141
+
+00:44:43.450 --> 00:44:47.731
+used as single and unified place for the IT manager
+
+NOTE Confidence: 0.7422540783882141
+
+00:44:47.815 --> 00:44:51.845
+to, to, to to observe the all the activities for
+
+NOTE Confidence: 0.7422540783882141
+
+00:44:51.928 --> 00:44:53.439
+the of the agents.
+
+NOTE Confidence: 0.8015540838241577
+
+00:44:53.960 --> 00:44:54.880
+And for the preview.
+
+NOTE Confidence: 0.7925243377685547
+
+00:44:54.880 --> 00:44:59.512
+Because the agents has its own unified identity and all
+
+NOTE Confidence: 0.7925243377685547
+
+00:44:59.596 --> 00:45:05.071
+the preview policies has already implemented in the in enterprise
+
+NOTE Confidence: 0.7925243377685547
+
+00:45:05.155 --> 00:45:08.440
+will automatically apply to the agents.
+
+NOTE Confidence: 0.7718580961227417
+
+00:45:08.800 --> 00:45:14.400
+So that the sense sensitive label on the Word document.
+
+NOTE Confidence: 0.732562780380249
+
+00:45:14.880 --> 00:45:18.645
+We also applied for the agents so that the agents,
+
+NOTE Confidence: 0.732562780380249
+
+00:45:18.720 --> 00:45:23.465
+when the agents come and or leak something sensitive, sensitive
+
+NOTE Confidence: 0.732562780380249
+
+00:45:23.540 --> 00:45:28.359
+information and the purview policy can automatically block them.
+
+NOTE Confidence: 0.8554319739341736
+
+00:45:28.440 --> 00:45:33.437
+We don't need to implement another layer of the the
+
+NOTE Confidence: 0.8554319739341736
+
+00:45:33.535 --> 00:45:36.279
+security layer of ourselves.
+
+NOTE Confidence: 0.7437297701835632
+
+00:45:36.840 --> 00:45:40.893
+And of course all the agents has their laws, has
+
+NOTE Confidence: 0.7437297701835632
+
+00:45:40.977 --> 00:45:45.875
+unified their laws inside the using the same Microsoft API
+
+NOTE Confidence: 0.7437297701835632
+
+00:45:45.960 --> 00:45:49.591
+so that the IT manager can use the same SQL
+
+NOTE Confidence: 0.7437297701835632
+
+00:45:49.675 --> 00:45:55.080
+query to query and analysis the agents activities, logs combines
+
+NOTE Confidence: 0.7437297701835632
+
+00:45:55.164 --> 00:45:56.600
+all those things.
+
+NOTE Confidence: 0.795909583568573
+
+00:45:57.800 --> 00:46:02.166
+Agent 365 actually provide the flexibility for the users so
+
+NOTE Confidence: 0.795909583568573
+
+00:46:02.240 --> 00:46:06.237
+that the users can choose different kinds of the agent
+
+NOTE Confidence: 0.795909583568573
+
+00:46:06.311 --> 00:46:10.160
+back hands, for example chat based or dedicated VMS.
+
+NOTE Confidence: 0.8197401762008667
+
+00:46:10.680 --> 00:46:15.796
+And for the IT manager inside the enterprise, it still
+
+NOTE Confidence: 0.8197401762008667
+
+00:46:15.891 --> 00:46:21.766
+has the control for the enterprise because all the activities,
+
+NOTE Confidence: 0.8197401762008667
+
+00:46:21.861 --> 00:46:26.314
+all the agents logs has already built on top of
+
+NOTE Confidence: 0.8197401762008667
+
+00:46:26.409 --> 00:46:30.200
+Microsoft provided APIs and the manager.
+
+NOTE Confidence: 0.7575078010559082
+
+00:46:30.200 --> 00:46:34.370
+The IT manager in the enterprise can use the same
+
+NOTE Confidence: 0.7575078010559082
+
+00:46:34.455 --> 00:46:39.051
+existing tools to monitor, observe and all the all the
+
+NOTE Confidence: 0.7575078010559082
+
+00:46:39.136 --> 00:46:44.412
+loss and activities that makes the partnership of Genspark and
+
+NOTE Confidence: 0.7575078010559082
+
+00:46:44.497 --> 00:46:46.199
+Agent G65 are great.
+
+NOTE Confidence: 0.7541158199310303
+
+00:46:46.400 --> 00:46:50.120
+And our customers, enterprise customers love this feature a lot.
+
+NOTE Confidence: 0.7046529054641724
+
+00:46:51.520 --> 00:46:53.480
+For that, I'll just turn back to Neta.
+
+NOTE Confidence: 0.7837737202644348
+
+00:46:57.120 --> 00:46:59.200
+Thank you everybody and I'll close this off you.
+
+NOTE Confidence: 0.8435752987861633
+
+00:46:59.280 --> 00:47:02.154
+You saw how you can build enterprise ready agent with
+
+NOTE Confidence: 0.8435752987861633
+
+00:47:02.208 --> 00:47:05.137
+with Microsoft Agent 365 with the how to integrate the
+
+NOTE Confidence: 0.8435752987861633
+
+00:47:05.191 --> 00:47:08.119
+SDK, how to observe and secure and govern your agents.
+
+NOTE Confidence: 0.843978226184845
+
+00:47:08.360 --> 00:47:10.741
+We have some resources for you here, how to get
+
+NOTE Confidence: 0.843978226184845
+
+00:47:10.791 --> 00:47:13.223
+started, how to get started with the SDK and the
+
+NOTE Confidence: 0.843978226184845
+
+00:47:13.274 --> 00:47:14.439
+recently released blog.
+
+NOTE Confidence: 0.9244817495346069
+
+00:47:14.600 --> 00:47:16.880
+I hope you enjoyed our session and thank you everybody.
+
+NOTE Confidence: 0.9545097351074219
+
+00:47:16.880 --> 00:47:18.000
+Have a wonderful day today.
+

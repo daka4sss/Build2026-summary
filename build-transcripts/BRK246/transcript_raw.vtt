@@ -1,0 +1,5015 @@
+WEBVTT
+
+NOTE
+language:en-US
+
+NOTE Confidence: 0.6674839854240417
+
+00:00:00.720 --> 00:00:02.680
+All right, let's get going.
+
+NOTE Confidence: 0.9615069031715393
+
+00:00:02.680 --> 00:00:03.680
+Good morning, everyone.
+
+NOTE Confidence: 0.6922976970672607
+
+00:00:05.720 --> 00:00:06.280
+I'm Pablo.
+
+NOTE Confidence: 0.8438344597816467
+
+00:00:06.400 --> 00:00:08.120
+I work in the Foundry IQ team.
+
+NOTE Confidence: 0.8754463791847229
+
+00:00:08.720 --> 00:00:11.373
+And what what we'll do in this session is talk
+
+NOTE Confidence: 0.8754463791847229
+
+00:00:11.431 --> 00:00:14.257
+about what it takes to connect agents and your AI
+
+NOTE Confidence: 0.8754463791847229
+
+00:00:14.315 --> 00:00:17.603
+models with the knowledge that makes them connect to your
+
+NOTE Confidence: 0.8754463791847229
+
+00:00:17.660 --> 00:00:20.833
+applications, to your company and to the data they need
+
+NOTE Confidence: 0.8754463791847229
+
+00:00:20.890 --> 00:00:22.159
+to get their job done.
+
+NOTE Confidence: 0.8237223625183105
+
+00:00:24.200 --> 00:00:26.800
+So you're cutting to the chase.
+
+NOTE Confidence: 0.9158385992050171
+
+00:00:27.240 --> 00:00:29.977
+Foundry IQ is the thing you use to connect agents
+
+NOTE Confidence: 0.9158385992050171
+
+00:00:30.033 --> 00:00:30.760
+to knowledge.
+
+NOTE Confidence: 0.9322695136070251
+
+00:00:31.360 --> 00:00:34.467
+Now when we think about Foundry IQ, we think about
+
+NOTE Confidence: 0.9322695136070251
+
+00:00:34.529 --> 00:00:38.880
+getting this done in with three fundamental elements in consideration.
+
+NOTE Confidence: 0.8512259721755981
+
+00:00:38.960 --> 00:00:41.888
+First, we want it to be piece of cake to
+
+NOTE Confidence: 0.8512259721755981
+
+00:00:41.961 --> 00:00:42.839
+get started.
+
+NOTE Confidence: 0.8738614320755005
+
+00:00:43.560 --> 00:00:46.774
+Second, we want versatility so that as your application gets
+
+NOTE Confidence: 0.8738614320755005
+
+00:00:46.827 --> 00:00:50.042
+sophisticated, your needs grow or the problems get hard, you
+
+NOTE Confidence: 0.8738614320755005
+
+00:00:50.095 --> 00:00:52.560
+have what you need right in the same platform.
+
+NOTE Confidence: 0.8985904455184937
+
+00:00:53.240 --> 00:00:56.916
+And 3rd, like any AI based system, you want top
+
+NOTE Confidence: 0.8985904455184937
+
+00:00:56.994 --> 00:01:01.296
+quality across the entire set of components that are AI
+
+NOTE Confidence: 0.8985904455184937
+
+00:01:01.374 --> 00:01:02.000
+powered.
+
+NOTE Confidence: 0.9321953654289246
+
+00:01:02.000 --> 00:01:06.083
+In particular for retrieval, you want great ranking, great relevance,
+
+NOTE Confidence: 0.9321953654289246
+
+00:01:06.142 --> 00:01:07.800
+great content understanding.
+
+NOTE Confidence: 0.7826142311096191
+
+00:01:08.440 --> 00:01:09.840
+So that's what we are aiming for.
+
+NOTE Confidence: 0.8203017711639404
+
+00:01:10.319 --> 00:01:12.614
+So before we go into the details, we said we
+
+NOTE Confidence: 0.8203017711639404
+
+00:01:12.666 --> 00:01:14.440
+want it to be easy to get started.
+
+NOTE Confidence: 0.8995237946510315
+
+00:01:14.880 --> 00:01:16.960
+So let's let's actually test that out first.
+
+NOTE Confidence: 0.8780983090400696
+
+00:01:18.240 --> 00:01:20.962
+So I'm here in Foundry and we'll, we'll go back
+
+NOTE Confidence: 0.8780983090400696
+
+00:01:21.020 --> 00:01:24.496
+and forth between a few different developer surface areas so
+
+NOTE Confidence: 0.8780983090400696
+
+00:01:24.554 --> 00:01:26.640
+you can get a flavor of all of them.
+
+NOTE Confidence: 0.9519569277763367
+
+00:01:27.040 --> 00:01:28.320
+But I'm going to start in Foundry.
+
+NOTE Confidence: 0.9486156702041626
+
+00:01:28.880 --> 00:01:30.200
+So I'm going to go to build.
+
+NOTE Confidence: 0.7735214233398438
+
+00:01:31.040 --> 00:01:33.440
+I have a, a foundry project already created.
+
+NOTE Confidence: 0.9413925409317017
+
+00:01:33.560 --> 00:01:35.280
+And what I'll do is I'll go to knowledge.
+
+NOTE Confidence: 0.8326362371444702
+
+00:01:35.280 --> 00:01:36.600
+Oh, I'm sorry, this is very small.
+
+NOTE Confidence: 0.9636784195899963
+
+00:01:37.880 --> 00:01:38.920
+Hopefully that's a little better.
+
+NOTE Confidence: 0.9139885902404785
+
+00:01:40.720 --> 00:01:43.573
+So, so this is the, the part of Foundry where
+
+NOTE Confidence: 0.9139885902404785
+
+00:01:43.637 --> 00:01:45.919
+you manage all your knowledge bases.
+
+NOTE Confidence: 0.9079028964042664
+
+00:01:47.000 --> 00:01:49.133
+So what I'll do is I'll create a new knowledge
+
+NOTE Confidence: 0.9079028964042664
+
+00:01:49.179 --> 00:01:50.199
+base and we said easy.
+
+NOTE Confidence: 0.946902334690094
+
+00:01:50.200 --> 00:01:52.475
+So let's just take an easy case where we just
+
+NOTE Confidence: 0.946902334690094
+
+00:01:52.526 --> 00:01:54.599
+have a bunch of files and we want to make
+
+NOTE Confidence: 0.946902334690094
+
+00:01:54.649 --> 00:01:55.559
+it the way you do.
+
+NOTE Confidence: 0.9215426445007324
+
+00:01:56.240 --> 00:01:58.181
+You would do it in a chat application today where
+
+NOTE Confidence: 0.9215426445007324
+
+00:01:58.221 --> 00:02:00.004
+you can drag and drop some files and ask some
+
+NOTE Confidence: 0.9215426445007324
+
+00:02:00.043 --> 00:02:00.440
+questions.
+
+NOTE Confidence: 0.9294410347938538
+
+00:02:00.760 --> 00:02:02.624
+If you want to build your own version of that,
+
+NOTE Confidence: 0.9294410347938538
+
+00:02:02.665 --> 00:02:03.799
+it's kind of the same thing.
+
+NOTE Confidence: 0.8956631422042847
+
+00:02:03.800 --> 00:02:06.799
+You can now just say, hey, my data is just
+
+NOTE Confidence: 0.8956631422042847
+
+00:02:06.871 --> 00:02:10.014
+in files, and I'm going to give this kind of
+
+NOTE Confidence: 0.8956631422042847
+
+00:02:10.085 --> 00:02:11.800
+knowledge source a name.
+
+NOTE Confidence: 0.8819437026977539
+
+00:02:12.320 --> 00:02:14.766
+I have a few files about movies, so I'm going
+
+NOTE Confidence: 0.8819437026977539
+
+00:02:14.820 --> 00:02:17.375
+to call it Movies Wiki because I took them from
+
+NOTE Confidence: 0.8819437026977539
+
+00:02:17.429 --> 00:02:20.473
+Wikipedia, and I'm going to describe what this what this
+
+NOTE Confidence: 0.8819437026977539
+
+00:02:20.528 --> 00:02:20.799
+does.
+
+NOTE Confidence: 0.8997678756713867
+
+00:02:20.800 --> 00:02:21.880
+So the agents know.
+
+NOTE Confidence: 0.8285074234008789
+
+00:02:22.400 --> 00:02:25.867
+So I'll say use for, or rather will say full
+
+NOTE Confidence: 0.8285074234008789
+
+00:02:25.946 --> 00:02:27.680
+articles about movies.
+
+NOTE Confidence: 0.686675488948822
+
+00:02:33.200 --> 00:02:33.520
+Yeah.
+
+NOTE Confidence: 0.8900506496429443
+
+00:02:33.840 --> 00:02:36.040
+So there are microphones in the back, but yeah, I'll.
+
+NOTE Confidence: 0.8203317523002625
+
+00:02:36.280 --> 00:02:36.920
+I'll speak up.
+
+NOTE Confidence: 0.8770039677619934
+
+00:02:37.000 --> 00:02:38.000
+And I think folks turned it up.
+
+NOTE Confidence: 0.9755645990371704
+
+00:02:38.120 --> 00:02:38.480
+Thank you.
+
+NOTE Confidence: 0.8686835765838623
+
+00:02:38.480 --> 00:02:41.327
+All right, So what I'll do is I'm going to
+
+NOTE Confidence: 0.8686835765838623
+
+00:02:41.395 --> 00:02:42.480
+grab some files.
+
+NOTE Confidence: 0.7049784064292908
+
+00:02:42.720 --> 00:02:44.800
+I'm going to just drop them here.
+
+NOTE Confidence: 0.8424598574638367
+
+00:02:45.760 --> 00:02:48.916
+These are kind of just movies, like articles for movies
+
+NOTE Confidence: 0.8424598574638367
+
+00:02:48.973 --> 00:02:51.556
+I took from Wikipedia and I'm going to go hit
+
+NOTE Confidence: 0.8424598574638367
+
+00:02:51.613 --> 00:02:52.359
+save on this.
+
+NOTE Confidence: 0.8685896396636963
+
+00:02:53.200 --> 00:02:56.679
+So now I have like a knowledge base and this
+
+NOTE Confidence: 0.8685896396636963
+
+00:02:56.758 --> 00:03:00.080
+knowledge base I'm going to grab the name.
+
+NOTE Confidence: 0.7712096571922302
+
+00:03:02.480 --> 00:03:05.987
+This knowledge base lives in the in a particular Foundry
+
+NOTE Confidence: 0.7712096571922302
+
+00:03:06.050 --> 00:03:09.120
+IQ instance I already created called here Demo 3.
+
+NOTE Confidence: 0.8480077385902405
+
+00:03:10.360 --> 00:03:12.739
+So if I want to use it, I could go
+
+NOTE Confidence: 0.8480077385902405
+
+00:03:12.809 --> 00:03:16.799
+call APIs to go consume this or out-of-the-box, every one
+
+NOTE Confidence: 0.8480077385902405
+
+00:03:16.869 --> 00:03:20.229
+of these knowledge bases is an MCP server that I
+
+NOTE Confidence: 0.8480077385902405
+
+00:03:20.299 --> 00:03:23.519
+don't have to really do anything to to to kind
+
+NOTE Confidence: 0.8480077385902405
+
+00:03:23.589 --> 00:03:24.919
+of stand up or run.
+
+NOTE Confidence: 0.8459447622299194
+
+00:03:25.320 --> 00:03:28.340
+So, you know, because I'm being a little lazy, instead
+
+NOTE Confidence: 0.8459447622299194
+
+00:03:28.396 --> 00:03:31.025
+of writing a new agent, I'm going to use GitHub
+
+NOTE Confidence: 0.8459447622299194
+
+00:03:31.081 --> 00:03:32.200
+copilot as my agent.
+
+NOTE Confidence: 0.6592299342155457
+
+00:03:32.600 --> 00:03:35.800
+So here I'm interested in a new GitHub copilot session.
+
+NOTE Confidence: 0.9445838332176208
+
+00:03:36.040 --> 00:03:38.806
+What I'll do is I'll say MCP to see what
+
+NOTE Confidence: 0.9445838332176208
+
+00:03:38.875 --> 00:03:40.119
+I have configured.
+
+NOTE Confidence: 0.807275116443634
+
+00:03:40.320 --> 00:03:41.920
+I'm going to add a new MCP server.
+
+NOTE Confidence: 0.9052485227584839
+
+00:03:41.920 --> 00:03:44.760
+I'll call it Wikipedia if I can type.
+
+NOTE Confidence: 0.840424656867981
+
+00:03:47.400 --> 00:03:50.581
+And So what I'll do is I'm going to use
+
+NOTE Confidence: 0.840424656867981
+
+00:03:50.663 --> 00:03:54.660
+an odd proxy to to connect the dots between these
+
+NOTE Confidence: 0.840424656867981
+
+00:03:54.742 --> 00:03:55.639
+two things.
+
+NOTE Confidence: 0.8465641140937805
+
+00:03:55.640 --> 00:03:58.011
+And I'll say I'm going to point it to my
+
+NOTE Confidence: 0.8465641140937805
+
+00:03:58.070 --> 00:03:58.960
+new MCP server.
+
+NOTE Confidence: 0.9011679887771606
+
+00:03:58.960 --> 00:04:01.898
+In this case, Demo 3 was the name of my
+
+NOTE Confidence: 0.9011679887771606
+
+00:04:01.973 --> 00:04:03.480
+Foundry IQ instance.
+
+NOTE Confidence: 0.8886269330978394
+
+00:04:03.480 --> 00:04:04.400
+So I'll say that.
+
+NOTE Confidence: 0.6099355816841125
+
+00:04:04.840 --> 00:04:08.725
+And I'll say that search.windows.net, because this is backed by
+
+NOTE Confidence: 0.6099355816841125
+
+00:04:08.787 --> 00:04:11.440
+Azure Search, going to say knowledge bases.
+
+NOTE Confidence: 0.7323215007781982
+
+00:04:11.440 --> 00:04:13.298
+And I'm going to paste the knowledge base we just
+
+NOTE Confidence: 0.7323215007781982
+
+00:04:13.336 --> 00:04:13.640
+created.
+
+NOTE Confidence: 0.9423657655715942
+
+00:04:14.000 --> 00:04:15.680
+And this is the entry point to your API.
+
+NOTE Confidence: 0.8713710904121399
+
+00:04:15.840 --> 00:04:17.961
+But if you want an MCP server, you should say
+
+NOTE Confidence: 0.8713710904121399
+
+00:04:18.008 --> 00:04:18.479
+slash MCP.
+
+NOTE Confidence: 0.8544663190841675
+
+00:04:18.480 --> 00:04:18.960
+And you're done.
+
+NOTE Confidence: 0.9569011330604553
+
+00:04:18.960 --> 00:04:20.400
+You have an MCP server right there.
+
+NOTE Confidence: 0.8552514910697937
+
+00:04:21.000 --> 00:04:24.030
+And like all of our APIs, they have an API
+
+NOTE Confidence: 0.8552514910697937
+
+00:04:24.102 --> 00:04:24.679
+version.
+
+NOTE Confidence: 0.9131413102149963
+
+00:04:26.400 --> 00:04:31.600
+In this case, this is the API we shipped today.
+
+NOTE Confidence: 0.9378733038902283
+
+00:04:32.720 --> 00:04:34.120
+So I'm going to hit save on that.
+
+NOTE Confidence: 0.8714166879653931
+
+00:04:34.279 --> 00:04:36.477
+And now I have just a new MCP server connected
+
+NOTE Confidence: 0.8714166879653931
+
+00:04:36.525 --> 00:04:38.771
+here that is backed by the data I just uploaded
+
+NOTE Confidence: 0.8714166879653931
+
+00:04:38.818 --> 00:04:39.439
+a second ago.
+
+NOTE Confidence: 0.8790011405944824
+
+00:04:39.880 --> 00:04:43.398
+Like if we go here and take a quick look,
+
+NOTE Confidence: 0.8790011405944824
+
+00:04:43.484 --> 00:04:47.861
+you'll see that all the files I uploaded before are
+
+NOTE Confidence: 0.8790011405944824
+
+00:04:47.946 --> 00:04:49.320
+like now, right?
+
+NOTE Confidence: 0.834439218044281
+
+00:04:49.320 --> 00:04:50.640
+They are processed and ready to go.
+
+NOTE Confidence: 0.9094516634941101
+
+00:04:51.600 --> 00:04:56.927
+So once I have this if, if it works, let's
+
+NOTE Confidence: 0.9094516634941101
+
+00:04:57.054 --> 00:05:01.240
+see, let's give it one more shot.
+
+NOTE Confidence: 0.8751863837242126
+
+00:05:08.570 --> 00:05:09.610
+Let's see if it still does it.
+
+NOTE Confidence: 0.7742375135421753
+
+00:05:14.320 --> 00:05:16.160
+All right, let's try it one more time, and if
+
+NOTE Confidence: 0.7742375135421753
+
+00:05:16.201 --> 00:05:17.959
+not, I'll just use one that I already have.
+
+NOTE Confidence: 0.9003682136535645
+
+00:05:24.030 --> 00:05:24.950
+OK, now it's gone.
+
+NOTE Confidence: 0.9647449254989624
+
+00:05:24.950 --> 00:05:25.670
+Let's do it again.
+
+NOTE Confidence: 0.7196403741836548
+
+00:05:30.870 --> 00:05:33.110
+So we said MCP Auth proxy.
+
+NOTE Confidence: 0.8565883040428162
+
+00:05:36.390 --> 00:05:40.577
+We said Demo 3 was the name of our service
+
+NOTE Confidence: 0.8565883040428162
+
+00:05:40.676 --> 00:05:46.957
+search thatwindows.net knowledge bases and then the name of our
+
+NOTE Confidence: 0.8565883040428162
+
+00:05:47.057 --> 00:05:52.840
+knowledge base, MCP API version and brand new API version.
+
+NOTE Confidence: 0.8884060382843018
+
+00:05:57.480 --> 00:05:59.732
+All right, so we'll give this a second and see
+
+NOTE Confidence: 0.8884060382843018
+
+00:05:59.781 --> 00:06:00.319
+if it goes.
+
+NOTE Confidence: 0.8990268707275391
+
+00:06:00.760 --> 00:06:02.947
+But the idea is once I have this, then I
+
+NOTE Confidence: 0.8990268707275391
+
+00:06:03.002 --> 00:06:06.174
+can ask questions about this knowledge base if network and
+
+NOTE Confidence: 0.8990268707275391
+
+00:06:06.228 --> 00:06:07.760
+everything kind of helps us.
+
+NOTE Confidence: 0.8437007665634155
+
+00:06:08.000 --> 00:06:09.920
+So I know some of the movies there.
+
+NOTE Confidence: 0.6582784056663513
+
+00:06:09.920 --> 00:06:15.160
+So I'm going to say which feel the Neo take.
+
+NOTE Confidence: 0.8220284581184387
+
+00:06:17.360 --> 00:06:19.494
+And so now what this will do is, you know,
+
+NOTE Confidence: 0.8220284581184387
+
+00:06:19.545 --> 00:06:21.934
+to answer my question, it wants to ground on on
+
+NOTE Confidence: 0.8220284581184387
+
+00:06:21.985 --> 00:06:24.119
+the MCP servers that we want that we have.
+
+NOTE Confidence: 0.9008473753929138
+
+00:06:24.880 --> 00:06:27.760
+So it'll go try the knowledge base I created.
+
+NOTE Confidence: 0.8234354853630066
+
+00:06:27.960 --> 00:06:31.435
+It'll send a few questions, get kind of grounding information,
+
+NOTE Confidence: 0.8234354853630066
+
+00:06:31.491 --> 00:06:33.958
+and then it'll say Neo took the red pill and
+
+NOTE Confidence: 0.8234354853630066
+
+00:06:34.014 --> 00:06:35.919
+kind of this came from the Matrix.
+
+NOTE Confidence: 0.8920402526855469
+
+00:06:36.640 --> 00:06:39.534
+So it took a minute to just go from serial
+
+NOTE Confidence: 0.8920402526855469
+
+00:06:39.603 --> 00:06:43.118
+to a working knowledge base that I can connect from
+
+NOTE Confidence: 0.8920402526855469
+
+00:06:43.187 --> 00:06:45.599
+my agent using MCP or using an API.
+
+NOTE Confidence: 0.9558517932891846
+
+00:06:46.920 --> 00:06:49.985
+Now, of course, like this is a super simplified scenario,
+
+NOTE Confidence: 0.9558517932891846
+
+00:06:50.038 --> 00:06:52.189
+but we said we wanted to make it easy to
+
+NOTE Confidence: 0.9558517932891846
+
+00:06:52.243 --> 00:06:55.040
+get started and then be able to continue from there.
+
+NOTE Confidence: 0.9096947908401489
+
+00:06:57.640 --> 00:07:00.278
+So the way we built Foundry IQ is to be
+
+NOTE Confidence: 0.9096947908401489
+
+00:07:00.345 --> 00:07:03.863
+a comprehensive system that is layered in a way that
+
+NOTE Confidence: 0.9096947908401489
+
+00:07:03.930 --> 00:07:05.959
+doesn't hide options from you.
+
+NOTE Confidence: 0.9386290311813354
+
+00:07:05.960 --> 00:07:08.400
+You just choose to use whatever layer you want.
+
+NOTE Confidence: 0.9478151202201843
+
+00:07:08.760 --> 00:07:11.961
+At the top, we have the Foundry integration layer where
+
+NOTE Confidence: 0.9478151202201843
+
+00:07:12.019 --> 00:07:14.988
+you just saw how quickly and how productive you can
+
+NOTE Confidence: 0.9478151202201843
+
+00:07:15.046 --> 00:07:16.560
+be in building new agents.
+
+NOTE Confidence: 0.8371319770812988
+
+00:07:17.080 --> 00:07:21.012
+In the middle, we have a complete knowledge retrieval system
+
+NOTE Confidence: 0.8371319770812988
+
+00:07:21.078 --> 00:07:25.208
+that uses agentic retrieval when needle and it'll handle things
+
+NOTE Confidence: 0.8371319770812988
+
+00:07:25.273 --> 00:07:27.240
+like iterative query planning.
+
+NOTE Confidence: 0.8732779622077942
+
+00:07:27.440 --> 00:07:30.440
+It handles multiple sources and chooses when to query what.
+
+NOTE Confidence: 0.8446376919746399
+
+00:07:30.760 --> 00:07:33.376
+And it connects to entire Microsoft IQ surface and it
+
+NOTE Confidence: 0.8446376919746399
+
+00:07:33.425 --> 00:07:35.894
+has APIs that you can use directly to connect from
+
+NOTE Confidence: 0.8446376919746399
+
+00:07:35.943 --> 00:07:36.239
+there.
+
+NOTE Confidence: 0.7962061166763306
+
+00:07:37.160 --> 00:07:39.873
+And in turn, that is built on this foundation of
+
+NOTE Confidence: 0.7962061166763306
+
+00:07:39.930 --> 00:07:41.400
+our code retrieval engine.
+
+NOTE Confidence: 0.7976208329200745
+
+00:07:41.880 --> 00:07:45.180
+Think of this as a state-of-the-art system that will do
+
+NOTE Confidence: 0.7976208329200745
+
+00:07:45.240 --> 00:07:48.960
+vector retrieval, it'll do lexical search and combine the two.
+
+NOTE Confidence: 0.8778548836708069
+
+00:07:49.080 --> 00:07:52.681
+It has state-of-the-art ranking models, all the things you need
+
+NOTE Confidence: 0.8778548836708069
+
+00:07:52.738 --> 00:07:56.225
+to get the best quality results during ranking without having
+
+NOTE Confidence: 0.8778548836708069
+
+00:07:56.283 --> 00:07:58.912
+to rebuild all of this from scratch and in the
+
+NOTE Confidence: 0.8778548836708069
+
+00:07:58.969 --> 00:08:02.399
+backdrop of of enterprise grade security, quality and scale.
+
+NOTE Confidence: 0.8349778652191162
+
+00:08:05.120 --> 00:08:07.456
+Now, when you use Foundry IQ, I just did a
+
+NOTE Confidence: 0.8349778652191162
+
+00:08:07.512 --> 00:08:10.126
+quick pass, but if you look into the process in
+
+NOTE Confidence: 0.8349778652191162
+
+00:08:10.182 --> 00:08:13.297
+detail, usually what you do is you start by provisioning
+
+NOTE Confidence: 0.8349778652191162
+
+00:08:13.353 --> 00:08:14.800
+a new Foundry IQ instance.
+
+NOTE Confidence: 0.8924334645271301
+
+00:08:15.000 --> 00:08:16.960
+Then you create a knowledge base like I just did.
+
+NOTE Confidence: 0.8655269145965576
+
+00:08:17.560 --> 00:08:19.920
+You add some knowledge sources, and then you retrieve.
+
+NOTE Confidence: 0.941815972328186
+
+00:08:20.360 --> 00:08:22.942
+So let's walk through this process and talk about how
+
+NOTE Confidence: 0.941815972328186
+
+00:08:22.991 --> 00:08:25.330
+are we improving each of these stages to make it
+
+NOTE Confidence: 0.941815972328186
+
+00:08:25.378 --> 00:08:27.376
+easier and to be able to enable you to do
+
+NOTE Confidence: 0.941815972328186
+
+00:08:27.425 --> 00:08:28.399
+more things with it.
+
+NOTE Confidence: 0.885293185710907
+
+00:08:30.600 --> 00:08:33.745
+When it comes to provisioning, so far, Foundry IQ and
+
+NOTE Confidence: 0.885293185710907
+
+00:08:33.805 --> 00:08:37.425
+the underlying Usher AI search technology has required you to
+
+NOTE Confidence: 0.885293185710907
+
+00:08:37.485 --> 00:08:39.799
+create what we call dedicated capacity.
+
+NOTE Confidence: 0.828749418258667
+
+00:08:40.320 --> 00:08:43.425
+Dedicated capacity is great when you have a steady workload
+
+NOTE Confidence: 0.828749418258667
+
+00:08:43.477 --> 00:08:45.320
+because it's it's very predictable.
+
+NOTE Confidence: 0.9059270024299622
+
+00:08:45.679 --> 00:08:49.687
+It's isolated to your to your environment, and you control
+
+NOTE Confidence: 0.9059270024299622
+
+00:08:49.756 --> 00:08:54.040
+exactly what happens in there in terms of competing workloads.
+
+NOTE Confidence: 0.9301527142524719
+
+00:08:54.240 --> 00:08:56.167
+On the flip side, you have to know how much
+
+NOTE Confidence: 0.9301527142524719
+
+00:08:56.212 --> 00:08:58.229
+capacity you need all of that, and we want to
+
+NOTE Confidence: 0.9301527142524719
+
+00:08:58.274 --> 00:08:59.440
+make this a little easier.
+
+NOTE Confidence: 0.852533757686615
+
+00:09:00.120 --> 00:09:03.143
+So I'm excited to announce the public preview of the
+
+NOTE Confidence: 0.852533757686615
+
+00:09:03.201 --> 00:09:05.119
+serverless version of Foundry IQ.
+
+NOTE Confidence: 0.8011512756347656
+
+00:09:06.320 --> 00:09:07.960
+With serverless, there is no friction.
+
+NOTE Confidence: 0.9392498135566711
+
+00:09:07.960 --> 00:09:10.760
+To start, it takes 1020 seconds to create a service.
+
+NOTE Confidence: 0.9105988144874573
+
+00:09:11.240 --> 00:09:13.960
+The service doesn't cost anything until you actually use it.
+
+NOTE Confidence: 0.8010785579681396
+
+00:09:14.240 --> 00:09:16.959
+And when you're not using it, the service scales to
+
+NOTE Confidence: 0.8010785579681396
+
+00:09:17.013 --> 00:09:19.359
+0 and you only pay for the storage that your
+
+NOTE Confidence: 0.8010785579681396
+
+00:09:19.413 --> 00:09:20.159
+index is used.
+
+NOTE Confidence: 0.7923337817192078
+
+00:09:21.240 --> 00:09:24.000
+Serverless Foundry IQ is production ready.
+
+NOTE Confidence: 0.9044851660728455
+
+00:09:24.559 --> 00:09:27.337
+You can use it for developer workloads, but you can
+
+NOTE Confidence: 0.9044851660728455
+
+00:09:27.392 --> 00:09:30.278
+also use it for this very dynamic workloads, like for
+
+NOTE Confidence: 0.9044851660728455
+
+00:09:30.333 --> 00:09:34.036
+example agents creating services or cases where your application may
+
+NOTE Confidence: 0.9044851660728455
+
+00:09:34.091 --> 00:09:36.760
+need to create and delete services on the flight.
+
+NOTE Confidence: 0.8711816668510437
+
+00:09:36.760 --> 00:09:39.819
+So you can start experimenting easy, but you can go
+
+NOTE Confidence: 0.8711816668510437
+
+00:09:39.879 --> 00:09:42.699
+to production as is, and it's based on the same
+
+NOTE Confidence: 0.8711816668510437
+
+00:09:42.759 --> 00:09:46.959
+state-of-the-art technology that powers the existing Foundry IQ stack.
+
+NOTE Confidence: 0.8428788185119629
+
+00:09:46.960 --> 00:09:51.057
+So that means state-of-the-art ranking, instant Rag stack ready to
+
+NOTE Confidence: 0.8428788185119629
+
+00:09:51.119 --> 00:09:54.098
+go and a rock solid foundation, but with all the
+
+NOTE Confidence: 0.8428788185119629
+
+00:09:54.161 --> 00:09:56.520
+dynamic characteristics of serverless.
+
+NOTE Confidence: 0.9149811267852783
+
+00:09:58.280 --> 00:09:59.400
+So now you have choice.
+
+NOTE Confidence: 0.8691291809082031
+
+00:10:00.200 --> 00:10:03.591
+Serverless is great when you want a usage based plan,
+
+NOTE Confidence: 0.8691291809082031
+
+00:10:03.655 --> 00:10:07.367
+Dedicated is great when you want a highly predictable plan
+
+NOTE Confidence: 0.8691291809082031
+
+00:10:07.431 --> 00:10:11.079
+and when you look at the application patterns in general.
+
+NOTE Confidence: 0.8475848436355591
+
+00:10:11.080 --> 00:10:13.956
+Serverless is great when you have lots of medium and
+
+NOTE Confidence: 0.8475848436355591
+
+00:10:14.012 --> 00:10:17.552
+medium sized or small indexes, great for the developer workflow,
+
+NOTE Confidence: 0.8475848436355591
+
+00:10:17.607 --> 00:10:20.595
+great for unit test where you create and delete things
+
+NOTE Confidence: 0.8475848436355591
+
+00:10:20.650 --> 00:10:23.250
+on the spot, and also great for agents when you
+
+NOTE Confidence: 0.8475848436355591
+
+00:10:23.306 --> 00:10:26.293
+want to let the agents create services and indexes and
+
+NOTE Confidence: 0.8475848436355591
+
+00:10:26.348 --> 00:10:27.399
+whatnot on its own.
+
+NOTE Confidence: 0.8656154274940491
+
+00:10:28.360 --> 00:10:31.478
+On the flip side, dedicated gives you isolated capacity and
+
+NOTE Confidence: 0.8656154274940491
+
+00:10:31.531 --> 00:10:34.597
+even gives you the option to run on confidential computing
+
+NOTE Confidence: 0.8656154274940491
+
+00:10:34.650 --> 00:10:35.760
+stacks top to bottom.
+
+NOTE Confidence: 0.9085848331451416
+
+00:10:37.400 --> 00:10:40.391
+So to use serverless, you can do it from multiple
+
+NOTE Confidence: 0.9085848331451416
+
+00:10:40.452 --> 00:10:40.879
+places.
+
+NOTE Confidence: 0.93150395154953
+
+00:10:40.880 --> 00:10:43.440
+We talked about agents and about and about people using
+
+NOTE Confidence: 0.93150395154953
+
+00:10:43.487 --> 00:10:43.720
+them.
+
+NOTE Confidence: 0.9659276008605957
+
+00:10:43.960 --> 00:10:45.000
+So let's try both.
+
+NOTE Confidence: 0.8836793899536133
+
+00:10:45.000 --> 00:10:47.562
+I'm going to start by, I'm going to grab a
+
+NOTE Confidence: 0.8836793899536133
+
+00:10:47.623 --> 00:10:50.429
+quick prompt and I'll show you what it does in
+
+NOTE Confidence: 0.8836793899536133
+
+00:10:50.490 --> 00:10:51.039
+a second.
+
+NOTE Confidence: 0.84059739112854
+
+00:10:51.360 --> 00:10:52.760
+Going to go here and paste it.
+
+NOTE Confidence: 0.8610672354698181
+
+00:10:53.040 --> 00:10:55.233
+And what I'll do is I'll say, so I also
+
+NOTE Confidence: 0.8610672354698181
+
+00:10:55.289 --> 00:10:58.382
+have this movie data like movie titles and whatnot from
+
+NOTE Confidence: 0.8610672354698181
+
+00:10:58.438 --> 00:10:58.720
+IMDb.
+
+NOTE Confidence: 0.8818140029907227
+
+00:10:59.120 --> 00:11:02.156
+So I'm going to tell my agent just go look
+
+NOTE Confidence: 0.8818140029907227
+
+00:11:02.229 --> 00:11:05.772
+at that file and create a new Foundry IQ service,
+
+NOTE Confidence: 0.8818140029907227
+
+00:11:05.844 --> 00:11:09.170
+create an index and load the 1st 100 rows from
+
+NOTE Confidence: 0.8818140029907227
+
+00:11:09.243 --> 00:11:10.400
+that file or so.
+
+NOTE Confidence: 0.9267545342445374
+
+00:11:10.840 --> 00:11:12.844
+So I'm going to let that cook for a minute,
+
+NOTE Confidence: 0.9267545342445374
+
+00:11:12.891 --> 00:11:14.942
+and I'm going to show you what it looks like
+
+NOTE Confidence: 0.9267545342445374
+
+00:11:14.989 --> 00:11:17.319
+to also use serverless in the other surface areas.
+
+NOTE Confidence: 0.9031603932380676
+
+00:11:18.480 --> 00:11:20.941
+If I'm here in Foundry, one of the things I
+
+NOTE Confidence: 0.9031603932380676
+
+00:11:20.998 --> 00:11:23.345
+can do is I, like I showed you before how
+
+NOTE Confidence: 0.9031603932380676
+
+00:11:23.402 --> 00:11:25.119
+I'm using this Demo 3 service.
+
+NOTE Confidence: 0.9474663734436035
+
+00:11:25.480 --> 00:11:27.590
+I can go and create a new instance or connect
+
+NOTE Confidence: 0.9474663734436035
+
+00:11:27.637 --> 00:11:29.559
+to an existing one if I have one already.
+
+NOTE Confidence: 0.8596376776695251
+
+00:11:29.960 --> 00:11:33.683
+But in this case, I'll say create new resource, give
+
+NOTE Confidence: 0.8596376776695251
+
+00:11:33.755 --> 00:11:35.759
+it a name, a resource group.
+
+NOTE Confidence: 0.857131838798523
+
+00:11:35.760 --> 00:11:37.120
+I'm going to pick this guy.
+
+NOTE Confidence: 0.8852030634880066
+
+00:11:38.080 --> 00:11:43.925
+And if you're in one of the regions that supports
+
+NOTE Confidence: 0.8852030634880066
+
+00:11:44.045 --> 00:11:51.322
+serverless, like for example, let's do West Central, not that
+
+NOTE Confidence: 0.8852030634880066
+
+00:11:51.442 --> 00:11:55.260
+one, let's find West central US.
+
+NOTE Confidence: 0.8076170086860657
+
+00:11:58.380 --> 00:12:00.292
+Then you can choose serverless as one of these queues
+
+NOTE Confidence: 0.8076170086860657
+
+00:12:00.328 --> 00:12:02.059
+in addition to all the existing ones, of course.
+
+NOTE Confidence: 0.839209794998169
+
+00:12:02.060 --> 00:12:03.700
+So I'm going to say yes to this.
+
+NOTE Confidence: 0.8279611468315125
+
+00:12:03.980 --> 00:12:07.518
+Click create and you know, this will take again 10
+
+NOTE Confidence: 0.8279611468315125
+
+00:12:07.589 --> 00:12:11.056
+to 20 seconds and and we'll have a new serverless
+
+NOTE Confidence: 0.8279611468315125
+
+00:12:11.127 --> 00:12:12.259
+service created.
+
+NOTE Confidence: 0.7111362814903259
+
+00:12:12.700 --> 00:12:15.315
+So and you know, here is like ready to use
+
+NOTE Confidence: 0.7111362814903259
+
+00:12:15.377 --> 00:12:18.678
+to create knowledge bases on whatnot on it and switch
+
+NOTE Confidence: 0.7111362814903259
+
+00:12:18.740 --> 00:12:20.919
+back to this and I'll forget later.
+
+NOTE Confidence: 0.7821469902992249
+
+00:12:21.160 --> 00:12:23.439
+So this is what it takes to create a serverless
+
+NOTE Confidence: 0.7821469902992249
+
+00:12:23.487 --> 00:12:25.039
+service Ray to go in in Foundry.
+
+NOTE Confidence: 0.8908880949020386
+
+00:12:25.280 --> 00:12:27.080
+You'll find the same thing in the Azure portal.
+
+NOTE Confidence: 0.8883616328239441
+
+00:12:27.840 --> 00:12:31.568
+And and if we look at this, the so this
+
+NOTE Confidence: 0.8883616328239441
+
+00:12:31.663 --> 00:12:33.479
+is making progress.
+
+NOTE Confidence: 0.8668754696846008
+
+00:12:33.480 --> 00:12:35.481
+So we'll let it run a little more, but at
+
+NOTE Confidence: 0.8668754696846008
+
+00:12:35.530 --> 00:12:38.263
+the end we'll see that it'll be done creating everything
+
+NOTE Confidence: 0.8668754696846008
+
+00:12:38.312 --> 00:12:39.240
+on its own as well.
+
+NOTE Confidence: 0.9481343626976013
+
+00:12:39.240 --> 00:12:40.680
+So we'll come back to this in a second.
+
+NOTE Confidence: 0.828617513179779
+
+00:12:44.080 --> 00:12:48.879
+So once we have a Foundry IQ instance, next thing
+
+NOTE Confidence: 0.828617513179779
+
+00:12:48.977 --> 00:12:51.720
+is we got to get data to it.
+
+NOTE Confidence: 0.9174814224243164
+
+00:12:51.720 --> 00:12:54.086
+So we have to create knowledge bases and bring data
+
+NOTE Confidence: 0.9174814224243164
+
+00:12:54.132 --> 00:12:55.199
+from knowledge sources.
+
+NOTE Confidence: 0.8990659713745117
+
+00:12:56.160 --> 00:12:58.494
+Now I mentioned knowledge bases a few times, so I
+
+NOTE Confidence: 0.8990659713745117
+
+00:12:58.542 --> 00:13:00.399
+want to give you a sense of what it is.
+
+NOTE Confidence: 0.9315675497055054
+
+00:13:00.520 --> 00:13:02.782
+So think of a knowledge base as the scope of
+
+NOTE Confidence: 0.9315675497055054
+
+00:13:02.834 --> 00:13:04.480
+knowledge, not how we access it.
+
+NOTE Confidence: 0.9120878577232361
+
+00:13:04.480 --> 00:13:07.101
+That is inside and hidden from the agent to kind
+
+NOTE Confidence: 0.9120878577232361
+
+00:13:07.155 --> 00:13:10.159
+of separate concerns, but it's what, what is the domain
+
+NOTE Confidence: 0.9120878577232361
+
+00:13:10.214 --> 00:13:13.600
+of knowledge and what's the policy for using that information?
+
+NOTE Confidence: 0.8909062743186951
+
+00:13:13.800 --> 00:13:16.711
+So for example, you can say how much retrieval effort
+
+NOTE Confidence: 0.8909062743186951
+
+00:13:16.766 --> 00:13:19.018
+you want us to take, like should we do it
+
+NOTE Confidence: 0.8909062743186951
+
+00:13:19.073 --> 00:13:22.040
+a quick thing and come back or do iterative retrieval?
+
+NOTE Confidence: 0.8702234625816345
+
+00:13:22.559 --> 00:13:25.232
+You can give us steering instructions to kind of influence
+
+NOTE Confidence: 0.8702234625816345
+
+00:13:25.278 --> 00:13:26.199
+how the model works.
+
+NOTE Confidence: 0.794869065284729
+
+00:13:26.960 --> 00:13:28.918
+You can choose what you want us to do, answer
+
+NOTE Confidence: 0.794869065284729
+
+00:13:28.962 --> 00:13:29.919
+synthesis and whatnot.
+
+NOTE Confidence: 0.7927603125572205
+
+00:13:31.400 --> 00:13:34.611
+And and then underneath this agentic retrieval stack are all
+
+NOTE Confidence: 0.7927603125572205
+
+00:13:34.664 --> 00:13:37.447
+the knowledge sources where you know most of them is
+
+NOTE Confidence: 0.7927603125572205
+
+00:13:37.501 --> 00:13:39.909
+typical that what we'll do is you point us at
+
+NOTE Confidence: 0.7927603125572205
+
+00:13:39.962 --> 00:13:42.960
+where the knowledge is and we'll create indexes with it.
+
+NOTE Confidence: 0.7570098042488098
+
+00:13:42.960 --> 00:13:45.520
+So we'll create vector and lexical indexes and whatnot.
+
+NOTE Confidence: 0.889582633972168
+
+00:13:46.400 --> 00:13:50.279
+But we also support federating out to knowledge sources that
+
+NOTE Confidence: 0.889582633972168
+
+00:13:50.343 --> 00:13:51.960
+we need to access online.
+
+NOTE Confidence: 0.8877578377723694
+
+00:13:52.600 --> 00:13:56.065
+And regardless of how they are represented at runtime, we
+
+NOTE Confidence: 0.8877578377723694
+
+00:13:56.126 --> 00:13:59.287
+can choose which knowledge sources to to use for any
+
+NOTE Confidence: 0.8877578377723694
+
+00:13:59.348 --> 00:14:01.719
+given scenario and then go query those.
+
+NOTE Confidence: 0.8823686838150024
+
+00:14:03.960 --> 00:14:06.564
+So now the question is, I should show you at
+
+NOTE Confidence: 0.8823686838150024
+
+00:14:06.623 --> 00:14:09.404
+the beginning just to use a few files to ground
+
+NOTE Confidence: 0.8823686838150024
+
+00:14:09.464 --> 00:14:09.760
+data.
+
+NOTE Confidence: 0.8655753135681152
+
+00:14:09.760 --> 00:14:11.700
+And you know, sometimes you have an easy scenario for
+
+NOTE Confidence: 0.8655753135681152
+
+00:14:11.736 --> 00:14:11.919
+that.
+
+NOTE Confidence: 0.9300210475921631
+
+00:14:11.920 --> 00:14:14.721
+And by all means for easy scenarios we should do
+
+NOTE Confidence: 0.9300210475921631
+
+00:14:14.779 --> 00:14:15.480
+easy things.
+
+NOTE Confidence: 0.9420951008796692
+
+00:14:16.040 --> 00:14:18.520
+Now, in practice, data is all over the place.
+
+NOTE Confidence: 0.8242543935775757
+
+00:14:19.320 --> 00:14:21.612
+We see sometimes you have loose files, maybe the user
+
+NOTE Confidence: 0.8242543935775757
+
+00:14:21.655 --> 00:14:23.039
+gives you there in your desktop.
+
+NOTE Confidence: 0.7896429896354675
+
+00:14:23.200 --> 00:14:25.455
+Sometimes the data is in an object store or in
+
+NOTE Confidence: 0.7896429896354675
+
+00:14:25.505 --> 00:14:27.859
+the file on the Microsoft IQ platform or even in
+
+NOTE Confidence: 0.7896429896354675
+
+00:14:27.908 --> 00:14:28.839
+other applications.
+
+NOTE Confidence: 0.8420264720916748
+
+00:14:29.200 --> 00:14:31.200
+So we offered like a spectrum of options.
+
+NOTE Confidence: 0.8911073207855225
+
+00:14:31.200 --> 00:14:33.934
+So in all these cases, you don't have to reinvent
+
+NOTE Confidence: 0.8911073207855225
+
+00:14:33.990 --> 00:14:36.000
+all the plumbing to go through this.
+
+NOTE Confidence: 0.8944495320320129
+
+00:14:37.200 --> 00:14:39.824
+So first, one of the things you can do is
+
+NOTE Confidence: 0.8944495320320129
+
+00:14:39.888 --> 00:14:41.359
+you can use just files.
+
+NOTE Confidence: 0.83903968334198
+
+00:14:42.720 --> 00:14:44.746
+The thing with files is, you know, one of the
+
+NOTE Confidence: 0.83903968334198
+
+00:14:44.791 --> 00:14:47.313
+things we learned, we all learned using coding agents is
+
+NOTE Confidence: 0.83903968334198
+
+00:14:47.358 --> 00:14:49.520
+how good coding agents are at local file access.
+
+NOTE Confidence: 0.8393834829330444
+
+00:14:50.000 --> 00:14:52.174
+And that works great if you have, I don't know,
+
+NOTE Confidence: 0.8393834829330444
+
+00:14:52.221 --> 00:14:54.164
+maybe 50 or 100 files and a few megs worth
+
+NOTE Confidence: 0.8393834829330444
+
+00:14:54.210 --> 00:14:54.719
+of content.
+
+NOTE Confidence: 0.8796101808547974
+
+00:14:55.400 --> 00:14:58.210
+But I'm surprised how often I'm talking to developers and
+
+NOTE Confidence: 0.8796101808547974
+
+00:14:58.259 --> 00:15:00.675
+they're like, look, I have a million PDFs in this
+
+NOTE Confidence: 0.8796101808547974
+
+00:15:00.724 --> 00:15:01.759
+BLOB storage account.
+
+NOTE Confidence: 0.8918561339378357
+
+00:15:01.760 --> 00:15:03.080
+What what do I do?
+
+NOTE Confidence: 0.888692319393158
+
+00:15:03.360 --> 00:15:06.718
+You can certainly not grab your way through a million
+
+NOTE Confidence: 0.888692319393158
+
+00:15:06.782 --> 00:15:09.697
+PDFs, not if you want to issue, you know, 1020
+
+NOTE Confidence: 0.888692319393158
+
+00:15:09.760 --> 00:15:12.992
+queries in a second just to try different angles to
+
+NOTE Confidence: 0.888692319393158
+
+00:15:13.056 --> 00:15:13.879
+get the data.
+
+NOTE Confidence: 0.8167121410369873
+
+00:15:14.280 --> 00:15:16.800
+So we have this file knowledge source that what it
+
+NOTE Confidence: 0.8167121410369873
+
+00:15:16.851 --> 00:15:19.120
+does is it allows you to just upload content.
+
+NOTE Confidence: 0.8547500967979431
+
+00:15:20.680 --> 00:15:23.782
+So it's the same as files, except that it it
+
+NOTE Confidence: 0.8547500967979431
+
+00:15:23.853 --> 00:15:28.295
+has the whole retrieval engine behind them that creates indexes
+
+NOTE Confidence: 0.8547500967979431
+
+00:15:28.366 --> 00:15:30.199
+and that's fast retrieval.
+
+NOTE Confidence: 0.9314599633216858
+
+00:15:30.640 --> 00:15:32.744
+Not only that, but when you push the files like
+
+NOTE Confidence: 0.9314599633216858
+
+00:15:32.789 --> 00:15:35.476
+I did before, we'll run them through full content processing
+
+NOTE Confidence: 0.9314599633216858
+
+00:15:35.521 --> 00:15:35.879
+like so.
+
+NOTE Confidence: 0.7828589081764221
+
+00:15:35.880 --> 00:15:39.179
+We'll do content extraction, even we'll deal with images, we'll
+
+NOTE Confidence: 0.7828589081764221
+
+00:15:39.231 --> 00:15:42.164
+vectorize the content, everything you need to do sort of
+
+NOTE Confidence: 0.7828589081764221
+
+00:15:42.216 --> 00:15:43.839
+at retrieval time, things work.
+
+NOTE Confidence: 0.8628169894218445
+
+00:15:46.760 --> 00:15:49.029
+Now, what we see a lot in practice is when
+
+NOTE Confidence: 0.8628169894218445
+
+00:15:49.083 --> 00:15:52.757
+you have an application that manages content internally, you usually
+
+NOTE Confidence: 0.8628169894218445
+
+00:15:52.811 --> 00:15:55.621
+land this content in some store, like either in BLOB
+
+NOTE Confidence: 0.8628169894218445
+
+00:15:55.675 --> 00:15:57.945
+storage or in a database or in one lake if
+
+NOTE Confidence: 0.8628169894218445
+
+00:15:57.999 --> 00:15:59.079
+you're using Fabric.
+
+NOTE Confidence: 0.892130970954895
+
+00:15:59.880 --> 00:16:02.352
+So we work very hard to make it easy to
+
+NOTE Confidence: 0.892130970954895
+
+00:16:02.416 --> 00:16:05.839
+connect the search tag with all of these object stores
+
+NOTE Confidence: 0.892130970954895
+
+00:16:05.903 --> 00:16:09.199
+without you having to deal with the mechanics of it.
+
+NOTE Confidence: 0.7782155275344849
+
+00:16:09.840 --> 00:16:12.153
+So when you point us at say, any of these
+
+NOTE Confidence: 0.7782155275344849
+
+00:16:12.210 --> 00:16:15.088
+BLOB storage, one leg and whatnot, we'll run a full
+
+NOTE Confidence: 0.7782155275344849
+
+00:16:15.145 --> 00:16:18.079
+ingestion pipeline, which we'll assemble by default.
+
+NOTE Confidence: 0.926575779914856
+
+00:16:18.120 --> 00:16:19.956
+So if you don't want to think too much about
+
+NOTE Confidence: 0.926575779914856
+
+00:16:19.998 --> 00:16:20.999
+it, just point us at it.
+
+NOTE Confidence: 0.8240379691123962
+
+00:16:21.240 --> 00:16:23.865
+And we'll do chunking, vectorization, all of that, and you'll
+
+NOTE Confidence: 0.8240379691123962
+
+00:16:23.908 --> 00:16:25.759
+get very, quite, very high quality results.
+
+NOTE Confidence: 0.9092774987220764
+
+00:16:26.440 --> 00:16:29.072
+If you want the control, you can customize every step
+
+NOTE Confidence: 0.9092774987220764
+
+00:16:29.121 --> 00:16:31.605
+of it, inject your own custom steps and whatnot so
+
+NOTE Confidence: 0.9092774987220764
+
+00:16:31.654 --> 00:16:33.840
+you can get exactly what you want out of it.
+
+NOTE Confidence: 0.830740749835968
+
+00:16:34.120 --> 00:16:36.378
+And while these things tend to be tax heavy, we'll
+
+NOTE Confidence: 0.830740749835968
+
+00:16:36.423 --> 00:16:37.959
+also deal with multimedia as well.
+
+NOTE Confidence: 0.875529408454895
+
+00:16:39.560 --> 00:16:42.248
+Now when we're processing these things, first step is we
+
+NOTE Confidence: 0.875529408454895
+
+00:16:42.296 --> 00:16:43.400
+look at a set of files.
+
+NOTE Confidence: 0.8584617972373962
+
+00:16:43.400 --> 00:16:45.799
+You know, PDFs are a typical thing and we have
+
+NOTE Confidence: 0.8584617972373962
+
+00:16:45.852 --> 00:16:48.669
+to understand what exactly is inside so we can present
+
+NOTE Confidence: 0.8584617972373962
+
+00:16:48.721 --> 00:16:49.399
+it to agents.
+
+NOTE Confidence: 0.8974536657333374
+
+00:16:50.000 --> 00:16:53.691
+So for that, we've integrated Foundry IQ with Azure content
+
+NOTE Confidence: 0.8974536657333374
+
+00:16:53.754 --> 00:16:57.883
+understanding, which gives you like high end components for things
+
+NOTE Confidence: 0.8974536657333374
+
+00:16:57.946 --> 00:17:01.199
+like optical character recognition, document layout.
+
+NOTE Confidence: 0.7478445172309875
+
+00:17:01.360 --> 00:17:03.858
+You know, typical challenge is reading order is complicated and
+
+NOTE Confidence: 0.7478445172309875
+
+00:17:03.897 --> 00:17:05.920
+you need to preserve it to understand the document.
+
+NOTE Confidence: 0.8456510901451111
+
+00:17:06.280 --> 00:17:08.770
+Dealing with tables is in the category of life is
+
+NOTE Confidence: 0.8456510901451111
+
+00:17:08.820 --> 00:17:11.412
+too short to kind of handle things like tables that
+
+NOTE Confidence: 0.8456510901451111
+
+00:17:11.463 --> 00:17:14.360
+span pages, sparse tables, you know, all of these things.
+
+NOTE Confidence: 0.8935059905052185
+
+00:17:15.840 --> 00:17:19.606
+So through content understanding, what we get is high quality
+
+NOTE Confidence: 0.8935059905052185
+
+00:17:19.668 --> 00:17:23.311
+extraction from the additional content that then we can use
+
+NOTE Confidence: 0.8935059905052185
+
+00:17:23.373 --> 00:17:25.720
+to index and then feed the the models.
+
+NOTE Confidence: 0.9577264785766602
+
+00:17:26.000 --> 00:17:27.433
+So let me show you a couple of these things
+
+NOTE Confidence: 0.9577264785766602
+
+00:17:27.466 --> 00:17:27.799
+in action.
+
+NOTE Confidence: 0.8460826873779297
+
+00:17:28.560 --> 00:17:29.640
+So I'll come back here.
+
+NOTE Confidence: 0.8615095019340515
+
+00:17:30.240 --> 00:17:33.155
+I'll go to the knowledge base I created before and
+
+NOTE Confidence: 0.8615095019340515
+
+00:17:33.213 --> 00:17:36.711
+let's start by saying maybe my application uses BLOB storage
+
+NOTE Confidence: 0.8615095019340515
+
+00:17:36.770 --> 00:17:39.860
+to learn content that is internally managed by by the
+
+NOTE Confidence: 0.8615095019340515
+
+00:17:39.918 --> 00:17:40.560
+app itself.
+
+NOTE Confidence: 0.7779141664505005
+
+00:17:40.560 --> 00:17:43.160
+Maybe it's PDFs or Markdown files or things like that.
+
+NOTE Confidence: 0.9405264258384705
+
+00:17:43.640 --> 00:17:45.515
+So I'm going to say I want to use BLOB
+
+NOTE Confidence: 0.9405264258384705
+
+00:17:45.565 --> 00:17:45.960
+storage.
+
+NOTE Confidence: 0.938758909702301
+
+00:17:48.280 --> 00:17:50.040
+I have like a bunch of files with notes.
+
+NOTE Confidence: 0.8759539723396301
+
+00:17:50.040 --> 00:17:55.318
+I'm going to say notes, I'm going to say annotations
+
+NOTE Confidence: 0.8759539723396301
+
+00:17:55.420 --> 00:18:00.800
+for movies, and I'm going to pick my storage account.
+
+NOTE Confidence: 0.7673887014389038
+
+00:18:01.520 --> 00:18:05.480
+It's called Build 26.
+
+NOTE Confidence: 0.7430567741394043
+
+00:18:05.480 --> 00:18:06.600
+Let's see if we find it.
+
+NOTE Confidence: 0.7407492995262146
+
+00:18:06.600 --> 00:18:08.600
+There we go.
+
+NOTE Confidence: 0.8058375120162964
+
+00:18:08.600 --> 00:18:10.880
+I'm going to pick my container.
+
+NOTE Confidence: 0.6063278317451477
+
+00:18:10.880 --> 00:18:13.840
+I'm going to say I'm giving a system identity.
+
+NOTE Confidence: 0.8905829787254333
+
+00:18:13.840 --> 00:18:17.105
+And for content extraction, I'm going to say standard, which
+
+NOTE Confidence: 0.8905829787254333
+
+00:18:17.159 --> 00:18:20.479
+means use content, the full content understanding capability.
+
+NOTE Confidence: 0.7769810557365417
+
+00:18:20.960 --> 00:18:23.158
+There is an embedding model already set so that we'll
+
+NOTE Confidence: 0.7769810557365417
+
+00:18:23.199 --> 00:18:24.319
+do vectorization with that.
+
+NOTE Confidence: 0.8678165078163147
+
+00:18:24.560 --> 00:18:26.145
+And if you want, you can give us a chat
+
+NOTE Confidence: 0.8678165078163147
+
+00:18:26.186 --> 00:18:27.039
+completion model too.
+
+NOTE Confidence: 0.8995389938354492
+
+00:18:27.280 --> 00:18:30.371
+And that will enable us to do image verbalization to
+
+NOTE Confidence: 0.8995389938354492
+
+00:18:30.431 --> 00:18:31.680
+handle media as well.
+
+NOTE Confidence: 0.8593549728393555
+
+00:18:32.200 --> 00:18:33.400
+So I'm going to just kick this off.
+
+NOTE Confidence: 0.8961822986602783
+
+00:18:34.520 --> 00:18:37.033
+And once this process runs, so it'll run in the
+
+NOTE Confidence: 0.8961822986602783
+
+00:18:37.087 --> 00:18:39.280
+background and it's not a one shot thing.
+
+NOTE Confidence: 0.8481111526489258
+
+00:18:39.560 --> 00:18:42.761
+It will import everything now, but it'll also make it
+
+NOTE Confidence: 0.8481111526489258
+
+00:18:42.821 --> 00:18:45.600
+so it runs continuously and it tracks changes.
+
+NOTE Confidence: 0.8399938344955444
+
+00:18:45.600 --> 00:18:48.696
+And when things change in the source will incrementally feed
+
+NOTE Confidence: 0.8399938344955444
+
+00:18:48.748 --> 00:18:50.399
+the changes into a search index.
+
+NOTE Confidence: 0.8386570811271667
+
+00:18:50.520 --> 00:18:53.147
+So you automatically have a search index that is always
+
+NOTE Confidence: 0.8386570811271667
+
+00:18:53.194 --> 00:18:55.439
+fresh and the Foundry IQ can use for grounding.
+
+NOTE Confidence: 0.8776926398277283
+
+00:18:56.400 --> 00:18:59.347
+And now I have multiple knowledge sources here, which means
+
+NOTE Confidence: 0.8776926398277283
+
+00:18:59.396 --> 00:19:02.244
+the agentic routing system can make choices about what do
+
+NOTE Confidence: 0.8776926398277283
+
+00:19:02.294 --> 00:19:04.991
+you want to use what, and that's what descriptions are
+
+NOTE Confidence: 0.8776926398277283
+
+00:19:05.041 --> 00:19:06.239
+for, among other things.
+
+NOTE Confidence: 0.9492778182029724
+
+00:19:08.840 --> 00:19:11.591
+So just to give you a quick example, since I'm
+
+NOTE Confidence: 0.9492778182029724
+
+00:19:11.651 --> 00:19:14.343
+here, let me show you a couple of examples of
+
+NOTE Confidence: 0.9492778182029724
+
+00:19:14.403 --> 00:19:15.719
+content understanding.
+
+NOTE Confidence: 0.8434832692146301
+
+00:19:17.080 --> 00:19:19.471
+So typical things you need to deal with this one
+
+NOTE Confidence: 0.8434832692146301
+
+00:19:19.521 --> 00:19:22.061
+is a lot of PDFs actually have pictures inside like
+
+NOTE Confidence: 0.8434832692146301
+
+00:19:22.111 --> 00:19:22.560
+it scans.
+
+NOTE Confidence: 0.7795854210853577
+
+00:19:22.960 --> 00:19:25.051
+And in this case, this is a table that is
+
+NOTE Confidence: 0.7795854210853577
+
+00:19:25.102 --> 00:19:27.960
+actually have have have written handwritten and whatnot.
+
+NOTE Confidence: 0.8719238638877869
+
+00:19:28.440 --> 00:19:31.035
+And you can see that the markdown file has actual
+
+NOTE Confidence: 0.8719238638877869
+
+00:19:31.088 --> 00:19:33.949
+even extracted not just the tables, but even the check
+
+NOTE Confidence: 0.8719238638877869
+
+00:19:34.002 --> 00:19:34.320
+boxes.
+
+NOTE Confidence: 0.819591760635376
+
+00:19:35.359 --> 00:19:37.956
+And if you have a business looking document like that,
+
+NOTE Confidence: 0.819591760635376
+
+00:19:38.004 --> 00:19:41.034
+we'll understand the layout, we'll catch the reading order that
+
+NOTE Confidence: 0.819591760635376
+
+00:19:41.082 --> 00:19:43.919
+there is 2 columns, we'll extract the pictures and whatnot.
+
+NOTE Confidence: 0.8952973484992981
+
+00:19:44.520 --> 00:19:47.554
+And sometimes you have more structured content and what you
+
+NOTE Confidence: 0.8952973484992981
+
+00:19:47.605 --> 00:19:49.508
+can do is you can give us a schema of
+
+NOTE Confidence: 0.8952973484992981
+
+00:19:49.559 --> 00:19:52.234
+what elements of the document you want us to extract
+
+NOTE Confidence: 0.8952973484992981
+
+00:19:52.285 --> 00:19:54.239
+and we'll isolate that and extract it.
+
+NOTE Confidence: 0.8233492374420166
+
+00:19:54.760 --> 00:19:56.682
+So you can fill it to to the agent or
+
+NOTE Confidence: 0.8233492374420166
+
+00:19:56.734 --> 00:19:58.760
+use it as filters and things like that.
+
+NOTE Confidence: 0.7682895660400391
+
+00:20:04.340 --> 00:20:06.610
+The other place where your data may be is so
+
+NOTE Confidence: 0.7682895660400391
+
+00:20:06.662 --> 00:20:09.139
+far we talked about data inside the application.
+
+NOTE Confidence: 0.9031521677970886
+
+00:20:09.260 --> 00:20:11.059
+And you know, a lot of what we see in
+
+NOTE Confidence: 0.9031521677970886
+
+00:20:11.108 --> 00:20:13.589
+use of Foundry IQ is you have your application, you
+
+NOTE Confidence: 0.9031521677970886
+
+00:20:13.638 --> 00:20:15.924
+have your own data and you want to power agents
+
+NOTE Confidence: 0.9031521677970886
+
+00:20:15.973 --> 00:20:16.459
+with that.
+
+NOTE Confidence: 0.8301323652267456
+
+00:20:16.980 --> 00:20:19.580
+Now that data rarely lives in isolation.
+
+NOTE Confidence: 0.869227409362793
+
+00:20:20.160 --> 00:20:22.619
+We, if you think about the data in your organization,
+
+NOTE Confidence: 0.869227409362793
+
+00:20:22.666 --> 00:20:25.311
+there's probably a bunch of, you know, Word documents and
+
+NOTE Confidence: 0.869227409362793
+
+00:20:25.357 --> 00:20:27.400
+all of your calendar and e-mail and whatnot.
+
+NOTE Confidence: 0.8658701777458191
+
+00:20:27.480 --> 00:20:30.400
+It's all sitting in your M365 tenant.
+
+NOTE Confidence: 0.8763832449913025
+
+00:20:30.640 --> 00:20:33.671
+And we have a work IQ that enables direct access
+
+NOTE Confidence: 0.8763832449913025
+
+00:20:33.734 --> 00:20:34.239
+to that.
+
+NOTE Confidence: 0.8361763954162598
+
+00:20:35.040 --> 00:20:38.078
+We also have in Fabric all your analytics state, so
+
+NOTE Confidence: 0.8361763954162598
+
+00:20:38.138 --> 00:20:41.295
+all your data lake, your data warehouses, and you can
+
+NOTE Confidence: 0.8361763954162598
+
+00:20:41.355 --> 00:20:43.560
+build data agents and whatnot on top.
+
+NOTE Confidence: 0.7859141230583191
+
+00:20:43.720 --> 00:20:46.574
+And they found that Fabric IQ layer allows agents to
+
+NOTE Confidence: 0.7859141230583191
+
+00:20:46.629 --> 00:20:50.143
+communicate with all that information in and it'll handle things
+
+NOTE Confidence: 0.7859141230583191
+
+00:20:50.197 --> 00:20:53.766
+like natural language to SQL and navigating multiple data sources
+
+NOTE Confidence: 0.7859141230583191
+
+00:20:53.821 --> 00:20:54.479
+and whatnot.
+
+NOTE Confidence: 0.9360501766204834
+
+00:20:55.040 --> 00:20:57.389
+And then finally to access the web, we have Web
+
+NOTE Confidence: 0.9360501766204834
+
+00:20:57.439 --> 00:20:59.239
+IQ that we just announced yesterday.
+
+NOTE Confidence: 0.918376624584198
+
+00:20:59.920 --> 00:21:02.662
+Now we built each of these IQ components so that
+
+NOTE Confidence: 0.918376624584198
+
+00:21:02.720 --> 00:21:04.320
+they work fine in isolation.
+
+NOTE Confidence: 0.7809129953384399
+
+00:21:04.320 --> 00:21:06.097
+And if you your data is in one of these
+
+NOTE Confidence: 0.7809129953384399
+
+00:21:06.142 --> 00:21:07.920
+places, please don't complicate things.
+
+NOTE Confidence: 0.9369653463363647
+
+00:21:07.920 --> 00:21:09.580
+Just use the one that you need and you'll be
+
+NOTE Confidence: 0.9369653463363647
+
+00:21:09.618 --> 00:21:09.920
+all set.
+
+NOTE Confidence: 0.8861228227615356
+
+00:21:10.640 --> 00:21:13.306
+Now it's very common to have an agent that has
+
+NOTE Confidence: 0.8861228227615356
+
+00:21:13.364 --> 00:21:16.436
+to deal with your own application data and then maybe
+
+NOTE Confidence: 0.8861228227615356
+
+00:21:16.494 --> 00:21:20.320
+interact with your M365 content or your analytics structured data.
+
+NOTE Confidence: 0.9596545696258545
+
+00:21:20.600 --> 00:21:22.316
+And we want to make it easy for you to
+
+NOTE Confidence: 0.9596545696258545
+
+00:21:22.361 --> 00:21:23.399
+connect all these dots.
+
+NOTE Confidence: 0.8930932283401489
+
+00:21:24.680 --> 00:21:28.926
+So Foundry IQ out-of-the-box supports integrating and connecting to the
+
+NOTE Confidence: 0.8930932283401489
+
+00:21:28.986 --> 00:21:31.080
+entire spectrum of the IQ platform.
+
+NOTE Confidence: 0.9302939176559448
+
+00:21:31.080 --> 00:21:33.555
+I'll show you a little bit more in a second
+
+NOTE Confidence: 0.9302939176559448
+
+00:21:33.613 --> 00:21:34.879
+now before I go there.
+
+NOTE Confidence: 0.8673958778381348
+
+00:21:35.640 --> 00:21:38.912
+The last bit of kinds of data we can connect
+
+NOTE Confidence: 0.8673958778381348
+
+00:21:38.986 --> 00:21:42.036
+to is the the thing you use when the when
+
+NOTE Confidence: 0.8673958778381348
+
+00:21:42.110 --> 00:21:45.159
+the built in options don't do it for you.
+
+NOTE Confidence: 0.8445016741752625
+
+00:21:46.080 --> 00:21:47.950
+So if you have data in one of our supported
+
+NOTE Confidence: 0.8445016741752625
+
+00:21:47.994 --> 00:21:50.300
+knowledge sources, just point us at it and we'll deal
+
+NOTE Confidence: 0.8445016741752625
+
+00:21:50.343 --> 00:21:51.039
+with everything.
+
+NOTE Confidence: 0.8941159844398499
+
+00:21:51.360 --> 00:21:53.920
+Now, sometimes what you have is not just data.
+
+NOTE Confidence: 0.8886028528213501
+
+00:21:53.920 --> 00:21:56.048
+You have an application that you want us to connect
+
+NOTE Confidence: 0.8886028528213501
+
+00:21:56.090 --> 00:21:56.799
+to and treat U.S.
+
+NOTE Confidence: 0.7585793137550354
+
+00:21:56.800 --> 00:21:57.200
+data.
+
+NOTE Confidence: 0.8660385608673096
+
+00:21:57.880 --> 00:22:01.237
+So we debate about what is the right interface for
+
+NOTE Confidence: 0.8660385608673096
+
+00:22:01.304 --> 00:22:01.640
+this.
+
+NOTE Confidence: 0.7940689325332642
+
+00:22:01.640 --> 00:22:03.810
+I kind of wish there was like AODBC for agents
+
+NOTE Confidence: 0.7940689325332642
+
+00:22:03.857 --> 00:22:05.840
+or something, but there's no such a thing.
+
+NOTE Confidence: 0.8760260939598083
+
+00:22:06.520 --> 00:22:09.322
+And the thing about MCP is that it's universal, like
+
+NOTE Confidence: 0.8760260939598083
+
+00:22:09.376 --> 00:22:12.879
+it's not exactly meant for data integration, but it's everywhere.
+
+NOTE Confidence: 0.888416588306427
+
+00:22:13.040 --> 00:22:14.724
+And if you don't have an MCP server, it's easy
+
+NOTE Confidence: 0.888416588306427
+
+00:22:14.760 --> 00:22:15.199
+to make one.
+
+NOTE Confidence: 0.7761821150779724
+
+00:22:15.440 --> 00:22:17.440
+So it became at a great integration point.
+
+NOTE Confidence: 0.9035279154777527
+
+00:22:17.720 --> 00:22:20.369
+What we'll do is we'll turn the MCP output through
+
+NOTE Confidence: 0.9035279154777527
+
+00:22:20.422 --> 00:22:23.336
+heuristics into like an item oriented list of things if
+
+NOTE Confidence: 0.9035279154777527
+
+00:22:23.389 --> 00:22:23.760
+we can.
+
+NOTE Confidence: 0.8637197017669678
+
+00:22:24.000 --> 00:22:26.417
+And then we'll even run our own ranking system on
+
+NOTE Confidence: 0.8637197017669678
+
+00:22:26.466 --> 00:22:28.440
+top to improve the relevance of results.
+
+NOTE Confidence: 0.8806995749473572
+
+00:22:28.440 --> 00:22:30.708
+Even at MCP, this means you can bring any data
+
+NOTE Confidence: 0.8806995749473572
+
+00:22:30.757 --> 00:22:33.567
+source either of your own application or I've seen things
+
+NOTE Confidence: 0.8806995749473572
+
+00:22:33.617 --> 00:22:36.230
+like for example, using the GitHub MCP server to turn
+
+NOTE Confidence: 0.8806995749473572
+
+00:22:36.279 --> 00:22:38.646
+issues into one of the tables that you feed into
+
+NOTE Confidence: 0.8806995749473572
+
+00:22:38.695 --> 00:22:40.520
+the system and it kind of just works.
+
+NOTE Confidence: 0.9440903067588806
+
+00:22:41.840 --> 00:22:43.379
+So let me show you a couple of examples of
+
+NOTE Confidence: 0.9440903067588806
+
+00:22:43.416 --> 00:22:43.599
+this.
+
+NOTE Confidence: 0.9404934048652649
+
+00:22:45.440 --> 00:22:47.569
+So first I'm going to go back to the same
+
+NOTE Confidence: 0.9404934048652649
+
+00:22:47.621 --> 00:22:48.400
+knowledge base.
+
+NOTE Confidence: 0.9448211789131165
+
+00:22:49.520 --> 00:22:51.640
+So I'll start with work IQ.
+
+NOTE Confidence: 0.9086816310882568
+
+00:22:51.760 --> 00:22:54.100
+The interesting thing about work IQ is because you just
+
+NOTE Confidence: 0.9086816310882568
+
+00:22:54.142 --> 00:22:56.270
+need to point us at your tenant, there is actually
+
+NOTE Confidence: 0.9086816310882568
+
+00:22:56.313 --> 00:22:58.483
+nothing to configure you just tell us that you want
+
+NOTE Confidence: 0.9086816310882568
+
+00:22:58.525 --> 00:22:59.759
+us to integrate with work IQ.
+
+NOTE Confidence: 0.9159133434295654
+
+00:23:00.080 --> 00:23:02.570
+Now your, your tenant admin has to give consent because
+
+NOTE Confidence: 0.9159133434295654
+
+00:23:02.615 --> 00:23:04.200
+of course this is your office data.
+
+NOTE Confidence: 0.8481999039649963
+
+00:23:04.200 --> 00:23:06.560
+You have to, you know, allow us to access it.
+
+NOTE Confidence: 0.9236377477645874
+
+00:23:06.760 --> 00:23:09.280
+But once we have that, then it'll just work.
+
+NOTE Confidence: 0.9504446387290955
+
+00:23:11.840 --> 00:23:15.440
+Now for Fabric, the interesting thing about fabric is that
+
+NOTE Confidence: 0.9504446387290955
+
+00:23:15.502 --> 00:23:17.799
+Fabric has all sorts of things in it.
+
+NOTE Confidence: 0.8404136300086975
+
+00:23:17.800 --> 00:23:20.203
+Like, you know, it starts with A1 lake at the
+
+NOTE Confidence: 0.8404136300086975
+
+00:23:20.256 --> 00:23:22.713
+bottom where you can have all your kind of all
+
+NOTE Confidence: 0.8404136300086975
+
+00:23:22.766 --> 00:23:25.864
+your but both structure files like parquet and things like
+
+NOTE Confidence: 0.8404136300086975
+
+00:23:25.917 --> 00:23:27.520
+that and unstructured content.
+
+NOTE Confidence: 0.8583329319953918
+
+00:23:28.560 --> 00:23:31.883
+And then you can have on top of that semantic
+
+NOTE Confidence: 0.8583329319953918
+
+00:23:31.956 --> 00:23:35.280
+models and, and power VI reports and whatnot.
+
+NOTE Confidence: 0.9256919622421265
+
+00:23:35.280 --> 00:23:37.810
+And then you can build data agents and even ontologies
+
+NOTE Confidence: 0.9256919622421265
+
+00:23:37.857 --> 00:23:38.559
+on top of that.
+
+NOTE Confidence: 0.8523090481758118
+
+00:23:38.880 --> 00:23:41.661
+So what we did in terms of integration is we
+
+NOTE Confidence: 0.8523090481758118
+
+00:23:41.725 --> 00:23:44.760
+actually integrated with entire one leg catalog.
+
+NOTE Confidence: 0.8474637269973755
+
+00:23:45.000 --> 00:23:47.289
+So you can see here that when I say one
+
+NOTE Confidence: 0.8474637269973755
+
+00:23:47.348 --> 00:23:50.225
+layer fabric IQ, I see all sorts of objects here,
+
+NOTE Confidence: 0.8474637269973755
+
+00:23:50.284 --> 00:23:53.396
+like I see lake houses, I see data agents, ontologies
+
+NOTE Confidence: 0.8474637269973755
+
+00:23:53.455 --> 00:23:54.159
+and whatnot.
+
+NOTE Confidence: 0.9417016506195068
+
+00:23:54.840 --> 00:23:56.960
+So I'm going to give this a name.
+
+NOTE Confidence: 0.8846893310546875
+
+00:23:56.960 --> 00:23:59.440
+I'm going to say movie stats.
+
+NOTE Confidence: 0.7910931706428528
+
+00:24:00.280 --> 00:24:04.720
+I'm going to say use for ratings and other stats.
+
+NOTE Confidence: 0.8766611814498901
+
+00:24:06.800 --> 00:24:11.009
+And if I go real quick to my fabric instance,
+
+NOTE Confidence: 0.8766611814498901
+
+00:24:11.103 --> 00:24:15.312
+this a little bigger, you can see that I have
+
+NOTE Confidence: 0.8766611814498901
+
+00:24:15.406 --> 00:24:18.399
+I have in one of my lake houses.
+
+NOTE Confidence: 0.8555728793144226
+
+00:24:18.400 --> 00:24:20.633
+What I have is a few parquet files that just
+
+NOTE Confidence: 0.8555728793144226
+
+00:24:20.684 --> 00:24:24.135
+represent statistics about movies like ratings and yeah, things like
+
+NOTE Confidence: 0.8555728793144226
+
+00:24:24.186 --> 00:24:24.439
+that.
+
+NOTE Confidence: 0.8586005568504333
+
+00:24:25.240 --> 00:24:29.268
+And So what I did is I created a very
+
+NOTE Confidence: 0.8586005568504333
+
+00:24:29.377 --> 00:24:35.040
+simple data agent that works on that structure data.
+
+NOTE Confidence: 0.8005414009094238
+
+00:24:35.160 --> 00:24:37.488
+So I just told it what what files to to
+
+NOTE Confidence: 0.8005414009094238
+
+00:24:37.547 --> 00:24:39.040
+what part K files to use.
+
+NOTE Confidence: 0.8895326852798462
+
+00:24:39.440 --> 00:24:42.170
+And now I can ask questions in natural language which
+
+NOTE Confidence: 0.8895326852798462
+
+00:24:42.222 --> 00:24:44.644
+fabric will turn into SQL as needed and run all
+
+NOTE Confidence: 0.8895326852798462
+
+00:24:44.695 --> 00:24:45.520
+these questions.
+
+NOTE Confidence: 0.821310818195343
+
+00:24:45.880 --> 00:24:47.705
+Now if I only needed this, I cannot ask the
+
+NOTE Confidence: 0.821310818195343
+
+00:24:47.748 --> 00:24:48.640
+questions right here.
+
+NOTE Confidence: 0.8510007858276367
+
+00:24:48.960 --> 00:24:51.741
+But if I'm building an knowledge base that combines the
+
+NOTE Confidence: 0.8510007858276367
+
+00:24:51.791 --> 00:24:55.179
+unstructured content from one place with the structure content from
+
+NOTE Confidence: 0.8510007858276367
+
+00:24:55.230 --> 00:24:57.000
+here, I want them to work together.
+
+NOTE Confidence: 0.8469826579093933
+
+00:24:58.280 --> 00:25:00.376
+So what I'll do here is I'll actually, I can
+
+NOTE Confidence: 0.8469826579093933
+
+00:25:00.424 --> 00:25:01.519
+just choose data agent.
+
+NOTE Confidence: 0.8481824398040771
+
+00:25:01.520 --> 00:25:03.639
+And you know, in some cases, if I choose a
+
+NOTE Confidence: 0.8481824398040771
+
+00:25:03.689 --> 00:25:06.918
+lake house, for example, I'll get indexing options because we'll
+
+NOTE Confidence: 0.8481824398040771
+
+00:25:06.969 --> 00:25:09.240
+go index that data in the case of movies age.
+
+NOTE Confidence: 0.8248636722564697
+
+00:25:09.240 --> 00:25:11.933
+In the case of this agent, there is really nothing
+
+NOTE Confidence: 0.8248636722564697
+
+00:25:11.987 --> 00:25:15.058
+to index because we'll kind of integrate the questions at
+
+NOTE Confidence: 0.8248636722564697
+
+00:25:15.111 --> 00:25:15.919
+retrieval time.
+
+NOTE Confidence: 0.8535943031311035
+
+00:25:15.920 --> 00:25:18.856
+So I'll just say create and and now I have
+
+NOTE Confidence: 0.8535943031311035
+
+00:25:18.926 --> 00:25:23.541
+a like another knowledge source, except this knowledge source will
+
+NOTE Confidence: 0.8535943031311035
+
+00:25:23.611 --> 00:25:26.827
+send kind of, we'll talk agent to agent to the
+
+NOTE Confidence: 0.8535943031311035
+
+00:25:26.897 --> 00:25:31.093
+data agent and then retrieve the contents and then integrate
+
+NOTE Confidence: 0.8535943031311035
+
+00:25:31.163 --> 00:25:33.959
+into the rest of the retrieval workload.
+
+NOTE Confidence: 0.9066762328147888
+
+00:25:34.920 --> 00:25:37.264
+All right, so let's add one more piece to this
+
+NOTE Confidence: 0.9066762328147888
+
+00:25:37.315 --> 00:25:38.079
+knowledge base.
+
+NOTE Confidence: 0.8873839378356934
+
+00:25:38.320 --> 00:25:40.960
+We talked about extensibility and we talked about web IQ.
+
+NOTE Confidence: 0.9427977204322815
+
+00:25:41.480 --> 00:25:43.320
+Let me actually put these two things together.
+
+NOTE Confidence: 0.8955388069152832
+
+00:25:44.119 --> 00:25:46.613
+So what I'll do is I'm going to use instead
+
+NOTE Confidence: 0.8955388069152832
+
+00:25:46.671 --> 00:25:49.280
+of one of these data sources, I'm going to go
+
+NOTE Confidence: 0.8955388069152832
+
+00:25:49.338 --> 00:25:50.440
+to browse for more.
+
+NOTE Confidence: 0.8387842774391174
+
+00:25:50.440 --> 00:25:51.867
+You can see that we have more things that we
+
+NOTE Confidence: 0.8387842774391174
+
+00:25:51.900 --> 00:25:52.160
+support.
+
+NOTE Confidence: 0.7124178409576416
+
+00:25:52.880 --> 00:25:56.645
+And I'll say I want to use an MCP server
+
+NOTE Confidence: 0.7124178409576416
+
+00:25:56.740 --> 00:26:01.259
+and I'm going to call this MCP server YYQ, maybe
+
+NOTE Confidence: 0.7124178409576416
+
+00:26:01.353 --> 00:26:05.213
+Y Q2 because I already have a Web IQ used
+
+NOTE Confidence: 0.7124178409576416
+
+00:26:05.307 --> 00:26:06.719
+for web search.
+
+NOTE Confidence: 0.7689204216003418
+
+00:26:07.920 --> 00:26:13.086
+And then what I need here is my endpoint into
+
+NOTE Confidence: 0.7689204216003418
+
+00:26:13.201 --> 00:26:16.760
+into web YQ, which I have here.
+
+NOTE Confidence: 0.8518639206886292
+
+00:26:16.760 --> 00:26:19.130
+When you sign up for the Web IQ preview, you'll
+
+NOTE Confidence: 0.8518639206886292
+
+00:26:19.180 --> 00:26:20.239
+get this information.
+
+NOTE Confidence: 0.9505316615104675
+
+00:26:21.200 --> 00:26:24.800
+And then I need to authenticate, which I'll do here.
+
+NOTE Confidence: 0.9266602993011475
+
+00:26:33.040 --> 00:26:35.201
+And last, I need to say which tool I'm going
+
+NOTE Confidence: 0.9266602993011475
+
+00:26:35.250 --> 00:26:36.920
+to use, which I'll use web search.
+
+NOTE Confidence: 0.7537678480148315
+
+00:26:38.120 --> 00:26:39.920
+So now I have no.
+
+NOTE Confidence: 0.941024124622345
+
+00:26:41.600 --> 00:26:44.067
+So now I have a single knowledge base that can
+
+NOTE Confidence: 0.941024124622345
+
+00:26:44.120 --> 00:26:46.319
+answer questions just like I used before.
+
+NOTE Confidence: 0.8796047568321228
+
+00:26:46.320 --> 00:26:49.167
+In fact, the agent that consumes it doesn't need to
+
+NOTE Confidence: 0.8796047568321228
+
+00:26:49.222 --> 00:26:52.237
+know that I added all this more importance, except now
+
+NOTE Confidence: 0.8796047568321228
+
+00:26:52.293 --> 00:26:55.475
+this will use, you know, my content in Wikipedia articles
+
+NOTE Confidence: 0.8796047568321228
+
+00:26:55.530 --> 00:26:56.480
+when I need that.
+
+NOTE Confidence: 0.7314504384994507
+
+00:26:56.480 --> 00:26:58.673
+It'll use the web when he needs these and it'll
+
+NOTE Confidence: 0.7314504384994507
+
+00:26:58.720 --> 00:27:00.679
+use fabric data agents when he needs that.
+
+NOTE Confidence: 0.7890571355819702
+
+00:27:01.040 --> 00:27:06.694
+And the agentic orchestration will kind of make the choices
+
+NOTE Confidence: 0.7890571355819702
+
+00:27:06.790 --> 00:27:10.720
+about what to use when go back to slides.
+
+NOTE Confidence: 0.8555123805999756
+
+00:27:12.359 --> 00:27:15.321
+So one of the things that what's interesting in the
+
+NOTE Confidence: 0.8555123805999756
+
+00:27:15.379 --> 00:27:18.107
+early days of kind of rag, when we all realized
+
+NOTE Confidence: 0.8555123805999756
+
+00:27:18.165 --> 00:27:21.127
+you can build this kind of chat with your documents
+
+NOTE Confidence: 0.8555123805999756
+
+00:27:21.185 --> 00:27:24.262
+applications is I think as an industry, we, there was
+
+NOTE Confidence: 0.8555123805999756
+
+00:27:24.320 --> 00:27:27.223
+a lot of novelty and, and desire to understand how
+
+NOTE Confidence: 0.8555123805999756
+
+00:27:27.281 --> 00:27:27.920
+that works.
+
+NOTE Confidence: 0.8862351179122925
+
+00:27:28.080 --> 00:27:30.313
+So we took all of our documents, put them in
+
+NOTE Confidence: 0.8862351179122925
+
+00:27:30.364 --> 00:27:32.852
+this thing, put a chat interface on top and we're
+
+NOTE Confidence: 0.8862351179122925
+
+00:27:32.903 --> 00:27:34.679
+like here, like we can do this now.
+
+NOTE Confidence: 0.9312326312065125
+
+00:27:35.040 --> 00:27:37.521
+Now here's the thing, in real world, if you look
+
+NOTE Confidence: 0.9312326312065125
+
+00:27:37.572 --> 00:27:40.519
+at the documents in your company, it's not like everybody
+
+NOTE Confidence: 0.9312326312065125
+
+00:27:40.571 --> 00:27:41.759
+can see every document.
+
+NOTE Confidence: 0.8889968395233154
+
+00:27:42.680 --> 00:27:45.077
+And so this is, you know, document level security is
+
+NOTE Confidence: 0.8889968395233154
+
+00:27:45.124 --> 00:27:47.337
+not the kind of thing you just want to improvise
+
+NOTE Confidence: 0.8889968395233154
+
+00:27:47.383 --> 00:27:49.920
+real quick while you're building the rest of the stack.
+
+NOTE Confidence: 0.8557204008102417
+
+00:27:50.240 --> 00:27:53.656
+So it's important that the actual retrieval system supports the
+
+NOTE Confidence: 0.8557204008102417
+
+00:27:53.711 --> 00:27:56.639
+same security model than the underlying data supports.
+
+NOTE Confidence: 0.8711124062538147
+
+00:27:57.280 --> 00:28:00.176
+So in Foundry IQ, we support propagating all the access
+
+NOTE Confidence: 0.8711124062538147
+
+00:28:00.228 --> 00:28:03.914
+control information from sources that support access control, like say
+
+NOTE Confidence: 0.8711124062538147
+
+00:28:03.967 --> 00:28:07.495
+SharePoint or you know, BLOB storage with a hierarchical namespaces
+
+NOTE Confidence: 0.8711124062538147
+
+00:28:07.548 --> 00:28:09.759
+on where you can put access control lists.
+
+NOTE Confidence: 0.878542959690094
+
+00:28:10.240 --> 00:28:13.171
+And we'll propagate that into the indexes we build under
+
+NOTE Confidence: 0.878542959690094
+
+00:28:13.224 --> 00:28:13.799
+the covers.
+
+NOTE Confidence: 0.8266410231590271
+
+00:28:14.200 --> 00:28:16.360
+And this is integrated with Entra.
+
+NOTE Confidence: 0.8962101936340332
+
+00:28:16.359 --> 00:28:18.874
+So things like group membership works and all, like all
+
+NOTE Confidence: 0.8962101936340332
+
+00:28:18.919 --> 00:28:20.199
+the things you would expect.
+
+NOTE Confidence: 0.8747064471244812
+
+00:28:20.560 --> 00:28:23.120
+So at query time, you just present the credentials of
+
+NOTE Confidence: 0.8747064471244812
+
+00:28:23.168 --> 00:28:24.280
+the user that is using.
+
+NOTE Confidence: 0.6544874906539917
+
+00:28:25.640 --> 00:28:27.700
+So it's just the kind of the delegated token of
+
+NOTE Confidence: 0.6544874906539917
+
+00:28:27.744 --> 00:28:28.840
+the user that is calling.
+
+NOTE Confidence: 0.9322853684425354
+
+00:28:29.160 --> 00:28:31.671
+And based on that, it would look like the thing
+
+NOTE Confidence: 0.9322853684425354
+
+00:28:31.725 --> 00:28:34.664
+you're searching only has the subset of items that that
+
+NOTE Confidence: 0.9322853684425354
+
+00:28:34.718 --> 00:28:35.520
+person can see.
+
+NOTE Confidence: 0.7745618224143982
+
+00:28:36.280 --> 00:28:38.440
+So security is enforced at the bottom of the stack.
+
+NOTE Confidence: 0.871272087097168
+
+00:28:38.520 --> 00:28:40.160
+You don't have to layer your own on top.
+
+NOTE Confidence: 0.6491280794143677
+
+00:28:41.120 --> 00:28:43.240
+And actually same with a purview.
+
+NOTE Confidence: 0.8638052344322205
+
+00:28:43.840 --> 00:28:46.912
+So if your documents have document sensitivity labels, those are
+
+NOTE Confidence: 0.8638052344322205
+
+00:28:46.960 --> 00:28:47.440
+encrypted.
+
+NOTE Confidence: 0.8665021657943726
+
+00:28:47.440 --> 00:28:50.165
+You can't just index them like with a random tool,
+
+NOTE Confidence: 0.8665021657943726
+
+00:28:50.219 --> 00:28:52.400
+but we support integration with Purview.
+
+NOTE Confidence: 0.9060434699058533
+
+00:28:52.400 --> 00:28:54.787
+So we will you know, they could them index them
+
+NOTE Confidence: 0.9060434699058533
+
+00:28:54.838 --> 00:28:58.241
+and then secure them with the additional access control information
+
+NOTE Confidence: 0.9060434699058533
+
+00:28:58.292 --> 00:29:00.680
+so that you can first control who can see them.
+
+NOTE Confidence: 0.9043461680412292
+
+00:29:00.800 --> 00:29:04.445
+And second, you can propagate the sensitivity labels to the
+
+NOTE Confidence: 0.9043461680412292
+
+00:29:04.506 --> 00:29:07.410
+UI that you are building so that you like your,
+
+NOTE Confidence: 0.9043461680412292
+
+00:29:07.472 --> 00:29:11.302
+your application will look like Office from the perspective of
+
+NOTE Confidence: 0.9043461680412292
+
+00:29:11.364 --> 00:29:13.279
+propagating labels and whatnot.
+
+NOTE Confidence: 0.7824779748916626
+
+00:29:13.280 --> 00:29:17.606
+And we shipped a complete example for this residual there
+
+NOTE Confidence: 0.7824779748916626
+
+00:29:17.682 --> 00:29:20.794
+in case you want to put kind of all these
+
+NOTE Confidence: 0.7824779748916626
+
+00:29:20.870 --> 00:29:22.919
+mooring parts together now.
+
+NOTE Confidence: 0.9606871008872986
+
+00:29:23.800 --> 00:29:26.839
+So first of all, let's go back to our agent,
+
+NOTE Confidence: 0.9606871008872986
+
+00:29:26.909 --> 00:29:28.359
+which should be done.
+
+NOTE Confidence: 0.8407664895057678
+
+00:29:28.600 --> 00:29:31.840
+So remember we kicked off that at the beginning.
+
+NOTE Confidence: 0.9738688468933105
+
+00:29:31.840 --> 00:29:32.760
+I forgot to come back.
+
+NOTE Confidence: 0.9179997444152832
+
+00:29:33.360 --> 00:29:35.385
+So we can see that what ended up happening is
+
+NOTE Confidence: 0.9179997444152832
+
+00:29:35.430 --> 00:29:36.960
+this agent was like, yeah, got it.
+
+NOTE Confidence: 0.8486016392707825
+
+00:29:37.040 --> 00:29:38.520
+I need to go provisional service.
+
+NOTE Confidence: 0.7664957642555237
+
+00:29:38.680 --> 00:29:41.524
+It went created a new a new Foundry IQ service,
+
+NOTE Confidence: 0.7664957642555237
+
+00:29:41.585 --> 00:29:44.853
+picked some name, give it an endpoint, create an index
+
+NOTE Confidence: 0.7664957642555237
+
+00:29:44.914 --> 00:29:47.456
+and add a few files and we can actually go
+
+NOTE Confidence: 0.7664957642555237
+
+00:29:47.516 --> 00:29:47.880
+check.
+
+NOTE Confidence: 0.8198991417884827
+
+00:29:48.720 --> 00:29:51.418
+So if I go here, I'm going to use the
+
+NOTE Confidence: 0.8198991417884827
+
+00:29:51.491 --> 00:29:54.919
+Azure portal for this, make it a little bigger.
+
+NOTE Confidence: 0.72339928150177
+
+00:29:57.880 --> 00:30:01.971
+So let's find this resource group that where we're creating
+
+NOTE Confidence: 0.72339928150177
+
+00:30:02.041 --> 00:30:06.479
+things and the name of the services FIQIMDB something something.
+
+NOTE Confidence: 0.6218323111534119
+
+00:30:07.920 --> 00:30:08.720
+This is this one.
+
+NOTE Confidence: 0.8254594802856445
+
+00:30:09.280 --> 00:30:12.040
+And we can see that it created a serverless service.
+
+NOTE Confidence: 0.9158409833908081
+
+00:30:12.280 --> 00:30:14.800
+It created an index inside the service.
+
+NOTE Confidence: 0.8796613812446594
+
+00:30:14.800 --> 00:30:17.935
+There is 100 documents there and actually we can go
+
+NOTE Confidence: 0.8796613812446594
+
+00:30:17.996 --> 00:30:21.070
+inside and pick up the content and see it actually
+
+NOTE Confidence: 0.8796613812446594
+
+00:30:21.132 --> 00:30:23.960
+kind of got all the movie information in here.
+
+NOTE Confidence: 0.952637791633606
+
+00:30:24.840 --> 00:30:26.915
+So I just, this was a one liner that I
+
+NOTE Confidence: 0.952637791633606
+
+00:30:26.970 --> 00:30:29.373
+told the agent and I have a working index as
+
+NOTE Confidence: 0.952637791633606
+
+00:30:29.428 --> 00:30:29.919
+a result.
+
+NOTE Confidence: 0.8425148725509644
+
+00:30:30.160 --> 00:30:33.431
+So we expect, in addition to developer workflows and whatnot,
+
+NOTE Confidence: 0.8425148725509644
+
+00:30:33.484 --> 00:30:36.594
+we expect this serverless Foundry IQ instances to be great
+
+NOTE Confidence: 0.8425148725509644
+
+00:30:36.648 --> 00:30:39.329
+for agents that want to create their own things on
+
+NOTE Confidence: 0.8425148725509644
+
+00:30:39.383 --> 00:30:42.064
+the fly and delete them later, create new ones and
+
+NOTE Confidence: 0.8425148725509644
+
+00:30:42.118 --> 00:30:42.440
+so on.
+
+NOTE Confidence: 0.8701680898666382
+
+00:30:46.040 --> 00:30:50.540
+All right, So we talked about creating an instance of
+
+NOTE Confidence: 0.8701680898666382
+
+00:30:50.624 --> 00:30:55.040
+Foundry IQ, then we talked about putting data in it.
+
+NOTE Confidence: 0.9434177279472351
+
+00:30:55.240 --> 00:30:56.520
+Now let's talk about retrieval.
+
+NOTE Confidence: 0.895727813243866
+
+00:30:57.000 --> 00:31:00.129
+So retrieval is the moment that where you're all the
+
+NOTE Confidence: 0.895727813243866
+
+00:31:00.190 --> 00:31:03.319
+work that you do actually delivers value in the end.
+
+NOTE Confidence: 0.8332499265670776
+
+00:31:03.480 --> 00:31:06.198
+When it comes to retrieval or search engines, The thing
+
+NOTE Confidence: 0.8332499265670776
+
+00:31:06.247 --> 00:31:08.323
+is useful, the moment you, your top 3 or 4
+
+NOTE Confidence: 0.8332499265670776
+
+00:31:08.373 --> 00:31:11.042
+results are what the agent needed to ground the answer
+
+NOTE Confidence: 0.8332499265670776
+
+00:31:11.091 --> 00:31:12.080
+they're looking for.
+
+NOTE Confidence: 0.7794614434242249
+
+00:31:14.120 --> 00:31:17.366
+So in Foundry IQ we have an identical retrieval pipeline
+
+NOTE Confidence: 0.7794614434242249
+
+00:31:17.424 --> 00:31:20.264
+that is built into the system that you can choose
+
+NOTE Confidence: 0.7794614434242249
+
+00:31:20.322 --> 00:31:20.960
+to, to use.
+
+NOTE Confidence: 0.9420214891433716
+
+00:31:20.960 --> 00:31:22.400
+Remember the layers of the system.
+
+NOTE Confidence: 0.8481888175010681
+
+00:31:22.400 --> 00:31:24.280
+If you just want raw indexes, you can use them.
+
+NOTE Confidence: 0.7750601768493652
+
+00:31:24.600 --> 00:31:27.967
+But if you want a full fully featured retrieval pipeline
+
+NOTE Confidence: 0.7750601768493652
+
+00:31:28.028 --> 00:31:30.854
+that is just uses kind of an agentic method for
+
+NOTE Confidence: 0.7750601768493652
+
+00:31:30.914 --> 00:31:33.080
+retrieval, it's built into a system.
+
+NOTE Confidence: 0.7555403113365173
+
+00:31:33.800 --> 00:31:37.056
+Now the agentic retrieval pipeline will what, what it'll do
+
+NOTE Confidence: 0.7555403113365173
+
+00:31:37.112 --> 00:31:40.148
+is it'll take the question or kind of data requirements
+
+NOTE Confidence: 0.7555403113365173
+
+00:31:40.203 --> 00:31:42.080
+from the agent that is calling it.
+
+NOTE Confidence: 0.7906810641288757
+
+00:31:42.400 --> 00:31:45.256
+And first thing it'll do is it'll do query planning
+
+NOTE Confidence: 0.7906810641288757
+
+00:31:45.312 --> 00:31:48.112
+what it'll look at, what data sources should it go
+
+NOTE Confidence: 0.7906810641288757
+
+00:31:48.168 --> 00:31:51.024
+look at and how the query should be decomposed into
+
+NOTE Confidence: 0.7906810641288757
+
+00:31:51.080 --> 00:31:52.480
+parts and then go search.
+
+NOTE Confidence: 0.9001261591911316
+
+00:31:52.720 --> 00:31:55.082
+It'll run a few searches and then come back, look
+
+NOTE Confidence: 0.9001261591911316
+
+00:31:55.130 --> 00:31:57.203
+at the results and decide if it got what it
+
+NOTE Confidence: 0.9001261591911316
+
+00:31:57.252 --> 00:31:58.119
+was hoping to get.
+
+NOTE Confidence: 0.8672773241996765
+
+00:31:58.480 --> 00:32:01.571
+And if not, depending on the retrieval effort you configured,
+
+NOTE Confidence: 0.8672773241996765
+
+00:32:01.622 --> 00:32:04.409
+it'll kind of iterate and they'll search again based on
+
+NOTE Confidence: 0.8672773241996765
+
+00:32:04.460 --> 00:32:07.197
+the new information and then produce a final result to
+
+NOTE Confidence: 0.8672773241996765
+
+00:32:07.247 --> 00:32:08.159
+show to the agent.
+
+NOTE Confidence: 0.9273332953453064
+
+00:32:08.960 --> 00:32:12.105
+Now, this is something that we've been working on for
+
+NOTE Confidence: 0.9273332953453064
+
+00:32:12.165 --> 00:32:12.639
+a while.
+
+NOTE Confidence: 0.8829152584075928
+
+00:32:12.880 --> 00:32:15.143
+And at this point we are in kind of the
+
+NOTE Confidence: 0.8829152584075928
+
+00:32:15.201 --> 00:32:18.741
+second generation of agentic retrieval with, you know, one of
+
+NOTE Confidence: 0.8829152584075928
+
+00:32:18.799 --> 00:32:22.280
+the interesting things we saw is, you know, it's interesting
+
+NOTE Confidence: 0.8829152584075928
+
+00:32:22.338 --> 00:32:25.066
+how from about say October of last year to now,
+
+NOTE Confidence: 0.8829152584075928
+
+00:32:25.124 --> 00:32:29.012
+the models have changed significantly, including how good they are,
+
+NOTE Confidence: 0.8829152584075928
+
+00:32:29.070 --> 00:32:32.320
+the things like tool calling loops and things like that.
+
+NOTE Confidence: 0.8444657325744629
+
+00:32:32.600 --> 00:32:36.154
+So we significantly revamped the agentic retrieval stack to take
+
+NOTE Confidence: 0.8444657325744629
+
+00:32:36.209 --> 00:32:39.319
+advantage of the latest that the language models can do.
+
+NOTE Confidence: 0.9416542649269104
+
+00:32:39.920 --> 00:32:42.967
+So you can see in the charts like improvements across
+
+NOTE Confidence: 0.9416542649269104
+
+00:32:43.024 --> 00:32:43.599
+the board.
+
+NOTE Confidence: 0.8569437861442566
+
+00:32:43.600 --> 00:32:45.963
+So just to give you a kind of a little
+
+NOTE Confidence: 0.8569437861442566
+
+00:32:46.025 --> 00:32:49.196
+bit of orientation of what these charts say is this
+
+NOTE Confidence: 0.8569437861442566
+
+00:32:49.259 --> 00:32:51.559
+is a composition of multiple metrics.
+
+NOTE Confidence: 0.8946393132209778
+
+00:32:51.560 --> 00:32:54.467
+In this case, how good these systems are at recall,
+
+NOTE Confidence: 0.8946393132209778
+
+00:32:54.524 --> 00:32:57.545
+how often the answer is correct, how often the answer
+
+NOTE Confidence: 0.8946393132209778
+
+00:32:57.602 --> 00:33:00.509
+is complete, and also how often the model says that
+
+NOTE Confidence: 0.8946393132209778
+
+00:33:00.566 --> 00:33:03.587
+it doesn't know the answer even though the answer was
+
+NOTE Confidence: 0.8946393132209778
+
+00:33:03.644 --> 00:33:05.639
+present in the underlying data set.
+
+NOTE Confidence: 0.7608193159103394
+
+00:33:06.680 --> 00:33:10.683
+And we compare this against just lexical indexes, BM25 indexes
+
+NOTE Confidence: 0.7608193159103394
+
+00:33:10.747 --> 00:33:14.815
+against hybrid search, so vector plus plus lexical systems, and
+
+NOTE Confidence: 0.7608193159103394
+
+00:33:14.879 --> 00:33:18.559
+also against knowledge base with a genetic retrieval off.
+
+NOTE Confidence: 0.9023329019546509
+
+00:33:18.560 --> 00:33:21.500
+We call it minimal mode, so you can see material
+
+NOTE Confidence: 0.9023329019546509
+
+00:33:21.561 --> 00:33:24.992
+improvements across the entire set of metrics for all of
+
+NOTE Confidence: 0.9023329019546509
+
+00:33:25.053 --> 00:33:25.360
+them.
+
+NOTE Confidence: 0.8130156993865967
+
+00:33:25.840 --> 00:33:27.839
+Of course, this comes as a trade off and the
+
+NOTE Confidence: 0.8130156993865967
+
+00:33:27.885 --> 00:33:28.839
+trade off is latency.
+
+NOTE Confidence: 0.9360097646713257
+
+00:33:29.560 --> 00:33:31.917
+So if you use a search index, those things are
+
+NOTE Confidence: 0.9360097646713257
+
+00:33:31.968 --> 00:33:34.376
+so fast that you just don't need to account for
+
+NOTE Confidence: 0.9360097646713257
+
+00:33:34.427 --> 00:33:35.759
+it in your latency budget.
+
+NOTE Confidence: 0.6129481196403503
+
+00:33:35.760 --> 00:33:36.760
+They are instantaneous.
+
+NOTE Confidence: 0.8899811506271362
+
+00:33:37.080 --> 00:33:39.970
+Now when you call agentic retrieval, that could be a
+
+NOTE Confidence: 0.8899811506271362
+
+00:33:40.026 --> 00:33:43.306
+few seconds or sometimes maybe 10 seconds or something like
+
+NOTE Confidence: 0.8899811506271362
+
+00:33:43.362 --> 00:33:43.640
+that.
+
+NOTE Confidence: 0.9386525750160217
+
+00:33:43.640 --> 00:33:46.119
+If you have to iterate multiple times before we get
+
+NOTE Confidence: 0.9386525750160217
+
+00:33:46.168 --> 00:33:46.800
+to an answer.
+
+NOTE Confidence: 0.8004026412963867
+
+00:33:47.960 --> 00:33:50.512
+Now where does this where do these improvements compared to
+
+NOTE Confidence: 0.8004026412963867
+
+00:33:50.555 --> 00:33:51.679
+last iterations come from?
+
+NOTE Confidence: 0.9161036014556885
+
+00:33:52.120 --> 00:33:53.160
+Well, it's a mix of things.
+
+NOTE Confidence: 0.8874775767326355
+
+00:33:53.160 --> 00:33:56.190
+So first, as I said before, the agent, the language
+
+NOTE Confidence: 0.8874775767326355
+
+00:33:56.250 --> 00:33:57.319
+models got better.
+
+NOTE Confidence: 0.825792670249939
+
+00:33:57.320 --> 00:34:00.530
+So our workflow for retrieval, we, we had to kind
+
+NOTE Confidence: 0.825792670249939
+
+00:34:00.596 --> 00:34:04.134
+of update significantly to fit the style of the models
+
+NOTE Confidence: 0.825792670249939
+
+00:34:04.199 --> 00:34:07.213
+that do really well today and then made a huge
+
+NOTE Confidence: 0.825792670249939
+
+00:34:07.279 --> 00:34:08.000
+difference.
+
+NOTE Confidence: 0.7129697203636169
+
+00:34:08.400 --> 00:34:12.280
+Second, we trained a new semantic mode and semantic ranker.
+
+NOTE Confidence: 0.8489014506340027
+
+00:34:12.280 --> 00:34:14.608
+We've been training 3 rankers for a while and we
+
+NOTE Confidence: 0.8489014506340027
+
+00:34:14.657 --> 00:34:16.840
+keep being able to push the boundary on that.
+
+NOTE Confidence: 0.7655684947967529
+
+00:34:17.800 --> 00:34:19.440
+Then we worked on our answer synthesis.
+
+NOTE Confidence: 0.9434792399406433
+
+00:34:19.440 --> 00:34:21.080
+We have significant improvements there.
+
+NOTE Confidence: 0.8693073987960815
+
+00:34:21.560 --> 00:34:24.459
+And then for some tasks like for example MCP parameter
+
+NOTE Confidence: 0.8693073987960815
+
+00:34:24.513 --> 00:34:27.037
+binding, we did a lot of work to tune depending
+
+NOTE Confidence: 0.8693073987960815
+
+00:34:27.091 --> 00:34:29.991
+on the model you're using, we do model specific prompt
+
+NOTE Confidence: 0.8693073987960815
+
+00:34:30.044 --> 00:34:32.837
+to get it exactly right for that model because there
+
+NOTE Confidence: 0.8693073987960815
+
+00:34:32.890 --> 00:34:35.200
+is enough variability between between them.
+
+NOTE Confidence: 0.8038470149040222
+
+00:34:36.480 --> 00:34:39.380
+So we did the science team behind this publishes very
+
+NOTE Confidence: 0.8038470149040222
+
+00:34:39.434 --> 00:34:41.897
+detailed write ups and this if you are in the
+
+NOTE Confidence: 0.8038470149040222
+
+00:34:41.951 --> 00:34:45.289
+from into information retrieval or you want to understand how
+
+NOTE Confidence: 0.8038470149040222
+
+00:34:45.344 --> 00:34:48.791
+we evaluate how these systems are working, I recommend checking
+
+NOTE Confidence: 0.8038470149040222
+
+00:34:48.846 --> 00:34:51.090
+out that URL where you'll see a lot a lot
+
+NOTE Confidence: 0.8038470149040222
+
+00:34:51.144 --> 00:34:53.880
+longer of a write up, including some of these data
+
+NOTE Confidence: 0.8038470149040222
+
+00:34:53.935 --> 00:34:55.960
+you see on the screen and a lot more.
+
+NOTE Confidence: 0.8958759307861328
+
+00:34:57.480 --> 00:35:01.030
+Now, in addition to that token efficiency these days is
+
+NOTE Confidence: 0.8958759307861328
+
+00:35:01.095 --> 00:35:03.999
+a thing like that we all kind of think about.
+
+NOTE Confidence: 0.9437850713729858
+
+00:35:04.640 --> 00:35:07.118
+So the other thing that we we looked at is,
+
+NOTE Confidence: 0.9437850713729858
+
+00:35:07.176 --> 00:35:09.597
+you know, in terms of what it takes to get
+
+NOTE Confidence: 0.9437850713729858
+
+00:35:09.655 --> 00:35:12.018
+a right answer, not what it takes to do a
+
+NOTE Confidence: 0.9437850713729858
+
+00:35:12.076 --> 00:35:12.479
+search.
+
+NOTE Confidence: 0.966755747795105
+
+00:35:12.480 --> 00:35:14.273
+Like anybody can do a search with just a few
+
+NOTE Confidence: 0.966755747795105
+
+00:35:14.314 --> 00:35:14.600
+tokens.
+
+NOTE Confidence: 0.9685229063034058
+
+00:35:14.600 --> 00:35:16.320
+The question is, did you get it right?
+
+NOTE Confidence: 0.897983968257904
+
+00:35:17.160 --> 00:35:19.601
+So what you see here is kind of like a
+
+NOTE Confidence: 0.897983968257904
+
+00:35:19.666 --> 00:35:22.429
+Pareto line of what is what is the best you
+
+NOTE Confidence: 0.897983968257904
+
+00:35:22.493 --> 00:35:24.999
+can do with the fewest possible tokens.
+
+NOTE Confidence: 0.8169445991516113
+
+00:35:25.360 --> 00:35:28.641
+And again, we compare against ourselves like we compare what
+
+NOTE Confidence: 0.8169445991516113
+
+00:35:28.696 --> 00:35:32.142
+is just hybrid search versus using full agentic retrieval where
+
+NOTE Confidence: 0.8169445991516113
+
+00:35:32.196 --> 00:35:34.876
+you need an outer agent to orchestrate more or we
+
+NOTE Confidence: 0.8169445991516113
+
+00:35:34.931 --> 00:35:36.079
+do the orchestration.
+
+NOTE Confidence: 0.86709064245224
+
+00:35:36.400 --> 00:35:38.934
+And you can see first, that we need fewer tokens
+
+NOTE Confidence: 0.86709064245224
+
+00:35:38.987 --> 00:35:40.359
+to produce better answers.
+
+NOTE Confidence: 0.9060730934143066
+
+00:35:41.000 --> 00:35:44.400
+And 2nd, which is not necessarily part of this chart.
+
+NOTE Confidence: 0.8166269063949585
+
+00:35:44.480 --> 00:35:47.168
+We've worked a lot in making sure that the way
+
+NOTE Confidence: 0.8166269063949585
+
+00:35:47.226 --> 00:35:50.382
+we construct prompts like, you know, the way we manage
+
+NOTE Confidence: 0.8166269063949585
+
+00:35:50.440 --> 00:35:53.538
+our own context is aware of how token caching caching
+
+NOTE Confidence: 0.8166269063949585
+
+00:35:53.596 --> 00:35:56.752
+works to, to make sure that first, it's faster because
+
+NOTE Confidence: 0.8166269063949585
+
+00:35:56.810 --> 00:35:59.499
+you, you, you hit the, the prefix cache on the
+
+NOTE Confidence: 0.8166269063949585
+
+00:35:59.557 --> 00:36:01.720
+on the language model you're hitting.
+
+NOTE Confidence: 0.8256528377532959
+
+00:36:02.239 --> 00:36:05.769
+And 2nd, it's cheaper because cache tokens are always cheaper
+
+NOTE Confidence: 0.8256528377532959
+
+00:36:05.827 --> 00:36:08.199
+than the running full on, full on tokens.
+
+NOTE Confidence: 0.9080048203468323
+
+00:36:09.360 --> 00:36:11.474
+So to give you a sense of kind of how
+
+NOTE Confidence: 0.9080048203468323
+
+00:36:11.531 --> 00:36:13.360
+all of this can be put together.
+
+NOTE Confidence: 0.7650315165519714
+
+00:36:14.040 --> 00:36:16.268
+So what I, what I, what I did is I
+
+NOTE Confidence: 0.7650315165519714
+
+00:36:16.333 --> 00:36:19.480
+just crafted a quick, I mean craft testing vibe.
+
+NOTE Confidence: 0.7982528209686279
+
+00:36:19.480 --> 00:36:21.408
+I used to say I wrote as in I wrote
+
+NOTE Confidence: 0.7982528209686279
+
+00:36:21.464 --> 00:36:21.960
+the code.
+
+NOTE Confidence: 0.8987890481948853
+
+00:36:21.960 --> 00:36:24.712
+I don't know what to say these days, but I
+
+NOTE Confidence: 0.8987890481948853
+
+00:36:24.777 --> 00:36:27.464
+have a thing that what it does is it just
+
+NOTE Confidence: 0.8987890481948853
+
+00:36:27.529 --> 00:36:31.002
+calls the retrieve API for, for the knowledge base we
+
+NOTE Confidence: 0.8987890481948853
+
+00:36:31.068 --> 00:36:31.920
+just created.
+
+NOTE Confidence: 0.8736571669578552
+
+00:36:32.760 --> 00:36:34.450
+And it'll show you, show us a little bit of
+
+NOTE Confidence: 0.8736571669578552
+
+00:36:34.489 --> 00:36:35.040
+the internals.
+
+NOTE Confidence: 0.771907389163971
+
+00:36:35.240 --> 00:36:37.160
+So I'm going to ask you to run in medium.
+
+NOTE Confidence: 0.8642556667327881
+
+00:36:37.160 --> 00:36:38.360
+So it'll run a little longer.
+
+NOTE Confidence: 0.8914951086044312
+
+00:36:38.719 --> 00:36:40.359
+And I have a quick prompt that I want to,
+
+NOTE Confidence: 0.8914951086044312
+
+00:36:40.399 --> 00:36:41.119
+I want to give it.
+
+NOTE Confidence: 0.6008153557777405
+
+00:36:42.080 --> 00:36:45.200
+I'm going to ask to go do this.
+
+NOTE Confidence: 0.9448021054267883
+
+00:36:46.480 --> 00:36:49.005
+So now, now that we have a set of moving
+
+NOTE Confidence: 0.9448021054267883
+
+00:36:49.068 --> 00:36:51.973
+parts in that knowledge base, I want to go use
+
+NOTE Confidence: 0.9448021054267883
+
+00:36:52.036 --> 00:36:55.319
+that knowledge base to go perform a number of tasks.
+
+NOTE Confidence: 0.8353840112686157
+
+00:36:58.000 --> 00:37:00.240
+Oh, I forgot to show you this.
+
+NOTE Confidence: 0.9073438048362732
+
+00:37:01.520 --> 00:37:04.769
+So now that I have multiple data sources and some
+
+NOTE Confidence: 0.9073438048362732
+
+00:37:04.835 --> 00:37:08.483
+of them are actually online data sources, we can't just
+
+NOTE Confidence: 0.9073438048362732
+
+00:37:08.549 --> 00:37:12.329
+create a knowledge base without telling us which model we
+
+NOTE Confidence: 0.9073438048362732
+
+00:37:12.395 --> 00:37:16.109
+use for the actual orchestration, which is what I forgot
+
+NOTE Confidence: 0.9073438048362732
+
+00:37:16.175 --> 00:37:16.640
+before.
+
+NOTE Confidence: 0.704738438129425
+
+00:37:16.920 --> 00:37:19.974
+So what I do here is I'll say use GPT
+
+NOTE Confidence: 0.704738438129425
+
+00:37:20.057 --> 00:37:20.799
+454 mini.
+
+NOTE Confidence: 0.901935338973999
+
+00:37:21.600 --> 00:37:23.320
+I'm going to choose a default reasoning effort.
+
+NOTE Confidence: 0.8494102358818054
+
+00:37:23.320 --> 00:37:24.480
+You can override it later.
+
+NOTE Confidence: 0.9053016901016235
+
+00:37:24.880 --> 00:37:27.660
+And I can also choose whether I want answer synthesis
+
+NOTE Confidence: 0.9053016901016235
+
+00:37:27.712 --> 00:37:28.080
+or not.
+
+NOTE Confidence: 0.9080380201339722
+
+00:37:28.080 --> 00:37:32.599
+And I can optionally give steering instructions for for both
+
+NOTE Confidence: 0.9080380201339722
+
+00:37:32.674 --> 00:37:33.880
+of these things.
+
+NOTE Confidence: 0.8953917026519775
+
+00:37:34.320 --> 00:37:37.198
+So now with that in place, we're going to call
+
+NOTE Confidence: 0.8953917026519775
+
+00:37:37.261 --> 00:37:38.200
+retrieve again.
+
+NOTE Confidence: 0.9036675691604614
+
+00:37:40.239 --> 00:37:43.053
+And so this will take a second to run, but
+
+NOTE Confidence: 0.9036675691604614
+
+00:37:43.119 --> 00:37:45.999
+once it runs, I run it a little bit before.
+
+NOTE Confidence: 0.9552033543586731
+
+00:37:46.200 --> 00:37:47.360
+So let me show you the output.
+
+NOTE Confidence: 0.9019709825515747
+
+00:37:48.960 --> 00:37:51.825
+So in this case, you can see, you know, it
+
+NOTE Confidence: 0.9019709825515747
+
+00:37:51.894 --> 00:37:53.599
+went to the ratings part.
+
+NOTE Confidence: 0.6295477151870728
+
+00:37:53.600 --> 00:37:54.560
+The ratings are in.
+
+NOTE Confidence: 0.6175864338874817
+
+00:37:55.320 --> 00:37:57.848
+They are this data agent that is running in Fabric
+
+NOTE Confidence: 0.6175864338874817
+
+00:37:57.899 --> 00:37:59.719
+quoting this part K files in Sequel.
+
+NOTE Confidence: 0.9702107906341553
+
+00:38:00.080 --> 00:38:02.520
+So you can see the results from that.
+
+NOTE Confidence: 0.8007493615150452
+
+00:38:03.360 --> 00:38:05.504
+And then part of the question is how do they
+
+NOTE Confidence: 0.8007493615150452
+
+00:38:05.553 --> 00:38:07.503
+do in the box office, which is not of my
+
+NOTE Confidence: 0.8007493615150452
+
+00:38:07.552 --> 00:38:08.039
+data sets.
+
+NOTE Confidence: 0.8222063183784485
+
+00:38:08.200 --> 00:38:10.400
+So what he did is just use the web grounding
+
+NOTE Confidence: 0.8222063183784485
+
+00:38:10.450 --> 00:38:13.000
+part, went to the web, grabbed the movies that were
+
+NOTE Confidence: 0.8222063183784485
+
+00:38:13.050 --> 00:38:13.800
+in the top ten.
+
+NOTE Confidence: 0.8168265223503113
+
+00:38:14.400 --> 00:38:16.564
+You know, I'll leave you to decide whether or not
+
+NOTE Confidence: 0.8168265223503113
+
+00:38:16.608 --> 00:38:18.639
+those are the actual best three sci-fi movies.
+
+NOTE Confidence: 0.8512349724769592
+
+00:38:19.440 --> 00:38:22.221
+And and then he pulled the results and they gave
+
+NOTE Confidence: 0.8512349724769592
+
+00:38:22.279 --> 00:38:23.960
+us an answer on some of them.
+
+NOTE Confidence: 0.9198671579360962
+
+00:38:24.200 --> 00:38:25.725
+And some of them he was like, yeah, this was
+
+NOTE Confidence: 0.9198671579360962
+
+00:38:25.759 --> 00:38:26.279
+not on the web.
+
+NOTE Confidence: 0.9298727512359619
+
+00:38:26.320 --> 00:38:29.457
+Who knows why but we got a very comprehensive answer
+
+NOTE Confidence: 0.9298727512359619
+
+00:38:29.517 --> 00:38:32.414
+and you can see the activity here where you know
+
+NOTE Confidence: 0.9298727512359619
+
+00:38:32.474 --> 00:38:33.440
+the planner run.
+
+NOTE Confidence: 0.7544982433319092
+
+00:38:33.680 --> 00:38:35.720
+Then first he went to the data agent.
+
+NOTE Confidence: 0.8277433514595032
+
+00:38:35.760 --> 00:38:37.785
+I assume we went there to find what are the
+
+NOTE Confidence: 0.8277433514595032
+
+00:38:37.832 --> 00:38:38.679
+top sci-fi movies.
+
+NOTE Confidence: 0.8477012515068054
+
+00:38:40.080 --> 00:38:42.842
+And then he hit the MCP server for web, discarded
+
+NOTE Confidence: 0.8477012515068054
+
+00:38:42.898 --> 00:38:46.281
+some of the content, the synthesis step where he constructed
+
+NOTE Confidence: 0.8477012515068054
+
+00:38:46.337 --> 00:38:49.720
+an answer and then finished the reasoning process with that.
+
+NOTE Confidence: 0.8892080783843994
+
+00:38:50.000 --> 00:38:52.205
+And along with this, I have all the references where
+
+NOTE Confidence: 0.8892080783843994
+
+00:38:52.248 --> 00:38:54.029
+in each one of them you can see where this
+
+NOTE Confidence: 0.8892080783843994
+
+00:38:54.071 --> 00:38:56.319
+data came from, what is the kind of knowledge source?
+
+NOTE Confidence: 0.7469863891601562
+
+00:38:56.560 --> 00:38:59.380
+And you know, when the knowledge source gives us information,
+
+NOTE Confidence: 0.7469863891601562
+
+00:38:59.426 --> 00:39:01.923
+maybe a link to the underlying file and whatnot, we'll
+
+NOTE Confidence: 0.7469863891601562
+
+00:39:01.970 --> 00:39:03.079
+present it here as well.
+
+NOTE Confidence: 0.8137839436531067
+
+00:39:03.800 --> 00:39:06.444
+So all this information usually you won't present in the
+
+NOTE Confidence: 0.8137839436531067
+
+00:39:06.492 --> 00:39:08.381
+UX, but it's great if you want to fit it
+
+NOTE Confidence: 0.8137839436531067
+
+00:39:08.428 --> 00:39:11.262
+to an agent to understand the dynamic, yeah, the interaction
+
+NOTE Confidence: 0.8137839436531067
+
+00:39:11.309 --> 00:39:11.640
+better.
+
+NOTE Confidence: 0.9454020857810974
+
+00:39:11.800 --> 00:39:13.840
+Or you can use it for debugging as well.
+
+NOTE Confidence: 0.9035950899124146
+
+00:39:18.360 --> 00:39:21.246
+Go back here and the interesting thing is all the
+
+NOTE Confidence: 0.9035950899124146
+
+00:39:21.305 --> 00:39:24.485
+technology and all the science that I talked about for
+
+NOTE Confidence: 0.9035950899124146
+
+00:39:24.544 --> 00:39:28.549
+improving ranking and relevance and agentic retrieval is behind that
+
+NOTE Confidence: 0.9035950899124146
+
+00:39:28.608 --> 00:39:29.079
+one API.
+
+NOTE Confidence: 0.8369399309158325
+
+00:39:29.320 --> 00:39:32.336
+Either they're behind that one MCP server call or behind
+
+NOTE Confidence: 0.8369399309158325
+
+00:39:32.390 --> 00:39:35.569
+the retrieve call and everything else will happen under the
+
+NOTE Confidence: 0.8369399309158325
+
+00:39:35.622 --> 00:39:36.000
+covers.
+
+NOTE Confidence: 0.8416575789451599
+
+00:39:36.760 --> 00:39:39.756
+Now that said, a bit of a little bit coming
+
+NOTE Confidence: 0.8416575789451599
+
+00:39:39.826 --> 00:39:41.359
+back to the beginning.
+
+NOTE Confidence: 0.8818041682243347
+
+00:39:42.440 --> 00:39:45.573
+Like I said, the the we designed the system to
+
+NOTE Confidence: 0.8818041682243347
+
+00:39:45.642 --> 00:39:48.776
+be cleanly stacked in a way that allows you to
+
+NOTE Confidence: 0.8818041682243347
+
+00:39:48.844 --> 00:39:51.978
+decide what layer of the system to use at what
+
+NOTE Confidence: 0.8818041682243347
+
+00:39:52.046 --> 00:39:53.000
+point in time.
+
+NOTE Confidence: 0.8896380066871643
+
+00:39:53.600 --> 00:39:55.967
+One of the design tricks that was non trivial to
+
+NOTE Confidence: 0.8896380066871643
+
+00:39:56.016 --> 00:39:58.187
+pull off was to make sure that even when you
+
+NOTE Confidence: 0.8896380066871643
+
+00:39:58.236 --> 00:40:00.752
+pick a layer, even though you can pick layers, once
+
+NOTE Confidence: 0.8896380066871643
+
+00:40:00.801 --> 00:40:02.922
+you pick one, you don't want to be stuck in
+
+NOTE Confidence: 0.8896380066871643
+
+00:40:02.972 --> 00:40:03.119
+it.
+
+NOTE Confidence: 0.9412333965301514
+
+00:40:03.120 --> 00:40:05.067
+You want to have the versatility to go up and
+
+NOTE Confidence: 0.9412333965301514
+
+00:40:05.110 --> 00:40:05.759
+down the stack.
+
+NOTE Confidence: 0.9384160041809082
+
+00:40:06.160 --> 00:40:09.101
+And that's what we've done with the Foundry IQ stack
+
+NOTE Confidence: 0.9384160041809082
+
+00:40:09.158 --> 00:40:10.119
+where you can do.
+
+NOTE Confidence: 0.8910562992095947
+
+00:40:10.680 --> 00:40:14.166
+Found the integration first, or you can do knowledge bases
+
+NOTE Confidence: 0.8910562992095947
+
+00:40:14.226 --> 00:40:17.292
+or you can go straight to the core retrieval engine
+
+NOTE Confidence: 0.8910562992095947
+
+00:40:17.352 --> 00:40:20.057
+that we built around like this is on on Azure
+
+NOTE Confidence: 0.8910562992095947
+
+00:40:20.117 --> 00:40:22.521
+AI search and you can go up and down the
+
+NOTE Confidence: 0.8910562992095947
+
+00:40:22.581 --> 00:40:25.286
+stack as you need or you can change your mind
+
+NOTE Confidence: 0.8910562992095947
+
+00:40:25.347 --> 00:40:27.811
+once you build 1 and I wanted to show you
+
+NOTE Confidence: 0.8910562992095947
+
+00:40:27.871 --> 00:40:30.757
+a few examples of that so remember that we built
+
+NOTE Confidence: 0.8910562992095947
+
+00:40:30.817 --> 00:40:32.319
+this knowledge base here.
+
+NOTE Confidence: 0.8644851446151733
+
+00:40:33.560 --> 00:40:35.400
+This is the kind of funky name that we got.
+
+NOTE Confidence: 0.8843675255775452
+
+00:40:35.719 --> 00:40:38.856
+And then we built some knowledge sources that are remote
+
+NOTE Confidence: 0.8843675255775452
+
+00:40:38.912 --> 00:40:41.880
+and some knowledge sources that have indexed content.
+
+NOTE Confidence: 0.7812666296958923
+
+00:40:42.160 --> 00:40:45.200
+So let's actually peek into what's happening under the covers.
+
+NOTE Confidence: 0.7614659070968628
+
+00:40:45.200 --> 00:40:47.750
+So I'm going to just go to Azure in the
+
+NOTE Confidence: 0.7614659070968628
+
+00:40:47.815 --> 00:40:51.151
+Azure portal and let me switch back to the resource
+
+NOTE Confidence: 0.7614659070968628
+
+00:40:51.216 --> 00:40:53.440
+group that has particular service.
+
+NOTE Confidence: 0.808009684085846
+
+00:40:55.000 --> 00:40:57.440
+And remember, this service was called MO Three.
+
+NOTE Confidence: 0.8673714399337769
+
+00:40:58.560 --> 00:41:00.793
+And 1st, I can find the knowledge base we created
+
+NOTE Confidence: 0.8673714399337769
+
+00:41:00.839 --> 00:41:02.799
+there right here in the Azure Search Blade.
+
+NOTE Confidence: 0.8998966217041016
+
+00:41:03.880 --> 00:41:05.800
+So this is the one we just used.
+
+NOTE Confidence: 0.9339950084686279
+
+00:41:06.840 --> 00:41:09.790
+We can see all the knowledge sources, but if I
+
+NOTE Confidence: 0.9339950084686279
+
+00:41:09.854 --> 00:41:13.189
+pick a little more, remember 2 of them were actually
+
+NOTE Confidence: 0.9339950084686279
+
+00:41:13.253 --> 00:41:14.280
+indexed content.
+
+NOTE Confidence: 0.9007085561752319
+
+00:41:14.280 --> 00:41:16.720
+So I can see the actual indexer.
+
+NOTE Confidence: 0.8804781436920166
+
+00:41:16.720 --> 00:41:19.120
+This is a job that does all the transformation.
+
+NOTE Confidence: 0.8017997145652771
+
+00:41:19.120 --> 00:41:21.658
+It's effectively the data pipeline that pulls data into the
+
+NOTE Confidence: 0.8017997145652771
+
+00:41:21.701 --> 00:41:21.959
+index.
+
+NOTE Confidence: 0.8880214095115662
+
+00:41:22.280 --> 00:41:24.313
+I can look at the runs, I can kind of
+
+NOTE Confidence: 0.8880214095115662
+
+00:41:24.368 --> 00:41:27.555
+configure the internals and whatnot and actually go in and
+
+NOTE Confidence: 0.8880214095115662
+
+00:41:27.610 --> 00:41:28.600
+look at the index.
+
+NOTE Confidence: 0.8163352012634277
+
+00:41:29.280 --> 00:41:32.871
+For example, this was the the this one was the
+
+NOTE Confidence: 0.8163352012634277
+
+00:41:32.949 --> 00:41:36.463
+the one the index that we created when we got
+
+NOTE Confidence: 0.8163352012634277
+
+00:41:36.541 --> 00:41:39.040
+all the files with the articles.
+
+NOTE Confidence: 0.9098597764968872
+
+00:41:40.520 --> 00:41:42.753
+And if, if I want, I can look at the
+
+NOTE Confidence: 0.9098597764968872
+
+00:41:42.815 --> 00:41:45.917
+schema where I can see what is the construction of
+
+NOTE Confidence: 0.9098597764968872
+
+00:41:45.979 --> 00:41:46.599
+the index.
+
+NOTE Confidence: 0.8614985942840576
+
+00:41:46.840 --> 00:41:49.023
+I can even pick up things like you may have,
+
+NOTE Confidence: 0.8614985942840576
+
+00:41:49.072 --> 00:41:51.999
+you may not care and then we'll choose reasonable defaults.
+
+NOTE Confidence: 0.8716771602630615
+
+00:41:52.280 --> 00:41:55.216
+Or you may have very specific comparisons like or opinions
+
+NOTE Confidence: 0.8716771602630615
+
+00:41:55.266 --> 00:41:55.519
+like.
+
+NOTE Confidence: 0.8650941252708435
+
+00:41:55.520 --> 00:41:58.812
+For example, here is like what is the vector search
+
+NOTE Confidence: 0.8650941252708435
+
+00:41:58.877 --> 00:42:02.880
+compression options where by default we do 8 bit quantization.
+
+NOTE Confidence: 0.8680487275123596
+
+00:42:02.880 --> 00:42:05.732
+But you may want a different quantization policy or a
+
+NOTE Confidence: 0.8680487275123596
+
+00:42:05.786 --> 00:42:08.800
+different kind of re ranking policy or things like that.
+
+NOTE Confidence: 0.8712812662124634
+
+00:42:09.040 --> 00:42:12.008
+And you can control all this all the way to
+
+NOTE Confidence: 0.8712812662124634
+
+00:42:12.077 --> 00:42:13.319
+details like this.
+
+NOTE Confidence: 0.905936598777771
+
+00:42:14.040 --> 00:42:16.913
+And you can also look at the actual data, like
+
+NOTE Confidence: 0.905936598777771
+
+00:42:16.976 --> 00:42:19.912
+for example here, if I pull the content of this
+
+NOTE Confidence: 0.905936598777771
+
+00:42:19.974 --> 00:42:22.973
+index, I mean, I could, I could also search, but
+
+NOTE Confidence: 0.905936598777771
+
+00:42:23.035 --> 00:42:25.160
+you can see these are the content.
+
+NOTE Confidence: 0.8182702660560608
+
+00:42:25.160 --> 00:42:27.567
+This is the actual snippet that was a result of
+
+NOTE Confidence: 0.8182702660560608
+
+00:42:27.618 --> 00:42:28.080
+chunking.
+
+NOTE Confidence: 0.9116628766059875
+
+00:42:28.360 --> 00:42:30.199
+And I can see the actual vector here, which of
+
+NOTE Confidence: 0.9116628766059875
+
+00:42:30.239 --> 00:42:31.839
+course is not very useful to look at it.
+
+NOTE Confidence: 0.8064102530479431
+
+00:42:32.080 --> 00:42:34.434
+But is this the vector we use when we're computing
+
+NOTE Confidence: 0.8064102530479431
+
+00:42:34.481 --> 00:42:36.600
+kind of vector differences for vector search?
+
+NOTE Confidence: 0.8589738607406616
+
+00:42:37.880 --> 00:42:40.371
+Not only you have the control to do this, but
+
+NOTE Confidence: 0.8589738607406616
+
+00:42:40.426 --> 00:42:43.415
+this also allows you to make choices about things like
+
+NOTE Confidence: 0.8589738607406616
+
+00:42:43.471 --> 00:42:46.958
+latency trade-offs where you can do fully genetic retrieval and
+
+NOTE Confidence: 0.8589738607406616
+
+00:42:47.013 --> 00:42:49.781
+it'll take a few seconds, but it'll give you great
+
+NOTE Confidence: 0.8589738607406616
+
+00:42:49.837 --> 00:42:50.280
+results.
+
+NOTE Confidence: 0.9140626788139343
+
+00:42:50.680 --> 00:42:52.607
+And maybe in other cases you are like, well, I
+
+NOTE Confidence: 0.9140626788139343
+
+00:42:52.649 --> 00:42:54.535
+want to do something like sort of what you do
+
+NOTE Confidence: 0.9140626788139343
+
+00:42:54.577 --> 00:42:56.588
+with files where you just issue a whole bunch of
+
+NOTE Confidence: 0.9140626788139343
+
+00:42:56.630 --> 00:42:58.767
+searches and you want real quick results so you can
+
+NOTE Confidence: 0.9140626788139343
+
+00:42:58.809 --> 00:42:59.480
+iterate on them.
+
+NOTE Confidence: 0.8780134320259094
+
+00:42:59.880 --> 00:43:02.080
+And that can happen really, really fast.
+
+NOTE Confidence: 0.906413197517395
+
+00:43:02.520 --> 00:43:04.643
+I guess to give you like a last example of
+
+NOTE Confidence: 0.906413197517395
+
+00:43:04.694 --> 00:43:07.070
+these, let me show you one last thing, which is
+
+NOTE Confidence: 0.906413197517395
+
+00:43:07.121 --> 00:43:09.396
+just to give you a sense of the difference in
+
+NOTE Confidence: 0.906413197517395
+
+00:43:09.447 --> 00:43:10.559
+speed of these things.
+
+NOTE Confidence: 0.8813506364822388
+
+00:43:12.040 --> 00:43:14.563
+So what I'll do is I have this other service
+
+NOTE Confidence: 0.8813506364822388
+
+00:43:14.621 --> 00:43:17.661
+where instead of those 345 files I showed you before,
+
+NOTE Confidence: 0.8813506364822388
+
+00:43:17.718 --> 00:43:20.931
+I took all of Wikipedia in English Wikipedia, chunked it
+
+NOTE Confidence: 0.8813506364822388
+
+00:43:20.988 --> 00:43:22.479
+up and put it in an index.
+
+NOTE Confidence: 0.91812664270401
+
+00:43:22.480 --> 00:43:25.160
+So this has about 22 or so million chunks.
+
+NOTE Confidence: 0.7251731157302856
+
+00:43:25.440 --> 00:43:27.320
+So it's a sizable index at this point.
+
+NOTE Confidence: 0.8549273014068604
+
+00:43:28.480 --> 00:43:32.031
+And then I just wrote a simple client to so
+
+NOTE Confidence: 0.8549273014068604
+
+00:43:32.114 --> 00:43:34.840
+we can kind of hit that endpoint.
+
+NOTE Confidence: 0.8272985219955444
+
+00:43:35.600 --> 00:43:38.164
+So if I, if I search for simple things, we're
+
+NOTE Confidence: 0.8272985219955444
+
+00:43:38.221 --> 00:43:40.159
+talking about Neo before and peel.
+
+NOTE Confidence: 0.8370123505592346
+
+00:43:40.400 --> 00:43:42.627
+Like you can see this thing searches at the speed
+
+NOTE Confidence: 0.8370123505592346
+
+00:43:42.672 --> 00:43:43.399
+that I can type.
+
+NOTE Confidence: 0.8491365909576416
+
+00:43:43.440 --> 00:43:46.333
+In fact, I can't force the lag like I can
+
+NOTE Confidence: 0.8491365909576416
+
+00:43:46.403 --> 00:43:49.720
+say Microsoft build if I didn't have any typos.
+
+NOTE Confidence: 0.9218607544898987
+
+00:43:50.040 --> 00:43:52.990
+So this is searching on every crystal keystroke and I
+
+NOTE Confidence: 0.9218607544898987
+
+00:43:53.046 --> 00:43:54.159
+still can't keep up.
+
+NOTE Confidence: 0.8775864243507385
+
+00:43:54.560 --> 00:43:56.771
+So if you want an agent to say issue 10
+
+NOTE Confidence: 0.8775864243507385
+
+00:43:56.828 --> 00:44:00.287
+searches or issue multiple rounds of 10/20 searches each, all
+
+NOTE Confidence: 0.8775864243507385
+
+00:44:00.344 --> 00:44:03.462
+of them will finish well within the second all together
+
+NOTE Confidence: 0.8775864243507385
+
+00:44:03.519 --> 00:44:06.922
+in parallel, which means you can could completely change the
+
+NOTE Confidence: 0.8775864243507385
+
+00:44:06.978 --> 00:44:08.680
+way you think about retrieval.
+
+NOTE Confidence: 0.7896363735198975
+
+00:44:08.680 --> 00:44:11.716
+You can get us to run your agentic retrieval loop
+
+NOTE Confidence: 0.7896363735198975
+
+00:44:11.778 --> 00:44:14.381
+for you, or you can give us give the agent
+
+NOTE Confidence: 0.7896363735198975
+
+00:44:14.443 --> 00:44:17.541
+these entry points and let them hit the the search
+
+NOTE Confidence: 0.7896363735198975
+
+00:44:17.603 --> 00:44:20.268
+index as hard as you want and it'll be just
+
+NOTE Confidence: 0.7896363735198975
+
+00:44:20.330 --> 00:44:20.640
+fine.
+
+NOTE Confidence: 0.7843561172485352
+
+00:44:21.560 --> 00:44:25.165
+I even at 10s or hundreds of millions of documents
+
+NOTE Confidence: 0.7843561172485352
+
+00:44:25.237 --> 00:44:27.040
+like in the example here.
+
+NOTE Confidence: 0.9632834196090698
+
+00:44:28.120 --> 00:44:31.326
+So with that, this is all I wanted to share
+
+NOTE Confidence: 0.9632834196090698
+
+00:44:31.401 --> 00:44:32.519
+with you today.
+
+NOTE Confidence: 0.9152812957763672
+
+00:44:33.880 --> 00:44:35.640
+This is everything I showed you today.
+
+NOTE Confidence: 0.937494695186615
+
+00:44:35.640 --> 00:44:36.640
+You can use today.
+
+NOTE Confidence: 0.7620431780815125
+
+00:44:36.880 --> 00:44:39.458
+So you can go to Foundry or the Azure Portal
+
+NOTE Confidence: 0.7620431780815125
+
+00:44:39.517 --> 00:44:41.919
+or get our SD KS and get going with this.
+
+NOTE Confidence: 0.8740780353546143
+
+00:44:42.239 --> 00:44:45.189
+And here's a bunch of other things that are going
+
+NOTE Confidence: 0.8740780353546143
+
+00:44:45.249 --> 00:44:47.837
+on at Build that are related to the topic I
+
+NOTE Confidence: 0.8740780353546143
+
+00:44:47.897 --> 00:44:48.679
+talked about.
+
+NOTE Confidence: 0.9163172245025635
+
+00:44:48.880 --> 00:44:51.524
+Hope this information was useful to you all and thank
+
+NOTE Confidence: 0.9163172245025635
+
+00:44:51.574 --> 00:44:53.720
+you very much for coming here this morning.
+

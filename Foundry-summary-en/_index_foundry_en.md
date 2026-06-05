@@ -1,6 +1,6 @@
 # Microsoft Build 2026 — Microsoft Foundry Core Sessions (English Index & Overview)
 
-**Scope:** The 11 core **Microsoft Foundry** breakout sessions from Microsoft Build 2026 (June 2026, San Francisco) that together tell the end-to-end story of building, shipping, governing, and proving the value of enterprise AI agents.
+**Scope:** 12 **Microsoft Build 2026** sessions (June 2026, San Francisco) on Microsoft Foundry and the broader model/runtime ecosystem that together tell the end-to-end story of building, shipping, governing, and proving the value of enterprise AI agents — plus open/local model execution.
 **Compiled:** 2026-06-06
 **Source:** Each summary is grounded in the session's official WebVTT transcript (medius.microsoft.com CAPTION route), cross-checked against `transcript_raw.vtt` for accurate timestamps.
 **Format:** Every per-session summary follows the same structure — Speakers → Overview → numbered timestamped sections → Summary (core messages + announced-features table + next actions).
@@ -24,12 +24,13 @@ Four themes recur in nearly every session:
 
 ## Sessions by Theme
 
-### A. Models, Cost & Post-Training
-The economic and quality engine room — selecting, routing, distilling, and reinforcement-tuning models.
+### A. Models, Runtimes, Cost & Post-Training
+The economic and quality engine room — selecting, routing, distilling, reinforcement-tuning, and locally running models.
 
 - **BRK230** — Build smarter AI systems in Foundry as models and costs evolve
 - **BRK232** — Post-Training and Deploying Open Source Reasoning Models in Foundry
 - **BRK231** — Deploy. Observe. Learn. Reinforcement learning for production agents
+- **BRK235** — Local models, developer control, and the future of AI runtimes (Ollama; open/local + hybrid execution)
 
 ### B. Building Agents: Context, Tools & Scale
 Turning models into agents that have the right knowledge, the right tools, and a path to production.
@@ -56,6 +57,7 @@ Making agents trustworthy, controllable, secure, and ROI-accountable in the ente
 | BRK230 | Build smarter AI systems in Foundry as models and costs evolve | Yina Arenas, Naomi Moneypenny | Four-phase (Select / Evaluate / Optimize / Scale) method: define evals first, then hill-climb across model selection, cost, latency, and quality instead of chasing single models. | [summary](BRK230/summary_en.md) |
 | BRK232 | Post-Training and Deploying Open Source Reasoning Models in Foundry | Chris, Vijay, Manoj | Distillation + SFT + RFT to lift a small cheap model (Qwen 14B) to frontier (GPT-5.2) quality at ~10x lower cost, then deploy it as an agent in a continuous loop. | [summary](BRK232/summary_en.md) |
 | BRK231 | Deploy. Observe. Learn. Reinforcement learning for production agents | Alicia Frame, Omkar More | Four demos of Foundry post-training (distillation/SFT, RFT with live tools, low-level training API, NL fine-tuning skill) to keep token-hungry agents economically viable while keeping IP in your own weights. | [summary](BRK231/summary_en.md) |
+| BRK235 | Local models, developer control, and the future of AI runtimes | Michael (Ollama), Parth (Ollama) | Ollama's founders argue open models have reached a practical phase for agents, demoing hybrid local/cloud execution that keeps sensitive data on-device while using close-to-frontier cloud intelligence for hard tasks. | [summary](BRK235/summary_en.md) |
 | BRK240 | Build context-aware agents: From data to decisions | Amanda Silver, Marco Casalaina | Introduces **Microsoft IQ** — a unified context layer (Work, Web, Foundry, Fabric IQ) — arguing agents fail from missing context, demoed via a refund agent grounded across all four IQs (through a live network outage). | [summary](BRK240/summary_en.md) |
 | BRK246 | Foundry IQ: Fuel agents with enterprise knowledge and agentic retrieval | Pablo | Live tour of Foundry IQ: start easy (files → auto-generated MCP server in a minute), scale up via serverless provisioning, multi-source knowledge, bottom-of-stack security, and second-generation agentic retrieval. | [summary](BRK246/summary_en.md) |
 | BRK242 | Turn your agents into action: Connect tools, APIs, and documents | Maria Nagaga, Joe Flick | **Toolbox** bundles tools of any type behind one governed MCP-compatible endpoint with token-saving Tool Search; **Content Understanding** turns messy multimodal docs into clean, grounded, agent-ready context. | [summary](BRK242/summary_en.md) |
@@ -74,6 +76,7 @@ Making agents trustworthy, controllable, secure, and ROI-accountable in the ente
 - **BRK230** — Claude on Azure (GB300); Microsoft AI first-party models incl. Image 2.5; NVIDIA Nemotron/Cosmos/Earth-2; Aurora 1.5; Foundry Labs; model-router governance policies; **Rubric-based Evaluators**; **Azure Context Cache / Explicit Prompt Caching** (Private Preview); **Serverless RL API**; **Fireworks AI on Foundry** (GA).
 - **BRK232** — **Foundry Managed Compute** (serverless GPU hosting, BYOW, custom containers); code-first Ray-based SFT/RFT with rollout visualization (Private Preview); low-level GPU API "Loom" (Private Preview); Responses API support for fine-tuned models.
 - **BRK231** — **Data Zone SKU** (US data residency); **Interactive Training API** / "PyTorch as a service" (Preview); NL **fine-tuning skill** (GitHub Copilot for Azure / standalone).
+- **BRK235** — `ollama launch` (inject open models into Claude Code / Copilot CLI / Codex / Droid / π / Open Claw / Hermes); **Ollama Cloud** (zero data retention, parallel agents); Ollama's own **MLX inference engine** (NVFP4); **Gemma 4 12B** available on Ollama; planned in-harness model recommendations.
 - **BRK240** — **Microsoft IQ** (Work IQ, Web IQ, Foundry IQ, Fabric IQ); **Foundry IQ serverless developer tier** (new); Fabric IQ ontology auto-generation; Fabric Data Agent; agent templates / agent identity (Foundry-to-M365 blueprint).
 - **BRK246** — **Serverless Foundry IQ** (Public Preview); **Web IQ** web grounding via MCP (Public Preview); automatic MCP server per knowledge base; **second-generation Agentic Retrieval**; Azure Content Understanding integration; Entra document-level security + Purview sensitivity labels.
 - **BRK242** — **Toolbox**; **Tool Search**; unified MCP-compatible endpoint; **Browser Automation** (GA); **Content Understanding** (GA); Agentic Extraction, section-boundary classification, knowledge-sources extraction training, cost-reduced prebuilt analyzers (July); GPT-5 family extraction/classification engine.

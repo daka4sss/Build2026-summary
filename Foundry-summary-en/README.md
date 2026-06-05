@@ -1,6 +1,6 @@
 # Microsoft Build 2026 — Microsoft Foundry Core Sessions (English)
 
-This folder contains English summaries of the **11 core Microsoft Foundry breakout sessions** from Microsoft Build 2026 (June 2026, San Francisco), covering the end-to-end story of building, shipping, governing, and proving the value of enterprise AI agents.
+This folder contains English summaries of **12 Microsoft Build 2026 sessions** (June 2026, San Francisco) on Microsoft Foundry and the broader model/runtime ecosystem, covering the end-to-end story of building, shipping, governing, and proving the value of enterprise AI agents — plus open/local model execution.
 
 ## 📖 Full Index & Overview
 
@@ -23,6 +23,7 @@ The index includes the big-picture narrative, recurring themes, per-session deta
 | BRK250 | Observe and control agents across any framework with open source tools | [summary](./BRK250/summary_en.md) |
 | BRK252 | From observability to ROI for AI agents on any framework | [summary](./BRK252/summary_en.md) |
 | BRK251 | Build secure and enterprise-ready agents with Agent 365 | [summary](./BRK251/summary_en.md) |
+| BRK235 | Local models, developer control, and the future of AI runtimes | [summary](./BRK235/summary_en.md) |
 
 ## Folder Structure
 

@@ -6,7 +6,7 @@
 
 ## 取得結果サマリー
 
-- **成功（CAPTION ルート）**: 31 / 31 セッション
+- **成功（CAPTION ルート）**: 32 / 32 セッション
 - **フォールバック使用**: 0
 - **取得不可**: 0
 
@@ -32,6 +32,7 @@
 | BRK225 | Data, apps, and agents: the future of app dev with Rayfin | CAPTION | 76,321 | 28,235 | ✅ 成功 | [summary](BRK225/summary_ja.md) |
 | BRK226 | Inside Azure innovations with Mark Russinovich | CAPTION | 102,381 | 39,932 | ✅ 成功 | [summary](BRK226/summary_ja.md) |
 | BRK233 | Software Defensibility in the era of AI coding | CAPTION | 74,610 | 40,491 | ✅ 成功 | [summary](BRK233/summary_ja.md) |
+| BRK235 | Local models, developer control, and the future of AI runtimes | CAPTION | 42,600 | 16,416 | ✅ 成功 | [summary](BRK235/summary_ja.md) |
 | BRK245 | Build the thing that builds the thing | CAPTION | 91,001 | 33,741 | ✅ 成功 | [summary](BRK245/summary_ja.md) |
 | DEM321 | Post-Training and Deploying Open Source Reasoning Models in Foundry | CAPTION | 24,628 | 9,611 | ✅ 成功 | [summary](DEM321/summary_ja.md) |
 | DEM322 | Smaller, faster, smarter: Distilling models with fine-tuning | CAPTION | 54,741 | 20,929 | ✅ 成功 | [summary](DEM322/summary_ja.md) |

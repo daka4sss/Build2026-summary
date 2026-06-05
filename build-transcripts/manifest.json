@@ -346,5 +346,29 @@
     "clean_chars": 18853,
     "status": "ok",
     "note": ""
+  },
+  {
+    "id": "BRK225",
+    "url": "https://build.microsoft.com/en-US/sessions/BRK225",
+    "title": "Data, apps, and agents: the future of app dev with Rayfin",
+    "description": "",
+    "asset_id": "c1caffa3-94c6-4ba4-92e3-1aef6b91878d",
+    "caption_route": "CAPTION",
+    "caption_bytes": 76321,
+    "clean_chars": 28235,
+    "status": "ok",
+    "note": ""
+  },
+  {
+    "id": "LIVE144",
+    "url": "https://build.microsoft.com/en-US/sessions/LIVE144",
+    "title": "Behind the Keynote: How Windows Made OpenClaw Work in the Keynote Demo",
+    "description": "",
+    "asset_id": "710e231b-0fbe-47fb-8681-ad4344165d34",
+    "caption_route": "CAPTION",
+    "caption_bytes": 33058,
+    "clean_chars": 12627,
+    "status": "ok",
+    "note": ""
   }
 ]

@@ -1,0 +1,3545 @@
+WEBVTT
+
+NOTE
+language:en-US
+
+NOTE Confidence: 0.8277561664581299
+
+00:00:00.800 --> 00:00:02.280
+Welcome, everybody.
+
+NOTE Confidence: 0.9197854995727539
+
+00:00:02.640 --> 00:00:05.160
+My name is Ben and this is Sachin.
+
+NOTE Confidence: 0.9073948860168457
+
+00:00:05.640 --> 00:00:09.456
+And we're incredibly excited to talk to you today about
+
+NOTE Confidence: 0.9073948860168457
+
+00:00:09.525 --> 00:00:12.439
+the future of app development with Raefen.
+
+NOTE Confidence: 0.9352546334266663
+
+00:00:14.720 --> 00:00:18.450
+So I'm sure everybody in this room is probably familiar
+
+NOTE Confidence: 0.9352546334266663
+
+00:00:18.518 --> 00:00:23.131
+with the fact that agentic coding is really transforming application
+
+NOTE Confidence: 0.9352546334266663
+
+00:00:23.199 --> 00:00:27.880
+development and it's really democratizing who can build applications.
+
+NOTE Confidence: 0.8790073394775391
+
+00:00:28.280 --> 00:00:32.631
+So I coach AU 5 girls soccer team, the Mia
+
+NOTE Confidence: 0.8790073394775391
+
+00:00:32.735 --> 00:00:36.880
+Hamsters with a very good friend, Brent.
+
+NOTE Confidence: 0.8698385953903198
+
+00:00:36.960 --> 00:00:40.762
+And Brent is not a software engineer by any means,
+
+NOTE Confidence: 0.8698385953903198
+
+00:00:40.838 --> 00:00:44.565
+but a few months ago he discovered a gente coding
+
+NOTE Confidence: 0.8698385953903198
+
+00:00:44.641 --> 00:00:48.519
+and he just started like spitting out applications.
+
+NOTE Confidence: 0.8821319341659546
+
+00:00:48.520 --> 00:00:53.442
+So he's building season stats apps, he's building snack schedules,
+
+NOTE Confidence: 0.8821319341659546
+
+00:00:53.517 --> 00:00:55.680
+he's building practice plans.
+
+NOTE Confidence: 0.9096117615699768
+
+00:00:56.320 --> 00:01:00.028
+And for me as somebody who got into software development
+
+NOTE Confidence: 0.9096117615699768
+
+00:01:00.095 --> 00:01:03.671
+because I love to make things, it's incredibly fun and
+
+NOTE Confidence: 0.9096117615699768
+
+00:01:03.737 --> 00:01:06.850
+inspiring to see the brinks of the world all of
+
+NOTE Confidence: 0.9096117615699768
+
+00:01:06.916 --> 00:01:08.440
+a sudden become makers.
+
+NOTE Confidence: 0.8762418627738953
+
+00:01:08.800 --> 00:01:12.080
+And I think that's the power of agentic coding.
+
+NOTE Confidence: 0.8881392478942871
+
+00:01:12.120 --> 00:01:14.748
+It has the ability to turn the brinks of the
+
+NOTE Confidence: 0.8881392478942871
+
+00:01:14.807 --> 00:01:17.674
+world into makers and it has the ability to turn
+
+NOTE Confidence: 0.8881392478942871
+
+00:01:17.734 --> 00:01:20.959
+existing software engineers into kind of super makers.
+
+NOTE Confidence: 0.896280825138092
+
+00:01:23.560 --> 00:01:27.122
+But as you go from coding a kids soccer app
+
+NOTE Confidence: 0.896280825138092
+
+00:01:27.205 --> 00:01:32.507
+into a corporate environment where you're dealing with like real
+
+NOTE Confidence: 0.896280825138092
+
+00:01:32.590 --> 00:01:37.229
+customer data and real compliance needs, all of a sudden
+
+NOTE Confidence: 0.896280825138092
+
+00:01:37.312 --> 00:01:41.786
+sort of the opportunity of vibe coding, the promise of
+
+NOTE Confidence: 0.896280825138092
+
+00:01:41.868 --> 00:01:44.519
+it starts to sort of fall apart.
+
+NOTE Confidence: 0.8589641451835632
+
+00:01:46.640 --> 00:01:50.840
+And that so if you're a software engineer, apps in
+
+NOTE Confidence: 0.8589641451835632
+
+00:01:50.924 --> 00:01:55.460
+the enterprise, you find they need more than just kind
+
+NOTE Confidence: 0.8589641451835632
+
+00:01:55.544 --> 00:01:56.720
+of good vibes.
+
+NOTE Confidence: 0.9436674118041992
+
+00:01:57.040 --> 00:02:00.559
+As a software engineer, you need to build databases with
+
+NOTE Confidence: 0.9436674118041992
+
+00:02:00.622 --> 00:02:01.879
+real authentication.
+
+NOTE Confidence: 0.9388735890388489
+
+00:02:02.240 --> 00:02:04.520
+You need to configure back end services.
+
+NOTE Confidence: 0.9157026410102844
+
+00:02:04.800 --> 00:02:08.341
+You need to safely connect to existing customer data, and
+
+NOTE Confidence: 0.9157026410102844
+
+00:02:08.404 --> 00:02:10.703
+you need to be able to do all of this
+
+NOTE Confidence: 0.9157026410102844
+
+00:02:10.765 --> 00:02:14.680
+while following your company's compliance and governance rules.
+
+NOTE Confidence: 0.930944561958313
+
+00:02:15.360 --> 00:02:18.072
+And if you're on the IT admin side of things,
+
+NOTE Confidence: 0.930944561958313
+
+00:02:18.132 --> 00:02:19.760
+it's even more complicated.
+
+NOTE Confidence: 0.9669677019119263
+
+00:02:19.760 --> 00:02:22.293
+In this new world, you have to make sure that
+
+NOTE Confidence: 0.9669677019119263
+
+00:02:22.349 --> 00:02:25.164
+only the right people have the right access to the
+
+NOTE Confidence: 0.9669677019119263
+
+00:02:25.220 --> 00:02:25.839
+right data.
+
+NOTE Confidence: 0.9427341818809509
+
+00:02:26.240 --> 00:02:28.963
+And it's really on you to make sure that you're
+
+NOTE Confidence: 0.9427341818809509
+
+00:02:29.021 --> 00:02:32.439
+maintaining your company's security and compliance posture.
+
+NOTE Confidence: 0.8318051695823669
+
+00:02:34.560 --> 00:02:36.560
+And that's why we built Rayfind.
+
+NOTE Confidence: 0.8727940320968628
+
+00:02:36.560 --> 00:02:39.328
+So Rayfind is the back end for this new AI
+
+NOTE Confidence: 0.8727940320968628
+
+00:02:39.394 --> 00:02:40.120
+coding era.
+
+NOTE Confidence: 0.9029050469398499
+
+00:02:41.320 --> 00:02:44.772
+It makes it easy for a human and an agent
+
+NOTE Confidence: 0.9029050469398499
+
+00:02:44.856 --> 00:02:48.646
+to define an entire back end in code, so it's
+
+NOTE Confidence: 0.9029050469398499
+
+00:02:48.730 --> 00:02:49.319
+an SDK.
+
+NOTE Confidence: 0.8591902852058411
+
+00:02:49.320 --> 00:02:52.770
+In CLI, you can author the back end in code,
+
+NOTE Confidence: 0.8591902852058411
+
+00:02:52.848 --> 00:02:58.024
+so that includes your database, your functions, your storage, your
+
+NOTE Confidence: 0.8591902852058411
+
+00:02:58.103 --> 00:03:01.239
+access policies are all defined in code.
+
+NOTE Confidence: 0.9141906499862671
+
+00:03:01.840 --> 00:03:04.420
+So it's easy for both the agent and a human
+
+NOTE Confidence: 0.9141906499862671
+
+00:03:04.480 --> 00:03:06.880
+to be able to understand and operate it.
+
+NOTE Confidence: 0.9243785738945007
+
+00:03:07.400 --> 00:03:11.248
+And when you're ready to deploy that application, you can
+
+NOTE Confidence: 0.9243785738945007
+
+00:03:11.315 --> 00:03:14.488
+do so with just a single CLI command and deploy
+
+NOTE Confidence: 0.9243785738945007
+
+00:03:14.555 --> 00:03:18.539
+it right to Microsoft Fabric, where all those resources are
+
+NOTE Confidence: 0.9243785738945007
+
+00:03:18.606 --> 00:03:22.657
+provisioned and managed for you and you get enterprise grade
+
+NOTE Confidence: 0.9243785738945007
+
+00:03:22.724 --> 00:03:25.560
+security compliance right out of the gate.
+
+NOTE Confidence: 0.8042412996292114
+
+00:03:27.960 --> 00:03:31.000
+So let's stop sort of talking around it.
+
+NOTE Confidence: 0.9405596852302551
+
+00:03:31.000 --> 00:03:33.387
+Let's do a quick demo of what this actually looks
+
+NOTE Confidence: 0.9405596852302551
+
+00:03:33.436 --> 00:03:33.679
+like.
+
+NOTE Confidence: 0.8844349384307861
+
+00:03:34.360 --> 00:03:38.206
+Let's say I work for Zaba, a home improvement store,
+
+NOTE Confidence: 0.8844349384307861
+
+00:03:38.279 --> 00:03:41.608
+and we have a CEO who's very excitable and he
+
+NOTE Confidence: 0.8844349384307861
+
+00:03:41.682 --> 00:03:46.119
+is super pumped about launching a new home delivery service.
+
+NOTE Confidence: 0.9506828188896179
+
+00:03:46.480 --> 00:03:49.411
+So for the first time, I can now get my
+
+NOTE Confidence: 0.9506828188896179
+
+00:03:49.486 --> 00:03:54.146
+hammers and nails and everything else delivered directly to my
+
+NOTE Confidence: 0.9506828188896179
+
+00:03:54.221 --> 00:03:55.799
+door, which is great.
+
+NOTE Confidence: 0.9541894793510437
+
+00:03:56.000 --> 00:03:58.625
+But now we need a whole suite of applications to
+
+NOTE Confidence: 0.9541894793510437
+
+00:03:58.680 --> 00:03:59.720
+make that possible.
+
+NOTE Confidence: 0.9284668564796448
+
+00:04:00.040 --> 00:04:04.480
+So we need a application for our delivery service drivers.
+
+NOTE Confidence: 0.92705237865448
+
+00:04:04.480 --> 00:04:07.243
+We need apps for the management to be able to
+
+NOTE Confidence: 0.92705237865448
+
+00:04:07.305 --> 00:04:10.559
+actually like monitor how this service is performing.
+
+NOTE Confidence: 0.9216479063034058
+
+00:04:11.040 --> 00:04:13.595
+And as the software engineer, all of a sudden all
+
+NOTE Confidence: 0.9216479063034058
+
+00:04:13.647 --> 00:04:15.159
+of this falls on me to build.
+
+NOTE Confidence: 0.8918119668960571
+
+00:04:16.760 --> 00:04:20.439
+So fortunately I have Raefen and I can open up
+
+NOTE Confidence: 0.8918119668960571
+
+00:04:20.519 --> 00:04:24.439
+my VS Code editor with a terminal window open and
+
+NOTE Confidence: 0.8918119668960571
+
+00:04:24.519 --> 00:04:28.519
+with a simple Rafe and create command, I can start
+
+NOTE Confidence: 0.8918119668960571
+
+00:04:28.599 --> 00:04:32.199
+to create a project that is built to have not
+
+NOTE Confidence: 0.8918119668960571
+
+00:04:32.279 --> 00:04:36.279
+only a beautiful front end like agents are so good
+
+NOTE Confidence: 0.8918119668960571
+
+00:04:36.359 --> 00:04:39.399
+at, but also a great back end as well.
+
+NOTE Confidence: 0.9056708216667175
+
+00:04:40.080 --> 00:04:43.129
+So I'll go ahead and walk through the setup and
+
+NOTE Confidence: 0.9056708216667175
+
+00:04:43.194 --> 00:04:45.920
+it's going to ask me to choose a template.
+
+NOTE Confidence: 0.8797599673271179
+
+00:04:46.160 --> 00:04:49.044
+And right now we have a couple of basic starter
+
+NOTE Confidence: 0.8797599673271179
+
+00:04:49.106 --> 00:04:49.719
+templates.
+
+NOTE Confidence: 0.9293867349624634
+
+00:04:49.720 --> 00:04:53.211
+To begin with, I'll go ahead and choose the blank
+
+NOTE Confidence: 0.9293867349624634
+
+00:04:53.282 --> 00:04:56.560
+app template and I'll give the project a name.
+
+NOTE Confidence: 0.895007312297821
+
+00:04:57.160 --> 00:04:59.360
+In this case I'll just call it Delivery App.
+
+NOTE Confidence: 0.8684780597686768
+
+00:05:00.880 --> 00:05:04.606
+And at this point it is scaffolding my project, so
+
+NOTE Confidence: 0.8684780597686768
+
+00:05:04.680 --> 00:05:08.108
+it's adding all the files I need to build both
+
+NOTE Confidence: 0.8684780597686768
+
+00:05:08.183 --> 00:05:11.909
+the front end and the back end of the application,
+
+NOTE Confidence: 0.8684780597686768
+
+00:05:11.983 --> 00:05:16.231
+including the agent instructions on how to use the Rayfin
+
+NOTE Confidence: 0.8684780597686768
+
+00:05:16.305 --> 00:05:17.200
+SDK and CLI.
+
+NOTE Confidence: 0.8575071692466736
+
+00:05:22.360 --> 00:05:25.433
+So now I'll just CD into my project and at
+
+NOTE Confidence: 0.8575071692466736
+
+00:05:25.506 --> 00:05:28.359
+this point I'm going to call Rayfin up.
+
+NOTE Confidence: 0.8910216093063354
+
+00:05:28.360 --> 00:05:31.366
+And what that command is doing is it's actually going
+
+NOTE Confidence: 0.8910216093063354
+
+00:05:31.423 --> 00:05:34.600
+and provisioning all of those resources right in Fabric.
+
+NOTE Confidence: 0.932444155216217
+
+00:05:34.920 --> 00:05:39.200
+So I now have my database and my application running
+
+NOTE Confidence: 0.932444155216217
+
+00:05:39.283 --> 00:05:43.316
+in Fabric, and I can now run my local development
+
+NOTE Confidence: 0.932444155216217
+
+00:05:43.399 --> 00:05:47.679
+environment pointing towards those remote resources.
+
+NOTE Confidence: 0.8979053497314453
+
+00:05:49.920 --> 00:05:52.000
+And so this is where it gets to be fun.
+
+NOTE Confidence: 0.8905357718467712
+
+00:05:52.000 --> 00:05:53.792
+This is where you get to just tell an agent
+
+NOTE Confidence: 0.8905357718467712
+
+00:05:53.834 --> 00:05:55.960
+the application that you actually want to go build.
+
+NOTE Confidence: 0.9056500792503357
+
+00:05:56.279 --> 00:05:58.138
+So in this case, I'm going to go tell it
+
+NOTE Confidence: 0.9056500792503357
+
+00:05:58.185 --> 00:05:59.440
+to build that delivery app.
+
+NOTE Confidence: 0.9021145701408386
+
+00:06:00.920 --> 00:06:03.160
+So I'm going to say build the delivery app.
+
+NOTE Confidence: 0.9347106218338013
+
+00:06:03.240 --> 00:06:06.389
+And this is going to be for the Zaba delivery
+
+NOTE Confidence: 0.9347106218338013
+
+00:06:06.459 --> 00:06:09.399
+drivers, and I want them to be able to log
+
+NOTE Confidence: 0.9347106218338013
+
+00:06:09.469 --> 00:06:12.479
+deliveries with photos and item conditions.
+
+NOTE Confidence: 0.9160608053207397
+
+00:06:12.880 --> 00:06:14.813
+And then I want to be able to have customers
+
+NOTE Confidence: 0.9160608053207397
+
+00:06:14.857 --> 00:06:16.439
+be able to actually confirm receipt.
+
+NOTE Confidence: 0.9271646738052368
+
+00:06:16.880 --> 00:06:19.538
+So we'll do a little sort of build demo magic
+
+NOTE Confidence: 0.9271646738052368
+
+00:06:19.597 --> 00:06:22.668
+here, and we're going to jump forward to where we've
+
+NOTE Confidence: 0.9271646738052368
+
+00:06:22.727 --> 00:06:27.040
+actually finished completing that application development with the agent.
+
+NOTE Confidence: 0.19205506145954132
+
+00:06:30.800 --> 00:06:31.080
+Great.
+
+NOTE Confidence: 0.9235822558403015
+
+00:06:31.080 --> 00:06:34.220
+So I have a finished application at this point, and
+
+NOTE Confidence: 0.9235822558403015
+
+00:06:34.282 --> 00:06:37.300
+I can see that it's created a bunch of TypeScript
+
+NOTE Confidence: 0.9235822558403015
+
+00:06:37.361 --> 00:06:40.810
+files that are actually defining my tables and all their
+
+NOTE Confidence: 0.9235822558403015
+
+00:06:40.872 --> 00:06:42.719
+properties right here in code.
+
+NOTE Confidence: 0.907306969165802
+
+00:06:43.600 --> 00:06:48.071
+And I'm going to go ahead and go visit that
+
+NOTE Confidence: 0.907306969165802
+
+00:06:48.175 --> 00:06:50.879
+application in Fabric, OK?
+
+NOTE Confidence: 0.9508206248283386
+
+00:06:50.880 --> 00:06:54.215
+So I can see that it built the delivery application
+
+NOTE Confidence: 0.9508206248283386
+
+00:06:54.281 --> 00:06:55.719
+that I was hoping for.
+
+NOTE Confidence: 0.8809391856193542
+
+00:06:55.760 --> 00:06:59.430
+It's let's a driver come to a house like with
+
+NOTE Confidence: 0.8809391856193542
+
+00:06:59.512 --> 00:07:03.428
+a tablet and be able to have a customer actually
+
+NOTE Confidence: 0.8809391856193542
+
+00:07:03.509 --> 00:07:06.119
+sign off and confirm deliveries.
+
+NOTE Confidence: 0.9628612995147705
+
+00:07:06.520 --> 00:07:08.040
+So let's go ahead and do that.
+
+NOTE Confidence: 0.8938180804252625
+
+00:07:12.160 --> 00:07:15.919
+OK, So I've confirmed the delivery, and I could also
+
+NOTE Confidence: 0.8938180804252625
+
+00:07:15.991 --> 00:07:20.040
+open this application outside of the Fabric Chrome so it
+
+NOTE Confidence: 0.8938180804252625
+
+00:07:20.112 --> 00:07:21.920
+gets its own URL as well.
+
+NOTE Confidence: 0.9320205450057983
+
+00:07:22.320 --> 00:07:23.240
+Let's just look at that.
+
+NOTE Confidence: 0.6456946134567261
+
+00:07:25.920 --> 00:07:26.240
+Great.
+
+NOTE Confidence: 0.9160593152046204
+
+00:07:26.320 --> 00:07:28.080
+So I've got the application I want.
+
+NOTE Confidence: 0.7275043725967407
+
+00:07:28.160 --> 00:07:28.480
+Now.
+
+NOTE Confidence: 0.8381821513175964
+
+00:07:28.520 --> 00:07:30.997
+For those of you who are familiar with Fabric, you'll
+
+NOTE Confidence: 0.8381821513175964
+
+00:07:31.044 --> 00:07:34.130
+be familiar with Fabric workspaces, and that's where basically all
+
+NOTE Confidence: 0.8381821513175964
+
+00:07:34.177 --> 00:07:35.720
+of your items and artifacts live.
+
+NOTE Confidence: 0.8489862084388733
+
+00:07:35.720 --> 00:07:38.788
+So that's the nice convenient way of managing all those
+
+NOTE Confidence: 0.8489862084388733
+
+00:07:38.844 --> 00:07:39.960
+items and artifacts.
+
+NOTE Confidence: 0.8664924502372742
+
+00:07:40.240 --> 00:07:43.219
+So let's go to our Zaba workspace, and I can
+
+NOTE Confidence: 0.8664924502372742
+
+00:07:43.287 --> 00:07:46.875
+see that there's a new delivery app artifact that was
+
+NOTE Confidence: 0.8664924502372742
+
+00:07:46.943 --> 00:07:49.719
+created, as well as a child SQL database.
+
+NOTE Confidence: 0.9358265399932861
+
+00:07:50.040 --> 00:07:53.199
+So if I go into that child SQL database, I
+
+NOTE Confidence: 0.9358265399932861
+
+00:07:53.274 --> 00:07:57.487
+should see that new delivery recorded right there in the
+
+NOTE Confidence: 0.9358265399932861
+
+00:07:57.562 --> 00:07:58.239
+database.
+
+NOTE Confidence: 0.9357112646102905
+
+00:07:58.920 --> 00:08:01.687
+So I'll go ahead and click on that and perfect,
+
+NOTE Confidence: 0.9357112646102905
+
+00:08:01.746 --> 00:08:04.395
+I can see that the new delivery item ended up
+
+NOTE Confidence: 0.9357112646102905
+
+00:08:04.454 --> 00:08:06.279
+right there in my SQL database.
+
+NOTE Confidence: 0.8839558959007263
+
+00:08:07.000 --> 00:08:09.257
+OK, so now I'm going to hand it over to
+
+NOTE Confidence: 0.8839558959007263
+
+00:08:09.315 --> 00:08:11.861
+Sachin, who's going to walk in to a bit more
+
+NOTE Confidence: 0.8839558959007263
+
+00:08:11.919 --> 00:08:14.640
+detail of how all of this works under the hood.
+
+NOTE Confidence: 0.7609966397285461
+
+00:08:15.360 --> 00:08:16.200
+Go for it, Sachin.
+
+NOTE Confidence: 0.9474959373474121
+
+00:08:16.960 --> 00:08:17.440
+Thanks, Ben.
+
+NOTE Confidence: 0.8563814759254456
+
+00:08:18.400 --> 00:08:19.200
+All right, so you saw.
+
+NOTE Confidence: 0.9174943566322327
+
+00:08:19.200 --> 00:08:22.535
+How Ben was able to build a complete application with
+
+NOTE Confidence: 0.9174943566322327
+
+00:08:22.598 --> 00:08:24.360
+a front end with a database?
+
+NOTE Confidence: 0.815714418888092
+
+00:08:24.360 --> 00:08:25.600
+He was able to build it with.
+
+NOTE Confidence: 0.6361303329467773
+
+00:08:25.880 --> 00:08:29.473
+Agent then deploy it into fabric and you know you
+
+NOTE Confidence: 0.6361303329467773
+
+00:08:29.546 --> 00:08:32.040
+got the database spun up etcetera.
+
+NOTE Confidence: 0.7208008766174316
+
+00:08:32.760 --> 00:08:33.760
+So I want to.
+
+NOTE Confidence: 0.9578465223312378
+
+00:08:33.760 --> 00:08:35.360
+Walk you through exactly.
+
+NOTE Confidence: 0.9127815961837769
+
+00:08:36.160 --> 00:08:37.080
+How that happens?
+
+NOTE Confidence: 0.9648852348327637
+
+00:08:37.560 --> 00:08:38.800
+So let's go back.
+
+NOTE Confidence: 0.9310470223426819
+
+00:08:38.800 --> 00:08:42.512
+To the code that Ben's agent generated the delivery class
+
+NOTE Confidence: 0.9310470223426819
+
+00:08:42.578 --> 00:08:46.095
+and there's like a few interesting things to point out
+
+NOTE Confidence: 0.9310470223426819
+
+00:08:46.160 --> 00:08:49.092
+here so the first thing you see is the entity
+
+NOTE Confidence: 0.9310470223426819
+
+00:08:49.157 --> 00:08:52.804
+decorator on the class and that's what tells Raefen that
+
+NOTE Confidence: 0.9310470223426819
+
+00:08:52.870 --> 00:08:56.127
+this is going to be a database table inside fabric
+
+NOTE Confidence: 0.9310470223426819
+
+00:08:56.192 --> 00:08:59.840
+and you also have the property decorators which kind of.
+
+NOTE Confidence: 0.8411802053451538
+
+00:09:00.160 --> 00:09:02.600
+You know hint towards the what will be the type?
+
+NOTE Confidence: 0.9155535101890564
+
+00:09:03.040 --> 00:09:05.607
+Of the column as well as the min, Max kind
+
+NOTE Confidence: 0.9155535101890564
+
+00:09:05.668 --> 00:09:09.520
+of get translated to column constraints on the database itself.
+
+NOTE Confidence: 0.976659893989563
+
+00:09:10.560 --> 00:09:12.200
+You can also specify.
+
+NOTE Confidence: 0.9740018248558044
+
+00:09:12.200 --> 00:09:15.000
+Relationships, but what's also.
+
+NOTE Confidence: 0.9656673073768616
+
+00:09:15.000 --> 00:09:16.120
+Interesting is.
+
+NOTE Confidence: 0.9179623126983643
+
+00:09:16.120 --> 00:09:19.320
+How do you specify security right so?
+
+NOTE Confidence: 0.9250427484512329
+
+00:09:19.600 --> 00:09:22.479
+Security as well can be done inside code, and so
+
+NOTE Confidence: 0.9250427484512329
+
+00:09:22.539 --> 00:09:25.419
+you can specify a role decorator on top and then
+
+NOTE Confidence: 0.9250427484512329
+
+00:09:25.479 --> 00:09:27.039
+specify a policy function.
+
+NOTE Confidence: 0.9633954167366028
+
+00:09:27.760 --> 00:09:30.302
+And in this case what it's telling you is that
+
+NOTE Confidence: 0.9633954167366028
+
+00:09:30.357 --> 00:09:33.839
+only authenticated users can see deliveries and only their own.
+
+NOTE Confidence: 0.943245530128479
+
+00:09:35.120 --> 00:09:37.760
+And what if I'm making changes to this data model?
+
+NOTE Confidence: 0.8891313076019287
+
+00:09:38.120 --> 00:09:39.560
+So like say I get rid of a.
+
+NOTE Confidence: 0.878643810749054
+
+00:09:39.559 --> 00:09:42.934
+Column or I I change the data model entirely, Raefin
+
+NOTE Confidence: 0.878643810749054
+
+00:09:42.999 --> 00:09:46.373
+will detect that change and we will go and translate
+
+NOTE Confidence: 0.878643810749054
+
+00:09:46.438 --> 00:09:48.319
+and do the migration for you.
+
+NOTE Confidence: 0.9369277358055115
+
+00:09:48.320 --> 00:09:50.708
+So you don't have to go and manage and maintain
+
+NOTE Confidence: 0.9369277358055115
+
+00:09:50.759 --> 00:09:52.640
+separation migration scripts as well.
+
+NOTE Confidence: 0.8966336846351624
+
+00:09:56.440 --> 00:09:57.280
+So I'm going to walk.
+
+NOTE Confidence: 0.8617218136787415
+
+00:09:57.280 --> 00:10:00.519
+You through the configuration file of YAML and kind of
+
+NOTE Confidence: 0.8617218136787415
+
+00:10:00.579 --> 00:10:04.239
+show you a few more interesting characteristics about Raefin.
+
+NOTE Confidence: 0.8666096925735474
+
+00:10:05.640 --> 00:10:06.880
+So what you notice here?
+
+NOTE Confidence: 0.8082178235054016
+
+00:10:06.880 --> 00:10:08.800
+Is that it's data?
+
+NOTE Confidence: 0.8914135694503784
+
+00:10:09.640 --> 00:10:10.240
+The dialect.
+
+NOTE Confidence: 0.9036592245101929
+
+00:10:10.240 --> 00:10:12.800
+Is Microsoft SQL so.
+
+NOTE Confidence: 0.7989290952682495
+
+00:10:12.800 --> 00:10:16.160
+Currently, when you deploy A Rayfin app into.
+
+NOTE Confidence: 0.8978601694107056
+
+00:10:16.160 --> 00:10:18.240
+Fabric the fabric SQL Server gets.
+
+NOTE Confidence: 0.9524574875831604
+
+00:10:18.240 --> 00:10:22.656
+Spun up and so it uses that as your database
+
+NOTE Confidence: 0.9524574875831604
+
+00:10:22.756 --> 00:10:23.760
+in future.
+
+NOTE Confidence: 0.9786379337310791
+
+00:10:23.800 --> 00:10:25.040
+We will also support.
+
+NOTE Confidence: 0.9079946875572205
+
+00:10:25.040 --> 00:10:28.346
+Other dialects, for example, we'll be bringing in Postgres and
+
+NOTE Confidence: 0.9079946875572205
+
+00:10:28.399 --> 00:10:28.559
+so.
+
+NOTE Confidence: 0.7844056487083435
+
+00:10:28.560 --> 00:10:29.480
+You'll be able to.
+
+NOTE Confidence: 0.8617244362831116
+
+00:10:29.800 --> 00:10:31.520
+Then your application will be able to spin up a.
+
+NOTE Confidence: 0.5458747148513794
+
+00:10:31.520 --> 00:10:34.880
+Postgres, Postgres SQL database.
+
+NOTE Confidence: 0.8851100206375122
+
+00:10:35.960 --> 00:10:39.394
+And and that is just a configuration change, so you
+
+NOTE Confidence: 0.8851100206375122
+
+00:10:39.462 --> 00:10:42.559
+don't have to have like your application code.
+
+NOTE Confidence: 0.9563756585121155
+
+00:10:42.559 --> 00:10:44.655
+The way you declare your entities, the way you do
+
+NOTE Confidence: 0.9563756585121155
+
+00:10:44.698 --> 00:10:46.880
+permissioning, everything remains exactly the same.
+
+NOTE Confidence: 0.9626436233520508
+
+00:10:47.920 --> 00:10:49.320
+Another interesting thing is.
+
+NOTE Confidence: 0.9791204929351807
+
+00:10:49.440 --> 00:10:49.920
+We do.
+
+NOTE Confidence: 0.8420717716217041
+
+00:10:49.920 --> 00:10:53.210
+Deploy the application as a front end and the back
+
+NOTE Confidence: 0.8420717716217041
+
+00:10:53.276 --> 00:10:54.000
+end, right?
+
+NOTE Confidence: 0.8473721742630005
+
+00:10:54.000 --> 00:10:57.476
+So when Ben was building his delivery application, the front
+
+NOTE Confidence: 0.8473721742630005
+
+00:10:57.534 --> 00:11:00.199
+end was in Fabric, the back end was in Fabric.
+
+NOTE Confidence: 0.9460601806640625
+
+00:11:00.720 --> 00:11:04.280
+And that's pretty convenient to go do, but internally?
+
+NOTE Confidence: 0.8976358771324158
+
+00:11:04.280 --> 00:11:06.480
+They deploy a separate thing, so you could.
+
+NOTE Confidence: 0.9083283543586731
+
+00:11:06.480 --> 00:11:09.987
+Have your front end hosted on a different say in
+
+NOTE Confidence: 0.9083283543586731
+
+00:11:10.060 --> 00:11:14.079
+Azure and you could have custom domains etcetera on it.
+
+NOTE Confidence: 0.9611532688140869
+
+00:11:14.480 --> 00:11:17.120
+You can also have applications share the same.
+
+NOTE Confidence: 0.8548835515975952
+
+00:11:17.120 --> 00:11:18.440
+Back end so you could deploy a.
+
+NOTE Confidence: 0.9518359303474426
+
+00:11:18.720 --> 00:11:19.600
+Back end by itself.
+
+NOTE Confidence: 0.9048494696617126
+
+00:11:19.600 --> 00:11:21.240
+And then you could build two different.
+
+NOTE Confidence: 0.9337515830993652
+
+00:11:21.240 --> 00:11:23.640
+Applications on top of it and that's.
+
+NOTE Confidence: 0.960231363773346
+
+00:11:23.640 --> 00:11:25.120
+What you see here with the scopes.
+
+NOTE Confidence: 0.960929811000824
+
+00:11:25.120 --> 00:11:25.520
+And so you.
+
+NOTE Confidence: 0.8620140552520752
+
+00:11:25.520 --> 00:11:28.000
+Can have different sort of scopes.
+
+NOTE Confidence: 0.7808026671409607
+
+00:11:28.000 --> 00:11:30.680
+On application A versus.
+
+NOTE Confidence: 0.6906639933586121
+
+00:11:30.680 --> 00:11:30.960
+B.
+
+NOTE Confidence: 0.9599258899688721
+
+00:11:30.960 --> 00:11:31.200
+So you.
+
+NOTE Confidence: 0.8956841826438904
+
+00:11:31.200 --> 00:11:34.361
+Could have application A only read data, while you could
+
+NOTE Confidence: 0.8956841826438904
+
+00:11:34.417 --> 00:11:37.239
+have application B that could read and write data.
+
+NOTE Confidence: 0.9444372653961182
+
+00:11:37.640 --> 00:11:38.320
+To it as well.
+
+NOTE Confidence: 0.9562113285064697
+
+00:11:39.600 --> 00:11:42.040
+And then you also have some authentication options.
+
+NOTE Confidence: 0.961182177066803
+
+00:11:42.400 --> 00:11:43.480
+So right now.
+
+NOTE Confidence: 0.8943157196044922
+
+00:11:44.240 --> 00:11:45.920
+All apps require Fabric.
+
+NOTE Confidence: 0.9746310114860535
+
+00:11:45.920 --> 00:11:47.000
+Authentication, but in the.
+
+NOTE Confidence: 0.9246312379837036
+
+00:11:47.000 --> 00:11:49.400
+Future we will allow you to public publish.
+
+NOTE Confidence: 0.9442270994186401
+
+00:11:49.400 --> 00:11:51.600
+Apps that are anonymous or.
+
+NOTE Confidence: 0.808495044708252
+
+00:11:51.800 --> 00:11:52.720
+Use other sort of.
+
+NOTE Confidence: 0.8388516306877136
+
+00:11:52.720 --> 00:11:54.960
+Authentication providers like Gmail etcetera.
+
+NOTE Confidence: 0.9075027704238892
+
+00:11:54.960 --> 00:11:58.517
+So you could imagine a scenario where you're building an
+
+NOTE Confidence: 0.9075027704238892
+
+00:11:58.581 --> 00:12:00.360
+application for an external.
+
+NOTE Confidence: 0.8679258227348328
+
+00:12:00.360 --> 00:12:02.080
+Customer to log.
+
+NOTE Confidence: 0.8601886034011841
+
+00:12:02.080 --> 00:12:04.674
+Into & up and do things, but you want the
+
+NOTE Confidence: 0.8601886034011841
+
+00:12:04.738 --> 00:12:07.079
+data to land into your fabric tenant.
+
+NOTE Confidence: 0.8798235058784485
+
+00:12:07.559 --> 00:12:10.703
+So you know the business users within the organisations could
+
+NOTE Confidence: 0.8798235058784485
+
+00:12:10.755 --> 00:12:12.920
+perform downstream analytics on that data.
+
+NOTE Confidence: 0.9181437492370605
+
+00:12:16.080 --> 00:12:18.419
+But often, So what we saw until now was OK,
+
+NOTE Confidence: 0.9181437492370605
+
+00:12:18.474 --> 00:12:20.705
+you have an, you have an app, and you can
+
+NOTE Confidence: 0.9181437492370605
+
+00:12:20.759 --> 00:12:23.045
+easily spin up a back end, You can spin up
+
+NOTE Confidence: 0.9181437492370605
+
+00:12:23.099 --> 00:12:25.439
+a database, you can read and write from it.
+
+NOTE Confidence: 0.9723578095436096
+
+00:12:26.200 --> 00:12:28.080
+But that's not often where people start.
+
+NOTE Confidence: 0.9358856678009033
+
+00:12:28.080 --> 00:12:30.269
+People want to be able to connect to existing data
+
+NOTE Confidence: 0.9358856678009033
+
+00:12:30.312 --> 00:12:31.319
+that they already have.
+
+NOTE Confidence: 0.9533531665802002
+
+00:12:31.320 --> 00:12:33.531
+They want to be able to operate on that data,
+
+NOTE Confidence: 0.9533531665802002
+
+00:12:33.580 --> 00:12:34.760
+read it and write to it.
+
+NOTE Confidence: 0.5959814190864563
+
+00:12:35.600 --> 00:12:36.120
+And so we have.
+
+NOTE Confidence: 0.9690857529640198
+
+00:12:36.120 --> 00:12:39.080
+Introduced the notion of connectors which allow you.
+
+NOTE Confidence: 0.9065212607383728
+
+00:12:39.080 --> 00:12:41.683
+To connect to any data that is in the fabric,
+
+NOTE Confidence: 0.9065212607383728
+
+00:12:41.741 --> 00:12:44.461
+one link and that can be databases, that can be
+
+NOTE Confidence: 0.9065212607383728
+
+00:12:44.518 --> 00:12:48.279
+warehouses, semantic models and depending on the data source you.
+
+NOTE Confidence: 0.9208358526229858
+
+00:12:48.280 --> 00:12:50.280
+Will be able to also write back to it.
+
+NOTE Confidence: 0.8919003009796143
+
+00:12:52.400 --> 00:12:56.360
+And so you declare that data source into your configuration.
+
+NOTE Confidence: 0.8986259698867798
+
+00:12:56.360 --> 00:12:57.360
+So this is my connector.
+
+NOTE Confidence: 0.9139409065246582
+
+00:12:57.360 --> 00:12:59.200
+I'm kind of connecting to this data source.
+
+NOTE Confidence: 0.9597897529602051
+
+00:12:59.760 --> 00:13:04.000
+We also have agent instructions that help you pull in
+
+NOTE Confidence: 0.9597897529602051
+
+00:13:04.080 --> 00:13:07.360
+these tables and create classes for them.
+
+NOTE Confidence: 0.9152266383171082
+
+00:13:07.360 --> 00:13:10.240
+So you get type safety when dealing with this data.
+
+NOTE Confidence: 0.817438542842865
+
+00:13:10.440 --> 00:13:11.240
+It also doesn't.
+
+NOTE Confidence: 0.9439709186553955
+
+00:13:11.360 --> 00:13:12.120
+Just pull in.
+
+NOTE Confidence: 0.9701813459396362
+
+00:13:12.200 --> 00:13:12.680
+All of your.
+
+NOTE Confidence: 0.9225577712059021
+
+00:13:12.679 --> 00:13:15.834
+Data so you can have a semantic model with hundreds
+
+NOTE Confidence: 0.9225577712059021
+
+00:13:15.896 --> 00:13:18.988
+of tables, but in this case I'm only interested in
+
+NOTE Confidence: 0.9225577712059021
+
+00:13:19.050 --> 00:13:20.039
+building a view.
+
+NOTE Confidence: 0.6202418804168701
+
+00:13:20.040 --> 00:13:21.720
+For all the details, so it will just.
+
+NOTE Confidence: 0.8231855630874634
+
+00:13:22.000 --> 00:13:25.280
+You know, pull in that schema from from that table.
+
+NOTE Confidence: 0.848605751991272
+
+00:13:25.280 --> 00:13:25.560
+Kind of.
+
+NOTE Confidence: 0.839948832988739
+
+00:13:25.560 --> 00:13:26.760
+Create the types for.
+
+NOTE Confidence: 0.8578166961669922
+
+00:13:26.760 --> 00:13:28.560
+It so you can use it in the application.
+
+NOTE Confidence: 0.9553062915802002
+
+00:13:31.040 --> 00:13:31.920
+But it's not.
+
+NOTE Confidence: 0.8672950863838196
+
+00:13:31.920 --> 00:13:33.680
+Always about data, right?
+
+NOTE Confidence: 0.9325128793716431
+
+00:13:33.680 --> 00:13:34.520
+So you want to be.
+
+NOTE Confidence: 0.9355233907699585
+
+00:13:34.520 --> 00:13:37.584
+Able to execute some sort of logic, say you want
+
+NOTE Confidence: 0.9355233907699585
+
+00:13:37.648 --> 00:13:37.840
+to.
+
+NOTE Confidence: 0.901853621006012
+
+00:13:37.840 --> 00:13:39.440
+Fire off a notification.
+
+NOTE Confidence: 0.8522353172302246
+
+00:13:39.880 --> 00:13:43.102
+You want to go connect to an external service and
+
+NOTE Confidence: 0.8522353172302246
+
+00:13:43.168 --> 00:13:43.760
+you want.
+
+NOTE Confidence: 0.9378029108047485
+
+00:13:43.760 --> 00:13:45.538
+You don't want this code to be running in the
+
+NOTE Confidence: 0.9378029108047485
+
+00:13:45.577 --> 00:13:47.276
+browser, so you want this code to be in the
+
+NOTE Confidence: 0.9378029108047485
+
+00:13:47.316 --> 00:13:49.529
+back end where you can safely inject credentials into it
+
+NOTE Confidence: 0.9378029108047485
+
+00:13:49.568 --> 00:13:50.280
+so you can run it.
+
+NOTE Confidence: 0.9511697888374329
+
+00:13:51.120 --> 00:13:54.458
+And we still let you create and define the function
+
+NOTE Confidence: 0.9511697888374329
+
+00:13:54.523 --> 00:13:55.440
+in TypeScript.
+
+NOTE Confidence: 0.8923211097717285
+
+00:13:55.440 --> 00:13:57.440
+So you can write your TypeScript logic.
+
+NOTE Confidence: 0.9506367444992065
+
+00:13:57.760 --> 00:13:58.640
+Your app can call.
+
+NOTE Confidence: 0.9658735990524292
+
+00:13:58.640 --> 00:14:00.600
+It as if it was just part of its code.
+
+NOTE Confidence: 0.8400329947471619
+
+00:14:01.760 --> 00:14:04.414
+But when you deploy it with rayfin up, it takes
+
+NOTE Confidence: 0.8400329947471619
+
+00:14:04.470 --> 00:14:05.599
+that function block.
+
+NOTE Confidence: 0.9334356784820557
+
+00:14:06.240 --> 00:14:08.280
+It deploys it as a fabric function.
+
+NOTE Confidence: 0.8498739004135132
+
+00:14:08.720 --> 00:14:11.448
+So it runs in a secure sandbox and then you
+
+NOTE Confidence: 0.8498739004135132
+
+00:14:11.511 --> 00:14:14.430
+can go and do that, you know, trigger off that
+
+NOTE Confidence: 0.8498739004135132
+
+00:14:14.493 --> 00:14:17.919
+notification or connect to external services and data.
+
+NOTE Confidence: 0.9415173530578613
+
+00:14:21.720 --> 00:14:23.160
+So what Ben showed?
+
+NOTE Confidence: 0.9687100052833557
+
+00:14:23.160 --> 00:14:25.040
+You earlier was he was starting from.
+
+NOTE Confidence: 0.8610227108001709
+
+00:14:25.040 --> 00:14:27.400
+Scratch, I think he used the built in.
+
+NOTE Confidence: 0.9213554263114929
+
+00:14:27.400 --> 00:14:29.800
+Template and so templates.
+
+NOTE Confidence: 0.8920228481292725
+
+00:14:29.800 --> 00:14:32.920
+Allow you to both like not always start.
+
+NOTE Confidence: 0.9515805840492249
+
+00:14:32.920 --> 00:14:34.440
+From a blank application but it.
+
+NOTE Confidence: 0.9383885860443115
+
+00:14:34.440 --> 00:14:36.720
+Also allows you to standardize.
+
+NOTE Confidence: 0.89963299036026
+
+00:14:36.720 --> 00:14:38.240
+Applications for your organization.
+
+NOTE Confidence: 0.8157657980918884
+
+00:14:38.680 --> 00:14:41.680
+So maybe your organization is trying to build.
+
+NOTE Confidence: 0.8311691284179688
+
+00:14:42.080 --> 00:14:44.040
+A dashboards and you want them to look.
+
+NOTE Confidence: 0.9772374033927917
+
+00:14:44.280 --> 00:14:44.440
+And.
+
+NOTE Confidence: 0.7978650331497192
+
+00:14:44.440 --> 00:14:45.760
+Behave a particular way.
+
+NOTE Confidence: 0.8670103549957275
+
+00:14:45.800 --> 00:14:47.741
+And you don't want to burn too many tokens or
+
+NOTE Confidence: 0.8670103549957275
+
+00:14:47.784 --> 00:14:47.999
+just.
+
+NOTE Confidence: 0.9026877284049988
+
+00:14:48.160 --> 00:14:49.560
+You know, publishing style guides.
+
+NOTE Confidence: 0.9491565227508545
+
+00:14:49.560 --> 00:14:50.520
+That they will read into.
+
+NOTE Confidence: 0.9231094121932983
+
+00:14:50.840 --> 00:14:53.473
+What you can do is you can create a template
+
+NOTE Confidence: 0.9231094121932983
+
+00:14:53.532 --> 00:14:56.943
+that anyone in the organization can use and templates can
+
+NOTE Confidence: 0.9231094121932983
+
+00:14:57.003 --> 00:14:58.440
+be also checked in into.
+
+NOTE Confidence: 0.9079458713531494
+
+00:14:58.760 --> 00:14:59.560
+A repository.
+
+NOTE Confidence: 0.8607478141784668
+
+00:14:59.560 --> 00:15:01.961
+So you can share with the community so anyone can
+
+NOTE Confidence: 0.8607478141784668
+
+00:15:02.010 --> 00:15:03.039
+reference a template.
+
+NOTE Confidence: 0.9428048133850098
+
+00:15:03.040 --> 00:15:03.760
+That's out there.
+
+NOTE Confidence: 0.8283129930496216
+
+00:15:04.000 --> 00:15:08.040
+To get started really easily, what does the template contain?
+
+NOTE Confidence: 0.7748162746429443
+
+00:15:08.040 --> 00:15:09.600
+So the template might contain.
+
+NOTE Confidence: 0.7498070001602173
+
+00:15:09.640 --> 00:15:10.880
+Tools SO API.
+
+NOTE Confidence: 0.9583063721656799
+
+00:15:10.880 --> 00:15:14.933
+Definitions or MCP servers and then you have agent instructions
+
+NOTE Confidence: 0.9583063721656799
+
+00:15:14.998 --> 00:15:15.320
+that.
+
+NOTE Confidence: 0.9665345549583435
+
+00:15:15.400 --> 00:15:16.960
+Tell you how to go operate these.
+
+NOTE Confidence: 0.7665865421295166
+
+00:15:16.960 --> 00:15:20.320
+Tools to generate additional contexts etcetera.
+
+NOTE Confidence: 0.9483704566955566
+
+00:15:21.520 --> 00:15:22.800
+It also comes with some sample.
+
+NOTE Confidence: 0.7324023842811584
+
+00:15:22.800 --> 00:15:23.600
+Code so your.
+
+NOTE Confidence: 0.9525820016860962
+
+00:15:23.600 --> 00:15:27.360
+Agent is not spending a ton of time scaffolding logic.
+
+NOTE Confidence: 0.9684388637542725
+
+00:15:28.120 --> 00:15:29.160
+It can also contain.
+
+NOTE Confidence: 0.9453915357589722
+
+00:15:29.160 --> 00:15:30.720
+Libraries so.
+
+NOTE Confidence: 0.9087512493133545
+
+00:15:30.840 --> 00:15:32.400
+If you want for example to pull in a.
+
+NOTE Confidence: 0.9035017490386963
+
+00:15:32.400 --> 00:15:34.120
+Particular kind of charting library.
+
+NOTE Confidence: 0.8767107129096985
+
+00:15:34.320 --> 00:15:38.453
+For your data application, you can one of the most
+
+NOTE Confidence: 0.8767107129096985
+
+00:15:38.536 --> 00:15:41.760
+common things enterprise organizations.
+
+NOTE Confidence: 0.8361227512359619
+
+00:15:41.760 --> 00:15:43.320
+Will build as data.
+
+NOTE Confidence: 0.8855023384094238
+
+00:15:43.320 --> 00:15:44.800
+Apps would be dashboards.
+
+NOTE Confidence: 0.8201853036880493
+
+00:15:45.240 --> 00:15:47.480
+And so we partnered with the Power BI team.
+
+NOTE Confidence: 0.9625189900398254
+
+00:15:48.080 --> 00:15:49.120
+To build just that.
+
+NOTE Confidence: 0.8022876977920532
+
+00:15:49.200 --> 00:15:51.130
+So I'd like to invite Sujata on stage to talk
+
+NOTE Confidence: 0.8022876977920532
+
+00:15:51.173 --> 00:15:51.560
+about it.
+
+NOTE Confidence: 0.9143177270889282
+
+00:15:54.280 --> 00:15:55.080
+Thanks, everyone.
+
+NOTE Confidence: 0.9349009990692139
+
+00:15:55.080 --> 00:15:57.804
+So how many here in the audience are excited to
+
+NOTE Confidence: 0.9349009990692139
+
+00:15:57.862 --> 00:15:59.079
+build analytics apps?
+
+NOTE Confidence: 0.9589280486106873
+
+00:16:00.280 --> 00:16:01.320
+Yeah, a few.
+
+NOTE Confidence: 0.9623851776123047
+
+00:16:01.680 --> 00:16:04.367
+And I think the reality is a lot of enterprise
+
+NOTE Confidence: 0.9623851776123047
+
+00:16:04.426 --> 00:16:06.879
+applications tend to start with analytics.
+
+NOTE Confidence: 0.9133808016777039
+
+00:16:07.200 --> 00:16:11.064
+And what Raefen is doing is something really groundbreaking because
+
+NOTE Confidence: 0.9133808016777039
+
+00:16:11.122 --> 00:16:15.160
+for years, applications and analytics lived in separate worlds, right?
+
+NOTE Confidence: 0.8634222745895386
+
+00:16:15.240 --> 00:16:17.828
+You had one team build your analytics stack and you
+
+NOTE Confidence: 0.8634222745895386
+
+00:16:17.879 --> 00:16:19.959
+had another team build your applications.
+
+NOTE Confidence: 0.8881891965866089
+
+00:16:20.280 --> 00:16:23.324
+But Raefen brings that together, and now our data app
+
+NOTE Confidence: 0.8881891965866089
+
+00:16:23.381 --> 00:16:27.173
+template does something really unique because it's allowing you to
+
+NOTE Confidence: 0.8881891965866089
+
+00:16:27.230 --> 00:16:30.160
+build applications directly on your semantic layer.
+
+NOTE Confidence: 0.8903341293334961
+
+00:16:30.560 --> 00:16:33.333
+This means all of the effort that you put into
+
+NOTE Confidence: 0.8903341293334961
+
+00:16:33.393 --> 00:16:37.010
+your semantic model and building your analytic stack can now
+
+NOTE Confidence: 0.8903341293334961
+
+00:16:37.070 --> 00:16:38.999
+be reused for your applications.
+
+NOTE Confidence: 0.8986738324165344
+
+00:16:39.440 --> 00:16:41.739
+And let's talk a little bit more in depth of
+
+NOTE Confidence: 0.8986738324165344
+
+00:16:41.792 --> 00:16:43.360
+what the data app template is.
+
+NOTE Confidence: 0.9533815979957581
+
+00:16:43.800 --> 00:16:46.509
+So if you look at our template, there's three core
+
+NOTE Confidence: 0.9533815979957581
+
+00:16:46.563 --> 00:16:47.159
+components.
+
+NOTE Confidence: 0.9138451218605042
+
+00:16:47.520 --> 00:16:48.840
+1st is a data package.
+
+NOTE Confidence: 0.9220752716064453
+
+00:16:48.880 --> 00:16:51.813
+And what this does is really make sure that we're
+
+NOTE Confidence: 0.9220752716064453
+
+00:16:51.873 --> 00:16:56.123
+normalizing things like the Fabric endpoint connection, how we're doing
+
+NOTE Confidence: 0.9220752716064453
+
+00:16:56.183 --> 00:16:57.560
+query retries, caching.
+
+NOTE Confidence: 0.9445399045944214
+
+00:16:57.800 --> 00:17:00.363
+So a lot of those foundational steps to making sure
+
+NOTE Confidence: 0.9445399045944214
+
+00:17:00.413 --> 00:17:03.680
+you're connecting to your enterprise data and you're querying it.
+
+NOTE Confidence: 0.9424386024475098
+
+00:17:03.680 --> 00:17:05.680
+Well, the data package provides that.
+
+NOTE Confidence: 0.9614543318748474
+
+00:17:06.120 --> 00:17:08.000
+Next, we have a visual package.
+
+NOTE Confidence: 0.8716987371444702
+
+00:17:08.160 --> 00:17:11.253
+So this is using a React and Vega Lite components
+
+NOTE Confidence: 0.8716987371444702
+
+00:17:11.316 --> 00:17:14.599
+to get AI first visuals that are extremely flexible.
+
+NOTE Confidence: 0.9287484884262085
+
+00:17:14.880 --> 00:17:17.760
+And not only that, they have enterprise grade defaults.
+
+NOTE Confidence: 0.849198043346405
+
+00:17:18.000 --> 00:17:20.842
+So like such invention, this was built by the Power
+
+NOTE Confidence: 0.849198043346405
+
+00:17:20.898 --> 00:17:24.019
+BI team, which has years of Dataviz experience to really
+
+NOTE Confidence: 0.849198043346405
+
+00:17:24.075 --> 00:17:27.419
+make sure that these visuals shine and meet enterprise grade
+
+NOTE Confidence: 0.849198043346405
+
+00:17:27.475 --> 00:17:28.200
+requirements.
+
+NOTE Confidence: 0.9512802362442017
+
+00:17:28.720 --> 00:17:31.360
+And of course, last but not least, we have agent
+
+NOTE Confidence: 0.9512802362442017
+
+00:17:31.415 --> 00:17:31.800
+skills.
+
+NOTE Confidence: 0.9493533372879028
+
+00:17:32.040 --> 00:17:35.104
+So the agent skills teaches your coding agent how to
+
+NOTE Confidence: 0.9493533372879028
+
+00:17:35.163 --> 00:17:37.933
+use these packages and not just how to use them
+
+NOTE Confidence: 0.9493533372879028
+
+00:17:37.992 --> 00:17:41.646
+in terms of building your dashboards and applications, but how
+
+NOTE Confidence: 0.9493533372879028
+
+00:17:41.705 --> 00:17:43.119
+to use them effectively.
+
+NOTE Confidence: 0.9128475189208984
+
+00:17:43.120 --> 00:17:46.040
+So building applications that actually have good taste.
+
+NOTE Confidence: 0.9170171618461609
+
+00:17:46.359 --> 00:17:48.929
+Because let's be honest, we don't just want a functional
+
+NOTE Confidence: 0.9170171618461609
+
+00:17:48.975 --> 00:17:51.637
+dashboard, we want something that is going to impress your
+
+NOTE Confidence: 0.9170171618461609
+
+00:17:51.683 --> 00:17:53.840
+boss and impress anyone that's going to use it.
+
+NOTE Confidence: 0.9543096423149109
+
+00:17:54.359 --> 00:17:57.021
+And so enough of me talking about what this is,
+
+NOTE Confidence: 0.9543096423149109
+
+00:17:57.078 --> 00:17:59.399
+let's actually go and see a demo of this.
+
+NOTE Confidence: 0.9564029574394226
+
+00:18:00.720 --> 00:18:02.000
+So let's start off here.
+
+NOTE Confidence: 0.8026149868965149
+
+00:18:02.240 --> 00:18:05.080
+So our CEO love the app that Ben built.
+
+NOTE Confidence: 0.5991748571395874
+
+00:18:05.240 --> 00:18:06.520
+So woo, good job Ben.
+
+NOTE Confidence: 0.7654735445976257
+
+00:18:06.640 --> 00:18:07.720
+He really loved it.
+
+NOTE Confidence: 0.9652805924415588
+
+00:18:08.000 --> 00:18:10.440
+But as any CEO, they always want more.
+
+NOTE Confidence: 0.8979285955429077
+
+00:18:10.760 --> 00:18:13.225
+And so the next thing our CEO is asked is
+
+NOTE Confidence: 0.8979285955429077
+
+00:18:13.285 --> 00:18:16.232
+build me an operational dashboard so I can see if
+
+NOTE Confidence: 0.8979285955429077
+
+00:18:16.292 --> 00:18:19.840
+customers are actually loving this new delivery experience.
+
+NOTE Confidence: 0.9551538825035095
+
+00:18:20.680 --> 00:18:23.400
+And so let's take a look at that experience.
+
+NOTE Confidence: 0.940646231174469
+
+00:18:23.400 --> 00:18:26.280
+So to start with, I'm in the Fabric portal.
+
+NOTE Confidence: 0.9601505994796753
+
+00:18:26.560 --> 00:18:29.508
+And like I mentioned, this is about bringing that shared
+
+NOTE Confidence: 0.9601505994796753
+
+00:18:29.561 --> 00:18:32.720
+experience for analytics and turning it into an application.
+
+NOTE Confidence: 0.9078245162963867
+
+00:18:33.040 --> 00:18:35.714
+So in Fabric, I already have a ton of semantic
+
+NOTE Confidence: 0.9078245162963867
+
+00:18:35.773 --> 00:18:38.622
+models and I want to build applications on top of
+
+NOTE Confidence: 0.9078245162963867
+
+00:18:38.680 --> 00:18:39.960
+these semantic models.
+
+NOTE Confidence: 0.9196414351463318
+
+00:18:40.440 --> 00:18:42.989
+And Ben showed you the CLI experience of how you
+
+NOTE Confidence: 0.9196414351463318
+
+00:18:43.042 --> 00:18:43.679
+can do that.
+
+NOTE Confidence: 0.966472864151001
+
+00:18:43.920 --> 00:18:45.780
+But let's see how we can also start that from
+
+NOTE Confidence: 0.966472864151001
+
+00:18:45.821 --> 00:18:46.400
+within Fabric.
+
+NOTE Confidence: 0.964021623134613
+
+00:18:46.920 --> 00:18:49.089
+So to start with, let me go to my workspace
+
+NOTE Confidence: 0.964021623134613
+
+00:18:49.140 --> 00:18:51.360
+and then let me go ahead and click new item.
+
+NOTE Confidence: 0.902567446231842
+
+00:18:51.880 --> 00:18:54.648
+And here's where you're going to see that new artifact
+
+NOTE Confidence: 0.902567446231842
+
+00:18:54.699 --> 00:18:55.519
+type called app.
+
+NOTE Confidence: 0.9675737619400024
+
+00:18:56.120 --> 00:18:58.280
+And let's go ahead and give this a name.
+
+NOTE Confidence: 0.9526597261428833
+
+00:18:58.280 --> 00:19:00.520
+So I want this to be my analysis app.
+
+NOTE Confidence: 0.9216254353523254
+
+00:19:01.320 --> 00:19:03.080
+I'm just going to go ahead and click create.
+
+NOTE Confidence: 0.8742426037788391
+
+00:19:04.080 --> 00:19:06.728
+And you'll notice here you're going to give given a
+
+NOTE Confidence: 0.8742426037788391
+
+00:19:06.780 --> 00:19:09.740
+few choice of templates here like Sachin mentioned is you
+
+NOTE Confidence: 0.8742426037788391
+
+00:19:09.792 --> 00:19:12.337
+could start from the blank app, but might as well
+
+NOTE Confidence: 0.8742426037788391
+
+00:19:12.389 --> 00:19:13.479
+make your job easier.
+
+NOTE Confidence: 0.9511250257492065
+
+00:19:13.480 --> 00:19:15.740
+If you're trying to build a data app, start with
+
+NOTE Confidence: 0.9511250257492065
+
+00:19:15.787 --> 00:19:16.399
+our template.
+
+NOTE Confidence: 0.930535614490509
+
+00:19:16.800 --> 00:19:19.348
+So if you pick the data app template, you're going
+
+NOTE Confidence: 0.930535614490509
+
+00:19:19.399 --> 00:19:22.509
+to automatically get the scaffolding to make sure that you're
+
+NOTE Confidence: 0.930535614490509
+
+00:19:22.560 --> 00:19:25.261
+able to query your semantic model, connect to it, and
+
+NOTE Confidence: 0.930535614490509
+
+00:19:25.312 --> 00:19:28.320
+also make sure that you get those enterprise grade visuals.
+
+NOTE Confidence: 0.9310733675956726
+
+00:19:28.760 --> 00:19:31.490
+So once I have this template selected, I'm going to
+
+NOTE Confidence: 0.9310733675956726
+
+00:19:31.544 --> 00:19:34.114
+go ahead and copy the prompt, and then I'm going
+
+NOTE Confidence: 0.9310733675956726
+
+00:19:34.167 --> 00:19:35.559
+to switch over to VS Code.
+
+NOTE Confidence: 0.9029284715652466
+
+00:19:35.880 --> 00:19:38.750
+So using Copilot and the coding agent within VS Code,
+
+NOTE Confidence: 0.9029284715652466
+
+00:19:38.804 --> 00:19:41.349
+I'm going to go ahead and paste that prompt and
+
+NOTE Confidence: 0.9029284715652466
+
+00:19:41.403 --> 00:19:42.920
+then I'm going to hit enter.
+
+NOTE Confidence: 0.8971289992332458
+
+00:19:43.680 --> 00:19:47.543
+And so now what's happening is it's basically scaffolding that
+
+NOTE Confidence: 0.8971289992332458
+
+00:19:47.606 --> 00:19:50.161
+data app so that I can get ready to build
+
+NOTE Confidence: 0.8971289992332458
+
+00:19:50.223 --> 00:19:52.280
+my analytics app of of my choice.
+
+NOTE Confidence: 0.9306939244270325
+
+00:19:52.880 --> 00:19:55.895
+And once the scaffolding is done, here's where the fun
+
+NOTE Confidence: 0.9306939244270325
+
+00:19:55.951 --> 00:19:58.464
+part happens, because now all I need to do is
+
+NOTE Confidence: 0.9306939244270325
+
+00:19:58.520 --> 00:20:01.480
+provide the requirements of what I'm trying to build.
+
+NOTE Confidence: 0.9106789827346802
+
+00:20:02.000 --> 00:20:04.540
+So in this case, I want to build a a
+
+NOTE Confidence: 0.9106789827346802
+
+00:20:04.610 --> 00:20:08.280
+analytics app so that I can look at the satisfaction
+
+NOTE Confidence: 0.9106789827346802
+
+00:20:08.350 --> 00:20:09.480
+of my customers.
+
+NOTE Confidence: 0.8637148141860962
+
+00:20:09.480 --> 00:20:11.680
+And so I'm using that existing semantic model.
+
+NOTE Confidence: 0.8865953683853149
+
+00:20:11.680 --> 00:20:14.107
+So I just put a link to that semantic model
+
+NOTE Confidence: 0.8865953683853149
+
+00:20:14.163 --> 00:20:16.929
+and I say that I'm trying to analyze the customer
+
+NOTE Confidence: 0.8865953683853149
+
+00:20:16.986 --> 00:20:17.719
+satisfaction.
+
+NOTE Confidence: 0.9510253071784973
+
+00:20:18.119 --> 00:20:20.157
+And because this is an app, I can also make
+
+NOTE Confidence: 0.9510253071784973
+
+00:20:20.204 --> 00:20:21.199
+it really actionable.
+
+NOTE Confidence: 0.8970547318458557
+
+00:20:21.400 --> 00:20:23.762
+So I can even add a button like a flag,
+
+NOTE Confidence: 0.8970547318458557
+
+00:20:23.823 --> 00:20:26.610
+a flag button to be able to escalate issues to
+
+NOTE Confidence: 0.8970547318458557
+
+00:20:26.670 --> 00:20:27.640
+my product team.
+
+NOTE Confidence: 0.8990358114242554
+
+00:20:28.760 --> 00:20:30.980
+And just for some quick demo magic, I'm going to
+
+NOTE Confidence: 0.8990358114242554
+
+00:20:31.026 --> 00:20:32.600
+quickly Fast forward some of this.
+
+NOTE Confidence: 0.9432944059371948
+
+00:20:33.200 --> 00:20:35.119
+But of course, you may want to iterate with your
+
+NOTE Confidence: 0.9432944059371948
+
+00:20:35.159 --> 00:20:36.599
+agent until you get your idea right.
+
+NOTE Confidence: 0.9418540596961975
+
+00:20:37.240 --> 00:20:39.862
+And once that's done, let's go ahead and take a
+
+NOTE Confidence: 0.9418540596961975
+
+00:20:39.917 --> 00:20:41.480
+look at the app we've built.
+
+NOTE Confidence: 0.9209864735603333
+
+00:20:42.160 --> 00:20:43.880
+So let's open it up in Fabric.
+
+NOTE Confidence: 0.9487423300743103
+
+00:20:44.320 --> 00:20:47.693
+And here you see a full blown analytics app that's
+
+NOTE Confidence: 0.9487423300743103
+
+00:20:47.760 --> 00:20:49.919
+created with just a few prompts.
+
+NOTE Confidence: 0.8783301711082458
+
+00:20:49.960 --> 00:20:51.889
+And the beauty of this too is I did not
+
+NOTE Confidence: 0.8783301711082458
+
+00:20:51.939 --> 00:20:54.314
+have to prompt for the detailed things of, oh, I
+
+NOTE Confidence: 0.8783301711082458
+
+00:20:54.363 --> 00:20:56.441
+want it to like look a certain way or move
+
+NOTE Confidence: 0.8783301711082458
+
+00:20:56.491 --> 00:20:58.519
+this visual here, move this visual there.
+
+NOTE Confidence: 0.9577196836471558
+
+00:20:58.760 --> 00:21:01.458
+Like I'm relying on the coding agent to do a
+
+NOTE Confidence: 0.9577196836471558
+
+00:21:01.519 --> 00:21:03.359
+lot of this formatting for me.
+
+NOTE Confidence: 0.9472674131393433
+
+00:21:03.560 --> 00:21:05.120
+So it saves me a ton of time.
+
+NOTE Confidence: 0.9242409467697144
+
+00:21:05.160 --> 00:21:07.224
+And I also don't need to be a design expert
+
+NOTE Confidence: 0.9242409467697144
+
+00:21:07.272 --> 00:21:09.720
+to create something that looks as polished as this.
+
+NOTE Confidence: 0.9653792977333069
+
+00:21:10.240 --> 00:21:13.405
+And like I mentioned, because this is an application, you
+
+NOTE Confidence: 0.9653792977333069
+
+00:21:13.461 --> 00:21:16.182
+know, you can get a lot more flexibility of being
+
+NOTE Confidence: 0.9653792977333069
+
+00:21:16.238 --> 00:21:18.959
+able to have custom actions directly in your app.
+
+NOTE Confidence: 0.9525073170661926
+
+00:21:19.400 --> 00:21:21.723
+So for example, I wanted to be able to flag
+
+NOTE Confidence: 0.9525073170661926
+
+00:21:21.777 --> 00:21:24.480
+or escalate issues to the rest of my product team.
+
+NOTE Confidence: 0.8402838110923767
+
+00:21:24.800 --> 00:21:26.897
+So the app added a button here or I added
+
+NOTE Confidence: 0.8402838110923767
+
+00:21:26.948 --> 00:21:29.251
+a button here in the app to flag those issues
+
+NOTE Confidence: 0.8402838110923767
+
+00:21:29.302 --> 00:21:31.399
+and go ahead and e-mail the product team.
+
+NOTE Confidence: 0.9241893291473389
+
+00:21:31.760 --> 00:21:34.692
+So the beauty of what you're getting is you're getting
+
+NOTE Confidence: 0.9241893291473389
+
+00:21:34.746 --> 00:21:37.787
+an analytics app that also combines the actions that you
+
+NOTE Confidence: 0.9241893291473389
+
+00:21:37.841 --> 00:21:40.720
+would expect for any sort of data-driven application.
+
+NOTE Confidence: 0.9321994781494141
+
+00:21:40.960 --> 00:21:44.100
+So what we're doing is really tying the loop between
+
+NOTE Confidence: 0.9321994781494141
+
+00:21:44.161 --> 00:21:47.000
+how you take data and transform it into action.
+
+NOTE Confidence: 0.886681318283081
+
+00:21:47.800 --> 00:21:49.760
+And with that, I'll pass it back to Sachin.
+
+NOTE Confidence: 0.7534309029579163
+
+00:21:51.920 --> 00:21:52.200
+Thanks.
+
+NOTE Confidence: 0.4631606638431549
+
+00:21:52.360 --> 00:21:55.600
+All right.
+
+NOTE Confidence: 0.9296994209289551
+
+00:21:56.000 --> 00:21:57.000
+So you saw 2.
+
+NOTE Confidence: 0.8415265679359436
+
+00:21:57.000 --> 00:22:01.170
+Applications being built one more of an operational delivery app
+
+NOTE Confidence: 0.8415265679359436
+
+00:22:01.235 --> 00:22:04.884
+and an analytics application and both of them use Rayfin
+
+NOTE Confidence: 0.8415265679359436
+
+00:22:04.950 --> 00:22:07.882
+to define the data API, the back end and code
+
+NOTE Confidence: 0.8415265679359436
+
+00:22:07.947 --> 00:22:10.880
+and then the services get deployed to Fabric.
+
+NOTE Confidence: 0.9481910467147827
+
+00:22:11.960 --> 00:22:14.760
+So why is fabric so good?
+
+NOTE Confidence: 0.943293571472168
+
+00:22:14.880 --> 00:22:19.559
+About for building these applications, so one of the greatest
+
+NOTE Confidence: 0.943293571472168
+
+00:22:19.636 --> 00:22:20.480
+advantages.
+
+NOTE Confidence: 0.9568518400192261
+
+00:22:20.480 --> 00:22:21.400
+Of fabric is that.
+
+NOTE Confidence: 0.9532329440116882
+
+00:22:21.840 --> 00:22:25.280
+Everything inside Fabric already has your enterprise.
+
+NOTE Confidence: 0.9595869183540344
+
+00:22:25.280 --> 00:22:27.400
+Grade security rules.
+
+NOTE Confidence: 0.8592187166213989
+
+00:22:27.400 --> 00:22:30.800
+And compliance defined on all of these artifacts, right?
+
+NOTE Confidence: 0.9711532592773438
+
+00:22:31.520 --> 00:22:34.120
+And one of the things in fabric.
+
+NOTE Confidence: 0.8558785915374756
+
+00:22:34.440 --> 00:22:36.760
+Is that all of the artifact data?
+
+NOTE Confidence: 0.8921756148338318
+
+00:22:36.800 --> 00:22:37.920
+Lives inside 1 Lake.
+
+NOTE Confidence: 0.8984165191650391
+
+00:22:37.920 --> 00:22:40.108
+So the way to think about 1 Lake is that
+
+NOTE Confidence: 0.8984165191650391
+
+00:22:40.162 --> 00:22:41.639
+it's the OneDrive for data.
+
+NOTE Confidence: 0.9124727845191956
+
+00:22:42.320 --> 00:22:45.456
+And since this application is now also living in Fabric
+
+NOTE Confidence: 0.9124727845191956
+
+00:22:45.513 --> 00:22:49.106
+using the fabric artifacts, that means all of your applications
+
+NOTE Confidence: 0.9124727845191956
+
+00:22:49.163 --> 00:22:50.760
+data also lands in one lake.
+
+NOTE Confidence: 0.9660851359367371
+
+00:22:51.200 --> 00:22:53.778
+Which means that if a business user wanted to get
+
+NOTE Confidence: 0.9660851359367371
+
+00:22:53.831 --> 00:22:54.199
+access.
+
+NOTE Confidence: 0.9083362817764282
+
+00:22:54.200 --> 00:22:55.400
+To this data to do.
+
+NOTE Confidence: 0.6919896006584167
+
+00:22:55.880 --> 00:22:58.400
+Some data science or do downstream analytics.
+
+NOTE Confidence: 0.8861039876937866
+
+00:22:58.640 --> 00:23:01.232
+They have easy access to get to this data as
+
+NOTE Confidence: 0.8861039876937866
+
+00:23:01.291 --> 00:23:04.591
+well as the you can build applications that then consume
+
+NOTE Confidence: 0.8861039876937866
+
+00:23:04.650 --> 00:23:05.240
+that data.
+
+NOTE Confidence: 0.9364115595817566
+
+00:23:05.760 --> 00:23:07.040
+As well so this.
+
+NOTE Confidence: 0.913657546043396
+
+00:23:07.160 --> 00:23:10.476
+Kind of makes it really easy for both your applications
+
+NOTE Confidence: 0.913657546043396
+
+00:23:10.536 --> 00:23:13.370
+as well as your analytical data to kind of live
+
+NOTE Confidence: 0.913657546043396
+
+00:23:13.431 --> 00:23:15.239
+in the same security boundary.
+
+NOTE Confidence: 0.8857263326644897
+
+00:23:16.119 --> 00:23:20.088
+Fabric by default is a SAS offering, so all the
+
+NOTE Confidence: 0.8857263326644897
+
+00:23:20.173 --> 00:23:21.439
+infrastructure.
+
+NOTE Confidence: 0.9541937708854675
+
+00:23:22.000 --> 00:23:22.600
+Is easy to.
+
+NOTE Confidence: 0.9592340588569641
+
+00:23:22.600 --> 00:23:26.056
+Provision and there's not much for you to manage the
+
+NOTE Confidence: 0.9592340588569641
+
+00:23:26.123 --> 00:23:27.319
+other thing about.
+
+NOTE Confidence: 0.960503876209259
+
+00:23:27.320 --> 00:23:28.880
+Fabric is the way you.
+
+NOTE Confidence: 0.7806117534637451
+
+00:23:28.880 --> 00:23:29.840
+Consume anything as.
+
+NOTE Confidence: 0.8579608798027039
+
+00:23:29.840 --> 00:23:30.960
+Fabric is you buy.
+
+NOTE Confidence: 0.8785618543624878
+
+00:23:31.200 --> 00:23:35.799
+Fabric capacity and then you can assign a certain amount
+
+NOTE Confidence: 0.8785618543624878
+
+00:23:35.881 --> 00:23:38.920
+of compute to any of those artifacts.
+
+NOTE Confidence: 0.9171568155288696
+
+00:23:39.240 --> 00:23:41.887
+And now you can take the same capacity that you've
+
+NOTE Confidence: 0.9171568155288696
+
+00:23:41.940 --> 00:23:44.958
+been using for your analytical workloads and you can also
+
+NOTE Confidence: 0.9171568155288696
+
+00:23:45.011 --> 00:23:46.600
+assign it to your application.
+
+NOTE Confidence: 0.9545255303382874
+
+00:23:46.600 --> 00:23:51.760
+So you know any database operations, any queries, all of.
+
+NOTE Confidence: 0.8038630485534668
+
+00:23:51.760 --> 00:23:52.920
+Them get built towards.
+
+NOTE Confidence: 0.9144140481948853
+
+00:23:52.920 --> 00:23:56.760
+One capacity, so you don't have to manage multiple meters.
+
+NOTE Confidence: 0.9209548830986023
+
+00:23:59.320 --> 00:24:01.800
+While Fabric runs everything in the cloud.
+
+NOTE Confidence: 0.8795444965362549
+
+00:24:01.880 --> 00:24:06.080
+When you're developing your application, you run things locally, right?
+
+NOTE Confidence: 0.8519943356513977
+
+00:24:06.080 --> 00:24:09.406
+So anything that you're developing, be it functions or be
+
+NOTE Confidence: 0.8519943356513977
+
+00:24:09.465 --> 00:24:11.799
+it your web app, anything that contains.
+
+NOTE Confidence: 0.9342438578605652
+
+00:24:11.800 --> 00:24:13.680
+User code is developed locally.
+
+NOTE Confidence: 0.8422538042068481
+
+00:24:14.240 --> 00:24:16.880
+And for the underlying services?
+
+NOTE Confidence: 0.9505349397659302
+
+00:24:16.880 --> 00:24:17.800
+You have two options.
+
+NOTE Confidence: 0.9006986021995544
+
+00:24:17.800 --> 00:24:20.574
+So you can either spin them up in a dev
+
+NOTE Confidence: 0.9006986021995544
+
+00:24:20.645 --> 00:24:24.202
+workspace in Fabric or you can run it inside local
+
+NOTE Confidence: 0.9006986021995544
+
+00:24:24.273 --> 00:24:27.759
+docker container which is currently experimental.
+
+NOTE Confidence: 0.9346500635147095
+
+00:24:28.560 --> 00:24:30.905
+And when you do rafin up, it will package the
+
+NOTE Confidence: 0.9346500635147095
+
+00:24:30.957 --> 00:24:33.041
+whole thing and then you can put it in a
+
+NOTE Confidence: 0.9346500635147095
+
+00:24:33.093 --> 00:24:35.960
+production workspace and you can sort of use that same.
+
+NOTE Confidence: 0.9499906897544861
+
+00:24:35.960 --> 00:24:37.440
+Workflow to also move.
+
+NOTE Confidence: 0.8823270797729492
+
+00:24:37.600 --> 00:24:40.247
+From dev staging to production so you can create a
+
+NOTE Confidence: 0.8823270797729492
+
+00:24:40.300 --> 00:24:41.359
+bunch of workspaces.
+
+NOTE Confidence: 0.5783606767654419
+
+00:24:41.360 --> 00:24:42.000
+And fabric.
+
+NOTE Confidence: 0.9474599957466125
+
+00:24:42.400 --> 00:24:44.746
+And you can develop in one and you feel good
+
+NOTE Confidence: 0.9474599957466125
+
+00:24:44.800 --> 00:24:45.280
+about it.
+
+NOTE Confidence: 0.95231032371521
+
+00:24:45.280 --> 00:24:48.904
+You can take the same application and then move it
+
+NOTE Confidence: 0.95231032371521
+
+00:24:48.977 --> 00:24:52.239
+into staging, production and so forth and so.
+
+NOTE Confidence: 0.9535314440727234
+
+00:24:52.240 --> 00:24:53.640
+Fabric is the easiest.
+
+NOTE Confidence: 0.9743543267250061
+
+00:24:53.640 --> 00:24:54.400
+And best way for?
+
+NOTE Confidence: 0.9690067768096924
+
+00:24:54.400 --> 00:24:55.880
+You to build secure.
+
+NOTE Confidence: 0.9460967183113098
+
+00:24:56.280 --> 00:25:00.625
+Enterprise applications and operate on them, but we understand that
+
+NOTE Confidence: 0.9460967183113098
+
+00:25:00.690 --> 00:25:02.959
+not that there might be a need for.
+
+NOTE Confidence: 0.9731372594833374
+
+00:25:02.960 --> 00:25:05.000
+People to be able to self host.
+
+NOTE Confidence: 0.7840079665184021
+
+00:25:05.680 --> 00:25:07.440
+The applications and so.
+
+NOTE Confidence: 0.8767955899238586
+
+00:25:07.440 --> 00:25:08.240
+For that, we'll be.
+
+NOTE Confidence: 0.8412456512451172
+
+00:25:08.240 --> 00:25:11.792
+Open sourcing part of our the race and runtime and
+
+NOTE Confidence: 0.8412456512451172
+
+00:25:11.863 --> 00:25:13.640
+we look to the community.
+
+NOTE Confidence: 0.9602780938148499
+
+00:25:13.640 --> 00:25:15.680
+To be able to build this with us so.
+
+NOTE Confidence: 0.8743398189544678
+
+00:25:15.680 --> 00:25:18.800
+You can run the self hosted applications on various types
+
+NOTE Confidence: 0.8743398189544678
+
+00:25:18.854 --> 00:25:19.840
+of infrastructure.
+
+NOTE Confidence: 0.7429535388946533
+
+00:25:24.880 --> 00:25:27.000
+So it has changed the way that.
+
+NOTE Confidence: 0.9224241375923157
+
+00:25:28.440 --> 00:25:29.320
+You know people.
+
+NOTE Confidence: 0.9698460698127747
+
+00:25:29.360 --> 00:25:31.560
+Are building applications, but not just in terms.
+
+NOTE Confidence: 0.8948871493339539
+
+00:25:31.560 --> 00:25:34.101
+Of how quick it is to go building applications, but
+
+NOTE Confidence: 0.8948871493339539
+
+00:25:34.151 --> 00:25:34.600
+also who?
+
+NOTE Confidence: 0.899300754070282
+
+00:25:34.600 --> 00:25:40.268
+Can build an application and not everyone lives anymore inside
+
+NOTE Confidence: 0.899300754070282
+
+00:25:40.360 --> 00:25:41.000
+an IDE.
+
+NOTE Confidence: 0.6128517389297485
+
+00:25:41.000 --> 00:25:43.160
+Or CLI replit.
+
+NOTE Confidence: 0.915634036064148
+
+00:25:43.400 --> 00:25:44.360
+Is one of the.
+
+NOTE Confidence: 0.9650249481201172
+
+00:25:44.680 --> 00:25:48.118
+Easiest tools to use to go build and realize these
+
+NOTE Confidence: 0.9650249481201172
+
+00:25:48.187 --> 00:25:48.600
+ideas.
+
+NOTE Confidence: 0.8397529721260071
+
+00:25:48.760 --> 00:25:49.200
+And so we're.
+
+NOTE Confidence: 0.9655884504318237
+
+00:25:49.200 --> 00:25:50.480
+Really excited to partner.
+
+NOTE Confidence: 0.7756760120391846
+
+00:25:50.480 --> 00:25:53.960
+With Replit, I would like to invite Carl on stage.
+
+NOTE Confidence: 0.771597146987915
+
+00:25:53.960 --> 00:25:54.520
+Who's the tech?
+
+NOTE Confidence: 0.8430864810943604
+
+00:25:54.520 --> 00:25:56.560
+Leader Replit to talk a lot more about this.
+
+NOTE Confidence: 0.8431225419044495
+
+00:25:58.160 --> 00:26:01.519
+Everyone, I'm Carl and I'm the technical lead at Replit,
+
+NOTE Confidence: 0.8431225419044495
+
+00:26:01.579 --> 00:26:04.999
+helping lead the integration with both Raefin and Fabric.
+
+NOTE Confidence: 0.8081287145614624
+
+00:26:06.119 --> 00:26:09.700
+So for those who don't know, Replit is a gentic
+
+NOTE Confidence: 0.8081287145614624
+
+00:26:09.777 --> 00:26:14.805
+browser based IDE where non-technical and semi technical users can
+
+NOTE Confidence: 0.8081287145614624
+
+00:26:14.881 --> 00:26:15.720
+build apps.
+
+NOTE Confidence: 0.8819363713264465
+
+00:26:16.359 --> 00:26:19.308
+So Rayfin and Fabric are great for the technical business
+
+NOTE Confidence: 0.8819363713264465
+
+00:26:19.359 --> 00:26:22.359
+user who's extremely technical wants to get into the code.
+
+NOTE Confidence: 0.8693717122077942
+
+00:26:22.600 --> 00:26:25.493
+But Replit's here for the users who don't maybe have
+
+NOTE Confidence: 0.8693717122077942
+
+00:26:25.548 --> 00:26:28.386
+that coding experience who still want to be able to
+
+NOTE Confidence: 0.8693717122077942
+
+00:26:28.442 --> 00:26:30.000
+build and deploy these apps.
+
+NOTE Confidence: 0.9590286016464233
+
+00:26:32.600 --> 00:26:35.409
+Let's see, we do this with enterprise grade privacy and
+
+NOTE Confidence: 0.9590286016464233
+
+00:26:35.460 --> 00:26:35.919
+security.
+
+NOTE Confidence: 0.917919933795929
+
+00:26:36.440 --> 00:26:39.404
+So all the apps that are built with Replit inherit
+
+NOTE Confidence: 0.917919933795929
+
+00:26:39.464 --> 00:26:43.199
+all of those same security properties that were just described.
+
+NOTE Confidence: 0.9217113852500916
+
+00:26:44.000 --> 00:26:45.726
+Instead of talking about it though, let me show you
+
+NOTE Confidence: 0.9217113852500916
+
+00:26:45.759 --> 00:26:46.199
+how it works.
+
+NOTE Confidence: 0.8424705266952515
+
+00:26:47.960 --> 00:26:50.240
+So here's an example of building an app with Replit.
+
+NOTE Confidence: 0.8451969027519226
+
+00:26:51.000 --> 00:26:53.956
+I'm going to spin up a dashboard for our stand
+
+NOTE Confidence: 0.8451969027519226
+
+00:26:54.020 --> 00:26:54.920
+up in an hour.
+
+NOTE Confidence: 0.8453429341316223
+
+00:26:55.520 --> 00:26:57.864
+I'm gonna give it the Power BI model, the semantic
+
+NOTE Confidence: 0.8453429341316223
+
+00:26:57.911 --> 00:26:59.599
+model, and let the agent go to work.
+
+NOTE Confidence: 0.8973560333251953
+
+00:27:00.680 --> 00:27:02.520
+Here you can see the model doing its work.
+
+NOTE Confidence: 0.8886352181434631
+
+00:27:02.760 --> 00:27:06.865
+It looks at the schemas within that semantic model and
+
+NOTE Confidence: 0.8886352181434631
+
+00:27:06.941 --> 00:27:12.415
+builds the dashboard, including the DAX queries underneath directly from
+
+NOTE Confidence: 0.8886352181434631
+
+00:27:12.491 --> 00:27:13.480
+that content.
+
+NOTE Confidence: 0.9290611743927002
+
+00:27:15.119 --> 00:27:18.261
+And then you can see we can deploy this directly
+
+NOTE Confidence: 0.9290611743927002
+
+00:27:18.327 --> 00:27:20.159
+into our Rayfin environment.
+
+NOTE Confidence: 0.9255996942520142
+
+00:27:20.840 --> 00:27:24.176
+So this is deploying into Rayfin and we'll have the
+
+NOTE Confidence: 0.9255996942520142
+
+00:27:24.242 --> 00:27:27.775
+live app with the same workspace and item objects that
+
+NOTE Confidence: 0.9255996942520142
+
+00:27:27.840 --> 00:27:30.000
+you would expect on the back end.
+
+NOTE Confidence: 0.6877506375312805
+
+00:27:30.400 --> 00:27:33.322
+So you can manage this entirely from Replit for non-technical,
+
+NOTE Confidence: 0.6877506375312805
+
+00:27:33.370 --> 00:27:34.360
+semi technical users.
+
+NOTE Confidence: 0.915786862373352
+
+00:27:35.080 --> 00:27:37.885
+Right now we're in private beta, so we have a
+
+NOTE Confidence: 0.915786862373352
+
+00:27:37.948 --> 00:27:39.319
+couple users using it.
+
+NOTE Confidence: 0.9140183329582214
+
+00:27:41.320 --> 00:27:43.033
+And here's a quote from one of our test users,
+
+NOTE Confidence: 0.9140183329582214
+
+00:27:43.070 --> 00:27:43.480
+Leatherman.
+
+NOTE Confidence: 0.8667927384376526
+
+00:27:43.880 --> 00:27:46.874
+Leatherman is a company that's both an avid user of
+
+NOTE Confidence: 0.8667927384376526
+
+00:27:46.933 --> 00:27:49.400
+Replit already and an avid user of Fabric.
+
+NOTE Confidence: 0.8644359111785889
+
+00:27:49.400 --> 00:27:50.760
+And here's what they had to say.
+
+NOTE Confidence: 0.8637564778327942
+
+00:27:51.320 --> 00:27:53.984
+We appreciate how quickly we can build and iterate with
+
+NOTE Confidence: 0.8637564778327942
+
+00:27:54.033 --> 00:27:56.552
+Replit, but for some of our business, our data needs
+
+NOTE Confidence: 0.8637564778327942
+
+00:27:56.600 --> 00:27:59.119
+to needs to stay governed and centralized in Fabric.
+
+NOTE Confidence: 0.8673092722892761
+
+00:27:59.560 --> 00:28:02.503
+With Raefin, we finally have both fast development and the
+
+NOTE Confidence: 0.8673092722892761
+
+00:28:02.554 --> 00:28:05.650
+tools we prefer and the confidence that our applications were
+
+NOTE Confidence: 0.8673092722892761
+
+00:28:05.700 --> 00:28:07.680
+on top of our enterprise data platform.
+
+NOTE Confidence: 0.9666798710823059
+
+00:28:08.040 --> 00:28:09.760
+This is exactly what we've been looking for.
+
+NOTE Confidence: 0.8431839346885681
+
+00:28:10.640 --> 00:28:14.613
+So yesterday we announced the partnership between Reply to Microsoft
+
+NOTE Confidence: 0.8431839346885681
+
+00:28:14.671 --> 00:28:15.840
+on stage with Satya.
+
+NOTE Confidence: 0.9063035249710083
+
+00:28:16.640 --> 00:28:18.827
+And today I'm just wanted to be here and I'm
+
+NOTE Confidence: 0.9063035249710083
+
+00:28:18.876 --> 00:28:21.560
+super excited and grateful to be working with the team
+
+NOTE Confidence: 0.9063035249710083
+
+00:28:21.610 --> 00:28:23.400
+from Microsoft to kick this all off.
+
+NOTE Confidence: 0.8672033548355103
+
+00:28:23.400 --> 00:28:24.901
+And I'm going to turn it back over to Ben
+
+NOTE Confidence: 0.8672033548355103
+
+00:28:24.938 --> 00:28:25.999
+and he's going to wrap us up.
+
+NOTE Confidence: 0.91180419921875
+
+00:28:26.800 --> 00:28:27.000
+Thanks.
+
+NOTE Confidence: 0.4956763684749603
+
+00:28:28.120 --> 00:28:28.560
+Thanks, Carl.
+
+NOTE Confidence: 0.9149715900421143
+
+00:28:32.640 --> 00:28:35.346
+OK, So we've covered a lot in this session and
+
+NOTE Confidence: 0.9149715900421143
+
+00:28:35.405 --> 00:28:38.229
+now I want to just sort of breakdown where we're
+
+NOTE Confidence: 0.9149715900421143
+
+00:28:38.288 --> 00:28:41.347
+at, what's going to be released over the next couple
+
+NOTE Confidence: 0.9149715900421143
+
+00:28:41.406 --> 00:28:43.760
+days and then sort of where we're going.
+
+NOTE Confidence: 0.9320204854011536
+
+00:28:44.120 --> 00:28:47.503
+And so right now, the focus is really on making
+
+NOTE Confidence: 0.9320204854011536
+
+00:28:47.575 --> 00:28:51.319
+it easy for people to build enterprise applications.
+
+NOTE Confidence: 0.8928883075714111
+
+00:28:51.320 --> 00:28:54.780
+So giving you sort of all those core fundamental building
+
+NOTE Confidence: 0.8928883075714111
+
+00:28:54.841 --> 00:28:57.512
+blocks to be able to do that, giving you the
+
+NOTE Confidence: 0.8928883075714111
+
+00:28:57.573 --> 00:29:01.702
+database, the enterprise auth out-of-the-box, making it so it's easy
+
+NOTE Confidence: 0.8928883075714111
+
+00:29:01.762 --> 00:29:04.434
+to deploy all of that to Fabric in a managed
+
+NOTE Confidence: 0.8928883075714111
+
+00:29:04.495 --> 00:29:04.920
+tenant.
+
+NOTE Confidence: 0.9465879201889038
+
+00:29:06.440 --> 00:29:09.440
+And then we're looking at, OK, where do we go
+
+NOTE Confidence: 0.9465879201889038
+
+00:29:09.506 --> 00:29:10.239
+from there?
+
+NOTE Confidence: 0.9069647192955017
+
+00:29:10.240 --> 00:29:15.397
+So very soon we will add support for functions, for
+
+NOTE Confidence: 0.9069647192955017
+
+00:29:15.498 --> 00:29:19.240
+RBAC, for additional data connectors.
+
+NOTE Confidence: 0.9026198983192444
+
+00:29:19.240 --> 00:29:22.541
+So you'll be able to connect to any data within
+
+NOTE Confidence: 0.9026198983192444
+
+00:29:22.611 --> 00:29:24.999
+one lake and BLOB storage as well.
+
+NOTE Confidence: 0.8965691924095154
+
+00:29:25.040 --> 00:29:27.744
+And so at that point, you'll really kind of have
+
+NOTE Confidence: 0.8965691924095154
+
+00:29:27.800 --> 00:29:31.011
+the full suite of capabilities you need to run enterprise
+
+NOTE Confidence: 0.8965691924095154
+
+00:29:31.067 --> 00:29:31.800
+applications.
+
+NOTE Confidence: 0.9239751696586609
+
+00:29:31.800 --> 00:29:36.189
+So we will have moved from building largely internal applications,
+
+NOTE Confidence: 0.9239751696586609
+
+00:29:36.256 --> 00:29:39.715
+sort of data dashboards, things like that to kind of
+
+NOTE Confidence: 0.9239751696586609
+
+00:29:39.781 --> 00:29:43.439
+whatever you want to build within an enterprise tenant.
+
+NOTE Confidence: 0.9446402192115784
+
+00:29:44.640 --> 00:29:46.125
+But we want to be able to do more than
+
+NOTE Confidence: 0.9446402192115784
+
+00:29:46.164 --> 00:29:46.359
+that.
+
+NOTE Confidence: 0.8732975125312805
+
+00:29:46.360 --> 00:29:49.065
+So as we look forward to the end of the
+
+NOTE Confidence: 0.8732975125312805
+
+00:29:49.134 --> 00:29:51.978
+year, we want to support more B to B&B to
+
+NOTE Confidence: 0.8732975125312805
+
+00:29:52.047 --> 00:29:52.880
+C scenarios.
+
+NOTE Confidence: 0.836657702922821
+
+00:29:52.880 --> 00:29:56.573
+And so that's where we move beyond just having intra
+
+NOTE Confidence: 0.836657702922821
+
+00:29:56.644 --> 00:30:00.480
+auth to having OIDC auth to having real time services.
+
+NOTE Confidence: 0.9201902151107788
+
+00:30:00.720 --> 00:30:02.913
+We also want to make it easier and easier to
+
+NOTE Confidence: 0.9201902151107788
+
+00:30:02.963 --> 00:30:04.159
+get started with Rayfin.
+
+NOTE Confidence: 0.8787413239479065
+
+00:30:04.160 --> 00:30:07.910
+So we'll be letting you get started not using an
+
+NOTE Confidence: 0.8787413239479065
+
+00:30:07.988 --> 00:30:11.660
+intra or a company ID, but you can actually use
+
+NOTE Confidence: 0.8787413239479065
+
+00:30:11.738 --> 00:30:14.160
+a social log in to get started.
+
+NOTE Confidence: 0.9202144742012024
+
+00:30:14.160 --> 00:30:17.158
+And we'll have a perpetual free tier offering as part
+
+NOTE Confidence: 0.9202144742012024
+
+00:30:17.214 --> 00:30:18.120
+of that as well.
+
+NOTE Confidence: 0.9484127163887024
+
+00:30:18.520 --> 00:30:22.282
+Right now you can go use Fabric for free to
+
+NOTE Confidence: 0.9484127163887024
+
+00:30:22.370 --> 00:30:24.120
+get started as well.
+
+NOTE Confidence: 0.9166659712791443
+
+00:30:24.120 --> 00:30:26.080
+So we encourage everybody to go do that.
+
+NOTE Confidence: 0.8498128652572632
+
+00:30:28.360 --> 00:30:28.600
+OK?
+
+NOTE Confidence: 0.9337466359138489
+
+00:30:28.600 --> 00:30:30.200
+So that's what's next for us.
+
+NOTE Confidence: 0.9657303094863892
+
+00:30:30.200 --> 00:30:31.320
+What's next for you.
+
+NOTE Confidence: 0.8301767706871033
+
+00:30:31.560 --> 00:30:36.810
+So there is one last Rayfin session available later today
+
+NOTE Confidence: 0.8301767706871033
+
+00:30:36.903 --> 00:30:37.639
+at 3:00.
+
+NOTE Confidence: 0.9387412667274475
+
+00:30:37.880 --> 00:30:40.000
+Chris Anderson from our team will be walking through it.
+
+NOTE Confidence: 0.8371171951293945
+
+00:30:40.320 --> 00:30:41.080
+I love that.
+
+NOTE Confidence: 0.958409309387207
+
+00:30:42.280 --> 00:30:45.410
+And then the biggest thing we want though, is for
+
+NOTE Confidence: 0.958409309387207
+
+00:30:45.474 --> 00:30:46.560
+you to go try it.
+
+NOTE Confidence: 0.8688304424285889
+
+00:30:46.560 --> 00:30:48.920
+So go kick the tires.
+
+NOTE Confidence: 0.8511551022529602
+
+00:30:49.080 --> 00:30:53.400
+And OK, sorry about the team's messages coming up.
+
+NOTE Confidence: 0.9382936358451843
+
+00:30:54.520 --> 00:30:57.240
+And we're really looking for the community to help build
+
+NOTE Confidence: 0.9382936358451843
+
+00:30:57.288 --> 00:30:57.920
+this with us.
+
+NOTE Confidence: 0.9204107522964478
+
+00:30:57.920 --> 00:30:59.440
+So we're looking for your feedback.
+
+NOTE Confidence: 0.9395387768745422
+
+00:30:59.760 --> 00:31:02.560
+We want you to go try building apps right now.
+
+NOTE Confidence: 0.8840214014053345
+
+00:31:02.560 --> 00:31:07.164
+So you can go to github.com, Microsoft Raefen to start
+
+NOTE Confidence: 0.8840214014053345
+
+00:31:07.250 --> 00:31:10.320
+trying it and give us your feedback.
+
+NOTE Confidence: 0.8757181763648987
+
+00:31:10.960 --> 00:31:13.627
+And then you can also sign up for the Replit
+
+NOTE Confidence: 0.8757181763648987
+
+00:31:13.688 --> 00:31:16.719
+private preview as well and get started with that.
+
+NOTE Confidence: 0.9646856188774109
+
+00:31:17.920 --> 00:31:19.480
+I'll just pause for a second there.
+
+NOTE Confidence: 0.7728750109672546
+
+00:31:20.840 --> 00:31:22.800
+Let all my Teams messages go away.
+
+NOTE Confidence: 0.8541548848152161
+
+00:31:23.400 --> 00:31:24.480
+All right, beautiful.
+
+NOTE Confidence: 0.9049794673919678
+
+00:31:26.280 --> 00:31:27.960
+And so that's it from us.
+
+NOTE Confidence: 0.8988798260688782
+
+00:31:29.120 --> 00:31:31.615
+Thank you so much for listening to the Rayfin talk
+
+NOTE Confidence: 0.8988798260688782
+
+00:31:31.665 --> 00:31:34.111
+and we're really excited to go see what you build
+
+NOTE Confidence: 0.8988798260688782
+
+00:31:34.161 --> 00:31:34.759
+with Rayfin.
+
+NOTE Confidence: 0.944816529750824
+
+00:31:35.120 --> 00:31:35.640
+Thank you all.
+

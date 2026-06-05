@@ -6,7 +6,7 @@
 
 ## 取得結果サマリー
 
-- **成功（CAPTION ルート）**: 29 / 29 セッション
+- **成功（CAPTION ルート）**: 31 / 31 セッション
 - **フォールバック使用**: 0
 - **取得不可**: 0
 
@@ -29,6 +29,7 @@
 | BRK252 | From observability to ROI for AI agents on any framework | CAPTION | 84,647 | 32,442 | ✅ 成功 | [summary](BRK252/summary_ja.md) |
 | BRKSP91 | Turn foundation models into production AI on Microsoft Foundry | CAPTION | 100,028 | 39,523 | ✅ 成功 | [summary](BRKSP91/summary_ja.md) |
 | BRKSP94 | Orchestrate special agents with NVIDIA Nemotron models on Foundry | CAPTION | 90,898 | 35,784 | ✅ 成功 | [summary](BRKSP94/summary_ja.md) |
+| BRK225 | Data, apps, and agents: the future of app dev with Rayfin | CAPTION | 76,321 | 28,235 | ✅ 成功 | [summary](BRK225/summary_ja.md) |
 | BRK226 | Inside Azure innovations with Mark Russinovich | CAPTION | 102,381 | 39,932 | ✅ 成功 | [summary](BRK226/summary_ja.md) |
 | BRK233 | Software Defensibility in the era of AI coding | CAPTION | 74,610 | 40,491 | ✅ 成功 | [summary](BRK233/summary_ja.md) |
 | BRK245 | Build the thing that builds the thing | CAPTION | 91,001 | 33,741 | ✅ 成功 | [summary](BRK245/summary_ja.md) |
@@ -38,6 +39,7 @@
 | DEM331 | Turn APIs, tools, and data into real agent velocity | CAPTION | 38,555 | 15,625 | ✅ 成功 | [summary](DEM331/summary_ja.md) |
 | DEM332 | From zero to teammate in 25 minutes: Build a Teams agent live | CAPTION | 43,807 | 16,696 | ✅ 成功 | [summary](DEM332/summary_ja.md) |
 | DEM333 | How Foundry integrates with open-source frameworks and tools | CAPTION | 39,671 | 14,880 | ✅ 成功 | [summary](DEM333/summary_ja.md) |
+| LIVE144 | Behind the Keynote: How Windows Made OpenClaw Work in the Keynote Demo | CAPTION | 33,058 | 12,627 | ✅ 成功 | [summary](LIVE144/summary_ja.md) |
 | DEM340 | Build work-ready agents with Foundry + Work IQ, govern with Agent 365 | CAPTION | 60,782 | 22,212 | ✅ 成功 | [summary](DEM340/summary_ja.md) |
 | DEM341 | Any agent, any cloud: Standardized tracing with Foundry+OpenTelemetry | CAPTION | 49,737 | 18,900 | ✅ 成功 | [summary](DEM341/summary_ja.md) |
 | DEMSP388 | Ship faster with Claude Code and Cowork in Microsoft Foundry | CAPTION | 60,411 | 22,367 | ✅ 成功 | [summary](DEMSP388/summary_ja.md) |

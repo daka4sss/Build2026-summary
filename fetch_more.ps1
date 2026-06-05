@@ -1,7 +1,7 @@
 $ProgressPreference='SilentlyContinue'
 $ErrorActionPreference='Continue'
 $root='C:\Users\daka\vscode\build-blog\build-transcripts'
-$ids=@('DEM340','DEM341','OD840')
+$ids=@('BRK235')
 
 function Get-MetaContent($html,$key){
   $m=[regex]::Match($html,'<meta[^>]*(?:property|name)="'+[regex]::Escape($key)+'"[^>]*content="([^"]*)"')

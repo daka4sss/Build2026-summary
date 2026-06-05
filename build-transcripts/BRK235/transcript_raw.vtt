@@ -1,0 +1,1930 @@
+WEBVTT
+
+NOTE
+language:en-US
+
+NOTE Confidence: 0.8325982689857483
+
+00:00:01.680 --> 00:00:05.032
+Hey everyone, my name is Parth and I work on
+
+NOTE Confidence: 0.8325982689857483
+
+00:00:05.108 --> 00:00:06.479
+agents at O Llama.
+
+NOTE Confidence: 0.7773803472518921
+
+00:00:07.280 --> 00:00:09.360
+I'm Michael, one of the Co founders of O Llama.
+
+NOTE Confidence: 0.9463287591934204
+
+00:00:09.840 --> 00:00:13.717
+And today we'll be talking about open models for agents
+
+NOTE Confidence: 0.9463287591934204
+
+00:00:13.788 --> 00:00:17.806
+and how hybrid local cloud models are playing in together
+
+NOTE Confidence: 0.9463287591934204
+
+00:00:17.877 --> 00:00:19.639
+to make agents a reality.
+
+NOTE Confidence: 0.9217542409896851
+
+00:00:20.400 --> 00:00:23.817
+If you're having trouble listening to us or hearing us,
+
+NOTE Confidence: 0.9217542409896851
+
+00:00:23.879 --> 00:00:26.861
+there's headsets at the back, so feel free to go
+
+NOTE Confidence: 0.9217542409896851
+
+00:00:26.923 --> 00:00:29.160
+and grab one just as we get started.
+
+NOTE Confidence: 0.8416581749916077
+
+00:00:29.960 --> 00:00:30.360
+Take it away.
+
+NOTE Confidence: 0.7928698658943176
+
+00:00:30.720 --> 00:00:33.880
+Awesome, has anyone here heard about O Lama before?
+
+NOTE Confidence: 0.8970164656639099
+
+00:00:34.800 --> 00:00:37.400
+Wow OK that's a quite a bit of people.
+
+NOTE Confidence: 0.7887580990791321
+
+00:00:37.840 --> 00:00:41.339
+I'll still I'll go quick on the background, but what
+
+NOTE Confidence: 0.7887580990791321
+
+00:00:41.406 --> 00:00:42.079
+is O Lama?
+
+NOTE Confidence: 0.8998302817344666
+
+00:00:42.400 --> 00:00:45.370
+O Lama is really the easiest way for developers to
+
+NOTE Confidence: 0.8998302817344666
+
+00:00:45.429 --> 00:00:48.400
+access open models and use it with your own tools.
+
+NOTE Confidence: 0.8933999538421631
+
+00:00:49.120 --> 00:00:52.061
+O Lama is the easiest way in one command to
+
+NOTE Confidence: 0.8933999538421631
+
+00:00:52.130 --> 00:00:55.003
+be able to run a model to just get started
+
+NOTE Confidence: 0.8933999538421631
+
+00:00:55.071 --> 00:00:56.440
+by chatting with it.
+
+NOTE Confidence: 0.8775180578231812
+
+00:00:56.880 --> 00:01:00.636
+Or recently we introduced this command O Lama Launch to
+
+NOTE Confidence: 0.8775180578231812
+
+00:01:00.704 --> 00:01:04.801
+be able to integrate open models directly with your favorite
+
+NOTE Confidence: 0.8775180578231812
+
+00:01:04.870 --> 00:01:05.280
+tools.
+
+NOTE Confidence: 0.8216776251792908
+
+00:01:05.440 --> 00:01:09.954
+This could be clock code, VS Code, GitHub Copilot by
+
+NOTE Confidence: 0.8216776251792908
+
+00:01:10.041 --> 00:01:15.164
+using O Lama Launch directly injecting the open models into
+
+NOTE Confidence: 0.8216776251792908
+
+00:01:15.250 --> 00:01:16.640
+these harnesses.
+
+NOTE Confidence: 0.9379700422286987
+
+00:01:17.080 --> 00:01:20.108
+And of course for developers building on top of these
+
+NOTE Confidence: 0.9379700422286987
+
+00:01:20.165 --> 00:01:23.594
+open models, we have Open AI and Anthropic API compatibility
+
+NOTE Confidence: 0.9379700422286987
+
+00:01:23.651 --> 00:01:25.880
+for you to build your own applications.
+
+NOTE Confidence: 0.9238533973693848
+
+00:01:26.200 --> 00:01:30.610
+If you have Python or JavaScript applications, we also have
+
+NOTE Confidence: 0.9238533973693848
+
+00:01:30.684 --> 00:01:33.599
+a great SDK for you to build up on top.
+
+NOTE Confidence: 0.8103554248809814
+
+00:01:34.319 --> 00:01:37.667
+And O Lama since the beginning has been really built
+
+NOTE Confidence: 0.8103554248809814
+
+00:01:37.731 --> 00:01:38.439
+for agents.
+
+NOTE Confidence: 0.8277414441108704
+
+00:01:38.440 --> 00:01:42.947
+This means we specifically test O Lama for tool calling,
+
+NOTE Confidence: 0.8277414441108704
+
+00:01:43.027 --> 00:01:47.535
+having structured outputs and have one line agent set up
+
+NOTE Confidence: 0.8277414441108704
+
+00:01:47.615 --> 00:01:51.639
+for bringing all these models to O Llama platform.
+
+NOTE Confidence: 0.891162097454071
+
+00:01:51.800 --> 00:01:55.651
+And right now we have over 8 million active developers
+
+NOTE Confidence: 0.891162097454071
+
+00:01:55.723 --> 00:01:59.289
+using O Llama and we partner with major model labs
+
+NOTE Confidence: 0.891162097454071
+
+00:01:59.360 --> 00:02:03.783
+and hardware companies to continue to bring model launches and
+
+NOTE Confidence: 0.891162097454071
+
+00:02:03.854 --> 00:02:06.279
+hardware optimizations to O Llama.
+
+NOTE Confidence: 0.8303200006484985
+
+00:02:06.520 --> 00:02:10.832
+So just this morning, Google DeepMind announced Jemma 412 B
+
+NOTE Confidence: 0.8303200006484985
+
+00:02:10.905 --> 00:02:14.924
+unified model and it's already available on O Llama and
+
+NOTE Confidence: 0.8303200006484985
+
+00:02:14.998 --> 00:02:18.359
+you can use it for your Agentech applications.
+
+NOTE Confidence: 0.9078073501586914
+
+00:02:21.480 --> 00:02:25.287
+And recently starting this year, we added Olamas Cloud to
+
+NOTE Confidence: 0.9078073501586914
+
+00:02:25.354 --> 00:02:28.160
+augment the local inference piece as well.
+
+NOTE Confidence: 0.9060966372489929
+
+00:02:28.600 --> 00:02:31.314
+And this is a piece where your data is never
+
+NOTE Confidence: 0.9060966372489929
+
+00:02:31.375 --> 00:02:33.720
+trained on it has zero data retention.
+
+NOTE Confidence: 0.8978539109230042
+
+00:02:34.240 --> 00:02:37.260
+What it's meant to do is being able to run
+
+NOTE Confidence: 0.8978539109230042
+
+00:02:37.332 --> 00:02:40.639
+Frontier models on data center grade hardware.
+
+NOTE Confidence: 0.9120674729347229
+
+00:02:40.880 --> 00:02:43.871
+And this way, if you don't have the compute locally,
+
+NOTE Confidence: 0.9120674729347229
+
+00:02:43.929 --> 00:02:46.863
+you're able to scale with Olama and continue to run
+
+NOTE Confidence: 0.9120674729347229
+
+00:02:46.921 --> 00:02:48.359
+the models that you want.
+
+NOTE Confidence: 0.901128888130188
+
+00:02:49.080 --> 00:02:51.931
+And a lot of these use cases that are enabled
+
+NOTE Confidence: 0.901128888130188
+
+00:02:51.995 --> 00:02:55.417
+with O Llama are things like parallel agents to really
+
+NOTE Confidence: 0.901128888130188
+
+00:02:55.480 --> 00:02:59.853
+accomplish difficult work that you couldn't otherwise do with smaller
+
+NOTE Confidence: 0.901128888130188
+
+00:02:59.916 --> 00:03:00.360
+models.
+
+NOTE Confidence: 0.9173069000244141
+
+00:03:00.600 --> 00:03:04.165
+And all these models come with the maximum contacts window
+
+NOTE Confidence: 0.9173069000244141
+
+00:03:04.226 --> 00:03:06.440
+from the model providers themselves.
+
+NOTE Confidence: 0.8633434176445007
+
+00:03:07.000 --> 00:03:10.600
+And this is, of course, completely optional service that you
+
+NOTE Confidence: 0.8633434176445007
+
+00:03:10.660 --> 00:03:11.920
+can use with O Llama.
+
+NOTE Confidence: 0.9109265804290771
+
+00:03:14.200 --> 00:03:17.360
+Now open models are quickly improving.
+
+NOTE Confidence: 0.8189818859100342
+
+00:03:18.480 --> 00:03:22.320
+This is just one of the sweep bench verified for
+
+NOTE Confidence: 0.8189818859100342
+
+00:03:22.400 --> 00:03:24.160
+illustration purposes.
+
+NOTE Confidence: 0.9617435932159424
+
+00:03:24.440 --> 00:03:28.633
+But really the open models are enabling mainstream use cases
+
+NOTE Confidence: 0.9617435932159424
+
+00:03:28.703 --> 00:03:30.800
+at significantly lower prices.
+
+NOTE Confidence: 0.9353540539741516
+
+00:03:30.800 --> 00:03:34.609
+And we're seeing a lot of these mainstream use cases,
+
+NOTE Confidence: 0.9353540539741516
+
+00:03:34.681 --> 00:03:39.353
+maybe not frontier research like DNA synthesis or frontier coding
+
+NOTE Confidence: 0.9353540539741516
+
+00:03:39.425 --> 00:03:40.359
+applications.
+
+NOTE Confidence: 0.9444549083709717
+
+00:03:41.120 --> 00:03:44.142
+Users with mainstream tasks are able to begin to use
+
+NOTE Confidence: 0.9444549083709717
+
+00:03:44.201 --> 00:03:45.479
+these open models for.
+
+NOTE Confidence: 0.9287112951278687
+
+00:03:45.480 --> 00:03:48.523
+And we'll show you demos of that and give real
+
+NOTE Confidence: 0.9287112951278687
+
+00:03:48.589 --> 00:03:52.756
+life scenarios of where that's happening today and giving users
+
+NOTE Confidence: 0.9287112951278687
+
+00:03:52.823 --> 00:03:56.527
+the flexibility to customize your models and run it with
+
+NOTE Confidence: 0.9287112951278687
+
+00:03:56.593 --> 00:03:59.239
+the parameters that fit with your goals.
+
+NOTE Confidence: 0.9523016214370728
+
+00:04:02.240 --> 00:04:07.720
+How open models have really improved capabilities and really evolved.
+
+NOTE Confidence: 0.9576384425163269
+
+00:04:08.760 --> 00:04:11.894
+In the past, we've seen models really come with just
+
+NOTE Confidence: 0.9576384425163269
+
+00:04:11.954 --> 00:04:13.040
+pure general chat.
+
+NOTE Confidence: 0.8650784492492676
+
+00:04:13.520 --> 00:04:17.026
+And over the the months that followed, we really saw
+
+NOTE Confidence: 0.8650784492492676
+
+00:04:17.093 --> 00:04:21.678
+models quickly evolving to having reason reasoning abilities to able
+
+NOTE Confidence: 0.8650784492492676
+
+00:04:21.746 --> 00:04:22.960
+to start thinking.
+
+NOTE Confidence: 0.9142590761184692
+
+00:04:23.720 --> 00:04:26.661
+And then models evolved to be able to pick up
+
+NOTE Confidence: 0.9142590761184692
+
+00:04:26.726 --> 00:04:29.079
+individual tools and multiple tools.
+
+NOTE Confidence: 0.8781754970550537
+
+00:04:29.400 --> 00:04:33.591
+And we're starting to see more open model labs become
+
+NOTE Confidence: 0.8781754970550537
+
+00:04:33.670 --> 00:04:38.493
+beginning to release models that are capable of tackling long
+
+NOTE Confidence: 0.8781754970550537
+
+00:04:38.572 --> 00:04:39.679
+horizon tasks.
+
+NOTE Confidence: 0.879514753818512
+
+00:04:39.800 --> 00:04:43.563
+So these are tasks that can run for hours and
+
+NOTE Confidence: 0.879514753818512
+
+00:04:43.647 --> 00:04:44.399
+and days.
+
+NOTE Confidence: 0.9745768904685974
+
+00:04:44.440 --> 00:04:46.720
+And these are just starting to happen.
+
+NOTE Confidence: 0.9017089009284973
+
+00:04:46.720 --> 00:04:50.717
+And so in the future, we should be beginning to
+
+NOTE Confidence: 0.9017089009284973
+
+00:04:50.802 --> 00:04:55.055
+see much more of that unlock happening some of the
+
+NOTE Confidence: 0.9017089009284973
+
+00:04:55.140 --> 00:04:58.883
+use cases that we've seen in real life and O
+
+NOTE Confidence: 0.9017089009284973
+
+00:04:58.968 --> 00:05:00.840
+llamas really private.
+
+NOTE Confidence: 0.8834301829338074
+
+00:05:00.839 --> 00:05:04.160
+So these are published papers that where a lot of
+
+NOTE Confidence: 0.8834301829338074
+
+00:05:04.228 --> 00:05:08.091
+the users have talked about where they are publicly using
+
+NOTE Confidence: 0.8834301829338074
+
+00:05:08.159 --> 00:05:11.480
+Olama, the Lawrence Berkeley National Laboratory.
+
+NOTE Confidence: 0.8691877722740173
+
+00:05:11.680 --> 00:05:17.324
+They, they have an accelerator assistance system to autonomously execute
+
+NOTE Confidence: 0.8691877722740173
+
+00:05:17.403 --> 00:05:19.519
+physics research for X-ray.
+
+NOTE Confidence: 0.9158255457878113
+
+00:05:19.800 --> 00:05:24.969
+And they basically have a a routing layer that chooses
+
+NOTE Confidence: 0.9158255457878113
+
+00:05:25.064 --> 00:05:29.947
+between cloud models and Olama in order to do their
+
+NOTE Confidence: 0.9158255457878113
+
+00:05:30.042 --> 00:05:31.000
+inference.
+
+NOTE Confidence: 0.9296914339065552
+
+00:05:31.000 --> 00:05:34.960
+And this is what their accelerator ultimately looks like.
+
+NOTE Confidence: 0.752704918384552
+
+00:05:35.640 --> 00:05:38.520
+And this is O Llama powering their X-ray research.
+
+NOTE Confidence: 0.8016278743743896
+
+00:05:40.240 --> 00:05:43.040
+There's also the NASA Glenn Research Center.
+
+NOTE Confidence: 0.8438127636909485
+
+00:05:43.720 --> 00:05:47.708
+They have a crew and health, crew health performance, probabilistic
+
+NOTE Confidence: 0.8438127636909485
+
+00:05:47.767 --> 00:05:48.719
+risk assessment.
+
+NOTE Confidence: 0.7718236446380615
+
+00:05:49.040 --> 00:05:51.798
+And they use O Llama to categorize a diverse set
+
+NOTE Confidence: 0.7718236446380615
+
+00:05:51.855 --> 00:05:53.119
+of Mars mission tasks.
+
+NOTE Confidence: 0.9191664457321167
+
+00:05:53.480 --> 00:05:58.050
+And they go into 18 predefined human system task categories
+
+NOTE Confidence: 0.9191664457321167
+
+00:05:58.128 --> 00:06:00.840
+in order for their future missions.
+
+NOTE Confidence: 0.8781622052192688
+
+00:06:03.920 --> 00:06:08.945
+the US Department of Energy with Brookhaven National Laboratory also
+
+NOTE Confidence: 0.8781622052192688
+
+00:06:09.018 --> 00:06:12.640
+integrates Olama to facilitate log data analysis.
+
+NOTE Confidence: 0.8455763459205627
+
+00:06:12.960 --> 00:06:16.723
+And this is one of their setup together with Lang
+
+NOTE Confidence: 0.8455763459205627
+
+00:06:16.800 --> 00:06:20.563
+Chang that they use, allowing users to be able to
+
+NOTE Confidence: 0.8455763459205627
+
+00:06:20.640 --> 00:06:23.636
+use a GUI to be able to do summaries of
+
+NOTE Confidence: 0.8455763459205627
+
+00:06:23.712 --> 00:06:28.474
+their log information and retrieve specifics on the issues and
+
+NOTE Confidence: 0.8455763459205627
+
+00:06:28.551 --> 00:06:31.239
+solutions through natural language.
+
+NOTE Confidence: 0.8663328886032104
+
+00:06:34.800 --> 00:06:38.426
+And there are other developers in enterprises already using a
+
+NOTE Confidence: 0.8663328886032104
+
+00:06:38.485 --> 00:06:41.279
+llama to automate their mission critical tasks.
+
+NOTE Confidence: 0.9253573417663574
+
+00:06:41.600 --> 00:06:47.225
+For example, a multinational media company processes financial documents for
+
+NOTE Confidence: 0.9253573417663574
+
+00:06:47.299 --> 00:06:51.815
+their quarterly earnings review and SEC filings and these are
+
+NOTE Confidence: 0.9253573417663574
+
+00:06:51.889 --> 00:06:55.442
+very sensitive data to that they use and it just
+
+NOTE Confidence: 0.9253573417663574
+
+00:06:55.516 --> 00:06:59.439
+cannot be sent to other cloud AI models or providers.
+
+NOTE Confidence: 0.7827088236808777
+
+00:06:59.440 --> 00:07:01.967
+And this is where their use case for O Lama
+
+NOTE Confidence: 0.7827088236808777
+
+00:07:02.026 --> 00:07:02.320
+lies.
+
+NOTE Confidence: 0.8597187399864197
+
+00:07:02.960 --> 00:07:07.869
+A leading industry manufacturer has an assistant internally using O
+
+NOTE Confidence: 0.8597187399864197
+
+00:07:07.942 --> 00:07:11.460
+Lama to design machine parts and this is all for
+
+NOTE Confidence: 0.8597187399864197
+
+00:07:11.533 --> 00:07:16.956
+their Mechanical Engineers to do CAD Design Motive Automotive manufacturer
+
+NOTE Confidence: 0.8597187399864197
+
+00:07:17.029 --> 00:07:20.620
+is using O Lama directly on the factory floor and
+
+NOTE Confidence: 0.8597187399864197
+
+00:07:20.693 --> 00:07:26.116
+this is leveraging retrieval, augmented generation on their knowledge base
+
+NOTE Confidence: 0.8597187399864197
+
+00:07:26.189 --> 00:07:30.000
+and inspection system for their factory technicians.
+
+NOTE Confidence: 0.79658442735672
+
+00:07:32.680 --> 00:07:35.405
+And we'd love to pass it to Parth for quick
+
+NOTE Confidence: 0.79658442735672
+
+00:07:35.468 --> 00:07:37.559
+demos on what a llama looks like.
+
+NOTE Confidence: 0.6344897747039795
+
+00:07:38.080 --> 00:07:38.440
+Cool.
+
+NOTE Confidence: 0.9266881346702576
+
+00:07:38.840 --> 00:07:41.898
+So I'll cover a bunch of different things that we
+
+NOTE Confidence: 0.9266881346702576
+
+00:07:41.960 --> 00:07:45.144
+can do and hopefully you'll walk away with a better
+
+NOTE Confidence: 0.9266881346702576
+
+00:07:45.206 --> 00:07:48.140
+sense of everything a llama can do for you now,
+
+NOTE Confidence: 0.9266881346702576
+
+00:07:48.202 --> 00:07:50.200
+especially both local and cloud.
+
+NOTE Confidence: 0.9155243039131165
+
+00:07:50.760 --> 00:07:53.046
+So one of the things that a lot of you
+
+NOTE Confidence: 0.9155243039131165
+
+00:07:53.106 --> 00:07:56.234
+probably know us for is, you know, the classic bread
+
+NOTE Confidence: 0.9155243039131165
+
+00:07:56.294 --> 00:07:58.279
+and butter chatting with a model.
+
+NOTE Confidence: 0.9547357559204102
+
+00:07:58.520 --> 00:08:01.275
+So you can see here, a big focus that we
+
+NOTE Confidence: 0.9547357559204102
+
+00:08:01.344 --> 00:08:04.375
+have is to focus on both local and cloud and
+
+NOTE Confidence: 0.9547357559204102
+
+00:08:04.444 --> 00:08:07.199
+have the experience feel the exact same.
+
+NOTE Confidence: 0.9692337512969971
+
+00:08:07.520 --> 00:08:09.728
+So you want to do a larger task, you want
+
+NOTE Confidence: 0.9692337512969971
+
+00:08:09.782 --> 00:08:12.313
+to use a bigger model, you use cloud almost the
+
+NOTE Confidence: 0.9692337512969971
+
+00:08:12.367 --> 00:08:14.359
+same way you would use a local model.
+
+NOTE Confidence: 0.8750649690628052
+
+00:08:16.040 --> 00:08:20.171
+So as Michael mentioned, we introduced O Lama launch earlier
+
+NOTE Confidence: 0.8750649690628052
+
+00:08:20.240 --> 00:08:23.682
+this year and essentially it's a way to connect to
+
+NOTE Confidence: 0.8750649690628052
+
+00:08:23.751 --> 00:08:28.158
+all your favorite tools and applications for whatever you'd like
+
+NOTE Confidence: 0.8750649690628052
+
+00:08:28.226 --> 00:08:28.640
+to do.
+
+NOTE Confidence: 0.9113135933876038
+
+00:08:28.640 --> 00:08:32.429
+So we support personal agents like Open Claw, Hermes, as
+
+NOTE Confidence: 0.9113135933876038
+
+00:08:32.497 --> 00:08:36.015
+well as a plethora of agentic harnesses to do coding
+
+NOTE Confidence: 0.9113135933876038
+
+00:08:36.083 --> 00:08:37.640
+agents and coding work.
+
+NOTE Confidence: 0.7738582491874695
+
+00:08:39.240 --> 00:08:42.806
+So here's a list, you know, we have plot code,
+
+NOTE Confidence: 0.7738582491874695
+
+00:08:42.884 --> 00:08:47.226
+codecs, Copilot, CLI, Droid Pie, and many, many more and
+
+NOTE Confidence: 0.7738582491874695
+
+00:08:47.303 --> 00:08:49.319
+many more are also coming.
+
+NOTE Confidence: 0.9257053136825562
+
+00:08:50.640 --> 00:08:53.515
+So I'll show you a little bit about how it's
+
+NOTE Confidence: 0.9257053136825562
+
+00:08:53.580 --> 00:08:56.912
+super easy to plug Olama into any of these favorite
+
+NOTE Confidence: 0.9257053136825562
+
+00:08:56.978 --> 00:09:00.441
+tools that you may have, and I'll showcase Copilot in
+
+NOTE Confidence: 0.9257053136825562
+
+00:09:00.506 --> 00:09:01.160
+this case.
+
+NOTE Confidence: 0.8990244269371033
+
+00:09:03.160 --> 00:09:06.774
+So as I mentioned earlier, you just type Olama launch
+
+NOTE Confidence: 0.8990244269371033
+
+00:09:06.842 --> 00:09:10.319
+Copilot and you can pick the model that you'd like.
+
+NOTE Confidence: 0.9034506678581238
+
+00:09:10.320 --> 00:09:13.200
+So in this case, I'm using Kimi K 2.6 on
+
+NOTE Confidence: 0.9034506678581238
+
+00:09:13.272 --> 00:09:16.368
+our cloud, but just as easily you can use a
+
+NOTE Confidence: 0.9034506678581238
+
+00:09:16.440 --> 00:09:17.880
+local model as well.
+
+NOTE Confidence: 0.9047070741653442
+
+00:09:18.880 --> 00:09:21.141
+And one of the things I really like about the
+
+NOTE Confidence: 0.9047070741653442
+
+00:09:21.191 --> 00:09:23.904
+Copilot CLI is that you can directly pick which issues
+
+NOTE Confidence: 0.9047070741653442
+
+00:09:23.955 --> 00:09:24.959
+you want to work on.
+
+NOTE Confidence: 0.9502075910568237
+
+00:09:25.440 --> 00:09:27.608
+And so in this case, I'm like, OK, go and
+
+NOTE Confidence: 0.9502075910568237
+
+00:09:27.661 --> 00:09:28.559
+fetch this issue.
+
+NOTE Confidence: 0.9220229387283325
+
+00:09:28.840 --> 00:09:31.908
+Let's see you know what it's doing and let's come
+
+NOTE Confidence: 0.9220229387283325
+
+00:09:31.971 --> 00:09:33.600
+up with a solution for it.
+
+NOTE Confidence: 0.8344183564186096
+
+00:09:34.360 --> 00:09:37.681
+So thinking likes to think a lot sometimes and you
+
+NOTE Confidence: 0.8344183564186096
+
+00:09:37.747 --> 00:09:41.069
+know, it's come up with exactly what's going on in
+
+NOTE Confidence: 0.8344183564186096
+
+00:09:41.135 --> 00:09:41.799
+the issue.
+
+NOTE Confidence: 0.9249898791313171
+
+00:09:42.120 --> 00:09:44.543
+And I can use this as part of my workflow
+
+NOTE Confidence: 0.9249898791313171
+
+00:09:44.602 --> 00:09:48.445
+to directly without ever leaving my terminal and leveraging these
+
+NOTE Confidence: 0.9249898791313171
+
+00:09:48.504 --> 00:09:50.159
+open models to do real work.
+
+NOTE Confidence: 0.8046640753746033
+
+00:09:50.160 --> 00:09:52.795
+And this is a workflow that I often do in
+
+NOTE Confidence: 0.8046640753746033
+
+00:09:52.859 --> 00:09:53.759
+my day-to-day.
+
+NOTE Confidence: 0.8131802082061768
+
+00:09:54.880 --> 00:09:57.244
+So, you know, I ask, are there any open PRS
+
+NOTE Confidence: 0.8131802082061768
+
+00:09:57.299 --> 00:09:57.959
+referencing?
+
+NOTE Confidence: 0.7885488271713257
+
+00:09:57.960 --> 00:09:59.080
+It says no.
+
+NOTE Confidence: 0.9045526385307312
+
+00:09:59.440 --> 00:10:01.160
+And then, you know, we start working on a fix.
+
+NOTE Confidence: 0.8316280245780945
+
+00:10:01.440 --> 00:10:04.756
+And so any other agent harnesses that you've, you know,
+
+NOTE Confidence: 0.8316280245780945
+
+00:10:04.816 --> 00:10:07.771
+used a lot of powers them similarly as well where
+
+NOTE Confidence: 0.8316280245780945
+
+00:10:07.831 --> 00:10:11.629
+we make sure that the underlying technologies work, things like
+
+NOTE Confidence: 0.8316280245780945
+
+00:10:11.690 --> 00:10:13.679
+sub agents, web search, etcetera.
+
+NOTE Confidence: 0.8480737805366516
+
+00:10:13.960 --> 00:10:16.277
+So over here it's spun up multiple sub agents to
+
+NOTE Confidence: 0.8480737805366516
+
+00:10:16.326 --> 00:10:18.499
+go and explore the code base and come up with
+
+NOTE Confidence: 0.8480737805366516
+
+00:10:18.547 --> 00:10:19.320
+potential fixes.
+
+NOTE Confidence: 0.9515377879142761
+
+00:10:20.880 --> 00:10:24.032
+Just skipping forward a little bit basically gives me a
+
+NOTE Confidence: 0.9515377879142761
+
+00:10:24.089 --> 00:10:26.554
+little bit of a plan and then I can execute
+
+NOTE Confidence: 0.9515377879142761
+
+00:10:26.611 --> 00:10:28.560
+on this plan and get my work done.
+
+NOTE Confidence: 0.9617563486099243
+
+00:10:31.320 --> 00:10:35.020
+Another thing I feel is so critical is this idea
+
+NOTE Confidence: 0.9617563486099243
+
+00:10:35.097 --> 00:10:36.639
+of hybrid execution.
+
+NOTE Confidence: 0.9455604553222656
+
+00:10:36.960 --> 00:10:40.939
+So cloud models, especially the ones that we serve, which
+
+NOTE Confidence: 0.9455604553222656
+
+00:10:41.008 --> 00:10:45.267
+are very, very close to frontier level intelligence, they are
+
+NOTE Confidence: 0.9455604553222656
+
+00:10:45.336 --> 00:10:49.036
+awesome for your most difficult work when it comes to
+
+NOTE Confidence: 0.9455604553222656
+
+00:10:49.106 --> 00:10:51.479
+coding or any other agentic tasks.
+
+NOTE Confidence: 0.9615476131439209
+
+00:10:51.880 --> 00:10:53.738
+But there's a lot of stuff you want to be
+
+NOTE Confidence: 0.9615476131439209
+
+00:10:53.784 --> 00:10:55.280
+extremely, extremely private for.
+
+NOTE Confidence: 0.9095606803894043
+
+00:10:55.480 --> 00:10:57.999
+And this is a workflow that I often use in
+
+NOTE Confidence: 0.9095606803894043
+
+00:10:58.059 --> 00:11:01.299
+my day-to-day or quarterly, as you'll see, which is my
+
+NOTE Confidence: 0.9095606803894043
+
+00:11:01.359 --> 00:11:02.679
+credit card statement.
+
+NOTE Confidence: 0.9663403630256653
+
+00:11:02.720 --> 00:11:05.280
+And so this is not my actual credit card statement.
+
+NOTE Confidence: 0.9679701924324036
+
+00:11:05.280 --> 00:11:07.486
+That would be a little bit weird, but it is
+
+NOTE Confidence: 0.9679701924324036
+
+00:11:07.538 --> 00:11:07.999
+a fake 1.
+
+NOTE Confidence: 0.8861732482910156
+
+00:11:08.040 --> 00:11:10.689
+And so this is some, this is a pretty usual
+
+NOTE Confidence: 0.8861732482910156
+
+00:11:10.750 --> 00:11:13.399
+workflow I'll do at the end of every month.
+
+NOTE Confidence: 0.8689673542976379
+
+00:11:13.760 --> 00:11:17.247
+I'll basically go take my credit card statement and put
+
+NOTE Confidence: 0.8689673542976379
+
+00:11:17.311 --> 00:11:20.355
+it into one of my favorite harnesses called π so
+
+NOTE Confidence: 0.8689673542976379
+
+00:11:20.418 --> 00:11:23.906
+Π's a really minimal harness if you haven't heard about
+
+NOTE Confidence: 0.8689673542976379
+
+00:11:23.969 --> 00:11:24.160
+it.
+
+NOTE Confidence: 0.9192387461662292
+
+00:11:24.880 --> 00:11:28.114
+And it's perfect for local models as the entire point
+
+NOTE Confidence: 0.9192387461662292
+
+00:11:28.175 --> 00:11:30.800
+is that it doesn't float the system prompt.
+
+NOTE Confidence: 0.9028551578521729
+
+00:11:30.800 --> 00:11:32.320
+It keeps everything super minimal.
+
+NOTE Confidence: 0.8761747479438782
+
+00:11:32.600 --> 00:11:35.331
+So in this case, I'm using Quant 3.6 running locally
+
+NOTE Confidence: 0.8761747479438782
+
+00:11:35.384 --> 00:11:36.119
+on my MacBook.
+
+NOTE Confidence: 0.911505401134491
+
+00:11:36.640 --> 00:11:40.377
+And I'm basically going to say, you know, process this
+
+NOTE Confidence: 0.911505401134491
+
+00:11:40.447 --> 00:11:43.977
+statement and show me kind of how much I'm spending
+
+NOTE Confidence: 0.911505401134491
+
+00:11:44.046 --> 00:11:46.399
+whatever the different categories.
+
+NOTE Confidence: 0.9516271948814392
+
+00:11:46.840 --> 00:11:48.520
+And so let's see it in action.
+
+NOTE Confidence: 0.9287712574005127
+
+00:11:48.520 --> 00:11:52.531
+So this is running fully locally on my computer for
+
+NOTE Confidence: 0.9287712574005127
+
+00:11:52.610 --> 00:11:55.599
+my most private and private use cases.
+
+NOTE Confidence: 0.9465494751930237
+
+00:11:55.720 --> 00:11:58.807
+And in this case, it's able to write code to
+
+NOTE Confidence: 0.9465494751930237
+
+00:11:58.877 --> 00:11:59.999
+process the PDF.
+
+NOTE Confidence: 0.8620691895484924
+
+00:12:00.520 --> 00:12:02.592
+And now it's able to give me a little bit
+
+NOTE Confidence: 0.8620691895484924
+
+00:12:02.642 --> 00:12:06.080
+of a spending breakdown because it's not processed that information.
+
+NOTE Confidence: 0.9144478440284729
+
+00:12:06.880 --> 00:12:11.218
+Let's see, it's doing a bit of math to figure
+
+NOTE Confidence: 0.9144478440284729
+
+00:12:11.315 --> 00:12:16.040
+out exactly what's going on and then there we go.
+
+NOTE Confidence: 0.9276951551437378
+
+00:12:16.040 --> 00:12:19.000
+So none of this information ever left my computer.
+
+NOTE Confidence: 0.9411236047744751
+
+00:12:19.080 --> 00:12:20.240
+It's been here.
+
+NOTE Confidence: 0.8948613405227661
+
+00:12:20.480 --> 00:12:22.040
+Seems like I'm spending a lot on travel.
+
+NOTE Confidence: 0.7730866074562073
+
+00:12:22.520 --> 00:12:25.120
+I guess I'm overdue for another vacation.
+
+NOTE Confidence: 0.9608494639396667
+
+00:12:26.000 --> 00:12:28.686
+But I think it's really, really useful to be able
+
+NOTE Confidence: 0.9608494639396667
+
+00:12:28.741 --> 00:12:30.879
+to have this level of like good enough.
+
+NOTE Confidence: 0.9684281945228577
+
+00:12:30.960 --> 00:12:34.442
+And a big thing we've seen over the last few
+
+NOTE Confidence: 0.9684281945228577
+
+00:12:34.521 --> 00:12:38.557
+months is that you truly have this idea where local
+
+NOTE Confidence: 0.9684281945228577
+
+00:12:38.636 --> 00:12:42.040
+models are actually viable to do real work.
+
+NOTE Confidence: 0.9634994864463806
+
+00:12:42.360 --> 00:12:45.953
+And another really cool thing that I personally really like
+
+NOTE Confidence: 0.9634994864463806
+
+00:12:46.014 --> 00:12:49.120
+using is using local models for personal harnesses.
+
+NOTE Confidence: 0.8802874088287354
+
+00:12:49.120 --> 00:12:52.745
+So personal agents like Hermes and open Claw because none
+
+NOTE Confidence: 0.8802874088287354
+
+00:12:52.808 --> 00:12:56.052
+of your information ever leaves and you can kind of
+
+NOTE Confidence: 0.8802874088287354
+
+00:12:56.115 --> 00:12:57.960
+start feeding it information.
+
+NOTE Confidence: 0.8782482147216797
+
+00:12:58.200 --> 00:13:00.200
+Everything's living on your computer anyways.
+
+NOTE Confidence: 0.8860219120979309
+
+00:13:01.680 --> 00:13:03.920
+And so I'd love to show you open claw.
+
+NOTE Confidence: 0.9464317560195923
+
+00:13:03.920 --> 00:13:07.257
+One of the cool things that we can do with
+
+NOTE Confidence: 0.9464317560195923
+
+00:13:07.337 --> 00:13:09.880
+open Claw is install it for you.
+
+NOTE Confidence: 0.9033164381980896
+
+00:13:10.040 --> 00:13:11.953
+And so this is like a complete end to end
+
+NOTE Confidence: 0.9033164381980896
+
+00:13:11.999 --> 00:13:12.279
+setup.
+
+NOTE Confidence: 0.6501307487487793
+
+00:13:12.560 --> 00:13:15.040
+I wrote, oh, Llama launch open claw ran it.
+
+NOTE Confidence: 0.8428753614425659
+
+00:13:15.360 --> 00:13:19.951
+It's installing open Claw lets me choose a model and
+
+NOTE Confidence: 0.8428753614425659
+
+00:13:20.039 --> 00:13:22.600
+gets me set up right with it.
+
+NOTE Confidence: 0.8782491683959961
+
+00:13:23.080 --> 00:13:26.062
+And so within like 30 seconds, I'm able to go
+
+NOTE Confidence: 0.8782491683959961
+
+00:13:26.129 --> 00:13:30.504
+from absolutely nothing installed to and running open client since
+
+NOTE Confidence: 0.8782491683959961
+
+00:13:30.570 --> 00:13:32.360
+ready to do my work for me.
+
+NOTE Confidence: 0.9095984697341919
+
+00:13:35.000 --> 00:13:39.183
+Cool And with that, we'd like to open up the
+
+NOTE Confidence: 0.9095984697341919
+
+00:13:39.278 --> 00:13:44.413
+floor for any questions that you may have around local
+
+NOTE Confidence: 0.9095984697341919
+
+00:13:44.508 --> 00:13:45.840
+cloud O llama.
+
+NOTE Confidence: 0.908459484577179
+
+00:13:47.000 --> 00:13:49.657
+So welcome to come up to the mic and then
+
+NOTE Confidence: 0.908459484577179
+
+00:13:49.722 --> 00:13:52.120
+we'll also hang around after as well.
+
+NOTE Confidence: 0.5853646397590637
+
+00:13:56.440 --> 00:13:58.080
+Hello stops working.
+
+NOTE Confidence: 0.8362360000610352
+
+00:13:58.080 --> 00:14:01.424
+I was wondering since the focus is on this part
+
+NOTE Confidence: 0.8362360000610352
+
+00:14:01.495 --> 00:14:04.200
+of the focus was on running on device.
+
+NOTE Confidence: 0.8466290235519409
+
+00:14:04.200 --> 00:14:04.480
+Sorry.
+
+NOTE Confidence: 0.9613600969314575
+
+00:14:04.480 --> 00:14:05.720
+Would you be able to speak louder?
+
+NOTE Confidence: 0.7111622095108032
+
+00:14:06.120 --> 00:14:07.120
+Sure, I'll try.
+
+NOTE Confidence: 0.8925456404685974
+
+00:14:08.200 --> 00:14:11.187
+So I was wondering some part, since part of the
+
+NOTE Confidence: 0.8925456404685974
+
+00:14:11.250 --> 00:14:14.429
+focus is on running on the device itself, what are
+
+NOTE Confidence: 0.8925456404685974
+
+00:14:14.492 --> 00:14:17.988
+your thoughts on at the edge devices like mobile phones
+
+NOTE Confidence: 0.8925456404685974
+
+00:14:18.052 --> 00:14:21.293
+or smaller systems that may not have the same power
+
+NOTE Confidence: 0.8925456404685974
+
+00:14:21.357 --> 00:14:22.120
+as a laptop?
+
+NOTE Confidence: 0.9643881320953369
+
+00:14:25.400 --> 00:14:28.346
+Sorry, just to repeat the question, did you mean what
+
+NOTE Confidence: 0.9643881320953369
+
+00:14:28.402 --> 00:14:30.960
+type of models are good for different systems?
+
+NOTE Confidence: 0.8987212181091309
+
+00:14:32.120 --> 00:14:36.234
+Not necessarily what type of models, but specifically if there
+
+NOTE Confidence: 0.8987212181091309
+
+00:14:36.300 --> 00:14:39.950
+are plans to have all LAMA integrations directly at the
+
+NOTE Confidence: 0.8987212181091309
+
+00:14:40.017 --> 00:14:43.733
+edge for again maybe iPhones or Android devices that may
+
+NOTE Confidence: 0.8987212181091309
+
+00:14:43.800 --> 00:14:46.720
+not have the same power as your regular Mac.
+
+NOTE Confidence: 0.9120138883590698
+
+00:14:47.720 --> 00:14:50.400
+Yeah, we haven't targeted mobile devices yet.
+
+NOTE Confidence: 0.8292815685272217
+
+00:14:50.400 --> 00:14:54.833
+There are people who have experimenting, been experimenting, bringing Olama
+
+NOTE Confidence: 0.8292815685272217
+
+00:14:54.892 --> 00:14:57.079
+on mobile devices and it it does run.
+
+NOTE Confidence: 0.8542646169662476
+
+00:14:57.240 --> 00:15:01.418
+So Olama's absolutely enabled on Qualcomm Snapdragon devices and it's
+
+NOTE Confidence: 0.8542646169662476
+
+00:15:01.479 --> 00:15:03.719
+the same chipset that runs on mobile.
+
+NOTE Confidence: 0.9733672738075256
+
+00:15:03.920 --> 00:15:05.640
+And we have seen users do that.
+
+NOTE Confidence: 0.904836893081665
+
+00:15:06.040 --> 00:15:09.936
+We're not directly targeting mobile devices yet because we want
+
+NOTE Confidence: 0.904836893081665
+
+00:15:09.998 --> 00:15:12.720
+to target the mainstream use cases for work.
+
+NOTE Confidence: 0.867977499961853
+
+00:15:13.560 --> 00:15:13.840
+Thank you.
+
+NOTE Confidence: 0.8819053769111633
+
+00:15:17.360 --> 00:15:19.844
+Any other questions, feel free to hop onto the mic
+
+NOTE Confidence: 0.8819053769111633
+
+00:15:19.893 --> 00:15:22.079
+or raise your hand and we'll guide you over.
+
+NOTE Confidence: 0.7984102964401245
+
+00:15:22.800 --> 00:15:24.840
+Do you want to drop to the mic?
+
+NOTE Confidence: 0.7666131854057312
+
+00:15:29.840 --> 00:15:30.080
+Yeah.
+
+NOTE Confidence: 0.8314895629882812
+
+00:15:30.080 --> 00:15:33.300
+Can you talk a little bit about VRAM and unified
+
+NOTE Confidence: 0.8314895629882812
+
+00:15:33.367 --> 00:15:36.320
+RAM and sort of model sizes context windows?
+
+NOTE Confidence: 0.9001975655555725
+
+00:15:38.160 --> 00:15:41.156
+I saw that at least in the demo, you had
+
+NOTE Confidence: 0.9001975655555725
+
+00:15:41.231 --> 00:15:42.880
+a 262K context window.
+
+NOTE Confidence: 0.9445489645004272
+
+00:15:43.240 --> 00:15:44.680
+What kind of a machine do you have?
+
+NOTE Confidence: 0.9276012778282166
+
+00:15:44.680 --> 00:15:45.920
+And you know, what are the specs?
+
+NOTE Confidence: 0.23365619778633118
+
+00:15:46.200 --> 00:15:46.440
+Yeah.
+
+NOTE Confidence: 0.755707859992981
+
+00:15:46.440 --> 00:15:47.520
+Is it a quantized model?
+
+NOTE Confidence: 0.9410779476165771
+
+00:15:48.040 --> 00:15:48.480
+For sure.
+
+NOTE Confidence: 0.9164705276489258
+
+00:15:48.480 --> 00:15:51.745
+So obviously like in a llama, we have a default
+
+NOTE Confidence: 0.9164705276489258
+
+00:15:51.814 --> 00:15:55.079
+quantization that we recommend for most things.
+
+NOTE Confidence: 0.8600010871887207
+
+00:15:55.080 --> 00:15:58.325
+And now we also have support for MLX where we
+
+NOTE Confidence: 0.8600010871887207
+
+00:15:58.397 --> 00:15:59.840
+actually run NVFP 4.
+
+NOTE Confidence: 0.8874915838241577
+
+00:16:00.720 --> 00:16:02.982
+And with all that, I have a Max out Max
+
+NOTE Confidence: 0.8874915838241577
+
+00:16:03.040 --> 00:16:05.999
+so I can run a full context length, especially with
+
+NOTE Confidence: 0.8874915838241577
+
+00:16:06.057 --> 00:16:08.668
+a smaller model and get, you know, most of my
+
+NOTE Confidence: 0.8874915838241577
+
+00:16:08.726 --> 00:16:11.917
+work done and not really have to worry about compaction
+
+NOTE Confidence: 0.8874915838241577
+
+00:16:11.975 --> 00:16:12.440
+as much.
+
+NOTE Confidence: 0.8936619758605957
+
+00:16:12.920 --> 00:16:15.913
+Because what tends to happen as soon as you're running
+
+NOTE Confidence: 0.8936619758605957
+
+00:16:15.968 --> 00:16:19.627
+agentic workloads locally is you start running into being hardware
+
+NOTE Confidence: 0.8936619758605957
+
+00:16:19.683 --> 00:16:23.120
+constraint where you can't support the maximum context length.
+
+NOTE Confidence: 0.8804082870483398
+
+00:16:23.440 --> 00:16:26.244
+So unified memory is great in the sense that it
+
+NOTE Confidence: 0.8804082870483398
+
+00:16:26.304 --> 00:16:29.645
+lets you have larger context lengths with a slight trade
+
+NOTE Confidence: 0.8804082870483398
+
+00:16:29.705 --> 00:16:32.330
+off of that speed that you would get on, you
+
+NOTE Confidence: 0.8804082870483398
+
+00:16:32.390 --> 00:16:34.239
+know, a CUDA card, for example.
+
+NOTE Confidence: 0.9326907992362976
+
+00:16:35.440 --> 00:16:38.146
+But at the same time, you get to work a
+
+NOTE Confidence: 0.9326907992362976
+
+00:16:38.216 --> 00:16:41.269
+lot more with a larger memory, so you get to
+
+NOTE Confidence: 0.9326907992362976
+
+00:16:41.339 --> 00:16:43.560
+support harder and harder tasks.
+
+NOTE Confidence: 0.9590155482292175
+
+00:16:43.560 --> 00:16:45.809
+And I'm sure that as you know, time goes on,
+
+NOTE Confidence: 0.9590155482292175
+
+00:16:45.860 --> 00:16:48.877
+even unified memory will get better in terms of performance
+
+NOTE Confidence: 0.9590155482292175
+
+00:16:48.928 --> 00:16:49.440
+and speed.
+
+NOTE Confidence: 0.8681843280792236
+
+00:16:50.400 --> 00:16:53.583
+On the hardware front, we've been seeing most of the
+
+NOTE Confidence: 0.8681843280792236
+
+00:16:53.644 --> 00:16:57.868
+hardware partners are getting into unified memory started with Apple,
+
+NOTE Confidence: 0.8681843280792236
+
+00:16:57.930 --> 00:17:01.725
+NVIDIA and Microsoft just announced RTX Spark that has unified
+
+NOTE Confidence: 0.8681843280792236
+
+00:17:01.787 --> 00:17:03.439
+memory up to 128 gigabytes.
+
+NOTE Confidence: 0.8909545540809631
+
+00:17:03.760 --> 00:17:07.055
+Of course, AMD has the strict, say, Halo platform that
+
+NOTE Confidence: 0.8909545540809631
+
+00:17:07.116 --> 00:17:09.679
+also can go up to 128 gigabytes I believe.
+
+NOTE Confidence: 0.9122194051742554
+
+00:17:10.160 --> 00:17:13.527
+And and so we're seeing across the board different hardware
+
+NOTE Confidence: 0.9122194051742554
+
+00:17:13.585 --> 00:17:15.640
+teams moving towards unified memory.
+
+NOTE Confidence: 0.7644447088241577
+
+00:17:18.400 --> 00:17:25.236
+Hey, building on Apple Silicon devices, building on device platform
+
+NOTE Confidence: 0.7644447088241577
+
+00:17:25.338 --> 00:17:30.236
+for models that are running on iPhone and Mac OS
+
+NOTE Confidence: 0.7644447088241577
+
+00:17:30.338 --> 00:17:33.399
+and Fission Pro also watch OS.
+
+NOTE Confidence: 0.7381141781806946
+
+00:17:34.160 --> 00:17:37.160
+Tried alarm a couple weeks back.
+
+NOTE Confidence: 0.5981074571609497
+
+00:17:37.720 --> 00:17:39.960
+Are you still using Llama CPP under the hood?
+
+NOTE Confidence: 0.8408274054527283
+
+00:17:40.560 --> 00:17:44.850
+Any plan to build your own inference engine by the
+
+NOTE Confidence: 0.8408274054527283
+
+00:17:44.936 --> 00:17:45.280
+way?
+
+NOTE Confidence: 0.8984148502349854
+
+00:17:45.840 --> 00:17:49.400
+So we do have our own MLX inference engine.
+
+NOTE Confidence: 0.9396120309829712
+
+00:17:49.400 --> 00:17:52.336
+So if you are on an Apple device, highly recommend
+
+NOTE Confidence: 0.9396120309829712
+
+00:17:52.395 --> 00:17:55.920
+using that one just because you got like faster performance.
+
+NOTE Confidence: 0.9372550845146179
+
+00:17:56.240 --> 00:17:59.094
+And for that you just need to pull one of
+
+NOTE Confidence: 0.9372550845146179
+
+00:17:59.164 --> 00:18:01.879
+the MLX models from our model registry.
+
+NOTE Confidence: 0.9097004532814026
+
+00:18:03.320 --> 00:18:03.600
+Thank you.
+
+NOTE Confidence: 0.9621152877807617
+
+00:18:07.160 --> 00:18:08.800
+Any other questions?
+
+NOTE Confidence: 0.39289602637290955
+
+00:18:09.600 --> 00:18:17.380
+Yeah, yeah, sure.
+
+NOTE Confidence: 0.8548465371131897
+
+00:18:17.900 --> 00:18:22.010
+So the question was what's the best coding model on
+
+NOTE Confidence: 0.8548465371131897
+
+00:18:22.091 --> 00:18:23.300
+128 GB MacBook?
+
+NOTE Confidence: 0.7760786414146423
+
+00:18:24.020 --> 00:18:28.847
+Honestly, one of my favorites is 1362070 if I'm remembering
+
+NOTE Confidence: 0.7760786414146423
+
+00:18:28.929 --> 00:18:31.219
+correctly, as well as Gemma.
+
+NOTE Confidence: 0.8429058790206909
+
+00:18:31.820 --> 00:18:34.081
+I kind of use them in pairs to go and
+
+NOTE Confidence: 0.8429058790206909
+
+00:18:34.142 --> 00:18:37.320
+write like smaller scripts for me for the most part.
+
+NOTE Confidence: 0.8805105090141296
+
+00:18:39.160 --> 00:18:43.829
+Honestly like a little bit underrated, but even the GB2SS120B
+
+NOTE Confidence: 0.8805105090141296
+
+00:18:43.906 --> 00:18:48.040
+works really well for doing scripting and other tasks.
+
+NOTE Confidence: 0.3424835801124573
+
+00:18:51.200 --> 00:18:51.800
+Awesome, I.
+
+NOTE Confidence: 0.7206840515136719
+
+00:18:52.720 --> 00:18:55.383
+Was going to add the Gemma 4 dense models are
+
+NOTE Confidence: 0.7206840515136719
+
+00:18:55.442 --> 00:18:57.039
+actually really performant.
+
+NOTE Confidence: 0.7862510085105896
+
+00:18:59.000 --> 00:19:00.361
+And you'd be able to run them on a full
+
+NOTE Confidence: 0.7862510085105896
+
+00:19:00.396 --> 00:19:01.199
+context length as well.
+
+NOTE Confidence: 0.9111955165863037
+
+00:19:07.120 --> 00:19:07.640
+Yeah.
+
+NOTE Confidence: 0.9187322854995728
+
+00:19:07.680 --> 00:19:10.366
+So, so the question is like how do you choose
+
+NOTE Confidence: 0.9187322854995728
+
+00:19:10.425 --> 00:19:11.560
+which model to use?
+
+NOTE Confidence: 0.9104238152503967
+
+00:19:12.480 --> 00:19:15.240
+It really depends on kind of your task for coding.
+
+NOTE Confidence: 0.8753669857978821
+
+00:19:16.240 --> 00:19:19.536
+You know, different models will perform better versus like personal
+
+NOTE Confidence: 0.8753669857978821
+
+00:19:19.585 --> 00:19:22.291
+agents sometimes or you know, even if you're just using
+
+NOTE Confidence: 0.8753669857978821
+
+00:19:22.340 --> 00:19:25.046
+for like a chat use case or classification for whatever
+
+NOTE Confidence: 0.8753669857978821
+
+00:19:25.095 --> 00:19:25.439
+reason.
+
+NOTE Confidence: 0.9134541153907776
+
+00:19:26.400 --> 00:19:29.372
+And a big way that I recommend people to go
+
+NOTE Confidence: 0.9134541153907776
+
+00:19:29.441 --> 00:19:33.174
+about choosing a model is honestly like trying a bunch
+
+NOTE Confidence: 0.9134541153907776
+
+00:19:33.243 --> 00:19:33.519
+out.
+
+NOTE Confidence: 0.9027082324028015
+
+00:19:33.880 --> 00:19:37.388
+We're going to start doing better recommendations in terms of,
+
+NOTE Confidence: 0.9027082324028015
+
+00:19:37.444 --> 00:19:40.217
+you know, if you're using a certain harness of as
+
+NOTE Confidence: 0.9027082324028015
+
+00:19:40.274 --> 00:19:42.763
+part of a llama launch, you'd be able to see
+
+NOTE Confidence: 0.9027082324028015
+
+00:19:42.820 --> 00:19:45.423
+kind of which are the up and date models which
+
+NOTE Confidence: 0.9027082324028015
+
+00:19:45.479 --> 00:19:47.799
+you can use best for your system as well.
+
+NOTE Confidence: 0.9220856428146362
+
+00:19:48.840 --> 00:19:51.181
+But for the most part, if you're building like a
+
+NOTE Confidence: 0.9220856428146362
+
+00:19:51.230 --> 00:19:53.474
+bespoke app, then the best thing you can do is
+
+NOTE Confidence: 0.9220856428146362
+
+00:19:53.522 --> 00:19:55.815
+try a bunch out, benchmark it and see which one
+
+NOTE Confidence: 0.9220856428146362
+
+00:19:55.864 --> 00:19:56.839
+you prefer the most.
+
+NOTE Confidence: 0.8018020987510681
+
+00:19:59.320 --> 00:20:00.600
+And I think with that, well.
+
+NOTE Confidence: 0.8262813091278076
+
+00:20:01.200 --> 00:20:02.480
+Conclude the session.
+
+NOTE Confidence: 0.7468464374542236
+
+00:20:02.760 --> 00:20:04.160
+We're going to hang around for a while.
+
+NOTE Confidence: 0.8626918792724609
+
+00:20:04.360 --> 00:20:05.200
+Come chat with us.
+
+NOTE Confidence: 0.9553007483482361
+
+00:20:05.200 --> 00:20:06.880
+We have a bunch of stickers to give away.
+
+NOTE Confidence: 0.9469677805900574
+
+00:20:07.760 --> 00:20:08.200
+Thank you.
+
+NOTE Confidence: 0.8494518399238586
+
+00:20:08.600 --> 00:20:09.000
+Thank you.
+

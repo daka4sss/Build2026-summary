@@ -30,58 +30,58 @@ Build 2026 の Foundry のストーリーは、エージェント型 AI が「�
 ### A. モデル・コスト・ポストトレーニング 〜 経済性と品質のエンジンルーム
 モデルの選定・ルーティング・蒸留・強化学習チューニングを扱う。
 
-| ID | セッション | ひとことで言うと |
-|----|-----------|------------------|
-| [BRK230](BRK230/summary_ja.md) | Build smarter AI systems as models and costs evolve | 「選定→評価→最適化→スケール」の4フェーズ法。単一モデルを追わず eval を軸に品質・コスト・遅延を山登り改善。 |
-| [BRK232](BRK232/summary_ja.md) | Post-Training & Deploying Open Source Reasoning Models | 蒸留+SFT+RFT で小型安価モデル(Qwen 14B)をフロンティア(GPT-5.2)品質へ。約1/10コストでエージェント化。 |
-| [BRK231](BRK231/summary_ja.md) | Deploy. Observe. Learn. RL for production agents | Foundry ポストトレーニングの4デモ。IPを自社の重みに残しつつトークン浪費エージェントを経済的に維持。 |
-| [BRKSP91](BRKSP91/summary_ja.md) | Turn foundation models into production AI (Fireworks AI) | 基盤モデルを本番 AI へ。Fireworks AI × Harvey AI の実適用事例。 |
-| [BRKSP94](BRKSP94/summary_ja.md) | Orchestrate special agents with NVIDIA Nemotron | NVIDIA Nemotron モデル群で専門エージェントをオーケストレーション、Foundry Hosted Agents 実演。 |
-| [DEM321](DEM321/summary_ja.md) | Post-Training & Deploying OSS Reasoning Models (デモ) | トークンコスト急増問題に対し OSS モデルのポストトレーニングで品質維持＆コスト削減。 |
-| [DEM322](DEM322/summary_ja.md) | Smaller, faster, smarter: Distilling models | 本番トレースから小型モデルへ知識蒸留。AI を"贅沢品"から"ユーティリティ"へ民主化。 |
-| [DEM323](DEM323/summary_ja.md) | Under the hood of Microsoft AI models | 基調講演で発表された Microsoft AI の新7モデルを哲学・アーキ・学習レシピまで深掘り。 |
+| ID | セッション | Speaker | ひとことで言うと |
+|----|-----------|---------|------------------|
+| [BRK230](Sessions/BRK230/summary_ja.md) | Build smarter AI systems as models and costs evolve | Yina Arenas, Naomi Moneypenny | 「選定→評価→最適化→スケール」の4フェーズ法。単一モデルを追わず eval を軸に品質・コスト・遅延を山登り改善。 |
+| [BRK232](Sessions/BRK232/summary_ja.md) | Post-Training & Deploying Open Source Reasoning Models | Chris, Vijay, Manoj | 蒸留+SFT+RFT で小型安価モデル(Qwen 14B)をフロンティア(GPT-5.2)品質へ。約1/10コストでエージェント化。 |
+| [BRK231](Sessions/BRK231/summary_ja.md) | Deploy. Observe. Learn. RL for production agents | Alicia Frame, Omkar More | Foundry ポストトレーニングの4デモ。IPを自社の重みに残しつつトークン浪費エージェントを経済的に維持。 |
+| [BRKSP91](Sessions/BRKSP91/summary_ja.md) | Turn foundation models into production AI (Fireworks AI) | Vivek Chauhan, Jed (Fireworks AI), Nico Grupin (Harvey AI) | 基盤モデルを本番 AI へ。Fireworks AI × Harvey AI の実適用事例。 |
+| [BRKSP94](Sessions/BRKSP94/summary_ja.md) | Orchestrate special agents with NVIDIA Nemotron | Joey, Steven McCullough (NVIDIA) | NVIDIA Nemotron モデル群で専門エージェントをオーケストレーション、Foundry Hosted Agents 実演。 |
+| [DEM321](Sessions/DEM321/summary_ja.md) | Post-Training & Deploying OSS Reasoning Models (デモ) | Chris, Vijay | トークンコスト急増問題に対し OSS モデルのポストトレーニングで品質維持＆コスト削減。 |
+| [DEM322](Sessions/DEM322/summary_ja.md) | Smaller, faster, smarter: Distilling models | William (Foundry Fine Tuning) | 本番トレースから小型モデルへ知識蒸留。AI を"贅沢品"から"ユーティリティ"へ民主化。 |
+| [DEM323](Sessions/DEM323/summary_ja.md) | Under the hood of Microsoft AI models | Dave Citron (CVP, Microsoft AI) | 基調講演で発表された Microsoft AI の新7モデルを哲学・アーキ・学習レシピまで深掘り。 |
 
 ### B. エージェント構築 〜 コンテキスト・ツール・スケール
 モデルに「正しい知識・ツール・本番への道」を与えてエージェント化する。
 
-| ID | セッション | ひとことで言うと |
-|----|-----------|------------------|
-| [BRK240](BRK240/summary_ja.md) | Build context-aware agents: From data to decisions | **Microsoft IQ**（Work/Web/Foundry/Fabric IQ）を発表。「エージェントはコンテキスト不足で失敗する」を実演。 |
-| [BRK246](BRK246/summary_ja.md) | Foundry IQ: enterprise knowledge & agentic retrieval | Foundry IQ ライブツアー。ファイル→1分で自動MCPサーバ、サーバーレス、第2世代エージェント検索。 |
-| [BRK242](BRK242/summary_ja.md) | Turn your agents into action: tools, APIs, documents | **Toolbox** で任意ツールを単一の統制MCPエンドポイントに集約。**Content Understanding** で乱雑な文書を整形。 |
-| [BRK241](BRK241/summary_ja.md) | From prototype to production: agents at scale | 「自律ファイバー障害対応エージェント」を Build→Deploy→Operate で実演。Foundry を本番 OS と位置付け。 |
-| [BRK243](BRK243/summary_ja.md) | Claw and agent harness in Microsoft Foundry | エージェントハーネスの3つの道。Microsoft Agent Framework と Autopilot Agents で Teams/M365 へ公開。 |
-| [DEM331](DEM331/summary_ja.md) | Turn APIs, tools, and data into real agent velocity | **Content Understanding** で乱雑なマルチモーダル文書を単一パイプラインで構造化データへ。 |
-| [DEM332](DEM332/summary_ja.md) | From zero to teammate in 25 min: Teams agent live | 25分でゼロから Teams 上で動くエージェントをライブ構築。 |
-| [DEM333](DEM333/summary_ja.md) | How Foundry integrates with OSS frameworks | LangChain/LangGraph + MCP/A2A/OpenTelemetry で作ったエージェントを Foundry で本番化。 |
+| ID | セッション | Speaker | ひとことで言うと |
+|----|-----------|---------|------------------|
+| [BRK240](Sessions/BRK240/summary_ja.md) | Build context-aware agents: From data to decisions | Amanda Silver, Marco Casalaina | **Microsoft IQ**（Work/Web/Foundry/Fabric IQ）を発表。「エージェントはコンテキスト不足で失敗する」を実演。 |
+| [BRK246](Sessions/BRK246/summary_ja.md) | Foundry IQ: enterprise knowledge & agentic retrieval | Pablo | Foundry IQ ライブツアー。ファイル→1分で自動MCPサーバ、サーバーレス、第2世代エージェント検索。 |
+| [BRK242](Sessions/BRK242/summary_ja.md) | Turn your agents into action: tools, APIs, documents | Maria Nagaga, Joe Flick | **Toolbox** で任意ツールを単一の統制MCPエンドポイントに集約。**Content Understanding** で乱雑な文書を整形。 |
+| [BRK241](Sessions/BRK241/summary_ja.md) | From prototype to production: agents at scale | Tina Schackman, Jeff Holland | 「自律ファイバー障害対応エージェント」を Build→Deploy→Operate で実演。Foundry を本番 OS と位置付け。 |
+| [BRK243](Sessions/BRK243/summary_ja.md) | Claw and agent harness in Microsoft Foundry | Sean Henry, Glenn, Amanda | エージェントハーネスの3つの道。Microsoft Agent Framework と Autopilot Agents で Teams/M365 へ公開。 |
+| [DEM331](Sessions/DEM331/summary_ja.md) | Turn APIs, tools, and data into real agent velocity | （特定できず） | **Content Understanding** で乱雑なマルチモーダル文書を単一パイプラインで構造化データへ。 |
+| [DEM332](Sessions/DEM332/summary_ja.md) | From zero to teammate in 25 min: Teams agent live | Umang, Aamir | 25分でゼロから Teams 上で動くエージェントをライブ構築。 |
+| [DEM333](Sessions/DEM333/summary_ja.md) | How Foundry integrates with OSS frameworks | Facundo, Nakul Kumar | LangChain/LangGraph + MCP/A2A/OpenTelemetry で作ったエージェントを Foundry で本番化。 |
 
 ### C. 観測・統制・価値証明（ガバナンス & ROI）
 エージェントを信頼でき、制御でき、安全で、ROI 説明可能にする。
 
-| ID | セッション | ひとことで言うと |
-|----|-----------|------------------|
-| [BRK250](BRK250/summary_ja.md) | Observe and control agents across any framework (OSS) | 責任あるAIの「識別→評価→制御→監視」サイクル。プロンプトではなく決定論的ガードレールで信頼を担保。 |
-| [BRK252](BRK252/summary_ja.md) | From observability to ROI for AI agents | Foundry Observability。任意フレームワークのトレーシング、トレース根拠の評価、自動最適化、ROI 追跡。 |
-| [BRK251](BRK251/summary_ja.md) | Build secure & enterprise-ready agents with Agent 365 | **Agent 365** を発表。あらゆるエージェント（自社/パートナー/外部Bedrock・Vertex）を SDK と M365管理センターで統制。 |
-| [DEM340](DEM340/summary_ja.md) | Build work-ready agents + Work IQ, govern with Agent 365 | Foundry（構築）と Agent 365（統制）を開発者/IT管理者の両視点で一気通貫デモ。 |
-| [DEM341](DEM341/summary_ja.md) | Any agent, any cloud: tracing with Foundry+OpenTelemetry | GCP/AWS 上のエージェントも OpenTelemetry で標準化トレーシング。 |
-| [OD831](OD831/summary_ja.md) | Govern AI models, tools, agents with Azure API Management | APIM を AI ゲートウェイ化し、モデル・ツール・エージェントをエンタープライズ統制。 |
-| [OD840](OD840/summary_ja.md) | Enable agents for enterprises using Agent 365 SDK | Agent 365 SDK / CLI でエージェントをエンタープライズ対応に。セキュリティ視点も。 |
+| ID | セッション | Speaker | ひとことで言うと |
+|----|-----------|---------|------------------|
+| [BRK250](Sessions/BRK250/summary_ja.md) | Observe and control agents across any framework (OSS) | Sarah Bird, Sandeep Atluri | 責任あるAIの「識別→評価→制御→監視」サイクル。プロンプトではなく決定論的ガードレールで信頼を担保。 |
+| [BRK252](Sessions/BRK252/summary_ja.md) | From observability to ROI for AI agents | Sebastian, Felicia, Vivek | Foundry Observability。任意フレームワークのトレーシング、トレース根拠の評価、自動最適化、ROI 追跡。 |
+| [BRK251](Sessions/BRK251/summary_ja.md) | Build secure & enterprise-ready agents with Agent 365 | Neda, Kendra, Aarthi, Ray (Genspark) | **Agent 365** を発表。あらゆるエージェント（自社/パートナー/外部Bedrock・Vertex）を SDK と M365管理センターで統制。 |
+| [DEM340](Sessions/DEM340/summary_ja.md) | Build work-ready agents + Work IQ, govern with Agent 365 | Sri | Foundry（構築）と Agent 365（統制）を開発者/IT管理者の両視点で一気通貫デモ。 |
+| [DEM341](Sessions/DEM341/summary_ja.md) | Any agent, any cloud: tracing with Foundry+OpenTelemetry | Hanshi, Nak Kumar | GCP/AWS 上のエージェントも OpenTelemetry で標準化トレーシング。 |
+| [OD831](Sessions/OD831/summary_ja.md) | Govern AI models, tools, agents with Azure API Management | Anish Tallapureddy, Mike Budzynski, Sreekanth Thirthala | APIM を AI ゲートウェイ化し、モデル・ツール・エージェントをエンタープライズ統制。 |
+| [OD840](Sessions/OD840/summary_ja.md) | Enable agents for enterprises using Agent 365 SDK | Jeremiah Follis, Sunil Garg | Agent 365 SDK / CLI でエージェントをエンタープライズ対応に。セキュリティ視点も。 |
 
 ### D. プラットフォーム・OSS・Claude・キーノート裏側
 Azure インフラの内側、OSS ランタイム、Claude 統合、業界横断トピック。
 
-| ID | セッション | ひとことで言うと |
-|----|-----------|------------------|
-| [BRK226](BRK226/summary_ja.md) | Inside Azure innovations with Mark Russinovich | Azure CTO による恒例セッション。HW〜OS〜セキュリティ〜AI推論最適化までデモ付きで公開。 |
-| [BRK225](BRK225/summary_ja.md) | Data, apps, and agents: future of app dev with Rayfin | Fabric/Power BI/Replit を交えたデータ×アプリ×エージェントの次世代アプリ開発。 |
-| [BRK233](BRK233/summary_ja.md) | Software Defensibility in the era of AI coding | Chip Huyen が AI コーディング時代の競合優位（モート）の変質と残る問題空間を論じる。 |
-| [BRK235](BRK235/summary_ja.md) | Local models, developer control, future of AI runtimes | Ollama 共同創業者によるローカル/クラウド・ハイブリッド実行とオープンモデル。 |
-| [BRK245](BRK245/summary_ja.md) | Build the thing that builds the thing | OpenClaw メンテナーがコーディングエージェントの自律ループを閉じる自作ツール群を紹介。 |
-| [LIVE144](LIVE144/summary_ja.md) | Behind the Keynote: OpenClaw on Windows | キーノートデモ「OpenClaw の Windows 動作」の舞台裏を Scott Hanselman が語る対談。 |
-| [DEMSP388](DEMSP388/summary_ja.md) | Ship faster with Claude Code and Cowork in Foundry | Anthropic が Foundry 上の Claude Code でエージェンティック・コーディングを実演。 |
-| [ODSP934](ODSP934/summary_ja.md) | Unlock Claude in Microsoft Foundry | Microsoft × Anthropic。Foundry で Claude を本番導入する方法。 |
-| [OD839](OD839/summary_ja.md) | AI for industrial innovation and sovereign control | 接続断・主権要件の厳しい産業/公共環境で完全ディスコネクト AI を運用。 |
+| ID | セッション | Speaker | ひとことで言うと |
+|----|-----------|---------|------------------|
+| [BRK226](Sessions/BRK226/summary_ja.md) | Inside Azure innovations with Mark Russinovich | Mark Russinovich (Azure CTO) | Azure CTO による恒例セッション。HW〜OS〜セキュリティ〜AI推論最適化までデモ付きで公開。 |
+| [BRK225](Sessions/BRK225/summary_ja.md) | Data, apps, and agents: future of app dev with Rayfin | Ben, Sachin, Sujata, Carl (Replit) | Fabric/Power BI/Replit を交えたデータ×アプリ×エージェントの次世代アプリ開発。 |
+| [BRK233](Sessions/BRK233/summary_ja.md) | Software Defensibility in the era of AI coding | Chip Huyen | Chip Huyen が AI コーディング時代の競合優位（モート）の変質と残る問題空間を論じる。 |
+| [BRK235](Sessions/BRK235/summary_ja.md) | Local models, developer control, future of AI runtimes | Michael, Parth (Ollama) | Ollama 共同創業者によるローカル/クラウド・ハイブリッド実行とオープンモデル。 |
+| [BRK245](Sessions/BRK245/summary_ja.md) | Build the thing that builds the thing | Peter (OpenClaw) | OpenClaw メンテナーがコーディングエージェントの自律ループを閉じる自作ツール群を紹介。 |
+| [LIVE144](Sessions/LIVE144/summary_ja.md) | Behind the Keynote: OpenClaw on Windows | Monica Cisneros, Scott Hanselman | キーノートデモ「OpenClaw の Windows 動作」の舞台裏を Scott Hanselman が語る対談。 |
+| [DEMSP388](Sessions/DEMSP388/summary_ja.md) | Ship faster with Claude Code and Cowork in Foundry | Caroline Matthews (Anthropic) | Anthropic が Foundry 上の Claude Code でエージェンティック・コーディングを実演。 |
+| [ODSP934](Sessions/ODSP934/summary_ja.md) | Unlock Claude in Microsoft Foundry | Keiji Kanazawa, Caroline Matthews (Anthropic) | Microsoft × Anthropic。Foundry で Claude を本番導入する方法。 |
+| [OD839](Sessions/OD839/summary_ja.md) | AI for industrial innovation and sovereign control | Inbal Sagiv | 接続断・主権要件の厳しい産業/公共環境で完全ディスコネクト AI を運用。 |
 
 ---
 
@@ -93,10 +93,11 @@ build-transcripts/
 ├── _index.md                  # 取得結果の生インデックス（バイト数・ステータス等）
 ├── manifest.json              # 取得メタデータ（ID, title, description, asset_id, route, bytes）
 ├── manifest_more.json         # 追加取得分のメタデータ
-└── {SESSION_ID}/
-    ├── transcript_raw.vtt     # 取得した生 WebVTT（タイムスタンプ付き）
-    ├── transcript_clean.txt   # クリーニング済みプレーンテキスト
-    └── summary_ja.md          # 日本語の詳細まとめ
+└── Sessions/                  # 全セッションフォルダを格納
+    └── {SESSION_ID}/
+        ├── transcript_raw.vtt     # 取得した生 WebVTT（タイムスタンプ付き）
+        ├── transcript_clean.txt   # クリーニング済みプレーンテキスト
+        └── summary_ja.md          # 日本語の詳細まとめ
 ```
 
 ## ℹ️ 取得方法について

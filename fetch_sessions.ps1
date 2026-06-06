@@ -2,7 +2,9 @@ $ProgressPreference = 'SilentlyContinue'
 $ErrorActionPreference = 'Continue'
 
 $root = 'C:\Users\daka\vscode\build-blog\build-transcripts'
+$sessionsDir = Join-Path $root 'Sessions'
 New-Item -ItemType Directory -Force -Path $root | Out-Null
+New-Item -ItemType Directory -Force -Path $sessionsDir | Out-Null
 
 $ids = @('BRK230','BRK232','BRK240','BRK241','BRK242','BRK243','BRK246','BRK250','BRK251','BRK252','BRKSP91','BRKSP94')
 
@@ -24,7 +26,7 @@ $manifest = @()
 
 foreach ($id in $ids) {
     Write-Output "=== $id ==="
-    $dir = Join-Path $root $id
+    $dir = Join-Path $sessionsDir $id
     New-Item -ItemType Directory -Force -Path $dir | Out-Null
 
     $rec = [ordered]@{

@@ -1,6 +1,7 @@
 $ProgressPreference='SilentlyContinue'
 $ErrorActionPreference='Continue'
 $root='C:\Users\daka\vscode\build-blog\build-transcripts'
+$sessionsDir=Join-Path $root 'Sessions'
 $ids=@('BRK235')
 
 function Get-MetaContent($html,$key){
@@ -14,7 +15,7 @@ function Get-MetaContent($html,$key){
 $results=@()
 foreach($id in $ids){
   Write-Output "=== $id ==="
-  $dir=Join-Path $root $id
+  $dir=Join-Path $sessionsDir $id
   New-Item -ItemType Directory -Force -Path $dir | Out-Null
   $rec=[ordered]@{id=$id;url="https://build.microsoft.com/en-US/sessions/$id";title='';description='';asset_id='';caption_route='';caption_bytes=0;clean_chars=0;status='';note=''}
   try{

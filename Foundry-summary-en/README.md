@@ -35,4 +35,4 @@ Foundry-summary-en/
     └── summary_en.md         # Detailed English summary per session
 ```
 
-The source transcripts (`transcript_raw.vtt`, `transcript_clean.txt`) and the original Japanese summaries (`summary_ja.md`) live alongside each session under [`../build-transcripts/{SESSION_ID}/`](../build-transcripts/).
+The source transcripts (`transcript_raw.vtt`, `transcript_clean.txt`) and the original Japanese summaries (`summary_ja.md`) live alongside each session under [`../build-transcripts/Sessions/{SESSION_ID}/`](../build-transcripts/Sessions/).

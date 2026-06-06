@@ -7,3 +7,6 @@ Thumbs.db
 
 # Playwright MCP browser-automation artifacts
 .playwright-mcp/
+
+# Session slide decks (large binaries, can exceed GitHub's 100MB limit)
+*.pptx

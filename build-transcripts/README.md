@@ -32,13 +32,13 @@ Build 2026 の Foundry のストーリーは、エージェント型 AI が「�
 
 | ID | セッション | Speaker | ひとことで言うと |
 |----|-----------|---------|------------------|
-| [BRK230](Sessions/BRK230/summary_ja.md) | Build smarter AI systems as models and costs evolve | Yina Arenas, Naomi Moneypenny | 「選定→評価→最適化→スケール」の4フェーズ法。単一モデルを追わず eval を軸に品質・コスト・遅延を山登り改善。 |
-| [BRK232](Sessions/BRK232/summary_ja.md) | Post-Training & Deploying Open Source Reasoning Models | Chris, Vijay, Manoj | 蒸留+SFT+RFT で小型安価モデル(Qwen 14B)をフロンティア(GPT-5.2)品質へ。約1/10コストでエージェント化。 |
-| [BRK231](Sessions/BRK231/summary_ja.md) | Deploy. Observe. Learn. RL for production agents | Alicia Frame, Omkar More | Foundry ポストトレーニングの4デモ。IPを自社の重みに残しつつトークン浪費エージェントを経済的に維持。 |
-| [BRKSP91](Sessions/BRKSP91/summary_ja.md) | Turn foundation models into production AI (Fireworks AI) | Vivek Chauhan, Jed (Fireworks AI), Nico Grupin (Harvey AI) | 基盤モデルを本番 AI へ。Fireworks AI × Harvey AI の実適用事例。 |
+| [BRK230](Sessions/BRK230/summary_ja.md)<br><sub>📑 [pptx あり](Sessions/BRK230/BRK230_slides.pptx)</sub> | Build smarter AI systems as models and costs evolve | Yina Arenas, Naomi Moneypenny | 「選定→評価→最適化→スケール」の4フェーズ法。単一モデルを追わず eval を軸に品質・コスト・遅延を山登り改善。 |
+| [BRK232](Sessions/BRK232/summary_ja.md)<br><sub>📑 [pptx あり](Sessions/BRK232/BRK232_slides.pptx)</sub> | Post-Training & Deploying Open Source Reasoning Models | Chris, Vijay, Manoj | 蒸留+SFT+RFT で小型安価モデル(Qwen 14B)をフロンティア(GPT-5.2)品質へ。約1/10コストでエージェント化。 |
+| [BRK231](Sessions/BRK231/summary_ja.md)<br><sub>📑 [pptx あり](Sessions/BRK231/BRK231_slides.pptx)</sub> | Deploy. Observe. Learn. RL for production agents | Alicia Frame, Omkar More | Foundry ポストトレーニングの4デモ。IPを自社の重みに残しつつトークン浪費エージェントを経済的に維持。 |
+| [BRKSP91](Sessions/BRKSP91/summary_ja.md)<br><sub>📑 [pptx あり](Sessions/BRKSP91/BRKSP91_slides.pptx)</sub> | Turn foundation models into production AI (Fireworks AI) | Vivek Chauhan, Jed (Fireworks AI), Nico Grupin (Harvey AI) | 基盤モデルを本番 AI へ。Fireworks AI × Harvey AI の実適用事例。 |
 | [BRKSP94](Sessions/BRKSP94/summary_ja.md) | Orchestrate special agents with NVIDIA Nemotron | Joey, Steven McCullough (NVIDIA) | NVIDIA Nemotron モデル群で専門エージェントをオーケストレーション、Foundry Hosted Agents 実演。 |
-| [DEM321](Sessions/DEM321/summary_ja.md) | Post-Training & Deploying OSS Reasoning Models (デモ) | Chris, Vijay | トークンコスト急増問題に対し OSS モデルのポストトレーニングで品質維持＆コスト削減。 |
-| [DEM322](Sessions/DEM322/summary_ja.md) | Smaller, faster, smarter: Distilling models | William (Foundry Fine Tuning) | 本番トレースから小型モデルへ知識蒸留。AI を"贅沢品"から"ユーティリティ"へ民主化。 |
+| [DEM321](Sessions/DEM321/summary_ja.md)<br><sub>📑 [pptx あり](Sessions/DEM321/DEM321_slides.pptx)</sub> | Post-Training & Deploying OSS Reasoning Models (デモ) | Chris, Vijay | トークンコスト急増問題に対し OSS モデルのポストトレーニングで品質維持＆コスト削減。 |
+| [DEM322](Sessions/DEM322/summary_ja.md)<br><sub>📑 [pptx あり](Sessions/DEM322/DEM322_slides.pptx)</sub> | Smaller, faster, smarter: Distilling models | William (Foundry Fine Tuning) | 本番トレースから小型モデルへ知識蒸留。AI を"贅沢品"から"ユーティリティ"へ民主化。 |
 | [DEM323](Sessions/DEM323/summary_ja.md) | Under the hood of Microsoft AI models | Dave Citron (CVP, Microsoft AI) | 基調講演で発表された Microsoft AI の新7モデルを哲学・アーキ・学習レシピまで深掘り。 |
 
 ### B. エージェント構築 〜 コンテキスト・ツール・スケール
@@ -46,13 +46,13 @@ Build 2026 の Foundry のストーリーは、エージェント型 AI が「�
 
 | ID | セッション | Speaker | ひとことで言うと |
 |----|-----------|---------|------------------|
-| [BRK240](Sessions/BRK240/summary_ja.md) | Build context-aware agents: From data to decisions | Amanda Silver, Marco Casalaina | **Microsoft IQ**（Work/Web/Foundry/Fabric IQ）を発表。「エージェントはコンテキスト不足で失敗する」を実演。 |
-| [BRK246](Sessions/BRK246/summary_ja.md) | Foundry IQ: enterprise knowledge & agentic retrieval | Pablo | Foundry IQ ライブツアー。ファイル→1分で自動MCPサーバ、サーバーレス、第2世代エージェント検索。 |
+| [BRK240](Sessions/BRK240/summary_ja.md)<br><sub>📑 [pptx あり](Sessions/BRK240/BRK240_slides.pptx)</sub> | Build context-aware agents: From data to decisions | Amanda Silver, Marco Casalaina | **Microsoft IQ**（Work/Web/Foundry/Fabric IQ）を発表。「エージェントはコンテキスト不足で失敗する」を実演。 |
+| [BRK246](Sessions/BRK246/summary_ja.md)<br><sub>📑 [pptx あり](Sessions/BRK246/BRK246_slides.pptx)</sub> | Foundry IQ: enterprise knowledge & agentic retrieval | Pablo | Foundry IQ ライブツアー。ファイル→1分で自動MCPサーバ、サーバーレス、第2世代エージェント検索。 |
 | [BRK242](Sessions/BRK242/summary_ja.md) | Turn your agents into action: tools, APIs, documents | Maria Nagaga, Joe Flick | **Toolbox** で任意ツールを単一の統制MCPエンドポイントに集約。**Content Understanding** で乱雑な文書を整形。 |
-| [BRK241](Sessions/BRK241/summary_ja.md) | From prototype to production: agents at scale | Tina Schackman, Jeff Holland | 「自律ファイバー障害対応エージェント」を Build→Deploy→Operate で実演。Foundry を本番 OS と位置付け。 |
-| [BRK243](Sessions/BRK243/summary_ja.md) | Claw and agent harness in Microsoft Foundry | Sean Henry, Glenn, Amanda | エージェントハーネスの3つの道。Microsoft Agent Framework と Autopilot Agents で Teams/M365 へ公開。 |
-| [DEM331](Sessions/DEM331/summary_ja.md) | Turn APIs, tools, and data into real agent velocity | （特定できず） | **Content Understanding** で乱雑なマルチモーダル文書を単一パイプラインで構造化データへ。 |
-| [DEM332](Sessions/DEM332/summary_ja.md) | From zero to teammate in 25 min: Teams agent live | Umang, Aamir | 25分でゼロから Teams 上で動くエージェントをライブ構築。 |
+| [BRK241](Sessions/BRK241/summary_ja.md)<br><sub>📑 [pptx あり](Sessions/BRK241/BRK241_slides.pptx)</sub> | From prototype to production: agents at scale | Tina Schackman, Jeff Holland | 「自律ファイバー障害対応エージェント」を Build→Deploy→Operate で実演。Foundry を本番 OS と位置付け。 |
+| [BRK243](Sessions/BRK243/summary_ja.md)<br><sub>📑 [pptx あり](Sessions/BRK243/BRK243_slides.pptx)</sub> | Claw and agent harness in Microsoft Foundry | Sean Henry, Glenn, Amanda | エージェントハーネスの3つの道。Microsoft Agent Framework と Autopilot Agents で Teams/M365 へ公開。 |
+| [DEM331](Sessions/DEM331/summary_ja.md)<br><sub>📑 [pptx あり](Sessions/DEM331/DEM331_slides.pptx)</sub> | Turn APIs, tools, and data into real agent velocity | （特定できず） | **Content Understanding** で乱雑なマルチモーダル文書を単一パイプラインで構造化データへ。 |
+| [DEM332](Sessions/DEM332/summary_ja.md)<br><sub>📑 [pptx あり](Sessions/DEM332/DEM332_slides.pptx)</sub> | From zero to teammate in 25 min: Teams agent live | Umang, Aamir | 25分でゼロから Teams 上で動くエージェントをライブ構築。 |
 | [DEM333](Sessions/DEM333/summary_ja.md) | How Foundry integrates with OSS frameworks | Facundo, Nakul Kumar | LangChain/LangGraph + MCP/A2A/OpenTelemetry で作ったエージェントを Foundry で本番化。 |
 
 ### C. 観測・統制・価値証明（ガバナンス & ROI）
@@ -60,11 +60,11 @@ Build 2026 の Foundry のストーリーは、エージェント型 AI が「�
 
 | ID | セッション | Speaker | ひとことで言うと |
 |----|-----------|---------|------------------|
-| [BRK250](Sessions/BRK250/summary_ja.md) | Observe and control agents across any framework (OSS) | Sarah Bird, Sandeep Atluri | 責任あるAIの「識別→評価→制御→監視」サイクル。プロンプトではなく決定論的ガードレールで信頼を担保。 |
-| [BRK252](Sessions/BRK252/summary_ja.md) | From observability to ROI for AI agents | Sebastian, Felicia, Vivek | Foundry Observability。任意フレームワークのトレーシング、トレース根拠の評価、自動最適化、ROI 追跡。 |
-| [BRK251](Sessions/BRK251/summary_ja.md) | Build secure & enterprise-ready agents with Agent 365 | Neda, Kendra, Aarthi, Ray (Genspark) | **Agent 365** を発表。あらゆるエージェント（自社/パートナー/外部Bedrock・Vertex）を SDK と M365管理センターで統制。 |
+| [BRK250](Sessions/BRK250/summary_ja.md)<br><sub>📑 [pptx あり](Sessions/BRK250/BRK250_slides.pptx)</sub> | Observe and control agents across any framework (OSS) | Sarah Bird, Sandeep Atluri | 責任あるAIの「識別→評価→制御→監視」サイクル。プロンプトではなく決定論的ガードレールで信頼を担保。 |
+| [BRK252](Sessions/BRK252/summary_ja.md)<br><sub>📑 [pptx あり](Sessions/BRK252/BRK252_slides.pptx)</sub> | From observability to ROI for AI agents | Sebastian, Felicia, Vivek | Foundry Observability。任意フレームワークのトレーシング、トレース根拠の評価、自動最適化、ROI 追跡。 |
+| [BRK251](Sessions/BRK251/summary_ja.md)<br><sub>📑 [pptx あり](Sessions/BRK251/BRK251_slides.pptx)</sub> | Build secure & enterprise-ready agents with Agent 365 | Neda, Kendra, Aarthi, Ray (Genspark) | **Agent 365** を発表。あらゆるエージェント（自社/パートナー/外部Bedrock・Vertex）を SDK と M365管理センターで統制。 |
 | [DEM340](Sessions/DEM340/summary_ja.md) | Build work-ready agents + Work IQ, govern with Agent 365 | Sri | Foundry（構築）と Agent 365（統制）を開発者/IT管理者の両視点で一気通貫デモ。 |
-| [DEM341](Sessions/DEM341/summary_ja.md) | Any agent, any cloud: tracing with Foundry+OpenTelemetry | Hanshi, Nak Kumar | GCP/AWS 上のエージェントも OpenTelemetry で標準化トレーシング。 |
+| [DEM341](Sessions/DEM341/summary_ja.md)<br><sub>📑 [pptx あり](Sessions/DEM341/DEM341_slides.pptx)</sub> | Any agent, any cloud: tracing with Foundry+OpenTelemetry | Hanshi, Nak Kumar | GCP/AWS 上のエージェントも OpenTelemetry で標準化トレーシング。 |
 | [OD831](Sessions/OD831/summary_ja.md) | Govern AI models, tools, agents with Azure API Management | Anish Tallapureddy, Mike Budzynski, Sreekanth Thirthala | APIM を AI ゲートウェイ化し、モデル・ツール・エージェントをエンタープライズ統制。 |
 | [OD840](Sessions/OD840/summary_ja.md) | Enable agents for enterprises using Agent 365 SDK | Jeremiah Follis, Sunil Garg | Agent 365 SDK / CLI でエージェントをエンタープライズ対応に。セキュリティ視点も。 |
 
@@ -73,8 +73,8 @@ Azure インフラの内側、OSS ランタイム、Claude 統合、業界横断
 
 | ID | セッション | Speaker | ひとことで言うと |
 |----|-----------|---------|------------------|
-| [BRK226](Sessions/BRK226/summary_ja.md) | Inside Azure innovations with Mark Russinovich | Mark Russinovich (Azure CTO) | Azure CTO による恒例セッション。HW〜OS〜セキュリティ〜AI推論最適化までデモ付きで公開。 |
-| [BRK225](Sessions/BRK225/summary_ja.md) | Data, apps, and agents: future of app dev with Rayfin | Ben, Sachin, Sujata, Carl (Replit) | Fabric/Power BI/Replit を交えたデータ×アプリ×エージェントの次世代アプリ開発。 |
+| [BRK226](Sessions/BRK226/summary_ja.md)<br><sub>📑 [pptx あり](Sessions/BRK226/BRK226_slides.pptx)</sub> | Inside Azure innovations with Mark Russinovich | Mark Russinovich (Azure CTO) | Azure CTO による恒例セッション。HW〜OS〜セキュリティ〜AI推論最適化までデモ付きで公開。 |
+| [BRK225](Sessions/BRK225/summary_ja.md)<br><sub>📑 [pptx あり](Sessions/BRK225/BRK225_slides.pptx)</sub> | Data, apps, and agents: future of app dev with Rayfin | Ben, Sachin, Sujata, Carl (Replit) | Fabric/Power BI/Replit を交えたデータ×アプリ×エージェントの次世代アプリ開発。 |
 | [BRK233](Sessions/BRK233/summary_ja.md) | Software Defensibility in the era of AI coding | Chip Huyen | Chip Huyen が AI コーディング時代の競合優位（モート）の変質と残る問題空間を論じる。 |
 | [BRK235](Sessions/BRK235/summary_ja.md) | Local models, developer control, future of AI runtimes | Michael, Parth (Ollama) | Ollama 共同創業者によるローカル/クラウド・ハイブリッド実行とオープンモデル。 |
 | [BRK245](Sessions/BRK245/summary_ja.md) | Build the thing that builds the thing | Peter (OpenClaw) | OpenClaw メンテナーがコーディングエージェントの自律ループを閉じる自作ツール群を紹介。 |

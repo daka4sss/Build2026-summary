@@ -181,5 +181,3 @@ Glenn's demo combined the shipped components above into a "claw-style" experienc
 ### 4.4 Session
 - **BRK243 — Claws and agent harness in Microsoft Foundry** — https://build.microsoft.com/en-US/sessions/BRK243 (transcript: `build-transcripts/Sessions/BRK243/transcript_clean.txt`)
 
-### 4.5 Verification note
-This summary was produced by fanning out web/Learn/GitHub research and **adversarially verifying** every feature claim (3 independent refutation attempts per claim; a claim is dropped only if ≥2 of 3 refute). 22 of 25 candidate features survived. The most material corrections applied above vs. first-pass extraction: **AG-UI** status corrected to **Preview** (not "unclear"); **Scout** corrected to **private/experimental (Frontier)**; and the consistent **GA-framework vs. Preview-runtime** split is called out throughout. Reported CodeAct benchmarks and the +7–14% Procedural-Memory figure are Microsoft's own published numbers.

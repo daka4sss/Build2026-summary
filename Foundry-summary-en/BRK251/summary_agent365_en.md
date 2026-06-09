@@ -199,5 +199,3 @@ The admin surface is the **Microsoft 365 Admin Center**:
 ### 4.4 Session
 - **BRK251 — Build secure and enterprise-ready agents with Agent 365** — https://build.microsoft.com/en-US/sessions/BRK251 (transcript: `build-transcripts/Sessions/BRK251/transcript_clean.txt`)
 
-### 4.5 Verification note
-This summary was produced by fanning out web/Learn/GitHub research and **adversarially verifying** every feature claim (3 independent refutation attempts per claim; dropped only if ≥2 of 3 refute). 20 of 22 candidate features survived. Key status corrections applied vs. first-pass extraction: **Agent 365 GA = May 1, 2026** ($15/user/mo or M365 E7); **CLI** resolved toward **GA** (stable NuGet package, no preview badge); **Windows 365 for Agents** corrected to **GA** (was US-only preview); and the **base-GA vs. preview-sub-feature** split is called out per row (Registry base GA vs. unmanaged-local-agent surfacing preview; Templates GA vs. AI-teammate scenarios preview; Defender/Purview runtime pieces preview). The "22+ local platforms" figure is from the talk; published docs say "more than 20."

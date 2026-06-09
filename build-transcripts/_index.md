@@ -1,12 +1,12 @@
 # Microsoft Build 2026 — セッション トランスクリプト一覧
 
-対象: **Microsoft Foundry を中心とした指定セッション**（Build 2026, 2026年6月 サンフランシスコ開催）
-取得日: 2026-06-05
-取得方式: セッションページの `og:image` から ASSET_ID を抽出 → `https://medius.microsoft.com/video/asset/CAPTION/{ASSET_ID}` で公式 WebVTT を取得
+対象: **Microsoft Foundry を中心とした 32 セッション ＋ Foundry コア外の追加 8 セッション（計 40）**（Build 2026, 2026年6月 サンフランシスコ開催）
+取得日: 2026-06-05（Foundry 32 件）／ 2026-06-07（追加 8 件）
+取得方式: セッションページの `og:image` から ASSET_ID を抽出 → `https://medius.microsoft.com/video/asset/CAPTION/{ASSET_ID}` で公式 WebVTT を取得。追加 8 件は公式カタログ実API（`api-v2.build.microsoft.com/api/session/all`）の `onDemand` フィールドから ASSET_ID を解決。
 
 ## 取得結果サマリー
 
-- **成功（CAPTION ルート）**: 32 / 32 セッション
+- **成功（CAPTION ルート）**: 40 / 40 セッション
 - **フォールバック使用**: 0
 - **取得不可**: 0
 
@@ -41,6 +41,14 @@
 | DEM332 | From zero to teammate in 25 minutes: Build a Teams agent live | CAPTION | 43,807 | 16,696 | ✅ 成功 | [summary](Sessions/DEM332/summary_ja.md) |
 | DEM333 | How Foundry integrates with open-source frameworks and tools | CAPTION | 39,671 | 14,880 | ✅ 成功 | [summary](Sessions/DEM333/summary_ja.md) |
 | LIVE144 | Behind the Keynote: How Windows Made OpenClaw Work in the Keynote Demo | CAPTION | 33,058 | 12,627 | ✅ 成功 | [summary](Sessions/LIVE144/summary_ja.md) |
+| KEY01 | Microsoft Build opening keynote | CAPTION | 217,413 | 118,981 | ✅ 成功（追加） | [summary](Sessions/KEY01/summary_ja.md) |
+| BRK209 | Japan Wrap-up Session | CAPTION | 99,057 | 42,978 | ✅ 成功（追加） | [summary](Sessions/BRK209/summary_ja.md) |
+| BRK234 | Shipping custom models at scale from fine-tuning to inference | CAPTION | 94,227 | 51,682 | ✅ 成功（追加） | [summary](Sessions/BRK234/summary_ja.md) |
+| BRK244 | Agent supervision is the new senior engineering skill | CAPTION | 93,589 | 35,705 | ✅ 成功（追加） | [summary](Sessions/BRK244/summary_ja.md) |
+| BRK247 | Scott and Mark learn...how agents reshape software engineering | CAPTION | 142,690 | 50,005 | ✅ 成功（追加） | [summary](Sessions/BRK247/summary_ja.md) |
+| BRK260 | Build Apps w/ Local AI for Unmetered Intelligence on every Windows PC | CAPTION | 67,694 | 37,076 | ✅ 成功（追加） | [summary](Sessions/BRK260/summary_ja.md) |
+| BRK261 | Build and ship faster with a developer-optimized experience on Windows | CAPTION | 74,887 | 40,600 | ✅ 成功（追加） | [summary](Sessions/BRK261/summary_ja.md) |
+| BRK262 | Building Agents You Can Trust on Windows | CAPTION | 49,073 | 27,210 | ✅ 成功（追加） | [summary](Sessions/BRK262/summary_ja.md) |
 | DEM340 | Build work-ready agents with Foundry + Work IQ, govern with Agent 365 | CAPTION | 60,782 | 22,212 | ✅ 成功 | [summary](Sessions/DEM340/summary_ja.md) |
 | DEM341 | Any agent, any cloud: Standardized tracing with Foundry+OpenTelemetry | CAPTION | 49,737 | 18,900 | ✅ 成功 | [summary](Sessions/DEM341/summary_ja.md) |
 | DEMSP388 | Ship faster with Claude Code and Cowork in Microsoft Foundry | CAPTION | 60,411 | 22,367 | ✅ 成功 | [summary](Sessions/DEMSP388/summary_ja.md) |

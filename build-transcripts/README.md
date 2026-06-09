@@ -1,6 +1,8 @@
 # Microsoft Build 2026 — セッション トランスクリプト & 日本語まとめ
 
-Microsoft Build 2026（2026年6月・サンフランシスコ開催）の、**Microsoft Foundry を中心とした 32 セッション**について、公式トランスクリプト（WebVTT）を取得し、日本語で詳細にまとめたアーカイブです。
+Microsoft Build 2026（2026年6月・サンフランシスコ開催）の、**Microsoft Foundry を中心とした 32 セッション＋ Foundry コア外の追加 8 セッション（計 40 セッション）**について、公式トランスクリプト（WebVTT）を取得し、日本語で詳細にまとめたアーカイブです。
+
+> 🆕 追加 8 セッション（オープニング基調講演 KEY01／Windows BRK260-262／モデル・エージェント文化 BRK234・244・247・209）は、公式カタログ実API（`api-v2.build.microsoft.com/api/session/all`、全460件）の全件クロールで洗い出したものです。詳細な全カタログ調査結果は [`catalog_build2026_full.md`](./catalog_build2026_full.md) を参照。
 
 > 📄 取得状況・ファイル一覧・バイト数などの**生インデックス**は [`_index.md`](./_index.md) を参照してください。
 > このページは「**どのセッションが何を話しているか**」をテーマ別にパッと把握するための技術ガイドです。
@@ -85,6 +87,35 @@ Azure インフラの内側、OSS ランタイム、Claude 統合、業界横断
 
 ---
 
+## 🆕 E. Foundry コア外の追加収録（キーノート・Windows・モデル/エージェント文化）
+
+当初の Foundry 中心 32 セッションに加え、公式カタログ全件クロールで選定した「Foundry 以外で特に注目すべき」セッション群。
+
+### 🎤 キーノート
+
+| ID | セッション | Speaker | ひとことで言うと |
+|----|-----------|---------|------------------|
+| [KEY01](Sessions/KEY01/summary_ja.md) | Microsoft Build opening keynote | Satya Nadella ほか多数 | Build 2026 開幕基調講演。MAI 7モデル・Surface RTX Spark Dev Box・Project Solara・Foundry IQ・Agent 365・OpenClaw on Windows・Maia/Cobalt 200・Horizon DB 等、当日の主要発表を一望できる本丸。 |
+
+### 🪟 Windows / クライアント
+
+| ID | セッション | Speaker | ひとことで言うと |
+|----|-----------|---------|------------------|
+| [BRK260](Sessions/BRK260/summary_ja.md) | Build Apps w/ Local AI for Unmetered Intelligence on every Windows PC | Anastasiya Tarnouskaya, Aditi Narvekar ほか | すべての Windows PC でローカル推論（従量課金なし）アプリを作る。Windows ML / ローカルモデルとゲスト事例（ClipChamp・VoiceMod）。 |
+| [BRK261](Sessions/BRK261/summary_ja.md) | Build and ship faster with a developer-optimized experience on Windows | Kayla Cinnamon, Craig Loewen ほか | winget 構成ファイル・新 Run・Intelligent Terminal・WSL containers・Coreutils など、開発者最適化の Windows 開発体験。 |
+| [BRK262](Sessions/BRK262/summary_ja.md) | Building Agents You Can Trust on Windows | Kirupa Chinnathambi, Stuart Schaefer, Patrick Nikoletich | Windows 上で信頼できるエージェントを作る。Agent Identity・権限制御・セキュリティ機構。 |
+
+### 🧠 モデル & エージェント開発文化
+
+| ID | セッション | Speaker | ひとことで言うと |
+|----|-----------|---------|------------------|
+| [BRK234](Sessions/BRK234/summary_ja.md) | Shipping custom models at scale from fine-tuning to inference | Rob Ferguson (Fireworks AI), Daniel Han (Unsloth), Mark Saroufim | ファインチューニング〜推論デプロイまで、カスタムモデルを本番スケールで出荷する実践知。 |
+| [BRK244](Sessions/BRK244/summary_ja.md) | Agent supervision is the new senior engineering skill | swyx (Shawn Wang) | 「エージェント監督（supervision）」こそが新しいシニアエンジニアのスキルだと説く。複数エージェントを束ねて成果を出す方法論。 |
+| [BRK247](Sessions/BRK247/summary_ja.md) | Scott and Mark learn...how agents reshape software engineering | Scott Hanselman, Mark Russinovich | 人気ポッドキャストのライブ版。エージェントがソフトウェアエンジニアリングをどう作り変えるかを掛け合いで深掘り。 |
+| [BRK209](Sessions/BRK209/summary_ja.md) | Japan Wrap-up Session | 岡崎 ほか日本チーム | 日本語セッション。Build 2026 の主要発表を日本市場視点で総括するラップアップ。 |
+
+---
+
 ## 📂 フォルダ構成
 
 ```
@@ -103,7 +134,7 @@ build-transcripts/
 ## ℹ️ 取得方法について
 
 - セッションページの `og:image` から ASSET_ID を抽出 → `https://medius.microsoft.com/video/asset/CAPTION/{ASSET_ID}` で公式 WebVTT を取得。
-- **32 / 32 セッションすべて**で公式トランスクリプトの取得に成功（フォールバックなし）。
+- **40 / 40 セッションすべて**で公式トランスクリプトの取得に成功（フォールバックなし）。
 - 各 `summary_ja.md` は、登壇者 → 全体像 → タイムスタンプ付きセクション → まとめ（コアメッセージ・発表機能一覧・次アクション）の統一フォーマット。
 - 登壇者名はトランスクリプトの自己紹介から特定できた範囲で記載しています。
 

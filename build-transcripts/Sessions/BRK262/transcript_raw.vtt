@@ -1,0 +1,2375 @@
+﻿WEBVTT
+
+00:00:01.830 --> 00:00:02.370
+Kirupa Chinnathambi: 
+Alright.
+
+00:00:02.370 --> 00:00:03.210
+Welcome, everyone.
+
+00:00:03.210 --> 00:00:05.730
+Welcome. Great to see you all
+in person, as well as to those
+
+00:00:05.730 --> 00:00:07.920
+of you watching online.
+
+00:00:07.920 --> 00:00:09.360
+So, here's the thing.
+
+00:00:09.360 --> 00:00:12.360
+Agents today, they're no
+longer confined to a checkbox.
+
+00:00:12.360 --> 00:00:15.450
+They're not waiting for you
+and I to tell them what to do.
+
+00:00:15.450 --> 00:00:16.620
+They're taking action.
+
+00:00:16.620 --> 00:00:17.820
+They're calling tools.
+
+00:00:17.820 --> 00:00:19.860
+They're running
+workflows end-to-end
+
+00:00:19.860 --> 00:00:20.760
+that are pretty complex
+
+00:00:20.760 --> 00:00:23.400
+that would have been almost
+unimaginable just a few
+
+00:00:23.400 --> 00:00:24.330
+months ago.
+
+00:00:24.330 --> 00:00:26.340
+So, the problem is this.
+
+00:00:26.340 --> 00:00:28.110
+It's not about
+capabilities anymore.
+
+00:00:28.110 --> 00:00:30.240
+Agents are plenty capable
+
+00:00:30.240 --> 00:00:32.790
+and we're a lot more productive
+as a result of that.
+
+00:00:32.790 --> 00:00:34.650
+No, what we want
+is we want agents
+
+00:00:34.650 --> 00:00:37.080
+to run safely and predictably.
+
+00:00:37.080 --> 00:00:38.970
+And in this session,
+we're going to learn all
+
+00:00:38.970 --> 00:00:41.700
+about the capabilities
+Windows is providing
+
+00:00:41.700 --> 00:00:43.710
+to help your agents
+do just that.
+
+00:00:43.710 --> 00:00:44.970
+My name is Kirupa.
+
+00:00:44.970 --> 00:00:46.020
+I'm a Product Manager
+
+00:00:46.020 --> 00:00:47.700
+in the Windows Platform
+and Developer team.
+
+00:00:47.700 --> 00:00:50.340
+I'm joined by Stuart,
+an architect also
+
+00:00:50.340 --> 00:00:53.250
+on the Windows Platform and
+Developer team, and Patrick,
+
+00:00:53.250 --> 00:00:55.020
+a Project Manager at GitHub.
+
+00:00:55.020 --> 00:00:56.790
+You'll be hearing
+plenty from Stuart
+
+00:00:56.790 --> 00:00:59.310
+and Patrick throughout
+this session.
+
+00:00:59.310 --> 00:01:02.400
+Now, before we go into
+the technical details,
+
+00:01:02.400 --> 00:01:03.780
+I want to take a step back.
+
+00:01:03.780 --> 00:01:05.250
+As you can see from
+these headlines,
+
+00:01:05.250 --> 00:01:08.370
+the way agents are being
+used today; it's not great.
+
+00:01:08.370 --> 00:01:11.550
+As agents are gaining more
+capabilities and work
+
+00:01:11.550 --> 00:01:14.220
+with greater autonomy, they're
+causing real problems.
+
+00:01:14.220 --> 00:01:16.320
+Either in the wild,
+or maybe even
+
+00:01:16.320 --> 00:01:18.660
+within our own organizations.
+
+00:01:18.660 --> 00:01:21.150
+And if I had to
+generalize, the reason is
+
+00:01:21.150 --> 00:01:25.680
+that we're moving very
+quickly from AI that responds
+
+00:01:25.680 --> 00:01:29.160
+and answers to AI that
+acts with agency.
+
+00:01:29.160 --> 00:01:31.380
+So, when an agent
+makes a small mistake
+
+00:01:31.380 --> 00:01:34.740
+like sending an unwanted
+email or modifying a file,
+
+00:01:34.740 --> 00:01:38.340
+or even making something public
+it shouldn't, it gets amplified.
+
+00:01:38.340 --> 00:01:39.870
+It creates a chain reaction.
+
+00:01:39.870 --> 00:01:43.200
+The blast radius for the damage
+it causes is much larger.
+
+00:01:43.200 --> 00:01:45.840
+Here's a great example
+where, using an agent,
+
+00:01:45.840 --> 00:01:48.510
+it's doing some coding, deletes
+your production database.
+
+00:01:48.510 --> 00:01:49.650
+Not great.
+
+00:01:49.650 --> 00:01:52.380
+Even situations where you
+might have seen this example
+
+00:01:52.380 --> 00:01:53.910
+in your news feeds
+a short while ago,
+
+00:01:53.910 --> 00:01:57.750
+where the agent is operating on
+your email, they're telling you
+
+00:01:57.750 --> 00:02:00.360
+to stop, don't delete it, agent
+acknowledges, goes ahead
+
+00:02:00.360 --> 00:02:01.860
+and deletes it anyway.
+
+00:02:01.860 --> 00:02:04.050
+These are the kinds of
+examples that we need
+
+00:02:04.050 --> 00:02:06.180
+to close at a platform layer.
+
+00:02:06.180 --> 00:02:09.390
+Because when agents can operate
+on things that matter to us,
+
+00:02:09.390 --> 00:02:13.430
+files, code, email, all the
+systems you and I rely on,
+
+00:02:13.430 --> 00:02:16.250
+we cannot rely on the
+agent to self-govern.
+
+00:02:16.250 --> 00:02:17.420
+We cannot rely on the agent
+
+00:02:17.420 --> 00:02:20.970
+to basically follow
+good intentions.
+
+00:02:20.970 --> 00:02:22.590
+Even best-effort prompting
+
+00:02:22.590 --> 00:02:25.020
+and prompt engineering
+can't solve this either.
+
+00:02:25.020 --> 00:02:27.570
+It really requires a
+more holistic solution.
+
+00:02:27.570 --> 00:02:30.990
+And also, because it's not
+just the agent itself.
+
+00:02:30.990 --> 00:02:33.060
+The entire environment
+the agent operates
+
+00:02:33.060 --> 00:02:35.030
+in is a potential risk vector.
+
+00:02:35.030 --> 00:02:37.880
+An agent can be talking to
+humans, and there's risk.
+
+00:02:37.880 --> 00:02:40.340
+Agent to tools, agent
+to applications,
+
+00:02:40.340 --> 00:02:43.500
+agent to agent, or
+even agent to LLM.
+
+00:02:43.500 --> 00:02:44.910
+All of these are risk vectors,
+
+00:02:44.910 --> 00:02:46.710
+and each of them have
+the risk profile
+
+00:02:46.710 --> 00:02:49.230
+that we cannot possibly
+account for all
+
+00:02:49.230 --> 00:02:51.630
+from just our own vantage point.
+
+00:02:51.630 --> 00:02:54.180
+And this is not just a
+theoretical problem.
+
+00:02:54.180 --> 00:02:57.180
+So, I'm going to move away
+from examples and headlines
+
+00:02:57.180 --> 00:02:59.520
+to something that teams
+are actively exploring.
+
+00:02:59.520 --> 00:03:01.710
+I'm going to turn it over to
+Patrick to talk about what he
+
+00:03:01.710 --> 00:03:04.770
+and the GitHub Copilot
+Team have identified.
+
+00:03:04.770 --> 00:03:05.520
+Patrick Niloletich: 
+Wonderful.
+
+00:03:05.520 --> 00:03:07.500
+Thanks, Kirupa.
+
+00:03:07.500 --> 00:03:10.080
+At GitHub, we get the
+unique opportunity to see
+
+00:03:10.080 --> 00:03:13.860
+where modern model performance
+intersects with user behavior,
+
+00:03:13.860 --> 00:03:16.410
+and how those trends
+alter over time.
+
+00:03:16.410 --> 00:03:18.450
+You take a look at
+the Copilot CLI.
+
+00:03:18.450 --> 00:03:21.240
+One of the most common
+occurrences that happens
+
+00:03:21.240 --> 00:03:24.270
+over time is users
+start auto-approving,
+
+00:03:24.270 --> 00:03:26.160
+removing the gates and
+letting their agents run
+
+00:03:26.160 --> 00:03:28.260
+for longer and longer sessions.
+
+00:03:28.260 --> 00:03:31.530
+When you scale it up to the
+Copilot SDK, it rides on top
+
+00:03:31.530 --> 00:03:33.330
+of our Copilot CLI server.
+
+00:03:33.330 --> 00:03:35.040
+But one of the unique
+differences that we did
+
+00:03:35.040 --> 00:03:37.920
+when we built the Copilot
+SDK was design it in a way
+
+00:03:37.920 --> 00:03:40.110
+that was made for
+SDK integrators,
+
+00:03:40.110 --> 00:03:42.540
+and not for Copilot CLI users.
+
+00:03:42.540 --> 00:03:44.610
+What that led to was a mismatch
+
+00:03:44.610 --> 00:03:46.380
+between our permissions
+model inside
+
+00:03:46.380 --> 00:03:48.660
+of our SDK, and one in our CLI.
+
+00:03:48.660 --> 00:03:52.110
+Certain integrators expected our
+SDK to be fully configurable,
+
+00:03:52.110 --> 00:03:54.480
+come with nothing out
+of the box already set.
+
+00:03:54.480 --> 00:03:56.400
+All the CLI users expected it
+
+00:03:56.400 --> 00:03:58.740
+to protect their current
+working directory,
+
+00:03:58.740 --> 00:04:01.320
+and other artifacts
+on their system.
+
+00:04:01.320 --> 00:04:02.850
+When you look a
+little bit farther
+
+00:04:02.850 --> 00:04:05.040
+into the orchestration side,
+
+00:04:05.040 --> 00:04:06.960
+our orchestrator
+inside the Copilot CLI
+
+00:04:06.960 --> 00:04:08.850
+and SDK has become
+much more powerful,
+
+00:04:08.850 --> 00:04:10.740
+especially over the
+last six months,
+
+00:04:10.740 --> 00:04:14.280
+where a job typically ran from
+3 to 5, 10 minutes or so,
+
+00:04:14.280 --> 00:04:16.320
+they can now run for
+30 minutes or more,
+
+00:04:16.320 --> 00:04:17.790
+which means that the problems
+
+00:04:17.790 --> 00:04:20.520
+in these two first segments
+compound exponentially
+
+00:04:20.520 --> 00:04:24.250
+with time, especially as agents
+get more and more powerful.
+
+00:04:26.190 --> 00:04:27.180
+Kirupa Chinnathambi:
+Thank you, Patrick.
+
+00:04:27.180 --> 00:04:29.340
+So, the problem is very clear.
+
+00:04:29.340 --> 00:04:32.220
+Agents are operating with high
+agency, and they're running
+
+00:04:32.220 --> 00:04:34.110
+with limited to no guardrails.
+
+00:04:34.110 --> 00:04:37.020
+Then the question then shifts
+to, what does the platform need
+
+00:04:37.020 --> 00:04:40.350
+to provide to make
+agents safe by design?
+
+00:04:40.350 --> 00:04:41.910
+That's where Windows comes in.
+
+00:04:41.910 --> 00:04:44.910
+From its very beginning,
+Windows has always evolved
+
+00:04:44.910 --> 00:04:46.880
+to handle the needs 
+of its users.
+
+00:04:46.880 --> 00:04:48.800
+The part that's changed is this.
+
+00:04:48.800 --> 00:04:50.810
+The definition of a
+user is changing.
+
+00:04:50.810 --> 00:04:52.070
+What is a user?
+
+00:04:52.070 --> 00:04:55.550
+Today, they now include agents
+acting on their behalf
+
+00:04:55.550 --> 00:04:58.670
+and that detail fundamentally
+changes how Windows
+
+00:04:58.670 --> 00:05:01.230
+and the platform need to react.
+
+00:05:01.230 --> 00:05:03.890
+And to account for this,
+
+00:05:03.890 --> 00:05:06.290
+there are three key
+platform capabilities
+
+00:05:06.290 --> 00:05:09.110
+that we're introducing that when
+agents adopt, that can work
+
+00:05:09.110 --> 00:05:11.000
+with agents as a
+new type of user,
+
+00:05:11.000 --> 00:05:14.240
+and also ensuring agents can
+run safely and reliably.
+
+00:05:14.240 --> 00:05:16.730
+Let's walk through very quickly
+what these perimeters are,
+
+00:05:16.730 --> 00:05:19.140
+and we'll go into more
+detail in a few moments.
+
+00:05:19.140 --> 00:05:21.390
+First it's agent identity.
+
+00:05:21.390 --> 00:05:24.030
+The agent needs to have
+an identity, distinct
+
+00:05:24.030 --> 00:05:26.010
+from that of the human user.
+
+00:05:26.010 --> 00:05:27.930
+Second, is containment.
+
+00:05:27.930 --> 00:05:30.330
+We don't want our agent
+to have full access
+
+00:05:30.330 --> 00:05:34.800
+to all the capabilities
+that we have as people.
+
+00:05:34.800 --> 00:05:36.390
+We can't give it
+unfettered access
+
+00:05:36.390 --> 00:05:38.790
+to all the files and
+all of our data.
+
+00:05:38.790 --> 00:05:41.100
+What we need is, we need
+to have agents running
+
+00:05:41.100 --> 00:05:42.420
+in a controlled environment
+
+00:05:42.420 --> 00:05:44.820
+where their blast
+radius is limited.
+
+00:05:44.820 --> 00:05:47.370
+And the last one
+is manageability.
+
+00:05:47.370 --> 00:05:51.420
+For many of us, that means an
+IT admin can deploy, monitor,
+
+00:05:51.420 --> 00:05:53.610
+govern, and enforce the policies
+
+00:05:53.610 --> 00:05:57.510
+that dictate what an agent can
+do, and also what it cannot do.
+
+00:05:57.510 --> 00:06:00.480
+So, to dive deeper into this,
+starting with identity,
+
+00:06:00.480 --> 00:06:02.190
+I'm going to turn
+it over to Stuart.
+
+00:06:02.190 --> 00:06:02.460
+Stuart Schaefer: 
+Great.
+
+00:06:02.460 --> 00:06:04.230
+Thank you, Kirupa.
+
+00:06:04.230 --> 00:06:06.270
+So, as Kirupa said, one of
+the most interesting things
+
+00:06:06.270 --> 00:06:09.510
+about agents is, what is
+the identify of an agent?
+
+00:06:09.510 --> 00:06:13.110
+I'm here to tell you,
+agents aren't you.
+
+00:06:13.110 --> 00:06:16.620
+No matter what we do today, the
+funny thing about where we got
+
+00:06:16.620 --> 00:06:19.980
+to is, most agents
+run as you the user.
+
+00:06:19.980 --> 00:06:22.980
+If you use a CLI, they are
+running in your session.
+
+00:06:22.980 --> 00:06:24.690
+They have access
+to all your data.
+
+00:06:24.690 --> 00:06:27.240
+The program itself is
+controlling what they do.
+
+00:06:27.240 --> 00:06:28.620
+But they're not you.
+
+00:06:28.620 --> 00:06:31.260
+Imagine what would happen if
+the agent could get access
+
+00:06:31.260 --> 00:06:35.010
+to almost anything from you
+and do whatever it wants.
+
+00:06:35.010 --> 00:06:38.910
+We need the system to be
+able to enforce a separation
+
+00:06:38.910 --> 00:06:41.820
+between an agent and
+you, and to be able
+
+00:06:41.820 --> 00:06:44.760
+to enforce the
+capabilities and promises
+
+00:06:44.760 --> 00:06:49.800
+that define what an agent is,
+different than what a user is.
+
+00:06:49.800 --> 00:06:53.400
+In general, what a user is and
+what they do on a machine today,
+
+00:06:53.400 --> 00:06:55.380
+can have a lot more
+rights than some
+
+00:06:55.380 --> 00:06:57.840
+of what we want our
+agents to be able to do.
+
+00:06:57.840 --> 00:07:00.450
+Do you want your agent to
+be admin on your machine?
+
+00:07:00.450 --> 00:07:02.370
+It's a question you should ask.
+
+00:07:02.370 --> 00:07:04.740
+So, for us, the way we
+think about it is this.
+
+00:07:04.740 --> 00:07:08.100
+Agents are a new type of
+identity in the system.
+
+00:07:08.100 --> 00:07:11.880
+When you think about users
+and devices and applications,
+
+00:07:11.880 --> 00:07:14.070
+we identify those on the system.
+
+00:07:14.070 --> 00:07:18.510
+Agents aren't just the processes
+of the CLI that you're using,
+
+00:07:18.510 --> 00:07:21.090
+or whatever agentic
+application that you're using.
+
+00:07:21.090 --> 00:07:24.630
+They themselves are an
+intrinsic first-class entity
+
+00:07:24.630 --> 00:07:25.620
+on the system.
+
+00:07:25.620 --> 00:07:27.630
+Just like users,
+apps, and devices,
+
+00:07:27.630 --> 00:07:30.270
+they need to have a
+security principle.
+
+00:07:30.270 --> 00:07:32.880
+We need to be able to make
+assertions about them.
+
+00:07:32.880 --> 00:07:36.150
+Things that define
+security permissions
+
+00:07:36.150 --> 00:07:38.640
+that the system
+itself can enforce.
+
+00:07:38.640 --> 00:07:40.920
+We need to be able
+to author policies
+
+00:07:40.920 --> 00:07:43.350
+that define what are the
+things that they are allowed
+
+00:07:43.350 --> 00:07:46.710
+to be members of, to
+join, to understand
+
+00:07:46.710 --> 00:07:50.280
+in general what an agent is
+allowed to do in the system.
+
+00:07:50.280 --> 00:07:54.390
+And whatever they do needs
+to be audited by the system.
+
+00:07:54.390 --> 00:07:57.540
+We need to have logs that
+show what an agent does
+
+00:07:57.540 --> 00:08:00.240
+so that we can separate
+the actions of the agent
+
+00:08:00.240 --> 00:08:02.550
+from the actions of
+the user itself.
+
+00:08:02.550 --> 00:08:05.520
+So, with that, we're going to
+do a quick demonstration here.
+
+00:08:05.520 --> 00:08:06.150
+And we'll show you.
+
+00:08:06.150 --> 00:08:09.330
+We have worked with the
+OpenClaw team to work
+
+00:08:09.330 --> 00:08:13.860
+on showing how an agent like
+OpenClaw, an agentic system,
+
+00:08:13.860 --> 00:08:16.260
+can function in an
+operating environment
+
+00:08:16.260 --> 00:08:20.560
+where it is separated
+from you, the user.
+
+00:08:22.050 --> 00:08:26.400
+In this demo, what we'll see
+is, this is a Teams chat.
+
+00:08:26.400 --> 00:08:30.000
+And in Kirupa's Teams chat,
+he will go in and talk
+
+00:08:30.000 --> 00:08:32.670
+to his OpenClaw gateway node.
+
+00:08:32.670 --> 00:08:36.540
+The OpenClaw gateway node is
+running in a separate session
+
+00:08:36.540 --> 00:08:40.440
+on the same machine, but as
+a different user account
+
+00:08:40.440 --> 00:08:42.510
+and in a different
+session, which means all
+
+00:08:42.510 --> 00:08:46.070
+of its processes are
+separated from the desktop,
+
+00:08:46.070 --> 00:08:49.010
+from the Windows, and from all
+the processes that are here.
+
+00:08:49.010 --> 00:08:51.230
+And by default,
+everything that it tries
+
+00:08:51.230 --> 00:08:55.170
+to accomplish has no access to
+what Kirupa himself is doing.
+
+00:08:55.170 --> 00:08:58.800
+So, as he interacts with the
+agent, it is fully separated,
+
+00:08:58.800 --> 00:09:01.890
+fully identified by
+Windows at its core.
+
+00:09:01.890 --> 00:09:04.950
+So, that is how we look
+at agent identity.
+
+00:09:04.950 --> 00:09:09.310
+It is not you, and it should
+run separated from you.
+
+00:09:15.330 --> 00:09:18.180
+So, after agent identity,
+the next thing
+
+00:09:18.180 --> 00:09:19.890
+that Kirupa introduced
+was containment.
+
+00:09:19.890 --> 00:09:22.770
+A really important
+thing about agents is,
+
+00:09:22.770 --> 00:09:25.650
+is that when agents
+operate, as Kirupa said,
+
+00:09:25.650 --> 00:09:28.680
+they need a blast radius, the
+things that they can accomplish.
+
+00:09:28.680 --> 00:09:30.720
+What's really
+important is for us
+
+00:09:30.720 --> 00:09:34.350
+to understand, agents
+are non-deterministic.
+
+00:09:34.350 --> 00:09:36.690
+Different than the software
+that you run today,
+
+00:09:36.690 --> 00:09:39.810
+when we install an
+application, at compile time,
+
+00:09:39.810 --> 00:09:43.350
+what that software can
+do is already defined.
+
+00:09:43.350 --> 00:09:46.200
+Our agents today write
+their own software.
+
+00:09:46.200 --> 00:09:49.980
+They evolve; they change
+on a very frequent basis.
+
+00:09:49.980 --> 00:09:54.690
+And as they operate with agency,
+they make decisions themselves.
+
+00:09:54.690 --> 00:09:58.860
+Not your mouse clicks, but the
+decision of the software itself.
+
+00:09:58.860 --> 00:10:01.650
+That non-determinism is
+something that we need to think
+
+00:10:01.650 --> 00:10:04.230
+about how that happens
+in the system.
+
+00:10:04.230 --> 00:10:07.230
+When an agent can choose
+its own actions at runtime,
+
+00:10:07.230 --> 00:10:08.940
+that makes it unpredictable.
+
+00:10:08.940 --> 00:10:11.250
+But because it's
+unpredictable, it doesn't mean
+
+00:10:11.250 --> 00:10:12.960
+that it's uncontrollable.
+
+00:10:12.960 --> 00:10:16.800
+It means that what it needs is a
+boundary around what it can do.
+
+00:10:16.800 --> 00:10:19.740
+A boundary that's
+understandable.
+
+00:10:19.740 --> 00:10:23.670
+That we can understand
+what it can and cannot do.
+
+00:10:23.670 --> 00:10:28.230
+That isolation boundary
+allows us to control risk
+
+00:10:28.230 --> 00:10:31.740
+and to understand, what
+is the profile of risk
+
+00:10:31.740 --> 00:10:35.100
+that that agent can have
+against our system.
+
+00:10:35.100 --> 00:10:38.670
+Also, what's really interesting
+is, once you put an agent inside
+
+00:10:38.670 --> 00:10:42.570
+one of these sandboxes, it
+allows us to enforce the design
+
+00:10:42.570 --> 00:10:45.930
+of least privilege, which
+is, we can take the actions
+
+00:10:45.930 --> 00:10:49.530
+of an agent, its individual
+actions, and put it inside
+
+00:10:49.530 --> 00:10:52.500
+of a sandbox, and
+let that one sandbox,
+
+00:10:52.500 --> 00:10:54.570
+or that one action, have policy
+
+00:10:54.570 --> 00:10:56.640
+that defines just
+what it can do.
+
+00:10:56.640 --> 00:10:59.160
+And then when the agent
+decides to do something else,
+
+00:10:59.160 --> 00:11:02.130
+we'll build another
+sandbox for that.
+
+00:11:02.130 --> 00:11:04.770
+What that means is is that the
+sandboxes that we're going
+
+00:11:04.770 --> 00:11:06.840
+to build need to scale.
+
+00:11:06.840 --> 00:11:10.680
+The isolation boundary needs to
+be proportionate to the risk,
+
+00:11:10.680 --> 00:11:13.110
+and proportionate to the
+action that's happening.
+
+00:11:13.110 --> 00:11:16.800
+For that, we've introduced what
+we call the Microsoft Execution
+
+00:11:16.800 --> 00:11:18.390
+Containers library.
+
+00:11:18.390 --> 00:11:21.330
+The MXC library is a
+library that's designed
+
+00:11:21.330 --> 00:11:25.890
+to help you create
+containers, based on policy.
+
+00:11:25.890 --> 00:11:29.250
+The developer and the agent
+can declare the security
+
+00:11:29.250 --> 00:11:32.850
+requirements of their agent
+and the agent's actions.
+
+00:11:32.850 --> 00:11:36.750
+The library will then compile
+that together and maps
+
+00:11:36.750 --> 00:11:41.100
+that against the policies of the
+system, and the policies defined
+
+00:11:41.100 --> 00:11:44.970
+by IT, governed by tools
+that we're used to using
+
+00:11:44.970 --> 00:11:48.150
+to deploy things, to manage 
+them, and monitor them.
+
+00:11:48.150 --> 00:11:52.140
+Once that match has occurred,
+the MXC library will then look
+
+00:11:52.140 --> 00:11:54.960
+at the native OS
+platform and try
+
+00:11:54.960 --> 00:11:59.160
+to assemble together the
+right container for the job.
+
+00:11:59.160 --> 00:12:03.510
+That process is something we
+call dynamic composition.
+
+00:12:03.510 --> 00:12:05.880
+That means that
+when an agent runs,
+
+00:12:05.880 --> 00:12:08.520
+there isn't a fixed container.
+
+00:12:08.520 --> 00:12:13.740
+The MXC library allows you to
+create the container on the fly.
+
+00:12:13.740 --> 00:12:17.430
+It will, as I said, take the
+definition of the application
+
+00:12:17.430 --> 00:12:19.950
+that you want to run,
+or the actual action.
+
+00:12:19.950 --> 00:12:23.250
+It will take the user's
+consent and permissions.
+
+00:12:23.250 --> 00:12:27.420
+It will take the policy
+defined by IT and try to from
+
+00:12:27.420 --> 00:12:31.020
+that, craft together a
+configuration of a container.
+
+00:12:31.020 --> 00:12:33.870
+With that configuration,
+it will then look
+
+00:12:33.870 --> 00:12:36.090
+at the operating
+system primitives
+
+00:12:36.090 --> 00:12:38.880
+that are available
+for it to use.
+
+00:12:38.880 --> 00:12:40.590
+It's not just Windows.
+
+00:12:40.590 --> 00:12:45.630
+It's Windows, WSL, Linux, a
+full cross-platform library
+
+00:12:45.630 --> 00:12:51.450
+that can scale everything from
+tiny, small processes to VMs,
+
+00:12:51.450 --> 00:12:54.510
+micro VMs, firecracker-style
+micro VMs,
+
+00:12:54.510 --> 00:12:57.030
+all the way up to
+cloud-based PCs.
+
+00:12:57.030 --> 00:12:58.680
+So, MXC really allows us
+
+00:12:58.680 --> 00:13:01.410
+to define a security
+boundary that's designed
+
+00:13:01.410 --> 00:13:05.610
+and proportionate to the task
+that we want to accomplish.
+
+00:13:05.610 --> 00:13:08.190
+So, what does that really
+mean for us as developers?
+
+00:13:08.190 --> 00:13:09.510
+How do we use this?
+
+00:13:09.510 --> 00:13:12.390
+Well, let's dive in
+a little bit deeper.
+
+00:13:12.390 --> 00:13:15.060
+MXC, as I said, is a
+declarative approach.
+
+00:13:15.060 --> 00:13:17.010
+What it's really
+designed to say is,
+
+00:13:17.010 --> 00:13:20.010
+let's look at the guardrails
+we want to put in place
+
+00:13:20.010 --> 00:13:21.810
+for then components
+of our agent.
+
+00:13:21.810 --> 00:13:24.060
+What is the composition
+of the container?
+
+00:13:24.060 --> 00:13:25.800
+What are the security
+requirements,
+
+00:13:25.800 --> 00:13:28.530
+and what does the
+workload shape look like?
+
+00:13:28.530 --> 00:13:33.600
+So, as we dig into a little
+detail, this is a Python script.
+
+00:13:33.600 --> 00:13:37.830
+That Python script needs to be
+able to access my certificates.
+
+00:13:37.830 --> 00:13:41.100
+Certificates to authenticate
+somewhere in the system.
+
+00:13:41.100 --> 00:13:44.670
+It needs to be able to run
+within a certain timeframe.
+
+00:13:44.670 --> 00:13:49.020
+It can only access read/write
+locations very much specified
+
+00:13:49.020 --> 00:13:49.500
+by here.
+
+00:13:49.500 --> 00:13:52.590
+Everything else is
+denied by default.
+
+00:13:52.590 --> 00:13:54.420
+What network am
+I allowed to talk to?
+
+00:13:54.420 --> 00:13:57.750
+I can only talk to the
+GitHub API server.
+
+00:13:57.750 --> 00:14:01.320
+And even more restrictive,
+I can't touch the UI
+
+00:14:01.320 --> 00:14:04.710
+of anything else in the system,
+but I can see the clipboard
+
+00:14:04.710 --> 00:14:06.810
+and read from it if
+something has done that.
+
+00:14:06.810 --> 00:14:08.310
+That allows me to specify
+
+00:14:08.310 --> 00:14:12.030
+with very fine-grained detail
+what the container is,
+
+00:14:12.030 --> 00:14:15.150
+and what the action
+of the agent can do.
+
+00:14:15.150 --> 00:14:17.250
+So, let's do a quick demo.
+
+00:14:17.250 --> 00:14:18.720
+I'm going to escape out of here,
+
+00:14:18.720 --> 00:14:20.670
+and do something
+really dangerous
+
+00:14:20.670 --> 00:14:23.400
+and bring up a command prompt.
+
+00:14:23.400 --> 00:14:24.510
+So, the first thing I'm going
+
+00:14:24.510 --> 00:14:28.420
+to show you, here, is a
+really simple demo.
+
+00:14:47.610 --> 00:14:48.180
+There we go.
+
+00:14:48.180 --> 00:14:48.840
+Fantastic.
+
+00:14:48.840 --> 00:14:50.070
+Awesome. Thank you.
+
+00:14:50.070 --> 00:14:53.430
+Alright. So, here is
+my command prompt.
+
+00:14:53.430 --> 00:14:54.540
+So, from the command prompt,
+
+00:14:54.540 --> 00:14:57.750
+what I'll show you here
+quickly is, this is essentially
+
+00:14:57.750 --> 00:15:00.000
+that script here.
+
+00:15:00.000 --> 00:15:04.590
+I built, for here, a script that
+will create a PowerPoint file.
+
+00:15:04.590 --> 00:15:08.790
+That PowerPoint slide will be
+generated using a Python script.
+
+00:15:08.790 --> 00:15:13.980
+That Python script will launch
+and create the PowerPoint file
+
+00:15:13.980 --> 00:15:15.600
+in this build demo folder.
+
+00:15:15.600 --> 00:15:21.220
+So, if I come over here, and
+I will tell this to run.
+
+00:15:22.410 --> 00:15:24.900
+What you'll see here is
+-- oh, I have a mistake.
+
+00:15:24.900 --> 00:15:26.610
+It says, I can't do it.
+
+00:15:26.610 --> 00:15:29.730
+The agent has run that script
+inside of a container.
+
+00:15:29.730 --> 00:15:31.200
+That container has failed.
+
+00:15:31.200 --> 00:15:32.400
+Why has it failed?
+
+00:15:32.400 --> 00:15:36.210
+Because it said, access to the
+build demo folder is read only.
+
+00:15:36.210 --> 00:15:37.080
+Let's come in here.
+
+00:15:37.080 --> 00:15:39.190
+We'll change that quickly.
+
+00:15:44.490 --> 00:15:46.680
+And we'll run it again.
+
+00:15:46.680 --> 00:15:48.360
+And what you see here is,
+
+00:15:48.360 --> 00:15:51.520
+this is a PowerPoint file
+generated by my script.
+
+00:15:51.520 --> 00:15:54.230
+[APPLAUSE]
+
+00:15:54.230 --> 00:15:55.550
+So, that's a simple demo.
+
+00:15:55.550 --> 00:15:58.220
+But the reality of it is,
+what are we really here for?
+
+00:15:58.220 --> 00:16:00.990
+We're here to contain an agent
+
+00:16:00.990 --> 00:16:04.740
+that may have written
+scripts that aren't perfect.
+
+00:16:04.740 --> 00:16:09.120
+So, what I did here
+is, I created a demo
+
+00:16:09.120 --> 00:16:15.900
+that shows an agent running
+and a monitor of the agent.
+
+00:16:15.900 --> 00:16:19.470
+This agent is purposefully
+malicious, and will try
+
+00:16:19.470 --> 00:16:21.330
+to escape its boundaries.
+
+00:16:21.330 --> 00:16:23.700
+The first thing it's going to
+do is try to see if it can get
+
+00:16:23.700 --> 00:16:27.270
+around the file system right
+to the user's SAM hive,
+
+00:16:27.270 --> 00:16:29.250
+see if it can steal
+into user.net,
+
+00:16:29.250 --> 00:16:31.470
+see if it can grab the
+user's credentials.
+
+00:16:31.470 --> 00:16:32.610
+What we'll see here is this.
+
+00:16:32.610 --> 00:16:35.490
+On the right-hand side, those
+red things are it firing
+
+00:16:35.490 --> 00:16:38.580
+and hitting the boundaries
+of the sandbox itself.
+
+00:16:38.580 --> 00:16:41.310
+So, listening to events
+from the sandbox,
+
+00:16:41.310 --> 00:16:44.700
+we can tell that the sandbox is
+enforcing the constraints here.
+
+00:16:44.700 --> 00:16:48.060
+So, this is in live,
+this running demo,
+
+00:16:48.060 --> 00:16:50.520
+pounding against the sandbox,
+us listening to that.
+
+00:16:50.520 --> 00:16:52.200
+What can a developer
+do with that?
+
+00:16:52.200 --> 00:16:52.980
+Two things.
+
+00:16:52.980 --> 00:16:56.160
+One, you can monitor and observe
+what actually is happening
+
+00:16:56.160 --> 00:16:57.240
+in the agent.
+
+00:16:57.240 --> 00:17:02.040
+Two, if you want to know, why
+did my agent fail, you can pull
+
+00:17:02.040 --> 00:17:05.670
+that data back in for the next
+loop around, and understand how
+
+00:17:05.670 --> 00:17:08.880
+to evolve and make better
+policy for your agent.
+
+00:17:08.880 --> 00:17:11.070
+So, there's that.
+
+00:17:11.070 --> 00:17:13.290
+The last thing I want to
+show you quickly is this.
+
+00:17:13.290 --> 00:17:17.670
+As I said before, we have
+many different sizes
+
+00:17:17.670 --> 00:17:19.440
+and shapes of containers.
+
+00:17:19.440 --> 00:17:23.910
+The smallest one is based on a
+technology we call Hyperlight.
+
+00:17:23.910 --> 00:17:28.980
+Hyperlight is a small VMM that
+will start here a container,
+
+00:17:28.980 --> 00:17:32.100
+which is a hardware-backed
+virtual machine.
+
+00:17:32.100 --> 00:17:35.130
+The hardware-backed virtual
+machine runs a tiny operating
+
+00:17:35.130 --> 00:17:39.540
+system called Nanvix that is
+about 10 megabytes in size.
+
+00:17:39.540 --> 00:17:46.740
+It will start up and run that
+same PowerPoint file very fast.
+
+00:17:46.740 --> 00:17:51.060
+Boom. And if we look, that
+is the same exact script
+
+00:17:51.060 --> 00:17:54.630
+of the other side that generated
+that same PowerPoint file,
+
+00:17:54.630 --> 00:17:58.290
+loaded incredibly fast in a
+very small about of memory,
+
+00:17:58.290 --> 00:18:02.220
+and fully protected
+by the hypervisor.
+
+00:18:02.220 --> 00:18:08.160
+So. With that, my demo
+has actually succeeded,
+
+00:18:08.160 --> 00:18:08.790
+which is fantastic.
+
+00:18:08.790 --> 00:18:09.020
+Exactly
+
+00:18:09.020 --> 00:18:12.900
+[APPLAUSE]
+
+00:18:12.900 --> 00:18:16.710
+So, given all that,
+as Kirupa said,
+
+00:18:16.710 --> 00:18:20.490
+all those things put together
+are useful ingredients,
+
+00:18:20.490 --> 00:18:24.850
+but the agent itself still
+needs to be managed.
+
+00:18:26.820 --> 00:18:29.490
+The platform that we operate
+in needs to make sure
+
+00:18:29.490 --> 00:18:32.550
+that the management system
+that we have can guarantee
+
+00:18:32.550 --> 00:18:35.910
+that the agents are operating
+within defined policies.
+
+00:18:35.910 --> 00:18:40.080
+So, IT or you the user, need to
+be able to specify what you do
+
+00:18:40.080 --> 00:18:42.480
+and don't allow
+your agents to do.
+
+00:18:42.480 --> 00:18:43.740
+The policies need to be able
+
+00:18:43.740 --> 00:18:46.440
+to control what can
+the agent access?
+
+00:18:46.440 --> 00:18:48.240
+What are the actions
+they are allowed to do?
+
+00:18:48.240 --> 00:18:51.720
+And as we showed, how do
+we observe those actions
+
+00:18:51.720 --> 00:18:54.270
+to make sure that
+they are correct?
+
+00:18:54.270 --> 00:18:57.660
+In general, we also believe that
+one of the most important things
+
+00:18:57.660 --> 00:18:59.610
+for you, as a
+developer, is to think
+
+00:18:59.610 --> 00:19:02.220
+about the concept we
+call supervision,
+
+00:19:02.220 --> 00:19:06.120
+which is that agents need to
+operate with clear oversight.
+
+00:19:06.120 --> 00:19:09.150
+The user needs to understand
+whether it is a human
+
+00:19:09.150 --> 00:19:12.900
+in-the-loop agent, or a
+fully autonomous agent,
+
+00:19:12.900 --> 00:19:15.870
+they need to be able to
+trust what it can do.
+
+00:19:15.870 --> 00:19:19.020
+The most important thing is
+that as an agent becomes more
+
+00:19:19.020 --> 00:19:22.200
+and more autonomous, that
+trust needs to be something
+
+00:19:22.200 --> 00:19:25.560
+that we build upon to make
+sure the user believes
+
+00:19:25.560 --> 00:19:29.310
+and IT believes they still
+have operational control.
+
+00:19:29.310 --> 00:19:31.354
+We think you
+need to think about,
+
+00:19:31.366 --> 00:19:33.180
+how do you surface the intent
+
+00:19:33.180 --> 00:19:35.310
+of your agent at
+natural way points.
+
+00:19:35.310 --> 00:19:38.610
+Make sure that even though
+an agent can do things fully
+
+00:19:38.610 --> 00:19:41.220
+autonomously, it
+should still ensure
+
+00:19:41.220 --> 00:19:44.570
+that it's notifying the user,
+providing places for it
+
+00:19:44.570 --> 00:19:46.520
+to compensate if
+there are problems.
+
+00:19:46.520 --> 00:19:49.040
+Why? Because agents
+make mistakes.
+
+00:19:49.040 --> 00:19:51.350
+Assume that your
+agent is not perfect,
+
+00:19:51.350 --> 00:19:53.460
+and that you've designed
+it in such a way
+
+00:19:53.460 --> 00:19:56.490
+that your agent can compensate
+and bring the human user
+
+00:19:56.490 --> 00:19:58.590
+into the loop to
+compensate for it.
+
+00:19:58.590 --> 00:20:02.700
+And make sure that you think of
+consent as a continuous thing.
+
+00:20:02.700 --> 00:20:05.580
+Not just as Patrick said,
+one time you set it
+
+00:20:05.580 --> 00:20:07.290
+up this way and it's perfect.
+
+00:20:07.290 --> 00:20:09.900
+Agents will evolve
+policy and change,
+
+00:20:09.900 --> 00:20:11.550
+and need to keep
+asking the user.
+
+00:20:11.550 --> 00:20:15.180
+Why? Because we earn
+autonomy with evidence.
+
+00:20:15.180 --> 00:20:17.610
+The more that we can build
+confidence in our users
+
+00:20:17.610 --> 00:20:21.030
+to trust the things that we do,
+that's where we'll build more
+
+00:20:21.030 --> 00:20:25.100
+and stronger and richer
+autonomous systems.
+
+00:20:25.100 --> 00:20:27.020
+With that, we
+believe in Windows,
+
+00:20:27.020 --> 00:20:29.150
+there's a lot of features
+that are in the platform
+
+00:20:29.150 --> 00:20:32.250
+and that we can add that
+help you use the surfaces
+
+00:20:32.250 --> 00:20:33.030
+that are there.
+
+00:20:33.030 --> 00:20:36.180
+The activity that your agent
+is running under can surface
+
+00:20:36.180 --> 00:20:37.800
+that using Windows channels.
+
+00:20:37.800 --> 00:20:39.480
+It can use notifications.
+
+00:20:39.480 --> 00:20:41.340
+It can use many things
+that exist there,
+
+00:20:41.340 --> 00:20:44.040
+as well as the guardrails
+and safety primitives
+
+00:20:44.040 --> 00:20:45.620
+that we help you show today.
+
+00:20:45.620 --> 00:20:49.520
+Further, if an agent has its
+own identity, the providence
+
+00:20:49.520 --> 00:20:51.500
+of its code, and an audit
+
+00:20:51.500 --> 00:20:56.130
+of what it does is a natural
+part of what the OS does.
+
+00:20:56.130 --> 00:20:58.440
+So, with that, I'll turn
+it over to Patrick.
+
+00:20:58.440 --> 00:20:59.890
+Patrick Nikoletich: 
+Wonderful.
+
+00:21:01.290 --> 00:21:05.460
+In the Copilot CLI and SDK, we
+started all the way over there.
+
+00:21:05.460 --> 00:21:07.290
+No sandboxes, no controls.
+
+00:21:07.290 --> 00:21:09.540
+Basic guardrails in
+the application.
+
+00:21:09.540 --> 00:21:12.120
+If the user hit the wrong prompt
+at the wrong point in time,
+
+00:21:12.120 --> 00:21:13.200
+they ended up in a land
+
+00:21:13.200 --> 00:21:16.670
+where they could do a lot more
+damage than they expected.
+
+00:21:16.670 --> 00:21:19.550
+Today, we're happy to announce
+that the Copilot CLI and SDK,
+
+00:21:19.550 --> 00:21:21.230
+through our collaboration
+with the team
+
+00:21:21.230 --> 00:21:24.650
+over at Windows, were able to
+ship a sandbox out-of-box,
+
+00:21:24.650 --> 00:21:27.590
+which is currently under
+the experimental flag.
+
+00:21:27.590 --> 00:21:29.210
+We'll be moving to
+GA in the future,
+
+00:21:29.210 --> 00:21:31.950
+so it will become a 
+default on solution.
+
+00:21:31.950 --> 00:21:34.530
+In the future, we're moving
+to a fully isolated state
+
+00:21:34.530 --> 00:21:37.410
+where you'll take the entire
+agentic host, shove it inside
+
+00:21:37.410 --> 00:21:40.260
+of a safe environment, and
+allow it to execute freely,
+
+00:21:40.260 --> 00:21:44.430
+enabling you to accomplish a
+wider range of jobs end-to-end
+
+00:21:44.430 --> 00:21:46.740
+without supervising
+the agent directly,
+
+00:21:46.740 --> 00:21:50.220
+or worrying about what it's
+doing and where it's going.
+
+00:21:50.220 --> 00:21:51.960
+To look at this in a
+more practical sense,
+
+00:21:51.960 --> 00:21:54.270
+let's break down a little
+bit of what Stuart showed
+
+00:21:54.270 --> 00:21:57.270
+into three short little demos.
+
+00:21:57.270 --> 00:21:59.490
+Inside of the GitHub Copilot
+CLI, like I mentioned,
+
+00:21:59.490 --> 00:22:01.620
+you can actually
+fire it open today.
+
+00:22:01.620 --> 00:22:04.320
+And if you've enabled
+the experimental flag,
+
+00:22:04.320 --> 00:22:07.930
+you will be able to -- let me
+make sure it's actually running.
+
+00:22:12.690 --> 00:22:14.880
+Perfect. You will be able
+
+00:22:14.880 --> 00:22:18.330
+to access a /sandbox 
+slash command ,
+
+00:22:18.330 --> 00:22:20.880
+which not only will enable
+you to turn it on and off,
+
+00:22:20.880 --> 00:22:22.320
+but as you'll see,
+you'll have some quick,
+
+00:22:22.320 --> 00:22:23.520
+handy, out-of-the-box options
+
+00:22:23.520 --> 00:22:25.350
+that allow you to
+configure policy.
+
+00:22:25.350 --> 00:22:27.060
+You can turn on and
+off the sandbox.
+
+00:22:27.060 --> 00:22:29.490
+You can set the file
+system configuration.
+
+00:22:29.490 --> 00:22:31.410
+Notice "include working
+directory" is already there,
+
+00:22:31.410 --> 00:22:33.990
+and the policy will
+clear after it's done.
+
+00:22:33.990 --> 00:22:36.810
+If we just enable the
+file system protections,
+
+00:22:36.810 --> 00:22:39.300
+and we ask the agent to just go
+off and delete all the files
+
+00:22:39.300 --> 00:22:41.160
+on our desktop, we
+probably don't really want
+
+00:22:41.160 --> 00:22:42.060
+that to happen.
+
+00:22:42.060 --> 00:22:44.880
+But it's a good test
+for the agent itself.
+
+00:22:44.880 --> 00:22:46.710
+We experience our normal
+permissions prompt,
+
+00:22:46.710 --> 00:22:47.430
+and we said, yes,
+
+00:22:47.430 --> 00:22:48.990
+go delete everything
+on my desktop,
+
+00:22:48.990 --> 00:22:50.880
+which, definitely don't
+want that to occur.
+
+00:22:50.880 --> 00:22:52.200
+I have plenty there.
+
+00:22:52.200 --> 00:22:53.910
+And you'll notice
+that the agents,
+
+00:22:53.910 --> 00:22:56.880
+because it has the sandbox
+enabled, it's able to 1,
+
+00:22:56.880 --> 00:22:59.760
+block the deletion of all
+the files on the desktop.
+
+00:22:59.760 --> 00:23:01.050
+Protection number 1.
+
+00:23:01.050 --> 00:23:02.850
+Two, the agent's
+able to identify
+
+00:23:02.850 --> 00:23:05.160
+that it's actually operating
+with the sandbox on,
+
+00:23:05.160 --> 00:23:07.920
+so you're aware of what's
+providing that protection.
+
+00:23:07.920 --> 00:23:10.590
+And then 3, there are
+some options there,
+
+00:23:10.590 --> 00:23:12.750
+and some next-level guidance
+for what you can do next
+
+00:23:12.750 --> 00:23:16.770
+to move your way around the
+sandbox if you need to.
+
+00:23:16.770 --> 00:23:21.180
+If we look at the next
+piece -- go forward one for me.
+
+00:23:21.180 --> 00:23:22.230
+Perfect.
+
+00:23:22.230 --> 00:23:24.930
+We go forward to restricting
+outbound network access.
+
+00:23:24.930 --> 00:23:26.430
+You have a similar opportunity.
+
+00:23:26.430 --> 00:23:29.220
+Just offer the file system and
+towards the network ingress
+
+00:23:29.220 --> 00:23:30.990
+and egress to your system.
+
+00:23:30.990 --> 00:23:33.960
+You look at the Network tab, you
+can allow outbound connections.
+
+00:23:33.960 --> 00:23:35.340
+You can allow local network.
+
+00:23:35.340 --> 00:23:36.540
+They're separate, so
+you have a couple
+
+00:23:36.540 --> 00:23:38.340
+of different flex options there.
+
+00:23:38.340 --> 00:23:41.250
+But the beautiful thing
+is, if you ask the agent
+
+00:23:41.250 --> 00:23:42.960
+to do something as
+sketchy and dangerous
+
+00:23:42.960 --> 00:23:45.060
+as turn your private
+repository public,
+
+00:23:45.060 --> 00:23:46.920
+which might be company IP,
+
+00:23:46.920 --> 00:23:50.490
+the agent can actually use those
+filters to block certain actions
+
+00:23:50.490 --> 00:23:52.710
+and prevent you from making
+dangerous calls outside
+
+00:23:52.710 --> 00:23:53.670
+the system.
+
+00:23:53.670 --> 00:23:56.910
+And while this might seem like
+a basic demo of me asking it
+
+00:23:56.910 --> 00:23:58.920
+to do something and
+expecting some guidance,
+
+00:23:58.920 --> 00:24:02.460
+the thing to be aware of is.
+agents are still exposed
+
+00:24:02.460 --> 00:24:04.680
+to prompt injection
+attacks in the modern era,
+
+00:24:04.680 --> 00:24:06.150
+which means that any context
+
+00:24:06.150 --> 00:24:09.240
+that enters its world sphere can
+actually direct its guidance
+
+00:24:09.240 --> 00:24:11.580
+and force it to accomplish
+or take care of actions
+
+00:24:11.580 --> 00:24:14.230
+that you wouldn't
+necessarily expect it to.
+
+00:24:15.900 --> 00:24:21.390
+If we scale this up to
+the CLI and SDK, perfect,
+
+00:24:21.390 --> 00:24:23.970
+you have an opportunity to
+leverage all these capabilities
+
+00:24:23.970 --> 00:24:26.940
+in any application that you
+integrate or harness into.
+
+00:24:26.940 --> 00:24:29.460
+And so, this is a personal
+writing app that I use to hack
+
+00:24:29.460 --> 00:24:32.010
+on the Copilot SDK itself.
+
+00:24:32.010 --> 00:24:33.960
+I'll go ahead and I'll
+run a sandbox text.
+
+00:24:33.960 --> 00:24:35.310
+The way that I
+actually deploy agents
+
+00:24:35.310 --> 00:24:37.770
+out of here is, I just write
+like I normally would in a file,
+
+00:24:37.770 --> 00:24:41.310
+and I can just @mention an
+agent, and it will deploy it.
+
+00:24:41.310 --> 00:24:44.340
+Because I'm actually
+using my @sandbox agents,
+
+00:24:44.340 --> 00:24:47.580
+which comes with these
+policies enabled by default,
+
+00:24:47.580 --> 00:24:50.520
+what I'm able to do is,
+similar to the first demo,
+
+00:24:50.520 --> 00:24:52.980
+ask it to delete
+my desktop files.
+
+00:24:52.980 --> 00:24:54.720
+The sandbox will
+block the action.
+
+00:24:54.720 --> 00:24:56.820
+You will see the calls
+failing in there.
+
+00:24:56.820 --> 00:24:59.820
+More importantly, you will see
+the agent providing its final
+
+00:24:59.820 --> 00:25:02.640
+guidance, saying the
+sandbox blocked my action.
+
+00:25:02.640 --> 00:25:03.930
+It's prevented me
+from doing this.
+
+00:25:03.930 --> 00:25:06.030
+You need to find
+another way around.
+
+00:25:06.030 --> 00:25:08.370
+Now, in a normal situation,
+I wouldn't want
+
+00:25:08.370 --> 00:25:09.480
+to find another way around.
+
+00:25:09.480 --> 00:25:12.750
+I don't want to delete
+files again on my desktop.
+
+00:25:12.750 --> 00:25:16.650
+So, if we take a simpler,
+easier-to-manage scenario,
+
+00:25:16.650 --> 00:25:20.040
+such as creating a
+hello.txt on my desktop,
+
+00:25:20.040 --> 00:25:22.800
+I can show you what it's
+like to build finer
+
+00:25:22.800 --> 00:25:26.100
+and greater experiences for
+customers using the SDK.
+
+00:25:26.100 --> 00:25:28.590
+Again, all of these scenarios
+are available, and you can think
+
+00:25:28.590 --> 00:25:31.650
+about how you want to integrate
+them best into your solution.
+
+00:25:31.650 --> 00:25:33.360
+What's important about
+this one is, I want it
+
+00:25:33.360 --> 00:25:34.650
+to create a file.
+
+00:25:34.650 --> 00:25:36.330
+The sandbox blocked it.
+
+00:25:36.330 --> 00:25:38.280
+But because this is
+integrated in the SDK,
+
+00:25:38.280 --> 00:25:41.190
+and you can not only detect
+when the sandbox is in action,
+
+00:25:41.190 --> 00:25:44.070
+but you have an opportunity to
+perform other actions on behalf
+
+00:25:44.070 --> 00:25:47.430
+of the user, you can simply
+hit "Disable the sandbox."
+
+00:25:47.430 --> 00:25:48.300
+Let it continue.
+
+00:25:48.300 --> 00:25:51.570
+I reviewed the command, which
+allows it to operate freely.
+
+00:25:51.570 --> 00:25:53.400
+Create the file on the desktop.
+
+00:25:53.400 --> 00:25:55.650
+We should see this thing
+minimize in a second.
+
+00:25:55.650 --> 00:25:57.630
+And you'll notice
+there's a file there.
+
+00:25:57.630 --> 00:26:00.240
+Allowing you to not only
+put the sandbox in place
+
+00:26:00.240 --> 00:26:02.700
+as a great default
+out-of-the-box option,
+
+00:26:02.700 --> 00:26:05.790
+but putting user experiences and
+other controls that allow users
+
+00:26:05.790 --> 00:26:08.040
+to navigate safely around
+it when they run into it,
+
+00:26:08.040 --> 00:26:10.140
+and they expect the
+agent to be successful.
+
+00:26:10.140 --> 00:26:12.840
+Kirupa Chinnathambi:
+Thank you, Patrick.
+
+00:26:12.840 --> 00:26:15.870
+So, part of us building all
+these platform capabilities,
+
+00:26:15.870 --> 00:26:17.400
+we actually work very
+closely with Patrick
+
+00:26:17.400 --> 00:26:20.790
+and the GitHub Copilot team to
+design and validate the design.
+
+00:26:20.790 --> 00:26:22.205
+But we also work very closely
+
+00:26:22.217 --> 00:26:23.940
+with a broader
+ecosystem as well,
+
+00:26:23.940 --> 00:26:26.460
+with partners like
+OpenAI, Manus,
+
+00:26:26.460 --> 00:26:28.800
+Hermes, NVIDIA, and OpenClaw.
+
+00:26:28.800 --> 00:26:31.950
+Stuart gave a great demo, and in
+the keynote today you saw more
+
+00:26:31.950 --> 00:26:35.160
+about how Windows primitive
+are helping OpenClaw run
+
+00:26:35.160 --> 00:26:37.530
+more securely.
+
+00:26:37.530 --> 00:26:40.560
+So, we covered a lot of
+ground in this talk.
+
+00:26:40.560 --> 00:26:42.990
+Let me go ahead and summarize
+the key things that you need
+
+00:26:42.990 --> 00:26:45.990
+to do to make sure agents
+run well on Windows.
+
+00:26:45.990 --> 00:26:49.590
+First, every agent should
+be running identified.
+
+00:26:49.590 --> 00:26:51.870
+It should have its own identity,
+distinct from that
+
+00:26:51.870 --> 00:26:54.180
+of the human user,
+with its own identity,
+
+00:26:54.180 --> 00:26:56.340
+permissions, and audit trail.
+
+00:26:56.340 --> 00:26:57.720
+It should run contained.
+
+00:26:57.720 --> 00:27:02.160
+Every action runs in the right
+sandbox, enforced by policy.
+
+00:27:02.160 --> 00:27:03.840
+And it also runs managed.
+
+00:27:03.840 --> 00:27:05.281
+Now, this is a
+topic that's going
+
+00:27:05.293 --> 00:27:06.660
+to require a lot more coverage,
+
+00:27:06.660 --> 00:27:09.510
+which we will cover in future
+sessions, and blog posts,
+
+00:27:09.510 --> 00:27:11.790
+and videos, but what we
+will do is give a very
+
+00:27:11.790 --> 00:27:13.200
+high-level overview.
+
+00:27:13.200 --> 00:27:16.860
+At a high-level, IT admin
+policies apply consistently
+
+00:27:16.860 --> 00:27:19.890
+across devices, with
+full enforceability
+
+00:27:19.890 --> 00:27:21.120
+and observability.
+
+00:27:21.120 --> 00:27:24.030
+Now, if we go one level deeper,
+here's an extra feature you get
+
+00:27:24.030 --> 00:27:27.510
+as part of using MXC
+to build your agents.
+
+00:27:27.510 --> 00:27:30.240
+You get Agent 365
+native integration.
+
+00:27:30.240 --> 00:27:33.330
+And this enables your agents
+running in Windows, too.
+
+00:27:33.330 --> 00:27:35.670
+Start secure and stay secure.
+
+00:27:35.670 --> 00:27:39.030
+And this also means you get
+the full ecosystem as well.
+
+00:27:39.030 --> 00:27:42.390
+You get Defender, Entra,
+Intune, and Purview.
+
+00:27:42.390 --> 00:27:45.210
+Their protections allow
+your security and IT teams
+
+00:27:45.210 --> 00:27:48.240
+to constrain and
+secure local agents
+
+00:27:48.240 --> 00:27:52.110
+to make them run more securely
+in enterprise context.
+
+00:27:52.110 --> 00:27:54.150
+That's really like a nice
+icing on top of this,
+
+00:27:54.150 --> 00:27:56.490
+to take it back
+to where we started from.
+
+00:27:56.490 --> 00:27:58.860
+As agents move from
+answering questions
+
+00:27:58.860 --> 00:28:00.600
+and to taking real actions,
+
+00:28:00.600 --> 00:28:04.080
+the biggest challenge is
+ensuring they run well.
+
+00:28:04.080 --> 00:28:07.620
+Windows is the foundation
+to handle that shift.
+
+00:28:07.620 --> 00:28:11.190
+And Windows isn't just a
+place where agents can run.
+
+00:28:11.190 --> 00:28:13.530
+It's the place where
+they can run reliably,
+
+00:28:13.530 --> 00:28:16.050
+safely, and at scale.
+
+00:28:16.050 --> 00:28:20.250
+And with that, if you haven't
+done so yet, try MXC right now.
+
+00:28:20.250 --> 00:28:21.270
+What are you waiting for?
+
+00:28:21.270 --> 00:28:23.640
+And if you have any questions,
+want to talk to us further
+
+00:28:23.640 --> 00:28:25.050
+about any of these topics,
+
+00:28:25.050 --> 00:28:28.080
+come find Patrick, Stuart, and
+I at the Agentic booth, or some
+
+00:28:28.080 --> 00:28:29.700
+of our colleagues will
+be there tomorrow
+
+00:28:29.700 --> 00:28:32.280
+to entertain more
+about these topics.
+
+00:28:32.280 --> 00:28:33.520
+Thank you.
+
+00:28:33.520 --> 00:28:38.560
+[APPLAUSE]
+

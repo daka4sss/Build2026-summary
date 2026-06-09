@@ -1,0 +1,98 @@
+[
+  {
+    "id": "BRK209",
+    "asset": "52082998-f4df-4fbb-8b20-f285b89fd486",
+    "vtt_bytes": 99057,
+    "clean_chars": 42978,
+    "title": "Japan Wrap-up Session",
+    "topic": "Agents & apps",
+    "type": "Breakout",
+    "speakers": "Tadashi Okazaki",
+    "delivery": "In-person|Online",
+    "level": "(200) Intermediate"
+  },
+  {
+    "id": "BRK244",
+    "asset": "c8e844ff-d07c-427f-9168-2a7d84ac4acf",
+    "vtt_bytes": 93589,
+    "clean_chars": 35705,
+    "title": "Agent supervision is the new senior engineering skill",
+    "topic": "Agents & apps",
+    "type": "Breakout",
+    "speakers": "swyx (Shawn Wang)",
+    "delivery": "In-person|Online",
+    "level": "(200) Intermediate"
+  },
+  {
+    "id": "BRK247",
+    "asset": "174a3901-070f-4a05-8a0d-4bf680418cc2",
+    "vtt_bytes": 142690,
+    "clean_chars": 50005,
+    "title": "Scott and Mark learn...how agents reshape software engineering",
+    "topic": "Agents & apps",
+    "type": "Breakout",
+    "speakers": "Mark Russinovich, Scott Hanselman, Darby Kosten",
+    "delivery": "In-person|Online",
+    "level": "(300) Advanced"
+  },
+  {
+    "id": "BRK260",
+    "asset": "04c29fa8-c492-43f5-bb90-6582b474053b",
+    "vtt_bytes": 67694,
+    "clean_chars": 37076,
+    "title": "Build Apps w/ Local AI for Unmetered Intelligence on every Windows PC",
+    "topic": "Windows",
+    "type": "Breakout",
+    "speakers": "Jordi Janer, Aditi Narvekar, Anastasiya Tarnouskaya, Tucker Burns",
+    "delivery": "In-person|Online",
+    "level": "(300) Advanced"
+  },
+  {
+    "id": "BRK261",
+    "asset": "9574001f-c87e-401e-9e24-87990c6318f9",
+    "vtt_bytes": 74887,
+    "clean_chars": 40600,
+    "title": "Build and ship faster with a developer-optimized experience on Windows",
+    "topic": "Windows",
+    "type": "Breakout",
+    "speakers": "Kayla Cinnamon, Craig Loewen, Clint Rutkas",
+    "delivery": "In-person|Online",
+    "level": "(300) Advanced"
+  },
+  {
+    "id": "BRK262",
+    "asset": "ceeb5203-d352-4d45-8be6-9db57724f003",
+    "vtt_bytes": 49073,
+    "clean_chars": 27210,
+    "title": "Building Agents You Can Trust on Windows",
+    "topic": "Windows",
+    "type": "Breakout",
+    "speakers": "Kirupa Chinnathambi, Patrick Nikoletich, Stuart Schaefer",
+    "delivery": "In-person|Online",
+    "level": "(300) Advanced"
+  },
+  {
+    "id": "KEY01",
+    "asset": "9b6fd85d-e64f-46a4-b8b2-23811087192f",
+    "vtt_bytes": 217413,
+    "clean_chars": 118981,
+    "title": "Microsoft Build opening keynote",
+    "topic": "@{displayValue=; logicalValue=}",
+    "type": "Keynote",
+    "speakers": "Satya Nadella",
+    "delivery": "In-person|Online",
+    "level": "(200) Intermediate"
+  },
+  {
+    "id": "BRK234",
+    "asset": "990ffabd-eceb-4850-96a4-e40c4c2e7df8",
+    "vtt_bytes": 94227,
+    "clean_chars": 51682,
+    "title": "Shipping custom models at scale from fine-tuning to inference",
+    "topic": "Working with models",
+    "type": "Breakout",
+    "speakers": "Rob Ferguson, Daniel Han, Mark Saroufin",
+    "delivery": "In-person|Online",
+    "level": "(200) Intermediate"
+  }
+]

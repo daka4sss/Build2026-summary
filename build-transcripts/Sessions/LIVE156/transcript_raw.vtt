@@ -1,0 +1,1185 @@
+WEBVTT
+
+00:00:00.090 --> 00:00:00.630
+BURKE HOLLAND: All right.
+
+00:00:00.630 --> 00:00:01.170
+Hey everybody.
+
+00:00:01.170 --> 00:00:02.160
+Welcome back.
+
+00:00:02.160 --> 00:00:04.830
+And we're joined by Joanna,
+
+00:00:04.830 --> 00:00:08.130
+who's the Design
+Lead on VS Code.
+
+00:00:08.130 --> 00:00:10.170
+How many designers
+are there on VS Code?
+
+00:00:10.170 --> 00:00:11.220
+JOANNA OIKAWA: There are four.
+
+00:00:11.220 --> 00:00:11.940
+BURKE HOLLAND: Four designers.
+
+00:00:11.940 --> 00:00:12.210
+JOANNA OIKAWA: Yes.
+
+00:00:12.210 --> 00:00:16.410
+A small but mighty Design
+and UX Engineering Team.
+
+00:00:16.410 --> 00:00:18.420
+BURKE HOLLAND: Yes.
+
+00:00:18.420 --> 00:00:20.310
+So interesting back story here.
+
+00:00:20.310 --> 00:00:22.620
+For those of you who are
+here, you get to hear this.
+
+00:00:22.620 --> 00:00:28.860
+There is a UX channel in
+the chat, and it's one
+
+00:00:28.860 --> 00:00:31.080
+of my favorites, because
+you'll see tons of stuff there
+
+00:00:31.080 --> 00:00:35.190
+that never sees the light of
+day, but all the prototypes,
+
+00:00:35.190 --> 00:00:37.890
+you're like, I've been thinking,
+what if chat looked like this?
+
+00:00:37.890 --> 00:00:39.480
+And you're like, that's amazing.
+
+00:00:39.480 --> 00:00:41.130
+It's one of my favorite
+places to hang out
+
+00:00:41.130 --> 00:00:43.200
+and just watch the
+tower building.
+
+00:00:43.200 --> 00:00:43.710
+Very cool.
+
+00:00:43.710 --> 00:00:43.890
+JOANNA OIKAWA: Yeah.
+
+00:00:43.890 --> 00:00:47.220
+It's great because a lot of
+the engineers also own UX.
+
+00:00:47.220 --> 00:00:49.530
+And so we're able to
+have a small team
+
+00:00:49.530 --> 00:00:51.810
+and work really quickly,
+because everybody is thinking
+
+00:00:51.810 --> 00:00:54.210
+and sharing and
+owning UX together.
+
+00:00:54.210 --> 00:00:55.920
+BURKE HOLLAND: Yeah,
+it's very cool.
+
+00:00:55.920 --> 00:00:58.740
+I wish I was a designer.
+
+00:00:58.740 --> 00:00:59.880
+JOANNA OIKAWA: You could.
+
+00:00:59.880 --> 00:01:01.530
+BURKE HOLLAND: If you
+could have one ability
+
+00:01:01.530 --> 00:01:03.570
+that you don't have,
+what would it be?
+
+00:01:03.570 --> 00:01:03.930
+JOANNA OIKAWA: Me?
+
+00:01:03.930 --> 00:01:04.680
+BURKE HOLLAND: Yeah.
+
+00:01:04.680 --> 00:01:06.450
+JOANNA OIKAWA: Oh, my gosh.
+
+00:01:06.450 --> 00:01:11.330
+Probably print making,
+like physical posters
+
+00:01:11.330 --> 00:01:13.490
+and graphic design, a
+little bit more of that.
+
+00:01:13.490 --> 00:01:15.380
+BURKE HOLLAND: It
+wouldn't be singing,
+
+00:01:15.380 --> 00:01:16.910
+Celine Dion or something?
+
+00:01:16.910 --> 00:01:17.810
+You could have picked anything.
+
+00:01:17.810 --> 00:01:18.740
+JOANNA OIKAWA: Oh, I could
+have picked anything,
+
+00:01:18.740 --> 00:01:22.790
+and I picked something
+very close to my mom.
+
+00:01:22.790 --> 00:01:23.720
+BURKE HOLLAND: You're
+living your best life.
+
+00:01:23.720 --> 00:01:26.880
+Okay. So almost shipped designs.
+
+00:01:26.880 --> 00:01:29.370
+Are there a couple of
+examples that we can see?
+
+00:01:29.370 --> 00:01:29.940
+JOANNA OIKAWA: Sure.
+
+00:01:29.940 --> 00:01:34.650
+Yeah. I mean, I have kind of a
+walkthrough of what our journey
+
+00:01:34.650 --> 00:01:36.870
+to the agents window looks.
+
+00:01:36.870 --> 00:01:40.230
+And that includes a lot
+of things that are close
+
+00:01:40.230 --> 00:01:42.690
+but not quite what we ended
+up shipping, and some things
+
+00:01:42.690 --> 00:01:44.940
+that we're still thinking about.
+
+00:01:44.940 --> 00:01:49.350
+So I have, here in Figma, you
+can see back in December,
+
+00:01:49.350 --> 00:01:52.650
+we were starting to think about
+what the evolution of that
+
+00:01:52.650 --> 00:01:55.320
+"Agents" panel that we
+launched last fall was going
+
+00:01:55.320 --> 00:01:55.830
+to look like.
+
+00:01:55.830 --> 00:01:58.890
+How can we make it easier
+to switch and check
+
+00:01:58.890 --> 00:02:02.370
+on your agents while
+you're focused in VS Code?
+
+00:02:02.370 --> 00:02:06.000
+And so we start to play with
+this menu that's attached
+
+00:02:06.000 --> 00:02:09.840
+to the central
+search bar as a way
+
+00:02:09.840 --> 00:02:11.190
+to quickly find those things.
+
+00:02:11.190 --> 00:02:15.240
+And you can see in the product
+today, we have a similar menu,
+
+00:02:15.240 --> 00:02:18.900
+but we grew and learned
+more about the feedback.
+
+00:02:18.900 --> 00:02:20.040
+And so we started to think more
+
+00:02:20.040 --> 00:02:23.310
+about what a full-screen
+experience would look like,
+
+00:02:23.310 --> 00:02:26.130
+still within the concept
+of the same editor window,
+
+00:02:26.130 --> 00:02:28.020
+but we started with
+the welcome page.
+
+00:02:28.020 --> 00:02:30.420
+And we ended up shipping
+something close to this,
+
+00:02:30.420 --> 00:02:33.990
+but one of the key
+differences was what kind
+
+00:02:33.990 --> 00:02:35.760
+of information we
+wanted to show here.
+
+00:02:35.760 --> 00:02:38.430
+And so this took a lot of
+feedback, user research,
+
+00:02:38.430 --> 00:02:42.570
+to learn about what data
+
+00:02:42.570 --> 00:02:45.450
+across what workspaces do
+you want to see things.
+
+00:02:45.450 --> 00:02:48.690
+And we really learned that a lot
+of folks wanted to see sessions
+
+00:02:48.690 --> 00:02:50.880
+across different projects.
+
+00:02:50.880 --> 00:02:52.170
+BURKE HOLLAND: How do
+you make that decision?
+
+00:02:52.170 --> 00:02:53.820
+Is it just looking at telemetry?
+
+00:02:53.820 --> 00:02:57.810
+I mean, this seems like
+this stuff is hard.
+
+00:02:57.810 --> 00:02:59.130
+It's extremely hard.
+
+00:02:59.130 --> 00:03:01.800
+And when you see products that
+are really well designed,
+
+00:03:01.800 --> 00:03:06.480
+they're just easy to use, that
+is extremely difficult to do.
+
+00:03:06.480 --> 00:03:09.330
+So I'm very curious about, like,
+how do you figure out which one
+
+00:03:09.330 --> 00:03:11.880
+of these designs is the
+right one to go with?
+
+00:03:11.880 --> 00:03:13.500
+JOANNA OIKAWA: It's a challenge
+because we're working
+
+00:03:13.500 --> 00:03:16.410
+in an existing product
+with existing patterns
+
+00:03:16.410 --> 00:03:18.630
+and preferences and then trying
+
+00:03:18.630 --> 00:03:21.540
+to support new ways
+of working entirely.
+
+00:03:21.540 --> 00:03:21.870
+BURKE HOLLAND: Yeah.
+
+00:03:21.870 --> 00:03:23.940
+Modalities that we don't really
+know what they look like.
+
+00:03:23.940 --> 00:03:26.310
+JOANNA OIKAWA: And so we're
+learning about them on our team.
+
+00:03:26.310 --> 00:03:29.340
+And our customers, our users
+are learning about them.
+
+00:03:29.340 --> 00:03:34.350
+And it's kind of building
+the boat while it's running
+
+00:03:34.350 --> 00:03:34.980
+type thing.
+
+00:03:34.980 --> 00:03:36.000
+BURKE HOLLAND: Yeah,
+we're changing the wheels
+
+00:03:36.000 --> 00:03:40.020
+on the bus while it's -- so who
+makes the final call on that?
+
+00:03:40.020 --> 00:03:40.620
+Is that you?
+
+00:03:40.620 --> 00:03:44.040
+Are you the one who says
+ship it or don't ship it?
+
+00:03:44.040 --> 00:03:46.230
+JOANNA OIKAWA: We're always
+kind of improving on it,
+
+00:03:46.230 --> 00:03:49.290
+so there's not
+usually a final call.
+
+00:03:49.290 --> 00:03:51.240
+We'll put it into
+insiders first.
+
+00:03:51.240 --> 00:03:52.110
+We'll experiment.
+
+00:03:52.110 --> 00:03:52.860
+BURKE HOLLAND: Oh, that's right.
+
+00:03:52.860 --> 00:03:53.340
+Test rollout.
+
+00:03:53.340 --> 00:03:54.120
+JOANNA OIKAWA:
+We'll run research.
+
+00:03:54.120 --> 00:03:55.020
+We'll get feedback.
+
+00:03:55.020 --> 00:03:57.330
+And then we're just kind of
+continuously touching a lot
+
+00:03:57.330 --> 00:04:00.150
+of these problem spaces
+as we learn more,
+
+00:04:00.150 --> 00:04:03.060
+as our users learn more.
+
+00:04:03.060 --> 00:04:05.070
+No one really calls
+it final on the team.
+
+00:04:05.070 --> 00:04:07.590
+We just kind of keep going
+until we're happy with it.
+
+00:04:07.590 --> 00:04:08.460
+BURKE HOLLAND: Okay.
+
+00:04:08.460 --> 00:04:11.790
+And y'all have something
+called UI Power Hour.
+
+00:04:11.790 --> 00:04:12.930
+UI Power Hour.
+
+00:04:12.930 --> 00:04:13.740
+Is that a thing?
+
+00:04:13.740 --> 00:04:14.820
+JOANNA OIKAWA: I don't know.
+
+00:04:14.820 --> 00:04:16.560
+BURKE HOLLAND: It says
+what it is, how it works,
+
+00:04:16.560 --> 00:04:19.860
+and why it matters
+at this velocity.
+
+00:04:19.860 --> 00:04:21.640
+JOANNA OIKAWA: I have no idea.
+
+00:04:23.190 --> 00:04:25.860
+BURKE HOLLAND: The AI
+has hallucinated facts.
+
+00:04:25.860 --> 00:04:30.840
+AI designers shipping their
+own fixes, oh, with Figma MCP.
+
+00:04:30.840 --> 00:04:30.930
+Nice.
+
+00:04:30.930 --> 00:04:32.250
+JOANNA OIKAWA: Yeah, absolutely.
+
+00:04:32.250 --> 00:04:38.040
+We have taken advantage of the
+capability to take designs
+
+00:04:38.040 --> 00:04:41.130
+from Figma, just like
+this, and move them
+
+00:04:41.130 --> 00:04:45.650
+into code more quickly and,
+more importantly, take code
+
+00:04:45.650 --> 00:04:48.020
+and update our Figma components,
+so that you can work
+
+00:04:48.020 --> 00:04:51.620
+in either tool, whatever
+is easiest for you.
+
+00:04:51.620 --> 00:04:54.770
+And all of our designers
+ship code as well.
+
+00:04:54.770 --> 00:04:55.580
+And so we --
+
+00:04:55.580 --> 00:04:56.090
+BURKE HOLLAND: Oh, really?
+
+00:04:56.090 --> 00:04:57.410
+Are you submitting PRs?
+
+00:04:57.410 --> 00:04:58.410
+JOANNA OIKAWA: Yes.
+
+00:04:58.410 --> 00:05:01.440
+BURKE HOLLAND: Now is that a
+change from 12 months ago,
+
+00:05:01.440 --> 00:05:03.630
+or has it always been that way?
+
+00:05:03.630 --> 00:05:05.610
+JOANNA OIKAWA: A lot
+of former designers,
+
+00:05:05.610 --> 00:05:08.430
+like David Dossett, have
+been very integrated
+
+00:05:08.430 --> 00:05:09.660
+in the code base as well.
+
+00:05:09.660 --> 00:05:13.230
+But it's kind of a
+new thing for us.
+
+00:05:13.230 --> 00:05:16.260
+So we're finding that balance
+of when to submit PRs,
+
+00:05:16.260 --> 00:05:19.890
+when to just create prototypes,
+when to just work in Figma,
+
+00:05:19.890 --> 00:05:21.300
+what's most efficient.
+
+00:05:21.300 --> 00:05:24.660
+We have a lot of web-based
+prototypes as well that we use.
+
+00:05:24.660 --> 00:05:29.820
+This is from last December as
+well when we were starting
+
+00:05:29.820 --> 00:05:33.030
+to talk about our new
+themes and color refreshes
+
+00:05:33.030 --> 00:05:35.430
+and what were some of
+the experimental styles
+
+00:05:35.430 --> 00:05:36.870
+that we wanted to play with.
+
+00:05:36.870 --> 00:05:41.880
+And so prototyping these to make
+them interactive was excellent.
+
+00:05:41.880 --> 00:05:43.860
+And we didn't end up
+shipping this exact code,
+
+00:05:43.860 --> 00:05:45.030
+but it gave us
+something to share
+
+00:05:45.030 --> 00:05:46.800
+with the team, gather feedback.
+
+00:05:46.800 --> 00:05:49.800
+And you can see some of the
+options that we had here,
+
+00:05:49.800 --> 00:05:53.610
+like the shadow on the panels,
+the lighter panels than the rest
+
+00:05:53.610 --> 00:05:55.770
+of the background,
+these are things
+
+00:05:55.770 --> 00:05:56.550
+that we ended up changing.
+
+00:05:56.550 --> 00:05:57.600
+BURKE HOLLAND: The VS Code icon
+
+00:05:57.600 --> 00:06:00.120
+in the top right
+corner was flashing.
+
+00:06:00.120 --> 00:06:00.780
+I like that.
+
+00:06:00.780 --> 00:06:03.150
+JOANNA OIKAWA: Yeah.
+
+00:06:03.150 --> 00:06:05.550
+The evolution of this
+is the "Update" button
+
+00:06:05.550 --> 00:06:07.440
+that lives up there now.
+
+00:06:07.440 --> 00:06:10.440
+But we got feedback that the
+flashing button was a little
+
+00:06:10.440 --> 00:06:10.800
+too much.
+
+00:06:10.800 --> 00:06:11.610
+BURKE HOLLAND: A
+little too annoying?
+
+00:06:11.610 --> 00:06:13.230
+JOANNA OIKAWA: Yeah.
+
+00:06:13.230 --> 00:06:14.580
+So maybe we'll just
+add it for you.
+
+00:06:14.580 --> 00:06:16.080
+BURKE HOLLAND: I really like it.
+
+00:06:16.080 --> 00:06:19.260
+Okay. So what I'm hearing,
+Joanna, because I heard this
+
+00:06:19.260 --> 00:06:25.050
+from Courtney as well, is
+that everybody is now --
+
+00:06:25.050 --> 00:06:27.840
+would it be accurate to say
+that everyone is a developer?
+
+00:06:27.840 --> 00:06:30.960
+In other words, PMs
+are submitting PRs.
+
+00:06:30.960 --> 00:06:34.290
+Designers are submitting PRs.
+
+00:06:34.290 --> 00:06:37.380
+So that, to me, seems
+to be a huge change.
+
+00:06:37.380 --> 00:06:40.110
+The job has really expanded
+beyond just design.
+
+00:06:40.110 --> 00:06:41.010
+JOANNA OIKAWA: Everyone
+is a developer,
+
+00:06:41.010 --> 00:06:43.590
+and everyone is a
+designer as well.
+
+00:06:43.590 --> 00:06:45.120
+Like I said, a lot
+of our engineers --
+
+00:06:45.120 --> 00:06:45.630
+BURKE HOLLAND: That's very true.
+
+00:06:45.630 --> 00:06:48.690
+JOANNA OIKAWA: -- they're able
+to come up with new ideas
+
+00:06:48.690 --> 00:06:50.670
+and get farther in the UX
+process than they would have
+
+00:06:50.670 --> 00:06:55.380
+in the past because they
+have more design guidelines
+
+00:06:55.380 --> 00:06:57.930
+that are available, and the code
+can look at what's happened
+
+00:06:57.930 --> 00:07:00.990
+in the past, and they can bring
+a prototype to us for feedback.
+
+00:07:00.990 --> 00:07:01.260
+BURKE HOLLAND: Yeah,
+that's very true.
+
+00:07:01.260 --> 00:07:03.360
+JOANNA OIKAWA: And so
+we get to share a lot
+
+00:07:03.360 --> 00:07:05.250
+of responsibilities
+because of these tools.
+
+00:07:05.250 --> 00:07:06.750
+BURKE HOLLAND: It moves
+in both directions.
+
+00:07:06.750 --> 00:07:11.820
+I'm curious, do y'all think
+that maybe in the future,
+
+00:07:11.820 --> 00:07:15.420
+the job is you do everything?
+
+00:07:15.420 --> 00:07:16.440
+Do you know what I mean?
+
+00:07:16.440 --> 00:07:19.320
+You're a designer and
+a PM and an engineer.
+
+00:07:19.320 --> 00:07:21.840
+Everyone literally
+does everything.
+
+00:07:21.840 --> 00:07:25.500
+We don't have siloed
+disciplines anymore.
+
+00:07:25.500 --> 00:07:26.220
+Or no?
+
+00:07:26.220 --> 00:07:27.990
+JOANNA OIKAWA: The
+way I think about it
+
+00:07:27.990 --> 00:07:29.460
+and the way our team thinks
+
+00:07:29.460 --> 00:07:32.280
+about it is depth
+versus breadth.
+
+00:07:32.280 --> 00:07:34.440
+And so my depth will
+probably always be
+
+00:07:34.440 --> 00:07:36.660
+in user experience
+and visual design.
+
+00:07:36.660 --> 00:07:40.500
+And that's where my deep
+expertise comes in.
+
+00:07:40.500 --> 00:07:44.790
+But with AI, you can have more
+breadth than in the past.
+
+00:07:44.790 --> 00:07:48.750
+So, for instance, writing
+a Kusto query used
+
+00:07:48.750 --> 00:07:51.390
+to take me forever, and
+it was really cumbersome
+
+00:07:51.390 --> 00:07:52.410
+and difficult to do.
+
+00:07:52.410 --> 00:07:56.370
+But now I can look up
+data on our telemetry
+
+00:07:56.370 --> 00:07:58.710
+and make decisions off
+of that much easier.
+
+00:07:58.710 --> 00:08:02.820
+So I can put on that
+analyst hat, PM hat,
+
+00:08:02.820 --> 00:08:05.220
+even though I don't have
+that extreme depth.
+
+00:08:05.220 --> 00:08:07.350
+BURKE HOLLAND: So for
+those folks who don't work
+
+00:08:07.350 --> 00:08:10.470
+in Microsoft, Kusto is, well,
+
+00:08:10.470 --> 00:08:11.850
+Kuso is a public
+thing, too, I think.
+
+00:08:11.850 --> 00:08:15.450
+But Kusto is a language for
+querying telemetry and data.
+
+00:08:15.450 --> 00:08:17.400
+And Microsoft is
+very data driven.
+
+00:08:17.400 --> 00:08:19.950
+Right? It doesn't just
+make decisions on the fly.
+
+00:08:19.950 --> 00:08:21.360
+Everything has to
+be backed by data.
+
+00:08:21.360 --> 00:08:25.620
+So we used to have people
+whose sole job was
+
+00:08:25.620 --> 00:08:28.500
+to write Kusto queries
+and then make dashboards
+
+00:08:28.500 --> 00:08:29.400
+and present that data.
+
+00:08:29.400 --> 00:08:31.020
+That was Devon.
+
+00:08:31.020 --> 00:08:31.740
+That's what he did.
+
+00:08:31.740 --> 00:08:34.740
+And if you needed data,
+you'd have to go to Devon,
+
+00:08:34.740 --> 00:08:36.720
+because he's the
+only one who knew.
+
+00:08:36.720 --> 00:08:39.330
+But I guess now just
+anyone could do it.
+
+00:08:39.330 --> 00:08:41.580
+JOANNA OIKAWA: We're able
+to get farther on our own.
+
+00:08:41.580 --> 00:08:42.120
+BURKE HOLLAND: Holy crap.
+
+00:08:42.120 --> 00:08:44.140
+This place is coming apart.
+
+00:08:45.780 --> 00:08:47.910
+As far as design, though,
+goes with agents,
+
+00:08:47.910 --> 00:08:49.290
+one of the things
+I've noticed is
+
+00:08:49.290 --> 00:08:52.080
+that we talk about AI psychosis.
+
+00:08:52.080 --> 00:08:55.440
+And one of the ways that it
+manifests is that now I think
+
+00:08:55.440 --> 00:08:56.820
+that I'm a good designer.
+
+00:08:56.820 --> 00:08:58.470
+And so the AI makes the design.
+
+00:08:58.470 --> 00:08:59.910
+I'm like, I really like that.
+
+00:08:59.910 --> 00:09:01.860
+And other people will
+show me their thing.
+
+00:09:01.860 --> 00:09:05.550
+They're like, I built this
+with Opus or whatever,
+
+00:09:05.550 --> 00:09:08.520
+and they're super proud of
+it, and it's just purple
+
+00:09:08.520 --> 00:09:11.370
+and gradients all
+over the place.
+
+00:09:11.370 --> 00:09:14.370
+I'm like, that is a monstrosity.
+
+00:09:14.370 --> 00:09:18.660
+So it does seem like, yes, you
+can do, but also there needs
+
+00:09:18.660 --> 00:09:21.110
+to be someone in the
+room who's like,
+
+00:09:21.110 --> 00:09:22.640
+we're not going to do that.
+
+00:09:22.640 --> 00:09:23.480
+Close.
+
+00:09:23.480 --> 00:09:25.040
+JOANNA OIKAWA: That's
+where the depth
+
+00:09:25.040 --> 00:09:29.060
+and the taste comes in,
+having folks, and, similarly,
+
+00:09:29.060 --> 00:09:32.780
+having engineers who can
+tell me that's not possible,
+
+00:09:32.780 --> 00:09:34.850
+or that's not smart, or it's
+going to slow down the app,
+
+00:09:34.850 --> 00:09:36.980
+when I have this fun idea.
+
+00:09:36.980 --> 00:09:39.770
+Having these complementary
+depths really helps find the
+
+00:09:39.770 --> 00:09:40.850
+right balance for the product.
+
+00:09:40.850 --> 00:09:41.960
+BURKE HOLLAND: So I know
+we're kind of off the rails
+
+00:09:41.960 --> 00:09:48.230
+of design, but I'm interested
+in this, because if you're old
+
+00:09:48.230 --> 00:09:51.290
+like me, I've been
+around for so long
+
+00:09:51.290 --> 00:09:53.060
+that I've just seen
+everything, right?
+
+00:09:53.060 --> 00:09:56.610
+So it's like taste and
+experience is more of just,
+
+00:09:56.610 --> 00:09:59.820
+like, I've just done every
+stupid thing you can do.
+
+00:09:59.820 --> 00:10:01.830
+And so I know how it all ends.
+
+00:10:01.830 --> 00:10:04.080
+I've burned myself
+every possible way.
+
+00:10:04.080 --> 00:10:06.190
+I'm just covered in blisters.
+
+00:10:07.760 --> 00:10:12.300
+How do we develop the
+taste if you don't get
+
+00:10:12.300 --> 00:10:16.350
+to get burned anymore because
+the agent is doing all the work?
+
+00:10:16.350 --> 00:10:20.280
+I'm worried about how do we
+create more of these folks?
+
+00:10:20.280 --> 00:10:22.950
+JOANNA OIKAWA: That's why
+having a validation loop
+
+00:10:22.950 --> 00:10:27.630
+and making sure what you're
+shipping is solving the problem
+
+00:10:27.630 --> 00:10:30.420
+that you intended, and
+you're getting feedback,
+
+00:10:30.420 --> 00:10:31.920
+and you're kind of
+closing the loop
+
+00:10:31.920 --> 00:10:34.140
+on decisions that you're making.
+
+00:10:34.140 --> 00:10:37.260
+That's how you'll actually
+find out is this little thing
+
+00:10:37.260 --> 00:10:40.280
+that I vibe coded,
+added really quickly,
+
+00:10:40.280 --> 00:10:41.660
+is it actually
+solving the problem,
+
+00:10:41.660 --> 00:10:45.770
+or does it have a greater sense
+of importance and permanence
+
+00:10:45.770 --> 00:10:48.620
+because it's out
+there and available?
+
+00:10:48.620 --> 00:10:52.560
+So holding ourselves
+responsible for making sure
+
+00:10:52.560 --> 00:10:54.660
+that the things we ship
+work and taking things
+
+00:10:54.660 --> 00:10:57.420
+out when it doesn't work,
+because it's so easy
+
+00:10:57.420 --> 00:10:59.280
+to just add, add, add, add, add.
+
+00:10:59.280 --> 00:11:00.360
+BURKE HOLLAND: Yeah,
+it's fascinating.
+
+00:11:00.360 --> 00:11:01.650
+It is easy to do.
+
+00:11:01.650 --> 00:11:03.630
+I almost feel like we're at
+the point, especially with AI,
+
+00:11:03.630 --> 00:11:06.210
+where it's like, I don't
+know if y'all have ever --
+
+00:11:06.210 --> 00:11:09.990
+are there any artists in the
+room, people who paint or draw?
+
+00:11:09.990 --> 00:11:12.420
+If you draw, then you know
+that when you're drawing,
+
+00:11:12.420 --> 00:11:16.650
+there is a point at which
+you should stop drawing.
+
+00:11:16.650 --> 00:11:19.140
+From here on out, you're
+just going to make it worse.
+
+00:11:19.140 --> 00:11:21.570
+And I feel like that's
+the same way with AI.
+
+00:11:21.570 --> 00:11:24.690
+You can build every
+possible feature,
+
+00:11:24.690 --> 00:11:27.540
+but you should really
+stop and consider whether
+
+00:11:27.540 --> 00:11:28.680
+or not you should do that.
+
+00:11:28.680 --> 00:11:29.580
+JOANNA OIKAWA: And
+that's been a big theme
+
+00:11:29.580 --> 00:11:32.940
+with the Agents Window, because
+we want to provide a place
+
+00:11:32.940 --> 00:11:36.840
+where you can focus
+and easily navigate
+
+00:11:36.840 --> 00:11:40.020
+and complement the craziness
+
+00:11:40.020 --> 00:11:43.080
+of running multiple
+agents in parallel.
+
+00:11:43.080 --> 00:11:45.330
+And that requires kind
+of pulling back things
+
+00:11:45.330 --> 00:11:49.320
+that historically might have
+been an option in VS Code.
+
+00:11:49.320 --> 00:11:54.360
+And so I'll even show in Figma
+here what that started to look
+
+00:11:54.360 --> 00:11:58.080
+when we realized we needed kind
+of a separate window in a space
+
+00:11:58.080 --> 00:12:02.370
+to look across multiple projects
+and have that focused view.
+
+00:12:02.370 --> 00:12:05.220
+We really questioned every
+single element on the screen
+
+00:12:05.220 --> 00:12:06.630
+of whether it was going to be --
+
+00:12:06.630 --> 00:12:07.710
+BURKE HOLLAND:
+Distracting or necessary.
+
+00:12:07.710 --> 00:12:09.180
+JOANNA OIKAWA: -- needed.
+
+00:12:09.180 --> 00:12:11.430
+Does it help me make
+decisions in this moment,
+
+00:12:11.430 --> 00:12:15.180
+or does it add more information
+and options and distractions?
+
+00:12:15.180 --> 00:12:17.940
+And so we played a lot with
+what the output looks like,
+
+00:12:17.940 --> 00:12:20.430
+what the session list
+information needs to include,
+
+00:12:20.430 --> 00:12:24.300
+and then even at this level,
+what information do I need
+
+00:12:24.300 --> 00:12:26.940
+to start my day to
+check on things,
+
+00:12:26.940 --> 00:12:29.400
+to babysit multiple agents at
+a time, and how do we balance
+
+00:12:29.400 --> 00:12:31.650
+that with not making
+people feel overwhelmed
+
+00:12:31.650 --> 00:12:34.290
+and like there's too many
+things happening at once
+
+00:12:34.290 --> 00:12:36.150
+that it's out of their control.
+
+00:12:36.150 --> 00:12:39.450
+BURKE HOLLAND: Well, I, on
+behalf of all developers,
+
+00:12:39.450 --> 00:12:41.550
+am thankful for designers
+
+00:12:41.550 --> 00:12:44.130
+who can help us ship
+good-looking stuff.
+
+00:12:44.130 --> 00:12:45.180
+Thank you so much.
+
+00:12:45.180 --> 00:12:47.490
+A round of applause for Joanna.
+
+00:12:47.490 --> 00:12:48.210
+JOANNA OIKAWA: Thanks
+for having me.
+
+00:12:48.210 --> 00:12:49.230
+BURKE HOLLAND: You're
+my favorite designer.
+
+00:12:49.230 --> 00:12:50.790
+Don't tell Elijah I said that.
+
+00:12:50.790 --> 00:12:51.150
+All right.
+
+00:12:51.150 --> 00:12:51.600
+Thanks so much.
+
+00:12:51.600 --> 00:12:53.220
+All right, folks,
+we'll be right back.
+
+00:12:53.220 --> 00:12:54.780
+We're going to do Doom next.
+
+00:12:54.780 --> 00:12:56.520
+I don't know how.
+
+00:12:56.520 --> 00:12:59.920
+[ Music ]

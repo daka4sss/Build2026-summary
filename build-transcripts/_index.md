@@ -1,16 +1,17 @@
 # Microsoft Build 2026 — セッション トランスクリプト一覧
 
-対象: **Microsoft Foundry を中心とした 32 セッション ＋ Foundry コア外の追加 8 セッション（計 40）**（Build 2026, 2026年6月 サンフランシスコ開催）
-取得日: 2026-06-05（Foundry 32 件）／ 2026-06-07（追加 8 件）
-取得方式: セッションページの `og:image` から ASSET_ID を抽出 → `https://medius.microsoft.com/video/asset/CAPTION/{ASSET_ID}` で公式 WebVTT を取得。追加 8 件は公式カタログ実API（`api-v2.build.microsoft.com/api/session/all`）の `onDemand` フィールドから ASSET_ID を解決。
+対象: **Microsoft Foundry を中心とした 32 セッション ＋ Foundry コア外の追加 8 セッション ＋ 追加収録 7 セッション（計 47）**（Build 2026, 2026年6月 サンフランシスコ開催）
+取得日: 2026-06-05（Foundry 32 件）／ 2026-06-07（追加 8 件）／ 2026-06-09（追加 7 件）
+取得方式: セッションページの `og:image` から ASSET_ID を抽出 → `https://medius.microsoft.com/video/asset/CAPTION/{ASSET_ID}` で公式 WebVTT を取得。追加 8 件は公式カタログ実API（`api-v2.build.microsoft.com/api/session/all`）の `onDemand` フィールドから ASSET_ID を解決。追加 7 件も同 API の ASSET_ID から取得（うち LIVE101 のみ CAPTION が 403 のため公式 `Transcript` ルートの Word 文書を取得・抽出）。
 
 ## 取得結果サマリー
 
-- **成功（CAPTION ルート）**: 40 / 40 セッション
+- **成功（CAPTION ルート）**: 46 / 47 セッション
+- **成功（Transcript/Word ルート）**: 1（LIVE101）
 - **フォールバック使用**: 0
 - **取得不可**: 0
 
-全セッションで公式 WebVTT トランスクリプトの取得に成功しました。
+全セッションで公式トランスクリプトの取得に成功しました。
 
 ## セッション一覧
 
@@ -56,8 +57,16 @@
 | OD839 | AI solutions built to power industrial innovation and sovereign control | CAPTION | 35,633 | 20,931 | ✅ 成功 | [summary](Sessions/OD839/summary_ja.md) |
 | OD840 | Enable agents for enterprises using Agent 365 SDK | CAPTION | 32,346 | 18,853 | ✅ 成功 | [summary](Sessions/OD840/summary_ja.md) |
 | ODSP934 | Unlock Claude in Microsoft Foundry | CAPTION | 53,067 | 31,080 | ✅ 成功 | [summary](Sessions/ODSP934/summary_ja.md) |
+| BRK206 | Your agent, anywhere: MultiClient, MultiDevice with GitHub Copilot SDK | CAPTION | 72,160 | 40,114 | ✅ 成功（追加） | [summary](Sessions/BRK206/summary_ja.md) |
+| BRK227 | Distributed systems to AI platforms with Mark Russinovich & Ion Stoica | CAPTION | 73,361 | 40,503 | ✅ 成功（追加） | [summary](Sessions/BRK227/summary_ja.md) |
+| LIVE101 | Scott and Mark learn to Vibe Check | Transcript(Word) | 60,755 | 68,618 | ✅ 成功（追加） | [summary](Sessions/LIVE101/summary_ja.md) |
+| LIVE156 | Designing VS Code's UX for the Agentic Era | CAPTION | 23,077 | 13,087 | ✅ 成功（追加） | [summary](Sessions/LIVE156/summary_ja.md) |
+| LIVE168 | Claude Is in Copilot. Here's What That Actually Means | CAPTION | 23,754 | 12,977 | ✅ 成功（追加） | [summary](Sessions/LIVE168/summary_ja.md) |
+| LIVE171 | The Three IQs: Ground Your Agents in Knowledge, Data, and Work | CAPTION | 17,117 | 9,669 | ✅ 成功（追加） | [summary](Sessions/LIVE171/summary_ja.md) |
+| LIVE100 | Build 2026 podcast with Satya Nadella, Sarah Guo and Elad Gil (No Priors) and Swyx (Latent Space) | CAPTION | 67,434 | 37,628 | ✅ 成功（追加） | [summary](Sessions/LIVE100/summary_ja.md) |
 
 > 登壇者名は各 `summary_ja.md` の冒頭に記載（トランスクリプトの自己紹介から特定）。
+> LIVE101 のみ CAPTION ルートが 403 だったため、公式 `Transcript` ルートが返す Word 文書（.docx）から本文を抽出しています（`transcript_raw.docx` ＋ `transcript_clean.txt`）。VTT(bytes) 欄は docx のバイト数、クリーン後の文字数は話者ラベル込みで他より多めです。
 
 ## フォルダ構成
 

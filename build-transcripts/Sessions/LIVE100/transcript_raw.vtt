@@ -1,0 +1,3258 @@
+﻿WEBVTT
+
+00:00:00.180 --> 00:00:04.410
+Speaker 1: Please welcome
+Swyx, Sarah Guo, Elad Gil,
+
+00:00:04.410 --> 00:00:07.650
+and Chairman and Chief
+Executive Officer
+
+00:00:07.650 --> 00:00:09.967
+of Microsoft, Satya Nadella.
+
+00:00:13.520 --> 00:00:17.970
+[APPLAUSE]
+
+00:00:17.970 --> 00:00:18.600
+Satya Nadella:
+Hello, Sarah.
+
+00:00:18.600 --> 00:00:20.670
+Sarah Guo:
+Hello.
+
+00:00:20.670 --> 00:00:21.780
+I'm so excited to be here.
+
+00:00:21.780 --> 00:00:24.900
+Welcome to a crossover
+episode of "No Priors"
+
+00:00:24.900 --> 00:00:27.360
+and "Latent Space"
+with Satya Nadella.
+
+00:00:27.360 --> 00:00:29.730
+Congratulations on
+an amazing Build.
+
+00:00:29.730 --> 00:00:31.020
+Satya Nadella: Thank
+you so much, and it's great
+
+00:00:31.020 --> 00:00:31.920
+to be with both of you.
+
+00:00:31.920 --> 00:00:35.610
+I listen to both of the
+podcasts all the time.
+
+00:00:35.610 --> 00:00:36.600
+It's great to be on it.
+
+00:00:36.600 --> 00:00:37.440
+Elad Gil:
+Thank you so much.
+
+00:00:37.440 --> 00:00:38.010
+Sarah Guo:
+You were just talking
+
+00:00:38.010 --> 00:00:40.530
+about these amazing
+announcements
+
+00:00:40.530 --> 00:00:43.080
+from across the Microsoft
+estate all morning for,
+
+00:00:43.080 --> 00:00:44.430
+I think, three hours.
+
+00:00:44.430 --> 00:00:48.150
+What is the most important
+reflection or takeaway you have?
+
+00:00:48.150 --> 00:00:50.820
+Satya Nadella:
+I'd say, there are --
+
+00:00:50.820 --> 00:00:55.710
+perhaps, the biggest one
+for me is, let's sort
+
+00:00:55.710 --> 00:01:00.570
+of conceptualize this more as
+an ecosystem play, as opposed
+
+00:01:00.570 --> 00:01:03.570
+to a single model, or even
+a single platform, right?
+
+00:01:03.570 --> 00:01:07.860
+I mean, at least for me,
+having grown up at Microsoft,
+
+00:01:07.860 --> 00:01:11.550
+having seen, whatever, four
+major platform shifts,
+
+00:01:11.550 --> 00:01:17.570
+I sort of fall into that camp
+where a platform is defined by,
+
+00:01:17.570 --> 00:01:20.090
+fundamentally, its ability
+to create more value
+
+00:01:20.090 --> 00:01:23.600
+above the platform, versus
+what's captured in the platform.
+
+00:01:23.600 --> 00:01:26.360
+If you view what's
+happening right now,
+
+00:01:26.360 --> 00:01:31.830
+I think this morning's keynote
+was, how can any company,
+
+00:01:31.830 --> 00:01:33.210
+whether it's an
+AI-native company
+
+00:01:33.210 --> 00:01:35.760
+or a traditional
+enterprise company,
+
+00:01:35.760 --> 00:01:38.201
+participate as a first-class
+
+00:01:38.213 --> 00:01:41.280
+participant, where
+they can point
+
+00:01:41.280 --> 00:01:43.830
+to AI they create, right?
+
+00:01:43.830 --> 00:01:46.020
+It's not that they don't
+use other people's AI.
+
+00:01:46.020 --> 00:01:49.440
+Of course they will, but
+to me, what's the path?
+
+00:01:49.440 --> 00:01:50.640
+What's the recipe?
+
+00:01:50.640 --> 00:01:51.450
+How do I do it?
+
+00:01:51.450 --> 00:01:52.770
+What does the stack look like?
+
+00:01:52.770 --> 00:01:54.240
+What does the tooling look like?
+
+00:01:54.240 --> 00:01:55.410
+What is valuable?
+
+00:01:55.410 --> 00:01:56.190
+How do you do that?
+
+00:01:56.190 --> 00:01:56.760
+That's it.
+
+00:01:56.760 --> 00:01:59.470
+That's sort of our job to do.
+
+00:02:01.020 --> 00:02:04.350
+Sarah Guo: Ecosystem
+strategy is very complicated,
+
+00:02:04.350 --> 00:02:06.690
+because you end up building
+certain components,
+
+00:02:06.690 --> 00:02:08.910
+partnering for certain
+components, and supporting them.
+
+00:02:08.910 --> 00:02:11.520
+You just announced this
+big suite of models.
+
+00:02:11.520 --> 00:02:15.450
+Tell us a little bit about the
+training strategy for Microsoft.
+
+00:02:15.450 --> 00:02:18.180
+Satya Nadella: Yeah, so the
+thing that we wanted to do
+
+00:02:18.180 --> 00:02:21.270
+with the MAI models
+was to build,
+
+00:02:21.270 --> 00:02:23.790
+and as Mustafa talked
+about, first of all,
+
+00:02:23.790 --> 00:02:28.350
+a great lineage starting
+with pre-training,
+
+00:02:28.350 --> 00:02:33.390
+with very good data quality,
+doing all the ablations,
+
+00:02:33.390 --> 00:02:36.780
+making sure, because in some
+sense, it's becoming even harder
+
+00:02:36.780 --> 00:02:39.750
+to build a clean lineage
+model, just because there's
+
+00:02:39.750 --> 00:02:43.980
+so much stuff out there that
+you truly need to ablate
+
+00:02:43.980 --> 00:02:46.890
+out to be able to have a
+fantastic pre-trained model.
+
+00:02:46.890 --> 00:02:48.540
+In fact, that's one of
+the challenges of a lot
+
+00:02:48.540 --> 00:02:52.170
+of the open-weight models is,
+they look great on one benchmark
+
+00:02:52.170 --> 00:02:55.080
+or two, but they're
+not great on practice.
+
+00:02:55.080 --> 00:02:58.830
+That's why, in fact, even
+our FDEs are pretty --
+
+00:02:58.830 --> 00:03:02.430
+I've gotten really excited
+about these MAI models,
+
+00:03:02.430 --> 00:03:07.710
+because how the heck can a
+small 5B model hill climb?
+
+00:03:07.710 --> 00:03:10.980
+It goes back a little bit to
+what I think is, ultimately,
+
+00:03:10.980 --> 00:03:13.410
+the key thing to
+do, which is try
+
+00:03:13.410 --> 00:03:16.590
+to pursue finding
+that cognitive core.
+
+00:03:16.590 --> 00:03:21.000
+To me, starting with a clean
+lineage, then creating
+
+00:03:21.000 --> 00:03:25.800
+that ability for companies
+to be able to use this,
+
+00:03:25.800 --> 00:03:30.390
+not just as a generalist, but
+to create their own specialist
+
+00:03:30.390 --> 00:03:33.840
+by building this hill-
+climbing scaffold around it.
+
+00:03:33.840 --> 00:03:37.290
+It's not just the model, but if
+you have a hill-climb scaffold
+
+00:03:37.290 --> 00:03:41.070
+around it, then you will
+start building your RLE.
+
+00:03:41.070 --> 00:03:42.840
+You will start
+collecting the traces.
+
+00:03:42.840 --> 00:03:44.610
+Most importantly, you'll
+have private evals,
+
+00:03:44.610 --> 00:03:47.700
+because we know all the evals
+out there are good, interesting,
+
+00:03:47.700 --> 00:03:50.910
+but they're not really that
+critical at this point
+
+00:03:50.910 --> 00:03:52.530
+because they all can be maxed.
+
+00:03:52.530 --> 00:03:56.580
+The point is, each company will
+have its own private eval.
+
+00:03:56.580 --> 00:04:02.130
+That end-to-end platform story
+around our models is, sort
+
+00:04:02.130 --> 00:04:04.290
+of, what I think is interesting.
+
+00:04:04.290 --> 00:04:06.180
+Then the one other thing, Sarah,
+since you brought that up,
+
+00:04:06.180 --> 00:04:09.420
+is, I do feel there's
+a new frontier.
+
+00:04:09.420 --> 00:04:10.740
+People talk about
+"the frontier,"
+
+00:04:10.740 --> 00:04:13.470
+and are you "operating
+at the frontier?"
+
+00:04:13.470 --> 00:04:17.510
+Interestingly enough, if you
+add a little temporality to it,
+
+00:04:17.510 --> 00:04:20.060
+you can use, let's say, in fact,
+
+00:04:20.060 --> 00:04:22.460
+the Land O'Lakes demo we
+showed was pretty cool.
+
+00:04:22.460 --> 00:04:24.710
+We used whatever,
+GPT-5.5, right?
+
+00:04:24.710 --> 00:04:26.780
+Then you collected
+a bunch of traces,
+
+00:04:26.780 --> 00:04:31.410
+and then you took a 5B reasoning
+model and achieved higher.
+
+00:04:31.410 --> 00:04:33.450
+That is another aspect
+of what it means
+
+00:04:33.450 --> 00:04:36.570
+to operate at the frontier.
+
+00:04:36.570 --> 00:04:38.730
+Swyx:
+Yeah, I think, first of all,
+
+00:04:38.730 --> 00:04:40.800
+I have to congratulate
+you on, basically,
+
+00:04:40.800 --> 00:04:42.240
+on building a frontier
+MAI lab inside
+
+00:04:42.240 --> 00:04:44.150
+of Microsoft in two years.
+
+00:04:44.150 --> 00:04:47.030
+I'm wondering, you have
+all this AI strategy
+
+00:04:47.030 --> 00:04:48.080
+that you're rolling out.
+
+00:04:48.080 --> 00:04:49.280
+I'm wondering, what
+do you know now
+
+00:04:49.280 --> 00:04:52.550
+that you wish you could tell
+yourself two or three years ago,
+
+00:04:52.550 --> 00:04:56.100
+three years for the Jensen
+partnership, two years for MAI?
+
+00:04:56.100 --> 00:04:58.620
+Satya Nadella: Yeah, I
+mean, I think the thing
+
+00:04:58.620 --> 00:05:01.290
+that I reflect quite a bit,
+right, which is sort of,
+
+00:05:01.290 --> 00:05:03.270
+obviously, I got into all
+this when I got excited
+
+00:05:03.270 --> 00:05:05.460
+by the Scaling Laws paper,
+
+00:05:05.460 --> 00:05:08.370
+and when even the OpenAI
+partnership came about.
+
+00:05:08.370 --> 00:05:09.540
+When those folks said, hey,
+
+00:05:09.540 --> 00:05:11.040
+we're going to really
+throw a lot of compute
+
+00:05:11.040 --> 00:05:13.920
+at transformers,
+and they've helped.
+
+00:05:13.920 --> 00:05:16.140
+The thing that I always
+look back and say, wow,
+
+00:05:16.140 --> 00:05:21.360
+these things do have capability
+that they're climbing up.
+
+00:05:21.360 --> 00:05:25.350
+I mean, a crude way of saying
+it is, "intelligence is log
+
+00:05:25.350 --> 00:05:27.300
+of compute," kind of works.
+
+00:05:27.300 --> 00:05:31.860
+Now, what I think we
+underestimated, perhaps,
+
+00:05:31.860 --> 00:05:36.300
+is the real-world complexity
+of deploying these
+
+00:05:36.300 --> 00:05:39.480
+so that they actually
+deliver the value
+
+00:05:39.480 --> 00:05:40.560
+in the real world, right?
+
+00:05:40.560 --> 00:05:44.130
+The outcomes, as measured
+by any benchmark,
+
+00:05:44.130 --> 00:05:49.950
+are interesting/important, but
+the true eval is when people
+
+00:05:49.950 --> 00:05:54.390
+out there are able to do unique
+things that they only can value,
+
+00:05:54.390 --> 00:05:57.300
+and it's very measurable.
+
+00:05:57.300 --> 00:06:00.570
+That, I wish, we had sort
+of even like had more
+
+00:06:00.570 --> 00:06:03.240
+in our consciousness
+as an industry.
+
+00:06:03.240 --> 00:06:06.720
+Right now, I think when people
+say, "Wow, I don't want
+
+00:06:06.720 --> 00:06:09.570
+to token max," it's an artifact
+
+00:06:09.570 --> 00:06:13.290
+of us not having taught
+ourselves as an industry
+
+00:06:13.290 --> 00:06:14.790
+that we are using tokens
+
+00:06:14.790 --> 00:06:17.880
+to create value every
+step of the way.
+
+00:06:17.880 --> 00:06:20.490
+I think that's kind of what
+I wish we had gotten there,
+
+00:06:20.490 --> 00:06:21.720
+but I'm glad we are here.
+
+00:06:21.720 --> 00:06:23.670
+Elad Gil: What are some of the
+use cases that you've seen
+
+00:06:23.670 --> 00:06:26.010
+that have created the most
+value for your customers?
+
+00:06:26.010 --> 00:06:28.140
+I know that people
+talk a lot about code
+
+00:06:28.140 --> 00:06:29.130
+and I think it's pretty clear
+
+00:06:29.130 --> 00:06:31.440
+that that's something that's
+having very large scale impact.
+
+00:06:31.440 --> 00:06:33.390
+Are there other areas
+that you find in common
+
+00:06:33.390 --> 00:06:34.620
+that your customers
+are really benefiting?
+
+00:06:34.620 --> 00:06:36.600
+Satya Nadella: Yeah, I think
+to your point, obviously,
+
+00:06:36.600 --> 00:06:40.440
+coding is now god, but it's
+interesting, by the way, Elad,
+
+00:06:40.440 --> 00:06:42.870
+to even talk about the coding.
+
+00:06:42.870 --> 00:06:46.710
+Coding has worked so well that
+we now have to rebuild the IDE.
+
+00:06:46.710 --> 00:06:50.130
+I mean, it's kind of nuts to
+see what we launched, and it's,
+
+00:06:50.130 --> 00:06:52.650
+like, oh, my God, I have
+these hundred-agent sessions.
+
+00:06:52.650 --> 00:06:55.770
+The cognitive load that
+transfers back to me
+
+00:06:55.770 --> 00:07:00.780
+as a human is so excessive
+that now I need a new UI.
+
+00:07:00.780 --> 00:07:03.720
+Oh, by the way, the chat
+
+00:07:03.720 --> 00:07:06.360
+as the only artifact
+was also impossible.
+
+00:07:06.360 --> 00:07:07.680
+That's why we need a canvas.
+
+00:07:07.680 --> 00:07:10.170
+It's kind of interesting
+for all the things
+
+00:07:10.170 --> 00:07:13.650
+about where is software
+needed or where is UI needed?
+
+00:07:13.650 --> 00:07:18.120
+You kind of need that, even for
+code, in a fully agentic world.
+
+00:07:18.120 --> 00:07:20.790
+That said, one of the things
+that we are starting to see --
+
+00:07:20.790 --> 00:07:22.650
+we started seeing it with
+CoWork, but even some
+
+00:07:22.650 --> 00:07:27.630
+of the work we showed with
+Autopilot, on what you see
+
+00:07:27.630 --> 00:07:30.300
+with Claude, is a good one,
+because if you sort of think
+
+00:07:30.300 --> 00:07:36.210
+about it, a lot of human capital
+is doing the glue work, right?
+
+00:07:36.210 --> 00:07:41.580
+If you now can augment
+that with tokens/agents
+
+00:07:41.580 --> 00:07:46.350
+that are long-running,
+durable, then your ability
+
+00:07:46.350 --> 00:07:49.470
+to scale, even what
+is still judgment
+
+00:07:49.470 --> 00:07:53.460
+and glue work, gets
+amplified like coding does.
+
+00:07:53.460 --> 00:07:56.490
+So you can -- I'm positive
+that six months from now,
+
+00:07:56.490 --> 00:08:00.420
+we'll all be saying, oh,
+wow, all through the night,
+
+00:08:00.420 --> 00:08:03.570
+there was a bunch of stuff
+that all these autopilots
+
+00:08:03.570 --> 00:08:05.580
+that I have working
+on my behalf,
+
+00:08:05.580 --> 00:08:08.550
+with my delegated
+authority, so to speak --
+
+00:08:08.550 --> 00:08:12.360
+I can sort of give it, even, my
+identity, did a bunch of work.
+
+00:08:12.360 --> 00:08:15.060
+Then, of course, I'll
+need my ADE to say, well,
+
+00:08:15.060 --> 00:08:18.540
+what did you do, did I
+do this work, and so on?
+
+00:08:18.540 --> 00:08:22.410
+I think that that's where
+compressing of workflows,
+
+00:08:22.410 --> 00:08:25.530
+completing of tasks,
+that's where I think a lot
+
+00:08:25.530 --> 00:08:26.460
+of the value gets created.
+
+00:08:26.460 --> 00:08:27.840
+Elad Gil: I think you raised
+a really interesting point,
+
+00:08:27.840 --> 00:08:30.360
+which is, there's the actual
+agent doing the code
+
+00:08:30.360 --> 00:08:32.580
+and then there's a
+harness around it.
+
+00:08:32.580 --> 00:08:33.930
+That's the environment.
+
+00:08:33.930 --> 00:08:34.830
+That's the context.
+
+00:08:34.830 --> 00:08:36.360
+That's everything you're
+setting up as a developer
+
+00:08:36.360 --> 00:08:38.100
+around actually a coding agent.
+
+00:08:38.100 --> 00:08:39.750
+What is the harness
+for the enterprise?
+
+00:08:39.750 --> 00:08:43.470
+Is there an equivalent concept
+for broader productivity work,
+
+00:08:43.470 --> 00:08:45.090
+or how do you think
+about that concept --
+
+00:08:45.090 --> 00:08:45.930
+Satya Nadella:
+That's right.
+
+00:08:45.930 --> 00:08:48.720
+In some sense, you kind
+of want the harness
+
+00:08:48.720 --> 00:08:55.290
+to define the models,
+the data, and the tools,
+
+00:08:55.290 --> 00:08:58.290
+so that you have a loop
+across those three.
+
+00:08:58.290 --> 00:09:00.720
+What we are trying to, first
+of all, make sure is each
+
+00:09:00.720 --> 00:09:04.170
+of our products that we build,
+whether it's GitHub Copilot
+
+00:09:04.170 --> 00:09:07.470
+or the Security Copilot, the
+stuff we showed with MDASH,
+
+00:09:07.470 --> 00:09:10.230
+or even the Discovery for
+Science, it doesn't matter.
+
+00:09:10.230 --> 00:09:15.810
+All of them are multi-model
+harnesses with tools access,
+
+00:09:15.810 --> 00:09:18.420
+so that you can do this
+progressive disclosure
+
+00:09:18.420 --> 00:09:21.360
+of tools, even, so that
+they're token efficient.
+
+00:09:21.360 --> 00:09:23.641
+Then you're feeding it with very
+
+00:09:23.653 --> 00:09:26.160
+rich context,
+because that's sort
+
+00:09:26.160 --> 00:09:28.230
+of the other hard
+lesson we have learned
+
+00:09:28.230 --> 00:09:30.480
+in the last two years
+is, oh, my God.
+
+00:09:30.480 --> 00:09:37.500
+The amount of work you need to
+do to prep the context layer,
+
+00:09:37.500 --> 00:09:42.060
+such that your plan can execute
+in the most efficient way,
+
+00:09:42.060 --> 00:09:43.920
+is where the magic is.
+
+00:09:43.920 --> 00:09:46.800
+In our case, we have GitHub
+harness, which, essentially,
+
+00:09:46.800 --> 00:09:48.330
+we're using across
+all our products.
+
+00:09:48.330 --> 00:09:50.700
+It's available in Foundry
+and we're open --
+
+00:09:50.700 --> 00:09:53.130
+you can use your Llama
+harness, whatever.
+
+00:09:53.130 --> 00:09:58.500
+You can use any open harness or
+any harness of yours and train
+
+00:09:58.500 --> 00:10:02.190
+with your tools, and multiple
+models, and your context.
+
+00:10:02.190 --> 00:10:05.820
+That's the pitch, because right
+now, a lot of dialogue is, hey,
+
+00:10:05.820 --> 00:10:08.130
+if I train the
+harness, plus tools,
+
+00:10:08.130 --> 00:10:10.950
+and the model together,
+you get evals.
+
+00:10:10.950 --> 00:10:12.810
+What we are proving out is --
+
+00:10:12.810 --> 00:10:16.590
+and the best example of that is
+what we did with MDASH, right,
+
+00:10:16.590 --> 00:10:22.140
+because when it launched, it
+found bugs, or vulnerabilities,
+
+00:10:22.140 --> 00:10:24.730
+that were not found by Mythos.
+
+00:10:25.860 --> 00:10:28.620
+There is existence
+proof, I would claim,
+
+00:10:28.620 --> 00:10:33.180
+that you can have a multi-model
+harness that can, in fact,
+
+00:10:33.180 --> 00:10:37.470
+be more performant
+in the real world.
+
+00:10:37.470 --> 00:10:40.680
+Sarah Guo: So, the premise
+behind the training
+
+00:10:40.680 --> 00:10:44.250
+at the independent frontier
+labs is really, you know,
+
+00:10:44.250 --> 00:10:46.020
+we're going to
+have these models,
+
+00:10:46.020 --> 00:10:47.490
+and we'll have an API business.
+
+00:10:47.490 --> 00:10:48.900
+We'll support enterprises
+and startups,
+
+00:10:48.900 --> 00:10:53.000
+but a first-party product,
+be it productivity, or code,
+
+00:10:53.000 --> 00:10:54.860
+or search, drives the
+majority of revenue.
+
+00:10:54.860 --> 00:10:57.510
+That's a different value
+equation than you're describing,
+
+00:10:57.510 --> 00:11:00.090
+I think, with the
+Microsoft ecosystem.
+
+00:11:00.090 --> 00:11:02.370
+If that's the case --
+tell me if it's the case,
+
+00:11:02.370 --> 00:11:04.230
+because obviously you
+have first-party products
+
+00:11:04.230 --> 00:11:06.570
+and you have
+enablement products --
+
+00:11:06.570 --> 00:11:08.010
+what is the role of
+the developer --
+
+00:11:08.010 --> 00:11:10.110
+what's going to be hard
+and the set of skills
+
+00:11:10.110 --> 00:11:12.360
+and the value capture the
+developer has in that world?
+
+00:11:12.360 --> 00:11:14.250
+Satya Nadella: Yeah, so I think
+that there's always going
+
+00:11:14.250 --> 00:11:18.630
+to be the case that someone
+who is super-successful
+
+00:11:18.630 --> 00:11:22.530
+as a platform builder can also
+have first-party products.
+
+00:11:22.530 --> 00:11:23.880
+It was true with Windows.
+
+00:11:23.880 --> 00:11:28.740
+It is true with the SaaS side,
+and the Cloud side as well,
+
+00:11:28.740 --> 00:11:31.380
+with us, and others, and so on.
+
+00:11:31.380 --> 00:11:35.220
+The thing that is, it
+should not be a limiter
+
+00:11:35.220 --> 00:11:37.830
+to other people achieving
+that same success, right?
+
+00:11:37.830 --> 00:11:40.590
+That, I think, is
+the core difference.
+
+00:11:40.590 --> 00:11:44.820
+The network effects this time
+around, around intelligence
+
+00:11:44.820 --> 00:11:49.200
+and such, because they learn
+from data and not really lots
+
+00:11:49.200 --> 00:11:52.950
+of data, it's just a few
+samples that you have to see
+
+00:11:52.950 --> 00:11:56.610
+to understand what's
+novel about something.
+
+00:11:56.610 --> 00:12:00.360
+That's why the game
+becomes how to protect.
+
+00:12:00.360 --> 00:12:04.560
+That's why I would say every
+company, having private evals,
+
+00:12:04.560 --> 00:12:06.600
+may be the biggest IP.
+
+00:12:06.600 --> 00:12:07.350
+I think about it.
+
+00:12:07.350 --> 00:12:08.910
+What's that private eval
+
+00:12:08.910 --> 00:12:11.940
+that you can then use, even a
+frontier model to hill-climb on,
+
+00:12:11.940 --> 00:12:13.830
+and not leak the traces.
+
+00:12:13.830 --> 00:12:18.540
+Maybe one of the biggest drivers
+of IP -- so, in other words,
+
+00:12:18.540 --> 00:12:23.040
+another asset test is, you
+have an eval that's private.
+
+00:12:23.040 --> 00:12:27.300
+You're using Model
+A. Can you switch it
+
+00:12:27.300 --> 00:12:31.200
+to Model B and climb up?
+
+00:12:31.200 --> 00:12:33.510
+If you can, then
+you're in control.
+
+00:12:33.510 --> 00:12:35.610
+If you can't, you're
+not in control,
+
+00:12:35.610 --> 00:12:37.620
+and that's where even the
+harness decision becomes
+
+00:12:37.620 --> 00:12:38.700
+super-important, right?
+
+00:12:38.700 --> 00:12:40.830
+Therefore, having
+an open harness,
+
+00:12:40.830 --> 00:12:45.540
+letting all the models come in,
+having your evals, your context,
+
+00:12:45.540 --> 00:12:49.860
+your tools help you hill-climb,
+I think, are the skills
+
+00:12:49.860 --> 00:12:53.520
+that an AI-native startup
+needs, a SaaS company needs,
+
+00:12:53.520 --> 00:12:56.430
+or every enterprise needs.
+
+00:12:56.430 --> 00:12:58.980
+Swyx: Yeah, I think, in a
+very real way, you are --
+
+00:12:58.980 --> 00:13:01.560
+Microsoft, historically, was
+an operating systems company
+
+00:13:01.560 --> 00:13:03.270
+and then became a cloud company.
+
+00:13:03.270 --> 00:13:05.490
+Maybe the third act is
+that you're a harness
+
+00:13:05.490 --> 00:13:10.980
+or evals company, whatever
+the conglomerate of concepts
+
+00:13:10.980 --> 00:13:12.510
+that you want to put together.
+
+00:13:12.510 --> 00:13:16.800
+I think enabling every company
+to have frontier intelligence,
+
+00:13:16.800 --> 00:13:21.360
+or I forget the exact term that
+you use, is the mission.
+
+00:13:21.360 --> 00:13:21.810
+Satya Nadella:
+That's it.
+
+00:13:21.810 --> 00:13:25.080
+Swyx: That is the platform
+promise, that you build with us,
+
+00:13:25.080 --> 00:13:27.660
+you will get your
+intelligence for your data.
+
+00:13:27.660 --> 00:13:28.530
+Satya Nadella:
+That's it.
+
+00:13:28.530 --> 00:13:31.920
+To me, that is the -- if
+there was one tagline
+
+00:13:31.920 --> 00:13:35.010
+for this entire developer
+conference, it is,
+
+00:13:35.010 --> 00:13:38.610
+"Can everybody operate
+at the frontier
+
+00:13:38.610 --> 00:13:40.770
+with their frontier
+intelligence?"
+
+00:13:40.770 --> 00:13:44.040
+To me, that is so important,
+because otherwise,
+
+00:13:44.040 --> 00:13:46.590
+I don't know how you
+achieve stable equilibrium.
+
+00:13:46.590 --> 00:13:50.610
+Which is, how do I then go and
+say, well, my company is going
+
+00:13:50.610 --> 00:13:54.060
+to have a terminal value,
+because I now know how
+
+00:13:54.060 --> 00:13:56.970
+to continuously compound on top
+
+00:13:56.970 --> 00:13:59.130
+of what's a platform
+that gets better?
+
+00:13:59.130 --> 00:14:05.430
+When Windows came out, Adobe
+build, Autodesk build,
+
+00:14:05.430 --> 00:14:09.960
+or even like take what Jensen
+said, we built DX and he built,
+
+00:14:09.960 --> 00:14:12.720
+you know, CUDA on top of it.
+
+00:14:12.720 --> 00:14:14.250
+I mean, I always say
+to Jensen, "God,
+
+00:14:14.250 --> 00:14:15.840
+I got the short end of that.
+
+00:14:15.840 --> 00:14:18.030
+I wish we had recognized it."
+
+00:14:18.030 --> 00:14:23.160
+Nevertheless, that idea that
+you can build a platform layer
+
+00:14:23.160 --> 00:14:26.400
+that someone else
+can then extend out
+
+00:14:26.400 --> 00:14:28.500
+and build their own intelligence
+layer, in this case,
+
+00:14:28.500 --> 00:14:29.880
+I think is everything.
+
+00:14:29.880 --> 00:14:31.890
+Without it, why have a
+developer conference?
+
+00:14:31.890 --> 00:14:35.070
+I can just come and have
+you all just worship
+
+00:14:35.070 --> 00:14:36.840
+at the altar of one model.
+
+00:14:36.840 --> 00:14:38.880
+That's not a
+developer conference.
+
+00:14:38.880 --> 00:14:42.450
+Swyx: Backstage, we had a
+discussion about what is IP
+
+00:14:42.450 --> 00:14:44.040
+or what is the
+value in a company?
+
+00:14:44.040 --> 00:14:47.460
+It used to be the length of
+human experience at the company.
+
+00:14:47.460 --> 00:14:51.960
+Now it's this other thing, which
+is the evals, the experience
+
+00:14:51.960 --> 00:14:53.970
+in sort of applying
+agents to the company.
+
+00:14:53.970 --> 00:14:55.530
+I just want you to
+flesh it out a bit more
+
+00:14:55.530 --> 00:14:56.510
+because it's very insightful.
+
+00:14:56.510 --> 00:14:58.050
+Satya Nadella: Yeah, it's
+a great way to frame it.
+
+00:14:58.050 --> 00:14:59.880
+At the end of the day,
+every company is going
+
+00:14:59.880 --> 00:15:02.850
+to have both the human
+capital, that is still going
+
+00:15:02.850 --> 00:15:07.350
+to be super-valuable, because
+humans and their ability
+
+00:15:07.350 --> 00:15:12.120
+to find the gaps that exist
+at all times is going
+
+00:15:12.120 --> 00:15:14.460
+to be the way we all
+will create value.
+
+00:15:14.460 --> 00:15:17.190
+I'm definitely in the camp
+that this is going to be
+
+00:15:17.190 --> 00:15:21.840
+about expressing new forms of
+human agency and ambition,
+
+00:15:21.840 --> 00:15:24.450
+even as token capital
+goes up, right?
+
+00:15:24.450 --> 00:15:27.750
+Let's say any corporation
+has lots of tokens
+
+00:15:27.750 --> 00:15:29.430
+and a lot of human capital.
+
+00:15:29.430 --> 00:15:32.400
+The question is, how do
+you compound the two?
+
+00:15:32.400 --> 00:15:35.790
+If you have -- if you take
+in Teams, I have a bunch
+
+00:15:35.790 --> 00:15:38.340
+of agents doing work and a
+bunch of humans doing work
+
+00:15:38.340 --> 00:15:43.500
+and the traces between those,
+that is really important context
+
+00:15:43.500 --> 00:15:46.590
+of how that enterprise
+is creating value.
+
+00:15:46.590 --> 00:15:50.790
+Then, that goes back to train
+not a generalist model,
+
+00:15:50.790 --> 00:15:54.810
+but to train the
+company veteran agent.
+
+00:15:54.810 --> 00:15:57.060
+That is super-valuable again,
+
+00:15:57.060 --> 00:15:59.100
+which is when a company
+says it should, in fact,
+
+00:15:59.100 --> 00:16:00.600
+go on to the balance sheet.
+
+00:16:00.600 --> 00:16:02.190
+That's how I think about it.
+
+00:16:02.190 --> 00:16:06.330
+In fact, maybe human capital
+was never possible to put
+
+00:16:06.330 --> 00:16:09.090
+on a balance sheet, because
+you didn't know how
+
+00:16:09.090 --> 00:16:10.890
+to capture the tacit knowledge.
+
+00:16:10.890 --> 00:16:13.110
+Whereas now, I think
+you can with the agents
+
+00:16:13.110 --> 00:16:18.000
+that have learned through
+time, through all the traces.
+
+00:16:18.000 --> 00:16:20.130
+That's what, at least,
+we think will happen.
+
+00:16:20.130 --> 00:16:21.300
+Swyx: I think the
+SEC is going to have
+
+00:16:21.300 --> 00:16:25.780
+to have accounting standards
+for token expertise.
+
+00:16:27.210 --> 00:16:30.240
+Sarah Guo: You're talking
+about the equilibrium state
+
+00:16:30.240 --> 00:16:31.500
+and a stable equilibrium
+
+00:16:31.500 --> 00:16:33.720
+where companies have
+this compounding value
+
+00:16:33.720 --> 00:16:35.610
+and can see terminal
+value for themselves.
+
+00:16:35.610 --> 00:16:40.140
+Another challenge to the
+considered equilibrium of, okay,
+
+00:16:40.140 --> 00:16:44.490
+there are applications and
+workflows that are common
+
+00:16:44.490 --> 00:16:47.070
+to a vertical or horizontal.
+
+00:16:47.070 --> 00:16:49.200
+This was the generation
+of SaaS companies,
+
+00:16:49.200 --> 00:16:52.320
+and Microsoft has lots of
+SaaS properties as well.
+
+00:16:52.320 --> 00:16:53.730
+Then, there are things
+that are very specific
+
+00:16:53.730 --> 00:16:56.760
+to every enterprise that
+they're differentiated against.
+
+00:16:56.760 --> 00:16:58.920
+I'm sure you have heard much
+and participated in much
+
+00:16:58.920 --> 00:17:01.080
+of the debate about
+the end of software,
+
+00:17:01.080 --> 00:17:04.740
+because all these workflows
+are cheap to generate now.
+
+00:17:04.740 --> 00:17:06.360
+Do you think the
+equilibrium looks different
+
+00:17:06.360 --> 00:17:09.750
+between what agents get
+built in enterprises,
+
+00:17:09.750 --> 00:17:12.000
+versus in their
+vendors in the future?
+
+00:17:12.000 --> 00:17:12.270
+Satya Nadella:
+Yeah,
+
+00:17:12.270 --> 00:17:14.192
+so I think what's happening
+
+00:17:14.204 --> 00:17:16.710
+there is, we had
+a particular way
+
+00:17:16.710 --> 00:17:23.150
+we captured, I would
+say, workflow in apps,
+
+00:17:23.150 --> 00:17:25.530
+because we built a data model.
+
+00:17:25.530 --> 00:17:29.280
+We schematized some part
+of some business process.
+
+00:17:29.280 --> 00:17:31.710
+We then built a bunch
+of business logic,
+
+00:17:31.710 --> 00:17:34.260
+and then we put a bunch
+of UI on top of it.
+
+00:17:34.260 --> 00:17:35.970
+That's kind of what
+every SaaS company --
+
+00:17:35.970 --> 00:17:36.870
+Sarah Guo:
+And a little configuration.
+
+00:17:36.870 --> 00:17:38.190
+Swyx:
+For, like, 20 years.
+
+00:17:38.190 --> 00:17:40.560
+Satya Nadella:
+Right, and that was it.
+
+00:17:40.560 --> 00:17:44.100
+Interestingly enough, now you
+kind of get to relitigate
+
+00:17:44.100 --> 00:17:45.990
+that vertical stacking.
+
+00:17:45.990 --> 00:17:49.230
+I still think, for
+example, that data model
+
+00:17:49.230 --> 00:17:53.700
+that you built underneath every
+SaaS application is super-good.
+
+00:17:53.700 --> 00:17:55.320
+Why reinvent it?
+
+00:17:55.320 --> 00:17:57.420
+My general ledger better
+be a general ledger.
+
+00:17:57.420 --> 00:18:00.420
+I don't need new
+schema creation.
+
+00:18:00.420 --> 00:18:03.960
+In fact, that entity
+relationship is actually a
+
+00:18:03.960 --> 00:18:07.110
+pretty good, robust thing
+that I want to feed.
+
+00:18:07.110 --> 00:18:08.130
+Sarah Guo:
+And you want it to be stable.
+
+00:18:08.130 --> 00:18:08.670
+Satya Nadella:
+That's right.
+
+00:18:08.670 --> 00:18:08.910
+Sarah Guo:
+Yeah.
+
+00:18:08.910 --> 00:18:11.280
+Satya Nadella: The same thing
+with business logic, right?
+
+00:18:11.280 --> 00:18:14.940
+If you look at -- we have
+this product called Power BI.
+
+00:18:14.940 --> 00:18:18.810
+It is dashboards
+galore people created.
+
+00:18:18.810 --> 00:18:19.980
+The beauty underneath
+
+00:18:19.980 --> 00:18:23.580
+that dashboard is a very
+rich semantic model.
+
+00:18:23.580 --> 00:18:27.270
+Someone took the pain
+to create a dashboard
+
+00:18:27.270 --> 00:18:30.480
+and do all the measures,
+and you want that.
+
+00:18:30.480 --> 00:18:31.920
+That's business logic.
+
+00:18:31.920 --> 00:18:34.890
+I want that to be
+available to me.
+
+00:18:34.890 --> 00:18:36.390
+I think the challenge
+
+00:18:36.390 --> 00:18:40.440
+of the SaaS business model
+is, we packaged one way.
+
+00:18:40.440 --> 00:18:43.710
+We now have to learn how
+to unbundle these things,
+
+00:18:43.710 --> 00:18:47.280
+and rebundle in new ways, and
+discover new business models.
+
+00:18:47.280 --> 00:18:50.250
+I mean, if you look at it,
+what's happening today
+
+00:18:50.250 --> 00:18:53.130
+with Microsoft 365
+is a great example.
+
+00:18:53.130 --> 00:18:54.950
+We have this thing
+called Work IQ.
+
+00:18:54.950 --> 00:18:58.460
+In fact, what we are
+realizing is, oh, my God,
+
+00:18:58.460 --> 00:18:59.600
+if you look at it, in fact,
+
+00:18:59.600 --> 00:19:01.550
+there's a historical
+parallel it.
+
+00:19:01.550 --> 00:19:05.870
+We sold first Exchange
+and SharePoint.
+
+00:19:05.870 --> 00:19:08.180
+Before Teams, we had a
+thing called Lync Server,
+
+00:19:08.180 --> 00:19:09.120
+and what have you.
+
+00:19:09.120 --> 00:19:11.000
+We thought, oh, that's all
+going to move to the cloud,
+
+00:19:11.000 --> 00:19:14.760
+but little did we realize
+that the number of people
+
+00:19:14.760 --> 00:19:18.330
+who will use servers in the
+cloud is 10x, 100x, right,
+
+00:19:18.330 --> 00:19:19.770
+because people were
+not buying servers.
+
+00:19:19.770 --> 00:19:21.870
+They were just buying
+a subscription.
+
+00:19:21.870 --> 00:19:26.640
+The same thing is now happening
+with M365, because with Work IQ,
+
+00:19:26.640 --> 00:19:29.040
+we have exposed
+what is, perhaps,
+
+00:19:29.040 --> 00:19:32.430
+the most important database in
+a company that never got used
+
+00:19:32.430 --> 00:19:36.480
+as a database because it is
+only captive to our apps.
+
+00:19:36.480 --> 00:19:38.250
+It was all -- email
+operated on it.
+
+00:19:38.250 --> 00:19:41.220
+Teams operated on it, Word,
+Excel, PowerPoint, SharePoint.
+
+00:19:41.220 --> 00:19:45.090
+Now, this is one of the coolest
+things I get to do with Work IQ.
+
+00:19:45.090 --> 00:19:49.070
+I go to a GitHub repo, and I
+say, hey, I attended a bunch
+
+00:19:49.070 --> 00:19:52.610
+of design meetings last
+week related to this repo.
+
+00:19:52.610 --> 00:19:54.230
+Can you capture all that
+
+00:19:54.230 --> 00:19:56.000
+and tell me what
+changes I should make?
+
+00:19:56.000 --> 00:19:57.500
+I mean, think about that.
+
+00:19:57.500 --> 00:20:00.440
+It literally can go look
+at all those transcripts,
+
+00:20:00.440 --> 00:20:03.680
+come back with a plan
+to change a code base.
+
+00:20:03.680 --> 00:20:07.430
+Previously, you could never
+have thought of using M365
+
+00:20:07.430 --> 00:20:08.840
+for something like that.
+
+00:20:08.840 --> 00:20:12.960
+The value creation opportunity
+now in the agent world is,
+
+00:20:12.960 --> 00:20:16.350
+in fact, 10x more, but it
+does require us to have --
+
+00:20:16.350 --> 00:20:19.530
+for example, there's going
+to be usage around M365,
+
+00:20:19.530 --> 00:20:23.190
+which is going to be perhaps
+more than even the end users,
+
+00:20:23.190 --> 00:20:24.840
+and we have to
+even re-architect.
+
+00:20:24.840 --> 00:20:28.580
+In fact, what I use
+to serve an inbox
+
+00:20:28.580 --> 00:20:34.080
+or a mailbox cannot be
+used to serve an agent.
+
+00:20:34.080 --> 00:20:35.580
+That's sort of what we're doing.
+
+00:20:35.580 --> 00:20:38.520
+Sarah Guo: I don't believe
+in permanent business models
+
+00:20:38.520 --> 00:20:40.980
+for any of these domains,
+but in the near term,
+
+00:20:40.980 --> 00:20:45.780
+do you have a prediction
+between outcomes-based pricing,
+
+00:20:45.780 --> 00:20:49.380
+token-based pricing,
+enterprise bundles?
+
+00:20:49.380 --> 00:20:50.520
+Satya Nadella:
+Yeah, the way I think
+
+00:20:50.520 --> 00:20:53.460
+about this is,
+always we've had --
+
+00:20:53.460 --> 00:20:56.040
+let's even take the
+per-user pricing.
+
+00:20:56.040 --> 00:21:00.300
+The per-user pricing
+is really an artifact
+
+00:21:00.300 --> 00:21:04.200
+of someone creating a budget
+needing certainty.
+
+00:21:04.200 --> 00:21:06.090
+It's the most important thing.
+
+00:21:06.090 --> 00:21:09.090
+If somebody wants a budget,
+they need a per-user,
+
+00:21:09.090 --> 00:21:13.920
+and per-user is just a set
+of entitlements to usage.
+
+00:21:13.920 --> 00:21:15.270
+That's kind of what it is.
+
+00:21:15.270 --> 00:21:19.260
+The way is, the first bundling
+will be, take some usage,
+
+00:21:19.260 --> 00:21:23.550
+bundle it into per-user stacks,
+and then sell subscriptions.
+
+00:21:23.550 --> 00:21:25.680
+Subscriptions, I think,
+are going to be there.
+
+00:21:25.680 --> 00:21:27.150
+Per-user is going to be there.
+
+00:21:27.150 --> 00:21:29.610
+Then, the next big thing
+will be consumption.
+
+00:21:29.610 --> 00:21:31.740
+People will say, "I
+want consumption."
+
+00:21:31.740 --> 00:21:34.350
+It's also possible that people
+will say, "I don't even want
+
+00:21:34.350 --> 00:21:35.820
+to pay for any of
+the subscriptions
+
+00:21:35.820 --> 00:21:37.440
+or the consumption outcome."
+
+00:21:37.440 --> 00:21:40.320
+Remember, most
+people love outcomes
+
+00:21:40.320 --> 00:21:41.580
+until they have an outcome,
+
+00:21:41.580 --> 00:21:42.840
+because once you
+have an outcome,
+
+00:21:42.840 --> 00:21:45.120
+it's like giving away a royalty.
+
+00:21:45.120 --> 00:21:48.570
+I've talked to customers who
+love outcome-based pricing
+
+00:21:48.570 --> 00:21:51.630
+and I say, "I'm all in,"
+until they -- oh, my God.
+
+00:21:51.630 --> 00:21:52.620
+What are you talking about?
+
+00:21:52.620 --> 00:21:53.940
+You're sharing in my outcome?
+
+00:21:53.940 --> 00:21:54.240
+No, no, no.
+
+00:21:54.240 --> 00:21:56.610
+I want you to go back
+to per-user pricing,
+
+00:21:56.610 --> 00:21:58.410
+and I want to do
+consumption pricing.
+
+00:21:58.410 --> 00:22:02.250
+I think that debate will go on.
+
+00:22:02.250 --> 00:22:04.680
+All of these business models
+have a particular time
+
+00:22:04.680 --> 00:22:08.280
+and a place, versus
+one to rule them all.
+
+00:22:08.280 --> 00:22:10.320
+If anything, if
+you're a SaaS vendor
+
+00:22:10.320 --> 00:22:13.410
+or you're a platform vendor,
+having that flexibility --
+
+00:22:13.410 --> 00:22:15.930
+and quite frankly, we
+faced this with GitHub.
+
+00:22:15.930 --> 00:22:19.350
+We just recently announced a
+per-user pricing on GitHub
+
+00:22:19.350 --> 00:22:24.240
+because little -- GitHub
+Copilot was constructed
+
+00:22:24.240 --> 00:22:29.370
+at a per-user level before
+we understood the intensity
+
+00:22:29.370 --> 00:22:31.170
+of usage of agents.
+
+00:22:31.170 --> 00:22:33.750
+It was an interactive
+way for a developer
+
+00:22:33.750 --> 00:22:36.390
+to use code-complete
+maybe tasks.
+
+00:22:36.390 --> 00:22:40.020
+It was not, oh, I
+launched 10,000 agents
+
+00:22:40.020 --> 00:22:42.990
+that are going on all day.
+
+00:22:42.990 --> 00:22:45.240
+That is what the
+adjustment is about.
+
+00:22:45.240 --> 00:22:48.480
+Now that we really want -- there
+will always be a per user,
+
+00:22:48.480 --> 00:22:51.090
+but they will have to
+be a consumption meter.
+
+00:22:51.090 --> 00:22:52.290
+Elad Gil: How do you
+think about the durability
+
+00:22:52.290 --> 00:22:53.250
+of SaaS more generally?
+
+00:22:53.250 --> 00:22:56.910
+One thing I've observed is, in a
+lot of enterprises internally,
+
+00:22:56.910 --> 00:22:59.520
+there will be teams that
+almost have agent euphoria.
+
+00:22:59.520 --> 00:23:01.290
+They're so excited
+about the explosion
+
+00:23:01.290 --> 00:23:02.550
+of things they can build
+that they're trying
+
+00:23:02.550 --> 00:23:03.870
+to rebuild a lot
+of applications.
+
+00:23:03.870 --> 00:23:05.190
+They're going to their
+SaaS vendors and saying,
+
+00:23:05.190 --> 00:23:06.810
+"We're not going to work
+with you anymore," or,
+
+00:23:06.810 --> 00:23:08.760
+"We're considering an
+internal project."
+
+00:23:08.760 --> 00:23:09.960
+It seems like in
+six to nine months,
+
+00:23:09.960 --> 00:23:11.970
+maybe some of those people will
+come back and say, actually,
+
+00:23:11.970 --> 00:23:13.860
+we can't rebuild everything.
+
+00:23:13.860 --> 00:23:14.970
+How do you think
+about what's durable
+
+00:23:14.970 --> 00:23:17.550
+in this world and what isn't?
+
+00:23:17.550 --> 00:23:18.180
+Satya Nadella:
+I think we have to go
+
+00:23:18.180 --> 00:23:27.180
+through one full budget cycle on
+this to really see the emergence
+
+00:23:27.180 --> 00:23:29.700
+of the equilibrium, because
+at the end of the day,
+
+00:23:29.700 --> 00:23:33.450
+there's marginal cost to
+even generating the app.
+
+00:23:33.450 --> 00:23:34.770
+In fact, there can be --
+
+00:23:34.770 --> 00:23:39.360
+a simple way to say it is, you
+should always acquire something
+
+00:23:39.360 --> 00:23:44.220
+if the marginal cost of building
+and maintaining something
+
+00:23:44.220 --> 00:23:46.530
+on your own is higher.
+
+00:23:46.530 --> 00:23:51.180
+That should be -- it's
+a quantifiable thing.
+
+00:23:51.180 --> 00:23:54.000
+The maintenance
+part is important.
+
+00:23:54.000 --> 00:23:57.060
+You've got to remember,
+hey, all the security stuff
+
+00:23:57.060 --> 00:24:00.540
+that now AI will find, you
+better fix them, too, fast.
+
+00:24:00.540 --> 00:24:02.550
+Of course, there's a coding
+agent to help you with it,
+
+00:24:02.550 --> 00:24:06.060
+but then that burns tokens, so
+whose responsibility is it?
+
+00:24:06.060 --> 00:24:09.990
+It's kind of like a cycle that
+you've got to think through.
+
+00:24:09.990 --> 00:24:12.000
+I think we have gone
+through the excitement
+
+00:24:12.000 --> 00:24:14.400
+that I can generate
+a lot of software.
+
+00:24:14.400 --> 00:24:17.370
+I think the next thing would be,
+what software do I really want
+
+00:24:17.370 --> 00:24:18.420
+to generate?
+
+00:24:18.420 --> 00:24:21.240
+What software do I want
+to use from others?
+
+00:24:21.240 --> 00:24:24.840
+How do I compose these two
+into some agentic workflow
+
+00:24:24.840 --> 00:24:27.330
+that I have agency over?
+
+00:24:27.330 --> 00:24:29.790
+I think there'll be very
+little tolerance for anybody
+
+00:24:29.790 --> 00:24:35.310
+who is inflexible at the vendor
+level, but at the same time,
+
+00:24:35.310 --> 00:24:39.420
+I think that anyone who has
+got that flexibility shows up,
+
+00:24:39.420 --> 00:24:42.450
+delivers the value,
+will be back again.
+
+00:24:42.450 --> 00:24:45.540
+We're selling software, but with
+just different business models,
+
+00:24:45.540 --> 00:24:47.340
+in fact.
+
+00:24:47.340 --> 00:24:49.260
+Swyx: Speaking
+about building software,
+
+00:24:49.260 --> 00:24:51.390
+one of my favorite moments from,
+I think, a previous Build,
+
+00:24:51.390 --> 00:24:54.480
+maybe one or two years ago,
+was they had a section
+
+00:24:54.480 --> 00:24:56.010
+of you building
+your own software.
+
+00:24:56.010 --> 00:24:57.810
+I'm curious if you're
+building anything now.
+
+00:24:57.810 --> 00:25:01.140
+Satya Nadella:
+Yeah, so I think, first of all,
+
+00:25:01.140 --> 00:25:04.830
+let's face it, building
+software has made it possible
+
+00:25:04.830 --> 00:25:08.670
+for even the incompetence of
+a CEO of a company like ours,
+
+00:25:08.670 --> 00:25:10.710
+you can build, so thank God.
+
+00:25:10.710 --> 00:25:19.050
+That said, I do feel that
+something like GitHub Copilot
+
+00:25:19.050 --> 00:25:23.430
+to me, and especially the new
+sessions app, or the new app,
+
+00:25:23.430 --> 00:25:29.550
+has just made it so much more
+possible for you to have agency
+
+00:25:29.550 --> 00:25:32.940
+over artifacts that you felt
+you couldn't touch before.
+
+00:25:32.940 --> 00:25:37.740
+For me, as a CEO, even to go to
+a code base, to be able to learn
+
+00:25:37.740 --> 00:25:41.400
+about it -- I remember joining
+Microsoft long back, first.
+
+00:25:41.400 --> 00:25:43.590
+Then, you said, man, everybody
+had to go in and look at,
+
+00:25:43.590 --> 00:25:45.750
+you know, whether it's Cutler's,
+Malik, or what have you,
+
+00:25:45.750 --> 00:25:50.130
+to learn how to
+do good C++ code.
+
+00:25:50.130 --> 00:25:54.930
+So now, that ability to be
+more full stack up and down is
+
+00:25:54.930 --> 00:25:57.780
+so good, but that
+doesn't mean every one
+
+00:25:57.780 --> 00:25:59.580
+of us should be doing
+the same thing.
+
+00:25:59.580 --> 00:26:02.010
+The question is, how do
+you then have the ability
+
+00:26:02.010 --> 00:26:06.090
+to inspect things, learn
+things, see things?
+
+00:26:06.090 --> 00:26:07.590
+I think it's just so much more.
+
+00:26:07.590 --> 00:26:09.000
+To me, what I'm building a lot
+
+00:26:09.000 --> 00:26:13.320
+of is these long-running
+Foundry agents.
+
+00:26:13.320 --> 00:26:14.910
+There's Autopilots.
+
+00:26:14.910 --> 00:26:19.410
+The easiest thing is, to me -- I
+think I just built one last week
+
+00:26:19.410 --> 00:26:23.970
+where the idea was, hey,
+can I have an agent
+
+00:26:23.970 --> 00:26:26.850
+that is continuously monitoring?
+
+00:26:26.850 --> 00:26:30.720
+Essentially, it's my own
+Chief of Staff Autopilot.
+
+00:26:30.720 --> 00:26:33.810
+We're going to have that,
+obviously, in Scout.
+
+00:26:33.810 --> 00:26:38.250
+That's what we showed, but it is
+so easy and trivial to build.
+
+00:26:38.250 --> 00:26:39.630
+I took Work IQ.
+
+00:26:39.630 --> 00:26:41.310
+I said, "Take Work IQ.
+
+00:26:41.310 --> 00:26:45.270
+Go and build a Foundry
+long-running agent.
+
+00:26:45.270 --> 00:26:49.920
+Store all the memory
+using Rayfin," basically
+
+00:26:49.920 --> 00:26:51.660
+at my back end as a service.
+
+00:26:51.660 --> 00:26:54.810
+Lo and behold, it built it, and
+not only built it, I could say,
+
+00:26:54.810 --> 00:26:56.040
+"Publish to Teams,"
+
+00:26:56.040 --> 00:26:58.140
+and it published the
+damn thing to Teams.
+
+00:26:58.140 --> 00:27:03.450
+The ability to have
+some end-to-end project
+
+00:27:03.450 --> 00:27:05.670
+like this complete is
+just pretty miraculous.
+
+00:27:05.670 --> 00:27:07.800
+Elad Gil: How do you think that
+impacts the different types
+
+00:27:07.800 --> 00:27:10.710
+of engineering roles that
+exist in the future?
+
+00:27:10.710 --> 00:27:13.080
+Right now, I think there's
+a dozen different types
+
+00:27:13.080 --> 00:27:16.950
+of engineers that you can be
+from QA, front end, et cetera.
+
+00:27:16.950 --> 00:27:18.270
+There's a big swath.
+
+00:27:18.270 --> 00:27:20.460
+I've heard some people argue
+that in four or five years,
+
+00:27:20.460 --> 00:27:22.860
+we'll basically end up with
+four engineering roles.
+
+00:27:22.860 --> 00:27:25.050
+It'll be people who
+are managing agents.
+
+00:27:25.050 --> 00:27:27.540
+It'll be forward-deployed
+engineers, or FDEs.
+
+00:27:27.540 --> 00:27:30.240
+It'll be security engineers,
+and then people working
+
+00:27:30.240 --> 00:27:33.390
+on large-scale infrastructure
+for a small number of services.
+
+00:27:33.390 --> 00:27:34.860
+Then everything
+else just collapses
+
+00:27:34.860 --> 00:27:35.970
+into the agentic world.
+
+00:27:35.970 --> 00:27:37.740
+Do you think that's a
+correct view of the world?
+
+00:27:37.740 --> 00:27:39.330
+Satya Nadella:
+Yeah, I think we'll have
+
+00:27:39.330 --> 00:27:41.970
+to experiment our
+way through it.
+
+00:27:41.970 --> 00:27:45.750
+What you said is what -- there
+are some very at-scale things.
+
+00:27:45.750 --> 00:27:50.670
+At LinkedIn, they did
+structurally change
+
+00:27:50.670 --> 00:27:53.130
+and basically built up
+a new discipline called
+
+00:27:53.130 --> 00:27:54.480
+"full-stack builder."
+
+00:27:54.480 --> 00:27:58.020
+They went and said, hey, let's
+bring people from design
+
+00:27:58.020 --> 00:28:00.870
+and product management,
+front-end engineering all --
+
+00:28:00.870 --> 00:28:04.140
+put them together, but
+also have an edge.
+
+00:28:04.140 --> 00:28:07.110
+It's not like the design person
+still doesn't have the design
+
+00:28:07.110 --> 00:28:09.420
+edge, or the front-end person
+doesn't have the front-end edge,
+
+00:28:09.420 --> 00:28:12.960
+but you can give yourself
+a bigger scope in roles
+
+00:28:12.960 --> 00:28:15.870
+so that you're not
+confined to one role.
+
+00:28:15.870 --> 00:28:20.460
+Then, equally, infrastructure
+has become very critical.
+
+00:28:20.460 --> 00:28:24.750
+In other words, I mean, RLEs,
+one thing we've realized is even
+
+00:28:24.750 --> 00:28:29.820
+for the Excel team, for
+example, building the RLE,
+
+00:28:29.820 --> 00:28:33.330
+in which a reward can be
+learned, is actually one
+
+00:28:33.330 --> 00:28:36.510
+of the hardest
+infrastructure problems.
+
+00:28:36.510 --> 00:28:38.370
+You kind of need
+even new talent,
+
+00:28:38.370 --> 00:28:39.570
+distributed systems people,
+
+00:28:39.570 --> 00:28:43.200
+even in what was considered
+an end-user app team,
+
+00:28:43.200 --> 00:28:44.550
+because it's a
+different skill set.
+
+00:28:44.550 --> 00:28:48.420
+So, yes, Infrastructure Science
+is the other one, obviously.
+
+00:28:48.420 --> 00:28:51.630
+I think we'll see
+how these evolve.
+
+00:28:51.630 --> 00:28:55.830
+I mean, always, the world will
+have a bunch of specialists.
+
+00:28:55.830 --> 00:29:01.920
+I think the generalist role is
+going to be the most exciting,
+
+00:29:01.920 --> 00:29:06.840
+because the leverage of a
+generalist is where we are going
+
+00:29:06.840 --> 00:29:08.730
+to see the maximum returns.
+
+00:29:08.730 --> 00:29:10.830
+When you said,
+"Hey, are you coding?"
+
+00:29:10.830 --> 00:29:12.390
+I'm now a generalist.
+
+00:29:12.390 --> 00:29:16.650
+I basically translated
+knowledge work,
+
+00:29:16.650 --> 00:29:22.830
+which I did, where I created a
+Word document, or a spreadsheet,
+
+00:29:22.830 --> 00:29:24.690
+and now I can build an app.
+
+00:29:24.690 --> 00:29:30.090
+It's in the same sentence,
+that idea that, oh, wow,
+
+00:29:30.090 --> 00:29:33.450
+my generalist skills have gotten
+higher-leverage, I think,
+
+00:29:33.450 --> 00:29:35.400
+is what we're going to
+see across the board.
+
+00:29:35.400 --> 00:29:38.100
+Sarah Guo: Music to the
+ears of CEOs and VCs
+
+00:29:38.100 --> 00:29:39.810
+that are a little
+dangerous and a lot of --
+
+00:29:39.810 --> 00:29:41.220
+Swyx: It's a golden
+age for idea people.
+
+00:29:41.220 --> 00:29:43.560
+Sarah Guo: Idea people,
+yeah, with a lot of agency.
+
+00:29:43.560 --> 00:29:45.330
+If you take that idea
+of personal agency
+
+00:29:45.330 --> 00:29:50.310
+and you just zoom it out to
+the organizational context,
+
+00:29:50.310 --> 00:29:53.010
+my partner, Mike Vernal, who
+actually started his career
+
+00:29:53.010 --> 00:29:55.650
+at Microsoft, just wrote
+an essay where one
+
+00:29:55.650 --> 00:29:57.180
+of the big takeaways
+is, it's an age
+
+00:29:57.180 --> 00:29:59.730
+where you can be much more
+ambitious, and you need
+
+00:29:59.730 --> 00:30:03.060
+to be, given the pace of the
+environment and how quickly,
+
+00:30:03.060 --> 00:30:04.680
+actually, users and
+companies are open
+
+00:30:04.680 --> 00:30:06.900
+to adopting new technologies.
+
+00:30:06.900 --> 00:30:08.160
+How do you think about --
+
+00:30:08.160 --> 00:30:10.170
+I feel silly asking this
+
+00:30:10.170 --> 00:30:12.810
+of somebody running a
+trillion-dollar-plus company
+
+00:30:12.810 --> 00:30:13.740
+already, but how do you think
+
+00:30:13.740 --> 00:30:16.860
+about how Microsoft can
+be more ambitious now?
+
+00:30:16.860 --> 00:30:18.360
+Satya Nadella:
+It's a great question.
+
+00:30:18.360 --> 00:30:25.470
+I think the thing in these
+types of transitions is
+
+00:30:25.470 --> 00:30:35.250
+to have a conceptual model
+of how work can change to go
+
+00:30:35.250 --> 00:30:40.110
+after outcomes that you could
+hardly imagine previously.
+
+00:30:40.110 --> 00:30:43.080
+In fact, Kevin Scott
+has this nice line,
+
+00:30:43.080 --> 00:30:47.010
+which is, when you can
+make the impossible --
+
+00:30:47.010 --> 00:30:50.790
+when you're making hard things
+easier, that's sort of one point
+
+00:30:50.790 --> 00:30:53.820
+of leverage, but
+true ambition is
+
+00:30:53.820 --> 00:30:57.630
+about making the
+impossible possible.
+
+00:30:57.630 --> 00:31:01.260
+Now, the thing that is
+missing a little bit in all
+
+00:31:01.260 --> 00:31:03.090
+of our organizations is, what is
+
+00:31:03.090 --> 00:31:06.960
+that new conceptual model
+of what can we build?
+
+00:31:06.960 --> 00:31:10.050
+What was impossible
+and what can we build?
+
+00:31:10.050 --> 00:31:11.550
+I'll give you one
+example of this,
+
+00:31:11.550 --> 00:31:14.700
+which is, I take great
+inspiration from the people
+
+00:31:14.700 --> 00:31:18.600
+who are managing
+the Azure network.
+
+00:31:18.600 --> 00:31:21.210
+This is from last year.
+
+00:31:21.210 --> 00:31:21.930
+We were scaling.
+
+00:31:21.930 --> 00:31:24.630
+You saw that I talked
+about how we built
+
+00:31:24.630 --> 00:31:28.500
+in the last 15 months more
+Azure capacity than we built
+
+00:31:28.500 --> 00:31:29.940
+in the first 15 years.
+
+00:31:29.940 --> 00:31:30.630
+I mean, it's crazy.
+
+00:31:30.630 --> 00:31:31.350
+Sarah Guo:
+Wild, yeah.
+
+00:31:31.350 --> 00:31:32.220
+Satya Nadella:
+It's pretty wild.
+
+00:31:32.220 --> 00:31:33.570
+It's the same team.
+
+00:31:33.570 --> 00:31:36.210
+They saw that and they said,
+"This just ain't going to work
+
+00:31:36.210 --> 00:31:39.390
+if we don't
+reconceptualize our work."
+
+00:31:39.390 --> 00:31:42.690
+They built -- essentially,
+they said, our job is not
+
+00:31:42.690 --> 00:31:44.250
+to do Azure networking.
+
+00:31:44.250 --> 00:31:47.190
+Our job is to build
+the agentic system
+
+00:31:47.190 --> 00:31:48.810
+that does Azure networking.
+
+00:31:48.810 --> 00:31:54.420
+These are the folks managing
+the 500-plus fiber operators,
+
+00:31:54.420 --> 00:31:56.580
+managing the van all over.
+
+00:31:56.580 --> 00:31:59.760
+Fiber operations, ultimately,
+is a physical operation.
+
+00:31:59.760 --> 00:32:00.870
+Things get caught.
+
+00:32:00.870 --> 00:32:03.420
+Things have to be repaired.
+
+00:32:03.420 --> 00:32:05.700
+We have fancy words
+called DevOps, and so on.
+
+00:32:05.700 --> 00:32:08.640
+Basically, emails are coming in,
+and you've got to go respond
+
+00:32:08.640 --> 00:32:10.290
+to them, take care of it.
+
+00:32:10.290 --> 00:32:11.850
+They've built this
+agentic system.
+
+00:32:11.850 --> 00:32:13.230
+They even have a
+character for it.
+
+00:32:13.230 --> 00:32:17.070
+It's called Miles, and it
+sort of does all this stuff.
+
+00:32:17.070 --> 00:32:21.390
+They started sort of screaming
+for more tokens, and so on.
+
+00:32:21.390 --> 00:32:23.040
+They were saying, look, we
+don't need a headcount.
+
+00:32:23.040 --> 00:32:27.060
+We need tokens in order to be
+able to manage our operation.
+
+00:32:27.060 --> 00:32:32.010
+That reconceptualization
+of what their work is --
+
+00:32:32.010 --> 00:32:35.370
+they basically took their
+work and made it meta.
+
+00:32:35.370 --> 00:32:38.610
+That meta work is
+now their new work.
+
+00:32:38.610 --> 00:32:41.550
+In the '80s, if somebody
+had come to us and said,
+
+00:32:41.550 --> 00:32:43.500
+4 billion people are going
+to get up in the morning
+
+00:32:43.500 --> 00:32:47.310
+and start typing, my model would
+have been, we need four billion
+
+00:32:47.310 --> 00:32:49.890
+typists? But we're
+not doing typing,
+
+00:32:49.890 --> 00:32:51.420
+we're doing knowledge work.
+
+00:32:51.420 --> 00:32:54.150
+That, to me, I think is it.
+
+00:32:54.150 --> 00:32:56.640
+Whether it's Microsoft, or
+whether it's any organization,
+
+00:32:56.640 --> 00:33:00.420
+is to give ourselves
+permission to do new types
+
+00:33:00.420 --> 00:33:04.980
+of metacognition, meta
+work, using these new tools
+
+00:33:04.980 --> 00:33:08.010
+to change the
+outputs that matter
+
+00:33:08.010 --> 00:33:10.200
+and then, really make the
+impossible possible.
+
+00:33:10.200 --> 00:33:14.340
+Completing that dot, or the
+connective tissue across those,
+
+00:33:14.340 --> 00:33:15.840
+I think, is where a lot
+
+00:33:15.840 --> 00:33:18.240
+of the enterprise value
+will get created.
+
+00:33:18.240 --> 00:33:19.890
+Swyx: Can we talk
+about data centers?
+
+00:33:19.890 --> 00:33:20.700
+Elad Gil:
+Yeah, please ask.
+
+00:33:20.700 --> 00:33:21.480
+Swyx:
+Oh, okay.
+
+00:33:21.480 --> 00:33:26.790
+Well, this leads nicely
+into the data center part.
+
+00:33:26.790 --> 00:33:28.830
+I'm just impressed with the
+sheer scale of the buildout
+
+00:33:28.830 --> 00:33:31.110
+from Microsoft, but
+also everyone else,
+
+00:33:31.110 --> 00:33:34.740
+that this is redefining what
+it means to be a hyperscaler.
+
+00:33:34.740 --> 00:33:39.840
+I just feel like that is an
+unprecedented scale on finances,
+
+00:33:39.840 --> 00:33:41.820
+on the way you run the
+company, but also,
+
+00:33:41.820 --> 00:33:45.000
+the communities
+that are impacted.
+
+00:33:45.000 --> 00:33:46.650
+Just talk a bit more about what
+you're seeing on the ground,
+
+00:33:46.650 --> 00:33:47.520
+like when you visit your --
+
+00:33:47.520 --> 00:33:49.860
+Satya Nadella: Yeah, I think
+there are two aspects of it.
+
+00:33:49.860 --> 00:33:54.930
+Obviously, the buildout
+is extraordinary.
+
+00:33:54.930 --> 00:33:58.590
+Nothing like this has happened,
+and it's great to be one
+
+00:33:58.590 --> 00:34:01.920
+of the participants in it, but
+you brought up the other part.
+
+00:34:01.920 --> 00:34:05.910
+I think at this point,
+it's clear that unless we,
+
+00:34:05.910 --> 00:34:12.420
+as an industry, are very
+principled about ensuring
+
+00:34:12.420 --> 00:34:15.090
+that the benefits of all
+the stuff we're talking
+
+00:34:15.090 --> 00:34:19.710
+about are felt in real ways
+at the community level --
+
+00:34:19.710 --> 00:34:23.930
+because this is not
+just a campaign.
+
+00:34:23.930 --> 00:34:27.110
+It has to be real, where
+people are saying, look,
+
+00:34:27.110 --> 00:34:30.020
+this is not changing the
+prices on energy for me.
+
+00:34:30.020 --> 00:34:33.480
+In fact, if anything, it's
+bringing down prices because,
+
+00:34:33.480 --> 00:34:35.580
+long-term, there's going
+to be a better grid.
+
+00:34:35.580 --> 00:34:37.500
+There is going to
+be more energy.
+
+00:34:37.500 --> 00:34:40.410
+Water consumption is,
+in fact, not sort of --
+
+00:34:40.410 --> 00:34:42.330
+in fact, water is
+being replenished.
+
+00:34:42.330 --> 00:34:47.100
+You've got to really educate
+folks on truly what's happening,
+
+00:34:47.100 --> 00:34:49.740
+the closed-loop systems
+we are building.
+
+00:34:49.740 --> 00:34:51.240
+We have to invest
+in the training,
+
+00:34:51.240 --> 00:34:52.680
+the jobs, the tax base.
+
+00:34:52.680 --> 00:34:56.100
+In fact, the least-talked about
+stuff is the amount of jobs
+
+00:34:56.100 --> 00:34:58.650
+that get created
+during construction,
+
+00:34:58.650 --> 00:35:01.620
+after construction, what's
+the tax base that's there
+
+00:35:01.620 --> 00:35:02.790
+in the community?
+
+00:35:02.790 --> 00:35:06.300
+All this has to be real.
+
+00:35:06.300 --> 00:35:08.670
+If that is the case, then
+we will have permission.
+
+00:35:08.670 --> 00:35:10.410
+If it is not, we won't
+have permission.
+
+00:35:10.410 --> 00:35:11.520
+It's as simple as that.
+
+00:35:11.520 --> 00:35:14.160
+Which is we -- I think
+we have to take it
+
+00:35:14.160 --> 00:35:16.620
+as an industry pretty seriously.
+
+00:35:16.620 --> 00:35:19.410
+I think it's good for
+communities to be skeptical,
+
+00:35:19.410 --> 00:35:24.090
+ask the hard questions, for us
+to do the hard work, earn that,
+
+00:35:24.090 --> 00:35:28.800
+but at the end of the day,
+if we can really be --
+
+00:35:28.800 --> 00:35:32.190
+I've always felt in human
+history, if you use a lot
+
+00:35:32.190 --> 00:35:36.570
+of energy, but also create
+a lot of value for society,
+
+00:35:36.570 --> 00:35:38.670
+the story has been fantastic.
+
+00:35:38.670 --> 00:35:41.190
+If you don't do that,
+it's not been that great.
+
+00:35:41.190 --> 00:35:44.100
+This time around, I'm a firm
+believer that, ultimately,
+
+00:35:44.100 --> 00:35:47.640
+if you do have a token economy
+that drives productivity,
+
+00:35:47.640 --> 00:35:49.590
+that drives economic growth,
+
+00:35:49.590 --> 00:35:53.880
+that drives widespread
+participation,
+
+00:35:53.880 --> 00:35:56.130
+better health outcomes,
+
+00:35:56.130 --> 00:35:59.370
+then, I think we will
+be in a great place.
+
+00:35:59.370 --> 00:36:02.150
+That's at least what we
+all have to be focused on.
+
+00:36:02.150 --> 00:36:04.430
+Swyx: Yeah, it makes
+me think, actually,
+
+00:36:04.430 --> 00:36:05.960
+that with all these
+initiatives that you're doing,
+
+00:36:05.960 --> 00:36:07.670
+it might be easier to see ROI
+
+00:36:07.670 --> 00:36:09.740
+in the communities first
+before an enterprise.
+
+00:36:09.740 --> 00:36:11.990
+Satya Nadella: Yeah, I
+mean, I think both sides.
+
+00:36:11.990 --> 00:36:13.520
+In fact, it comes back together.
+
+00:36:13.520 --> 00:36:16.710
+It has to be, the people in
+the communities are going
+
+00:36:16.710 --> 00:36:18.210
+to be employed, are going
+
+00:36:18.210 --> 00:36:21.540
+to be participants
+in the real economy.
+
+00:36:21.540 --> 00:36:23.340
+That's, I think, the question.
+
+00:36:23.340 --> 00:36:26.220
+If the broad economy
+is doing well
+
+00:36:26.220 --> 00:36:30.750
+and the communities are doing
+well, the dots get connected.
+
+00:36:30.750 --> 00:36:34.770
+The market forces are such
+that we will connect the dots.
+
+00:36:34.770 --> 00:36:35.640
+That, I think, is it.
+
+00:36:35.640 --> 00:36:37.050
+You ought to be able
+to see the evidence.
+
+00:36:37.050 --> 00:36:39.510
+It can't be about
+any one company,
+
+00:36:39.510 --> 00:36:42.180
+but it has to be
+broad economic growth
+
+00:36:42.180 --> 00:36:45.340
+and broad community permission.
+
+00:36:48.600 --> 00:36:50.640
+Elad Gil: What have you most
+updated in your personal models
+
+00:36:50.640 --> 00:36:53.700
+on -- regarding the
+societal impact of AI?
+
+00:36:53.700 --> 00:36:55.980
+Satya Nadella: So you're
+saying what's the --
+
+00:36:55.980 --> 00:36:57.240
+Elad Gil: What have
+you updated most on,
+
+00:36:57.240 --> 00:36:59.160
+in terms of societal
+impact of AI?
+
+00:36:59.160 --> 00:37:06.090
+Satya Nadella: Yeah, I think
+the most critical thing is the
+
+00:37:06.090 --> 00:37:09.240
+first question we even started
+with, which is, we need
+
+00:37:09.240 --> 00:37:14.310
+to tell the story
+and make it real
+
+00:37:14.310 --> 00:37:20.280
+that everybody has a
+real shot to participate
+
+00:37:20.280 --> 00:37:24.150
+as a first-class participant
+in this new economy.
+
+00:37:24.150 --> 00:37:29.640
+That's kind of, I think, in
+the next 12 months, 18 months,
+
+00:37:29.640 --> 00:37:33.420
+we need a way for people
+to say, oh, wow, I get it.
+
+00:37:33.420 --> 00:37:37.200
+There's going to be tremendous
+capability, a tremendous amount
+
+00:37:37.200 --> 00:37:41.640
+of infrastructure, but I can
+see what is going to happen.
+
+00:37:41.640 --> 00:37:45.510
+Whether it's the benefits, like
+health outcomes, or my ability
+
+00:37:45.510 --> 00:37:48.060
+to create a startup,
+or my ability
+
+00:37:48.060 --> 00:37:52.920
+to run my local store
+more efficiently,
+
+00:37:52.920 --> 00:37:56.940
+it's just happening, and I
+see that benefit myself.
+
+00:37:56.940 --> 00:38:00.950
+That, to me, you know,
+earning that permission
+
+00:38:00.950 --> 00:38:03.200
+in a path-dependent
+way, we can't wait.
+
+00:38:03.200 --> 00:38:07.310
+The one thing I've learned is,
+I think the world is going
+
+00:38:07.310 --> 00:38:09.470
+to be very skeptical of tech
+
+00:38:09.470 --> 00:38:13.440
+and tech companies
+that say, "Trust us.
+
+00:38:13.440 --> 00:38:14.580
+We've got it.
+
+00:38:14.580 --> 00:38:17.580
+The future is going
+to be glorious."
+
+00:38:17.580 --> 00:38:24.510
+You kind of have to
+deliver tangible benefits,
+
+00:38:24.510 --> 00:38:28.470
+and quite frankly,
+politicians winning elections
+
+00:38:28.470 --> 00:38:31.890
+because they have advocated
+for that, that will be
+
+00:38:31.890 --> 00:38:33.960
+at least my adjustment.
+
+00:38:33.960 --> 00:38:37.410
+Without it, thinking
+that somehow --
+
+00:38:37.410 --> 00:38:39.000
+because it's too important
+this time around.
+
+00:38:39.000 --> 00:38:42.900
+It's too much of the economy
+for it not to be the case.
+
+00:38:42.900 --> 00:38:44.850
+Sarah Guo: One very
+simple framework I have
+
+00:38:44.850 --> 00:38:49.140
+for what is going to
+be the broad benefit
+
+00:38:49.140 --> 00:38:52.350
+of AI, beyond the
+communities just working
+
+00:38:52.350 --> 00:38:55.680
+in technology, are sort
+of wealth creation.
+
+00:38:55.680 --> 00:38:57.630
+It's going to happen in a
+ton of different companies,
+
+00:38:57.630 --> 00:38:59.160
+startups and large companies.
+
+00:38:59.160 --> 00:39:00.480
+Then you have healthcare.
+
+00:39:00.480 --> 00:39:01.980
+You had amazing demos today.
+
+00:39:01.980 --> 00:39:03.180
+There are companies
+like OpenEvidence.
+
+00:39:03.180 --> 00:39:05.430
+I think that is happening.
+
+00:39:05.430 --> 00:39:08.970
+Education seems like another
+one that's an obvious good,
+
+00:39:08.970 --> 00:39:11.520
+where we haven't seen as
+much impact as I'd expect.
+
+00:39:11.520 --> 00:39:14.490
+Do you have a hypothesis on why
+that might be, or if it'll come?
+
+00:39:14.490 --> 00:39:16.230
+Satya Nadella: Yeah, I mean,
+I think this is where, again,
+
+00:39:16.230 --> 00:39:18.690
+how we think about
+education, how --
+
+00:39:18.690 --> 00:39:22.560
+recently, I met with the
+founders of Alpha School
+
+00:39:22.560 --> 00:39:25.380
+and learned a lot about
+what they were going about,
+
+00:39:25.380 --> 00:39:27.960
+and it's fascinating
+to listen to how
+
+00:39:27.960 --> 00:39:31.770
+to even rethink, what does
+education really look like,
+
+00:39:31.770 --> 00:39:34.200
+because I think it's
+actually very important.
+
+00:39:34.200 --> 00:39:36.540
+I'm not saying anything
+traditionally being done is
+
+00:39:36.540 --> 00:39:37.380
+less important.
+
+00:39:37.380 --> 00:39:40.440
+I was even looking at the
+-- it's fascinating to see.
+
+00:39:40.440 --> 00:39:42.743
+I forget the which
+Stanford class
+
+00:39:42.755 --> 00:39:44.730
+it was, the Agent Guidelines
+
+00:39:44.730 --> 00:39:49.800
+for CS something, because you
+still need people to learn.
+
+00:39:49.800 --> 00:39:51.480
+I think it's interesting,
+in an AI class,
+
+00:39:51.480 --> 00:39:55.200
+that people were learning how to
+apply softmax more appropriately
+
+00:39:55.200 --> 00:39:58.590
+versus saying, "Hey,
+fix my training run."
+
+00:39:58.590 --> 00:40:01.350
+I think learning
+concepts is important.
+
+00:40:01.350 --> 00:40:02.940
+It's going to be critical,
+
+00:40:02.940 --> 00:40:06.090
+but the way we create
+the incentives,
+
+00:40:06.090 --> 00:40:09.900
+what are the credentials, how
+we value those credentials,
+
+00:40:09.900 --> 00:40:11.700
+what is the employment
+opportunity
+
+00:40:11.700 --> 00:40:15.510
+for those credentials. I think
+that there is a complete change
+
+00:40:15.510 --> 00:40:20.310
+that has to happen, given the
+way to get to information,
+
+00:40:20.310 --> 00:40:22.740
+the way to educate yourself,
+the way to continue
+
+00:40:22.740 --> 00:40:25.260
+to keep yourself updated
+has changed so much.
+
+00:40:25.260 --> 00:40:30.330
+I think, interestingly enough,
+maybe the next big startup
+
+00:40:30.330 --> 00:40:33.180
+and success story
+could be someone
+
+00:40:33.180 --> 00:40:39.540
+who builds a new university,
+or a new pedagogy, of how
+
+00:40:39.540 --> 00:40:42.540
+to get someone to go
+through a curriculum
+
+00:40:42.540 --> 00:40:45.120
+and find economic opportunity.
+
+00:40:45.120 --> 00:40:46.380
+That's highly valuable.
+
+00:40:46.380 --> 00:40:48.330
+Sarah Guo:
+Well, that has felt, perhaps,
+
+00:40:48.330 --> 00:40:50.820
+impossible for a long time, but
+it's a great note to end on,
+
+00:40:50.820 --> 00:40:52.530
+something that
+might be possible.
+
+00:40:52.530 --> 00:40:53.130
+Thank you, Satya.
+
+00:40:53.130 --> 00:40:53.730
+Satya Nadella:
+Thank you so much.
+
+00:40:53.730 --> 00:40:54.030
+Thank you.
+
+00:40:54.030 --> 00:40:54.750
+I appreciate it.
+
+00:40:54.750 --> 00:40:56.520
+Thank you all.
+
+00:40:56.520 --> 00:41:03.500
+[MUSIC]
+

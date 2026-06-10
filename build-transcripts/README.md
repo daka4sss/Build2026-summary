@@ -1,8 +1,10 @@
 # Microsoft Build 2026 — セッション トランスクリプト & 日本語まとめ
 
-Microsoft Build 2026（2026年6月・サンフランシスコ開催）の、**Microsoft Foundry を中心とした 32 セッション＋ Foundry コア外の追加 8 セッション（計 40 セッション）**について、公式トランスクリプト（WebVTT）を取得し、日本語で詳細にまとめたアーカイブです。
+Microsoft Build 2026（2026年6月・サンフランシスコ開催）の、**Microsoft Foundry を中心とした 32 セッション＋ Foundry コア外の追加 8 セッション＋ 追加収録 7 セッション（計 47 セッション）**について、公式トランスクリプト（WebVTT）を取得し、日本語で詳細にまとめたアーカイブです。
 
 > 🆕 追加 8 セッション（オープニング基調講演 KEY01／Windows BRK260-262／モデル・エージェント文化 BRK234・244・247・209）は、公式カタログ実API（`api-v2.build.microsoft.com/api/session/all`、全460件）の全件クロールで洗い出したものです。詳細な全カタログ調査結果は [`catalog_build2026_full.md`](./catalog_build2026_full.md) を参照。
+
+> 🆕 さらに追加収録 7 セッション（Broadcast Stage / Live の LIVE100・101・156・168・171、開発者ツールの BRK206・227）を下記 **F 章** に収録しました。
 
 > 📄 取得状況・ファイル一覧・バイト数などの**生インデックス**は [`_index.md`](./_index.md) を参照してください。
 > このページは「**どのセッションが何を話しているか**」をテーマ別にパッと把握するための技術ガイドです。
@@ -116,6 +118,29 @@ Azure インフラの内側、OSS ランタイム、Claude 統合、業界横断
 
 ---
 
+## 🆕 F. 追加収録（第3次）：Broadcast Stage / Live ＋ 開発者ツール（7 本）
+
+公式カタログ全件から、Broadcast Stage / Live の対談・ポッドキャスト枠と、開発者ツール／プラットフォームのブレイクアウトを追加収録。
+
+### 🎙️ Broadcast Stage / Live
+
+| ID | セッション | Speaker | ひとことで言うと |
+|----|-----------|---------|------------------|
+| [LIVE100](Sessions/LIVE100/summary_ja.md) | Build 2026 podcast with Satya Nadella, Sarah Guo & Elad Gil (No Priors), Swyx (Latent Space) | Satya Nadella, Sarah Guo, Elad Gil, Swyx | キーノート後の Satya Nadella インタビュー。AI 戦略・エージェント・モデル訓練・データセンター投資・SaaS 再編・エンジニア職の変容を縦横に語る。 |
+| [LIVE101](Sessions/LIVE101/summary_ja.md) | Scott and Mark learn to Vibe Check | Scott Hanselman, Mark Russinovich ほか | 人気ポッドキャストのライブ版。Steve Sanderson・Cassidy Williams・Swyx・Simon Willison の作品を"バイブスチェック"審査。「バイブスコーディングは入門ではなく熟練者の道具」。 |
+| [LIVE156](Sessions/LIVE156/summary_ja.md) | Designing VS Code's UX for the Agentic Era | Burke Holland, Joanna Oikawa | VS Code デザインリードが語るエージェント時代の UX 設計。Agents Window の「引き算」設計思想と、AI 時代における"テイスト"の育て方。 |
+| [LIVE168](Sessions/LIVE168/summary_ja.md) | Claude Is in Copilot. Here's What That Actually Means | Burke Holland, Tyler Leonhardt | Anthropic の Claude を Copilot サブスクのまま VS Code から利用。Agent SDK ハーネス・Cloud Agents・Agent Host Protocol（リモート接続）をライブ実演。 |
+| [LIVE171](Sessions/LIVE171/summary_ja.md) | The Three IQs: Ground Your Agents in Knowledge, Data, and Work | Ayca Bas, Marco Casalaina | 4 つの IQ（Web/Foundry/Fabric/Work IQ）でエージェントを知識・データ・業務に接地。M365 エージェントテンプレートで独立 ID とセキュリティコンテキストを付与。 |
+
+### 🛠️ ブレイクアウト（開発者ツール・プラットフォーム）
+
+| ID | セッション | Speaker | ひとことで言うと |
+|----|-----------|---------|------------------|
+| [BRK206](Sessions/BRK206/summary_ja.md) | Your agent, anywhere: MultiClient, MultiDevice with GitHub Copilot SDK | Patrick Nikoletich, Steve Sanderson | GitHub Copilot SDK が GA。エージェントを単一マシンから全クライアント・全デバイスへ。オーケストレーション、分離モデル、セキュリティをライブデモ。 |
+| [BRK227](Sessions/BRK227/summary_ja.md) | Distributed systems to AI platforms with Mark Russinovich & Ion Stoica | Mark Russinovich, Ion Stoica, Darby Kosten | Spark/Ray/vLLM の系譜を持つ Ion Stoica と Azure CTO の対談。分散システムからエージェント時代の AI プラットフォームへ。非決定性・セキュリティ・三層最適化を深掘り。 |
+
+---
+
 ## 📂 フォルダ構成
 
 ```
@@ -134,7 +159,7 @@ build-transcripts/
 ## ℹ️ 取得方法について
 
 - セッションページの `og:image` から ASSET_ID を抽出 → `https://medius.microsoft.com/video/asset/CAPTION/{ASSET_ID}` で公式 WebVTT を取得。
-- **40 / 40 セッションすべて**で公式トランスクリプトの取得に成功（フォールバックなし）。
+- **47 / 47 セッションすべて**で公式トランスクリプトの取得に成功。うち 46 件は CAPTION ルート、LIVE101 のみ CAPTION が 403 のため公式 `Transcript` ルートの Word 文書（.docx）から本文を抽出。
 - 各 `summary_ja.md` は、登壇者 → 全体像 → タイムスタンプ付きセクション → まとめ（コアメッセージ・発表機能一覧・次アクション）の統一フォーマット。
 - 登壇者名はトランスクリプトの自己紹介から特定できた範囲で記載しています。
 
